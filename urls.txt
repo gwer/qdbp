@@ -45,6 +45,8 @@
 /de/security/url-encode/
 /de/security/uuid/
 /de/text/
+/de/text/case-converter/
+/de/text/line-tools/
 /de/text/word-counter/
 /en/
 /en/dates/
@@ -85,6 +87,8 @@
 /en/security/url-encode/
 /en/security/uuid/
 /en/text/
+/en/text/case-converter/
+/en/text/line-tools/
 /en/text/word-counter/
 /es/
 /es/dates/
@@ -133,6 +137,8 @@
 /es/security/url-encode/
 /es/security/uuid/
 /es/text/
+/es/text/case-converter/
+/es/text/line-tools/
 /es/text/word-counter/
 /pt/
 /pt/dates/
@@ -181,6 +187,8 @@
 /pt/security/url-encode/
 /pt/security/uuid/
 /pt/text/
+/pt/text/case-converter/
+/pt/text/line-tools/
 /pt/text/word-counter/
 /ru/
 /ru/dates/
@@ -229,4 +237,7 @@
 /ru/security/url-encode/
 /ru/security/uuid/
 /ru/text/
+/ru/text/case-converter/
+/ru/text/line-tools/
+/ru/text/transliteration/
 /ru/text/word-counter/

@@ -1,0 +1,20 @@
+{
+  "title": "Conversor de maiúsculas e minúsculas",
+  "description": "Transforme um texto em MAIÚSCULAS, minúsculas, Primeira Letra Maiúscula ou como frase, ou em camelCase, snake_case e kebab-case para código.",
+  "ui": {
+    "mode": "Formato",
+    "input": "Texto",
+    "output": "Resultado",
+    "error": "Não foi possível converter o texto",
+    "modes": {
+      "upper": "MAIÚSCULAS",
+      "lower": "minúsculas",
+      "sentence": "Como frase",
+      "title": "Primeira Letra Maiúscula",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "kebab": "kebab-case"
+    }
+  }
+}

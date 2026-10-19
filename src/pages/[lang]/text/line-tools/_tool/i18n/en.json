@@ -1,0 +1,19 @@
+{
+  "title": "Line tools: remove duplicate lines and sort lists",
+  "description": "Remove duplicate lines, sort a list alphabetically, delete empty lines and trim extra spaces in one click.",
+  "ui": {
+    "mode": "Action",
+    "input": "Lines",
+    "output": "Result",
+    "error": "Couldn't process the text",
+    "modes": {
+      "dedupe": "Remove duplicates",
+      "dedupeIgnoreCase": "Duplicates, ignore case",
+      "sortAsc": "Sort A→Z",
+      "sortDesc": "Sort Z→A",
+      "removeEmpty": "Remove empty lines",
+      "trim": "Trim spaces",
+      "reverse": "Reverse order"
+    }
+  }
+}

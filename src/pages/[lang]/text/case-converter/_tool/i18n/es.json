@@ -1,0 +1,20 @@
+{
+  "title": "Conversor de mayúsculas y minúsculas",
+  "description": "Pasa un texto a MAYÚSCULAS, minúsculas, Tipo Título o tipo oración, o a camelCase, snake_case y kebab-case para programar.",
+  "ui": {
+    "mode": "Formato",
+    "input": "Texto",
+    "output": "Resultado",
+    "error": "No se pudo convertir el texto",
+    "modes": {
+      "upper": "MAYÚSCULAS",
+      "lower": "minúsculas",
+      "sentence": "Tipo oración",
+      "title": "Tipo Título",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "kebab": "kebab-case"
+    }
+  }
+}

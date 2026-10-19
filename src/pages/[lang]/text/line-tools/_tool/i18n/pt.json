@@ -1,0 +1,19 @@
+{
+  "title": "Ferramentas de linhas: remover duplicadas e ordenar listas",
+  "description": "Remova linhas repetidas, ordene uma lista em ordem alfabética, apague linhas vazias e espaços extras com um clique.",
+  "ui": {
+    "mode": "Ação",
+    "input": "Linhas",
+    "output": "Resultado",
+    "error": "Não foi possível processar o texto",
+    "modes": {
+      "dedupe": "Remover duplicadas",
+      "dedupeIgnoreCase": "Duplicadas sem diferenciar maiúsculas",
+      "sortAsc": "Ordenar A→Z",
+      "sortDesc": "Ordenar Z→A",
+      "removeEmpty": "Remover linhas vazias",
+      "trim": "Remover espaços",
+      "reverse": "Inverter ordem"
+    }
+  }
+}

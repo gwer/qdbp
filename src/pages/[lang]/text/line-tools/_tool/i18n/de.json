@@ -1,0 +1,19 @@
+{
+  "title": "Zeilen-Werkzeug: doppelte Zeilen entfernen und sortieren",
+  "description": "Doppelte Zeilen entfernen, Listen alphabetisch sortieren, leere Zeilen und überflüssige Leerzeichen löschen – mit einem Klick.",
+  "ui": {
+    "mode": "Aktion",
+    "input": "Zeilen",
+    "output": "Ergebnis",
+    "error": "Der Text konnte nicht verarbeitet werden",
+    "modes": {
+      "dedupe": "Duplikate entfernen",
+      "dedupeIgnoreCase": "Duplikate ohne Groß/klein",
+      "sortAsc": "Sortieren A→Z",
+      "sortDesc": "Sortieren Z→A",
+      "removeEmpty": "Leere Zeilen entfernen",
+      "trim": "Leerzeichen entfernen",
+      "reverse": "Reihenfolge umkehren"
+    }
+  }
+}

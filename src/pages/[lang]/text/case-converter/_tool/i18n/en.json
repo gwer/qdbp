@@ -1,0 +1,20 @@
+{
+  "title": "Case converter: uppercase, lowercase and title case",
+  "description": "Convert text to UPPERCASE, lowercase, Title Case or Sentence case, or to camelCase, snake_case and kebab-case for code.",
+  "ui": {
+    "mode": "Case",
+    "input": "Text",
+    "output": "Result",
+    "error": "Couldn't convert the text",
+    "modes": {
+      "upper": "UPPERCASE",
+      "lower": "lowercase",
+      "sentence": "Sentence case",
+      "title": "Title Case",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "kebab": "kebab-case"
+    }
+  }
+}

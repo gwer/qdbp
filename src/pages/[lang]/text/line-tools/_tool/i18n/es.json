@@ -1,0 +1,19 @@
+{
+  "title": "Herramientas de líneas: quitar duplicados y ordenar listas",
+  "description": "Elimina líneas repetidas, ordena una lista alfabéticamente, quita líneas vacías y espacios sobrantes con un clic.",
+  "ui": {
+    "mode": "Acción",
+    "input": "Líneas",
+    "output": "Resultado",
+    "error": "No se pudo procesar el texto",
+    "modes": {
+      "dedupe": "Quitar duplicados",
+      "dedupeIgnoreCase": "Duplicados sin distinguir mayúsculas",
+      "sortAsc": "Ordenar A→Z",
+      "sortDesc": "Ordenar Z→A",
+      "removeEmpty": "Quitar líneas vacías",
+      "trim": "Quitar espacios",
+      "reverse": "Invertir orden"
+    }
+  }
+}

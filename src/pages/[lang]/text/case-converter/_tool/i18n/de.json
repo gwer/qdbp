@@ -1,0 +1,20 @@
+{
+  "title": "Groß- und Kleinschreibung umwandeln: Text-Konverter",
+  "description": "Text in GROSSBUCHSTABEN, kleinbuchstaben, Jedes Wort Groß oder Satzschreibung umwandeln – oder in camelCase, snake_case und kebab-case.",
+  "ui": {
+    "mode": "Schreibweise",
+    "input": "Text",
+    "output": "Ergebnis",
+    "error": "Der Text konnte nicht umgewandelt werden",
+    "modes": {
+      "upper": "GROSSBUCHSTABEN",
+      "lower": "kleinbuchstaben",
+      "sentence": "Satzschreibung",
+      "title": "Jedes Wort Groß",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "kebab": "kebab-case"
+    }
+  }
+}
