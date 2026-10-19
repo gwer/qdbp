@@ -21,6 +21,8 @@
 /de/health/calorie-calculator/
 /de/health/due-date/
 /de/health/running-pace/
+/de/images/
+/de/images/qr-generator/
 /de/math/
 /de/math/add-percent/
 /de/math/average/
@@ -73,6 +75,8 @@
 /en/health/calorie-calculator/
 /en/health/due-date/
 /en/health/running-pace/
+/en/images/
+/en/images/qr-generator/
 /en/math/
 /en/math/add-percent/
 /en/math/average/
@@ -117,6 +121,8 @@
 /es/health/calorie-calculator/
 /es/health/due-date/
 /es/health/running-pace/
+/es/images/
+/es/images/qr-generator/
 /es/math/
 /es/math/add-percent/
 /es/math/average/
@@ -169,6 +175,8 @@
 /pt/health/calorie-calculator/
 /pt/health/due-date/
 /pt/health/running-pace/
+/pt/images/
+/pt/images/qr-generator/
 /pt/math/
 /pt/math/add-percent/
 /pt/math/average/
@@ -221,6 +229,8 @@
 /ru/health/calorie-calculator/
 /ru/health/due-date/
 /ru/health/running-pace/
+/ru/images/
+/ru/images/qr-generator/
 /ru/math/
 /ru/math/add-percent/
 /ru/math/average/

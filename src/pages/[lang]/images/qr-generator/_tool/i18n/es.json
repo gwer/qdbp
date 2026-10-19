@@ -1,0 +1,35 @@
+{
+  "title": "Generador de códigos QR: enlace, texto o wifi",
+  "description": "Crea un código QR para un enlace, un texto o una red wifi y descárgalo en PNG o SVG. Gratis, sin registro y sin marca de agua.",
+  "ui": {
+    "kind": "Tipo",
+    "kinds": {
+      "text": "Texto o enlace",
+      "wifi": "Wifi"
+    },
+    "text": "Texto o enlace",
+    "ssid": "Nombre de la red (SSID)",
+    "password": "Contraseña",
+    "security": "Seguridad",
+    "securities": {
+      "WPA": "WPA/WPA2/WPA3",
+      "WEP": "WEP",
+      "nopass": "Sin contraseña"
+    },
+    "hidden": "Red oculta",
+    "level": "Corrección de errores",
+    "levels": {
+      "L": "L — 7 %",
+      "M": "M — 15 %",
+      "Q": "Q — 25 %",
+      "H": "H — 30 %"
+    },
+    "fg": "Color del código",
+    "bg": "Color de fondo",
+    "preview": "Código QR",
+    "empty": "Escribe un texto o un enlace",
+    "tooLong": "Demasiados datos para un código QR: acorta el texto o elige un nivel de corrección más bajo",
+    "downloadPng": "Descargar PNG",
+    "downloadSvg": "Descargar SVG"
+  }
+}

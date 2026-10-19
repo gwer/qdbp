@@ -488,3 +488,32 @@ input[type='range'] {
   justify-content: space-between;
   margin-bottom: 4px;
 }
+
+.qr-options {
+  margin-top: 14px;
+}
+
+input[type='color'] {
+  width: 100%;
+  height: 40px;
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.qr-preview {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 6px;
+}
+
+.qr-preview [role='img'] {
+  width: min(280px, 100%);
+}
+
+.qr-preview svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}

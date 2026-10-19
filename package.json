@@ -21,10 +21,12 @@
     "@astrojs/sitemap": "3.7.4",
     "astro": "7.3.5",
     "decimal.js-light": "2.5.1",
-    "preact": "10.29.8"
+    "preact": "10.29.8",
+    "qrcode-generator": "2.0.4"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
+    "jsqr": "1.4.0",
     "typescript": "6.0.3",
     "vitest": "5.0.3",
     "wrangler": "4.147.0"

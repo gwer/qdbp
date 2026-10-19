@@ -1,0 +1,35 @@
+{
+  "title": "Gerador de QR code: link, texto ou Wi-Fi",
+  "description": "Crie um QR code para um link, um texto ou uma rede Wi-Fi e baixe em PNG ou SVG. Grátis, sem cadastro e sem marca d'água.",
+  "ui": {
+    "kind": "Tipo",
+    "kinds": {
+      "text": "Texto ou link",
+      "wifi": "Wi-Fi"
+    },
+    "text": "Texto ou link",
+    "ssid": "Nome da rede (SSID)",
+    "password": "Senha",
+    "security": "Segurança",
+    "securities": {
+      "WPA": "WPA/WPA2/WPA3",
+      "WEP": "WEP",
+      "nopass": "Sem senha"
+    },
+    "hidden": "Rede oculta",
+    "level": "Correção de erros",
+    "levels": {
+      "L": "L — 7%",
+      "M": "M — 15%",
+      "Q": "Q — 25%",
+      "H": "H — 30%"
+    },
+    "fg": "Cor do código",
+    "bg": "Cor de fundo",
+    "preview": "QR code",
+    "empty": "Digite um texto ou link",
+    "tooLong": "Dados demais para um QR code — encurte o texto ou escolha um nível de correção menor",
+    "downloadPng": "Baixar PNG",
+    "downloadSvg": "Baixar SVG"
+  }
+}

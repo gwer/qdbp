@@ -1,0 +1,35 @@
+{
+  "title": "QR-Code-Generator: Link, Text oder WLAN",
+  "description": "QR-Code für einen Link, einen Text oder ein WLAN erstellen und als PNG oder SVG herunterladen. Kostenlos, ohne Anmeldung und ohne Wasserzeichen.",
+  "ui": {
+    "kind": "Typ",
+    "kinds": {
+      "text": "Text oder Link",
+      "wifi": "WLAN"
+    },
+    "text": "Text oder Link",
+    "ssid": "Netzwerkname (SSID)",
+    "password": "Passwort",
+    "security": "Verschlüsselung",
+    "securities": {
+      "WPA": "WPA/WPA2/WPA3",
+      "WEP": "WEP",
+      "nopass": "Ohne Passwort"
+    },
+    "hidden": "Verstecktes Netzwerk",
+    "level": "Fehlerkorrektur",
+    "levels": {
+      "L": "L – 7 %",
+      "M": "M – 15 %",
+      "Q": "Q – 25 %",
+      "H": "H – 30 %"
+    },
+    "fg": "Farbe des Codes",
+    "bg": "Hintergrundfarbe",
+    "preview": "QR-Code",
+    "empty": "Text oder Link eingeben",
+    "tooLong": "Zu viele Daten für einen QR-Code – Text kürzen oder niedrigere Fehlerkorrektur wählen",
+    "downloadPng": "PNG herunterladen",
+    "downloadSvg": "SVG herunterladen"
+  }
+}
