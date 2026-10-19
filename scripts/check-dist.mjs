@@ -24,10 +24,6 @@ function walk(dir) {
 
 const files = walk(DIST).map((f) => '/' + relative(DIST, f).split('\\').join('/'));
 const fileSet = new Set(files);
-const htmlFiles = files.filter((f) => f.endsWith('.html') && f !== '/404.html');
-const pageUrls = htmlFiles.map((f) => f.replace(/index\.html$/, '')).sort();
-
-// 1. urls.txt
 const redirects = new Set(
   readFileSync(join(DIST, '_redirects'), 'utf8')
     .split('\n')
@@ -36,6 +32,14 @@ const redirects = new Set(
     .map((l) => l.split(/\s+/)[0]),
 );
 
+// Страницы-заглушки редиректов (Astro `redirects` для dev/preview) — не настоящие страницы.
+const htmlFiles = files.filter((f) => f.endsWith('.html') && f !== '/404.html');
+const pageUrls = htmlFiles
+  .map((f) => f.replace(/index\.html$/, ''))
+  .filter((u) => !redirects.has(u))
+  .sort();
+
+// 1. urls.txt
 if (update) {
   writeFileSync(URLS_FILE, pageUrls.join('\n') + '\n');
   console.log(`urls.txt обновлён: ${pageUrls.length} URL`);
