@@ -1,9 +1,16 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { formatInput, formatNumber } from '@/lib/format';
 import { parseNumber } from '@/lib/parse';
-import type { CalculatorDef, InputSpec, ToolProps } from './define';
+import type { CalculatorDef, InputSpec, NumberInput, ToolProps } from './define';
 
 type Raw = Record<string, string>;
+
+// Цифровые клавиатуры на iOS (decimal, numeric) не содержат минуса. Если поле допускает
+// отрицательные значения (min не задан или меньше нуля), цифровую клавиатуру не включаем.
+function inputMode(spec: NumberInput): 'numeric' | 'decimal' | undefined {
+  if (spec.min === undefined || spec.min < 0) return undefined;
+  return spec.type === 'integer' ? 'numeric' : 'decimal';
+}
 
 function defaults(def: CalculatorDef, lang: ToolProps['lang']): Raw {
   const raw: Raw = {};
@@ -110,7 +117,7 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
                   <input
                     id={id}
                     type="text"
-                    inputMode={spec.type === 'integer' ? 'numeric' : 'decimal'}
+                    inputMode={inputMode(spec)}
                     autoComplete="off"
                     value={raw[name]}
                     aria-invalid={error ? 'true' : undefined}
