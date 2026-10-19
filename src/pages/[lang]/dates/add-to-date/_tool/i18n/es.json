@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de fechas: qué fecha será dentro de N días",
+  "description": "Qué fecha será dentro de N días, semanas, meses o años, o cuál fue hace N días.",
+  "inputs": {
+    "date": {
+      "label": "Fecha"
+    },
+    "op": {
+      "label": "Operación",
+      "options": {
+        "add": "Sumar",
+        "subtract": "Restar"
+      }
+    },
+    "amount": {
+      "label": "Cantidad"
+    },
+    "unit": {
+      "label": "Unidad",
+      "options": {
+        "days": "Días",
+        "weeks": "Semanas",
+        "months": "Meses",
+        "years": "Años"
+      }
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Fecha resultante"
+    },
+    "days": {
+      "label": "Diferencia en días"
+    }
+  }
+}

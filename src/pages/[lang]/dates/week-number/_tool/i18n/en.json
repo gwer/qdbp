@@ -1,0 +1,30 @@
+{
+  "title": "Week number: what week of the year it is",
+  "description": "What week of the year is it? Get the week number for any date using ISO 8601 or the US system.",
+  "inputs": {
+    "date": {
+      "label": "Date"
+    },
+    "system": {
+      "label": "System",
+      "options": {
+        "iso": "ISO 8601 (weeks start on Monday)",
+        "us": "US (weeks start on Sunday)"
+      }
+    }
+  },
+  "outputs": {
+    "week": {
+      "label": "Week"
+    },
+    "year": {
+      "label": "Week year"
+    },
+    "start": {
+      "label": "First day of the week"
+    },
+    "end": {
+      "label": "Last day of the week"
+    }
+  }
+}

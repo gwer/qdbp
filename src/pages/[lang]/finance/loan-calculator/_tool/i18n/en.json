@@ -1,16 +1,34 @@
 {
-  "title": "Loan calculator",
+  "title": "Loan calculator: monthly payment and amortization schedule",
   "description": "Work out your monthly payment, total interest and full amortization schedule for an amortizing or equal-principal loan.",
   "inputs": {
-    "amount": { "label": "Loan amount" },
-    "rate": { "label": "Annual interest rate" },
-    "months": { "label": "Term, months" },
-    "kind": { "label": "Repayment type", "options": { "annuity": "Fixed payments (amortizing)", "differentiated": "Equal principal (decreasing)" } }
+    "amount": {
+      "label": "Loan amount"
+    },
+    "rate": {
+      "label": "Annual interest rate"
+    },
+    "months": {
+      "label": "Term, months"
+    },
+    "kind": {
+      "label": "Repayment type",
+      "options": {
+        "annuity": "Fixed payments (amortizing)",
+        "differentiated": "Equal principal (decreasing)"
+      }
+    }
   },
   "outputs": {
-    "payment": { "label": "Monthly payment" },
-    "overpay": { "label": "Total interest" },
-    "total": { "label": "Total paid" }
+    "payment": {
+      "label": "Monthly payment"
+    },
+    "overpay": {
+      "label": "Total interest"
+    },
+    "total": {
+      "label": "Total paid"
+    }
   },
   "ui": {
     "decreasing": "Payments decrease from {first} to {last}",

@@ -17,20 +17,23 @@ export const KNOWN_LANGS = [
 ] as const;
 
 export type UnitSystem = 'metric' | 'imperial';
+export type ClockMode = '24' | '12';
 
 interface LangMeta {
   name: string; // самоназвание
   hreflang: string;
   intl: string; // локаль для Intl
   units: UnitSystem;
+  /** Формат времени по умолчанию; пользователь может переключить, выбор запоминается. */
+  clock: ClockMode;
 }
 
 export const LANG_META: Record<Lang, LangMeta> = {
-  en: { name: 'English', hreflang: 'en', intl: 'en-US', units: 'imperial' },
-  ru: { name: 'Русский', hreflang: 'ru', intl: 'ru-RU', units: 'metric' },
-  es: { name: 'Español', hreflang: 'es', intl: 'es-ES', units: 'metric' },
-  de: { name: 'Deutsch', hreflang: 'de', intl: 'de-DE', units: 'metric' },
-  pt: { name: 'Português', hreflang: 'pt', intl: 'pt-BR', units: 'metric' },
+  en: { name: 'English', hreflang: 'en', intl: 'en-US', units: 'imperial', clock: '12' },
+  ru: { name: 'Русский', hreflang: 'ru', intl: 'ru-RU', units: 'metric', clock: '24' },
+  es: { name: 'Español', hreflang: 'es', intl: 'es-ES', units: 'metric', clock: '24' },
+  de: { name: 'Deutsch', hreflang: 'de', intl: 'de-DE', units: 'metric', clock: '24' },
+  pt: { name: 'Português', hreflang: 'pt', intl: 'pt-BR', units: 'metric', clock: '24' },
 };
 
 export const isSiteLang = (code: string): code is Lang =>

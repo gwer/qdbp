@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de datas: que data será daqui a N dias",
+  "description": "Descubra que data será daqui a N dias, semanas, meses ou anos — ou qual foi há N dias.",
+  "inputs": {
+    "date": {
+      "label": "Data"
+    },
+    "op": {
+      "label": "Operação",
+      "options": {
+        "add": "Somar",
+        "subtract": "Subtrair"
+      }
+    },
+    "amount": {
+      "label": "Quantidade"
+    },
+    "unit": {
+      "label": "Unidade",
+      "options": {
+        "days": "Dias",
+        "weeks": "Semanas",
+        "months": "Meses",
+        "years": "Anos"
+      }
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Data resultante"
+    },
+    "days": {
+      "label": "Diferença em dias"
+    }
+  }
+}

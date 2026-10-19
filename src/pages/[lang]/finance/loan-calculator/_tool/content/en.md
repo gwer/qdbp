@@ -12,7 +12,7 @@ Enter the loan amount, the annual interest rate and the term in months, then cho
 
 ## Example
 
-A $25,000 loan at 7% APR for 5 years (60 months), fixed payments: about **$495.03** a month and roughly **$4,702** in total interest.
+A $25,000 loan at 7% annual interest for 5 years (60 months), fixed payments: about **$495.03** a month and roughly **$4,702** in total interest.
 
 ## FAQ
 

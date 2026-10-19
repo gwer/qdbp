@@ -1,0 +1,54 @@
+{
+  "title": "Calculadora de horas: qué hora será dentro de N horas",
+  "description": "Qué hora será dentro de N horas y minutos o qué hora era hace N horas, con la fecha y el cambio de día.",
+  "inputs": {
+    "date": {
+      "label": "Fecha"
+    },
+    "time": {
+      "label": "Hora"
+    },
+    "op": {
+      "label": "Operación",
+      "options": {
+        "add": "Sumar",
+        "subtract": "Restar"
+      }
+    },
+    "days": {
+      "label": "Días"
+    },
+    "hours": {
+      "label": "Horas"
+    },
+    "minutes": {
+      "label": "Minutos"
+    }
+  },
+  "outputs": {
+    "time": {
+      "label": "Hora"
+    },
+    "date": {
+      "label": "Fecha"
+    },
+    "shift": {
+      "label": "Día"
+    }
+  },
+  "ui": {
+    "sameDay": "El mismo día",
+    "nextDay": "Al día siguiente",
+    "prevDay": "El día anterior",
+    "daysLater": {
+      "one": "{count} día después",
+      "many": "{count} días después",
+      "other": "{count} días después"
+    },
+    "daysEarlier": {
+      "one": "{count} día antes",
+      "many": "{count} días antes",
+      "other": "{count} días antes"
+    }
+  }
+}

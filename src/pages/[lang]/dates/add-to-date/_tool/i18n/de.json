@@ -1,0 +1,36 @@
+{
+  "title": "Datumsrechner: welches Datum ist in N Tagen",
+  "description": "Welches Datum ist in N Tagen, Wochen, Monaten oder Jahren – oder war vor N Tagen?",
+  "inputs": {
+    "date": {
+      "label": "Datum"
+    },
+    "op": {
+      "label": "Rechenart",
+      "options": {
+        "add": "Addieren",
+        "subtract": "Subtrahieren"
+      }
+    },
+    "amount": {
+      "label": "Anzahl"
+    },
+    "unit": {
+      "label": "Einheit",
+      "options": {
+        "days": "Tage",
+        "weeks": "Wochen",
+        "months": "Monate",
+        "years": "Jahre"
+      }
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Ergebnis"
+    },
+    "days": {
+      "label": "Differenz in Tagen"
+    }
+  }
+}

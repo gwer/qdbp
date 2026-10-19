@@ -1,0 +1,30 @@
+{
+  "title": "Days calculator: how many days between two dates",
+  "description": "Count the days, weeks and weekdays (Mon–Fri) between two dates.",
+  "inputs": {
+    "from": {
+      "label": "Start date"
+    },
+    "to": {
+      "label": "End date"
+    },
+    "includeEnd": {
+      "label": "Include end date",
+      "options": {
+        "no": "No",
+        "yes": "Yes (+1 day)"
+      }
+    }
+  },
+  "outputs": {
+    "days": {
+      "label": "Days"
+    },
+    "weeks": {
+      "label": "Weeks"
+    },
+    "weekdays": {
+      "label": "Weekdays (Mon–Fri)"
+    }
+  }
+}

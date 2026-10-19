@@ -1,6 +1,17 @@
 {
-  "title": "Prozent von einer Zahl",
+  "title": "Prozentrechner: wie viel sind X % von einer Zahl",
   "description": "Wie viel sind X % von einer Zahl? Prozentsatz und Zahl eingeben – das Ergebnis erscheint sofort.",
-  "inputs": { "percent": { "label": "Prozentsatz" }, "value": { "label": "Von der Zahl" } },
-  "outputs": { "result": { "label": "Ergebnis" } }
+  "inputs": {
+    "percent": {
+      "label": "Prozentsatz"
+    },
+    "value": {
+      "label": "Von der Zahl"
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Ergebnis"
+    }
+  }
 }

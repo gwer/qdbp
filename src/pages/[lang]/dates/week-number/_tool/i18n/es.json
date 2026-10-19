@@ -1,0 +1,30 @@
+{
+  "title": "Número de semana: en qué semana del año estamos",
+  "description": "¿En qué semana del año estamos? Número de semana de cualquier fecha según ISO 8601 (como en España) o el sistema de EE. UU.",
+  "inputs": {
+    "date": {
+      "label": "Fecha"
+    },
+    "system": {
+      "label": "Sistema",
+      "options": {
+        "iso": "ISO 8601 (empieza el lunes)",
+        "us": "EE. UU. (empieza el domingo)"
+      }
+    }
+  },
+  "outputs": {
+    "week": {
+      "label": "Semana"
+    },
+    "year": {
+      "label": "Año de la semana"
+    },
+    "start": {
+      "label": "Primer día de la semana"
+    },
+    "end": {
+      "label": "Último día de la semana"
+    }
+  }
+}

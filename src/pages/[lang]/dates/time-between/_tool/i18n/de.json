@@ -1,0 +1,30 @@
+{
+  "title": "Stundenrechner: Zeitspanne zwischen zwei Uhrzeiten",
+  "description": "Wie viele Stunden und Minuten zwischen zwei Uhrzeiten liegen – etwa von Schichtbeginn bis Schichtende, auch über Mitternacht.",
+  "inputs": {
+    "start": {
+      "label": "Beginn"
+    },
+    "end": {
+      "label": "Ende"
+    }
+  },
+  "outputs": {
+    "duration": {
+      "label": "Dauer (h:mm)"
+    },
+    "minutes": {
+      "label": "Minuten gesamt"
+    },
+    "hours": {
+      "label": "Dezimalstunden"
+    },
+    "overnight": {
+      "label": "Ende"
+    }
+  },
+  "ui": {
+    "sameDay": "Am selben Tag",
+    "nextDay": "Am nächsten Tag"
+  }
+}

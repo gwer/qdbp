@@ -1,0 +1,30 @@
+{
+  "title": "Kalenderwoche: welche KW ist heute",
+  "description": "Welche KW ist heute? Kalenderwoche für jedes Datum nach DIN/ISO 8601 oder nach US-System.",
+  "inputs": {
+    "date": {
+      "label": "Datum"
+    },
+    "system": {
+      "label": "System",
+      "options": {
+        "iso": "ISO 8601 / DIN (ab Montag)",
+        "us": "USA (ab Sonntag)"
+      }
+    }
+  },
+  "outputs": {
+    "week": {
+      "label": "KW"
+    },
+    "year": {
+      "label": "Jahr der KW"
+    },
+    "start": {
+      "label": "Erster Tag der Woche"
+    },
+    "end": {
+      "label": "Letzter Tag der Woche"
+    }
+  }
+}

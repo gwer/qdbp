@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '@/i18n/config';
-import { toolTitle, toolUrl, type Tool } from '@/lib/catalog';
+import { toolName, toolUrl, type Tool } from '@/lib/catalog';
 
 interface Props {
   tools: Tool[];
@@ -14,7 +14,7 @@ const { tools, lang } = Astro.props;
   {
     tools.map((tool) => (
       <li>
-        <a href={toolUrl(tool, lang)}>{toolTitle(tool, lang)}</a>
+        <a href={toolUrl(tool, lang)}>{toolName(tool, lang)}</a>
         <p>{tool.strings[lang]!.description as string}</p>
       </li>
     ))

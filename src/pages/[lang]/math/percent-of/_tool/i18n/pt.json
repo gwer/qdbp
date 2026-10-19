@@ -1,6 +1,17 @@
 {
-  "title": "Porcentagem de um número",
+  "title": "Calculadora de porcentagem: quanto é X% de um número",
   "description": "Quanto é X% de um número? Digite a porcentagem e o número e veja o resultado na hora.",
-  "inputs": { "percent": { "label": "Porcentagem" }, "value": { "label": "Do número" } },
-  "outputs": { "result": { "label": "Resultado" } }
+  "inputs": {
+    "percent": {
+      "label": "Porcentagem"
+    },
+    "value": {
+      "label": "Do número"
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Resultado"
+    }
+  }
 }

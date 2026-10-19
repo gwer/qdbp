@@ -1,16 +1,34 @@
 {
-  "title": "Kreditrechner",
+  "title": "Kreditrechner: Monatsrate und Tilgungsplan",
   "description": "Monatliche Rate, Zinskosten und Tilgungsplan für Annuitäten- oder Tilgungsdarlehen berechnen.",
   "inputs": {
-    "amount": { "label": "Kreditbetrag" },
-    "rate": { "label": "Sollzins pro Jahr" },
-    "months": { "label": "Laufzeit in Monaten" },
-    "kind": { "label": "Tilgungsart", "options": { "annuity": "Annuität (gleiche Rate)", "differentiated": "Tilgung (fallende Rate)" } }
+    "amount": {
+      "label": "Kreditbetrag"
+    },
+    "rate": {
+      "label": "Sollzins pro Jahr"
+    },
+    "months": {
+      "label": "Laufzeit in Monaten"
+    },
+    "kind": {
+      "label": "Tilgungsart",
+      "options": {
+        "annuity": "Annuität (gleiche Rate)",
+        "differentiated": "Tilgung (fallende Rate)"
+      }
+    }
   },
   "outputs": {
-    "payment": { "label": "Monatliche Rate" },
-    "overpay": { "label": "Zinskosten gesamt" },
-    "total": { "label": "Gesamtbetrag" }
+    "payment": {
+      "label": "Monatliche Rate"
+    },
+    "overpay": {
+      "label": "Zinskosten gesamt"
+    },
+    "total": {
+      "label": "Gesamtbetrag"
+    }
   },
   "ui": {
     "decreasing": "Die Rate sinkt von {first} auf {last}",

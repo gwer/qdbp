@@ -1,0 +1,30 @@
+{
+  "title": "Time duration calculator: hours between two times",
+  "description": "How many hours and minutes there are between two times of day — for example, from the start to the end of a shift, even across midnight.",
+  "inputs": {
+    "start": {
+      "label": "Start time"
+    },
+    "end": {
+      "label": "End time"
+    }
+  },
+  "outputs": {
+    "duration": {
+      "label": "Duration (h:mm)"
+    },
+    "minutes": {
+      "label": "Total minutes"
+    },
+    "hours": {
+      "label": "Decimal hours"
+    },
+    "overnight": {
+      "label": "Ends"
+    }
+  },
+  "ui": {
+    "sameDay": "Same day",
+    "nextDay": "Next day"
+  }
+}

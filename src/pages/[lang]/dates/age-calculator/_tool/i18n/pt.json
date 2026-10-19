@@ -1,0 +1,29 @@
+{
+  "title": "Calculadora de idade: idade exata em anos, meses e dias",
+  "description": "Descubra sua idade exata em anos, meses e dias hoje ou em qualquer data, quantos dias você já viveu e quanto falta para o aniversário.",
+  "inputs": {
+    "birth": {
+      "label": "Data de nascimento"
+    },
+    "on": {
+      "label": "Idade em"
+    }
+  },
+  "outputs": {
+    "years": {
+      "label": "Anos"
+    },
+    "months": {
+      "label": "Meses"
+    },
+    "days": {
+      "label": "Dias"
+    },
+    "totalDays": {
+      "label": "Total de dias"
+    },
+    "nextBirthday": {
+      "label": "Dias até o aniversário"
+    }
+  }
+}

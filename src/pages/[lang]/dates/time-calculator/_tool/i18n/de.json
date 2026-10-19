@@ -1,0 +1,52 @@
+{
+  "title": "Uhrzeitrechner: wie spät ist es in N Stunden",
+  "description": "Wie spät ist es in N Stunden und Minuten – oder wie spät war es vor N Stunden? Mit Datum und Tageswechsel.",
+  "inputs": {
+    "date": {
+      "label": "Datum"
+    },
+    "time": {
+      "label": "Uhrzeit"
+    },
+    "op": {
+      "label": "Rechenart",
+      "options": {
+        "add": "Addieren",
+        "subtract": "Subtrahieren"
+      }
+    },
+    "days": {
+      "label": "Tage"
+    },
+    "hours": {
+      "label": "Stunden"
+    },
+    "minutes": {
+      "label": "Minuten"
+    }
+  },
+  "outputs": {
+    "time": {
+      "label": "Uhrzeit"
+    },
+    "date": {
+      "label": "Datum"
+    },
+    "shift": {
+      "label": "Tag"
+    }
+  },
+  "ui": {
+    "sameDay": "Am selben Tag",
+    "nextDay": "Am nächsten Tag",
+    "prevDay": "Am Vortag",
+    "daysLater": {
+      "one": "{count} Tag später",
+      "other": "{count} Tage später"
+    },
+    "daysEarlier": {
+      "one": "{count} Tag früher",
+      "other": "{count} Tage früher"
+    }
+  }
+}

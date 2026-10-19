@@ -1,16 +1,34 @@
 {
-  "title": "Calculadora de préstamos",
+  "title": "Calculadora de préstamos: cuota y cuadro de amortización",
   "description": "Calcula la cuota mensual, los intereses totales y el cuadro de amortización de un préstamo con sistema francés o alemán.",
   "inputs": {
-    "amount": { "label": "Importe del préstamo" },
-    "rate": { "label": "Tipo de interés anual" },
-    "months": { "label": "Plazo, meses" },
-    "kind": { "label": "Sistema de amortización", "options": { "annuity": "Francés (cuota fija)", "differentiated": "Alemán (cuota decreciente)" } }
+    "amount": {
+      "label": "Importe del préstamo"
+    },
+    "rate": {
+      "label": "Tipo de interés anual"
+    },
+    "months": {
+      "label": "Plazo (meses)"
+    },
+    "kind": {
+      "label": "Sistema de amortización",
+      "options": {
+        "annuity": "Francés (cuota fija)",
+        "differentiated": "Alemán (cuota decreciente)"
+      }
+    }
   },
   "outputs": {
-    "payment": { "label": "Cuota mensual" },
-    "overpay": { "label": "Intereses totales" },
-    "total": { "label": "Total a pagar" }
+    "payment": {
+      "label": "Cuota mensual"
+    },
+    "overpay": {
+      "label": "Intereses totales"
+    },
+    "total": {
+      "label": "Total a pagar"
+    }
   },
   "ui": {
     "decreasing": "La cuota baja de {first} a {last}",

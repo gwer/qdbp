@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatInput, formatNumber } from './format';
+import { formatClock, formatDateTime, formatInput, formatNumber } from './format';
 
 const NBSP = ' ';
 
@@ -34,5 +34,27 @@ describe('formatInput', () => {
   it('без группировки, с локальным разделителем', () => {
     expect(formatInput('ru', 1234567.5)).toBe('1234567,5');
     expect(formatInput('en', 1234567.5)).toBe('1234567.5');
+  });
+});
+
+describe('formatClock', () => {
+  it('формат по языку по умолчанию', () => {
+    expect(formatClock('ru', 90)).toBe('01:30');
+    expect(formatClock('de', 1350)).toBe('22:30');
+    expect(formatClock('en', 90)).toBe(`1:30${NBSP}AM`);
+    expect(formatClock('en', 1350)).toBe(`10:30${NBSP}PM`);
+  });
+
+  it('формат можно выбрать независимо от языка', () => {
+    expect(formatClock('en', 1350, '24')).toBe('22:30');
+    expect(formatClock('ru', 1350, '12')).toMatch(/^10:30\u00A0(PM|ПП)$/);
+    expect(formatClock('de', 0, '12')).toMatch(/^12:00\u00A0/);
+  });
+});
+
+describe('formatDateTime', () => {
+  it('формат часов', () => {
+    expect(formatDateTime('en', 0, 'UTC', '24')).toContain('00:00:00');
+    expect(formatDateTime('en', 0, 'UTC', '12')).toMatch(/12:00:00\u00A0AM/);
   });
 });

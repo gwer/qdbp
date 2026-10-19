@@ -124,7 +124,9 @@ function build() {
     if (!categoryPages[`${ROOT}/${id}/index.astro`]) errors.push(`${id}: нет index.astro (скопируйте из любой категории)`);
     const strings = catStrings.get(id) ?? {};
     errors.push(...validateFiles(`${id} (категория)`, { i18n: strings, content: [] }, ['name', 'description'], false));
-    const catTools = tools.filter((t) => t.category === id);
+    const catTools = tools
+      .filter((t) => t.category === id)
+      .sort((a, b) => (a.def.order ?? Infinity) - (b.def.order ?? Infinity) || a.id.localeCompare(b.id));
     const langs = SITE_LANGS.filter((l) => catTools.some((t) => t.langs.includes(l)));
     for (const lang of langs) {
       if (!strings[lang]) errors.push(`${id}: на ${lang} есть инструменты, но нет _category/i18n/${lang}.json`);
@@ -146,6 +148,8 @@ export const { tools, categories } = build();
 export const toolById = (id: string) => tools.find((t) => t.id === id);
 
 export const toolTitle = (tool: Tool, lang: Lang) => tool.strings[lang]!.title as string;
+/** Короткое имя — часть заголовка до двоеточия: «Калькулятор дней: сколько дней между датами» → «Калькулятор дней». */
+export const toolName = (tool: Tool, lang: Lang) => toolTitle(tool, lang).split(':')[0].trim();
 export const categoryName = (cat: Category, lang: Lang) => cat.strings[lang]!.name as string;
 
 export const toolUrl = (tool: Tool, lang: Lang) => `/${lang}/${tool.path}/`;

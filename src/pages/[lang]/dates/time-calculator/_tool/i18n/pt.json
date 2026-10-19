@@ -1,0 +1,54 @@
+{
+  "title": "Calculadora de horas: que horas serão daqui a N horas",
+  "description": "Que horas serão daqui a N horas e minutos ou que horas eram há N horas — com a data e a mudança de dia.",
+  "inputs": {
+    "date": {
+      "label": "Data"
+    },
+    "time": {
+      "label": "Horário"
+    },
+    "op": {
+      "label": "Operação",
+      "options": {
+        "add": "Somar",
+        "subtract": "Subtrair"
+      }
+    },
+    "days": {
+      "label": "Dias"
+    },
+    "hours": {
+      "label": "Horas"
+    },
+    "minutes": {
+      "label": "Minutos"
+    }
+  },
+  "outputs": {
+    "time": {
+      "label": "Horário"
+    },
+    "date": {
+      "label": "Data"
+    },
+    "shift": {
+      "label": "Dia"
+    }
+  },
+  "ui": {
+    "sameDay": "No mesmo dia",
+    "nextDay": "No dia seguinte",
+    "prevDay": "No dia anterior",
+    "daysLater": {
+      "one": "{count} dia depois",
+      "many": "{count} dias depois",
+      "other": "{count} dias depois"
+    },
+    "daysEarlier": {
+      "one": "{count} dia antes",
+      "many": "{count} dias antes",
+      "other": "{count} dias antes"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Calculadora de horas entre dois horários",
+  "description": "Quantas horas e minutos há entre dois horários — por exemplo, do início ao fim de um turno, inclusive passando da meia-noite.",
+  "inputs": {
+    "start": {
+      "label": "Horário de início"
+    },
+    "end": {
+      "label": "Horário de término"
+    }
+  },
+  "outputs": {
+    "duration": {
+      "label": "Duração (h:mm)"
+    },
+    "minutes": {
+      "label": "Total de minutos"
+    },
+    "hours": {
+      "label": "Horas decimais"
+    },
+    "overnight": {
+      "label": "Termina"
+    }
+  },
+  "ui": {
+    "sameDay": "No mesmo dia",
+    "nextDay": "No dia seguinte"
+  }
+}

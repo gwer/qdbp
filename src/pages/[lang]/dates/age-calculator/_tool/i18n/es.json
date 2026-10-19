@@ -1,0 +1,29 @@
+{
+  "title": "Calculadora de edad: años, meses y días exactos",
+  "description": "Calcula tu edad exacta en años, meses y días hoy o en cualquier fecha, los días vividos y cuánto falta para tu cumpleaños.",
+  "inputs": {
+    "birth": {
+      "label": "Fecha de nacimiento"
+    },
+    "on": {
+      "label": "Edad a fecha de"
+    }
+  },
+  "outputs": {
+    "years": {
+      "label": "Años"
+    },
+    "months": {
+      "label": "Meses"
+    },
+    "days": {
+      "label": "Días"
+    },
+    "totalDays": {
+      "label": "Días en total"
+    },
+    "nextBirthday": {
+      "label": "Días hasta el cumpleaños"
+    }
+  }
+}

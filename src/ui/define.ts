@@ -10,11 +10,30 @@ export type NumberInput = {
   max?: number;
 };
 export type SelectInput = { type: 'select'; options: readonly string[]; default: string };
-export type InputSpec = NumberInput | SelectInput;
+/** default: 'YYYY-MM-DD', 'today', 'today+N', 'today-N'. «Сегодня» подставляется только в браузере. */
+export type DateInput = { type: 'date'; default: string };
+/** Длительность «ч:мм»; default и значение — в минутах. */
+export type DurationInput = { type: 'duration'; default: number };
+/** Время на часах; default: 'HH:MM' или 'now' (только в браузере); значение — минуты от полуночи. */
+export type TimeInput = { type: 'time'; default: string };
+export type InputSpec = NumberInput | SelectInput | DateInput | DurationInput | TimeInput;
 
-export type OutputSpec = { type?: NumberKind; digits?: number };
+export type OutputSpec =
+  | { type?: NumberKind; digits?: number }
+  /** Значение — строка 'YYYY-MM-DD'. */
+  | { type: 'date'; style?: 'long' | 'full' }
+  /** Значение — минуты. */
+  | { type: 'duration' }
+  /** Значение — мс от эпохи; без timeZone — часовой пояс браузера. */
+  | { type: 'datetime'; timeZone?: 'UTC' }
+  /** Значение — минуты от полуночи. */
+  | { type: 'clock' }
+  /** Значение — готовая строка. */
+  | { type: 'text' }
+  /** Своё форматирование, когда нужны строки перевода (например, «через 2 дня»). */
+  | { type: 'custom'; format: (value: any, ctx: { t: T; lang: Lang }) => string };
 
-type InputValue<S> = S extends SelectInput ? S['options'][number] : number;
+type InputValue<S> = S extends SelectInput ? S['options'][number] : S extends DateInput ? string : number;
 export type Values<I extends Record<string, InputSpec>> = { [K in keyof I]: InputValue<I[K]> };
 
 export interface ToolProps {
@@ -32,6 +51,8 @@ export interface CalculatorDef<
   R extends object = Record<string, unknown>,
 > {
   kind: 'calculator';
+  /** Порядок в списках категории и на главной, меньше — выше. Без order — в конце, по алфавиту id. */
+  order?: number;
   related?: string[];
   inputs: I;
   /** Чистая функция; бросает исключение, если расчёт невозможен. */
@@ -44,6 +65,8 @@ export interface CalculatorDef<
 
 export interface CustomDef {
   kind: 'custom';
+  /** Порядок в списках категории и на главной, меньше — выше. */
+  order?: number;
   related?: string[];
   component: ComponentType<ToolProps>;
 }

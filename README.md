@@ -18,7 +18,7 @@ pnpm urls:update    # подтвердить новые/удалённые URL �
 
 1. Папка `src/pages/[lang]/{category}/{tool-id}/` — URL будет `/{lang}/{category}/{tool-id}/`; id уникален на весь сайт.
 2. `index.astro` — скопировать как есть из любого инструмента (он одинаковый у всех).
-3. `_tool/tool.ts` — `export const def = defineCalculator({ inputs, compute, outputs, Extra? })` или `defineTool({ component })`, затем `export default island(def)`.
+3. `_tool/tool.ts` — `export const def = defineCalculator({ order, inputs, compute, outputs, Extra? })` или `defineTool({ order, component })`, затем `export default island(def)`. `order` — место в списке категории.
 4. `_tool/*.test.ts` — эталонные значения из независимого источника.
 5. `_tool/i18n/{lang}.json` + `_tool/content/{lang}.md` на каждый язык. Исходник пишется на русском. Язык включён, если есть оба файла.
 6. `pnpm check`, затем `pnpm urls:update`, если появились новые URL.

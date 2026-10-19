@@ -1,0 +1,29 @@
+{
+  "title": "Altersrechner: Alter in Jahren, Monaten und Tagen",
+  "description": "Genaues Alter in Jahren, Monaten und Tagen – heute oder an einem beliebigen Datum – sowie gelebte Tage und Tage bis zum nächsten Geburtstag.",
+  "inputs": {
+    "birth": {
+      "label": "Geburtsdatum"
+    },
+    "on": {
+      "label": "Alter am"
+    }
+  },
+  "outputs": {
+    "years": {
+      "label": "Jahre"
+    },
+    "months": {
+      "label": "Monate"
+    },
+    "days": {
+      "label": "Tage"
+    },
+    "totalDays": {
+      "label": "Tage insgesamt"
+    },
+    "nextBirthday": {
+      "label": "Tage bis zum Geburtstag"
+    }
+  }
+}

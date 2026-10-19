@@ -3,23 +3,43 @@
     "tagline": "Calculadoras y herramientas en tu navegador",
     "description": "Calculadoras y herramientas online gratuitas: finanzas, fechas, porcentajes, reformas y texto. Todo se calcula en tu navegador."
   },
-  "nav": { "home": "Inicio", "language": "Idioma" },
+  "nav": {
+    "home": "Inicio",
+    "language": "Idioma"
+  },
   "home": {
     "title": "qdbp — calculadoras y herramientas online",
     "allCategories": "Todas las secciones"
   },
   "category": {
-    "toolsCount": { "one": "{count} herramienta", "many": "{count} herramientas", "other": "{count} herramientas" }
+    "toolsCount": {
+      "one": "{count} herramienta",
+      "many": "{count} herramientas",
+      "other": "{count} herramientas"
+    }
   },
-  "tool": { "related": "Herramientas relacionadas", "moreInCategory": "Más en «{category}»" },
+  "tool": {
+    "related": "Herramientas relacionadas",
+    "moreInCategory": "Más en «{category}»"
+  },
   "calc": {
     "result": "Resultado",
     "error": {
       "number": "Introduce un número",
       "integer": "Introduce un número entero",
       "min": "Debe ser al menos {min}",
-      "max": "Debe ser como máximo {max}"
+      "max": "Debe ser como máximo {max}",
+      "date": "Elige una fecha",
+      "duration": "Introduce el tiempo en formato h:mm, por ejemplo 1:30",
+      "time": "Indica una hora"
+    },
+    "clock": {
+      "label": "Formato de hora",
+      "h24": "24 h",
+      "h12": "12 h (AM/PM)"
     }
   },
-  "footer": { "privacy": "Todos los cálculos se hacen en tu navegador. Los datos que introduces no se envían a ninguna parte." }
+  "footer": {
+    "privacy": "Todos los cálculos se hacen en tu navegador. Los datos que introduces no se envían a ninguna parte."
+  }
 }

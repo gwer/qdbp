@@ -1,0 +1,36 @@
+{
+  "title": "Date calculator: what date it will be in N days",
+  "description": "Find the date N days, weeks, months or years after a given date — or before it.",
+  "inputs": {
+    "date": {
+      "label": "Start date"
+    },
+    "op": {
+      "label": "Operation",
+      "options": {
+        "add": "Add",
+        "subtract": "Subtract"
+      }
+    },
+    "amount": {
+      "label": "Amount"
+    },
+    "unit": {
+      "label": "Unit",
+      "options": {
+        "days": "Days",
+        "weeks": "Weeks",
+        "months": "Months",
+        "years": "Years"
+      }
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Resulting date"
+    },
+    "days": {
+      "label": "Difference in days"
+    }
+  }
+}

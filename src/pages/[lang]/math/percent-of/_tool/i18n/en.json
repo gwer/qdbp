@@ -1,6 +1,17 @@
 {
-  "title": "Percentage of a number",
+  "title": "Percentage calculator: what is X% of a number",
   "description": "What is X% of a number? Enter the percentage and the number to get the answer instantly.",
-  "inputs": { "percent": { "label": "Percentage" }, "value": { "label": "Of number" } },
-  "outputs": { "result": { "label": "Result" } }
+  "inputs": {
+    "percent": {
+      "label": "Percentage"
+    },
+    "value": {
+      "label": "Number"
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Result"
+    }
+  }
 }

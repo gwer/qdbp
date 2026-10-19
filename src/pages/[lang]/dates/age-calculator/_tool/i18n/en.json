@@ -1,0 +1,29 @@
+{
+  "title": "Age calculator: exact age in years, months and days",
+  "description": "Find your exact age in years, months and days today or on any date, plus total days lived and days until your next birthday.",
+  "inputs": {
+    "birth": {
+      "label": "Date of birth"
+    },
+    "on": {
+      "label": "Age on"
+    }
+  },
+  "outputs": {
+    "years": {
+      "label": "Years"
+    },
+    "months": {
+      "label": "Months"
+    },
+    "days": {
+      "label": "Days"
+    },
+    "totalDays": {
+      "label": "Total days"
+    },
+    "nextBirthday": {
+      "label": "Days to next birthday"
+    }
+  }
+}

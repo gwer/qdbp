@@ -1,0 +1,30 @@
+{
+  "title": "Calculadora de dias: quantos dias entre duas datas",
+  "description": "Calcule quantos dias, semanas e dias úteis (de segunda a sexta) há entre duas datas.",
+  "inputs": {
+    "from": {
+      "label": "Data inicial"
+    },
+    "to": {
+      "label": "Data final"
+    },
+    "includeEnd": {
+      "label": "Contar o último dia",
+      "options": {
+        "no": "Não",
+        "yes": "Sim (+1 dia)"
+      }
+    }
+  },
+  "outputs": {
+    "days": {
+      "label": "Dias"
+    },
+    "weeks": {
+      "label": "Semanas"
+    },
+    "weekdays": {
+      "label": "Dias úteis (seg–sex)"
+    }
+  }
+}

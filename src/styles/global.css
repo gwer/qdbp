@@ -194,8 +194,13 @@ h2 {
 
 .calc-inputs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 14px;
+}
+
+/* Подписи вариантов длинные — список всегда на всю ширину. */
+.calc-inputs .field:has(> select) {
+  grid-column: 1 / -1;
 }
 
 .field label {
@@ -210,6 +215,7 @@ h2 {
 }
 
 input[type='text'],
+input[type='date'],
 select,
 textarea {
   width: 100%;
@@ -222,6 +228,7 @@ textarea {
 }
 
 input[type='text']:focus,
+input[type='date']:focus,
 select:focus,
 textarea:focus {
   outline: 2px solid var(--accent);
@@ -229,7 +236,8 @@ textarea:focus {
   border-color: transparent;
 }
 
-input[aria-invalid='true'] {
+input[aria-invalid='true'],
+select[aria-invalid='true'] {
   border-color: var(--error);
 }
 
@@ -348,4 +356,44 @@ details.extra summary {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+/* Переключатель формата времени и поле 12 ч с AM/PM */
+.calc-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.calc-options span {
+  margin-right: 4px;
+}
+
+.calc-options button {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+.calc-options button[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.time-12 {
+  display: flex;
+  gap: 6px;
+}
+
+.time-12 select {
+  width: auto;
 }

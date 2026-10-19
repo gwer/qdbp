@@ -1,0 +1,30 @@
+{
+  "title": "Tagerechner: wie viele Tage zwischen zwei Daten",
+  "description": "Anzahl der Tage, Wochen und Werktage (Mo–Fr) zwischen zwei Daten berechnen.",
+  "inputs": {
+    "from": {
+      "label": "Startdatum"
+    },
+    "to": {
+      "label": "Enddatum"
+    },
+    "includeEnd": {
+      "label": "Enddatum mitzählen",
+      "options": {
+        "no": "Nein",
+        "yes": "Ja (+1 Tag)"
+      }
+    }
+  },
+  "outputs": {
+    "days": {
+      "label": "Tage"
+    },
+    "weeks": {
+      "label": "Wochen"
+    },
+    "weekdays": {
+      "label": "Werktage (Mo–Fr)"
+    }
+  }
+}

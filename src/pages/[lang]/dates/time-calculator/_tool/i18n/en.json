@@ -1,0 +1,52 @@
+{
+  "title": "Time calculator: what time it will be in N hours",
+  "description": "What time will it be in N hours and minutes, or what time was it N hours ago — with the date and day change.",
+  "inputs": {
+    "date": {
+      "label": "Date"
+    },
+    "time": {
+      "label": "Time"
+    },
+    "op": {
+      "label": "Operation",
+      "options": {
+        "add": "Add",
+        "subtract": "Subtract"
+      }
+    },
+    "days": {
+      "label": "Days"
+    },
+    "hours": {
+      "label": "Hours"
+    },
+    "minutes": {
+      "label": "Minutes"
+    }
+  },
+  "outputs": {
+    "time": {
+      "label": "Time"
+    },
+    "date": {
+      "label": "Date"
+    },
+    "shift": {
+      "label": "Day"
+    }
+  },
+  "ui": {
+    "sameDay": "Same day",
+    "nextDay": "Next day",
+    "prevDay": "Previous day",
+    "daysLater": {
+      "one": "{count} day later",
+      "other": "{count} days later"
+    },
+    "daysEarlier": {
+      "one": "{count} day earlier",
+      "other": "{count} days earlier"
+    }
+  }
+}

@@ -4,7 +4,7 @@ import ToolList from '@/components/ToolList.astro';
 import { LANG_META } from '@/i18n/config';
 import { uiT } from '@/i18n/ui';
 import Base from '@/layouts/Base.astro';
-import { categories, categoryName, categoryUrl, toolById, toolUrl, type Tool, type ToolPageProps } from '@/lib/catalog';
+import { categories, categoryName, categoryUrl, toolById, toolName, toolUrl, type Tool, type ToolPageProps } from '@/lib/catalog';
 import { breadcrumbLd, webAppLd } from '@/lib/seo';
 
 // Общая обвязка страницы инструмента. Сам инструмент (остров) передаётся в слот из index.astro.
@@ -15,6 +15,7 @@ const t = uiT(lang);
 const cat = categories.find((c) => c.id === tool.category)!;
 const strings = tool.strings[lang]!;
 const title = strings.title as string;
+const name = toolName(tool, lang);
 const description = strings.description as string;
 const Content = tool.content[lang]!;
 
@@ -25,7 +26,7 @@ const more = cat.tools.filter((t) => t !== tool && !related.includes(t) && avail
 const crumbs = [
   { name: t('nav.home'), href: `/${lang}/` },
   { name: categoryName(cat, lang), href: categoryUrl(cat, lang) },
-  { name: title, href: toolUrl(tool, lang) },
+  { name, href: toolUrl(tool, lang) },
 ];
 const alternates = tool.langs.map((l) => ({ lang: l, href: toolUrl(tool, l) }));
 const url = new URL(toolUrl(tool, lang), Astro.site).href;
@@ -36,7 +37,7 @@ const url = new URL(toolUrl(tool, lang), Astro.site).href;
   title={`${title} — qdbp`}
   description={description}
   alternates={alternates}
-  jsonLd={[webAppLd({ name: title, description, url, lang: LANG_META[lang].hreflang }), breadcrumbLd(crumbs, Astro.site!)]}
+  jsonLd={[webAppLd({ name, description, url, lang: LANG_META[lang].hreflang }), breadcrumbLd(crumbs, Astro.site!)]}
 >
   <Breadcrumbs items={crumbs} />
   <h1>{title}</h1>

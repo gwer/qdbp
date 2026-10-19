@@ -1,0 +1,30 @@
+{
+  "title": "Calculadora de días: cuántos días hay entre dos fechas",
+  "description": "Calcula cuántos días, semanas y días laborables (de lunes a viernes) hay entre dos fechas.",
+  "inputs": {
+    "from": {
+      "label": "Fecha de inicio"
+    },
+    "to": {
+      "label": "Fecha final"
+    },
+    "includeEnd": {
+      "label": "Contar el último día",
+      "options": {
+        "no": "No",
+        "yes": "Sí (+1 día)"
+      }
+    }
+  },
+  "outputs": {
+    "days": {
+      "label": "Días"
+    },
+    "weeks": {
+      "label": "Semanas"
+    },
+    "weekdays": {
+      "label": "Días laborables (lun–vie)"
+    }
+  }
+}

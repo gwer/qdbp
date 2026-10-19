@@ -1,0 +1,30 @@
+{
+  "title": "Calculadora de tiempo transcurrido entre dos horas",
+  "description": "Cuántas horas y minutos hay entre dos horas del día, por ejemplo del inicio al fin de un turno, también pasando la medianoche.",
+  "inputs": {
+    "start": {
+      "label": "Hora de inicio"
+    },
+    "end": {
+      "label": "Hora de fin"
+    }
+  },
+  "outputs": {
+    "duration": {
+      "label": "Duración (h:mm)"
+    },
+    "minutes": {
+      "label": "Minutos en total"
+    },
+    "hours": {
+      "label": "Horas decimales"
+    },
+    "overnight": {
+      "label": "Termina"
+    }
+  },
+  "ui": {
+    "sameDay": "El mismo día",
+    "nextDay": "Al día siguiente"
+  }
+}
