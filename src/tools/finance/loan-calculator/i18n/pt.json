@@ -1,0 +1,24 @@
+{
+  "title": "Calculadora de empréstimo",
+  "description": "Calcule a parcela mensal, os juros totais e a tabela de amortização pelo sistema Price ou SAC.",
+  "inputs": {
+    "amount": { "label": "Valor do empréstimo" },
+    "rate": { "label": "Taxa de juros ao ano" },
+    "months": { "label": "Prazo em meses" },
+    "kind": { "label": "Sistema de amortização", "options": { "annuity": "Price (parcelas fixas)", "differentiated": "SAC (parcelas decrescentes)" } }
+  },
+  "outputs": {
+    "payment": { "label": "Parcela mensal" },
+    "overpay": { "label": "Juros totais" },
+    "total": { "label": "Total pago" }
+  },
+  "ui": {
+    "decreasing": "A parcela cai de {first} para {last}",
+    "schedule": "Tabela de amortização",
+    "month": "Mês",
+    "payment": "Parcela",
+    "principal": "Amortização",
+    "interest": "Juros",
+    "balance": "Saldo devedor"
+  }
+}

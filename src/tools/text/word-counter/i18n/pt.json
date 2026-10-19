@@ -1,0 +1,13 @@
+{
+  "title": "Contador de palavras e caracteres",
+  "description": "Conte palavras, caracteres com e sem espaços, frases e parágrafos de qualquer texto.",
+  "ui": {
+    "label": "Texto",
+    "placeholder": "Cole ou digite seu texto…",
+    "words": "Palavras",
+    "chars": "Caracteres",
+    "charsNoSpaces": "Caracteres sem espaços",
+    "sentences": "Frases",
+    "paragraphs": "Parágrafos"
+  }
+}

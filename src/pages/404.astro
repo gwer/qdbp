@@ -1,0 +1,32 @@
+---
+import '@/styles/global.css';
+import { LANG_META, SITE_LANGS } from '@/i18n/config';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>404 — qdbp</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <main class="wrap not-found">
+      <h1>404</h1>
+      <p>Page not found.</p>
+      <ul class="lang-list">
+        {
+          SITE_LANGS.map((lang) => (
+            <li>
+              <a href={`/${lang}/`} lang={LANG_META[lang].hreflang}>
+                {LANG_META[lang].name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </body>
+</html>

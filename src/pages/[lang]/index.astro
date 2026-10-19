@@ -1,0 +1,30 @@
+---
+import ToolList from '@/components/ToolList.astro';
+import { SITE_LANGS, type Lang } from '@/i18n/config';
+import { uiT } from '@/i18n/ui';
+import Base from '@/layouts/Base.astro';
+import { categories, categoryName, categoryUrl, toolsIn } from '@/lib/catalog';
+
+export function getStaticPaths() {
+  return SITE_LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const t = uiT(lang);
+const cats = categories.filter((c) => c.langs.includes(lang));
+const alternates = SITE_LANGS.map((l) => ({ lang: l, href: `/${l}/` }));
+---
+
+<Base lang={lang} title={t('home.title')} description={t('site.description')} alternates={alternates}>
+  <h1>{t('site.tagline')}</h1>
+  {
+    cats.map((cat) => (
+      <section class="home-category">
+        <h2>
+          <a href={categoryUrl(cat, lang)}>{categoryName(cat, lang)}</a>
+        </h2>
+        <ToolList tools={toolsIn(cat, lang)} lang={lang} />
+      </section>
+    ))
+  }
+</Base>

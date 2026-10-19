@@ -1,0 +1,62 @@
+import { describe, expect, it } from 'vitest';
+import { loan } from './loan';
+
+const sum = (xs: number[]) => xs.reduce((a, b) => a + b, 0);
+
+describe('loan: аннуитет', () => {
+  const res = loan({ amount: 1_000_000, rate: 12, months: 60, kind: 'annuity' });
+
+  it('платёж совпадает с формулой A·r / (1 − (1 + r)^−n)', () => {
+    expect(res.payment).toBe(22244.45);
+  });
+
+  it('тело долга гасится полностью', () => {
+    expect(res.schedule).toHaveLength(60);
+    expect(res.schedule.at(-1)!.balance).toBe(0);
+    expect(sum(res.schedule.map((r) => r.principal))).toBeCloseTo(1_000_000, 2);
+  });
+
+  it('переплата ≈ n·P − A, расхождение только из-за округления последнего платежа', () => {
+    expect(Math.abs(res.overpay - (22244.45 * 60 - 1_000_000))).toBeLessThan(1);
+  });
+
+  it('первый месяц: проценты = A·r', () => {
+    expect(res.schedule[0].interest).toBe(10000);
+    expect(res.schedule[0].principal).toBe(12244.45);
+  });
+});
+
+describe('loan: дифференцированный', () => {
+  const res = loan({ amount: 1_000_000, rate: 12, months: 60, kind: 'differentiated' });
+
+  it('первый платёж = A/n + A·r', () => {
+    expect(res.payment).toBe(26666.67);
+  });
+
+  it('переплата = A·r·(n + 1) / 2 с точностью до копеек', () => {
+    expect(res.overpay).toBeCloseTo(305_000, 0);
+  });
+
+  it('последний платёж меньше первого, остаток нулевой', () => {
+    expect(res.lastPayment).toBeLessThan(res.payment);
+    expect(res.schedule.at(-1)!.balance).toBe(0);
+  });
+});
+
+describe('loan: крайние случаи', () => {
+  it('нулевая ставка — равные платежи без переплаты', () => {
+    const res = loan({ amount: 1000, rate: 0, months: 3, kind: 'annuity' });
+    expect(res.schedule.map((r) => r.payment)).toEqual([333.33, 333.33, 333.34]);
+    expect(res.overpay).toBe(0);
+  });
+
+  it('один месяц', () => {
+    const res = loan({ amount: 1000, rate: 12, months: 1, kind: 'annuity' });
+    expect(res.payment).toBe(1010);
+  });
+
+  it('некорректный ввод — исключение', () => {
+    expect(() => loan({ amount: 0, rate: 12, months: 12, kind: 'annuity' })).toThrow();
+    expect(() => loan({ amount: 1000, rate: 12, months: 1.5, kind: 'annuity' })).toThrow();
+  });
+});

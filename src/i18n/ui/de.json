@@ -1,0 +1,25 @@
+{
+  "site": {
+    "tagline": "Rechner und Tools direkt im Browser",
+    "description": "Kostenlose Online-Rechner und Tools: Finanzen, Datum, Prozente, Renovierung und Text. Alle Berechnungen laufen in Ihrem Browser."
+  },
+  "nav": { "home": "Startseite", "language": "Sprache" },
+  "home": {
+    "title": "qdbp — Online-Rechner und Tools",
+    "allCategories": "Alle Bereiche"
+  },
+  "category": {
+    "toolsCount": { "one": "{count} Tool", "other": "{count} Tools" }
+  },
+  "tool": { "related": "Ähnliche Tools", "moreInCategory": "Mehr im Bereich „{category}“" },
+  "calc": {
+    "result": "Ergebnis",
+    "error": {
+      "number": "Bitte eine Zahl eingeben",
+      "integer": "Bitte eine ganze Zahl eingeben",
+      "min": "Mindestens {min}",
+      "max": "Höchstens {max}"
+    }
+  },
+  "footer": { "privacy": "Alle Berechnungen laufen in Ihrem Browser. Ihre Eingaben werden nirgendwohin gesendet." }
+}

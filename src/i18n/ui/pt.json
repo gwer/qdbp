@@ -1,0 +1,25 @@
+{
+  "site": {
+    "tagline": "Calculadoras e ferramentas no seu navegador",
+    "description": "Calculadoras e ferramentas online grátis: finanças, datas, porcentagens, reformas e texto. Todos os cálculos são feitos no seu navegador."
+  },
+  "nav": { "home": "Início", "language": "Idioma" },
+  "home": {
+    "title": "qdbp — calculadoras e ferramentas online",
+    "allCategories": "Todas as seções"
+  },
+  "category": {
+    "toolsCount": { "one": "{count} ferramenta", "many": "{count} ferramentas", "other": "{count} ferramentas" }
+  },
+  "tool": { "related": "Ferramentas relacionadas", "moreInCategory": "Mais em “{category}”" },
+  "calc": {
+    "result": "Resultado",
+    "error": {
+      "number": "Digite um número",
+      "integer": "Digite um número inteiro",
+      "min": "Deve ser no mínimo {min}",
+      "max": "Deve ser no máximo {max}"
+    }
+  },
+  "footer": { "privacy": "Todos os cálculos são feitos no seu navegador. Os dados digitados não são enviados a lugar nenhum." }
+}

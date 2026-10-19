@@ -1,0 +1,13 @@
+{
+  "title": "Word and character counter",
+  "description": "Count words, characters with and without spaces, sentences and paragraphs in any text.",
+  "ui": {
+    "label": "Text",
+    "placeholder": "Paste or type your text…",
+    "words": "Words",
+    "chars": "Characters",
+    "charsNoSpaces": "Characters without spaces",
+    "sentences": "Sentences",
+    "paragraphs": "Paragraphs"
+  }
+}

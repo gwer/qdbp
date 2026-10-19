@@ -1,0 +1,13 @@
+{
+  "title": "Contador de palabras y caracteres",
+  "description": "Cuenta las palabras, los caracteres con y sin espacios, las frases y los párrafos de un texto.",
+  "ui": {
+    "label": "Texto",
+    "placeholder": "Pega o escribe tu texto…",
+    "words": "Palabras",
+    "chars": "Caracteres",
+    "charsNoSpaces": "Caracteres sin espacios",
+    "sentences": "Frases",
+    "paragraphs": "Párrafos"
+  }
+}

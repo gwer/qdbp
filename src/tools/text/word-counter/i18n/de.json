@@ -1,0 +1,13 @@
+{
+  "title": "Wörter- und Zeichenzähler",
+  "description": "Wörter, Zeichen mit und ohne Leerzeichen, Sätze und Absätze in einem Text zählen.",
+  "ui": {
+    "label": "Text",
+    "placeholder": "Text einfügen oder eingeben…",
+    "words": "Wörter",
+    "chars": "Zeichen",
+    "charsNoSpaces": "Zeichen ohne Leerzeichen",
+    "sentences": "Sätze",
+    "paragraphs": "Absätze"
+  }
+}

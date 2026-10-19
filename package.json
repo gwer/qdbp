@@ -1,0 +1,38 @@
+{
+  "name": "qdbp",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.15.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "TZ=UTC astro build",
+    "preview": "astro preview",
+    "test": "vitest run",
+    "typecheck": "astro check",
+    "postbuild:check": "node scripts/check-dist.mjs",
+    "check": "pnpm typecheck && pnpm test && pnpm build && pnpm postbuild:check",
+    "urls:update": "node scripts/check-dist.mjs --update-urls"
+  },
+  "dependencies": {
+    "@astrojs/preact": "6.0.5",
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "7.3.5",
+    "decimal.js-light": "2.5.1",
+    "preact": "10.29.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "typescript": "6.0.3",
+    "vitest": "5.0.3",
+    "wrangler": "4.147.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Percentage of a number",
+  "description": "What is X% of a number? Enter the percentage and the number to get the answer instantly.",
+  "inputs": { "percent": { "label": "Percentage" }, "value": { "label": "Of number" } },
+  "outputs": { "result": { "label": "Result" } }
+}

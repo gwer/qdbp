@@ -1,0 +1,80 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import ToolList from '@/components/ToolList.astro';
+import { LANG_META, type Lang } from '@/i18n/config';
+import { UI, uiT } from '@/i18n/ui';
+import Base from '@/layouts/Base.astro';
+import { categories, categoryName, categoryUrl, toolById, tools, toolUrl, type Tool } from '@/lib/catalog';
+import { breadcrumbLd, webAppLd } from '@/lib/seo';
+import { ToolRoot } from '@/ui/ToolRoot';
+
+export function getStaticPaths() {
+  return tools.flatMap((tool) =>
+    tool.langs.map((lang) => ({ params: { lang, category: tool.category, tool: tool.id }, props: { tool } })),
+  );
+}
+
+const lang = Astro.params.lang as Lang;
+const { tool } = Astro.props as { tool: Tool };
+const t = uiT(lang);
+const cat = categories.find((c) => c.id === tool.category)!;
+const strings = tool.strings[lang]!;
+const title = strings.title as string;
+const description = strings.description as string;
+const Content = tool.content[lang]!;
+
+const available = (t: Tool | undefined): t is Tool => !!t && t.langs.includes(lang);
+const related = (tool.def.related ?? []).map(toolById).filter(available);
+const more = cat.tools.filter((t) => t !== tool && !related.includes(t) && available(t));
+
+const crumbs = [
+  { name: t('nav.home'), href: `/${lang}/` },
+  { name: categoryName(cat, lang), href: categoryUrl(cat, lang) },
+  { name: title, href: toolUrl(tool, lang) },
+];
+const alternates = tool.langs.map((l) => ({ lang: l, href: toolUrl(tool, l) }));
+const url = new URL(toolUrl(tool, lang), Astro.site).href;
+const props = { path: tool.path, lang, strings: { tool: strings, ui: UI[lang] } };
+---
+
+<Base
+  lang={lang}
+  title={`${title} — qdbp`}
+  description={description}
+  alternates={alternates}
+  jsonLd={[webAppLd({ name: title, description, url, lang: LANG_META[lang].hreflang }), breadcrumbLd(crumbs, Astro.site!)]}
+>
+  <Breadcrumbs items={crumbs} />
+  <h1>{title}</h1>
+  <p class="lead">{description}</p>
+
+  <div class="tool" data-tool-root>
+    <ToolRoot def={tool.def} lang={lang} strings={props.strings} />
+  </div>
+  <script type="application/json" id="tool-props" set:html={JSON.stringify(props)} />
+
+  <article class="content">
+    <Content />
+  </article>
+
+  {
+    related.length > 0 && (
+      <section class="related">
+        <h2>{t('tool.related')}</h2>
+        <ToolList tools={related} lang={lang} />
+      </section>
+    )
+  }
+  {
+    more.length > 0 && (
+      <section class="related">
+        <h2>{t('tool.moreInCategory', { category: categoryName(cat, lang) })}</h2>
+        <ToolList tools={more} lang={lang} />
+      </section>
+    )
+  }
+</Base>
+
+<script>
+  import '@/scripts/hydrate-tool';
+</script>

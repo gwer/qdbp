@@ -1,0 +1,81 @@
+---
+import '@/styles/global.css';
+import { DEFAULT_LANG, LANG_META, type Lang } from '@/i18n/config';
+import { uiT } from '@/i18n/ui';
+
+export interface Alternate {
+  lang: Lang;
+  href: string;
+}
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** Версии этой же страницы на других языках, включая текущую. */
+  alternates: Alternate[];
+  jsonLd?: object[];
+}
+
+const { lang, title, description, alternates, jsonLd = [] } = Astro.props;
+const t = uiT(lang);
+const site = Astro.site!;
+const canonical = new URL(Astro.url.pathname, site).href;
+const xDefault = alternates.find((a) => a.lang === DEFAULT_LANG);
+const others = alternates.filter((a) => a.lang !== lang);
+---
+
+<!doctype html>
+<html lang={LANG_META[lang].hreflang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {
+      alternates.length > 1 &&
+        alternates.map((a) => <link rel="alternate" hreflang={LANG_META[a.lang].hreflang} href={new URL(a.href, site).href} />)
+    }
+    {alternates.length > 1 && xDefault && <link rel="alternate" hreflang="x-default" href={new URL(xDefault.href, site).href} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="qdbp" />
+    {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="logo" href={`/${lang}/`} aria-label={t('nav.home')}>qdbp</a>
+        {
+          others.length > 0 && (
+            <details class="lang-menu">
+              <summary aria-label={t('nav.language')}>{LANG_META[lang].name}</summary>
+              <ul>
+                {others.map((a) => (
+                  <li>
+                    <a href={a.href} hreflang={LANG_META[a.lang].hreflang} lang={LANG_META[a.lang].hreflang}>
+                      {LANG_META[a.lang].name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )
+        }
+      </div>
+    </header>
+    <main class="wrap">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>{t('footer.privacy')}</p>
+      </div>
+    </footer>
+  </body>
+</html>

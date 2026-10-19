@@ -1,0 +1,38 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import ToolList from '@/components/ToolList.astro';
+import type { Lang } from '@/i18n/config';
+import { uiT } from '@/i18n/ui';
+import Base from '@/layouts/Base.astro';
+import { categories, categoryName, categoryUrl, toolsIn, type Category } from '@/lib/catalog';
+import { breadcrumbLd } from '@/lib/seo';
+
+export function getStaticPaths() {
+  return categories.flatMap((cat) => cat.langs.map((lang) => ({ params: { lang, category: cat.id }, props: { cat } })));
+}
+
+const lang = Astro.params.lang as Lang;
+const { cat } = Astro.props as { cat: Category };
+const t = uiT(lang);
+const name = categoryName(cat, lang);
+const tools = toolsIn(cat, lang);
+const crumbs = [
+  { name: t('nav.home'), href: `/${lang}/` },
+  { name, href: categoryUrl(cat, lang) },
+];
+const alternates = cat.langs.map((l) => ({ lang: l, href: categoryUrl(cat, l) }));
+---
+
+<Base
+  lang={lang}
+  title={`${name} — qdbp`}
+  description={cat.strings[lang]!.description as string}
+  alternates={alternates}
+  jsonLd={[breadcrumbLd(crumbs, Astro.site!)]}
+>
+  <Breadcrumbs items={crumbs} />
+  <h1>{name}</h1>
+  <p class="lead">{cat.strings[lang]!.description as string}</p>
+  <p class="muted">{t('category.toolsCount', { count: tools.length })}</p>
+  <ToolList tools={tools} lang={lang} />
+</Base>

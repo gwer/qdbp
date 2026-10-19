@@ -1,0 +1,25 @@
+{
+  "site": {
+    "tagline": "Calculators and tools right in your browser",
+    "description": "Free online calculators and tools for finance, dates, percentages, home improvement and text. Everything runs in your browser."
+  },
+  "nav": { "home": "Home", "language": "Language" },
+  "home": {
+    "title": "qdbp — online calculators and tools",
+    "allCategories": "All categories"
+  },
+  "category": {
+    "toolsCount": { "one": "{count} tool", "other": "{count} tools" }
+  },
+  "tool": { "related": "Related tools", "moreInCategory": "More in {category}" },
+  "calc": {
+    "result": "Result",
+    "error": {
+      "number": "Enter a number",
+      "integer": "Enter a whole number",
+      "min": "Must be at least {min}",
+      "max": "Must be at most {max}"
+    }
+  },
+  "footer": { "privacy": "All calculations run in your browser. Nothing you enter is sent anywhere." }
+}
