@@ -4,13 +4,16 @@ import type { T } from '@/i18n/t';
 import type { NumberKind } from '@/lib/format';
 import type { UnitId } from '@/lib/units';
 
+/** Значения по умолчанию для отдельных языков (ставка НДС страны, привычный формат, правдоподобная сумма). */
+type ByLang<V> = { byLang?: Partial<Record<Lang, V>> };
+
 export type NumberInput = {
   type: 'number' | 'integer' | 'percent';
   default: number;
   min?: number;
   max?: number;
-};
-export type SelectInput = { type: 'select'; options: readonly string[]; default: string };
+} & ByLang<number>;
+export type SelectInput = { type: 'select'; options: readonly string[]; default: string } & ByLang<string>;
 /** default: 'YYYY-MM-DD', 'today', 'today+N', 'today-N'. «Сегодня» подставляется только в браузере. */
 export type DateInput = { type: 'date'; default: string };
 /** Длительность «ч:мм»; default и значение — в минутах. */
@@ -30,7 +33,7 @@ export type QuantityInput = {
   defaultImperial?: number;
   min?: number;
   max?: number;
-};
+} & ByLang<number>;
 export type InputSpec = NumberInput | SelectInput | DateInput | DurationInput | TimeInput | QuantityInput;
 
 export type OutputSpec =

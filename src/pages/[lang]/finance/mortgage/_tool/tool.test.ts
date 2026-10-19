@@ -1,12 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { expectAllKeys } from '../../_shared/testing';
-import de from './i18n/de.json';
-import en from './i18n/en.json';
-import es from './i18n/es.json';
-import pt from './i18n/pt.json';
-import ru from './i18n/ru.json';
 import { mortgage } from './mortgage';
-import { base } from './tool';
 
 // Эталоны платежей — формула аннуитета P·r / (1 − (1 + r)^−n), посчитана в Python.
 describe('mortgage', () => {
@@ -44,7 +37,4 @@ describe('mortgage', () => {
     expect(() => mortgage({ price: 100, down: 100, rate: 5, years: 10, kind: 'annuity' })).toThrow();
   });
 
-  it('подписи есть на всех языках', () => {
-    expectAllKeys(base, { ru, en, es, de, pt });
-  });
 });

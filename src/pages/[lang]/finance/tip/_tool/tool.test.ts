@@ -1,11 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { expectAllKeys } from '../../_shared/testing';
-import de from './i18n/de.json';
-import en from './i18n/en.json';
-import es from './i18n/es.json';
-import pt from './i18n/pt.json';
-import ru from './i18n/ru.json';
-import { base, tip } from './tool';
+import { tip } from './tool';
 
 describe('tip', () => {
   it('счёт 86,40, 18%, трое', () => {
@@ -23,7 +17,4 @@ describe('tip', () => {
     expect(() => tip(50, 10, 0)).toThrow();
   });
 
-  it('подписи есть на всех языках', () => {
-    expectAllKeys(base, { ru, en, es, de, pt });
-  });
 });

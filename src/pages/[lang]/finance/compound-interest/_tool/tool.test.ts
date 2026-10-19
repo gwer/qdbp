@@ -1,12 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { expectAllKeys } from '../../_shared/testing';
 import { deposit } from './deposit';
-import de from './i18n/de.json';
-import en from './i18n/en.json';
-import es from './i18n/es.json';
-import pt from './i18n/pt.json';
-import ru from './i18n/ru.json';
-import { base } from './tool';
 
 // Эталоны — замкнутые формулы сложного процента (посчитаны в Python).
 describe('deposit', () => {
@@ -51,7 +44,4 @@ describe('deposit', () => {
     expect(deposit({ initial: 1000, monthly: 100, rate: 0, years: 1, cap: 'monthly' })).toMatchObject({ total: 2200, interest: 0 });
   });
 
-  it('подписи есть на всех языках', () => {
-    expectAllKeys(base, { ru, en, es, de, pt });
-  });
 });

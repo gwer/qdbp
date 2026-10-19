@@ -9,7 +9,7 @@ import type { MarkdownInstance } from 'astro';
 import { SITE_LANGS, type Lang } from '@/i18n/config';
 import type { Dict } from '@/i18n/t';
 import { UI } from '@/i18n/ui';
-import type { CategoryDef, ToolDef } from '@/ui/define';
+import type { CategoryDef, InputSpec, ToolDef } from '@/ui/define';
 import type { IslandProps } from '@/ui/ToolRoot';
 import { requiredToolKeys, validateFiles, type FileSet } from './validate';
 
@@ -82,6 +82,14 @@ function build() {
     }
     const set = fileSet(path);
     errors.push(...validateFiles(path, set, requiredToolKeys(def)));
+    if (def.kind === 'calculator') {
+      for (const [name, spec] of Object.entries<InputSpec>(def.inputs)) {
+        if (spec.type !== 'select') continue;
+        for (const [lang, v] of Object.entries(spec.byLang ?? {})) {
+          if (!spec.options.includes(v)) errors.push(`${path}: inputs.${name}.byLang.${lang} = "${v}" нет среди options`);
+        }
+      }
+    }
     if (!toolPages[`${ROOT}/${path}/index.astro`]) errors.push(`${path}: нет index.astro (скопируйте из любого инструмента)`);
 
     if (seenIds.has(id)) errors.push(`${path}: id "${id}" уже занят инструментом ${seenIds.get(id)}`);

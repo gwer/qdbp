@@ -35,7 +35,9 @@ function quantityText(spec: QuantityInput, value: number, env: Env): string {
 /** Значения по умолчанию в виде текста полей. Пока «сейчас» неизвестно (сервер), поля «today…»/«now» пустые. */
 function defaults(def: CalculatorDef, env: Env, now: Now): Raw {
   const raw: Raw = {};
-  for (const [name, spec] of entries(def)) {
+  for (const [name, input] of entries(def)) {
+    // Значение по умолчанию для языка страницы, если задано (byLang), иначе общее.
+    const spec = 'byLang' in input && input.byLang?.[env.lang] !== undefined ? ({ ...input, default: input.byLang[env.lang] } as InputSpec) : input;
     if (spec.type === 'select') raw[name] = spec.default;
     else if (spec.type === 'date') raw[name] = resolveDateDefault(spec.default, now?.date ?? null) ?? '';
     else if (spec.type === 'time') {

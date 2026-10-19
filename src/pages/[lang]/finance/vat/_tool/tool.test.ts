@@ -1,11 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { expectAllKeys } from '../../_shared/testing';
-import de from './i18n/de.json';
-import en from './i18n/en.json';
-import es from './i18n/es.json';
-import pt from './i18n/pt.json';
-import ru from './i18n/ru.json';
-import { base, vat } from './tool';
+import { vat } from './tool';
 
 describe('vat', () => {
   it('начислить', () => {
@@ -26,7 +20,4 @@ describe('vat', () => {
     expect(vat(120, 20, 'remove').vat).not.toBeCloseTo(24, 3);
   });
 
-  it('подписи есть на всех языках', () => {
-    expectAllKeys(base, { ru, en, es, de, pt });
-  });
 });

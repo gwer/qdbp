@@ -1,17 +1,17 @@
 import { defineCalculator } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
-import { localizedCalculator } from '../../_shared/localized';
 import { ByYear } from './ByYear';
 import { deposit } from './deposit';
 
-export const base = defineCalculator({
+// Правдоподобные для страны языка суммы и ставки — это пример, а не текущие ставки банков.
+export const def = defineCalculator({
   order: 30,
   related: ['loan-calculator', 'mortgage'],
   inputs: {
-    initial: { type: 'number', default: 10000, min: 0 },
-    monthly: { type: 'number', default: 200, min: 0 },
-    rate: { type: 'percent', default: 5, min: 0, max: 100 },
-    years: { type: 'integer', default: 10, min: 1, max: 100 },
+    initial: { type: 'number', default: 10000, min: 0, byLang: { ru: 100000, en: 10000, es: 10000, de: 10000, pt: 10000 } },
+    monthly: { type: 'number', default: 200, min: 0, byLang: { ru: 10000, en: 200, es: 200, de: 200, pt: 500 } },
+    rate: { type: 'percent', default: 5, min: 0, max: 100, byLang: { ru: 12, en: 5, es: 3, de: 3, pt: 10 } },
+    years: { type: 'integer', default: 10, min: 1, max: 100, byLang: { ru: 3, en: 10, es: 10, de: 10, pt: 10 } },
     cap: { type: 'select', options: ['monthly', 'quarterly', 'yearly'], default: 'monthly' },
   },
   compute: (v) => deposit(v),
@@ -21,15 +21,6 @@ export const base = defineCalculator({
     interest: { type: 'money' },
   },
   Extra: ByYear,
-});
-
-// Правдоподобные для страны языка суммы и ставки — это пример, а не текущие ставки банков.
-export const def = localizedCalculator(base, {
-  ru: { initial: 100000, monthly: 10000, rate: 12, years: 3 },
-  en: { initial: 10000, monthly: 200, rate: 5, years: 10 },
-  es: { initial: 10000, monthly: 200, rate: 3, years: 10 },
-  de: { initial: 10000, monthly: 200, rate: 3, years: 10 },
-  pt: { initial: 10000, monthly: 500, rate: 10, years: 10 },
 });
 
 export default island(def);

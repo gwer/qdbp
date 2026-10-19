@@ -1,6 +1,5 @@
 import { defineCalculator } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
-import { localizedCalculator } from '../../_shared/localized';
 
 export function tip(bill: number, percent: number, people: number) {
   if (!Number.isInteger(people) || people < 1) throw new RangeError('people must be a positive integer');
@@ -9,12 +8,14 @@ export function tip(bill: number, percent: number, people: number) {
   return { tip: amount, total, perPerson: total / people, tipPerPerson: amount / people };
 }
 
-export const base = defineCalculator({
+// Нормы чаевых различаются: в США принято 15–20%, в Бразилии в счёт обычно включают 10% «serviço»,
+// в России и Европе — около 10%. Суммы счёта — правдоподобные для страны языка.
+export const def = defineCalculator({
   order: 80,
   related: ['discount', 'vat'],
   inputs: {
-    bill: { type: 'number', default: 80, min: 0 },
-    percent: { type: 'percent', default: 10, min: 0, max: 100 },
+    bill: { type: 'number', default: 80, min: 0, byLang: { ru: 4500, en: 80, es: 60, de: 60, pt: 200 } },
+    percent: { type: 'percent', default: 10, min: 0, max: 100, byLang: { ru: 10, en: 18, es: 10, de: 10, pt: 10 } },
     people: { type: 'integer', default: 2, min: 1, max: 1000 },
   },
   compute: ({ bill, percent, people }) => tip(bill, percent, people),
@@ -24,16 +25,6 @@ export const base = defineCalculator({
     total: { type: 'money' },
     tipPerPerson: { type: 'money' },
   },
-});
-
-// Нормы чаевых различаются: в США принято 15–20%, в Бразилии в счёт обычно включают 10% «serviço»,
-// в России и Европе — около 10%. Суммы счёта — правдоподобные для страны языка.
-export const def = localizedCalculator(base, {
-  ru: { bill: 4500, percent: 10 },
-  en: { bill: 80, percent: 18 },
-  es: { bill: 60, percent: 10 },
-  de: { bill: 60, percent: 10 },
-  pt: { bill: 200, percent: 10 },
 });
 
 export default island(def);
