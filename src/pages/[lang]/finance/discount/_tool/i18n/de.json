@@ -1,0 +1,20 @@
+{
+  "title": "Rabattrechner: Preis nach Rabatt",
+  "description": "Endpreis nach Rabatt und Ersparnis berechnen: Preis und Rabatt in Prozent eingeben.",
+  "inputs": {
+    "price": {
+      "label": "Preis"
+    },
+    "percent": {
+      "label": "Rabatt"
+    }
+  },
+  "outputs": {
+    "final": {
+      "label": "Preis nach Rabatt"
+    },
+    "saving": {
+      "label": "Ersparnis"
+    }
+  }
+}

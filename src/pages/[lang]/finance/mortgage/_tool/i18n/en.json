@@ -1,0 +1,51 @@
+{
+  "title": "Mortgage calculator: monthly payment and total interest",
+  "description": "Estimate your mortgage: loan amount after the down payment, monthly principal and interest payment, total interest and a year-by-year schedule.",
+  "inputs": {
+    "price": {
+      "label": "Home price"
+    },
+    "down": {
+      "label": "Down payment"
+    },
+    "rate": {
+      "label": "Interest rate"
+    },
+    "years": {
+      "label": "Loan term, years"
+    },
+    "kind": {
+      "label": "Repayment type",
+      "options": {
+        "annuity": "Fixed payments",
+        "differentiated": "Equal principal"
+      }
+    }
+  },
+  "outputs": {
+    "payment": {
+      "label": "Monthly payment (P&I)"
+    },
+    "principal": {
+      "label": "Loan amount"
+    },
+    "downPayment": {
+      "label": "Down payment"
+    },
+    "overpay": {
+      "label": "Total interest"
+    },
+    "total": {
+      "label": "Total of payments"
+    }
+  },
+  "ui": {
+    "decreasing": "Payments decrease from {first} to {last}",
+    "byYear": "Year-by-year schedule",
+    "year": "Year",
+    "paid": "Paid",
+    "principal": "Principal",
+    "interest": "Interest",
+    "balance": "Balance"
+  }
+}

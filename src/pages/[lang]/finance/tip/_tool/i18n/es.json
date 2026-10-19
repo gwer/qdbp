@@ -1,0 +1,29 @@
+{
+  "title": "Calculadora de propinas: propina y división de la cuenta",
+  "description": "Calcula la propina y divide la cuenta: cuánto dejar de propina, el total y cuánto paga cada uno.",
+  "inputs": {
+    "bill": {
+      "label": "Importe de la cuenta"
+    },
+    "percent": {
+      "label": "Propina"
+    },
+    "people": {
+      "label": "Número de personas"
+    }
+  },
+  "outputs": {
+    "perPerson": {
+      "label": "Paga cada uno"
+    },
+    "tip": {
+      "label": "Propina"
+    },
+    "total": {
+      "label": "Total con propina"
+    },
+    "tipPerPerson": {
+      "label": "Propina por persona"
+    }
+  }
+}

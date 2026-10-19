@@ -1,0 +1,44 @@
+{
+  "title": "Compound interest calculator with monthly contributions",
+  "description": "See how savings grow with compound interest and regular monthly deposits: final balance, total contributions and interest earned, year by year.",
+  "inputs": {
+    "initial": {
+      "label": "Initial deposit"
+    },
+    "monthly": {
+      "label": "Monthly contribution"
+    },
+    "rate": {
+      "label": "Annual interest rate"
+    },
+    "years": {
+      "label": "Years"
+    },
+    "cap": {
+      "label": "Compounding",
+      "options": {
+        "monthly": "Monthly",
+        "quarterly": "Quarterly",
+        "yearly": "Annually"
+      }
+    }
+  },
+  "outputs": {
+    "total": {
+      "label": "Final balance"
+    },
+    "contributed": {
+      "label": "Total contributions"
+    },
+    "interest": {
+      "label": "Interest earned"
+    }
+  },
+  "ui": {
+    "byYear": "Growth by year",
+    "year": "Year",
+    "contributed": "Contributions",
+    "interest": "Interest",
+    "balance": "Balance"
+  }
+}

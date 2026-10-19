@@ -1,0 +1,23 @@
+{
+  "title": "Margenrechner: Handelsspanne und Aufschlag",
+  "description": "Gewinn, Handelsspanne (Marge) und Aufschlag aus Einkaufs- und Verkaufspreis berechnen – mit Erklärung des Unterschieds.",
+  "inputs": {
+    "cost": {
+      "label": "Einkaufspreis"
+    },
+    "price": {
+      "label": "Verkaufspreis"
+    }
+  },
+  "outputs": {
+    "margin": {
+      "label": "Marge"
+    },
+    "profit": {
+      "label": "Gewinn"
+    },
+    "markup": {
+      "label": "Aufschlag"
+    }
+  }
+}

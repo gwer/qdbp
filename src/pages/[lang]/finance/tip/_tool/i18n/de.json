@@ -1,0 +1,29 @@
+{
+  "title": "Trinkgeldrechner: Trinkgeld und Rechnung teilen",
+  "description": "Trinkgeld berechnen und die Rechnung aufteilen: Trinkgeldbetrag, Gesamtsumme und Anteil pro Person.",
+  "inputs": {
+    "bill": {
+      "label": "Rechnungsbetrag"
+    },
+    "percent": {
+      "label": "Trinkgeld"
+    },
+    "people": {
+      "label": "Anzahl Personen"
+    }
+  },
+  "outputs": {
+    "perPerson": {
+      "label": "Pro Person"
+    },
+    "tip": {
+      "label": "Trinkgeld"
+    },
+    "total": {
+      "label": "Gesamt mit Trinkgeld"
+    },
+    "tipPerPerson": {
+      "label": "Trinkgeld pro Person"
+    }
+  }
+}

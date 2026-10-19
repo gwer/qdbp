@@ -1,0 +1,44 @@
+{
+  "title": "Calculadora de juros compostos: aportes e rendimento",
+  "description": "Simule quanto seu dinheiro rende com juros compostos e aportes mensais: valor final, total investido e juros ganhos ano a ano.",
+  "inputs": {
+    "initial": {
+      "label": "Valor inicial"
+    },
+    "monthly": {
+      "label": "Aporte mensal"
+    },
+    "rate": {
+      "label": "Taxa de juros ao ano"
+    },
+    "years": {
+      "label": "Prazo (anos)"
+    },
+    "cap": {
+      "label": "Capitalização",
+      "options": {
+        "monthly": "Mensal",
+        "quarterly": "Trimestral",
+        "yearly": "Anual"
+      }
+    }
+  },
+  "outputs": {
+    "total": {
+      "label": "Valor final"
+    },
+    "contributed": {
+      "label": "Total investido"
+    },
+    "interest": {
+      "label": "Juros ganhos"
+    }
+  },
+  "ui": {
+    "byYear": "Evolução por ano",
+    "year": "Ano",
+    "contributed": "Investido",
+    "interest": "Juros",
+    "balance": "Saldo"
+  }
+}

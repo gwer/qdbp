@@ -1,0 +1,23 @@
+{
+  "title": "Aufschlagsrechner: Verkaufspreis aus Aufschlag",
+  "description": "Verkaufspreis und Gewinn aus Einkaufspreis und prozentualem Aufschlag berechnen – inklusive der daraus folgenden Handelsspanne.",
+  "inputs": {
+    "cost": {
+      "label": "Einkaufspreis"
+    },
+    "percent": {
+      "label": "Aufschlag"
+    }
+  },
+  "outputs": {
+    "price": {
+      "label": "Verkaufspreis"
+    },
+    "profit": {
+      "label": "Gewinn"
+    },
+    "margin": {
+      "label": "Handelsspanne"
+    }
+  }
+}
