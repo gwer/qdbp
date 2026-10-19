@@ -1,1 +1,4 @@
-{ "name": "Matemáticas y porcentajes", "description": "Porcentajes, reglas de tres, promedios y otros cálculos cotidianos." }
+{
+  "name": "Matemáticas y porcentajes",
+  "description": "Porcentajes, regla de tres, medias, números aleatorios, bases numéricas y otros cálculos cotidianos."
+}

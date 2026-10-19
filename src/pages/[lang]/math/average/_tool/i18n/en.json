@@ -1,0 +1,18 @@
+{
+  "title": "Average calculator: mean, median and mode",
+  "description": "Calculate the mean, median, mode, sum, minimum and maximum of any list of numbers.",
+  "ui": {
+    "label": "Numbers",
+    "placeholder": "Paste numbers separated by spaces, commas or new lines",
+    "mean": "Mean (average)",
+    "median": "Median",
+    "mode": "Mode",
+    "count": "Count",
+    "sum": "Sum",
+    "min": "Minimum",
+    "max": "Maximum",
+    "range": "Range",
+    "noMode": "none — all values are different",
+    "invalid": "Not recognized: {list}"
+  }
+}

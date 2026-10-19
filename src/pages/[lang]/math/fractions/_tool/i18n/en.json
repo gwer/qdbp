@@ -1,0 +1,38 @@
+{
+  "title": "Fraction calculator: add, subtract, multiply, divide",
+  "description": "Add, subtract, multiply and divide fractions with the result simplified — as a fraction, a mixed number and a decimal.",
+  "inputs": {
+    "n1": {
+      "label": "Numerator 1"
+    },
+    "d1": {
+      "label": "Denominator 1"
+    },
+    "op": {
+      "label": "Operation",
+      "options": {
+        "add": "Add (+)",
+        "subtract": "Subtract (−)",
+        "multiply": "Multiply (×)",
+        "divide": "Divide (÷)"
+      }
+    },
+    "n2": {
+      "label": "Numerator 2"
+    },
+    "d2": {
+      "label": "Denominator 2"
+    }
+  },
+  "outputs": {
+    "fraction": {
+      "label": "Result"
+    },
+    "mixed": {
+      "label": "Mixed number"
+    },
+    "decimal": {
+      "label": "Decimal"
+    }
+  }
+}

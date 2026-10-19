@@ -1,0 +1,16 @@
+{
+  "title": "Conversor de bases numéricas: binário, decimal, hexadecimal",
+  "description": "Converta números inteiros entre binário, octal, decimal, hexadecimal e qualquer base de 2 a 36.",
+  "ui": {
+    "number": "Número",
+    "from": "Base do número",
+    "base2": "Binário (2)",
+    "base8": "Octal (8)",
+    "base10": "Decimal (10)",
+    "base16": "Hexadecimal (16)",
+    "baseN": "Base {base}",
+    "custom": "Base",
+    "errorDigit": "O número tem dígitos inválidos na base {base}",
+    "errorBase": "A base deve ser de 2 a 36"
+  }
+}

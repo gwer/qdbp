@@ -1,0 +1,16 @@
+{
+  "title": "Zufallszahlengenerator: von–bis, ohne Wiederholung",
+  "description": "Eine oder mehrere Zufallszahlen in einem Bereich erzeugen – mit oder ohne Wiederholung, für Verlosungen, Gewinnspiele und Spiele.",
+  "ui": {
+    "from": "Von",
+    "to": "Bis",
+    "count": "Anzahl",
+    "unique": "Ohne Wiederholung",
+    "sort": "Aufsteigend sortieren",
+    "generate": "Erzeugen",
+    "result": "Zufallszahlen",
+    "errorRange": "„Von“ darf nicht größer als „Bis“ sein",
+    "errorCount": "Anzahl von 1 bis {max}",
+    "errorUnique": "Ohne Wiederholung gibt es in diesem Bereich nur {max} Zahlen"
+  }
+}

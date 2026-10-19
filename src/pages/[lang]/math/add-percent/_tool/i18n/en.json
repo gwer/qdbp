@@ -1,0 +1,27 @@
+{
+  "title": "Percent increase and decrease calculator: number ± X%",
+  "description": "Add a percentage to a number or subtract it — for example, 1,000 + 20% = 1,200 and 1,000 − 20% = 800.",
+  "inputs": {
+    "value": {
+      "label": "Number"
+    },
+    "op": {
+      "label": "Operation",
+      "options": {
+        "add": "Add",
+        "subtract": "Subtract"
+      }
+    },
+    "percent": {
+      "label": "Percentage"
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Result"
+    },
+    "part": {
+      "label": "Percentage amount"
+    }
+  }
+}

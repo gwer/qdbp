@@ -1,0 +1,27 @@
+{
+  "title": "Prozent plus/minus: Zahl um X % erhöhen oder senken",
+  "description": "Eine Zahl um einen Prozentsatz erhöhen oder verringern – zum Beispiel 1.000 + 20 % = 1.200 und 1.000 − 20 % = 800.",
+  "inputs": {
+    "value": {
+      "label": "Zahl"
+    },
+    "op": {
+      "label": "Rechenart",
+      "options": {
+        "add": "Addieren",
+        "subtract": "Abziehen"
+      }
+    },
+    "percent": {
+      "label": "Prozentsatz"
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Ergebnis"
+    },
+    "part": {
+      "label": "Prozentwert"
+    }
+  }
+}

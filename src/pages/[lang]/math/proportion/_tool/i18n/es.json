@@ -1,0 +1,27 @@
+{
+  "title": "Regla de tres: calculadora directa e inversa",
+  "description": "Resuelve la regla de tres simple: si A corresponde a B, ¿a cuánto corresponde C? Directa e inversa, con la fórmula aplicada.",
+  "inputs": {
+    "a": {
+      "label": "Si A"
+    },
+    "b": {
+      "label": "corresponde a B"
+    },
+    "c": {
+      "label": "entonces C"
+    },
+    "kind": {
+      "label": "Tipo",
+      "options": {
+        "direct": "Directa",
+        "inverse": "Inversa"
+      }
+    }
+  },
+  "outputs": {
+    "x": {
+      "label": "corresponde a X"
+    }
+  }
+}

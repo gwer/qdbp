@@ -1,0 +1,27 @@
+{
+  "title": "Suma y resta de porcentajes: número ± X %",
+  "description": "Suma un porcentaje a un número o réstalo: por ejemplo, 1000 + 20 % = 1200 y 1000 − 20 % = 800.",
+  "inputs": {
+    "value": {
+      "label": "Número"
+    },
+    "op": {
+      "label": "Operación",
+      "options": {
+        "add": "Sumar",
+        "subtract": "Restar"
+      }
+    },
+    "percent": {
+      "label": "Porcentaje"
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Resultado"
+    },
+    "part": {
+      "label": "Importe del porcentaje"
+    }
+  }
+}

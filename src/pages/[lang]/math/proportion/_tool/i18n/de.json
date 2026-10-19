@@ -1,0 +1,27 @@
+{
+  "title": "Dreisatz-Rechner: proportional und antiproportional",
+  "description": "Dreisatz einfach lösen: Wenn A zu B gehört, was gehört dann zu C? Für proportionale und antiproportionale Zuordnungen.",
+  "inputs": {
+    "a": {
+      "label": "Bekannte Menge (A)"
+    },
+    "b": {
+      "label": "Zugehöriger Wert (B)"
+    },
+    "c": {
+      "label": "Neue Menge (C)"
+    },
+    "kind": {
+      "label": "Zuordnung",
+      "options": {
+        "direct": "Proportional",
+        "inverse": "Antiproportional"
+      }
+    }
+  },
+  "outputs": {
+    "x": {
+      "label": "Gesuchter Wert (X)"
+    }
+  }
+}

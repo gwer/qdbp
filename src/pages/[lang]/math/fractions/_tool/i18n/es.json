@@ -1,0 +1,38 @@
+{
+  "title": "Calculadora de fracciones con resultado simplificado",
+  "description": "Suma, resta, multiplica y divide fracciones con el resultado simplificado: como fracción, número mixto y decimal.",
+  "inputs": {
+    "n1": {
+      "label": "Numerador 1"
+    },
+    "d1": {
+      "label": "Denominador 1"
+    },
+    "op": {
+      "label": "Operación",
+      "options": {
+        "add": "Suma (+)",
+        "subtract": "Resta (−)",
+        "multiply": "Multiplicación (×)",
+        "divide": "División (÷)"
+      }
+    },
+    "n2": {
+      "label": "Numerador 2"
+    },
+    "d2": {
+      "label": "Denominador 2"
+    }
+  },
+  "outputs": {
+    "fraction": {
+      "label": "Resultado"
+    },
+    "mixed": {
+      "label": "Número mixto"
+    },
+    "decimal": {
+      "label": "Decimal"
+    }
+  }
+}

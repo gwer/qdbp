@@ -1,0 +1,27 @@
+{
+  "title": "Proportion calculator: rule of three, direct and inverse",
+  "description": "Solve for X in a proportion: if A corresponds to B, what does C correspond to? Works for direct and inverse proportions.",
+  "inputs": {
+    "a": {
+      "label": "If A"
+    },
+    "b": {
+      "label": "corresponds to B"
+    },
+    "c": {
+      "label": "then C"
+    },
+    "kind": {
+      "label": "Proportion",
+      "options": {
+        "direct": "Direct",
+        "inverse": "Inverse"
+      }
+    }
+  },
+  "outputs": {
+    "x": {
+      "label": "corresponds to X"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Zahlensystem-Umrechner: binär, dezimal, hexadezimal",
+  "description": "Ganze Zahlen zwischen Binär-, Oktal-, Dezimal- und Hexadezimalsystem sowie jeder Basis von 2 bis 36 umrechnen.",
+  "ui": {
+    "number": "Zahl",
+    "from": "Zahlensystem der Eingabe",
+    "base2": "Binär (2)",
+    "base8": "Oktal (8)",
+    "base10": "Dezimal (10)",
+    "base16": "Hexadezimal (16)",
+    "baseN": "Basis {base}",
+    "custom": "Basis",
+    "errorDigit": "Die Zahl enthält Ziffern, die zur Basis {base} nicht gehören",
+    "errorBase": "Die Basis muss zwischen 2 und 36 liegen"
+  }
+}
