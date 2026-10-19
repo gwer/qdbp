@@ -1,0 +1,30 @@
+{
+  "title": "VAT calculator: add or remove VAT",
+  "description": "Add VAT to a net price or remove it from a gross price: net amount, VAT and total. The default is the UK standard rate of 20% — enter your own rate for other countries.",
+  "inputs": {
+    "amount": {
+      "label": "Amount"
+    },
+    "rate": {
+      "label": "VAT rate"
+    },
+    "mode": {
+      "label": "Operation",
+      "options": {
+        "add": "Add VAT",
+        "remove": "Remove VAT"
+      }
+    }
+  },
+  "outputs": {
+    "vat": {
+      "label": "VAT"
+    },
+    "net": {
+      "label": "Net amount (excl. VAT)"
+    },
+    "gross": {
+      "label": "Gross amount (incl. VAT)"
+    }
+  }
+}

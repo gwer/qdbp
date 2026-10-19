@@ -1,0 +1,23 @@
+{
+  "title": "Margin calculator: profit margin from cost and price",
+  "description": "Find profit, profit margin and markup from cost and selling price — and see how margin differs from markup.",
+  "inputs": {
+    "cost": {
+      "label": "Cost"
+    },
+    "price": {
+      "label": "Selling price"
+    }
+  },
+  "outputs": {
+    "margin": {
+      "label": "Margin"
+    },
+    "profit": {
+      "label": "Profit"
+    },
+    "markup": {
+      "label": "Markup"
+    }
+  }
+}

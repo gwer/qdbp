@@ -1,0 +1,30 @@
+{
+  "title": "Calculadora de IVA: incluir ou retirar o imposto do preço",
+  "description": "Inclua o IVA em um preço sem imposto ou retire-o de um preço com IVA: valor sem imposto, IVA e total. Por padrão, a taxa normal de Portugal continental (23%).",
+  "inputs": {
+    "amount": {
+      "label": "Valor"
+    },
+    "rate": {
+      "label": "Taxa de IVA"
+    },
+    "mode": {
+      "label": "Operação",
+      "options": {
+        "add": "Incluir IVA",
+        "remove": "Retirar IVA"
+      }
+    }
+  },
+  "outputs": {
+    "vat": {
+      "label": "IVA"
+    },
+    "net": {
+      "label": "Valor sem IVA"
+    },
+    "gross": {
+      "label": "Valor com IVA"
+    }
+  }
+}

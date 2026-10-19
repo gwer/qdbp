@@ -1,0 +1,23 @@
+{
+  "title": "Calculadora de margen de beneficio: margen y markup",
+  "description": "Calcula el beneficio, el margen y el markup a partir del coste y el precio de venta, y la diferencia entre margen y markup.",
+  "inputs": {
+    "cost": {
+      "label": "Coste"
+    },
+    "price": {
+      "label": "Precio de venta"
+    }
+  },
+  "outputs": {
+    "margin": {
+      "label": "Margen"
+    },
+    "profit": {
+      "label": "Beneficio"
+    },
+    "markup": {
+      "label": "Markup"
+    }
+  }
+}

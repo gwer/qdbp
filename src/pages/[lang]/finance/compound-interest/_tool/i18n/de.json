@@ -1,0 +1,44 @@
+{
+  "title": "Zinseszinsrechner: Sparplan mit monatlicher Einzahlung",
+  "description": "Wie viel wird aus Ihrem Ersparten mit Zinseszins und monatlicher Sparrate? Endkapital, Einzahlungen und Zinserträge pro Jahr.",
+  "inputs": {
+    "initial": {
+      "label": "Anfangskapital"
+    },
+    "monthly": {
+      "label": "Monatliche Sparrate"
+    },
+    "rate": {
+      "label": "Zinssatz pro Jahr"
+    },
+    "years": {
+      "label": "Laufzeit (Jahre)"
+    },
+    "cap": {
+      "label": "Zinsgutschrift",
+      "options": {
+        "monthly": "Monatlich",
+        "quarterly": "Vierteljährlich",
+        "yearly": "Jährlich"
+      }
+    }
+  },
+  "outputs": {
+    "total": {
+      "label": "Endkapital"
+    },
+    "contributed": {
+      "label": "Einzahlungen"
+    },
+    "interest": {
+      "label": "Zinserträge"
+    }
+  },
+  "ui": {
+    "byYear": "Entwicklung pro Jahr",
+    "year": "Jahr",
+    "contributed": "Einzahlungen",
+    "interest": "Zinsen",
+    "balance": "Kapital"
+  }
+}

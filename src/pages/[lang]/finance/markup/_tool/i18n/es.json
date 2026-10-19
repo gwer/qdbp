@@ -1,0 +1,23 @@
+{
+  "title": "Calculadora de markup: precio de venta a partir del coste",
+  "description": "Calcula el precio de venta y el beneficio a partir del coste y el porcentaje de markup (recargo sobre el coste), y el margen resultante.",
+  "inputs": {
+    "cost": {
+      "label": "Coste"
+    },
+    "percent": {
+      "label": "Markup (recargo)"
+    }
+  },
+  "outputs": {
+    "price": {
+      "label": "Precio de venta"
+    },
+    "profit": {
+      "label": "Beneficio"
+    },
+    "margin": {
+      "label": "Margen"
+    }
+  }
+}

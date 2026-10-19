@@ -1,0 +1,20 @@
+{
+  "title": "Calculadora de desconto: preço final com desconto",
+  "description": "Calcule o preço com desconto e quanto você economiza: digite o preço e a porcentagem de desconto.",
+  "inputs": {
+    "price": {
+      "label": "Preço"
+    },
+    "percent": {
+      "label": "Desconto"
+    }
+  },
+  "outputs": {
+    "final": {
+      "label": "Preço com desconto"
+    },
+    "saving": {
+      "label": "Economia"
+    }
+  }
+}

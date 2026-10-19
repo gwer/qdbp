@@ -1,0 +1,51 @@
+{
+  "title": "Calculadora de hipotecas: cuota mensual e intereses",
+  "description": "Calcula tu hipoteca: importe del préstamo tras la entrada, cuota mensual, intereses totales y cuadro de amortización por años.",
+  "inputs": {
+    "price": {
+      "label": "Precio de la vivienda"
+    },
+    "down": {
+      "label": "Entrada"
+    },
+    "rate": {
+      "label": "Tipo de interés anual"
+    },
+    "years": {
+      "label": "Plazo (años)"
+    },
+    "kind": {
+      "label": "Sistema de amortización",
+      "options": {
+        "annuity": "Francés (cuota fija)",
+        "differentiated": "Alemán (cuota decreciente)"
+      }
+    }
+  },
+  "outputs": {
+    "payment": {
+      "label": "Cuota mensual"
+    },
+    "principal": {
+      "label": "Importe de la hipoteca"
+    },
+    "downPayment": {
+      "label": "Entrada"
+    },
+    "overpay": {
+      "label": "Intereses totales"
+    },
+    "total": {
+      "label": "Total a pagar"
+    }
+  },
+  "ui": {
+    "decreasing": "La cuota baja de {first} a {last}",
+    "byYear": "Cuadro por años",
+    "year": "Año",
+    "paid": "Pagado",
+    "principal": "Capital",
+    "interest": "Intereses",
+    "balance": "Pendiente"
+  }
+}

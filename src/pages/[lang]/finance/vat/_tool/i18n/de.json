@@ -1,0 +1,30 @@
+{
+  "title": "Mehrwertsteuerrechner: brutto, netto und MwSt.",
+  "description": "Mehrwertsteuer auf einen Nettobetrag aufschlagen oder aus einem Bruttobetrag herausrechnen: Netto, MwSt. und Brutto. Voreingestellt ist der Regelsatz in Deutschland (19 %).",
+  "inputs": {
+    "amount": {
+      "label": "Betrag"
+    },
+    "rate": {
+      "label": "Steuersatz"
+    },
+    "mode": {
+      "label": "Rechenart",
+      "options": {
+        "add": "MwSt. aufschlagen (netto → brutto)",
+        "remove": "MwSt. herausrechnen (brutto → netto)"
+      }
+    }
+  },
+  "outputs": {
+    "vat": {
+      "label": "Mehrwertsteuer"
+    },
+    "net": {
+      "label": "Nettobetrag"
+    },
+    "gross": {
+      "label": "Bruttobetrag"
+    }
+  }
+}

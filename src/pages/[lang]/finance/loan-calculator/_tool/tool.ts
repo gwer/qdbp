@@ -1,7 +1,7 @@
 import { defineCalculator } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
-import { loan } from './loan';
-import { Schedule } from './Schedule';
+import { loan } from '../../_shared/loan';
+import { Schedule } from '../../_shared/Schedule';
 
 export const def = defineCalculator({
   order: 10,

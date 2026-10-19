@@ -1,0 +1,29 @@
+{
+  "title": "Calculadora de gorjeta: gorjeta e divisão da conta",
+  "description": "Calcule a gorjeta (ou os 10% de serviço) e divida a conta: valor da gorjeta, total e quanto cada um paga.",
+  "inputs": {
+    "bill": {
+      "label": "Valor da conta"
+    },
+    "percent": {
+      "label": "Gorjeta"
+    },
+    "people": {
+      "label": "Número de pessoas"
+    }
+  },
+  "outputs": {
+    "perPerson": {
+      "label": "Cada um paga"
+    },
+    "tip": {
+      "label": "Gorjeta"
+    },
+    "total": {
+      "label": "Total com gorjeta"
+    },
+    "tipPerPerson": {
+      "label": "Gorjeta por pessoa"
+    }
+  }
+}

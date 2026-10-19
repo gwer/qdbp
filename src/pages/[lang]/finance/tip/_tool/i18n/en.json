@@ -1,0 +1,29 @@
+{
+  "title": "Tip calculator: tip amount and bill split",
+  "description": "Work out the tip and split the bill: tip amount, total with tip and how much each person pays.",
+  "inputs": {
+    "bill": {
+      "label": "Bill amount"
+    },
+    "percent": {
+      "label": "Tip"
+    },
+    "people": {
+      "label": "Number of people"
+    }
+  },
+  "outputs": {
+    "perPerson": {
+      "label": "Each person pays"
+    },
+    "tip": {
+      "label": "Tip amount"
+    },
+    "total": {
+      "label": "Total with tip"
+    },
+    "tipPerPerson": {
+      "label": "Tip per person"
+    }
+  }
+}

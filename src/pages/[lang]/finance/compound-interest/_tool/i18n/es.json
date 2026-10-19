@@ -1,0 +1,44 @@
+{
+  "title": "Calculadora de interés compuesto: ahorro e intereses",
+  "description": "Calcula cuánto crecen tus ahorros con interés compuesto y aportaciones mensuales: saldo final, total aportado e intereses generados año a año.",
+  "inputs": {
+    "initial": {
+      "label": "Capital inicial"
+    },
+    "monthly": {
+      "label": "Aportación mensual"
+    },
+    "rate": {
+      "label": "Tipo de interés anual"
+    },
+    "years": {
+      "label": "Años"
+    },
+    "cap": {
+      "label": "Capitalización",
+      "options": {
+        "monthly": "Mensual",
+        "quarterly": "Trimestral",
+        "yearly": "Anual"
+      }
+    }
+  },
+  "outputs": {
+    "total": {
+      "label": "Saldo final"
+    },
+    "contributed": {
+      "label": "Total aportado"
+    },
+    "interest": {
+      "label": "Intereses generados"
+    }
+  },
+  "ui": {
+    "byYear": "Evolución por años",
+    "year": "Año",
+    "contributed": "Aportado",
+    "interest": "Intereses",
+    "balance": "Saldo"
+  }
+}

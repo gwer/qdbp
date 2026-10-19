@@ -1,0 +1,30 @@
+{
+  "title": "Calculadora de IVA: sumar o quitar el IVA",
+  "description": "Suma el IVA a un precio sin impuestos o quítalo de un precio con IVA: base imponible, cuota de IVA y total. Por defecto, el tipo general de España (21%).",
+  "inputs": {
+    "amount": {
+      "label": "Importe"
+    },
+    "rate": {
+      "label": "Tipo de IVA"
+    },
+    "mode": {
+      "label": "Operación",
+      "options": {
+        "add": "Añadir IVA",
+        "remove": "Quitar IVA"
+      }
+    }
+  },
+  "outputs": {
+    "vat": {
+      "label": "Cuota de IVA"
+    },
+    "net": {
+      "label": "Base imponible"
+    },
+    "gross": {
+      "label": "Total con IVA"
+    }
+  }
+}

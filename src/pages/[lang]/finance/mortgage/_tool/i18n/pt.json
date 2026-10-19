@@ -1,0 +1,51 @@
+{
+  "title": "Simulador de financiamento imobiliário: parcela e juros",
+  "description": "Simule o financiamento do imóvel: valor financiado após a entrada, parcela pelo SAC ou pela tabela Price, juros totais e evolução por ano.",
+  "inputs": {
+    "price": {
+      "label": "Valor do imóvel"
+    },
+    "down": {
+      "label": "Entrada"
+    },
+    "rate": {
+      "label": "Taxa de juros ao ano"
+    },
+    "years": {
+      "label": "Prazo (anos)"
+    },
+    "kind": {
+      "label": "Sistema de amortização",
+      "options": {
+        "annuity": "Price (parcelas fixas)",
+        "differentiated": "SAC (parcelas decrescentes)"
+      }
+    }
+  },
+  "outputs": {
+    "payment": {
+      "label": "Parcela mensal"
+    },
+    "principal": {
+      "label": "Valor financiado"
+    },
+    "downPayment": {
+      "label": "Entrada"
+    },
+    "overpay": {
+      "label": "Juros totais"
+    },
+    "total": {
+      "label": "Total pago"
+    }
+  },
+  "ui": {
+    "decreasing": "A parcela cai de {first} para {last}",
+    "byYear": "Evolução por ano",
+    "year": "Ano",
+    "paid": "Pago",
+    "principal": "Amortização",
+    "interest": "Juros",
+    "balance": "Saldo devedor"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Calculadora de descuentos: precio final con descuento",
+  "description": "Calcula el precio final y cuánto ahorras: introduce el precio y el porcentaje de descuento.",
+  "inputs": {
+    "price": {
+      "label": "Precio"
+    },
+    "percent": {
+      "label": "Descuento"
+    }
+  },
+  "outputs": {
+    "final": {
+      "label": "Precio con descuento"
+    },
+    "saving": {
+      "label": "Ahorro"
+    }
+  }
+}

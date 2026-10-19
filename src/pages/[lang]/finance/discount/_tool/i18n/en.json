@@ -1,0 +1,20 @@
+{
+  "title": "Discount calculator: sale price after a percentage off",
+  "description": "Find the sale price and how much you save: enter the original price and the discount percentage.",
+  "inputs": {
+    "price": {
+      "label": "Original price"
+    },
+    "percent": {
+      "label": "Discount"
+    }
+  },
+  "outputs": {
+    "final": {
+      "label": "Sale price"
+    },
+    "saving": {
+      "label": "You save"
+    }
+  }
+}
