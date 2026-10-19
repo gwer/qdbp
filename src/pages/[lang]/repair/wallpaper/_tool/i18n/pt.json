@@ -1,0 +1,41 @@
+{
+  "title": "Calculadora de papel de parede: quantos rolos comprar",
+  "description": "Quantos rolos de papel de parede comprar considerando altura das paredes, janelas e portas, medida do rolo e repetição da estampa.",
+  "inputs": {
+    "length": {
+      "label": "Comprimento do cômodo, m"
+    },
+    "width": {
+      "label": "Largura do cômodo, m"
+    },
+    "height": {
+      "label": "Altura das paredes, m"
+    },
+    "openings": {
+      "label": "Largura de janelas e portas, m"
+    },
+    "rollWidth": {
+      "label": "Largura do rolo, m"
+    },
+    "rollLength": {
+      "label": "Comprimento do rolo, m"
+    },
+    "repeat": {
+      "label": "Repetição da estampa, cm"
+    }
+  },
+  "outputs": {
+    "rolls": {
+      "label": "Rolos"
+    },
+    "strips": {
+      "label": "Faixas"
+    },
+    "perRoll": {
+      "label": "Faixas por rolo"
+    },
+    "strip": {
+      "label": "Comprimento da faixa, m"
+    }
+  }
+}

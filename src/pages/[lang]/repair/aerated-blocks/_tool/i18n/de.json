@@ -1,0 +1,38 @@
+{
+  "title": "Porenbetonrechner: wie viele Steine und Kubikmeter",
+  "description": "Wie viele Porenbetonsteine brauche ich für eine Wand und wie viele Kubikmeter sind das? Mit Steinmaß, Öffnungen und Reserve.",
+  "inputs": {
+    "length": {
+      "label": "Wandlänge, m"
+    },
+    "height": {
+      "label": "Wandhöhe, m"
+    },
+    "openings": {
+      "label": "Fenster und Türen, m²"
+    },
+    "blockLength": {
+      "label": "Steinlänge, mm"
+    },
+    "blockHeight": {
+      "label": "Steinhöhe, mm"
+    },
+    "blockThickness": {
+      "label": "Wanddicke, mm"
+    },
+    "reserve": {
+      "label": "Reserve, %"
+    }
+  },
+  "outputs": {
+    "blocks": {
+      "label": "Steine"
+    },
+    "volume": {
+      "label": "Volumen, m³"
+    },
+    "area": {
+      "label": "Wandfläche, m²"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Calculadora de azulejos: baldosas, juntas y cemento cola",
+  "description": "Cuántos azulejos o baldosas necesitas con junta y margen, cuántas cajas y una estimación de material de rejuntado y cemento cola.",
+  "inputs": {
+    "area": {
+      "label": "Superficie, m²"
+    },
+    "length": {
+      "label": "Largo de la baldosa, cm"
+    },
+    "width": {
+      "label": "Ancho de la baldosa, cm"
+    },
+    "thickness": {
+      "label": "Grosor de la baldosa, mm"
+    },
+    "joint": {
+      "label": "Junta, mm"
+    },
+    "reserve": {
+      "label": "Margen, %"
+    },
+    "perBox": {
+      "label": "Piezas por caja"
+    },
+    "adhesive": {
+      "label": "Consumo de cemento cola, kg/m²"
+    }
+  },
+  "outputs": {
+    "pieces": {
+      "label": "Baldosas"
+    },
+    "boxes": {
+      "label": "Cajas"
+    },
+    "grout": {
+      "label": "Material de rejuntado, kg"
+    },
+    "glue": {
+      "label": "Cemento cola, kg"
+    }
+  }
+}

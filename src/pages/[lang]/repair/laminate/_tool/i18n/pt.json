@@ -1,0 +1,32 @@
+{
+  "title": "Calculadora de piso laminado: quantas caixas comprar",
+  "description": "Quantas caixas de piso laminado ou vinílico comprar para o cômodo, com margem de perda nos cortes.",
+  "inputs": {
+    "length": {
+      "label": "Comprimento do cômodo, m"
+    },
+    "width": {
+      "label": "Largura do cômodo, m"
+    },
+    "reserve": {
+      "label": "Margem de perda, %"
+    },
+    "pack": {
+      "label": "Área por caixa, m²"
+    }
+  },
+  "outputs": {
+    "packs": {
+      "label": "Caixas"
+    },
+    "area": {
+      "label": "Área do piso, m²"
+    },
+    "needed": {
+      "label": "Com margem, m²"
+    },
+    "bought": {
+      "label": "Área comprada, m²"
+    }
+  }
+}

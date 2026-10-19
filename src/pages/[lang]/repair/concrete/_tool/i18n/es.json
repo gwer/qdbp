@@ -1,0 +1,50 @@
+{
+  "title": "Calculadora de hormigón: volumen, cemento, arena y grava",
+  "description": "Volumen de hormigón para una losa, zapata o solera y cuánto cemento, arena y grava hacen falta según la dosificación.",
+  "inputs": {
+    "length": {
+      "label": "Largo, m"
+    },
+    "width": {
+      "label": "Ancho, m"
+    },
+    "thickness": {
+      "label": "Espesor, m"
+    },
+    "reserve": {
+      "label": "Margen, %"
+    },
+    "mix": {
+      "label": "Dosificación cemento : arena : grava",
+      "options": {
+        "1-2-4": "1 : 2 : 4",
+        "1-2-3": "1 : 2 : 3",
+        "1-3-5": "1 : 3 : 5",
+        "1-3-6": "1 : 3 : 6"
+      }
+    },
+    "bag": {
+      "label": "Saco de cemento, kg"
+    }
+  },
+  "outputs": {
+    "volume": {
+      "label": "Volumen de hormigón, m³"
+    },
+    "bags": {
+      "label": "Sacos de cemento"
+    },
+    "cement": {
+      "label": "Cemento, kg"
+    },
+    "sand": {
+      "label": "Arena, m³"
+    },
+    "gravel": {
+      "label": "Grava, m³"
+    },
+    "water": {
+      "label": "Agua, l (orientativo)"
+    }
+  }
+}

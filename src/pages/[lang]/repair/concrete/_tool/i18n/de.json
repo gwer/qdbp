@@ -1,0 +1,50 @@
+{
+  "title": "Betonrechner: Menge, Zement, Sand und Kies",
+  "description": "Betonmenge für Bodenplatte, Fundament oder Estrich und wie viel Zement, Sand und Kies man nach Mischverhältnis braucht.",
+  "inputs": {
+    "length": {
+      "label": "Länge, m"
+    },
+    "width": {
+      "label": "Breite, m"
+    },
+    "thickness": {
+      "label": "Dicke, m"
+    },
+    "reserve": {
+      "label": "Reserve, %"
+    },
+    "mix": {
+      "label": "Mischverhältnis Zement : Sand : Kies",
+      "options": {
+        "1-2-4": "1 : 2 : 4",
+        "1-2-3": "1 : 2 : 3",
+        "1-3-5": "1 : 3 : 5",
+        "1-3-6": "1 : 3 : 6"
+      }
+    },
+    "bag": {
+      "label": "Zementsack, kg"
+    }
+  },
+  "outputs": {
+    "volume": {
+      "label": "Betonmenge, m³"
+    },
+    "bags": {
+      "label": "Zementsäcke"
+    },
+    "cement": {
+      "label": "Zement, kg"
+    },
+    "sand": {
+      "label": "Sand, m³"
+    },
+    "gravel": {
+      "label": "Kies, m³"
+    },
+    "water": {
+      "label": "Wasser, l (Richtwert)"
+    }
+  }
+}

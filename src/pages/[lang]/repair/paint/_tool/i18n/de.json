@@ -1,0 +1,46 @@
+{
+  "title": "Farbrechner: wie viel Wandfarbe brauche ich",
+  "description": "Wie viel Farbe brauche ich? Streichfläche ohne Fenster und Türen, Liter für alle Anstriche und Anzahl der Eimer.",
+  "inputs": {
+    "length": {
+      "label": "Raumlänge, m"
+    },
+    "width": {
+      "label": "Raumbreite, m"
+    },
+    "height": {
+      "label": "Raumhöhe, m"
+    },
+    "openings": {
+      "label": "Fenster und Türen, m²"
+    },
+    "surface": {
+      "label": "Was wird gestrichen",
+      "options": {
+        "walls": "Wände",
+        "wallsCeiling": "Wände und Decke",
+        "ceiling": "Decke"
+      }
+    },
+    "coats": {
+      "label": "Anstriche"
+    },
+    "rate": {
+      "label": "Verbrauch, l/m² pro Anstrich"
+    },
+    "can": {
+      "label": "Eimergröße, l"
+    }
+  },
+  "outputs": {
+    "liters": {
+      "label": "Farbe, l"
+    },
+    "cans": {
+      "label": "Eimer"
+    },
+    "area": {
+      "label": "Streichfläche, m²"
+    }
+  }
+}

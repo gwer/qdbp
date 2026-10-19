@@ -1,0 +1,46 @@
+{
+  "title": "Calculadora de tinta: quantos litros comprar",
+  "description": "Quanta tinta comprar para paredes e teto: área sem janelas e portas, litros conforme o número de demãos e quantidade de latas.",
+  "inputs": {
+    "length": {
+      "label": "Comprimento do cômodo, m"
+    },
+    "width": {
+      "label": "Largura do cômodo, m"
+    },
+    "height": {
+      "label": "Pé-direito, m"
+    },
+    "openings": {
+      "label": "Janelas e portas, m²"
+    },
+    "surface": {
+      "label": "O que vai pintar",
+      "options": {
+        "walls": "Paredes",
+        "wallsCeiling": "Paredes e teto",
+        "ceiling": "Teto"
+      }
+    },
+    "coats": {
+      "label": "Demãos"
+    },
+    "rate": {
+      "label": "Consumo, l/m² por demão"
+    },
+    "can": {
+      "label": "Tamanho da lata, l"
+    }
+  },
+  "outputs": {
+    "liters": {
+      "label": "Tinta necessária, l"
+    },
+    "cans": {
+      "label": "Latas"
+    },
+    "area": {
+      "label": "Área a pintar, m²"
+    }
+  }
+}

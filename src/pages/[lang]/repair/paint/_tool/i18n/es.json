@@ -1,0 +1,46 @@
+{
+  "title": "Calculadora de pintura: cuántos litros necesito",
+  "description": "Cuánta pintura necesitas para paredes y techo: superficie sin ventanas ni puertas, litros según el número de manos y botes.",
+  "inputs": {
+    "length": {
+      "label": "Largo de la habitación, m"
+    },
+    "width": {
+      "label": "Ancho de la habitación, m"
+    },
+    "height": {
+      "label": "Altura del techo, m"
+    },
+    "openings": {
+      "label": "Ventanas y puertas, m²"
+    },
+    "surface": {
+      "label": "Qué se pinta",
+      "options": {
+        "walls": "Paredes",
+        "wallsCeiling": "Paredes y techo",
+        "ceiling": "Techo"
+      }
+    },
+    "coats": {
+      "label": "Manos"
+    },
+    "rate": {
+      "label": "Consumo, l/m² por mano"
+    },
+    "can": {
+      "label": "Tamaño del bote, l"
+    }
+  },
+  "outputs": {
+    "liters": {
+      "label": "Pintura necesaria, l"
+    },
+    "cans": {
+      "label": "Botes"
+    },
+    "area": {
+      "label": "Superficie a pintar, m²"
+    }
+  }
+}
