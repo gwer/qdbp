@@ -38,7 +38,7 @@ describe('bmi', () => {
       const spec = def.outputs.category;
       if (spec?.type !== 'custom') throw new Error('category должен быть custom');
       for (const c of ['under', 'normal', 'over', 'obese1', 'obese2', 'obese3'] as const) {
-        expect(spec.format(c, { t, lang: lang as 'ru' })).toMatch(/\S/);
+        expect(spec.format(c, { t, lang: lang as 'ru', units: 'metric', clock: '24' })).toMatch(/\S/);
       }
     }
   });

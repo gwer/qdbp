@@ -19,6 +19,8 @@
 /de/health/
 /de/health/bmi/
 /de/health/calorie-calculator/
+/de/health/due-date/
+/de/health/running-pace/
 /de/math/
 /de/math/add-percent/
 /de/math/average/
@@ -69,6 +71,8 @@
 /en/health/
 /en/health/bmi/
 /en/health/calorie-calculator/
+/en/health/due-date/
+/en/health/running-pace/
 /en/math/
 /en/math/add-percent/
 /en/math/average/
@@ -111,6 +115,8 @@
 /es/health/
 /es/health/bmi/
 /es/health/calorie-calculator/
+/es/health/due-date/
+/es/health/running-pace/
 /es/math/
 /es/math/add-percent/
 /es/math/average/
@@ -161,6 +167,8 @@
 /pt/health/
 /pt/health/bmi/
 /pt/health/calorie-calculator/
+/pt/health/due-date/
+/pt/health/running-pace/
 /pt/math/
 /pt/math/add-percent/
 /pt/math/average/
@@ -211,6 +219,8 @@
 /ru/health/
 /ru/health/bmi/
 /ru/health/calorie-calculator/
+/ru/health/due-date/
+/ru/health/running-pace/
 /ru/math/
 /ru/math/add-percent/
 /ru/math/average/

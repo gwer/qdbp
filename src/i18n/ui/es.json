@@ -31,7 +31,8 @@
       "max": "Debe ser como máximo {max}",
       "date": "Elige una fecha",
       "duration": "Introduce el tiempo en formato h:mm, por ejemplo 1:30",
-      "time": "Indica una hora"
+      "time": "Indica una hora",
+      "durationSeconds": "Introduce el tiempo como h:mm:ss o mm:ss, por ejemplo 45:30"
     },
     "clock": {
       "label": "Formato de hora",

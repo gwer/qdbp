@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatDuration, parseDuration } from './duration';
+import { formatDuration, formatDurationSeconds, parseDuration, parseDurationSeconds } from './duration';
 
 describe('parseDuration', () => {
   it.each([
@@ -25,5 +25,27 @@ describe('formatDuration', () => {
     expect(formatDuration(5)).toBe('0:05');
     expect(formatDuration(1500)).toBe('25:00');
     expect(formatDuration(-75)).toBe('−1:15');
+  });
+});
+
+describe('длительности с секундами', () => {
+  it.each([
+    ['1:45:30', 6330],
+    ['45:30', 2730],
+    ['5:09', 309],
+    ['50', 3000],
+    ['3:59:59', 14399],
+  ])('«%s» → %d с', (input, expected) => {
+    expect(parseDurationSeconds(input, 'ru')).toBe(expected);
+  });
+
+  it.each(['1:60', '1:5', '1:00:60', 'abc', '-3'])('«%s» — ошибка', (input) => {
+    expect(parseDurationSeconds(input, 'ru')).toBeNull();
+  });
+
+  it('формат', () => {
+    expect(formatDurationSeconds(309)).toBe('5:09');
+    expect(formatDurationSeconds(6330)).toBe('1:45:30');
+    expect(formatDurationSeconds(59.6)).toBe('1:00');
   });
 });

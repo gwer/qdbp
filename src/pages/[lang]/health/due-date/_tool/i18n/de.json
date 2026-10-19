@@ -1,0 +1,45 @@
+{
+  "title": "Geburtstermin-Rechner: Entbindungstermin und Schwangerschaftswoche",
+  "description": "Voraussichtlichen Geburtstermin und aktuelle Schwangerschaftswoche aus dem ersten Tag der letzten Periode berechnen – angepasst an die Zykluslänge.",
+  "inputs": {
+    "lmp": {
+      "label": "Erster Tag der letzten Periode"
+    },
+    "cycle": {
+      "label": "Zykluslänge, Tage"
+    },
+    "on": {
+      "label": "Schwangerschaftswoche am"
+    }
+  },
+  "outputs": {
+    "due": {
+      "label": "Voraussichtlicher Geburtstermin"
+    },
+    "age": {
+      "label": "Schwanger seit"
+    },
+    "trimester": {
+      "label": "Trimester"
+    },
+    "left": {
+      "label": "Tage bis zum Termin"
+    },
+    "conception": {
+      "label": "Ungefährer Empfängnistermin"
+    }
+  },
+  "ui": {
+    "weeks": {
+      "one": "{count} Woche",
+      "other": "{count} Wochen"
+    },
+    "days": {
+      "one": "{count} Tag",
+      "other": "{count} Tage"
+    },
+    "trimester1": "Erstes",
+    "trimester2": "Zweites",
+    "trimester3": "Drittes"
+  }
+}

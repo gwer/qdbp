@@ -1,0 +1,45 @@
+{
+  "title": "Pregnancy due date calculator: due date and how far along you are",
+  "description": "Estimate your due date and how many weeks pregnant you are from the first day of your last period, adjusted for cycle length.",
+  "inputs": {
+    "lmp": {
+      "label": "First day of last period"
+    },
+    "cycle": {
+      "label": "Cycle length, days"
+    },
+    "on": {
+      "label": "Weeks pregnant on"
+    }
+  },
+  "outputs": {
+    "due": {
+      "label": "Estimated due date"
+    },
+    "age": {
+      "label": "How far along"
+    },
+    "trimester": {
+      "label": "Trimester"
+    },
+    "left": {
+      "label": "Days until due date"
+    },
+    "conception": {
+      "label": "Estimated conception date"
+    }
+  },
+  "ui": {
+    "weeks": {
+      "one": "{count} week",
+      "other": "{count} weeks"
+    },
+    "days": {
+      "one": "{count} day",
+      "other": "{count} days"
+    },
+    "trimester1": "First",
+    "trimester2": "Second",
+    "trimester3": "Third"
+  }
+}

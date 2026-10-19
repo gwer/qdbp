@@ -3,7 +3,7 @@ import { LANG_META, type ClockMode, type Lang, type UnitSystem } from '@/i18n/co
 import type { T } from '@/i18n/t';
 import { clockValue, formatTyped, nowClock, parseClock, parseTyped, splitSuffix } from '@/lib/clock';
 import { isValidDate, resolveDateDefault, todayISO } from '@/lib/date';
-import { formatDuration, parseDuration } from '@/lib/duration';
+import { formatDuration, formatDurationSeconds, parseDuration, parseDurationSeconds } from '@/lib/duration';
 import { formatClock, formatDate, formatDateTime, formatInput, formatNumber } from '@/lib/format';
 import { parseNumber } from '@/lib/parse';
 import { convert, displayUnit, forField, parseFeetInches, tidy, unitSymbol } from '@/lib/units';
@@ -43,7 +43,7 @@ function defaults(def: CalculatorDef, env: Env, now: Now): Raw {
     else if (spec.type === 'time') {
       const canonical = spec.default === 'now' ? now?.time : spec.default;
       raw[name] = canonical ? formatTyped(parseClock(canonical)!, env.clock) : '';
-    } else if (spec.type === 'duration') raw[name] = formatDuration(spec.default);
+    } else if (spec.type === 'duration') raw[name] = spec.seconds ? formatDurationSeconds(spec.default) : formatDuration(spec.default);
     else if (spec.type === 'quantity') {
       raw[name] =
         env.units === 'imperial' && spec.imperial && spec.defaultImperial !== undefined
@@ -70,8 +70,8 @@ function parseInputs(def: CalculatorDef, raw: Raw, env: Env) {
       if (m === null) errors[name] = t('calc.error.time');
       else values[name] = m;
     } else if (spec.type === 'duration') {
-      const m = parseDuration(s, lang);
-      if (m === null) errors[name] = t('calc.error.duration');
+      const m = spec.seconds ? parseDurationSeconds(s, lang) : parseDuration(s, lang);
+      if (m === null) errors[name] = t(spec.seconds ? 'calc.error.durationSeconds' : 'calc.error.duration');
       else values[name] = m;
     } else {
       const unit = spec.type === 'quantity' ? displayUnit(spec, env.units) : null;
@@ -104,7 +104,7 @@ function readQuery(def: CalculatorDef, env: Env): Raw {
       const m = parseClock(v);
       if (m !== null) raw[name] = formatTyped(m, env.clock);
     } else if (!Number.isFinite(Number(v))) continue;
-    else if (spec.type === 'duration') raw[name] = formatDuration(Number(v));
+    else if (spec.type === 'duration') raw[name] = spec.seconds ? formatDurationSeconds(Number(v)) : formatDuration(Number(v));
     else if (spec.type === 'quantity') raw[name] = quantityText(spec, Number(v), env);
     else raw[name] = formatInput(env.lang, Number(v));
   }
@@ -124,11 +124,11 @@ function writeQuery(def: CalculatorDef, values: Values, initial: Values) {
 
 function formatOutput(env: Env, value: unknown, spec: OutputSpec = {}): string {
   const { lang, t } = env;
-  if (spec.type === 'custom') return spec.format(value, { t, lang });
+  if (spec.type === 'custom') return spec.format(value, env);
   if (spec.type === 'date') return typeof value === 'string' ? formatDate(lang, value, spec.style) : '—';
   if (spec.type === 'text') return typeof value === 'string' ? value : '—';
   if (typeof value !== 'number' || !Number.isFinite(value)) return '—';
-  if (spec.type === 'duration') return formatDuration(value);
+  if (spec.type === 'duration') return spec.seconds ? formatDurationSeconds(value) : formatDuration(value);
   if (spec.type === 'clock') return formatClock(lang, value, env.clock);
   if (spec.type === 'datetime') return formatDateTime(lang, value, spec.timeZone, env.clock);
   if (spec.type === 'quantity') {
@@ -283,7 +283,7 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
                     style={suffix ? { paddingRight: `${1.4 + 0.6 * suffix.length}em` } : undefined}
                     type="text"
                     inputMode={spec.type === 'duration' ? undefined : inputMode(spec)}
-                    placeholder={spec.type === 'duration' ? '1:30' : undefined}
+                    placeholder={spec.type === 'duration' ? (spec.seconds ? '45:30' : '1:30') : undefined}
                     autoComplete="off"
                     onInput={(e) => set(name, e.currentTarget.value)}
                   />

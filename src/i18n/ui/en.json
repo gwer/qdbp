@@ -30,7 +30,8 @@
       "max": "Must be at most {max}",
       "date": "Pick a date",
       "duration": "Enter time as h:mm, e.g. 1:30",
-      "time": "Enter a time"
+      "time": "Enter a time",
+      "durationSeconds": "Enter a time as h:mm:ss or mm:ss, e.g. 45:30"
     },
     "clock": {
       "label": "Time format",

@@ -1,0 +1,47 @@
+{
+  "title": "Calculadora de gravidez: data provável do parto e semanas",
+  "description": "Calcule a data provável do parto e com quantas semanas você está a partir do primeiro dia da última menstruação, ajustando pela duração do ciclo.",
+  "inputs": {
+    "lmp": {
+      "label": "Primeiro dia da última menstruação"
+    },
+    "cycle": {
+      "label": "Duração do ciclo, dias"
+    },
+    "on": {
+      "label": "Semanas de gestação em"
+    }
+  },
+  "outputs": {
+    "due": {
+      "label": "Data provável do parto"
+    },
+    "age": {
+      "label": "Idade gestacional"
+    },
+    "trimester": {
+      "label": "Trimestre"
+    },
+    "left": {
+      "label": "Dias até o parto"
+    },
+    "conception": {
+      "label": "Data aproximada da concepção"
+    }
+  },
+  "ui": {
+    "weeks": {
+      "one": "{count} semana",
+      "many": "{count} semanas",
+      "other": "{count} semanas"
+    },
+    "days": {
+      "one": "{count} dia",
+      "many": "{count} dias",
+      "other": "{count} dias"
+    },
+    "trimester1": "Primeiro",
+    "trimester2": "Segundo",
+    "trimester3": "Terceiro"
+  }
+}

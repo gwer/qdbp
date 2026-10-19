@@ -1,5 +1,5 @@
 import type { ComponentType } from 'preact';
-import type { Lang } from '@/i18n/config';
+import type { ClockMode, Lang, UnitSystem } from '@/i18n/config';
 import type { T } from '@/i18n/t';
 import type { NumberKind } from '@/lib/format';
 import type { UnitId } from '@/lib/units';
@@ -16,8 +16,11 @@ export type NumberInput = {
 export type SelectInput = { type: 'select'; options: readonly string[]; default: string } & ByLang<string>;
 /** default: 'YYYY-MM-DD', 'today', 'today+N', 'today-N'. «Сегодня» подставляется только в браузере. */
 export type DateInput = { type: 'date'; default: string };
-/** Длительность «ч:мм»; default и значение — в минутах. */
-export type DurationInput = { type: 'duration'; default: number };
+/**
+ * Длительность «ч:мм»; default и значение — в минутах.
+ * С seconds: true — «ч:мм:сс» или «мм:сс», default и значение в секундах (забеги, темп).
+ */
+export type DurationInput = { type: 'duration'; default: number; seconds?: boolean };
 /** Время на часах; default: 'HH:MM' или 'now' (только в браузере); значение — минуты от полуночи. */
 export type TimeInput = { type: 'time'; default: string };
 /**
@@ -40,8 +43,8 @@ export type OutputSpec =
   | { type?: NumberKind; digits?: number }
   /** Значение — строка 'YYYY-MM-DD'. */
   | { type: 'date'; style?: 'long' | 'full' }
-  /** Значение — минуты. */
-  | { type: 'duration' }
+  /** Значение — минуты (с seconds: true — секунды). */
+  | { type: 'duration'; seconds?: boolean }
   /** Значение — мс от эпохи; без timeZone — часовой пояс браузера. */
   | { type: 'datetime'; timeZone?: 'UTC' }
   /** Значение — минуты от полуночи. */
@@ -51,7 +54,15 @@ export type OutputSpec =
   /** Значение — готовая строка. */
   | { type: 'text' }
   /** Своё форматирование, когда нужны строки перевода (например, «через 2 дня»). */
-  | { type: 'custom'; format: (value: any, ctx: { t: T; lang: Lang }) => string };
+  | { type: 'custom'; format: (value: any, ctx: FormatContext) => string };
+
+/** Всё, от чего зависит показ результата: язык, переводы и настройки пользователя. */
+export interface FormatContext {
+  t: T;
+  lang: Lang;
+  units: UnitSystem;
+  clock: ClockMode;
+}
 
 type InputValue<S> = S extends SelectInput ? S['options'][number] : S extends DateInput ? string : number;
 export type Values<I extends Record<string, InputSpec>> = { [K in keyof I]: InputValue<I[K]> };

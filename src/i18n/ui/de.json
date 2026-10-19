@@ -30,7 +30,8 @@
       "max": "Höchstens {max}",
       "date": "Bitte ein Datum wählen",
       "duration": "Zeit im Format h:mm eingeben, z. B. 1:30",
-      "time": "Bitte eine Uhrzeit angeben"
+      "time": "Bitte eine Uhrzeit angeben",
+      "durationSeconds": "Zeit als h:mm:ss oder mm:ss eingeben, z. B. 45:30"
     },
     "clock": {
       "label": "Zeitformat",
