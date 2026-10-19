@@ -1,21 +1,16 @@
 ---
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import ToolList from '@/components/ToolList.astro';
-import { LANG_META, type Lang } from '@/i18n/config';
-import { UI, uiT } from '@/i18n/ui';
+import { LANG_META } from '@/i18n/config';
+import { uiT } from '@/i18n/ui';
 import Base from '@/layouts/Base.astro';
-import { categories, categoryName, categoryUrl, toolById, tools, toolUrl, type Tool } from '@/lib/catalog';
+import { categories, categoryName, categoryUrl, toolById, toolUrl, type Tool, type ToolPageProps } from '@/lib/catalog';
 import { breadcrumbLd, webAppLd } from '@/lib/seo';
-import { ToolRoot } from '@/ui/ToolRoot';
 
-export function getStaticPaths() {
-  return tools.flatMap((tool) =>
-    tool.langs.map((lang) => ({ params: { lang, category: tool.category, tool: tool.id }, props: { tool } })),
-  );
-}
+// Общая обвязка страницы инструмента. Сам инструмент (остров) передаётся в слот из index.astro.
+type Props = Omit<ToolPageProps, 'island'>;
 
-const lang = Astro.params.lang as Lang;
-const { tool } = Astro.props as { tool: Tool };
+const { tool, lang } = Astro.props;
 const t = uiT(lang);
 const cat = categories.find((c) => c.id === tool.category)!;
 const strings = tool.strings[lang]!;
@@ -34,7 +29,6 @@ const crumbs = [
 ];
 const alternates = tool.langs.map((l) => ({ lang: l, href: toolUrl(tool, l) }));
 const url = new URL(toolUrl(tool, lang), Astro.site).href;
-const props = { path: tool.path, lang, strings: { tool: strings, ui: UI[lang] } };
 ---
 
 <Base
@@ -48,10 +42,9 @@ const props = { path: tool.path, lang, strings: { tool: strings, ui: UI[lang] } 
   <h1>{title}</h1>
   <p class="lead">{description}</p>
 
-  <div class="tool" data-tool-root>
-    <ToolRoot def={tool.def} lang={lang} strings={props.strings} />
+  <div class="tool">
+    <slot />
   </div>
-  <script type="application/json" id="tool-props" set:html={JSON.stringify(props)} />
 
   <article class="content">
     <Content />
@@ -74,7 +67,3 @@ const props = { path: tool.path, lang, strings: { tool: strings, ui: UI[lang] } 
     )
   }
 </Base>
-
-<script>
-  import '@/scripts/hydrate-tool';
-</script>

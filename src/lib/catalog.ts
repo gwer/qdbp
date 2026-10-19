@@ -1,18 +1,31 @@
-// Каталог инструментов строится из файловой структуры src/tools/{category}/{tool}/.
+// Каталог строится из файловой структуры src/pages/[lang]/{category}/{tool}/:
+//   {category}/index.astro — страница категории (одинаковая у всех категорий)
+//   {category}/_category/  — category.ts + i18n/{lang}.json
+//   {category}/{tool}/index.astro — страница (одинаковая у всех инструментов)
+//   {category}/{tool}/_tool/ — tool.ts, i18n/{lang}.json, content/{lang}.md, тесты, код
 // Используется только при сборке. Любая ошибка в файлах переводов валит сборку.
+// Первый сегмент пути в glob — `*`, а не `[lang]`: квадратные скобки в glob — класс символов.
 import type { MarkdownInstance } from 'astro';
 import { SITE_LANGS, type Lang } from '@/i18n/config';
 import type { Dict } from '@/i18n/t';
+import { UI } from '@/i18n/ui';
 import type { CategoryDef, ToolDef } from '@/ui/define';
+import type { IslandProps } from '@/ui/ToolRoot';
 import { requiredToolKeys, validateFiles, type FileSet } from './validate';
 
-const toolDefs = import.meta.glob<{ default: ToolDef }>('/src/tools/*/*/tool.ts', { eager: true });
-const toolI18n = import.meta.glob<Dict>('/src/tools/*/*/i18n/*.json', { eager: true, import: 'default' });
-const toolContent = import.meta.glob<MarkdownInstance<Record<string, unknown>>>('/src/tools/*/*/content/*.md', {
+const toolDefs = import.meta.glob<ToolDef>('/src/pages/*/*/*/_tool/tool.ts', { eager: true, import: 'def' });
+const toolPages = import.meta.glob('/src/pages/*/*/*/index.astro');
+const toolI18n = import.meta.glob<Dict>('/src/pages/*/*/*/_tool/i18n/*.json', { eager: true, import: 'default' });
+const toolContent = import.meta.glob<MarkdownInstance<Record<string, unknown>>>(
+  '/src/pages/*/*/*/_tool/content/*.md',
+  { eager: true },
+);
+const categoryDefs = import.meta.glob<CategoryDef>('/src/pages/*/*/_category/category.ts', {
   eager: true,
+  import: 'default',
 });
-const categoryDefs = import.meta.glob<{ default: CategoryDef }>('/src/tools/*/category.ts', { eager: true });
-const categoryI18n = import.meta.glob<Dict>('/src/tools/*/i18n/*.json', { eager: true, import: 'default' });
+const categoryPages = import.meta.glob('/src/pages/*/*/index.astro');
+const categoryI18n = import.meta.glob<Dict>('/src/pages/*/*/_category/i18n/*.json', { eager: true, import: 'default' });
 
 export interface Tool {
   id: string;
@@ -27,6 +40,7 @@ export interface Tool {
 
 export interface Category {
   id: string;
+  def: CategoryDef;
   order: number;
   strings: Partial<Record<Lang, Dict>>;
   tools: Tool[];
@@ -34,8 +48,10 @@ export interface Category {
   langs: Lang[];
 }
 
-const TOOL_FILE = /^\/src\/tools\/([^/]+)\/([^/]+)\/(i18n|content)\/([^/]+)\.(json|md)$/;
-const CATEGORY_FILE = /^\/src\/tools\/([^/]+)\/i18n\/([^/]+)\.json$/;
+const ROOT = '/src/pages/[lang]';
+const TOOL_FILE = /^\/src\/pages\/[^/]+\/([^/]+)\/([^/]+)\/_tool\/(i18n|content)\/([^/]+)\.(json|md)$/;
+const TOOL_DEF = /^\/src\/pages\/[^/]+\/([^/]+)\/([^/]+)\/_tool\/tool\.ts$/;
+const CATEGORY_FILE = /^\/src\/pages\/[^/]+\/([^/]+)\/_category\/i18n\/([^/]+)\.json$/;
 
 function build() {
   const errors: string[] = [];
@@ -57,27 +73,36 @@ function build() {
 
   const tools: Tool[] = [];
   const seenIds = new Map<string, string>();
-  for (const [file, mod] of Object.entries(toolDefs)) {
-    const [, category, id] = file.match(/^\/src\/tools\/([^/]+)\/([^/]+)\/tool\.ts$/)!;
+  for (const [file, def] of Object.entries(toolDefs)) {
+    const [, category, id] = file.match(TOOL_DEF)!;
     const path = `${category}/${id}`;
+    if (!def) {
+      errors.push(`${path}: _tool/tool.ts не экспортирует def`);
+      continue;
+    }
     const set = fileSet(path);
-    errors.push(...validateFiles(`tools/${path}`, set, requiredToolKeys(mod.default)));
+    errors.push(...validateFiles(path, set, requiredToolKeys(def)));
+    if (!toolPages[`${ROOT}/${path}/index.astro`]) errors.push(`${path}: нет index.astro (скопируйте из любого инструмента)`);
 
-    if (seenIds.has(id)) errors.push(`tools/${path}: id "${id}" уже занят инструментом tools/${seenIds.get(id)}`);
+    if (seenIds.has(id)) errors.push(`${path}: id "${id}" уже занят инструментом ${seenIds.get(id)}`);
     seenIds.set(id, path);
 
     const langs = SITE_LANGS.filter((l) => l in set.i18n && set.content.includes(l));
     const content: Tool['content'] = {};
-    for (const lang of langs) content[lang] = toolContent[`/src/tools/${path}/content/${lang}.md`].Content;
-    tools.push({ id, category, path, def: mod.default, langs, strings: set.i18n, content });
+    for (const lang of langs) content[lang] = toolContent[`${ROOT}/${path}/_tool/content/${lang}.md`].Content;
+    tools.push({ id, category, path, def, langs, strings: set.i18n, content });
   }
 
   for (const path of files.keys()) {
-    if (!tools.some((t) => t.path === path)) errors.push(`tools/${path}: есть переводы, но нет tool.ts`);
+    if (!tools.some((t) => t.path === path)) errors.push(`${path}: есть переводы, но нет _tool/tool.ts`);
+  }
+  for (const page of Object.keys(toolPages)) {
+    const path = page.slice(ROOT.length + 1, -'/index.astro'.length);
+    if (!tools.some((t) => t.path === path)) errors.push(`${path}: есть index.astro, но нет _tool/tool.ts`);
   }
   for (const tool of tools) {
     for (const rel of tool.def.related ?? []) {
-      if (!seenIds.has(rel)) errors.push(`tools/${tool.path}: в related неизвестный инструмент "${rel}"`);
+      if (!seenIds.has(rel)) errors.push(`${tool.path}: в related неизвестный инструмент "${rel}"`);
     }
   }
 
@@ -91,23 +116,28 @@ function build() {
   const categories: Category[] = [];
   const categoryIds = new Set([...tools.map((t) => t.category), ...catStrings.keys()]);
   for (const id of categoryIds) {
-    const def = categoryDefs[`/src/tools/${id}/category.ts`]?.default;
+    const def = categoryDefs[`${ROOT}/${id}/_category/category.ts`];
     if (!def) {
-      errors.push(`tools/${id}: нет category.ts`);
+      errors.push(`${id}: нет _category/category.ts`);
       continue;
     }
+    if (!categoryPages[`${ROOT}/${id}/index.astro`]) errors.push(`${id}: нет index.astro (скопируйте из любой категории)`);
     const strings = catStrings.get(id) ?? {};
-    errors.push(...validateFiles(`tools/${id} (категория)`, { i18n: strings, content: [] }, ['name', 'description'], false));
+    errors.push(...validateFiles(`${id} (категория)`, { i18n: strings, content: [] }, ['name', 'description'], false));
     const catTools = tools.filter((t) => t.category === id);
     const langs = SITE_LANGS.filter((l) => catTools.some((t) => t.langs.includes(l)));
     for (const lang of langs) {
-      if (!strings[lang]) errors.push(`tools/${id}: на ${lang} есть инструменты, но нет i18n/${lang}.json категории`);
+      if (!strings[lang]) errors.push(`${id}: на ${lang} есть инструменты, но нет _category/i18n/${lang}.json`);
     }
-    categories.push({ id, order: def.order, strings, tools: catTools, langs });
+    categories.push({ id, def, order: def.order, strings, tools: catTools, langs });
+  }
+  for (const page of Object.keys(categoryPages)) {
+    const id = page.slice(ROOT.length + 1, -'/index.astro'.length);
+    if (!categoryIds.has(id)) errors.push(`${id}: есть index.astro, но нет _category/category.ts`);
   }
   categories.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
 
-  if (errors.length) throw new Error(`Ошибки в src/tools:\n  - ${errors.join('\n  - ')}`);
+  if (errors.length) throw new Error(`Ошибки в ${ROOT.slice(1)}:\n  - ${errors.join('\n  - ')}`);
   return { tools, categories };
 }
 
@@ -122,3 +152,31 @@ export const toolUrl = (tool: Tool, lang: Lang) => `/${lang}/${tool.path}/`;
 export const categoryUrl = (cat: Category, lang: Lang) => `/${lang}/${cat.id}/`;
 
 export const toolsIn = (cat: Category, lang: Lang) => cat.tools.filter((t) => t.langs.includes(lang));
+
+export interface ToolPageProps {
+  tool: Tool;
+  lang: Lang;
+  island: IslandProps;
+}
+
+/** getStaticPaths для index.astro инструмента: по странице на каждый язык, где есть перевод. */
+export function toolPaths(def: ToolDef) {
+  const tool = tools.find((t) => t.def === def);
+  if (!tool) throw new Error('toolPaths: инструмент не найден в каталоге');
+  return tool.langs.map((lang) => ({
+    params: { lang },
+    props: { tool, lang, island: { lang, strings: { tool: tool.strings[lang]!, ui: UI[lang] } } } satisfies ToolPageProps,
+  }));
+}
+
+export interface CategoryPageProps {
+  cat: Category;
+  lang: Lang;
+}
+
+/** getStaticPaths для index.astro категории: по странице на каждый язык, где в категории есть инструменты. */
+export function categoryPaths(def: CategoryDef) {
+  const cat = categories.find((c) => c.def === def);
+  if (!cat) throw new Error('categoryPaths: категория не найдена в каталоге');
+  return cat.langs.map((lang) => ({ params: { lang }, props: { cat, lang } satisfies CategoryPageProps }));
+}

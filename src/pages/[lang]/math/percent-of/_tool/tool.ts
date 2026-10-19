@@ -1,9 +1,10 @@
 import { defineCalculator } from '@/ui/define';
+import { island } from '@/ui/ToolRoot';
 
 // Сначала умножение, потом деление: 7 * 33 / 100 = 2.31 без хвоста плавающей точки.
 export const percentOf = (percent: number, value: number) => (percent * value) / 100;
 
-export default defineCalculator({
+export const def = defineCalculator({
   inputs: {
     percent: { type: 'percent', default: 20 },
     value: { type: 'number', default: 150 },
@@ -11,3 +12,5 @@ export default defineCalculator({
   compute: ({ percent, value }) => ({ result: percentOf(percent, value) }),
   outputs: { result: {} },
 });
+
+export default island(def);

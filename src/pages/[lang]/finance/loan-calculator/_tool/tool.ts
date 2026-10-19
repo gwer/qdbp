@@ -1,8 +1,9 @@
 import { defineCalculator } from '@/ui/define';
+import { island } from '@/ui/ToolRoot';
 import { loan } from './loan';
 import { Schedule } from './Schedule';
 
-export default defineCalculator({
+export const def = defineCalculator({
   related: ['percent-of'],
   inputs: {
     amount: { type: 'number', default: 500000, min: 1 },
@@ -18,3 +19,5 @@ export default defineCalculator({
   },
   Extra: Schedule,
 });
+
+export default island(def);

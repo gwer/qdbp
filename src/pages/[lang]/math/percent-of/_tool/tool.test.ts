@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import tool, { percentOf } from './tool';
+import { def, percentOf } from './tool';
 
 describe('percentOf', () => {
   it.each([
@@ -15,6 +15,6 @@ describe('percentOf', () => {
   });
 
   it('compute возвращает result', () => {
-    expect(tool.compute({ percent: 20, value: 150 })).toEqual({ result: 30 });
+    expect(def.compute({ percent: 20, value: 150 })).toEqual({ result: 30 });
   });
 });
