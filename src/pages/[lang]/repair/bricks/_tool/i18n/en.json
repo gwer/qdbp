@@ -1,0 +1,51 @@
+{
+  "title": "Brick calculator: how many bricks for a wall",
+  "description": "How many bricks you need for a wall based on brick size, number of wythes, mortar joints, openings and waste.",
+  "inputs": {
+    "length": {
+      "label": "Wall length"
+    },
+    "height": {
+      "label": "Wall height"
+    },
+    "openings": {
+      "label": "Windows and doors"
+    },
+    "format": {
+      "label": "Brick size",
+      "options": {
+        "250x120x65": "250 × 120 × 65 mm (Russia)",
+        "250x120x88": "250 × 120 × 88 mm (Russia)",
+        "240x115x71": "NF 240 × 115 × 71 mm (Germany)",
+        "240x115x52": "DF 240 × 115 × 52 mm (Germany)",
+        "240x115x50": "240 × 115 × 50 mm (Spain)",
+        "240x115x70": "240 × 115 × 70 mm (Spain)",
+        "190x90x57": "190 × 90 × 57 mm (Brazil)",
+        "us-modular": "Modular 7⅝ × 3⅝ × 2¼ in"
+      }
+    },
+    "thickness": {
+      "label": "Wall thickness",
+      "options": {
+        "half": "Single wythe",
+        "one": "Double wythe",
+        "oneHalf": "Triple wythe",
+        "two": "Four wythes"
+      }
+    },
+    "joint": {
+      "label": "Mortar joint"
+    },
+    "reserve": {
+      "label": "Waste"
+    }
+  },
+  "outputs": {
+    "bricks": {
+      "label": "Bricks"
+    },
+    "area": {
+      "label": "Wall area"
+    }
+  }
+}

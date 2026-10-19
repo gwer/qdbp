@@ -1,18 +1,21 @@
 {
   "title": "Betonrechner: Menge, Zement, Sand und Kies",
-  "description": "Betonmenge für Bodenplatte, Fundament oder Estrich und wie viel Zement, Sand und Kies man nach Mischverhältnis braucht.",
+  "description": "Betonmenge für Bodenplatte, Fundament oder Estrich, Säcke Fertigbeton oder Zement, Sand und Kies zum Selbstmischen.",
   "inputs": {
     "length": {
-      "label": "Länge, m"
+      "label": "Länge"
     },
     "width": {
-      "label": "Breite, m"
+      "label": "Breite"
     },
     "thickness": {
-      "label": "Dicke, m"
+      "label": "Dicke"
     },
     "reserve": {
-      "label": "Reserve, %"
+      "label": "Reserve"
+    },
+    "premixBag": {
+      "label": "Sack Fertigbeton"
     },
     "mix": {
       "label": "Mischverhältnis Zement : Sand : Kies",
@@ -24,27 +27,30 @@
       }
     },
     "bag": {
-      "label": "Zementsack, kg"
+      "label": "Zementsack"
     }
   },
   "outputs": {
     "volume": {
-      "label": "Betonmenge, m³"
+      "label": "Betonmenge"
+    },
+    "premixBags": {
+      "label": "Säcke Fertigbeton"
     },
     "bags": {
       "label": "Zementsäcke"
     },
     "cement": {
-      "label": "Zement, kg"
+      "label": "Zement"
     },
     "sand": {
-      "label": "Sand, m³"
+      "label": "Sand"
     },
     "gravel": {
-      "label": "Kies, m³"
+      "label": "Kies"
     },
     "water": {
-      "label": "Wasser, l (Richtwert)"
+      "label": "Wasser (Richtwert)"
     }
   }
 }

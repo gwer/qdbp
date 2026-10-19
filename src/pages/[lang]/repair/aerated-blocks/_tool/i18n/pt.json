@@ -3,25 +3,25 @@
   "description": "Quantos blocos de concreto celular comprar para uma parede e quantos metros cúbicos são, conforme a medida do bloco, os vãos e a margem.",
   "inputs": {
     "length": {
-      "label": "Comprimento da parede, m"
+      "label": "Comprimento da parede"
     },
     "height": {
-      "label": "Altura da parede, m"
+      "label": "Altura da parede"
     },
     "openings": {
-      "label": "Janelas e portas, m²"
+      "label": "Janelas e portas"
     },
     "blockLength": {
-      "label": "Comprimento do bloco, mm"
+      "label": "Comprimento do bloco"
     },
     "blockHeight": {
-      "label": "Altura do bloco, mm"
+      "label": "Altura do bloco"
     },
     "blockThickness": {
-      "label": "Espessura do bloco, mm"
+      "label": "Espessura do bloco"
     },
     "reserve": {
-      "label": "Margem de perda, %"
+      "label": "Margem de perda"
     }
   },
   "outputs": {
@@ -29,10 +29,10 @@
       "label": "Blocos"
     },
     "volume": {
-      "label": "Volume, m³"
+      "label": "Volume"
     },
     "area": {
-      "label": "Área da parede, m²"
+      "label": "Área da parede"
     }
   }
 }

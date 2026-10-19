@@ -1,17 +1,22 @@
 ## Cómo usar la calculadora de pintura
 
-Introduce las medidas de la habitación y la superficie total de ventanas y puertas, que no se pintan. Elige si vas a pintar las paredes, el techo o ambos, e indica el número de manos, el consumo y el tamaño del bote. La calculadora muestra cuántos litros necesitas y cuántos botes comprar.
+Introduce las medidas de la habitación y la superficie total de ventanas y puertas, que no se pintan. Elige si vas a pintar las paredes, el techo o ambos, e indica el número de manos, el rendimiento (cuántos metros cuadrados cubre un litro por mano) y el tamaño del bote. La calculadora muestra cuántos litros necesitas y cuántos botes comprar. Con el selector de unidades también puedes introducir las medidas en pies.
 
 ## Cómo se calcula
 
 - Superficie de paredes = perímetro × altura − huecos: 2 × (largo + ancho) × altura − ventanas y puertas.
 - Superficie del techo = largo × ancho.
-- Pintura = superficie × número de manos × consumo por mano.
+- Pintura = superficie × número de manos ÷ rendimiento por litro.
 - Los botes se redondean hacia arriba: no se venden medios botes.
 
-## Dónde ver el consumo
+## Dónde ver el rendimiento
 
-En el bote, normalmente como «rendimiento: 10–12 m²/l por mano». Para pasarlo a litros por metro cuadrado, divide 1 entre ese número: 10 m²/l equivalen a 0,1 l/m². Por defecto se usan 0,12 l/m², un valor típico para pintura plástica con un pequeño margen. Las superficies rugosas o muy absorbentes (yeso nuevo, pladur sin imprimación) consumen más.
+En el bote, pero puede aparecer de dos formas:
+
+- **«Rendimiento: 10–12 m²/l por mano»** o «un bote de 15 l cubre 150 m²» (150 ÷ 15 = 10 m²/l): ese es el número que hay que introducir;
+- **«Consumo: 0,1–0,12 l/m²»**: divide 1 entre el consumo; 0,12 l/m² son 1 ÷ 0,12 ≈ 8,3 m²/l.
+
+Por defecto se usan 8,3 m²/l, un valor típico para pintura plástica con un pequeño margen. Las superficies rugosas o muy absorbentes (yeso nuevo, pladur sin imprimación) gastan más pintura: baja el rendimiento.
 
 ## Ejemplos
 

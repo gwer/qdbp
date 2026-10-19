@@ -3,13 +3,13 @@
   "description": "Wie viele Ziegel brauche ich für eine Wand? Mit Ziegelformat, Wandstärke, Fugen, Öffnungen und Reserve.",
   "inputs": {
     "length": {
-      "label": "Wandlänge, m"
+      "label": "Wandlänge"
     },
     "height": {
-      "label": "Wandhöhe, m"
+      "label": "Wandhöhe"
     },
     "openings": {
-      "label": "Fenster und Türen, m²"
+      "label": "Fenster und Türen"
     },
     "format": {
       "label": "Ziegelformat",
@@ -20,7 +20,8 @@
         "240x115x52": "DF 240 × 115 × 52 mm",
         "240x115x50": "240 × 115 × 50 mm (Spanien)",
         "240x115x70": "240 × 115 × 70 mm (Spanien)",
-        "190x90x57": "190 × 90 × 57 mm (Brasilien)"
+        "190x90x57": "190 × 90 × 57 mm (Brasilien)",
+        "us-modular": "Modular 194 × 92 × 57 mm (USA)"
       }
     },
     "thickness": {
@@ -33,21 +34,18 @@
       }
     },
     "joint": {
-      "label": "Fuge, mm"
+      "label": "Fuge"
     },
     "reserve": {
-      "label": "Reserve, %"
+      "label": "Reserve"
     }
   },
   "outputs": {
     "bricks": {
       "label": "Ziegel"
     },
-    "perM2": {
-      "label": "Ziegel pro m²"
-    },
     "area": {
-      "label": "Wandfläche, m²"
+      "label": "Wandfläche"
     }
   }
 }

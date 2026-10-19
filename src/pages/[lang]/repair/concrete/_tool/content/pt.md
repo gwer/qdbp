@@ -1,6 +1,11 @@
 ## Como usar a calculadora de concreto
 
-Informe o comprimento, a largura e a espessura em metros: de uma laje, contrapiso, calçada ou sapata corrida. Acrescente uma margem para perdas e irregularidades, escolha o traço e o peso do saco de cimento. A calculadora mostra o volume de concreto e quanto cimento, areia, brita e água você precisa.
+Informe o comprimento, a largura e a espessura de uma laje, contrapiso, calçada ou sapata corrida e acrescente uma margem para perdas e irregularidades. Depois há dois caminhos:
+
+- **concreto pronto ensacado**: informe o peso do saco e veja quantos comprar;
+- **preparar a mistura**: escolha o traço e o saco de cimento e veja o cimento, a areia, a brita e a água.
+
+Pelo seletor de unidades também dá para usar pés e polegadas.
 
 ## Como é calculado
 
@@ -8,6 +13,7 @@ Informe o comprimento, a largura e a espessura em metros: de uma laje, contrapis
 2. É preciso cerca de 1,54 vez mais volume de materiais secos do que de concreto pronto: a água e os finos preenchem os vazios e a mistura se compacta. É o coeficiente usual nos cálculos de traço em volume.
 3. O volume seco é dividido conforme o traço. O cimento é convertido em quilos pela massa unitária de 1440 kg/m³; areia e brita ficam em metros cúbicos.
 4. A água é uma referência para fator água/cimento de 0,5. Coloque aos poucos até chegar à consistência desejada.
+5. Para 1 m³ de concreto são necessárias cerca de 2,1 t de concreto seco ensacado: um saco de 40 kg rende uns 0,019 m³ (19 litros). O rendimento exato vem na embalagem.
 
 Para 1 m³ de concreto no traço 1 : 2 : 4 são cerca de **317 kg de cimento, 0,44 m³ de areia e 0,88 m³ de brita**.
 
@@ -23,7 +29,7 @@ São valores de referência, não uma resistência garantida: ela depende do tip
 
 ## Exemplos
 
-- Laje de 6 × 4 m com 15 cm de espessura, margem de 5 %, traço 1 : 2 : 4: **3,78 m³** de concreto, cerca de **1198 kg de cimento: 24 sacos de 50 kg**, 1,66 m³ de areia, 3,33 m³ de brita e uns 600 l de água.
+- Laje de 6 × 4 m com 15 cm de espessura, margem de 5 %: **3,78 m³** de concreto. Em concreto pronto ensacado seriam **202 sacos de 40 kg**; nesse volume compensa o concreto usinado. Preparando no traço 1 : 2 : 4: cerca de **1198 kg de cimento: 24 sacos de 50 kg**, 1,66 m³ de areia, 3,33 m³ de brita e uns 600 l de água.
 - Sapata corrida de 40 m de comprimento, 0,4 m de largura e 0,8 m de profundidade, margem de 5 %, traço 1 : 2 : 3: 13,44 m³ e cerca de 4967 kg de cimento — 100 sacos de 50 kg.
 
 ## Perguntas frequentes

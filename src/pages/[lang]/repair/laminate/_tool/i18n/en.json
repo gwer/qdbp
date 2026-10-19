@@ -1,0 +1,32 @@
+{
+  "title": "Flooring calculator: how many boxes of laminate you need",
+  "description": "How many boxes of laminate or vinyl plank flooring you need for a room, with extra for cuts and waste.",
+  "inputs": {
+    "length": {
+      "label": "Room length"
+    },
+    "width": {
+      "label": "Room width"
+    },
+    "reserve": {
+      "label": "Waste"
+    },
+    "pack": {
+      "label": "Coverage per box"
+    }
+  },
+  "outputs": {
+    "packs": {
+      "label": "Boxes"
+    },
+    "area": {
+      "label": "Floor area"
+    },
+    "needed": {
+      "label": "With waste"
+    },
+    "bought": {
+      "label": "You'll buy"
+    }
+  }
+}

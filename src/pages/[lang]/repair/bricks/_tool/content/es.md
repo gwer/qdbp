@@ -1,6 +1,6 @@
 ## Cómo usar la calculadora de ladrillos
 
-Introduce el largo y el alto de la pared y la superficie de ventanas y puertas. Elige el formato del ladrillo, el espesor del muro y el ancho de la junta, y fija un margen para roturas y cortes. La calculadora muestra cuántos ladrillos necesitas y cuántos entran en 1 m².
+Introduce el largo y el alto de la pared y la superficie de ventanas y puertas. Elige el formato del ladrillo, el espesor del muro y el ancho de la junta, y fija un margen para roturas y cortes. La calculadora muestra cuántos ladrillos necesitas y la superficie del muro. Por defecto se usa el ladrillo perforado de 24 × 11,5 × 7 cm en muro de medio pie.
 
 ## Cómo se calcula
 

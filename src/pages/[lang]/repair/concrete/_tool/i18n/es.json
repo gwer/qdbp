@@ -1,18 +1,21 @@
 {
   "title": "Calculadora de hormigón: volumen, cemento, arena y grava",
-  "description": "Volumen de hormigón para una losa, zapata o solera y cuánto cemento, arena y grava hacen falta según la dosificación.",
+  "description": "Volumen de hormigón para una losa, zapata o solera, sacos de hormigón preparado o cemento, arena y grava para hacer la mezcla.",
   "inputs": {
     "length": {
-      "label": "Largo, m"
+      "label": "Largo"
     },
     "width": {
-      "label": "Ancho, m"
+      "label": "Ancho"
     },
     "thickness": {
-      "label": "Espesor, m"
+      "label": "Espesor"
     },
     "reserve": {
-      "label": "Margen, %"
+      "label": "Margen"
+    },
+    "premixBag": {
+      "label": "Saco de hormigón preparado"
     },
     "mix": {
       "label": "Dosificación cemento : arena : grava",
@@ -24,27 +27,30 @@
       }
     },
     "bag": {
-      "label": "Saco de cemento, kg"
+      "label": "Saco de cemento"
     }
   },
   "outputs": {
     "volume": {
-      "label": "Volumen de hormigón, m³"
+      "label": "Volumen de hormigón"
+    },
+    "premixBags": {
+      "label": "Sacos de hormigón preparado"
     },
     "bags": {
       "label": "Sacos de cemento"
     },
     "cement": {
-      "label": "Cemento, kg"
+      "label": "Cemento"
     },
     "sand": {
-      "label": "Arena, m³"
+      "label": "Arena"
     },
     "gravel": {
-      "label": "Grava, m³"
+      "label": "Grava"
     },
     "water": {
-      "label": "Agua, l (orientativo)"
+      "label": "Agua (orientativo)"
     }
   }
 }

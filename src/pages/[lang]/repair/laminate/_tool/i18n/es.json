@@ -3,16 +3,16 @@
   "description": "Cuántos paquetes de suelo laminado o tarima necesitas para una habitación, con margen para cortes.",
   "inputs": {
     "length": {
-      "label": "Largo de la habitación, m"
+      "label": "Largo de la habitación"
     },
     "width": {
-      "label": "Ancho de la habitación, m"
+      "label": "Ancho de la habitación"
     },
     "reserve": {
-      "label": "Margen para cortes, %"
+      "label": "Margen para cortes"
     },
     "pack": {
-      "label": "Superficie por paquete, m²"
+      "label": "Superficie por paquete"
     }
   },
   "outputs": {
@@ -20,13 +20,13 @@
       "label": "Paquetes"
     },
     "area": {
-      "label": "Superficie del suelo, m²"
+      "label": "Superficie del suelo"
     },
     "needed": {
-      "label": "Con margen, m²"
+      "label": "Con margen"
     },
     "bought": {
-      "label": "Superficie comprada, m²"
+      "label": "Superficie comprada"
     }
   }
 }

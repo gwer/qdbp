@@ -3,16 +3,16 @@
   "description": "Cuánta pintura necesitas para paredes y techo: superficie sin ventanas ni puertas, litros según el número de manos y botes.",
   "inputs": {
     "length": {
-      "label": "Largo de la habitación, m"
+      "label": "Largo de la habitación"
     },
     "width": {
-      "label": "Ancho de la habitación, m"
+      "label": "Ancho de la habitación"
     },
     "height": {
-      "label": "Altura del techo, m"
+      "label": "Altura del techo"
     },
     "openings": {
-      "label": "Ventanas y puertas, m²"
+      "label": "Ventanas y puertas"
     },
     "surface": {
       "label": "Qué se pinta",
@@ -25,22 +25,22 @@
     "coats": {
       "label": "Manos"
     },
-    "rate": {
-      "label": "Consumo, l/m² por mano"
+    "coverage": {
+      "label": "Rendimiento"
     },
     "can": {
-      "label": "Tamaño del bote, l"
+      "label": "Tamaño del bote"
     }
   },
   "outputs": {
     "liters": {
-      "label": "Pintura necesaria, l"
+      "label": "Pintura necesaria"
     },
     "cans": {
       "label": "Botes"
     },
     "area": {
-      "label": "Superficie a pintar, m²"
+      "label": "Superficie a pintar"
     }
   }
 }

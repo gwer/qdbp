@@ -3,28 +3,28 @@
   "description": "Wie viele Fliesen brauche ich? Anzahl mit Fuge und Verschnitt, Kartons sowie Richtwerte für Fugenmörtel und Fliesenkleber.",
   "inputs": {
     "area": {
-      "label": "Fläche, m²"
+      "label": "Fläche"
     },
     "length": {
-      "label": "Fliesenlänge, cm"
+      "label": "Fliesenlänge"
     },
     "width": {
-      "label": "Fliesenbreite, cm"
+      "label": "Fliesenbreite"
     },
     "thickness": {
-      "label": "Fliesenstärke, mm"
+      "label": "Fliesenstärke"
     },
     "joint": {
-      "label": "Fugenbreite, mm"
+      "label": "Fugenbreite"
     },
     "reserve": {
-      "label": "Verschnitt, %"
+      "label": "Verschnitt"
     },
     "perBox": {
       "label": "Fliesen pro Karton"
     },
     "adhesive": {
-      "label": "Kleberverbrauch, kg/m²"
+      "label": "Kleberverbrauch"
     }
   },
   "outputs": {
@@ -35,10 +35,10 @@
       "label": "Kartons"
     },
     "grout": {
-      "label": "Fugenmörtel, kg"
+      "label": "Fugenmörtel"
     },
     "glue": {
-      "label": "Fliesenkleber, kg"
+      "label": "Fliesenkleber"
     }
   }
 }

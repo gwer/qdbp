@@ -1,0 +1,44 @@
+{
+  "title": "Tile calculator: tiles, grout and thinset",
+  "description": "How many tiles you need for a floor or wall with grout joints and waste, how many boxes, and estimates for grout and thinset.",
+  "inputs": {
+    "area": {
+      "label": "Area"
+    },
+    "length": {
+      "label": "Tile length"
+    },
+    "width": {
+      "label": "Tile width"
+    },
+    "thickness": {
+      "label": "Tile thickness"
+    },
+    "joint": {
+      "label": "Grout joint"
+    },
+    "reserve": {
+      "label": "Waste"
+    },
+    "perBox": {
+      "label": "Tiles per box"
+    },
+    "adhesive": {
+      "label": "Thinset usage"
+    }
+  },
+  "outputs": {
+    "pieces": {
+      "label": "Tiles"
+    },
+    "boxes": {
+      "label": "Boxes"
+    },
+    "grout": {
+      "label": "Grout"
+    },
+    "glue": {
+      "label": "Thinset"
+    }
+  }
+}

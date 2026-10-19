@@ -1,6 +1,11 @@
 ## So funktioniert der Betonrechner
 
-Geben Sie Länge, Breite und Dicke in Metern ein – für Bodenplatte, Estrich, Gehweg oder Streifenfundament. Ergänzen Sie eine Reserve für Verluste und unebenen Untergrund, wählen Sie das Mischverhältnis und das Gewicht des Zementsacks. Der Rechner zeigt die Betonmenge sowie Zement, Sand, Kies und Wasser.
+Geben Sie Länge, Breite und Dicke ein – für Bodenplatte, Estrich, Gehweg oder Streifenfundament – und ergänzen Sie eine Reserve für Verluste und unebenen Untergrund. Danach gibt es zwei Wege:
+
+- **Fertigbeton aus dem Sack** (Trockenbeton): Sackgewicht eintragen, der Rechner zeigt die Anzahl der Säcke;
+- **selbst mischen**: Mischverhältnis und Zementsack wählen, der Rechner zeigt Zement, Sand, Kies und Wasser.
+
+Über den Einheiten-Umschalter lassen sich die Maße auch in Fuß und Zoll eingeben.
 
 ## So wird gerechnet
 
@@ -8,6 +13,7 @@ Geben Sie Länge, Breite und Dicke in Metern ein – für Bodenplatte, Estrich, 
 2. Man braucht etwa das 1,54-Fache an trockenen Ausgangsstoffen: Wasser und Feinanteile füllen die Hohlräume, die Mischung verdichtet sich. Dieser Faktor ist bei Berechnungen nach Raumteilen üblich.
 3. Das Trockenvolumen wird nach dem Mischverhältnis aufgeteilt. Zement wird mit einer Schüttdichte von 1440 kg/m³ in Kilogramm umgerechnet, Sand und Kies bleiben in Kubikmetern.
 4. Wasser ist ein Richtwert für einen Wasserzementwert von 0,5. Geben Sie es nach und nach zu, bis die gewünschte Konsistenz erreicht ist.
+5. Für 1 m³ Beton braucht man rund 2,1 t Trockenbeton: Ein 25-kg-Sack ergibt etwa 0,012 m³ (12 Liter). Die genaue Ausbeute steht auf dem Sack.
 
 Für 1 m³ Beton im Verhältnis 1 : 2 : 4 sind das rund **317 kg Zement, 0,44 m³ Sand und 0,88 m³ Kies**.
 
@@ -23,7 +29,7 @@ Das sind Richtwerte, keine Festigkeitsklassen: Die Festigkeit hängt von der Zem
 
 ## Beispiele
 
-- Bodenplatte 6 × 4 m, 15 cm dick, Reserve 5 %, 1 : 2 : 4: **3,78 m³** Beton, rund **1198 kg Zement – 48 Säcke à 25 kg** (oder 24 à 50 kg), 1,66 m³ Sand, 3,33 m³ Kies, etwa 600 l Wasser.
+- Bodenplatte 6 × 4 m, 15 cm dick, Reserve 5 %: **3,78 m³** Beton. Als Fertigbeton sind das **323 Säcke à 25 kg** – bei dieser Menge lohnt sich Transportbeton. Selbst gemischt 1 : 2 : 4: rund **1198 kg Zement – 48 Säcke à 25 kg** (oder 24 à 50 kg), 1,66 m³ Sand, 3,33 m³ Kies, etwa 600 l Wasser.
 - Streifenfundament 40 m lang, 0,4 m breit und 0,8 m tief, Reserve 5 %, 1 : 2 : 3: 13,44 m³, rund 4967 kg Zement.
 
 ## Häufige Fragen

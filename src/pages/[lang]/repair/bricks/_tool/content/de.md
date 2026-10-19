@@ -1,6 +1,6 @@
 ## So funktioniert der Ziegelrechner
 
-Geben Sie Länge und Höhe der Wand sowie die Fläche von Fenstern und Türen ein. Wählen Sie Ziegelformat, Wandstärke und Fugenbreite und legen Sie eine Reserve für Bruch und Zuschnitt fest. Der Rechner zeigt, wie viele Ziegel Sie brauchen und wie viele auf 1 m² kommen.
+Geben Sie Länge und Höhe der Wand sowie die Fläche von Fenstern und Türen ein. Wählen Sie Ziegelformat, Wandstärke und Fugenbreite und legen Sie eine Reserve für Bruch und Zuschnitt fest. Der Rechner zeigt, wie viele Ziegel Sie brauchen, und die Wandfläche. Voreingestellt ist das Normalformat (NF) in ½-Stein-Wandstärke.
 
 ## So wird gerechnet
 

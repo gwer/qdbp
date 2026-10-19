@@ -3,25 +3,25 @@
   "description": "Wie viele Porenbetonsteine brauche ich für eine Wand und wie viele Kubikmeter sind das? Mit Steinmaß, Öffnungen und Reserve.",
   "inputs": {
     "length": {
-      "label": "Wandlänge, m"
+      "label": "Wandlänge"
     },
     "height": {
-      "label": "Wandhöhe, m"
+      "label": "Wandhöhe"
     },
     "openings": {
-      "label": "Fenster und Türen, m²"
+      "label": "Fenster und Türen"
     },
     "blockLength": {
-      "label": "Steinlänge, mm"
+      "label": "Steinlänge"
     },
     "blockHeight": {
-      "label": "Steinhöhe, mm"
+      "label": "Steinhöhe"
     },
     "blockThickness": {
-      "label": "Wanddicke, mm"
+      "label": "Wanddicke"
     },
     "reserve": {
-      "label": "Reserve, %"
+      "label": "Reserve"
     }
   },
   "outputs": {
@@ -29,10 +29,10 @@
       "label": "Steine"
     },
     "volume": {
-      "label": "Volumen, m³"
+      "label": "Volumen"
     },
     "area": {
-      "label": "Wandfläche, m²"
+      "label": "Wandfläche"
     }
   }
 }

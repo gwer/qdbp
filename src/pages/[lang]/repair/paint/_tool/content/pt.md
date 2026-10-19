@@ -1,21 +1,26 @@
 ## Como usar a calculadora de tinta
 
-Informe as medidas do cômodo e a área total de janelas e portas, que não são pintadas. Escolha se vai pintar as paredes, o teto ou os dois e informe o número de demãos, o consumo e o tamanho da lata. A calculadora mostra quantos litros você precisa e quantas latas comprar.
+Informe as medidas do cômodo e a área total de janelas e portas, que não são pintadas. Escolha se vai pintar as paredes, o teto ou os dois e informe o número de demãos, o rendimento (quantos metros quadrados um litro cobre por demão) e o tamanho da lata. A calculadora mostra quantos litros você precisa e quantas latas comprar. Pelo seletor de unidades também dá para usar pés.
 
 ## Como é calculado
 
 - Área das paredes = perímetro × pé-direito − vãos: 2 × (comprimento + largura) × altura − janelas e portas.
 - Área do teto = comprimento × largura.
-- Tinta = área × número de demãos × consumo por demão.
+- Tinta = área × número de demãos ÷ rendimento por litro.
 - As latas são arredondadas para cima: não dá para comprar meia lata.
 
-## Onde ver o consumo
+## Onde ver o rendimento
 
-Na lata, geralmente como rendimento em m² por demão para a embalagem inteira. Para converter em litros por metro quadrado, divida o volume da embalagem pelo rendimento: se uma lata de 18 l rende 300 m² por demão, são 18 ÷ 300 = 0,06 l/m². O rendimento da embalagem costuma valer para a tinta diluída sobre superfície lisa e já selada; na prática, conte com mais. Por padrão a calculadora usa 0,12 l/m², um valor típico de tinta látex/acrílica com uma margem de segurança. Superfícies ásperas ou muito absorventes (reboco novo, drywall sem selador) consomem mais.
+Na lata, mas de dois jeitos:
+
+- **rendimento da embalagem** — por exemplo, "a lata de 18 l rende até 300 m² por demão": divida a área pelo volume, 300 ÷ 18 ≈ 16,7 m²/l. Esse valor máximo costuma valer para tinta diluída sobre superfície lisa e selada; na prática, use um número menor;
+- **consumo em l/m²** — por exemplo, 0,12 l/m²: divida 1 pelo consumo, 1 ÷ 0,12 ≈ 8,3 m²/l.
+
+Por padrão a calculadora usa 8,3 m²/l, um valor típico de tinta látex/acrílica com margem de segurança. Superfícies ásperas ou muito absorventes (reboco novo, drywall sem selador) gastam mais tinta: diminua o rendimento.
 
 ## Exemplos
 
-- Cômodo de 5 × 4 m com pé-direito de 2,7 m, uma janela de 1,5 × 1,4 m e uma porta de 0,8 × 2 m (3,7 m² no total), duas demãos: paredes **44,9 m²**, tinta **10,8 l**, ou seja, **3 galões de 3,6 l** ou 1 lata de 18 l.
+- Cômodo de 5 × 4 m com pé-direito de 2,7 m, uma janela de 1,5 × 1,4 m e uma porta de 0,8 × 2 m (3,7 m² no total), duas demãos: paredes **44,9 m²**, tinta **10,8 l**, ou seja, **4 galões de 3,6 l** (3 galões somam 10,8 l, um pouco menos do que o necessário) ou 1 lata de 18 l.
 - O mesmo cômodo com o teto: 64,9 m², 15,6 l.
 - Só o teto de 5 × 4 m com duas demãos: 4,8 l.
 

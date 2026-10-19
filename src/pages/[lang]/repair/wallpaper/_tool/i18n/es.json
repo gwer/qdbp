@@ -3,25 +3,25 @@
   "description": "Cuántos rollos de papel pintado necesitas según la altura de las paredes, las ventanas y puertas, la medida del rollo y la repetición del dibujo.",
   "inputs": {
     "length": {
-      "label": "Largo de la habitación, m"
+      "label": "Largo de la habitación"
     },
     "width": {
-      "label": "Ancho de la habitación, m"
+      "label": "Ancho de la habitación"
     },
     "height": {
-      "label": "Altura de las paredes, m"
+      "label": "Altura de las paredes"
     },
     "openings": {
-      "label": "Ancho de ventanas y puertas, m"
+      "label": "Ancho de ventanas y puertas"
     },
     "rollWidth": {
-      "label": "Ancho del rollo, m"
+      "label": "Ancho del rollo"
     },
     "rollLength": {
-      "label": "Largo del rollo, m"
+      "label": "Largo del rollo"
     },
     "repeat": {
-      "label": "Repetición del dibujo, cm"
+      "label": "Repetición del dibujo"
     }
   },
   "outputs": {
@@ -35,7 +35,7 @@
       "label": "Tiras por rollo"
     },
     "strip": {
-      "label": "Largo de la tira, m"
+      "label": "Largo de la tira"
     }
   }
 }

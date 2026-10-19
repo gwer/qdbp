@@ -1,18 +1,21 @@
 {
   "title": "Calculadora de concreto: volume, cimento, areia e brita",
-  "description": "Volume de concreto para laje, sapata ou contrapiso e quanto cimento, areia e brita são necessários conforme o traço.",
+  "description": "Volume de concreto para laje, sapata ou contrapiso, sacos de concreto pronto ou cimento, areia e brita para preparar a mistura.",
   "inputs": {
     "length": {
-      "label": "Comprimento, m"
+      "label": "Comprimento"
     },
     "width": {
-      "label": "Largura, m"
+      "label": "Largura"
     },
     "thickness": {
-      "label": "Espessura, m"
+      "label": "Espessura"
     },
     "reserve": {
-      "label": "Margem, %"
+      "label": "Margem"
+    },
+    "premixBag": {
+      "label": "Saco de concreto pronto"
     },
     "mix": {
       "label": "Traço cimento : areia : brita",
@@ -24,27 +27,30 @@
       }
     },
     "bag": {
-      "label": "Saco de cimento, kg"
+      "label": "Saco de cimento"
     }
   },
   "outputs": {
     "volume": {
-      "label": "Volume de concreto, m³"
+      "label": "Volume de concreto"
+    },
+    "premixBags": {
+      "label": "Sacos de concreto pronto"
     },
     "bags": {
       "label": "Sacos de cimento"
     },
     "cement": {
-      "label": "Cimento, kg"
+      "label": "Cimento"
     },
     "sand": {
-      "label": "Areia, m³"
+      "label": "Areia"
     },
     "gravel": {
-      "label": "Brita, m³"
+      "label": "Brita"
     },
     "water": {
-      "label": "Água, l (referência)"
+      "label": "Água (referência)"
     }
   }
 }

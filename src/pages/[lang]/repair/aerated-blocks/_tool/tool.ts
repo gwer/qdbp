@@ -24,19 +24,19 @@ export const def = defineCalculator({
   order: 70,
   related: ['bricks', 'concrete'],
   inputs: {
-    length: { type: 'number', default: 6, min: 0 },
-    height: { type: 'number', default: 2.7, min: 0 },
-    openings: { type: 'number', default: 2, min: 0 },
-    blockLength: { type: 'number', default: 600, min: 1 },
-    blockHeight: { type: 'number', default: 250, min: 1 },
-    blockThickness: { type: 'number', default: 300, min: 1 },
-    reserve: { type: 'number', default: 5, min: 0, max: 50 },
+    length: { type: 'quantity', unit: 'm', imperial: 'ft', default: 6, defaultImperial: 20, min: 0 },
+    height: { type: 'quantity', unit: 'm', imperial: 'ft', default: 2.7, defaultImperial: 8, min: 0 },
+    openings: { type: 'quantity', unit: 'm2', imperial: 'ft2', default: 2, defaultImperial: 21, min: 0 },
+    blockLength: { type: 'quantity', unit: 'mm', imperial: 'in', default: 600, defaultImperial: 24, min: 1 },
+    blockHeight: { type: 'quantity', unit: 'mm', imperial: 'in', default: 250, defaultImperial: 8, min: 1 },
+    blockThickness: { type: 'quantity', unit: 'mm', imperial: 'in', default: 300, defaultImperial: 8, min: 1 },
+    reserve: { type: 'percent', default: 5, min: 0, max: 50 },
   },
   compute: (v) => blocks(v),
   outputs: {
     blocks: { type: 'integer' },
-    volume: { digits: 2 },
-    area: { digits: 2 },
+    volume: { type: 'quantity', unit: 'm3', imperial: 'ft3', digits: 2 },
+    area: { type: 'quantity', unit: 'm2', imperial: 'ft2', digits: 2 },
   },
 });
 

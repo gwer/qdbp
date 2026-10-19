@@ -3,16 +3,16 @@
   "description": "Quanta tinta comprar para paredes e teto: área sem janelas e portas, litros conforme o número de demãos e quantidade de latas.",
   "inputs": {
     "length": {
-      "label": "Comprimento do cômodo, m"
+      "label": "Comprimento do cômodo"
     },
     "width": {
-      "label": "Largura do cômodo, m"
+      "label": "Largura do cômodo"
     },
     "height": {
-      "label": "Pé-direito, m"
+      "label": "Pé-direito"
     },
     "openings": {
-      "label": "Janelas e portas, m²"
+      "label": "Janelas e portas"
     },
     "surface": {
       "label": "O que vai pintar",
@@ -25,22 +25,22 @@
     "coats": {
       "label": "Demãos"
     },
-    "rate": {
-      "label": "Consumo, l/m² por demão"
+    "coverage": {
+      "label": "Rendimento"
     },
     "can": {
-      "label": "Tamanho da lata, l"
+      "label": "Tamanho da lata"
     }
   },
   "outputs": {
     "liters": {
-      "label": "Tinta necessária, l"
+      "label": "Tinta necessária"
     },
     "cans": {
       "label": "Latas"
     },
     "area": {
-      "label": "Área a pintar, m²"
+      "label": "Área a pintar"
     }
   }
 }

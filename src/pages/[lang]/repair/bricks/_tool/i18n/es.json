@@ -3,13 +3,13 @@
   "description": "Cuántos ladrillos necesitas para una pared según el formato, el espesor del muro, las juntas, los huecos y el margen.",
   "inputs": {
     "length": {
-      "label": "Largo de la pared, m"
+      "label": "Largo de la pared"
     },
     "height": {
-      "label": "Alto de la pared, m"
+      "label": "Alto de la pared"
     },
     "openings": {
-      "label": "Ventanas y puertas, m²"
+      "label": "Ventanas y puertas"
     },
     "format": {
       "label": "Formato del ladrillo",
@@ -20,7 +20,8 @@
         "240x115x52": "DF 240 × 115 × 52 mm (Alemania)",
         "240x115x50": "Macizo 24 × 11,5 × 5 cm",
         "240x115x70": "Perforado 24 × 11,5 × 7 cm",
-        "190x90x57": "190 × 90 × 57 mm (Brasil)"
+        "190x90x57": "190 × 90 × 57 mm (Brasil)",
+        "us-modular": "Modular 194 × 92 × 57 mm (EE. UU.)"
       }
     },
     "thickness": {
@@ -33,21 +34,18 @@
       }
     },
     "joint": {
-      "label": "Junta, mm"
+      "label": "Junta"
     },
     "reserve": {
-      "label": "Margen, %"
+      "label": "Margen"
     }
   },
   "outputs": {
     "bricks": {
       "label": "Ladrillos"
     },
-    "perM2": {
-      "label": "Ladrillos por m²"
-    },
     "area": {
-      "label": "Superficie del muro, m²"
+      "label": "Superficie del muro"
     }
   }
 }

@@ -1,21 +1,26 @@
 ## So funktioniert der Farbrechner
 
-Geben Sie die Raummaße und die Gesamtfläche von Fenstern und Türen ein – diese Flächen werden nicht gestrichen. Wählen Sie, ob Wände, Decke oder beides gestrichen werden, und tragen Sie Anzahl der Anstriche, Verbrauch und Eimergröße ein. Der Rechner zeigt die benötigten Liter und die Anzahl der Eimer.
+Geben Sie die Raummaße und die Gesamtfläche von Fenstern und Türen ein – diese Flächen werden nicht gestrichen. Wählen Sie, ob Wände, Decke oder beides gestrichen werden, und tragen Sie Anzahl der Anstriche, Ergiebigkeit (wie viele Quadratmeter ein Liter bei einem Anstrich deckt) und Eimergröße ein. Der Rechner zeigt die benötigten Liter und die Anzahl der Eimer. Maße lassen sich über den Einheiten-Umschalter auch in Fuß eingeben.
 
 ## So wird gerechnet
 
 - Wandfläche = Raumumfang × Raumhöhe − Öffnungen: 2 × (Länge + Breite) × Höhe − Fenster und Türen.
 - Deckenfläche = Länge × Breite.
-- Farbmenge = Fläche × Anstriche × Verbrauch pro Anstrich.
+- Farbmenge = Fläche × Anstriche ÷ Ergiebigkeit pro Liter.
 - Eimer werden aufgerundet – halbe Eimer gibt es nicht zu kaufen.
 
-## Wo steht der Verbrauch?
+## Wo steht die Ergiebigkeit?
 
-Auf dem Eimer, meist als „ca. 100–150 ml/m²“ oder „ausreichend für 60–80 m² bei einem Anstrich“. Steht dort die Fläche pro Liter, teilen Sie 1 durch diesen Wert: 8 m²/l entsprechen 0,125 l/m². Voreingestellt sind 0,12 l/m² – ein typischer Wert für Dispersionsfarbe mit etwas Reserve. Raue und saugende Untergründe wie frischer Putz oder unbehandelte Gipskartonplatten brauchen mehr.
+Auf dem Eimer, allerdings in zwei Schreibweisen:
+
+- **„Ergiebigkeit ca. 7–8 m²/l“** oder „10 l reichen für 70–80 m²“ (dann 75 ÷ 10 = 7,5 m²/l) – diesen Wert tragen Sie direkt ein;
+- **„Verbrauch ca. 120–150 ml/m²“** – teilen Sie 1 durch den Verbrauch in Litern: 0,12 l/m² ergibt 1 ÷ 0,12 ≈ 8,3 m²/l.
+
+Voreingestellt sind 8,3 m²/l – ein typischer Wert für Dispersionsfarbe mit etwas Reserve. Raue und saugende Untergründe wie frischer Putz oder unbehandelte Gipskartonplatten brauchen mehr Farbe – setzen Sie die Ergiebigkeit dann niedriger an.
 
 ## Beispiele
 
-- Raum 5 × 4 m, Höhe 2,7 m, ein Fenster 1,5 × 1,4 m und eine Tür 0,8 × 2 m (zusammen 3,7 m²), zwei Anstriche: Wandfläche **44,9 m²**, Farbe **10,8 l** – das sind **5 Eimer à 2,5 l** oder 2 Eimer à 10 l.
+- Raum 5 × 4 m, Höhe 2,7 m, ein Fenster 1,5 × 1,4 m und eine Tür 0,8 × 2 m (zusammen 3,7 m²), zwei Anstriche: Wandfläche **44,9 m²**, Farbe **10,8 l** – das sind **2 Eimer à 10 l** oder 5 Eimer à 2,5 l.
 - Derselbe Raum mit Decke: 64,9 m², 15,6 l, also 2 Eimer à 10 l.
 - Nur die Decke 5 × 4 m mit zwei Anstrichen: 4,8 l.
 

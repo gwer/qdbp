@@ -1,6 +1,6 @@
 ## Como usar a calculadora de tijolos
 
-Informe o comprimento e a altura da parede e a área de janelas e portas. Escolha o formato do tijolo, a espessura da parede e a largura da junta e defina uma margem para quebras e cortes. A calculadora mostra quantos tijolos você precisa e quantos vão em 1 m².
+Informe o comprimento e a altura da parede e a área de janelas e portas. Escolha o formato do tijolo, a espessura da parede e a largura da junta e defina uma margem para quebras e cortes. A calculadora mostra quantos tijolos você precisa e a área da parede. O padrão é o tijolo maciço de 19 × 9 × 5,7 cm em parede de meia vez.
 
 ## Como é calculado
 
