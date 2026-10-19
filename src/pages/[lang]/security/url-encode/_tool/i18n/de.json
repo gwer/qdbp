@@ -1,0 +1,14 @@
+{
+  "title": "URL-Kodierung: kodieren und dekodieren",
+  "description": "Text für URLs prozentkodieren (%20 für ein Leerzeichen) oder eine URL mit %XX-Folgen wieder lesbar machen.",
+  "ui": {
+    "mode": "Aktion",
+    "input": "Text oder URL",
+    "output": "Ergebnis",
+    "error": "Ungültige %XX-Folge",
+    "modes": {
+      "encode": "Kodieren",
+      "decode": "Dekodieren"
+    }
+  }
+}

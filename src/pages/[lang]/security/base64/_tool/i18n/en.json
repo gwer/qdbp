@@ -1,0 +1,14 @@
+{
+  "title": "Base64 encoder and decoder",
+  "description": "Encode text to Base64 or decode Base64 back to text. Works with any UTF-8 text, emoji and the URL-safe variant.",
+  "ui": {
+    "mode": "Mode",
+    "input": "Input",
+    "output": "Output",
+    "error": "This isn't valid Base64, or it doesn't contain UTF-8 text",
+    "modes": {
+      "encode": "Encode",
+      "decode": "Decode"
+    }
+  }
+}

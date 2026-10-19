@@ -1,0 +1,15 @@
+{
+  "title": "Generador de UUID: v4 y v7",
+  "description": "Genera uno o varios UUID (GUID) de la versión 4 (aleatorios) o 7 (ordenados por tiempo). Todo se genera en tu navegador.",
+  "ui": {
+    "version": "Versión",
+    "versions": {
+      "v4": "v4 (aleatorio)",
+      "v7": "v7 (por tiempo)"
+    },
+    "count": "Cantidad",
+    "upper": "En mayúsculas",
+    "noHyphens": "Sin guiones",
+    "result": "UUID"
+  }
+}

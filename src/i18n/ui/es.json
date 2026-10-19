@@ -46,5 +46,11 @@
   },
   "footer": {
     "privacy": "Todos los cálculos se hacen en tu navegador. Los datos que introduces no se envían a ninguna parte."
+  },
+  "common": {
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "regenerate": "Generar de nuevo",
+    "clear": "Borrar"
   }
 }

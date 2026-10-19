@@ -1,0 +1,22 @@
+{
+  "title": "Passwort-Generator: sichere Zufallspasswörter",
+  "description": "Erstellen Sie ein sicheres Zufallspasswort in beliebiger Länge aus Buchstaben, Zahlen und Sonderzeichen. Es wird im Browser erzeugt und nirgendwohin gesendet.",
+  "ui": {
+    "length": "Länge",
+    "sets": {
+      "lower": "Kleinbuchstaben a–z",
+      "upper": "Großbuchstaben A–Z",
+      "digits": "Ziffern 0–9",
+      "symbols": "Sonderzeichen !@#…"
+    },
+    "noSimilar": "Ohne ähnliche Zeichen (l, 1, O, 0)",
+    "strength": "Sicherheit: {level} (≈ {bits} Bit)",
+    "levels": {
+      "weak": "schwach",
+      "fair": "mittel",
+      "strong": "stark",
+      "veryStrong": "sehr stark"
+    },
+    "pickSet": "Mindestens eine Zeichenart auswählen"
+  }
+}

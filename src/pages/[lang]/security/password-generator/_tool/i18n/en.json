@@ -1,0 +1,22 @@
+{
+  "title": "Password generator: strong random passwords",
+  "description": "Create a strong random password of any length from letters, numbers and symbols. It's generated in your browser and never sent anywhere.",
+  "ui": {
+    "length": "Length",
+    "sets": {
+      "lower": "Lowercase a–z",
+      "upper": "Uppercase A–Z",
+      "digits": "Numbers 0–9",
+      "symbols": "Symbols !@#…"
+    },
+    "noSimilar": "Avoid look-alikes (l, 1, O, 0)",
+    "strength": "Strength: {level} (≈ {bits} bits)",
+    "levels": {
+      "weak": "weak",
+      "fair": "fair",
+      "strong": "strong",
+      "veryStrong": "very strong"
+    },
+    "pickSet": "Pick at least one character set"
+  }
+}

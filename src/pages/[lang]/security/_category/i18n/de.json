@@ -1,0 +1,4 @@
+{
+  "name": "Passwörter & Kodierung",
+  "description": "Passwort-Generator, Base64, URL-Kodierung, UUIDs und Hashes – alles läuft im Browser, nichts wird gesendet."
+}

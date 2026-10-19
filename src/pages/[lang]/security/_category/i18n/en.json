@@ -1,0 +1,4 @@
+{
+  "name": "Passwords & encoding",
+  "description": "Password generator, Base64, URL encoding, UUIDs and hashes — everything runs in your browser and nothing is sent anywhere."
+}

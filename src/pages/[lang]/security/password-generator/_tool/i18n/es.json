@@ -1,0 +1,22 @@
+{
+  "title": "Generador de contraseñas: contraseñas seguras y aleatorias",
+  "description": "Crea una contraseña segura y aleatoria de la longitud que quieras con letras, números y símbolos. Se genera en tu navegador y no se envía a ninguna parte.",
+  "ui": {
+    "length": "Longitud",
+    "sets": {
+      "lower": "Minúsculas a–z",
+      "upper": "Mayúsculas A–Z",
+      "digits": "Números 0–9",
+      "symbols": "Símbolos !@#…"
+    },
+    "noSimilar": "Sin caracteres parecidos (l, 1, O, 0)",
+    "strength": "Seguridad: {level} (≈ {bits} bits)",
+    "levels": {
+      "weak": "baja",
+      "fair": "media",
+      "strong": "alta",
+      "veryStrong": "muy alta"
+    },
+    "pickSet": "Elige al menos un tipo de caracteres"
+  }
+}

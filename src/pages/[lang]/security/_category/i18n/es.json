@@ -1,0 +1,4 @@
+{
+  "name": "Contraseñas y codificación",
+  "description": "Generador de contraseñas, Base64, codificación URL, UUID y hashes: todo se calcula en tu navegador y no se envía nada."
+}

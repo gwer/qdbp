@@ -1,0 +1,4 @@
+{
+  "name": "Senhas e codificação",
+  "description": "Gerador de senhas, Base64, codificação de URL, UUID e hashes — tudo roda no navegador e nada é enviado."
+}

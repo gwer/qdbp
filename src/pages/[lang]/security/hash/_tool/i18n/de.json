@@ -1,0 +1,8 @@
+{
+  "title": "Hash-Generator: MD5, SHA-1, SHA-256, SHA-512",
+  "description": "Hashwerte eines Textes mit MD5, SHA-1, SHA-256, SHA-384 und SHA-512 auf einmal berechnen. Der Text verlässt Ihren Browser nicht.",
+  "ui": {
+    "input": "Text",
+    "upper": "Großbuchstaben"
+  }
+}

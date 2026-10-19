@@ -403,3 +403,88 @@ details.extra summary {
 .time-12 select {
   width: auto;
 }
+
+/* Кнопки */
+.btn {
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent-text);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.btn-secondary {
+  color: var(--text);
+  background: var(--bg);
+  border-color: var(--border);
+}
+
+.btn-small {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Моноширинный вывод: пароли, хеши, коды */
+.mono-out {
+  font-family: var(--mono);
+  font-size: 1rem;
+  word-break: break-all;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin: 0;
+}
+
+.mono-out + .mono-out {
+  margin-top: 6px;
+}
+
+.checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 12px 0;
+}
+
+.checks label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+textarea.mono {
+  font-family: var(--mono);
+  font-size: 0.92rem;
+}
+
+input[type='range'] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.hash-row {
+  margin-top: 12px;
+}
+
+.hash-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}

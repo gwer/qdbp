@@ -45,5 +45,11 @@
   },
   "footer": {
     "privacy": "All calculations run in your browser. Nothing you enter is sent anywhere."
+  },
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied",
+    "regenerate": "Generate again",
+    "clear": "Clear"
   }
 }

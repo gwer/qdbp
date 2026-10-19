@@ -45,5 +45,11 @@
   },
   "footer": {
     "privacy": "Alle Berechnungen laufen in Ihrem Browser. Ihre Eingaben werden nirgendwohin gesendet."
+  },
+  "common": {
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "regenerate": "Neu erzeugen",
+    "clear": "Leeren"
   }
 }

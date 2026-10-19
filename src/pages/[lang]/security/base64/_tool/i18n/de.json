@@ -1,0 +1,14 @@
+{
+  "title": "Base64: kodieren und dekodieren",
+  "description": "Text in Base64 kodieren oder Base64 wieder in Text umwandeln – mit Umlauten, Emojis und der URL-sicheren Variante.",
+  "ui": {
+    "mode": "Aktion",
+    "input": "Eingabe",
+    "output": "Ergebnis",
+    "error": "Kein gültiges Base64 oder kein UTF-8-Text",
+    "modes": {
+      "encode": "Kodieren",
+      "decode": "Dekodieren"
+    }
+  }
+}

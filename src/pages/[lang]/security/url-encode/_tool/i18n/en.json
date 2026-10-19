@@ -1,0 +1,14 @@
+{
+  "title": "URL encoder and decoder",
+  "description": "Percent-encode text for use in a URL (%20 for a space) or decode a URL full of %XX sequences back into readable text.",
+  "ui": {
+    "mode": "Mode",
+    "input": "Text or URL",
+    "output": "Output",
+    "error": "Invalid %XX sequence",
+    "modes": {
+      "encode": "Encode",
+      "decode": "Decode"
+    }
+  }
+}

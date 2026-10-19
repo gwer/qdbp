@@ -1,0 +1,14 @@
+{
+  "title": "Codificar y decodificar URL online",
+  "description": "Codifica texto para usarlo en una URL (codificación por porcentaje, %20 para el espacio) o decodifica una URL con %XX a texto legible.",
+  "ui": {
+    "mode": "Acción",
+    "input": "Texto o URL",
+    "output": "Resultado",
+    "error": "Secuencia %XX no válida",
+    "modes": {
+      "encode": "Codificar",
+      "decode": "Decodificar"
+    }
+  }
+}

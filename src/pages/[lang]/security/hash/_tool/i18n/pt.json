@@ -1,0 +1,8 @@
+{
+  "title": "Gerador de hash: MD5, SHA-1, SHA-256, SHA-512",
+  "description": "Calcule o hash de um texto com MD5, SHA-1, SHA-256, SHA-384 e SHA-512 de uma vez. O texto não sai do seu navegador.",
+  "ui": {
+    "input": "Texto",
+    "upper": "Em maiúsculas"
+  }
+}

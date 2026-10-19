@@ -1,0 +1,14 @@
+{
+  "title": "Base64: codificar e decodificar online",
+  "description": "Codifique texto em Base64 ou decodifique Base64 de volta para texto. Funciona com acentos, emojis e a variante URL-safe.",
+  "ui": {
+    "mode": "Ação",
+    "input": "Texto de entrada",
+    "output": "Resultado",
+    "error": "Não é um Base64 válido ou não contém texto UTF-8",
+    "modes": {
+      "encode": "Codificar",
+      "decode": "Decodificar"
+    }
+  }
+}
