@@ -359,6 +359,12 @@ details.extra summary {
 }
 
 /* Переключатель формата времени и поле 12 ч с AM/PM */
+.calc-settings {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
 .calc-options {
   display: flex;
   flex-wrap: wrap;

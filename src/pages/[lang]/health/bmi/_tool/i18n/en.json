@@ -1,0 +1,36 @@
+{
+  "title": "BMI calculator: body mass index",
+  "description": "Calculate your body mass index from weight and height, see your WHO weight category and the healthy weight range for your height.",
+  "inputs": {
+    "weight": {
+      "label": "Weight"
+    },
+    "height": {
+      "label": "Height"
+    }
+  },
+  "outputs": {
+    "bmi": {
+      "label": "BMI"
+    },
+    "category": {
+      "label": "Category"
+    },
+    "healthyMin": {
+      "label": "Healthy weight from"
+    },
+    "healthyMax": {
+      "label": "Healthy weight to"
+    }
+  },
+  "ui": {
+    "categories": {
+      "under": "Underweight",
+      "normal": "Healthy weight",
+      "over": "Overweight",
+      "obese1": "Obesity class I",
+      "obese2": "Obesity class II",
+      "obese3": "Obesity class III"
+    }
+  }
+}

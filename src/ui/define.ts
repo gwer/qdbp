@@ -2,6 +2,7 @@ import type { ComponentType } from 'preact';
 import type { Lang } from '@/i18n/config';
 import type { T } from '@/i18n/t';
 import type { NumberKind } from '@/lib/format';
+import type { UnitId } from '@/lib/units';
 
 export type NumberInput = {
   type: 'number' | 'integer' | 'percent';
@@ -16,7 +17,21 @@ export type DateInput = { type: 'date'; default: string };
 export type DurationInput = { type: 'duration'; default: number };
 /** Время на часах; default: 'HH:MM' или 'now' (только в браузере); значение — минуты от полуночи. */
 export type TimeInput = { type: 'time'; default: string };
-export type InputSpec = NumberInput | SelectInput | DateInput | DurationInput | TimeInput;
+/**
+ * Величина с единицей измерения. Значение в compute — всегда в unit (метрическая единица инструмента).
+ * imperial — единица для американской системы (если не задана, поле не переключается).
+ * default — в unit; defaultImperial — «круглое» значение по умолчанию в imperial (иначе конвертируется).
+ */
+export type QuantityInput = {
+  type: 'quantity';
+  unit: UnitId;
+  imperial?: UnitId;
+  default: number;
+  defaultImperial?: number;
+  min?: number;
+  max?: number;
+};
+export type InputSpec = NumberInput | SelectInput | DateInput | DurationInput | TimeInput | QuantityInput;
 
 export type OutputSpec =
   | { type?: NumberKind; digits?: number }
@@ -28,6 +43,8 @@ export type OutputSpec =
   | { type: 'datetime'; timeZone?: 'UTC' }
   /** Значение — минуты от полуночи. */
   | { type: 'clock' }
+  /** Значение — в unit; показывается в единице выбранной системы с обозначением. */
+  | { type: 'quantity'; unit: UnitId; imperial?: UnitId; digits?: number }
   /** Значение — готовая строка. */
   | { type: 'text' }
   /** Своё форматирование, когда нужны строки перевода (например, «через 2 дня»). */

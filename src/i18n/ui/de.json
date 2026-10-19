@@ -36,6 +36,11 @@
       "label": "Zeitformat",
       "h24": "24 Std.",
       "h12": "12 Std. (AM/PM)"
+    },
+    "units": {
+      "label": "Einheiten",
+      "metric": "Metrisch",
+      "imperial": "US-Einheiten"
     }
   },
   "footer": {

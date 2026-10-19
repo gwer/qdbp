@@ -1,0 +1,46 @@
+{
+  "title": "Calorie calculator: daily calorie needs (TDEE)",
+  "description": "How many calories you need a day to maintain, lose or gain weight — estimated with the Mifflin–St Jeor equation and your activity level.",
+  "inputs": {
+    "sex": {
+      "label": "Sex",
+      "options": {
+        "male": "Male",
+        "female": "Female"
+      }
+    },
+    "age": {
+      "label": "Age, years"
+    },
+    "weight": {
+      "label": "Weight"
+    },
+    "height": {
+      "label": "Height"
+    },
+    "activity": {
+      "label": "Activity level",
+      "options": {
+        "sedentary": "Sedentary (desk job, little exercise)",
+        "light": "Light (exercise 1–3 days a week)",
+        "moderate": "Moderate (exercise 3–5 days a week)",
+        "active": "Active (exercise 6–7 days a week)",
+        "very": "Very active (physical job or training twice a day)"
+      }
+    }
+  },
+  "outputs": {
+    "tdee": {
+      "label": "Maintenance calories (TDEE)"
+    },
+    "bmr": {
+      "label": "Basal metabolic rate (BMR)"
+    },
+    "loss": {
+      "label": "Weight loss (−15%)"
+    },
+    "gain": {
+      "label": "Weight gain (+15%)"
+    }
+  }
+}

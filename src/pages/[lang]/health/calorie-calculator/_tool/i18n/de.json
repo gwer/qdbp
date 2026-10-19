@@ -1,0 +1,46 @@
+{
+  "title": "Kalorienrechner: täglicher Kalorienbedarf",
+  "description": "Wie viele Kalorien Sie täglich brauchen, um Ihr Gewicht zu halten, abzunehmen oder zuzunehmen – berechnet mit der Mifflin-St-Jeor-Formel und Ihrem Aktivitätslevel.",
+  "inputs": {
+    "sex": {
+      "label": "Geschlecht",
+      "options": {
+        "male": "Männlich",
+        "female": "Weiblich"
+      }
+    },
+    "age": {
+      "label": "Alter, Jahre"
+    },
+    "weight": {
+      "label": "Gewicht"
+    },
+    "height": {
+      "label": "Größe"
+    },
+    "activity": {
+      "label": "Aktivität",
+      "options": {
+        "sedentary": "Sitzend (Büro, kaum Bewegung)",
+        "light": "Leicht (Sport an 1–3 Tagen pro Woche)",
+        "moderate": "Mäßig (Sport an 3–5 Tagen)",
+        "active": "Aktiv (Sport an 6–7 Tagen)",
+        "very": "Sehr aktiv (körperliche Arbeit oder zweimal täglich Training)"
+      }
+    }
+  },
+  "outputs": {
+    "tdee": {
+      "label": "Gesamtumsatz (Gewicht halten), kcal"
+    },
+    "bmr": {
+      "label": "Grundumsatz, kcal"
+    },
+    "loss": {
+      "label": "Zum Abnehmen (−15 %), kcal"
+    },
+    "gain": {
+      "label": "Zum Zunehmen (+15 %), kcal"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "BMI-Rechner: Body-Mass-Index",
+  "description": "Body-Mass-Index aus Gewicht und Größe berechnen – mit Einordnung nach WHO und dem Normalgewicht für Ihre Körpergröße.",
+  "inputs": {
+    "weight": {
+      "label": "Gewicht"
+    },
+    "height": {
+      "label": "Größe"
+    }
+  },
+  "outputs": {
+    "bmi": {
+      "label": "BMI"
+    },
+    "category": {
+      "label": "Einordnung"
+    },
+    "healthyMin": {
+      "label": "Normalgewicht ab"
+    },
+    "healthyMax": {
+      "label": "Normalgewicht bis"
+    }
+  },
+  "ui": {
+    "categories": {
+      "under": "Untergewicht",
+      "normal": "Normalgewicht",
+      "over": "Übergewicht",
+      "obese1": "Adipositas Grad I",
+      "obese2": "Adipositas Grad II",
+      "obese3": "Adipositas Grad III"
+    }
+  }
+}

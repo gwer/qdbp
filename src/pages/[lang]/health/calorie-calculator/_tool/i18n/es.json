@@ -1,0 +1,46 @@
+{
+  "title": "Calculadora de calorías: cuántas calorías necesito al día",
+  "description": "Cuántas calorías necesitas al día para mantener, bajar o subir de peso, según la ecuación de Mifflin-St Jeor y tu nivel de actividad.",
+  "inputs": {
+    "sex": {
+      "label": "Sexo",
+      "options": {
+        "male": "Hombre",
+        "female": "Mujer"
+      }
+    },
+    "age": {
+      "label": "Edad, años"
+    },
+    "weight": {
+      "label": "Peso"
+    },
+    "height": {
+      "label": "Altura"
+    },
+    "activity": {
+      "label": "Actividad física",
+      "options": {
+        "sedentary": "Sedentaria (trabajo de oficina)",
+        "light": "Ligera (ejercicio 1–3 días a la semana)",
+        "moderate": "Moderada (ejercicio 3–5 días)",
+        "active": "Alta (ejercicio 6–7 días)",
+        "very": "Muy alta (trabajo físico o dos entrenamientos al día)"
+      }
+    }
+  },
+  "outputs": {
+    "tdee": {
+      "label": "Calorías para mantener el peso (kcal)"
+    },
+    "bmr": {
+      "label": "Metabolismo basal (kcal)"
+    },
+    "loss": {
+      "label": "Para bajar de peso (−15 %) (kcal)"
+    },
+    "gain": {
+      "label": "Para subir de peso (+15 %) (kcal)"
+    }
+  }
+}

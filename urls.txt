@@ -9,6 +9,9 @@
 /de/dates/week-number/
 /de/finance/
 /de/finance/loan-calculator/
+/de/health/
+/de/health/bmi/
+/de/health/calorie-calculator/
 /de/math/
 /de/math/percent-of/
 /de/text/
@@ -24,6 +27,9 @@
 /en/dates/week-number/
 /en/finance/
 /en/finance/loan-calculator/
+/en/health/
+/en/health/bmi/
+/en/health/calorie-calculator/
 /en/math/
 /en/math/percent-of/
 /en/text/
@@ -39,6 +45,9 @@
 /es/dates/week-number/
 /es/finance/
 /es/finance/loan-calculator/
+/es/health/
+/es/health/bmi/
+/es/health/calorie-calculator/
 /es/math/
 /es/math/percent-of/
 /es/text/
@@ -54,6 +63,9 @@
 /pt/dates/week-number/
 /pt/finance/
 /pt/finance/loan-calculator/
+/pt/health/
+/pt/health/bmi/
+/pt/health/calorie-calculator/
 /pt/math/
 /pt/math/percent-of/
 /pt/text/
@@ -69,6 +81,9 @@
 /ru/dates/week-number/
 /ru/finance/
 /ru/finance/loan-calculator/
+/ru/health/
+/ru/health/bmi/
+/ru/health/calorie-calculator/
 /ru/math/
 /ru/math/percent-of/
 /ru/text/

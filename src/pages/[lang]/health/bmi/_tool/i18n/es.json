@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de IMC: índice de masa corporal",
+  "description": "Calcula tu índice de masa corporal con tu peso y tu altura, descubre tu categoría según la OMS y el rango de peso saludable para tu estatura.",
+  "inputs": {
+    "weight": {
+      "label": "Peso"
+    },
+    "height": {
+      "label": "Altura"
+    }
+  },
+  "outputs": {
+    "bmi": {
+      "label": "IMC"
+    },
+    "category": {
+      "label": "Categoría"
+    },
+    "healthyMin": {
+      "label": "Peso saludable desde"
+    },
+    "healthyMax": {
+      "label": "Peso saludable hasta"
+    }
+  },
+  "ui": {
+    "categories": {
+      "under": "Bajo peso",
+      "normal": "Peso normal",
+      "over": "Sobrepeso",
+      "obese1": "Obesidad de grado I",
+      "obese2": "Obesidad de grado II",
+      "obese3": "Obesidad de grado III"
+    }
+  }
+}
