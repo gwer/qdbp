@@ -1,0 +1,50 @@
+{
+  "title": "Calculadora de concreto: volume, cimento, areia e brita",
+  "description": "Volume de concreto para laje, sapata ou contrapiso e quanto cimento, areia e brita são necessários conforme o traço.",
+  "inputs": {
+    "length": {
+      "label": "Comprimento, m"
+    },
+    "width": {
+      "label": "Largura, m"
+    },
+    "thickness": {
+      "label": "Espessura, m"
+    },
+    "reserve": {
+      "label": "Margem, %"
+    },
+    "mix": {
+      "label": "Traço cimento : areia : brita",
+      "options": {
+        "1-2-4": "1 : 2 : 4",
+        "1-2-3": "1 : 2 : 3",
+        "1-3-5": "1 : 3 : 5",
+        "1-3-6": "1 : 3 : 6"
+      }
+    },
+    "bag": {
+      "label": "Saco de cimento, kg"
+    }
+  },
+  "outputs": {
+    "volume": {
+      "label": "Volume de concreto, m³"
+    },
+    "bags": {
+      "label": "Sacos de cimento"
+    },
+    "cement": {
+      "label": "Cimento, kg"
+    },
+    "sand": {
+      "label": "Areia, m³"
+    },
+    "gravel": {
+      "label": "Brita, m³"
+    },
+    "water": {
+      "label": "Água, l (referência)"
+    }
+  }
+}

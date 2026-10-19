@@ -1,0 +1,53 @@
+{
+  "title": "Calculadora de tijolos: quantos tijolos para a parede",
+  "description": "Quantos tijolos comprar para uma parede considerando formato, espessura, juntas, vãos e margem de perda.",
+  "inputs": {
+    "length": {
+      "label": "Comprimento da parede, m"
+    },
+    "height": {
+      "label": "Altura da parede, m"
+    },
+    "openings": {
+      "label": "Janelas e portas, m²"
+    },
+    "format": {
+      "label": "Formato do tijolo",
+      "options": {
+        "250x120x65": "250 × 120 × 65 mm (Rússia)",
+        "250x120x88": "250 × 120 × 88 mm (Rússia)",
+        "240x115x71": "NF 240 × 115 × 71 mm (Alemanha)",
+        "240x115x52": "DF 240 × 115 × 52 mm (Alemanha)",
+        "240x115x50": "240 × 115 × 50 mm (Espanha)",
+        "240x115x70": "240 × 115 × 70 mm (Espanha)",
+        "190x90x57": "Tijolo maciço 19 × 9 × 5,7 cm"
+      }
+    },
+    "thickness": {
+      "label": "Espessura da parede",
+      "options": {
+        "half": "Meia vez (½ tijolo)",
+        "one": "Uma vez (1 tijolo)",
+        "oneHalf": "Uma vez e meia (1½ tijolo)",
+        "two": "Duas vezes (2 tijolos)"
+      }
+    },
+    "joint": {
+      "label": "Junta, mm"
+    },
+    "reserve": {
+      "label": "Margem de perda, %"
+    }
+  },
+  "outputs": {
+    "bricks": {
+      "label": "Tijolos"
+    },
+    "perM2": {
+      "label": "Tijolos por m²"
+    },
+    "area": {
+      "label": "Área da parede, m²"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Calculadora de suelo laminado: cuántos paquetes necesito",
+  "description": "Cuántos paquetes de suelo laminado o tarima necesitas para una habitación, con margen para cortes.",
+  "inputs": {
+    "length": {
+      "label": "Largo de la habitación, m"
+    },
+    "width": {
+      "label": "Ancho de la habitación, m"
+    },
+    "reserve": {
+      "label": "Margen para cortes, %"
+    },
+    "pack": {
+      "label": "Superficie por paquete, m²"
+    }
+  },
+  "outputs": {
+    "packs": {
+      "label": "Paquetes"
+    },
+    "area": {
+      "label": "Superficie del suelo, m²"
+    },
+    "needed": {
+      "label": "Con margen, m²"
+    },
+    "bought": {
+      "label": "Superficie comprada, m²"
+    }
+  }
+}

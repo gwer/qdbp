@@ -1,0 +1,41 @@
+{
+  "title": "Tapetenrechner: wie viele Rollen Tapete brauche ich",
+  "description": "Wie viele Tapetenrollen brauche ich? Mit Wandhöhe, Fenstern und Türen, Rollenmaß und Rapport.",
+  "inputs": {
+    "length": {
+      "label": "Raumlänge, m"
+    },
+    "width": {
+      "label": "Raumbreite, m"
+    },
+    "height": {
+      "label": "Wandhöhe, m"
+    },
+    "openings": {
+      "label": "Breite von Fenstern und Türen, m"
+    },
+    "rollWidth": {
+      "label": "Rollenbreite, m"
+    },
+    "rollLength": {
+      "label": "Rollenlänge, m"
+    },
+    "repeat": {
+      "label": "Rapport, cm"
+    }
+  },
+  "outputs": {
+    "rolls": {
+      "label": "Rollen"
+    },
+    "strips": {
+      "label": "Bahnen"
+    },
+    "perRoll": {
+      "label": "Bahnen pro Rolle"
+    },
+    "strip": {
+      "label": "Bahnlänge, m"
+    }
+  }
+}

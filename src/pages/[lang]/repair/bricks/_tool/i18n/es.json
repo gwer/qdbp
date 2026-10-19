@@ -1,0 +1,53 @@
+{
+  "title": "Calculadora de ladrillos: cuántos ladrillos por pared",
+  "description": "Cuántos ladrillos necesitas para una pared según el formato, el espesor del muro, las juntas, los huecos y el margen.",
+  "inputs": {
+    "length": {
+      "label": "Largo de la pared, m"
+    },
+    "height": {
+      "label": "Alto de la pared, m"
+    },
+    "openings": {
+      "label": "Ventanas y puertas, m²"
+    },
+    "format": {
+      "label": "Formato del ladrillo",
+      "options": {
+        "250x120x65": "250 × 120 × 65 mm (Rusia)",
+        "250x120x88": "250 × 120 × 88 mm (Rusia)",
+        "240x115x71": "NF 240 × 115 × 71 mm (Alemania)",
+        "240x115x52": "DF 240 × 115 × 52 mm (Alemania)",
+        "240x115x50": "Macizo 24 × 11,5 × 5 cm",
+        "240x115x70": "Perforado 24 × 11,5 × 7 cm",
+        "190x90x57": "190 × 90 × 57 mm (Brasil)"
+      }
+    },
+    "thickness": {
+      "label": "Espesor del muro",
+      "options": {
+        "half": "Medio pie (½ ladrillo)",
+        "one": "Un pie (1 ladrillo)",
+        "oneHalf": "Pie y medio (1½ ladrillos)",
+        "two": "Dos pies (2 ladrillos)"
+      }
+    },
+    "joint": {
+      "label": "Junta, mm"
+    },
+    "reserve": {
+      "label": "Margen, %"
+    }
+  },
+  "outputs": {
+    "bricks": {
+      "label": "Ladrillos"
+    },
+    "perM2": {
+      "label": "Ladrillos por m²"
+    },
+    "area": {
+      "label": "Superficie del muro, m²"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Calculadora de papel pintado: cuántos rollos necesito",
+  "description": "Cuántos rollos de papel pintado necesitas según la altura de las paredes, las ventanas y puertas, la medida del rollo y la repetición del dibujo.",
+  "inputs": {
+    "length": {
+      "label": "Largo de la habitación, m"
+    },
+    "width": {
+      "label": "Ancho de la habitación, m"
+    },
+    "height": {
+      "label": "Altura de las paredes, m"
+    },
+    "openings": {
+      "label": "Ancho de ventanas y puertas, m"
+    },
+    "rollWidth": {
+      "label": "Ancho del rollo, m"
+    },
+    "rollLength": {
+      "label": "Largo del rollo, m"
+    },
+    "repeat": {
+      "label": "Repetición del dibujo, cm"
+    }
+  },
+  "outputs": {
+    "rolls": {
+      "label": "Rollos"
+    },
+    "strips": {
+      "label": "Tiras"
+    },
+    "perRoll": {
+      "label": "Tiras por rollo"
+    },
+    "strip": {
+      "label": "Largo de la tira, m"
+    }
+  }
+}

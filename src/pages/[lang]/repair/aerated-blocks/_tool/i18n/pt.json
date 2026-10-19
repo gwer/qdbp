@@ -1,0 +1,38 @@
+{
+  "title": "Calculadora de blocos de concreto celular: quantos blocos",
+  "description": "Quantos blocos de concreto celular comprar para uma parede e quantos metros cúbicos são, conforme a medida do bloco, os vãos e a margem.",
+  "inputs": {
+    "length": {
+      "label": "Comprimento da parede, m"
+    },
+    "height": {
+      "label": "Altura da parede, m"
+    },
+    "openings": {
+      "label": "Janelas e portas, m²"
+    },
+    "blockLength": {
+      "label": "Comprimento do bloco, mm"
+    },
+    "blockHeight": {
+      "label": "Altura do bloco, mm"
+    },
+    "blockThickness": {
+      "label": "Espessura do bloco, mm"
+    },
+    "reserve": {
+      "label": "Margem de perda, %"
+    }
+  },
+  "outputs": {
+    "blocks": {
+      "label": "Blocos"
+    },
+    "volume": {
+      "label": "Volume, m³"
+    },
+    "area": {
+      "label": "Área da parede, m²"
+    }
+  }
+}

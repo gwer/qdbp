@@ -1,0 +1,53 @@
+{
+  "title": "Ziegelrechner: wie viele Steine für die Wand",
+  "description": "Wie viele Ziegel brauche ich für eine Wand? Mit Ziegelformat, Wandstärke, Fugen, Öffnungen und Reserve.",
+  "inputs": {
+    "length": {
+      "label": "Wandlänge, m"
+    },
+    "height": {
+      "label": "Wandhöhe, m"
+    },
+    "openings": {
+      "label": "Fenster und Türen, m²"
+    },
+    "format": {
+      "label": "Ziegelformat",
+      "options": {
+        "250x120x65": "250 × 120 × 65 mm (Russland)",
+        "250x120x88": "250 × 120 × 88 mm (Russland)",
+        "240x115x71": "NF 240 × 115 × 71 mm",
+        "240x115x52": "DF 240 × 115 × 52 mm",
+        "240x115x50": "240 × 115 × 50 mm (Spanien)",
+        "240x115x70": "240 × 115 × 70 mm (Spanien)",
+        "190x90x57": "190 × 90 × 57 mm (Brasilien)"
+      }
+    },
+    "thickness": {
+      "label": "Wandstärke",
+      "options": {
+        "half": "½ Stein",
+        "one": "1 Stein",
+        "oneHalf": "1½ Steine",
+        "two": "2 Steine"
+      }
+    },
+    "joint": {
+      "label": "Fuge, mm"
+    },
+    "reserve": {
+      "label": "Reserve, %"
+    }
+  },
+  "outputs": {
+    "bricks": {
+      "label": "Ziegel"
+    },
+    "perM2": {
+      "label": "Ziegel pro m²"
+    },
+    "area": {
+      "label": "Wandfläche, m²"
+    }
+  }
+}

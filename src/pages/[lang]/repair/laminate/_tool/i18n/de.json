@@ -1,0 +1,32 @@
+{
+  "title": "Laminatrechner: wie viele Pakete Laminat",
+  "description": "Wie viele Pakete Laminat oder Parkett brauche ich? Bodenfläche plus Verschnitt, umgerechnet in ganze Pakete.",
+  "inputs": {
+    "length": {
+      "label": "Raumlänge, m"
+    },
+    "width": {
+      "label": "Raumbreite, m"
+    },
+    "reserve": {
+      "label": "Verschnitt, %"
+    },
+    "pack": {
+      "label": "Fläche pro Paket, m²"
+    }
+  },
+  "outputs": {
+    "packs": {
+      "label": "Pakete"
+    },
+    "area": {
+      "label": "Bodenfläche, m²"
+    },
+    "needed": {
+      "label": "Mit Verschnitt, m²"
+    },
+    "bought": {
+      "label": "Gekaufte Fläche, m²"
+    }
+  }
+}

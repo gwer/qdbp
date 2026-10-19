@@ -1,0 +1,44 @@
+{
+  "title": "Calculadora de piso e azulejo: peças, rejunte e argamassa",
+  "description": "Quantas peças de piso ou azulejo comprar com junta e margem de perda, quantas caixas e uma estimativa de rejunte e argamassa.",
+  "inputs": {
+    "area": {
+      "label": "Área, m²"
+    },
+    "length": {
+      "label": "Comprimento da peça, cm"
+    },
+    "width": {
+      "label": "Largura da peça, cm"
+    },
+    "thickness": {
+      "label": "Espessura da peça, mm"
+    },
+    "joint": {
+      "label": "Junta, mm"
+    },
+    "reserve": {
+      "label": "Margem de perda, %"
+    },
+    "perBox": {
+      "label": "Peças por caixa"
+    },
+    "adhesive": {
+      "label": "Consumo de argamassa, kg/m²"
+    }
+  },
+  "outputs": {
+    "pieces": {
+      "label": "Peças"
+    },
+    "boxes": {
+      "label": "Caixas"
+    },
+    "grout": {
+      "label": "Rejunte, kg"
+    },
+    "glue": {
+      "label": "Argamassa colante, kg"
+    }
+  }
+}
