@@ -1,0 +1,13 @@
+{
+  "title": "Calculadora de recetas: adaptar las cantidades a más o menos raciones",
+  "description": "Adapta una receta a otro número de raciones: pega la lista de ingredientes, indica para cuántas personas es y para cuántas la necesitas, y las cantidades se recalculan solas.",
+  "ui": {
+    "from": "Raciones de la receta",
+    "to": "Raciones que necesitas",
+    "input": "Receta (un ingrediente por línea)",
+    "output": "Receta adaptada",
+    "factor": "Todas las cantidades se multiplican por {factor}",
+    "invalid": "Indica un número de raciones mayor que cero",
+    "example": "500 g de harina\n250 ml de leche\n2 huevos\n1,5 cucharadas de azúcar\n1 cucharadita de sal\n25 g de levadura fresca\nAceite para engrasar"
+  }
+}

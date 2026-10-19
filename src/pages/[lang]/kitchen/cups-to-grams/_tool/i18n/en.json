@@ -1,0 +1,65 @@
+{
+  "title": "Cups to grams converter: flour, sugar, butter and more",
+  "description": "How many grams are in a cup, tablespoon or teaspoon of flour, sugar, butter and other ingredients — and how many cups are in a given number of grams.",
+  "inputs": {
+    "ingredient": {
+      "label": "Ingredient",
+      "options": {
+        "flour": "All-purpose flour (spooned and leveled)",
+        "flourScooped": "All-purpose flour (scooped)",
+        "wholeWheatFlour": "Whole wheat flour",
+        "ryeFlour": "Rye flour",
+        "almondFlour": "Almond flour",
+        "semolina": "Semolina",
+        "cornmeal": "Cornmeal",
+        "cornstarch": "Cornstarch",
+        "sugar": "Granulated sugar",
+        "brownSugar": "Brown sugar (packed)",
+        "powderedSugar": "Powdered sugar",
+        "honey": "Honey",
+        "mapleSyrup": "Maple syrup",
+        "butter": "Butter",
+        "oil": "Vegetable oil",
+        "water": "Water",
+        "milk": "Milk",
+        "cream": "Heavy cream",
+        "yogurt": "Yogurt",
+        "sourCream": "Sour cream",
+        "cocoa": "Cocoa powder",
+        "oats": "Rolled oats",
+        "rice": "Rice (uncooked)",
+        "buckwheat": "Buckwheat groats",
+        "raisins": "Raisins",
+        "walnuts": "Walnuts (chopped)",
+        "chocolateChips": "Chocolate chips",
+        "peanutButter": "Peanut butter",
+        "coconut": "Shredded coconut",
+        "salt": "Salt"
+      }
+    },
+    "amount": {
+      "label": "Amount"
+    },
+    "measure": {
+      "label": "Measure",
+      "options": {
+        "cupUs": "US cup (236.6 ml)",
+        "cup240": "Cup (240 ml)",
+        "cup250": "Metric cup (250 ml)",
+        "glass200": "Glass (200 ml)",
+        "tbsp": "Tablespoon (15 ml)",
+        "tsp": "Teaspoon (5 ml)",
+        "ml": "Milliliters",
+        "g": "Grams"
+      }
+    }
+  },
+  "outputs": {
+    "grams": {
+      "label": "Weight, g"
+    }
+  },
+  "ui": {
+    "table": "The same amount in other measures"
+  }
+}

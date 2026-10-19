@@ -1,0 +1,13 @@
+{
+  "title": "Rezeptrechner: Rezept auf andere Portionen umrechnen",
+  "description": "Rezept für mehr oder weniger Personen umrechnen: Zutatenliste einfügen, angeben, für wie viele Portionen es gedacht ist und wie viele Sie brauchen – alle Mengen werden neu berechnet.",
+  "ui": {
+    "from": "Portionen im Rezept",
+    "to": "Benötigte Portionen",
+    "input": "Rezept (eine Zutat pro Zeile)",
+    "output": "Umgerechnetes Rezept",
+    "factor": "Alle Mengen werden mit {factor} multipliziert",
+    "invalid": "Bitte eine Portionenzahl größer als null eingeben",
+    "example": "500 g Mehl\n250 ml Milch\n2 Eier\n1,5 EL Zucker\n1 TL Salz\n21 g Frischhefe\nÖl zum Einfetten"
+  }
+}

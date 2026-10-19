@@ -1,0 +1,65 @@
+{
+  "title": "Conversor de tazas a gramos: harina, azúcar, mantequilla…",
+  "description": "Cuántos gramos de harina, azúcar, mantequilla y otros ingredientes hay en una taza, un vaso, una cucharada o una cucharadita, y al revés: de gramos a tazas y cucharadas.",
+  "inputs": {
+    "ingredient": {
+      "label": "Ingrediente",
+      "options": {
+        "flour": "Harina de trigo (con cuchara, enrasada)",
+        "flourScooped": "Harina de trigo (sacada con el vaso)",
+        "wholeWheatFlour": "Harina integral",
+        "ryeFlour": "Harina de centeno",
+        "almondFlour": "Harina de almendra",
+        "semolina": "Sémola de trigo",
+        "cornmeal": "Harina de maíz gruesa",
+        "cornstarch": "Maicena (almidón de maíz)",
+        "sugar": "Azúcar",
+        "brownSugar": "Azúcar moreno (prensado)",
+        "powderedSugar": "Azúcar glas",
+        "honey": "Miel",
+        "mapleSyrup": "Sirope de arce",
+        "butter": "Mantequilla",
+        "oil": "Aceite",
+        "water": "Agua",
+        "milk": "Leche",
+        "cream": "Nata para montar",
+        "yogurt": "Yogur",
+        "sourCream": "Nata agria",
+        "cocoa": "Cacao en polvo",
+        "oats": "Copos de avena",
+        "rice": "Arroz (crudo)",
+        "buckwheat": "Trigo sarraceno",
+        "raisins": "Pasas",
+        "walnuts": "Nueces (picadas)",
+        "chocolateChips": "Pepitas de chocolate",
+        "peanutButter": "Crema de cacahuete",
+        "coconut": "Coco rallado",
+        "salt": "Sal"
+      }
+    },
+    "amount": {
+      "label": "Cantidad"
+    },
+    "measure": {
+      "label": "Medida",
+      "options": {
+        "cupUs": "Taza americana (cup, 236,6 ml)",
+        "cup240": "Taza (240 ml)",
+        "cup250": "Vaso grande (250 ml)",
+        "glass200": "Vaso (200 ml)",
+        "tbsp": "Cucharada (15 ml)",
+        "tsp": "Cucharadita (5 ml)",
+        "ml": "Mililitros",
+        "g": "Gramos"
+      }
+    }
+  },
+  "outputs": {
+    "grams": {
+      "label": "Peso, g"
+    }
+  },
+  "ui": {
+    "table": "La misma cantidad en otras medidas"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Backform-Rechner: Rezept auf eine andere Form umrechnen",
+  "description": "Rezept auf eine Backform anderer Größe oder Form umrechnen – rund, quadratisch oder rechteckig. Der Rechner vergleicht die Bodenflächen und zeigt, mit welchem Faktor Sie die Zutaten multiplizieren.",
+  "inputs": {
+    "fromShape": {
+      "label": "Form im Rezept",
+      "options": {
+        "round": "Rund",
+        "square": "Quadratisch",
+        "rect": "Rechteckig"
+      }
+    },
+    "fromA": {
+      "label": "Durchmesser oder Seitenlänge"
+    },
+    "fromB": {
+      "label": "Breite (rechteckige Form)"
+    },
+    "toShape": {
+      "label": "Ihre Form",
+      "options": {
+        "round": "Rund",
+        "square": "Quadratisch",
+        "rect": "Rechteckig"
+      }
+    },
+    "toA": {
+      "label": "Durchmesser oder Seitenlänge"
+    },
+    "toB": {
+      "label": "Breite (rechteckige Form)"
+    }
+  },
+  "outputs": {
+    "factor": {
+      "label": "Zutaten multiplizieren mit"
+    },
+    "change": {
+      "label": "Änderung"
+    }
+  },
+  "ui": {
+    "more": "{p} % mehr Zutaten",
+    "less": "{p} % weniger Zutaten",
+    "same": "Gleiche Mengen"
+  }
+}

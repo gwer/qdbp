@@ -1,0 +1,65 @@
+{
+  "title": "Cups in Gramm umrechnen: Mehl, Zucker, Butter und mehr",
+  "description": "Wie viel Gramm Mehl, Zucker, Butter und andere Zutaten in einem Cup, einer Tasse, einem Ess- oder Teelöffel sind – und umgekehrt: Gramm in Cups und Löffel.",
+  "inputs": {
+    "ingredient": {
+      "label": "Zutat",
+      "options": {
+        "flour": "Weizenmehl (gelöffelt, glatt gestrichen)",
+        "flourScooped": "Weizenmehl (mit der Tasse geschöpft)",
+        "wholeWheatFlour": "Vollkornmehl",
+        "ryeFlour": "Roggenmehl",
+        "almondFlour": "Mandelmehl",
+        "semolina": "Grieß",
+        "cornmeal": "Maisgrieß (Polenta)",
+        "cornstarch": "Speisestärke (Maisstärke)",
+        "sugar": "Zucker",
+        "brownSugar": "Brauner Zucker (gepresst)",
+        "powderedSugar": "Puderzucker",
+        "honey": "Honig",
+        "mapleSyrup": "Ahornsirup",
+        "butter": "Butter",
+        "oil": "Speiseöl",
+        "water": "Wasser",
+        "milk": "Milch",
+        "cream": "Sahne",
+        "yogurt": "Joghurt",
+        "sourCream": "Saure Sahne",
+        "cocoa": "Kakaopulver",
+        "oats": "Haferflocken",
+        "rice": "Reis (roh)",
+        "buckwheat": "Buchweizen",
+        "raisins": "Rosinen",
+        "walnuts": "Walnüsse (gehackt)",
+        "chocolateChips": "Schokotropfen",
+        "peanutButter": "Erdnussbutter",
+        "coconut": "Kokosraspeln",
+        "salt": "Salz"
+      }
+    },
+    "amount": {
+      "label": "Menge"
+    },
+    "measure": {
+      "label": "Maß",
+      "options": {
+        "cupUs": "US-Cup (236,6 ml)",
+        "cup240": "Tasse (240 ml)",
+        "cup250": "Tasse (250 ml)",
+        "glass200": "Glas (200 ml)",
+        "tbsp": "Esslöffel (15 ml)",
+        "tsp": "Teelöffel (5 ml)",
+        "ml": "Milliliter",
+        "g": "Gramm"
+      }
+    }
+  },
+  "outputs": {
+    "grams": {
+      "label": "Gewicht, g"
+    }
+  },
+  "ui": {
+    "table": "Dieselbe Menge in anderen Maßen"
+  }
+}

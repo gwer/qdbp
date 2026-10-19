@@ -1,0 +1,39 @@
+{
+  "title": "Temperatura del horno: °C, °F y marcas de gas",
+  "description": "Convierte la temperatura del horno entre grados Celsius, Fahrenheit y las marcas de gas británicas (gas mark), con el ajuste para horno con ventilador.",
+  "inputs": {
+    "value": {
+      "label": "Temperatura o marca"
+    },
+    "scale": {
+      "label": "Escala",
+      "options": {
+        "c": "Grados Celsius (°C)",
+        "f": "Grados Fahrenheit (°F)",
+        "gas": "Marca de gas (gas mark)"
+      }
+    }
+  },
+  "outputs": {
+    "c": {
+      "label": "Celsius"
+    },
+    "f": {
+      "label": "Fahrenheit"
+    },
+    "gas": {
+      "label": "Marca de gas"
+    },
+    "fanC": {
+      "label": "Con ventilador, °C"
+    },
+    "fanF": {
+      "label": "Convección, °F"
+    }
+  },
+  "ui": {
+    "table": "Tabla de marcas de gas",
+    "gas": "Marca",
+    "fan": "Con ventilador, °C"
+  }
+}

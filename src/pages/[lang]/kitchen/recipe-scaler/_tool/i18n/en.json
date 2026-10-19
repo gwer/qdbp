@@ -1,0 +1,13 @@
+{
+  "title": "Recipe scaler: adjust servings and ingredient amounts",
+  "description": "Scale a recipe up or down: paste the ingredient list, enter how many servings it makes and how many you need — every amount is recalculated.",
+  "ui": {
+    "from": "Recipe serves",
+    "to": "Servings needed",
+    "input": "Recipe (one ingredient per line)",
+    "output": "Scaled recipe",
+    "factor": "All amounts are multiplied by {factor}",
+    "invalid": "Enter a number of servings greater than zero",
+    "example": "2 cups all-purpose flour\n1 cup butter, softened\n3/4 cup sugar\n2 eggs\n1 tsp baking soda\n1/2 tsp salt\n2 cups chocolate chips"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Backofentemperatur: °C, °F und Gasstufen",
+  "description": "Backofentemperatur von Celsius in Fahrenheit und britische Gasstufen (Gas Mark) umrechnen – und zurück, mit Umrechnung für Umluft.",
+  "inputs": {
+    "value": {
+      "label": "Temperatur oder Stufe"
+    },
+    "scale": {
+      "label": "Skala",
+      "options": {
+        "c": "Grad Celsius (°C)",
+        "f": "Grad Fahrenheit (°F)",
+        "gas": "Gasstufe (Gas Mark)"
+      }
+    }
+  },
+  "outputs": {
+    "c": {
+      "label": "Celsius"
+    },
+    "f": {
+      "label": "Fahrenheit"
+    },
+    "gas": {
+      "label": "Gasstufe"
+    },
+    "fanC": {
+      "label": "Umluft, °C"
+    },
+    "fanF": {
+      "label": "Umluft (USA), °F"
+    }
+  },
+  "ui": {
+    "table": "Tabelle der Gasstufen",
+    "gas": "Stufe",
+    "fan": "Umluft, °C"
+  }
+}

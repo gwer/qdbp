@@ -1,0 +1,47 @@
+{
+  "title": "Cake pan converter: adjust a recipe to a different pan",
+  "description": "Adapt a recipe to a pan of a different size or shape — round, square or rectangular. Compare the base areas and see how much to scale the ingredients.",
+  "inputs": {
+    "fromShape": {
+      "label": "Pan in the recipe",
+      "options": {
+        "round": "Round",
+        "square": "Square",
+        "rect": "Rectangular"
+      }
+    },
+    "fromA": {
+      "label": "Diameter or side length"
+    },
+    "fromB": {
+      "label": "Width (rectangular pans)"
+    },
+    "toShape": {
+      "label": "Your pan",
+      "options": {
+        "round": "Round",
+        "square": "Square",
+        "rect": "Rectangular"
+      }
+    },
+    "toA": {
+      "label": "Diameter or side length"
+    },
+    "toB": {
+      "label": "Width (rectangular pans)"
+    }
+  },
+  "outputs": {
+    "factor": {
+      "label": "Multiply ingredients by"
+    },
+    "change": {
+      "label": "Change"
+    }
+  },
+  "ui": {
+    "more": "{p}% more ingredients",
+    "less": "{p}% fewer ingredients",
+    "same": "Same amounts"
+  }
+}

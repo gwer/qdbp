@@ -1,0 +1,28 @@
+{
+  "title": "Hefe-Rechner: Frischhefe, Trockenhefe und Instanthefe",
+  "description": "Wie viel Trockenhefe ersetzt Frischhefe – und umgekehrt? Umrechnung zwischen Frischhefe, aktiver Trockenhefe und Instant-Trockenhefe nach Gewicht.",
+  "inputs": {
+    "amount": {
+      "label": "Menge, g"
+    },
+    "from": {
+      "label": "Hefe im Rezept",
+      "options": {
+        "fresh": "Frischhefe",
+        "active": "Aktive Trockenhefe",
+        "instant": "Instant-Trockenhefe"
+      }
+    }
+  },
+  "outputs": {
+    "fresh": {
+      "label": "Frischhefe, g"
+    },
+    "active": {
+      "label": "Aktive Trockenhefe, g"
+    },
+    "instant": {
+      "label": "Instant-Trockenhefe, g"
+    }
+  }
+}

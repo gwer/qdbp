@@ -1,0 +1,10 @@
+---
+// Одинаковый у всех категорий: данные категории лежат в _category/.
+import CategoryPage from '@/layouts/CategoryPage.astro';
+import { categoryPaths, type CategoryPageProps } from '@/lib/catalog';
+import def from './_category/category';
+
+export const getStaticPaths = () => categoryPaths(def);
+---
+
+<CategoryPage {...(Astro.props as CategoryPageProps)} />

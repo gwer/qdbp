@@ -1,0 +1,13 @@
+{
+  "title": "Calculadora de receitas: ajustar para mais ou menos porções",
+  "description": "Ajuste uma receita para outro número de porções: cole a lista de ingredientes, informe para quantas porções ela rende e quantas você precisa — as quantidades são recalculadas.",
+  "ui": {
+    "from": "Porções da receita",
+    "to": "Porções desejadas",
+    "input": "Receita (um ingrediente por linha)",
+    "output": "Receita ajustada",
+    "factor": "Todas as quantidades são multiplicadas por {factor}",
+    "invalid": "Informe um número de porções maior que zero",
+    "example": "2 xícaras de farinha de trigo\n1 xícara de leite\n3 ovos\n1/2 xícara de óleo\n1 colher de sopa de fermento em pó\n1 pitada de sal"
+  }
+}
