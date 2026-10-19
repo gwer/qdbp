@@ -1,1 +1,4 @@
-{ "name": "Mathe & Prozente", "description": "Prozente, Dreisatz, Durchschnitt und andere Alltagsrechnungen." }
+{
+  "name": "Mathe & Prozente",
+  "description": "Prozente, Dreisatz, Durchschnitt, Zufallszahlen, Zahlensysteme und andere Alltagsrechnungen."
+}

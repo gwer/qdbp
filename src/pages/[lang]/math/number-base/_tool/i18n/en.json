@@ -1,0 +1,16 @@
+{
+  "title": "Number base converter: binary, decimal, hex and octal",
+  "description": "Convert whole numbers between binary, octal, decimal, hexadecimal and any base from 2 to 36.",
+  "ui": {
+    "number": "Number",
+    "from": "Input base",
+    "base2": "Binary (2)",
+    "base8": "Octal (8)",
+    "base10": "Decimal (10)",
+    "base16": "Hexadecimal (16)",
+    "baseN": "Base {base}",
+    "custom": "Base",
+    "errorDigit": "The number has digits that aren't valid in base {base}",
+    "errorBase": "Base must be from 2 to 36"
+  }
+}

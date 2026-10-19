@@ -1,0 +1,11 @@
+{
+  "title": "Conversor de números romanos: para arábicos e vice-versa",
+  "description": "Converta números em algarismos romanos e algarismos romanos em números, de 1 a 3999.",
+  "ui": {
+    "input": "Número ou algarismo romano",
+    "roman": "Em algarismos romanos",
+    "arabic": "Em algarismos arábicos",
+    "errorRange": "Algarismos romanos vão de {min} a {max}",
+    "errorRoman": "Não é um número romano válido (por exemplo, MMXXVI)"
+  }
+}

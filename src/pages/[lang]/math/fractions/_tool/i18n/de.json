@@ -1,0 +1,38 @@
+{
+  "title": "Bruchrechner: mit Brüchen rechnen und kürzen",
+  "description": "Brüche addieren, subtrahieren, multiplizieren und dividieren – das Ergebnis wird gekürzt und als Bruch, gemischte Zahl und Dezimalzahl angezeigt.",
+  "inputs": {
+    "n1": {
+      "label": "Zähler 1"
+    },
+    "d1": {
+      "label": "Nenner 1"
+    },
+    "op": {
+      "label": "Rechenart",
+      "options": {
+        "add": "Addition (+)",
+        "subtract": "Subtraktion (−)",
+        "multiply": "Multiplikation (×)",
+        "divide": "Division (÷)"
+      }
+    },
+    "n2": {
+      "label": "Zähler 2"
+    },
+    "d2": {
+      "label": "Nenner 2"
+    }
+  },
+  "outputs": {
+    "fraction": {
+      "label": "Ergebnis"
+    },
+    "mixed": {
+      "label": "Gemischte Zahl"
+    },
+    "decimal": {
+      "label": "Dezimalzahl"
+    }
+  }
+}

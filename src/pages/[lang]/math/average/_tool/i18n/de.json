@@ -1,0 +1,18 @@
+{
+  "title": "Durchschnittsrechner: Mittelwert, Median und Modus",
+  "description": "Arithmetisches Mittel, Median, Modus, Summe, Minimum und Maximum für eine beliebige Zahlenliste berechnen.",
+  "ui": {
+    "label": "Zahlen",
+    "placeholder": "Zahlen durch Leerzeichen, Zeilenumbruch oder Semikolon getrennt einfügen",
+    "mean": "Mittelwert (Durchschnitt)",
+    "median": "Median",
+    "mode": "Modus",
+    "count": "Anzahl",
+    "sum": "Summe",
+    "min": "Minimum",
+    "max": "Maximum",
+    "range": "Spannweite",
+    "noMode": "keiner – alle Werte sind verschieden",
+    "invalid": "Nicht erkannt: {list}"
+  }
+}

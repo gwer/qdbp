@@ -1,0 +1,17 @@
+{
+  "title": "Percent of total calculator: what percent X is of Y",
+  "description": "Find what percentage one number is of another — for example, 30 is 20% of 150.",
+  "inputs": {
+    "part": {
+      "label": "Part"
+    },
+    "whole": {
+      "label": "Total"
+    }
+  },
+  "outputs": {
+    "percent": {
+      "label": "Percentage"
+    }
+  }
+}

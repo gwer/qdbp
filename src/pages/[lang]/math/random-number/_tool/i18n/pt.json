@@ -1,0 +1,16 @@
+{
+  "title": "Gerador de números aleatórios: sorteio entre dois números",
+  "description": "Sorteie um ou vários números aleatórios entre dois valores, com ou sem repetição — para sorteios, rifas e jogos.",
+  "ui": {
+    "from": "De",
+    "to": "Até",
+    "count": "Quantidade",
+    "unique": "Sem repetir",
+    "sort": "Em ordem crescente",
+    "generate": "Sortear",
+    "result": "Números sorteados",
+    "errorRange": "“De” não pode ser maior que “Até”",
+    "errorCount": "A quantidade deve ser de 1 a {max}",
+    "errorUnique": "Sem repetição, este intervalo tem só {max} números"
+  }
+}

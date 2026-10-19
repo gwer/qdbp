@@ -1,0 +1,17 @@
+{
+  "title": "Prozentsatz-Rechner: wie viel Prozent sind X von Y",
+  "description": "Berechnen Sie, wie viel Prozent eine Zahl von einer anderen ist – zum Beispiel sind 30 von 150 genau 20 %.",
+  "inputs": {
+    "part": {
+      "label": "Prozentwert (Teil)"
+    },
+    "whole": {
+      "label": "Grundwert (Ganzes)"
+    }
+  },
+  "outputs": {
+    "percent": {
+      "label": "Prozentsatz"
+    }
+  }
+}

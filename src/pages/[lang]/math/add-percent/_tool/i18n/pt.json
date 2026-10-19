@@ -1,0 +1,27 @@
+{
+  "title": "Acréscimo e desconto percentual: número ± X%",
+  "description": "Some uma porcentagem a um número ou desconte: por exemplo, 1.000 + 20% = 1.200 e 1.000 − 20% = 800.",
+  "inputs": {
+    "value": {
+      "label": "Número"
+    },
+    "op": {
+      "label": "Operação",
+      "options": {
+        "add": "Somar",
+        "subtract": "Subtrair"
+      }
+    },
+    "percent": {
+      "label": "Porcentagem"
+    }
+  },
+  "outputs": {
+    "result": {
+      "label": "Resultado"
+    },
+    "part": {
+      "label": "Valor da porcentagem"
+    }
+  }
+}

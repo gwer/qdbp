@@ -6,6 +6,7 @@ export const percentOf = (percent: number, value: number) => (percent * value) /
 
 export const def = defineCalculator({
   order: 10,
+  related: ['what-percent', 'add-percent', 'percent-change'],
   inputs: {
     // Отрицательные значения в «X% от числа» почти не встречаются, а min: 0 даёт цифровую клавиатуру на телефоне.
     percent: { type: 'percent', default: 20, min: 0 },

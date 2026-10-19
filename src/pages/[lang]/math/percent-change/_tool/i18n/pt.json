@@ -1,0 +1,31 @@
+{
+  "title": "Variação percentual: quanto um valor aumentou ou diminuiu",
+  "description": "Calcule em quantos por cento um valor aumentou ou diminuiu: preços, salários, cotações ou qualquer outro número.",
+  "inputs": {
+    "from": {
+      "label": "Valor inicial"
+    },
+    "to": {
+      "label": "Valor final"
+    }
+  },
+  "outputs": {
+    "change": {
+      "label": "Variação"
+    },
+    "direction": {
+      "label": "Tendência"
+    },
+    "difference": {
+      "label": "Diferença"
+    },
+    "ratio": {
+      "label": "Razão (final ÷ inicial)"
+    }
+  },
+  "ui": {
+    "increase": "Aumento",
+    "decrease": "Queda",
+    "noChange": "Sem variação"
+  }
+}

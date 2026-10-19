@@ -1,0 +1,16 @@
+{
+  "title": "Generador de números aleatorios: sorteos sin repetir",
+  "description": "Genera uno o varios números aleatorios entre dos valores, con o sin repetición: para sorteos, rifas y juegos.",
+  "ui": {
+    "from": "Desde",
+    "to": "Hasta",
+    "count": "Cantidad",
+    "unique": "Sin repetir",
+    "sort": "De menor a mayor",
+    "generate": "Generar",
+    "result": "Números aleatorios",
+    "errorRange": "«Desde» no puede ser mayor que «Hasta»",
+    "errorCount": "La cantidad debe estar entre 1 y {max}",
+    "errorUnique": "Sin repetir, en este rango solo hay {max} números"
+  }
+}

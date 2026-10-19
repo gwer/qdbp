@@ -1,0 +1,17 @@
+{
+  "title": "Calculadora de percentual: quantos por cento X é de Y",
+  "description": "Descubra quantos por cento um número representa de outro: por exemplo, 30 é 20% de 150.",
+  "inputs": {
+    "part": {
+      "label": "Parte"
+    },
+    "whole": {
+      "label": "Total"
+    }
+  },
+  "outputs": {
+    "percent": {
+      "label": "Percentual"
+    }
+  }
+}

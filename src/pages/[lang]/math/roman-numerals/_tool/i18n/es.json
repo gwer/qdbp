@@ -1,0 +1,11 @@
+{
+  "title": "Conversor de números romanos a arábigos y viceversa",
+  "description": "Convierte números a números romanos y números romanos a arábigos, del 1 al 3999.",
+  "ui": {
+    "input": "Número o número romano",
+    "roman": "En números romanos",
+    "arabic": "En números arábigos",
+    "errorRange": "Con números romanos se escriben del {min} al {max}",
+    "errorRoman": "No es un número romano válido (por ejemplo, MMXXVI)"
+  }
+}

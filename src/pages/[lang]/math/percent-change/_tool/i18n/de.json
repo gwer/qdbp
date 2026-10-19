@@ -1,0 +1,31 @@
+{
+  "title": "Prozentuale Veränderung: Anstieg oder Rückgang in Prozent",
+  "description": "Um wie viel Prozent ist ein Wert gestiegen oder gesunken? Für Preise, Gehälter, Kurse und andere Zahlen.",
+  "inputs": {
+    "from": {
+      "label": "Alter Wert"
+    },
+    "to": {
+      "label": "Neuer Wert"
+    }
+  },
+  "outputs": {
+    "change": {
+      "label": "Veränderung"
+    },
+    "direction": {
+      "label": "Richtung"
+    },
+    "difference": {
+      "label": "Differenz"
+    },
+    "ratio": {
+      "label": "Verhältnis (neu ÷ alt)"
+    }
+  },
+  "ui": {
+    "increase": "Anstieg",
+    "decrease": "Rückgang",
+    "noChange": "Keine Veränderung"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Calculadora de média, mediana e moda",
+  "description": "Calcule a média aritmética, a mediana, a moda, a soma, o mínimo e o máximo de qualquer lista de números.",
+  "ui": {
+    "label": "Números",
+    "placeholder": "Cole os números separados por espaço, quebra de linha ou ponto e vírgula",
+    "mean": "Média aritmética",
+    "median": "Mediana",
+    "mode": "Moda",
+    "count": "Quantidade",
+    "sum": "Soma",
+    "min": "Mínimo",
+    "max": "Máximo",
+    "range": "Amplitude",
+    "noMode": "não há: todos os valores são diferentes",
+    "invalid": "Não reconhecido: {list}"
+  }
+}

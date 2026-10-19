@@ -1,0 +1,16 @@
+{
+  "title": "Random number generator: numbers in any range",
+  "description": "Generate one or more random numbers in a range, with or without repeats — for draws, giveaways and games.",
+  "ui": {
+    "from": "From",
+    "to": "To",
+    "count": "How many",
+    "unique": "No repeats",
+    "sort": "Sort ascending",
+    "generate": "Generate",
+    "result": "Random numbers",
+    "errorRange": "“From” can't be greater than “To”",
+    "errorCount": "Enter a count from 1 to {max}",
+    "errorUnique": "Without repeats, this range has only {max} numbers"
+  }
+}

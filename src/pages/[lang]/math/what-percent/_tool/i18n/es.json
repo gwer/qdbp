@@ -1,0 +1,17 @@
+{
+  "title": "Calculadora de tanto por ciento: qué porcentaje es X de Y",
+  "description": "Calcula qué porcentaje representa un número respecto a otro: por ejemplo, 30 es el 20 % de 150.",
+  "inputs": {
+    "part": {
+      "label": "Parte"
+    },
+    "whole": {
+      "label": "Total"
+    }
+  },
+  "outputs": {
+    "percent": {
+      "label": "Porcentaje"
+    }
+  }
+}

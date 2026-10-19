@@ -1,0 +1,11 @@
+{
+  "title": "Umrechner für römische Zahlen",
+  "description": "Zahlen in römische Zahlen umrechnen und römische Zahlen in arabische – von 1 bis 3999.",
+  "ui": {
+    "input": "Zahl oder römische Zahl",
+    "roman": "In römischen Zahlen",
+    "arabic": "In arabischen Zahlen",
+    "errorRange": "Römische Zahlen gibt es von {min} bis {max}",
+    "errorRoman": "Keine gültige römische Zahl (z. B. MMXXVI)"
+  }
+}

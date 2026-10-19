@@ -1,0 +1,31 @@
+{
+  "title": "Variación porcentual: cuánto ha subido o bajado un valor",
+  "description": "Calcula en qué porcentaje ha subido o bajado un valor: precios, sueldos, cotizaciones o cualquier otra cifra.",
+  "inputs": {
+    "from": {
+      "label": "Valor inicial"
+    },
+    "to": {
+      "label": "Valor final"
+    }
+  },
+  "outputs": {
+    "change": {
+      "label": "Variación"
+    },
+    "direction": {
+      "label": "Tendencia"
+    },
+    "difference": {
+      "label": "Diferencia"
+    },
+    "ratio": {
+      "label": "Proporción (final ÷ inicial)"
+    }
+  },
+  "ui": {
+    "increase": "Aumento",
+    "decrease": "Disminución",
+    "noChange": "Sin cambios"
+  }
+}

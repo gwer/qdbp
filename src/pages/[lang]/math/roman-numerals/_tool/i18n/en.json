@@ -1,0 +1,11 @@
+{
+  "title": "Roman numeral converter: Roman to numbers and back",
+  "description": "Convert numbers to Roman numerals and Roman numerals to numbers, from 1 to 3,999.",
+  "ui": {
+    "input": "Number or Roman numeral",
+    "roman": "Roman numerals",
+    "arabic": "Number",
+    "errorRange": "Roman numerals cover {min} to {max}",
+    "errorRoman": "Not a valid Roman numeral (for example, MMXXVI)"
+  }
+}

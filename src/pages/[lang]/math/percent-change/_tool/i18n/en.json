@@ -1,0 +1,31 @@
+{
+  "title": "Percentage change calculator: increase or decrease",
+  "description": "Find the percentage increase or decrease between an old and a new value — prices, salaries, rates or any other numbers.",
+  "inputs": {
+    "from": {
+      "label": "Old value"
+    },
+    "to": {
+      "label": "New value"
+    }
+  },
+  "outputs": {
+    "change": {
+      "label": "Change"
+    },
+    "direction": {
+      "label": "Direction"
+    },
+    "difference": {
+      "label": "Difference"
+    },
+    "ratio": {
+      "label": "Ratio (new ÷ old)"
+    }
+  },
+  "ui": {
+    "increase": "Increase",
+    "decrease": "Decrease",
+    "noChange": "No change"
+  }
+}
