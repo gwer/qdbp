@@ -16,7 +16,7 @@
 - [x] Layout, дизайн-токены, тёмная тема (по системной настройке), мобильная вёрстка, свой минимальный CSS.
 - [x] i18n-слой: словари UI, роутинг `/{lang}/...`, hreflang, переключатель языка, строгие проверки переводов.
 - [x] Модель инструмента + движок калькуляторов (см. [03](03-tech.md#5-модель-инструмента)).
-- [~] SEO-база: мета-теги, canonical, hreflang, sitemap, JSON-LD (WebApplication, BreadcrumbList) — есть; статической OG-картинки пока нет.
+- [x] SEO-база: мета-теги, canonical, hreflang, sitemap, JSON-LD (WebApplication, BreadcrumbList), статическая OG-картинка (временная, до логотипа).
 - [x] Страницы: главная языка, хаб категории, инструмент, 404. Корень — 302 на `/en/`. Служебные страницы не делаем до фазы 4 (см. там).
 - [x] `pnpm check` (типы, тесты, сборка, `urls.txt`, внутренние ссылки, бюджеты, отчёт покрытия).
 - [x] Деплой: Cloudflare Workers Builds из `github.com/gwer/qdbp`, команда сборки `pnpm check`. Домен qdbp.net (регистратор Namecheap, DNS в Cloudflare), Always Use HTTPS, www → 301 на qdbp.net (Redirect Rule).
