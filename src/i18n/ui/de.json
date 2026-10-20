@@ -28,7 +28,7 @@
       "integer": "Bitte eine ganze Zahl eingeben",
       "min": "Mindestens {min}",
       "max": "Höchstens {max}",
-      "date": "Bitte ein Datum wählen",
+      "date": "Bitte Datum als TT.MM.JJJJ eingeben",
       "duration": "Zeit im Format h:mm eingeben, z. B. 1:30",
       "time": "Bitte eine Uhrzeit angeben",
       "durationSeconds": "Zeit als h:mm:ss oder mm:ss eingeben, z. B. 45:30"
@@ -42,6 +42,10 @@
       "label": "Einheiten",
       "metric": "Metrisch",
       "imperial": "US-Einheiten"
+    },
+    "date": {
+      "placeholder": "TT.MM.JJJJ",
+      "pick": "Im Kalender auswählen"
     }
   },
   "footer": {

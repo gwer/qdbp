@@ -15,7 +15,7 @@ export const def = defineCalculator({
   order: 70,
   related: ['days-between', 'add-to-date'],
   inputs: {
-    ts: { type: 'integer', default: 1767225600 },
+    ts: { type: 'integer', default: 1767225600, defaultBy: { unit: { s: 1767225600, ms: 1767225600000 } } },
     unit: { type: 'select', options: ['s', 'ms'], default: 's' },
   },
   compute: ({ ts, unit }) => fromTimestamp(ts, unit),

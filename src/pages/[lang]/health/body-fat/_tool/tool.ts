@@ -45,7 +45,7 @@ export const def = defineCalculator({
     height: { type: 'quantity', unit: 'cm', imperial: 'in', default: 178, defaultImperial: 70, min: 100, max: 250 },
     neck: cm(38, 15),
     waist: cm(86, 34),
-    hip: cm(98, 38.5),
+    hip: { ...cm(98, 38.5), showIf: { sex: 'female' } },
   },
   compute: ({ sex, weight, height, neck, waist, hip }) => bodyFat(sex, weight, height, neck, waist, hip),
   outputs: {

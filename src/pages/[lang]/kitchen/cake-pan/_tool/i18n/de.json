@@ -14,7 +14,7 @@
       "label": "Durchmesser oder Seitenlänge"
     },
     "fromB": {
-      "label": "Breite (rechteckige Form)"
+      "label": "Breite"
     },
     "toShape": {
       "label": "Ihre Form",
@@ -28,7 +28,7 @@
       "label": "Durchmesser oder Seitenlänge"
     },
     "toB": {
-      "label": "Breite (rechteckige Form)"
+      "label": "Breite"
     }
   },
   "outputs": {

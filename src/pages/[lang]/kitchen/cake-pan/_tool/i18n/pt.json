@@ -14,7 +14,7 @@
       "label": "Diâmetro ou lado"
     },
     "fromB": {
-      "label": "Largura (forma retangular)"
+      "label": "Largura"
     },
     "toShape": {
       "label": "Sua forma",
@@ -28,7 +28,7 @@
       "label": "Diâmetro ou lado"
     },
     "toB": {
-      "label": "Largura (forma retangular)"
+      "label": "Largura"
     }
   },
   "outputs": {

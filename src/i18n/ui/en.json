@@ -28,7 +28,7 @@
       "integer": "Enter a whole number",
       "min": "Must be at least {min}",
       "max": "Must be at most {max}",
-      "date": "Pick a date",
+      "date": "Enter a date as MM/DD/YYYY",
       "duration": "Enter time as h:mm, e.g. 1:30",
       "time": "Enter a time",
       "durationSeconds": "Enter a time as h:mm:ss or mm:ss, e.g. 45:30"
@@ -42,6 +42,10 @@
       "label": "Units",
       "metric": "Metric",
       "imperial": "US"
+    },
+    "date": {
+      "placeholder": "MM/DD/YYYY",
+      "pick": "Pick from calendar"
     }
   },
   "footer": {

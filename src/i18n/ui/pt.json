@@ -29,7 +29,7 @@
       "integer": "Digite um número inteiro",
       "min": "Deve ser no mínimo {min}",
       "max": "Deve ser no máximo {max}",
-      "date": "Escolha uma data",
+      "date": "Digite a data como DD/MM/AAAA",
       "duration": "Digite o tempo no formato h:mm, por exemplo 1:30",
       "time": "Informe um horário",
       "durationSeconds": "Digite o tempo como h:mm:ss ou mm:ss, por exemplo 45:30"
@@ -43,6 +43,10 @@
       "label": "Unidades",
       "metric": "Métricas",
       "imperial": "Americanas"
+    },
+    "date": {
+      "placeholder": "DD/MM/AAAA",
+      "pick": "Escolher no calendário"
     }
   },
   "footer": {

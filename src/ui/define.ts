@@ -7,12 +7,25 @@ import type { UnitId } from '@/lib/units';
 /** Значения по умолчанию для отдельных языков (ставка НДС страны, привычный формат, правдоподобная сумма). */
 type ByLang<V> = { byLang?: Partial<Record<Lang, V>> };
 
+/**
+ * Значение по умолчанию, зависящее от выбора в select: { unit: { l100km: 8, mpgus: 28 } }.
+ * Важнее byLang. При смене выбора поле получает новое значение, только если в нём стояло прежнее по умолчанию.
+ */
+type DefaultBy<V> = { defaultBy?: Record<string, Partial<Record<string, V>>> };
+
+/**
+ * Поле показывается, только если select'ы имеют указанные значения: { sex: 'female' } или { shape: ['rect', 'square'] }.
+ * Скрытое поле не проверяется и не пишется в URL, в расчёт уходит его значение по умолчанию.
+ */
+type ShowIf = { showIf?: Record<string, string | readonly string[]> };
+
 export type NumberInput = {
   type: 'number' | 'integer' | 'percent';
   default: number;
   min?: number;
   max?: number;
-} & ByLang<number>;
+} & ByLang<number> &
+  DefaultBy<number>;
 export type SelectInput = { type: 'select'; options: readonly string[]; default: string } & ByLang<string>;
 /** default: 'YYYY-MM-DD', 'today', 'today±N' или 'next-MM-DD' (ближайшая такая дата). Относительные — только в браузере. */
 export type DateInput = { type: 'date'; default: string };
@@ -22,7 +35,7 @@ export type DateInput = { type: 'date'; default: string };
  */
 export type DurationInput = { type: 'duration'; default: number; seconds?: boolean };
 /** Время на часах; default: 'HH:MM' или 'now' (только в браузере); значение — минуты от полуночи. */
-export type TimeInput = { type: 'time'; default: string };
+export type TimeInput = { type: 'time'; default: string } & DefaultBy<string>;
 /**
  * Величина с единицей измерения. Значение в compute — всегда в unit (метрическая единица инструмента).
  * imperial — единица для американской системы (если не задана, поле не переключается).
@@ -37,7 +50,7 @@ export type QuantityInput = {
   min?: number;
   max?: number;
 } & ByLang<number>;
-export type InputSpec = NumberInput | SelectInput | DateInput | DurationInput | TimeInput | QuantityInput;
+export type InputSpec = (NumberInput | SelectInput | DateInput | DurationInput | TimeInput | QuantityInput) & ShowIf;
 
 export type OutputSpec =
   | { type?: NumberKind; digits?: number }

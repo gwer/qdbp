@@ -2,10 +2,12 @@ import { useEffect, useState } from 'preact/hooks';
 import { LANG_META, type ClockMode, type Lang } from '@/i18n/config';
 import { formatTyped, nowClock, parseClock, parseTyped } from '@/lib/clock';
 import { daysBetween, isValidDate, todayISO } from '@/lib/date';
+import { formatDateInput, parseDateInput } from '@/lib/date-input';
 import { formatClock } from '@/lib/format';
 import { allZones, formatOffset, offsetMinutes, utcToZoned, zonedToUtc } from '@/lib/timezone';
 import type { ToolProps } from '@/ui/define';
 import { readPref, writePref } from '@/ui/prefs';
+import { DateField } from '@/ui/DateField';
 import { TimeField } from '@/ui/TimeField';
 import { cityName } from './cities';
 
@@ -30,7 +32,7 @@ function genericName(zone: string, locale: string, ms: number) {
 export function TimezoneConverter({ lang, t }: ToolProps) {
   const locale = LANG_META[lang].intl;
   const [clock, setClock] = useState<ClockMode>(LANG_META[lang].clock);
-  const [date, setDate] = useState('');
+  const [dateText, setDateText] = useState('');
   const [time, setTime] = useState('');
   const [from, setFrom] = useState(DEFAULTS[lang].from);
   const [targets, setTargets] = useState(DEFAULTS[lang].to);
@@ -47,7 +49,7 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
     const own = Intl.DateTimeFormat().resolvedOptions().timeZone;
     setClock(mode);
     setZones(list);
-    setDate(isValidDate(params.get('date') ?? '') ? params.get('date')! : todayISO());
+    setDateText(formatDateInput(isValidDate(params.get('date') ?? '') ? params.get('date')! : todayISO(), lang));
     const qt = parseClock(params.get('time') ?? '');
     setTime(formatTyped(qt ?? parseClock(nowClock())!, mode));
     setFrom(valid(params.get('from')) ? params.get('from')! : valid(own) ? own : from);
@@ -64,7 +66,8 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
   const shortDate = (iso: string) =>
     new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
   const minutes = parseTyped(time, clock);
-  const ms = minutes !== null && isValidDate(date) ? zonedToUtc(from, date, minutes) : null;
+  const date = parseDateInput(dateText, lang);
+  const ms = minutes !== null && date ? zonedToUtc(from, date, minutes) : null;
 
   const switchClock = (m: ClockMode) => {
     if (minutes !== null) setTime(formatTyped(minutes, m));
@@ -96,7 +99,11 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
       <div class="calc-inputs">
         <div class="field">
           <label for="tz-date">{t('ui.date')}</label>
-          <input id="tz-date" type="date" value={date} onInput={(e) => (setDate(e.currentTarget.value), write({ date: e.currentTarget.value }))} />
+          <DateField common={{ id: 'tz-date', value: dateText }} raw={dateText} lang={lang} t={t} onChange={(v) => {
+            setDateText(v);
+            const iso = parseDateInput(v, lang);
+            if (iso) write({ date: iso });
+          }} />
         </div>
         <div class="field">
           <label for="tz-time">{t('ui.time')}</label>
@@ -113,14 +120,15 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
           </select>
         </div>
       </div>
-      {(minutes === null || !isValidDate(date)) && date && <p class="field-error">{t('calc.error.time')}</p>}
+      {dateText && !date && <p class="field-error">{t('calc.error.date')}</p>}
+      {time && minutes === null && <p class="field-error">{t('calc.error.time')}</p>}
 
       <div class="table-wrap tz-table">
         <table>
           <tbody>
             {targets.map((z) => {
               const local = ms === null ? null : utcToZoned(z, ms);
-              const shift = local && isValidDate(date) ? daysBetween(date, local.date) : 0;
+              const shift = local && date ? daysBetween(date, local.date) : 0;
               return (
                 <tr key={z}>
                   <td>

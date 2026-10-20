@@ -14,7 +14,7 @@
       "label": "Diameter or side length"
     },
     "fromB": {
-      "label": "Width (rectangular pans)"
+      "label": "Width"
     },
     "toShape": {
       "label": "Your pan",
@@ -28,7 +28,7 @@
       "label": "Diameter or side length"
     },
     "toB": {
-      "label": "Width (rectangular pans)"
+      "label": "Width"
     }
   },
   "outputs": {

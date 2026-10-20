@@ -37,7 +37,7 @@ export const def = defineCalculator({
   inputs: {
     distance: { type: 'quantity', unit: 'km', imperial: 'mi', default: 500, defaultImperial: 300, min: 0 },
     unit: { type: 'select', options: ['l100km', 'kml', 'mpgus', 'mpguk'], default: 'l100km', byLang: { en: 'mpgus', pt: 'kml' } },
-    economy: { type: 'number', default: 8, min: 0, byLang: { en: 28, pt: 12 } },
+    economy: { type: 'number', default: 8, min: 0, defaultBy: { unit: { l100km: 8, kml: 12, mpgus: 28, mpguk: 40 } } },
     price: { type: 'number', default: 1.7, min: 0, byLang: { ru: 62, en: 3.5, es: 1.55, de: 1.75, pt: 6.2 } },
     people: { type: 'integer', default: 2, min: 1, max: 100 },
   },

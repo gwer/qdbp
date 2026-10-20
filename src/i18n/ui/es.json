@@ -29,7 +29,7 @@
       "integer": "Introduce un número entero",
       "min": "Debe ser al menos {min}",
       "max": "Debe ser como máximo {max}",
-      "date": "Elige una fecha",
+      "date": "Escribe la fecha como DD/MM/AAAA",
       "duration": "Introduce el tiempo en formato h:mm, por ejemplo 1:30",
       "time": "Indica una hora",
       "durationSeconds": "Introduce el tiempo como h:mm:ss o mm:ss, por ejemplo 45:30"
@@ -43,6 +43,10 @@
       "label": "Unidades",
       "metric": "Métricas",
       "imperial": "EE. UU."
+    },
+    "date": {
+      "placeholder": "DD/MM/AAAA",
+      "pick": "Elegir en el calendario"
     }
   },
   "footer": {
