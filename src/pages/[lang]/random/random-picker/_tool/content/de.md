@@ -2,6 +2,8 @@
 
 Liste einfügen – ein Eintrag pro Zeile: Namen, Nummern, Ideen fürs Abendessen. Anzahl wählen und „Auslosen“ drücken. Bei mehreren Gewinnern wird niemand doppelt gezogen.
 
+Wird ein einzelner Gewinner gezogen, dreht sich ein Glücksrad und bleibt beim Ergebnis stehen. Der Gewinner steht vorher fest – ermittelt von einem kryptografisch sicheren Zufallsgenerator; das Rad zeigt ihn nur an.
+
 ## Ist das fair?
 
 Gelost wird mit dem kryptografisch sicheren Zufallsgenerator Ihres Browsers (`crypto.getRandomValues`) und gleichverteilt: Jeder Eintrag hat genau die gleiche Chance. Die Liste verlässt Ihr Gerät nicht.

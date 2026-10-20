@@ -22,7 +22,7 @@ export const def = defineCalculator({
   related: ['calorie-calculator', 'water-intake'],
   inputs: {
     mode: { type: 'select', options: ['wake', 'bed'], default: 'wake' },
-    time: { type: 'time', default: '07:00', defaultBy: { mode: { wake: '07:00', bed: '23:00' } } },
+    time: { type: 'time', default: '07:00', defaultBy: { mode: { wake: '07:00', bed: 'now' } } },
     fallAsleep: { type: 'integer', default: 15, min: 0, max: 120 },
   },
   compute: ({ mode, time, fallAsleep }) => sleepTimes(mode, time, fallAsleep),

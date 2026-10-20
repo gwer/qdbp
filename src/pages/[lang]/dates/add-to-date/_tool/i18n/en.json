@@ -19,6 +19,7 @@
       "label": "Unit",
       "options": {
         "days": "Days",
+        "workdays": "Business days (Mon–Fri)",
         "weeks": "Weeks",
         "months": "Months",
         "years": "Years"

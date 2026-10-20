@@ -2,6 +2,8 @@
 
 Paste a list with one item per line — names, numbers, dinner ideas. Choose how many to pick and press "Pick". With several winners, nobody is picked twice.
 
+When you pick a single winner, a wheel of names spins and stops on the result. The winner is decided up front by a cryptographically secure generator — the wheel just shows it.
+
 ## Is it fair?
 
 The pick uses your browser's cryptographically secure random number generator (`crypto.getRandomValues`) with a uniform distribution, so every item has exactly the same chance. Your list never leaves your device.

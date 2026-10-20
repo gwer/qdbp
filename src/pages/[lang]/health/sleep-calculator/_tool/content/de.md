@@ -1,6 +1,6 @@
 ## So funktioniert's
 
-Wählen Sie, was feststeht: wann Sie aufstehen müssen oder wann Sie ins Bett gehen. Der Rechner schlägt eine Schlafens- oder Weckzeit vor, damit Sie am Ende eines Schlafzyklus aufwachen und nicht mittendrin.
+Wählen Sie, was feststeht: wann Sie aufstehen müssen oder wann Sie ins Bett gehen. Der Rechner schlägt eine Schlafens- oder Weckzeit vor, damit Sie am Ende eines Schlafzyklus aufwachen und nicht mittendrin. Gehen Sie gleich schlafen? Wählen Sie „Ins Bett gehen um“ – die aktuelle Uhrzeit ist schon eingetragen.
 
 ## So wird gerechnet
 

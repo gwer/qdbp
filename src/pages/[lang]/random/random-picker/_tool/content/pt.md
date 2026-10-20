@@ -2,6 +2,8 @@
 
 Cole uma lista com uma opção por linha: nomes, números, ideias para o jantar. Escolha quantos sortear e clique em "Sortear". Com vários vencedores, ninguém é sorteado duas vezes.
 
+Quando você sorteia um único vencedor, uma roleta gira e para no resultado. O vencedor é definido antes por um gerador criptograficamente seguro — a roleta só o mostra.
+
 ## É justo?
 
 O sorteio usa o gerador de números aleatórios criptograficamente seguro do navegador (`crypto.getRandomValues`), com distribuição uniforme: todas as opções têm exatamente a mesma chance. A lista não sai do seu dispositivo.

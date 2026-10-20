@@ -10,6 +10,7 @@
       "one": "{count} Eintrag",
       "other": "{count} Einträge"
     },
-    "remove": "Gezogene aus der Liste entfernen"
+    "remove": "Gezogene aus der Liste entfernen",
+    "wheel": "Glücksrad mit den Einträgen aus der Liste"
   }
 }

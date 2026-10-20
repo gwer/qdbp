@@ -1,6 +1,6 @@
 ## Cómo usarlo
 
-Elige lo que sabes: a qué hora tienes que despertarte o a qué hora te acuestas. La calculadora propone la hora de acostarte o del despertador para que despiertes al final de un ciclo de sueño y no en mitad de uno.
+Elige lo que sabes: a qué hora tienes que despertarte o a qué hora te acuestas. La calculadora propone la hora de acostarte o del despertador para que despiertes al final de un ciclo de sueño y no en mitad de uno. ¿Te acuestas ahora mismo? Elige «Acostarme a las»: ya aparece la hora actual.
 
 ## Cómo se calcula
 

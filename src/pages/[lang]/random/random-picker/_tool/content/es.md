@@ -2,6 +2,8 @@
 
 Pega una lista con una opción por línea: nombres, números, ideas para la cena. Indica cuántas quieres elegir y pulsa «Sortear». Si hay varios ganadores, ninguno se repite.
 
+Si eliges un solo ganador, gira una ruleta y se detiene en el resultado. El ganador se decide de antemano con un generador criptográficamente seguro; la ruleta solo lo muestra.
+
 ## ¿Es justo?
 
 El sorteo usa el generador de números aleatorios criptográficamente seguro de tu navegador (`crypto.getRandomValues`) con distribución uniforme: todas las opciones tienen exactamente la misma probabilidad. La lista no sale de tu dispositivo.

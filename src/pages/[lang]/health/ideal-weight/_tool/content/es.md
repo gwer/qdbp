@@ -1,6 +1,6 @@
 ## Cómo usarlo
 
-Elige el sexo e introduce tu estatura: verás el peso ideal según cuatro fórmulas conocidas y el rango de peso saludable según el índice de masa corporal.
+Elige el sexo e introduce tu estatura: verás el peso ideal según cuatro fórmulas conocidas y el rango de peso saludable según el índice de masa corporal. Las fórmulas no coinciden, así que el resultado principal es el rango entre ellas; debajo, cada fórmula y el peso normal según el IMC.
 
 ## Fórmulas
 

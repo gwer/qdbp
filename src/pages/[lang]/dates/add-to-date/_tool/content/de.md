@@ -2,6 +2,8 @@
 
 Wählen Sie ein Datum, die Rechenart und die Anzahl der Tage, Wochen, Monate oder Jahre. Sie sehen das Ergebnisdatum mit Wochentag und die Differenz in Tagen.
 
+„Werktage“ überspringen Samstage und Sonntage – praktisch für Fristen wie „innerhalb von 10 Werktagen“. Feiertage werden nicht berücksichtigt.
+
 ## Wie Monate und Jahre addiert werden
 
 Monate sind unterschiedlich lang. Deshalb bleibt der Tag des Monats erhalten; gibt es diesen Tag im Zielmonat nicht, wird der letzte Tag des Monats genommen: 31. Januar + 1 Monat = **28. Februar** (im Schaltjahr 29. Februar).

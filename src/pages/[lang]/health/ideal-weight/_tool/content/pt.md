@@ -1,6 +1,6 @@
 ## Como usar
 
-Escolha o sexo e informe a altura: você verá o peso ideal por quatro fórmulas conhecidas e a faixa de peso saudável pelo índice de massa corporal.
+Escolha o sexo e informe a altura: você verá o peso ideal por quatro fórmulas conhecidas e a faixa de peso saudável pelo índice de massa corporal. As fórmulas não concordam, por isso o resultado principal é a faixa entre elas; abaixo, cada fórmula e o peso normal pelo IMC.
 
 ## Fórmulas
 

@@ -1,6 +1,6 @@
 ## Como usar
 
-Escolha o que você já sabe: a hora em que precisa acordar ou a hora em que vai deitar. A calculadora sugere o horário de dormir ou do despertador para você acordar no fim de um ciclo de sono, e não no meio dele.
+Escolha o que você já sabe: a hora em que precisa acordar ou a hora em que vai deitar. A calculadora sugere o horário de dormir ou do despertador para você acordar no fim de um ciclo de sono, e não no meio dele. Vai dormir agora? Escolha «Deitar às» — o horário atual já vem preenchido.
 
 ## Como é calculado
 

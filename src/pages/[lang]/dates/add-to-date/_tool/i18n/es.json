@@ -19,6 +19,7 @@
       "label": "Unidad",
       "options": {
         "days": "Días",
+        "workdays": "Días hábiles (lun–vie)",
         "weeks": "Semanas",
         "months": "Meses",
         "years": "Años"

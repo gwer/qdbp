@@ -17,3 +17,15 @@ describe('shift', () => {
     expect(shift('2024-02-29', 4, 'years').result).toBe('2028-02-29');
   });
 });
+
+describe('рабочие дни', () => {
+  it('пн 19.10.2026 + 10 рабочих = пн 02.11; пт + 1 = пн; сб + 1 = пн', () => {
+    expect(shift('2026-10-19', 10, 'workdays').result).toBe('2026-11-02');
+    expect(shift('2026-10-23', 1, 'workdays').result).toBe('2026-10-26');
+    expect(shift('2026-10-24', 1, 'workdays').result).toBe('2026-10-26');
+  });
+
+  it('вычитание: пн − 1 рабочий = пт', () => {
+    expect(shift('2026-10-26', -1, 'workdays').result).toBe('2026-10-23');
+  });
+});

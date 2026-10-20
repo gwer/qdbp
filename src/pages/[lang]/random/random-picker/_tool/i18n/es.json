@@ -11,6 +11,7 @@
       "many": "{count} opciones",
       "other": "{count} opciones"
     },
-    "remove": "Quitar los elegidos de la lista"
+    "remove": "Quitar los elegidos de la lista",
+    "wheel": "Ruleta con las opciones de la lista"
   }
 }

@@ -1,6 +1,6 @@
 ## How to use
 
-Choose what you know: the time you need to wake up or the time you're going to bed. The calculator suggests a bedtime or alarm time so that you wake at the end of a sleep cycle rather than in the middle of one.
+Choose what you know: the time you need to wake up or the time you're going to bed. The calculator suggests a bedtime or alarm time so that you wake at the end of a sleep cycle rather than in the middle of one. Going to bed right now? Choose “Go to bed at” — the current time is filled in.
 
 ## How it's calculated
 

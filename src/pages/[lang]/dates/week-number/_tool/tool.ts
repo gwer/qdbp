@@ -1,6 +1,7 @@
 import { isoWeek, usWeek } from '@/lib/date';
 import { defineCalculator } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
+import { Weeks } from './Weeks';
 
 export const def = defineCalculator({
   order: 60,
@@ -19,6 +20,7 @@ export const def = defineCalculator({
     start: { type: 'date', style: 'full' },
     end: { type: 'date', style: 'full' },
   },
+  Extra: Weeks,
 });
 
 export default island(def);

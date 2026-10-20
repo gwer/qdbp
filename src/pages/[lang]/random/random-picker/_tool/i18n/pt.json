@@ -11,6 +11,7 @@
       "many": "{count} opções",
       "other": "{count} opções"
     },
-    "remove": "Tirar os sorteados da lista"
+    "remove": "Tirar os sorteados da lista",
+    "wheel": "Roleta com as opções da lista"
   }
 }

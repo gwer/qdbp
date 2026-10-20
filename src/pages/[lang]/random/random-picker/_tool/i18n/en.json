@@ -10,6 +10,7 @@
       "one": "{count} item",
       "other": "{count} items"
     },
-    "remove": "Remove picked from the list"
+    "remove": "Remove picked from the list",
+    "wheel": "Wheel of names with the options from the list"
   }
 }

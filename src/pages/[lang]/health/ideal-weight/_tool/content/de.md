@@ -1,6 +1,6 @@
 ## So funktioniert's
 
-Geschlecht wählen und Körpergröße eingeben – Sie sehen Ihr Idealgewicht nach vier bekannten Formeln und den Normalgewichtsbereich nach dem Body-Mass-Index.
+Geschlecht wählen und Körpergröße eingeben – Sie sehen Ihr Idealgewicht nach vier bekannten Formeln und den Normalgewichtsbereich nach dem Body-Mass-Index. Die Formeln liefern unterschiedliche Werte, deshalb ist das Hauptergebnis die Spanne dazwischen; darunter jede Formel einzeln und das Normalgewicht nach BMI.
 
 ## Formeln
 

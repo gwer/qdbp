@@ -14,6 +14,9 @@
     }
   },
   "outputs": {
+    "range": {
+      "label": "Peso ideal según las fórmulas"
+    },
     "devine": {
       "label": "Fórmula de Devine"
     },

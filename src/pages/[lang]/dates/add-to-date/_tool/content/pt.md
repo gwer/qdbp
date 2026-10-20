@@ -2,6 +2,8 @@
 
 Escolha uma data, a operação e a quantidade de dias, semanas, meses ou anos. Você vê a data resultante com o dia da semana e a diferença em dias.
 
+«Dias úteis» pulam sábados e domingos — útil para prazos como «10 dias úteis». Feriados não são considerados.
+
 ## Como meses e anos são somados
 
 Os meses têm tamanhos diferentes, então o dia do mês é mantido e, se esse dia não existir no mês de destino, é usado o último dia do mês: 31 de janeiro + 1 mês = **28 de fevereiro** (29 em ano bissexto).

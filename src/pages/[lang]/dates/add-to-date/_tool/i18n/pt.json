@@ -19,6 +19,7 @@
       "label": "Unidade",
       "options": {
         "days": "Dias",
+        "workdays": "Dias úteis (seg–sex)",
         "weeks": "Semanas",
         "months": "Meses",
         "years": "Anos"

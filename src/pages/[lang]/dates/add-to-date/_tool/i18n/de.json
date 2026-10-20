@@ -19,6 +19,7 @@
       "label": "Einheit",
       "options": {
         "days": "Tage",
+        "workdays": "Werktage (Mo–Fr)",
         "weeks": "Wochen",
         "months": "Monate",
         "years": "Jahre"

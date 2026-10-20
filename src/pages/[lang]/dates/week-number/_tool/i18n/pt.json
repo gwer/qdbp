@@ -26,5 +26,11 @@
     "end": {
       "label": "Último dia da semana"
     }
+  },
+  "ui": {
+    "all": {
+      "one": "Todas as semanas de {year}: {count} semana",
+      "other": "Todas as semanas de {year}: {count} semanas"
+    }
   }
 }

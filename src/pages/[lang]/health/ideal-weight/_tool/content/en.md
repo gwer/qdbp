@@ -1,6 +1,6 @@
 ## How to use
 
-Choose your sex and enter your height to see your ideal weight by four well-known formulas, plus the healthy weight range based on body mass index.
+Choose your sex and enter your height to see your ideal weight by four well-known formulas, plus the healthy weight range based on body mass index. The formulas disagree, so the main result is the range between them; each formula and the healthy BMI range are listed below.
 
 ## Formulas
 

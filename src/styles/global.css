@@ -1563,3 +1563,57 @@ rect.chart-s2 {
   gap: 6px;
   justify-content: flex-end;
 }
+
+/* Текущая строка в таблицах (неделя года и т. п.) */
+tr.row-current td {
+  font-weight: 700;
+  background: var(--surface);
+}
+
+/* Колесо фортуны (random-picker) */
+.wheel {
+  max-width: 340px;
+  margin: 16px auto 0;
+}
+
+.wheel svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.wheel-preview {
+  opacity: 0.45;
+}
+
+.wheel-s0 { fill: #3451d1; }
+.wheel-s1 { fill: #f08c3a; }
+.wheel-s2 { fill: #2e9e6a; }
+.wheel-s3 { fill: #d64b3b; }
+.wheel-s4 { fill: #8a5cd6; }
+.wheel-s5 { fill: #1f9bb5; }
+
+.wheel path[class^='wheel-s'] {
+  stroke: var(--bg);
+  stroke-width: 1.5;
+}
+
+.wheel-text {
+  fill: #fff;
+  font-weight: 600;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.wheel-hub {
+  fill: var(--bg);
+  stroke: var(--border);
+  stroke-width: 2;
+}
+
+.wheel-pointer {
+  fill: var(--text);
+  stroke: var(--bg);
+  stroke-width: 2;
+}
