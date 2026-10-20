@@ -2,6 +2,8 @@
 
 Geben Sie Länge und Breite des Raums, die Wandhöhe und die Gesamtbreite von Fenstern und Türen ein. Tragen Sie Rollenmaß und Rapport vom Etikett ein. Der Rechner zeigt, wie viele Bahnen Sie brauchen, wie viele Bahnen aus einer Rolle kommen und wie viele Rollen Sie kaufen müssen.
 
+Bei versetztem Ansatz (auf dem Etikett versetzte Pfeile) wählen Sie „Versetzter Ansatz“: Jede Bahn braucht im Schnitt einen halben Rapport mehr. Die Fläche hilft beim Kleisterbedarf.
+
 ## So wird gerechnet
 
 1. Zu tapezierender Umfang = 2 × (Länge + Breite) − Breite von Fenstern und Türen.

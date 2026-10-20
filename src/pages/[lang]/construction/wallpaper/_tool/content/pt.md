@@ -2,6 +2,8 @@
 
 Informe o comprimento e a largura do cômodo, a altura das paredes e a largura total de janelas e portas. Preencha as medidas do rolo e a repetição da estampa (rapport) que aparecem na etiqueta. A calculadora mostra quantas faixas você precisa, quantas saem de cada rolo e quantos rolos comprar.
 
+Se o encaixe for desencontrado (setas deslocadas na etiqueta), escolha «Desencontrado»: cada faixa precisa em média de meio rapport a mais. A área ajuda a calcular a cola.
+
 ## Como é calculado
 
 1. Perímetro a cobrir = 2 × (comprimento + largura) − largura de janelas e portas.

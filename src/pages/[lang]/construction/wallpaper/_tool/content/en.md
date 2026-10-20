@@ -2,6 +2,8 @@
 
 Enter the room length and width, the wall height and the total width of doors and windows. Add the roll width and length from the label and the pattern repeat, if there is one. You'll see how many strips you need, how many strips you get from one roll and how many rolls to buy.
 
+For a drop match (the label shows offset arrows), choose “Drop match”: on average each strip needs half a repeat more. The area to cover helps estimate paste.
+
 ## US wallpaper rolls
 
 In the US, wallpaper is often priced per single roll but sold in **double rolls**. A typical double roll is about 20.5 in wide and 33 ft long — roughly 56 sq ft. Those are the defaults; check your label, since European rolls are usually 0.53 × 10.05 m (about 21 in × 33 ft) and some papers are 27 in wide.

@@ -17,15 +17,18 @@ export function wallpaper(p: {
   rollWidth: number;
   rollLength: number;
   repeat: number;
+  /** Подгонка рисунка: прямая или со смещением (drop match) — тогда к полосе в среднем добавляется полраппорта. */
+  match?: 'straight' | 'drop';
 }) {
   const perimeter = Math.max(0, 2 * (p.length + p.width) - p.openings);
   const strips = Math.ceil(perimeter / p.rollWidth - 1e-9);
   const repeat = p.repeat / 100;
   const base = p.height + TRIM;
-  const strip = repeat > 0 ? Math.ceil(base / repeat - 1e-9) * repeat : base;
+  const strip = (repeat > 0 ? Math.ceil(base / repeat - 1e-9) * repeat : base) + (p.match === 'drop' ? repeat / 2 : 0);
   const perRoll = Math.floor(p.rollLength / strip + 1e-9);
   if (perRoll < 1) throw new InputError('rollTooShort');
-  return { rolls: Math.ceil(strips / perRoll), strips, perRoll, strip };
+  // Площадь оклейки — для расхода клея: ширина стен без проёмов × высота.
+  return { rolls: Math.ceil(strips / perRoll), strips, perRoll, strip, area: perimeter * p.height };
 }
 
 export const def = defineCalculator({
@@ -40,6 +43,7 @@ export const def = defineCalculator({
     rollWidth: { type: 'quantity', unit: 'm', imperial: 'in', default: 0.53, defaultImperial: 20.5, min: 0.1 },
     rollLength: { type: 'quantity', unit: 'm', imperial: 'ft', default: 10.05, defaultImperial: 33, min: 0.5 },
     repeat: { type: 'quantity', unit: 'cm', imperial: 'in', default: 0, defaultImperial: 0, min: 0, max: 200 },
+    match: { type: 'select', options: ['straight', 'drop'], default: 'straight' },
   },
   errors: ['rollTooShort'],
   compute: (v) => wallpaper(v),
@@ -48,6 +52,7 @@ export const def = defineCalculator({
     strips: { type: 'integer' },
     perRoll: { type: 'integer' },
     strip: { type: 'quantity', unit: 'm', imperial: 'ft', digits: 2 },
+    area: { type: 'quantity', unit: 'm2', imperial: 'ft2', digits: 1 },
   },
 });
 

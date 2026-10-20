@@ -52,3 +52,14 @@ describe('wallpaper (США, double roll 20,5 in × 33 ft)', () => {
     expect(r.rolls).toBe(11);
   });
 });
+
+describe('смещённый раппорт', () => {
+  it('раппорт 64 см со смещением: (2,5 + припуск) → 5 раппортов = 3,2 м, +0,32 = 3,52 м; из рулона 10,05 — 2 полосы', async () => {
+    const { wallpaper } = await import('./tool');
+    const v = { length: 5, width: 4, height: 2.5, openings: 2.2, rollWidth: 0.53, rollLength: 10.05, repeat: 64 };
+    const r = wallpaper({ ...v, match: 'drop' });
+    expect(r.strip).toBeCloseTo(3.52, 9);
+    expect(r.perRoll).toBe(2);
+    expect(wallpaper(v).strip).toBeCloseTo(3.2, 9);
+  });
+});

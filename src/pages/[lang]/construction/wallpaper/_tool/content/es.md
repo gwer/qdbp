@@ -2,6 +2,8 @@
 
 Introduce el largo y el ancho de la habitación, la altura de las paredes y el ancho total de ventanas y puertas. Añade las medidas del rollo y la repetición del dibujo (rapport) que figuran en la etiqueta. La calculadora muestra cuántas tiras necesitas, cuántas salen de cada rollo y cuántos rollos comprar.
 
+Si el casado es desplazado (en la etiqueta, flechas con desfase), elige «Desplazado»: cada tira necesita de media medio rapport más. La superficie sirve para calcular la cola.
+
 ## Cómo se calcula
 
 1. Perímetro a empapelar = 2 × (largo + ancho) − ancho de ventanas y puertas.

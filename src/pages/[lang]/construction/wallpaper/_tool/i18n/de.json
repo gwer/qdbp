@@ -22,6 +22,13 @@
     },
     "repeat": {
       "label": "Rapport"
+    },
+    "match": {
+      "label": "Musteransatz",
+      "options": {
+        "straight": "Gerader Ansatz",
+        "drop": "Versetzter Ansatz"
+      }
     }
   },
   "outputs": {
@@ -36,6 +43,9 @@
     },
     "strip": {
       "label": "Bahnlänge"
+    },
+    "area": {
+      "label": "Zu tapezierende Fläche"
     }
   },
   "errors": {
