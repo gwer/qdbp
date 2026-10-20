@@ -2,6 +2,8 @@
 
 Ersten Tag der letzten Periode und die übliche Zykluslänge eingeben – Sie sehen den voraussichtlichen Eisprung, die fruchtbaren Tage, an denen eine Schwangerschaft am wahrscheinlichsten ist, und wann die nächste Periode fällig ist.
 
+Darunter steht ein Kalender für die nächsten sechs Zyklen bei gleichbleibender Zykluslänge – praktisch zum Planen.
+
 ## So wird gerechnet
 
 Die zweite Zyklushälfte vom Eisprung bis zur Periode dauert bei den meisten Frauen etwa **14 Tage**. Der Eisprung wird daher 14 Tage vor der nächsten Periode erwartet:

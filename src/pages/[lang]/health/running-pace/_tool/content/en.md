@@ -2,6 +2,8 @@
 
 Enter a distance and a time to see your pace (minutes per mile or kilometer) and average speed, plus predicted times for standard race distances. Enter time as `h:mm:ss` or `mm:ss`, e.g. `25:00` or `1:52:00`.
 
+Use “Find” for the other questions: your finish time at a given pace (say, a marathon at 8:00 per mile) or how far you'll go in a given time. For standard races — 5K, 10K, half marathon, marathon — just pick the race instead of typing the distance. The splits table shows the elapsed time at every mile (or kilometer) at an even pace.
+
 ## How it's calculated
 
 - Pace = time / distance: a 5K in 25:00 is **8:03 per mile**.

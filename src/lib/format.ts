@@ -55,6 +55,11 @@ export function formatDate(lang: Lang, iso: string, style: 'long' | 'full' = 'lo
   return normalize(dtf(lang, { dateStyle: style, timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`)));
 }
 
+/** Короткая дата без года: «12 мар.», «Mar 12». */
+export function formatDayMonth(lang: Lang, iso: string): string {
+  return normalize(dtf(lang, { day: 'numeric', month: 'short', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`)));
+}
+
 // Перед AM/PM движки ставят то обычный, то узкий пробел — всегда делаем неразрывный.
 function withNbspBeforeDayPeriod(parts: Intl.DateTimeFormatPart[]): string {
   return parts

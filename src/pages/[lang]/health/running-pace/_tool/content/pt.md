@@ -2,6 +2,8 @@
 
 Informe a distância e o tempo: você vê o pace (minutos por quilômetro) e a velocidade média, além da previsão para as distâncias mais comuns. Digite o tempo como `h:mm:ss` ou `mm:ss`: `45:30`, `1:52:00`.
 
+Em «Calcular» dá para resolver também o contrário: o tempo numa distância com um pace dado (por exemplo, uma maratona a 5:00 min/km) ou quanto você corre num tempo. Para as provas comuns — 5 km, 10 km, meia maratona, maratona — basta escolher a prova. A tabela de parciais mostra o tempo acumulado a cada quilômetro (ou milha) em ritmo constante.
+
 ## Como é calculado
 
 - Pace = tempo / distância: 50 minutos em 10 km dão **5:00 min/km**.

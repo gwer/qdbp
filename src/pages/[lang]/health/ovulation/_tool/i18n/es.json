@@ -25,5 +25,11 @@
     "due": {
       "label": "Fecha de parto si concibes en este ciclo"
     }
+  },
+  "ui": {
+    "cycles": "Próximos seis ciclos",
+    "period": "Menstruación",
+    "window": "Ventana fértil",
+    "ovulation": "Ovulación"
   }
 }

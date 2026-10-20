@@ -100,6 +100,8 @@ export interface ToolProps {
 export interface ExtraProps<V, R> extends ToolProps {
   values: V;
   result: R;
+  /** Выбранная система единиц (переключатель над формой). */
+  units: UnitSystem;
 }
 
 export interface CalculatorDef<

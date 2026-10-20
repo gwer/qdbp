@@ -21,6 +21,9 @@
     },
     "healthyMax": {
       "label": "Peso saludable hasta"
+    },
+    "toNormal": {
+      "label": "Hasta el peso normal"
     }
   },
   "ui": {
@@ -31,6 +34,7 @@
       "obese1": "Obesidad de grado I",
       "obese2": "Obesidad de grado II",
       "obese3": "Obesidad de grado III"
-    }
+    },
+    "inRange": "en rango"
   }
 }

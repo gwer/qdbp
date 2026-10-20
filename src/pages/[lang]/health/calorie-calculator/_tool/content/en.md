@@ -20,7 +20,7 @@ TDEE = BMR × activity factor: 1.2 (sedentary), 1.375 (light), 1.55 (moderate), 
 
 **How accurate is it?** It's an estimate — real needs can differ by 10% or more. Track your weight over a few weeks and adjust.
 
-**Why a 15% deficit?** A moderate deficit of 10–20% is commonly recommended. Don't go below your BMR without medical supervision.
+**How many calories to lose weight?** The table below the result shows calories for losing 0.5, 1 or 2 lb a week (0.25–1 kg in metric): a pound of fat is about 3,500 calories, so 1 lb a week is a deficit of roughly 500 calories a day. 1–2 lb a week is usually considered safe. Don't go below 1,200 calories (women) or 1,500 (men) without medical supervision.
 
 **Does it work for teens, pregnant women or athletes?** No — their needs are different; talk to a professional.
 

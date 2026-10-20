@@ -1,6 +1,7 @@
 import { addDays } from '@/lib/date';
 import { defineCalculator } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
+import { Cycles } from './Cycles';
 
 /**
  * Календарный метод: овуляция за 14 дней до следующей менструации,
@@ -32,6 +33,7 @@ export const def = defineCalculator({
     nextPeriod: { type: 'date' },
     due: { type: 'date' },
   },
+  Extra: Cycles,
 });
 
 export default island(def);

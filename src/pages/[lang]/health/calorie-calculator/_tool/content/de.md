@@ -20,7 +20,7 @@ Gesamtumsatz = Grundumsatz × Aktivitätsfaktor (PAL): 1,2 (sitzend), 1,375 (lei
 
 **Wie genau ist das?** Es ist eine Schätzung – der tatsächliche Bedarf kann um 10 % und mehr abweichen. Beobachten Sie Ihr Gewicht über einige Wochen.
 
-**Warum 15 % Defizit?** Ein moderates Defizit von 10–20 % wird häufig empfohlen. Unter den Grundumsatz sollten Sie nur ärztlich begleitet gehen.
+**Wie viele Kalorien zum Abnehmen?** Die Tabelle unter dem Ergebnis zeigt den Bedarf für 0,25, 0,5 und 1 kg pro Woche: 1 kg Fett sind etwa 7.700 kcal, −0,5 kg pro Woche bedeuten also ein Defizit von rund 550 kcal am Tag. Als sicher gelten meist 0,5–1 kg pro Woche. Unter 1.200 kcal (Frauen) bzw. 1.500 kcal (Männer) nur mit ärztlicher Begleitung.
 
 **Gilt das für Jugendliche, Schwangere oder Leistungssportler?** Nein, deren Bedarf ist anders – lassen Sie sich beraten.
 

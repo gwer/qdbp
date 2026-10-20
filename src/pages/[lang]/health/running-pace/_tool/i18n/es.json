@@ -2,11 +2,39 @@
   "title": "Calculadora de ritmo de carrera: ritmo, velocidad y predicción",
   "description": "Calcula tu ritmo por kilómetro y tu velocidad a partir de la distancia y el tiempo, y la predicción para 5 km, 10 km, media maratón y maratón.",
   "inputs": {
+    "find": {
+      "label": "Calcular",
+      "options": {
+        "pace": "Ritmo",
+        "time": "Tiempo en la distancia",
+        "distance": "Distancia en un tiempo"
+      }
+    },
     "distance": {
       "label": "Distancia"
     },
     "time": {
       "label": "Tiempo"
+    },
+    "race": {
+      "label": "Prueba",
+      "options": {
+        "custom": "Otra",
+        "5k": "5 km",
+        "10k": "10 km",
+        "half": "Media maratón",
+        "marathon": "Maratón"
+      }
+    },
+    "pace": {
+      "label": "Ritmo"
+    },
+    "paceUnit": {
+      "label": "Ritmo en",
+      "options": {
+        "km": "min/km",
+        "mi": "min/milla"
+      }
     }
   },
   "outputs": {
@@ -15,6 +43,12 @@
     },
     "speed": {
       "label": "Velocidad"
+    },
+    "time": {
+      "label": "Tiempo"
+    },
+    "distance": {
+      "label": "Distancia"
     }
   },
   "ui": {
@@ -29,6 +63,10 @@
       "10k": "10 km",
       "half": "Media maratón",
       "marathon": "Maratón"
-    }
+    },
+    "splits": "Parciales",
+    "km": "Km",
+    "mile": "Milla",
+    "elapsed": "Tiempo acumulado"
   }
 }

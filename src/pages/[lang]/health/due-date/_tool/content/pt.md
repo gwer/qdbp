@@ -2,6 +2,8 @@
 
 Informe o primeiro dia da sua última menstruação e a duração habitual do ciclo. Você vê a data provável do parto, com quantas semanas e dias está, o trimestre e a data aproximada da concepção. Também dá para ver a idade gestacional em qualquer outra data.
 
+Se você sabe a data da concepção ou engravidou por FIV, escolha como calcular no primeiro campo. Da concepção ao parto são em média 266 dias; após a transferência de embrião D5, 261 dias, e de D3, 263 dias. Abaixo do resultado aparecem a semana de gestação e as datas importantes: fim do primeiro trimestre, início do terceiro, gestação a termo (37 semanas), data provável do parto e 42 semanas.
+
 ## Como é calculado
 
 Usa-se a regra de Naegele: somam-se **280 dias** (40 semanas) ao primeiro dia da última menstruação. Se o seu ciclo for mais longo ou mais curto que 28 dias, a data muda conforme a diferença. A idade gestacional é contada a partir do primeiro dia da última menstruação, não da concepção.

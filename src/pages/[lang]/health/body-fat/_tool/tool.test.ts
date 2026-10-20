@@ -27,7 +27,7 @@ describe('bodyFat', () => {
   });
 
   it('талия не больше шеи — ошибка', () => {
-    expect(() => bodyFat('male', 80, 178, 40, 40, 0)).toThrow(RangeError);
+    expect(() => bodyFat('male', 80, 178, 40, 40, 0)).toThrow('waistNeck');
   });
 
   it.each([

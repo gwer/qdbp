@@ -35,12 +35,17 @@
     },
     "bmr": {
       "label": "Metabolismo basal (kcal)"
-    },
-    "loss": {
-      "label": "Para bajar de peso (−15 %) (kcal)"
-    },
-    "gain": {
-      "label": "Para subir de peso (+15 %) (kcal)"
     }
+  },
+  "ui": {
+    "goal": "Objetivo",
+    "kcal": "Kcal al día",
+    "maintain": "Mantener el peso",
+    "lose": "Bajar {amount} por semana",
+    "gain": "Subir {amount} por semana",
+    "tooLow": "por debajo del mínimo seguro",
+    "kg": "kg",
+    "lb": "lb",
+    "goalsNote": "Se toma que 1 kg de grasa equivale a unas 7700 kcal; en la práctica el ritmo se frena con el tiempo. Sin supervisión médica no bajes de {min} kcal al día. Un ritmo seguro es de 0,5 a 1 kg por semana."
   }
 }

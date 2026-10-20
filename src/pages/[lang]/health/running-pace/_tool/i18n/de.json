@@ -2,11 +2,39 @@
   "title": "Pace-Rechner: Laufpace, Geschwindigkeit und Zielzeit",
   "description": "Pace pro Kilometer und Geschwindigkeit aus Strecke und Zeit berechnen – mit prognostizierten Zielzeiten für 5 km, 10 km, Halbmarathon und Marathon.",
   "inputs": {
+    "find": {
+      "label": "Berechnen",
+      "options": {
+        "pace": "Pace",
+        "time": "Zielzeit",
+        "distance": "Strecke"
+      }
+    },
     "distance": {
       "label": "Strecke"
     },
     "time": {
       "label": "Zeit"
+    },
+    "race": {
+      "label": "Wettkampf",
+      "options": {
+        "custom": "Eigene",
+        "5k": "5 km",
+        "10k": "10 km",
+        "half": "Halbmarathon",
+        "marathon": "Marathon"
+      }
+    },
+    "pace": {
+      "label": "Pace"
+    },
+    "paceUnit": {
+      "label": "Pace in",
+      "options": {
+        "km": "min/km",
+        "mi": "min/Meile"
+      }
     }
   },
   "outputs": {
@@ -15,6 +43,12 @@
     },
     "speed": {
       "label": "Geschwindigkeit"
+    },
+    "time": {
+      "label": "Zielzeit"
+    },
+    "distance": {
+      "label": "Strecke"
     }
   },
   "ui": {
@@ -29,6 +63,10 @@
       "10k": "10 km",
       "half": "Halbmarathon",
       "marathon": "Marathon"
-    }
+    },
+    "splits": "Zwischenzeiten",
+    "km": "Km",
+    "mile": "Meile",
+    "elapsed": "Gesamtzeit"
   }
 }

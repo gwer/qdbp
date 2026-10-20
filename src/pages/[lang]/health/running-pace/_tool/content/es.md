@@ -2,6 +2,8 @@
 
 Indica la distancia y el tiempo: verás tu ritmo (minutos por kilómetro) y tu velocidad media, además de la predicción para las distancias habituales. El tiempo se escribe como `h:mm:ss` o `mm:ss`: `45:30`, `1:52:00`.
 
+En «Calcular» puedes resolver también lo contrario: el tiempo en una distancia a un ritmo dado (por ejemplo, un maratón a 5:00 min/km) o cuánto recorres en un tiempo. Para las pruebas habituales —5K, 10K, media maratón, maratón— basta con elegirla. La tabla de parciales muestra el tiempo acumulado en cada kilómetro (o milla) a ritmo constante.
+
 ## Cómo se calcula
 
 - Ritmo = tiempo / distancia: 50 minutos en 10 km son **5:00 min/km**.

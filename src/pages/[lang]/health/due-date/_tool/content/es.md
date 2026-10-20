@@ -2,6 +2,8 @@
 
 Indica el primer día de tu última regla y la duración habitual de tu ciclo. Verás la fecha probable de parto, de cuántas semanas y días estás, el trimestre y la fecha aproximada de concepción. También puedes ver de cuántas semanas estarás en cualquier otra fecha.
 
+Si conoces la fecha de concepción o es un embarazo por FIV, elige cómo calcular en el primer campo. Desde la concepción hasta el parto pasan de media 266 días; tras transferir un embrión de 5 días, 261, y de 3 días, 263. Bajo el resultado verás la semana de embarazo y las fechas clave: fin del primer trimestre, inicio del tercero, embarazo a término (37 semanas), fecha probable de parto y 42 semanas.
+
 ## Cómo se calcula
 
 Se usa la regla de Naegele: al primer día de la última regla se le suman **280 días** (40 semanas). Si tu ciclo dura más o menos de 28 días, la fecha se ajusta según la diferencia. Las semanas de embarazo se cuentan desde el primer día de la última regla, no desde la concepción.

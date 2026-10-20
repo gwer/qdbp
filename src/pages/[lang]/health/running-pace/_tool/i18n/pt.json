@@ -2,11 +2,39 @@
   "title": "Calculadora de pace de corrida: pace, velocidade e previsão",
   "description": "Calcule seu pace por quilômetro e sua velocidade pela distância e pelo tempo, além da previsão para 5 km, 10 km, meia maratona e maratona.",
   "inputs": {
+    "find": {
+      "label": "Calcular",
+      "options": {
+        "pace": "Pace",
+        "time": "Tempo na distância",
+        "distance": "Distância no tempo"
+      }
+    },
     "distance": {
       "label": "Distância"
     },
     "time": {
       "label": "Tempo"
+    },
+    "race": {
+      "label": "Prova",
+      "options": {
+        "custom": "Outra",
+        "5k": "5 km",
+        "10k": "10 km",
+        "half": "Meia maratona",
+        "marathon": "Maratona"
+      }
+    },
+    "pace": {
+      "label": "Pace"
+    },
+    "paceUnit": {
+      "label": "Pace em",
+      "options": {
+        "km": "min/km",
+        "mi": "min/milha"
+      }
     }
   },
   "outputs": {
@@ -15,6 +43,12 @@
     },
     "speed": {
       "label": "Velocidade"
+    },
+    "time": {
+      "label": "Tempo"
+    },
+    "distance": {
+      "label": "Distância"
     }
   },
   "ui": {
@@ -29,6 +63,10 @@
       "10k": "10 km",
       "half": "Meia maratona",
       "marathon": "Maratona"
-    }
+    },
+    "splits": "Parciais",
+    "km": "Km",
+    "mile": "Milha",
+    "elapsed": "Tempo acumulado"
   }
 }

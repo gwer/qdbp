@@ -47,5 +47,10 @@
       "average": "Promedio",
       "obese": "Obesidad"
     }
+  },
+  "errors": {
+    "waistNeck": "La cintura debe ser mayor que el cuello: revisa las medidas.",
+    "girthNeck": "La suma de cintura y cadera debe ser mayor que el cuello: revisa las medidas.",
+    "outOfRange": "Con estas medidas la fórmula da un resultado imposible: comprueba que estén en las mismas unidades y tomadas según las instrucciones."
   }
 }

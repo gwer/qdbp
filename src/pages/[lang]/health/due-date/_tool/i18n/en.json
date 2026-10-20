@@ -2,6 +2,15 @@
   "title": "Pregnancy due date calculator: due date and how far along you are",
   "description": "Estimate your due date and how many weeks pregnant you are from the first day of your last period, adjusted for cycle length.",
   "inputs": {
+    "method": {
+      "label": "Calculate from",
+      "options": {
+        "lmp": "Last menstrual period",
+        "conception": "Conception date",
+        "ivf3": "IVF: day-3 embryo transfer",
+        "ivf5": "IVF: day-5 embryo transfer"
+      }
+    },
     "lmp": {
       "label": "First day of last period"
     },
@@ -10,6 +19,12 @@
     },
     "on": {
       "label": "Weeks pregnant on"
+    },
+    "conception": {
+      "label": "Conception date"
+    },
+    "transfer": {
+      "label": "Transfer date"
     }
   },
   "outputs": {
@@ -40,6 +55,17 @@
     },
     "trimester1": "First",
     "trimester2": "Second",
-    "trimester3": "Third"
+    "trimester3": "Third",
+    "week": "Week {week}",
+    "milestones": {
+      "firstEnd": "End of 1st trimester (13 weeks 6 days)",
+      "thirdStart": "Start of 3rd trimester (28 weeks)",
+      "term": "Full term (37 weeks)",
+      "due": "Due date (40 weeks)",
+      "late": "Post-term (42 weeks)"
+    }
+  },
+  "errors": {
+    "beforeStart": "This date is before the start of the pregnancy."
   }
 }

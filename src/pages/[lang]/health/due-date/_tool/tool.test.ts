@@ -5,7 +5,7 @@ import en from './i18n/en.json';
 import es from './i18n/es.json';
 import pt from './i18n/pt.json';
 import ru from './i18n/ru.json';
-import { def, dueDate } from './tool';
+import { def, dueDate, pregnancyStart } from './tool';
 
 describe('dueDate (правило Негеле)', () => {
   it('цикл 28 дней', () => {
@@ -28,7 +28,15 @@ describe('dueDate (правило Негеле)', () => {
   });
 
   it('дата раньше начала — ошибка', () => {
-    expect(() => dueDate('2026-03-01', 28, '2026-02-01')).toThrow();
+    expect(() => dueDate('2026-03-01', 28, '2026-02-01')).toThrow('beforeStart');
+  });
+
+  it('по зачатию и переносу эмбриона: зачатие + 266, перенос 5 сут. + 261, 3 сут. + 263', () => {
+    const due = (start: string) => dueDate(start, 28, start).due;
+    expect(due(pregnancyStart('conception', '', 28, '2026-03-15', ''))).toBe('2026-12-06');
+    expect(due(pregnancyStart('ivf5', '', 28, '', '2026-03-20'))).toBe('2026-12-06'); // 20.03 + 261
+    expect(due(pregnancyStart('ivf3', '', 28, '', '2026-03-18'))).toBe('2026-12-06'); // 18.03 + 263
+    expect(pregnancyStart('lmp', '2026-03-01', 32, '', '')).toBe('2026-03-05');
   });
 
   it('строки срока есть на всех языках', () => {

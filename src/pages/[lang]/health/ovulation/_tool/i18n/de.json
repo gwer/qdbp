@@ -25,5 +25,11 @@
     "due": {
       "label": "Geburtstermin bei Empfängnis in diesem Zyklus"
     }
+  },
+  "ui": {
+    "cycles": "Die nächsten sechs Zyklen",
+    "period": "Periode",
+    "window": "Fruchtbare Tage",
+    "ovulation": "Eisprung"
   }
 }

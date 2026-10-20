@@ -14,6 +14,12 @@ describe('bmi', () => {
     expect(r.category).toBe('normal');
     expect(r.healthyMin).toBeCloseTo(56.65625, 6);
     expect(r.healthyMax).toBeCloseTo(76.25625, 6);
+    expect(r.toNormal).toBe(0);
+  });
+
+  it('до нормы: 90 кг при 175 см — сбросить 13,74 кг, 50 кг — набрать 6,66 кг', () => {
+    expect(bmi(90, 175).toNormal).toBeCloseTo(76.25625 - 90, 6);
+    expect(bmi(50, 175).toNormal).toBeCloseTo(56.65625 - 50, 6);
   });
 
   it('160 lb, 69 in (через метрику) ≈ 703·lb/in²', () => {

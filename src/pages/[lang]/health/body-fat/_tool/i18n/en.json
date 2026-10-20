@@ -47,5 +47,10 @@
       "average": "Average",
       "obese": "Obese"
     }
+  },
+  "errors": {
+    "waistNeck": "Your waist must be larger than your neck — check the measurements.",
+    "girthNeck": "Waist plus hips must be larger than your neck — check the measurements.",
+    "outOfRange": "These measurements give an impossible result — check that they’re all in the same units and taken as described."
   }
 }

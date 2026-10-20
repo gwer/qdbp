@@ -47,5 +47,10 @@
       "average": "Durchschnitt",
       "obese": "Adipös"
     }
+  },
+  "errors": {
+    "waistNeck": "Der Taillenumfang muss größer sein als der Halsumfang – bitte Maße prüfen.",
+    "girthNeck": "Taille plus Hüfte muss größer sein als der Halsumfang – bitte Maße prüfen.",
+    "outOfRange": "Mit diesen Maßen liefert die Formel ein unmögliches Ergebnis – prüfen Sie Einheiten und Messpunkte."
   }
 }

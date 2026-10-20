@@ -2,6 +2,8 @@
 
 Strecke und Zeit eingeben – Sie sehen Ihre Pace (Minuten pro Kilometer) und die Durchschnittsgeschwindigkeit, darunter eine Prognose für die üblichen Wettkampfstrecken. Die Zeit geben Sie als `h:mm:ss` oder `mm:ss` ein: `45:30`, `1:52:00`.
 
+Unter „Berechnen“ lösen Sie auch die anderen Aufgaben: die Zielzeit bei gegebener Pace (etwa Marathon in 5:00 min/km) oder die Strecke in einer bestimmten Zeit. Für Standarddistanzen – 5 km, 10 km, Halbmarathon, Marathon – wählen Sie einfach den Wettkampf. Die Zwischenzeiten zeigen die Gesamtzeit an jedem Kilometer (oder jeder Meile) bei gleichmäßiger Pace.
+
 ## Wie gerechnet wird
 
 - Pace = Zeit / Strecke: 50 Minuten für 10 km sind **5:00 min/km**.

@@ -20,7 +20,7 @@ Calorías diarias = metabolismo basal × factor de actividad: 1,2 (sedentaria), 
 
 **¿Qué precisión tiene?** Es una estimación: el gasto real puede variar un 10 % o más. Observa la evolución de tu peso durante varias semanas.
 
-**¿Por qué un déficit del 15 %?** Se suele recomendar un déficit moderado del 10–20 %. No bajes del metabolismo basal sin supervisión médica.
+**¿Cuántas calorías comer para adelgazar?** La tabla bajo el resultado muestra las kcal para bajar 0,25, 0,5 o 1 kg por semana: 1 kg de grasa son unas 7700 kcal, así que −0,5 kg por semana es un déficit de unas 550 kcal al día. Se suele considerar seguro 0,5–1 kg por semana. No bajes de 1200 kcal (mujeres) ni de 1500 kcal (hombres) sin supervisión médica.
 
 **¿Sirve para adolescentes, embarazadas o deportistas?** No, sus necesidades son distintas; consulta a un profesional.
 

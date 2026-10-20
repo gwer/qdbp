@@ -1,5 +1,8 @@
-import { defineCalculator } from '@/ui/define';
+import { formatNumber } from '@/lib/format';
+import { convert, unitSymbol } from '@/lib/units';
+import { defineCalculator, type FormatContext } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
+import { BmiScale } from './BmiScale';
 
 export type BmiCategory = 'under' | 'normal' | 'over' | 'obese1' | 'obese2' | 'obese3';
 
@@ -18,7 +21,20 @@ export function bmiCategory(bmi: number): BmiCategory {
 export function bmi(weight: number, height: number) {
   const m2 = (height / 100) ** 2;
   const value = weight / m2;
-  return { bmi: value, category: bmiCategory(value), healthyMin: 18.5 * m2, healthyMax: 24.9 * m2 };
+  const healthyMin = 18.5 * m2;
+  const healthyMax = 24.9 * m2;
+  const category = bmiCategory(value);
+  // Сколько набрать (+) или сбросить (−) до ближайшей границы нормы; 0 — вес в норме (как в категории).
+  const toNormal = category === 'normal' ? 0 : weight < healthyMin ? healthyMin - weight : healthyMax - weight;
+  return { bmi: value, category, toNormal, healthyMin, healthyMax };
+}
+
+/** «+3,2 кг» / «−5,1 lb» / «в норме». */
+function formatToNormal(kg: number, { t, lang, units }: FormatContext): string {
+  if (Math.abs(kg) < 0.05) return t('ui.inRange');
+  const unit = units === 'imperial' ? 'lb' : 'kg';
+  const v = convert(kg, 'kg', unit);
+  return `${v > 0 ? '+' : '−'}${formatNumber(lang, Math.abs(v), 'number', 1)} ${unitSymbol(lang, unit)}`;
 }
 
 export const def = defineCalculator({
@@ -32,9 +48,11 @@ export const def = defineCalculator({
   outputs: {
     bmi: { digits: 1 },
     category: { type: 'custom', format: (c: BmiCategory, { t }) => t(`ui.categories.${c}`) },
+    toNormal: { type: 'custom', format: formatToNormal },
     healthyMin: { type: 'quantity', unit: 'kg', imperial: 'lb', digits: 1 },
     healthyMax: { type: 'quantity', unit: 'kg', imperial: 'lb', digits: 1 },
   },
+  Extra: BmiScale,
 });
 
 export default island(def);

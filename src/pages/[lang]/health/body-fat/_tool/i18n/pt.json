@@ -47,5 +47,10 @@
       "average": "Média",
       "obese": "Obesidade"
     }
+  },
+  "errors": {
+    "waistNeck": "A cintura precisa ser maior que o pescoço — confira as medidas.",
+    "girthNeck": "Cintura mais quadril precisa ser maior que o pescoço — confira as medidas.",
+    "outOfRange": "Com essas medidas a fórmula dá um resultado impossível — confira se estão na mesma unidade e medidas como indicado."
   }
 }

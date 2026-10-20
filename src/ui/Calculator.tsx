@@ -395,7 +395,7 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
         )}
       </section>
 
-      {def.Extra && result && <def.Extra values={values as any} result={result} lang={lang} t={t} />}
+      {def.Extra && result && <def.Extra values={values as any} result={result} lang={lang} t={t} units={units} />}
     </div>
   );
 }

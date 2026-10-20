@@ -2,6 +2,8 @@
 
 Geben Sie den ersten Tag Ihrer letzten Periode und Ihre übliche Zykluslänge ein. Sie sehen den voraussichtlichen Geburtstermin, die aktuelle Schwangerschaftswoche in Wochen und Tagen, das Trimester und den ungefähren Empfängnistermin. Die Schwangerschaftswoche können Sie auch für jedes andere Datum abfragen.
 
+Kennen Sie das Empfängnisdatum oder sind Sie nach IVF schwanger, wählen Sie die Berechnungsart im ersten Feld. Von der Empfängnis bis zur Geburt vergehen im Mittel 266 Tage, nach einem Transfer am Tag 5 sind es 261, am Tag 3 263 Tage. Unter dem Ergebnis sehen Sie die Schwangerschaftswoche und wichtige Daten: Ende des ersten Trimesters, Beginn des dritten, termingerecht (37 SSW), errechneter Termin und 42 SSW.
+
 ## Wie gerechnet wird
 
 Zugrunde liegt die Naegele-Regel: Zum ersten Tag der letzten Periode werden **280 Tage** (40 Wochen) addiert. Ist Ihr Zyklus länger oder kürzer als 28 Tage, verschiebt sich der Termin um die Differenz. Die Schwangerschaftswoche wird ab dem ersten Tag der letzten Periode gezählt, nicht ab der Empfängnis.

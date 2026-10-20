@@ -21,6 +21,9 @@
     },
     "healthyMax": {
       "label": "Normalgewicht bis"
+    },
+    "toNormal": {
+      "label": "Bis zum Normalgewicht"
     }
   },
   "ui": {
@@ -31,6 +34,7 @@
       "obese1": "Adipositas Grad I",
       "obese2": "Adipositas Grad II",
       "obese3": "Adipositas Grad III"
-    }
+    },
+    "inRange": "im Normbereich"
   }
 }

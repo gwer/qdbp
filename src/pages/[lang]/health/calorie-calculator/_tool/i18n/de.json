@@ -35,12 +35,17 @@
     },
     "bmr": {
       "label": "Grundumsatz, kcal"
-    },
-    "loss": {
-      "label": "Zum Abnehmen (−15 %), kcal"
-    },
-    "gain": {
-      "label": "Zum Zunehmen (+15 %), kcal"
     }
+  },
+  "ui": {
+    "goal": "Ziel",
+    "kcal": "kcal pro Tag",
+    "maintain": "Gewicht halten",
+    "lose": "{amount} pro Woche abnehmen",
+    "gain": "{amount} pro Woche zunehmen",
+    "tooLow": "unter dem sicheren Minimum",
+    "kg": "kg",
+    "lb": "lb",
+    "goalsNote": "Gerechnet mit etwa 7.700 kcal pro Kilogramm Fett; in der Praxis verlangsamt sich das Tempo mit der Zeit. Ohne ärztliche Begleitung nicht unter {min} kcal pro Tag gehen. Ein sicheres Tempo sind 0,5–1 kg pro Woche."
   }
 }

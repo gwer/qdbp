@@ -2,6 +2,8 @@
 
 Enter the first day of your last period and your usual cycle length to see your estimated ovulation date, your fertile window — the days when you're most likely to conceive — and when your next period is due.
 
+Below is a calendar for the next six cycles, assuming your cycle length stays the same — handy for planning ahead.
+
 ## How it's calculated
 
 The second half of the cycle, from ovulation to your period, lasts about **14 days** for most women, so ovulation is expected 14 days before your next period:

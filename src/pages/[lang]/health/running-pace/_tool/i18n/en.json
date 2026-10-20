@@ -2,11 +2,39 @@
   "title": "Running pace calculator: pace, speed and race time predictor",
   "description": "Find your pace per mile or kilometer and your speed from distance and time, plus predicted finish times for a 5K, 10K, half marathon and marathon.",
   "inputs": {
+    "find": {
+      "label": "Find",
+      "options": {
+        "pace": "Pace",
+        "time": "Finish time",
+        "distance": "Distance"
+      }
+    },
     "distance": {
       "label": "Distance"
     },
     "time": {
       "label": "Time"
+    },
+    "race": {
+      "label": "Race",
+      "options": {
+        "custom": "Custom",
+        "5k": "5K",
+        "10k": "10K",
+        "half": "Half marathon",
+        "marathon": "Marathon"
+      }
+    },
+    "pace": {
+      "label": "Pace"
+    },
+    "paceUnit": {
+      "label": "Pace per",
+      "options": {
+        "km": "min/km",
+        "mi": "min/mile"
+      }
     }
   },
   "outputs": {
@@ -15,6 +43,12 @@
     },
     "speed": {
       "label": "Speed"
+    },
+    "time": {
+      "label": "Finish time"
+    },
+    "distance": {
+      "label": "Distance"
     }
   },
   "ui": {
@@ -29,6 +63,10 @@
       "10k": "10K",
       "half": "Half marathon",
       "marathon": "Marathon"
-    }
+    },
+    "splits": "Splits",
+    "km": "Km",
+    "mile": "Mile",
+    "elapsed": "Elapsed"
   }
 }

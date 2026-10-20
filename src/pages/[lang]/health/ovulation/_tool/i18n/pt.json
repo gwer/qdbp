@@ -25,5 +25,11 @@
     "due": {
       "label": "Data do parto se engravidar neste ciclo"
     }
+  },
+  "ui": {
+    "cycles": "Próximos seis ciclos",
+    "period": "Menstruação",
+    "window": "Período fértil",
+    "ovulation": "Ovulação"
   }
 }

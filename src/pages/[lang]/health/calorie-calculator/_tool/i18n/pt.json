@@ -35,12 +35,17 @@
     },
     "bmr": {
       "label": "Taxa metabólica basal (kcal)"
-    },
-    "loss": {
-      "label": "Para emagrecer (−15%) (kcal)"
-    },
-    "gain": {
-      "label": "Para ganhar peso (+15%) (kcal)"
     }
+  },
+  "ui": {
+    "goal": "Objetivo",
+    "kcal": "Kcal por dia",
+    "maintain": "Manter o peso",
+    "lose": "Perder {amount} por semana",
+    "gain": "Ganhar {amount} por semana",
+    "tooLow": "abaixo do mínimo seguro",
+    "kg": "kg",
+    "lb": "lb",
+    "goalsNote": "O cálculo considera cerca de 7.700 kcal por quilo de gordura; na prática o ritmo diminui com o tempo. Sem acompanhamento médico, não fique abaixo de {min} kcal por dia. Um ritmo seguro é de 0,5 a 1 kg por semana."
   }
 }

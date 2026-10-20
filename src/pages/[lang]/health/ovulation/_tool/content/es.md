@@ -2,6 +2,8 @@
 
 Indica el primer día de tu última regla y la duración habitual del ciclo: verás la fecha estimada de ovulación, la ventana fértil —los días con más probabilidad de embarazo— y cuándo toca la próxima regla.
 
+Debajo tienes un calendario de los próximos seis ciclos, si su duración no cambia: útil para planificar.
+
 ## Cómo se calcula
 
 La segunda mitad del ciclo, de la ovulación a la regla, dura unos **14 días** en la mayoría de las mujeres, así que la ovulación se espera 14 días antes de la siguiente regla:

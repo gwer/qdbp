@@ -20,7 +20,7 @@ Calorias por dia = taxa basal × fator de atividade: 1,2 (sedentário), 1,375 (l
 
 **Qual é a precisão?** É uma estimativa: o gasto real pode variar 10% ou mais. Acompanhe o peso ao longo de algumas semanas.
 
-**Por que um déficit de 15%?** Costuma-se recomendar um déficit moderado de 10–20%. Não fique abaixo da taxa basal sem acompanhamento médico.
+**Quantas calorias comer para emagrecer?** A tabela abaixo do resultado mostra as kcal para perder 0,25, 0,5 ou 1 kg por semana: 1 kg de gordura são cerca de 7.700 kcal, então −0,5 kg por semana é um déficit de umas 550 kcal por dia. Costuma-se considerar seguro 0,5–1 kg por semana. Não fique abaixo de 1.200 kcal (mulheres) ou 1.500 kcal (homens) sem acompanhamento médico.
 
 **Serve para adolescentes, gestantes ou atletas?** Não — as necessidades são diferentes; procure um profissional.
 

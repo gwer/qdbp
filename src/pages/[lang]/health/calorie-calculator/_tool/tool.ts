@@ -1,5 +1,6 @@
 import { defineCalculator } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
+import { Goals } from './Goals';
 
 export const ACTIVITY = { sedentary: 1.2, light: 1.375, moderate: 1.55, active: 1.725, very: 1.9 } as const;
 export type Activity = keyof typeof ACTIVITY;
@@ -22,14 +23,13 @@ export const def = defineCalculator({
   compute: ({ sex, age, weight, height, activity }) => {
     const base = bmr(sex, age, weight, height);
     const tdee = base * ACTIVITY[activity];
-    return { tdee, bmr: base, loss: tdee * 0.85, gain: tdee * 1.15 };
+    return { tdee, bmr: base };
   },
   outputs: {
     tdee: { type: 'integer' },
     bmr: { type: 'integer' },
-    loss: { type: 'integer' },
-    gain: { type: 'integer' },
   },
+  Extra: Goals,
 });
 
 export default island(def);

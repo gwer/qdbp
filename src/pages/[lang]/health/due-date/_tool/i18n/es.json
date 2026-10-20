@@ -2,6 +2,15 @@
   "title": "Calculadora de embarazo: fecha probable de parto y semanas",
   "description": "Calcula la fecha probable de parto y de cuántas semanas estás a partir del primer día de tu última regla, ajustado a la duración del ciclo.",
   "inputs": {
+    "method": {
+      "label": "Calcular por",
+      "options": {
+        "lmp": "Última menstruación",
+        "conception": "Fecha de concepción",
+        "ivf3": "FIV: transferencia de embrión de 3 días",
+        "ivf5": "FIV: transferencia de embrión de 5 días"
+      }
+    },
     "lmp": {
       "label": "Primer día de la última regla"
     },
@@ -10,6 +19,12 @@
     },
     "on": {
       "label": "Semanas de embarazo a fecha de"
+    },
+    "conception": {
+      "label": "Fecha de concepción"
+    },
+    "transfer": {
+      "label": "Fecha de transferencia"
     }
   },
   "outputs": {
@@ -42,6 +57,17 @@
     },
     "trimester1": "Primero",
     "trimester2": "Segundo",
-    "trimester3": "Tercero"
+    "trimester3": "Tercero",
+    "week": "Semana {week}",
+    "milestones": {
+      "firstEnd": "Fin del 1.er trimestre (13 semanas y 6 días)",
+      "thirdStart": "Inicio del 3.er trimestre (28 semanas)",
+      "term": "Embarazo a término (37 semanas)",
+      "due": "Fecha probable de parto (40 semanas)",
+      "late": "Embarazo prolongado (42 semanas)"
+    }
+  },
+  "errors": {
+    "beforeStart": "La fecha es anterior al inicio del embarazo."
   }
 }

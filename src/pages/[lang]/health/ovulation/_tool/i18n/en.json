@@ -25,5 +25,11 @@
     "due": {
       "label": "Due date if you conceive this cycle"
     }
+  },
+  "ui": {
+    "cycles": "Next six cycles",
+    "period": "Period",
+    "window": "Fertile window",
+    "ovulation": "Ovulation"
   }
 }

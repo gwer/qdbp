@@ -2,6 +2,8 @@
 
 Informe o primeiro dia da última menstruação e a duração habitual do ciclo: você verá a data prevista da ovulação, o período fértil — os dias com mais chance de engravidar — e quando deve vir a próxima menstruação.
 
+Abaixo há um calendário dos próximos seis ciclos, se a duração do ciclo não mudar — útil para planejar.
+
 ## Como é calculado
 
 A segunda metade do ciclo, da ovulação até a menstruação, dura cerca de **14 dias** para a maioria das mulheres, por isso a ovulação é esperada 14 dias antes da próxima menstruação:

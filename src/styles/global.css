@@ -1351,3 +1351,104 @@ rect.chart-s2 {
   border-left: 3px solid var(--accent);
   border-radius: 6px;
 }
+
+/* Шкала с отметкой (src/ui/Scale.tsx) */
+:root {
+  --scale-low: #5b9bd5;
+  --scale-good: #3fae6a;
+  --scale-warn: #e8b93a;
+  --scale-bad: #ec8a3c;
+  --scale-worse: #d64b3b;
+  --scale-worst: #9e2a2b;
+}
+
+.scale {
+  margin: 16px 0 0;
+}
+
+.scale-bar {
+  position: relative;
+  height: 14px;
+  border-radius: 7px;
+  overflow: visible;
+}
+
+.scale-bar > span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.scale-bar > span:first-child {
+  border-radius: 7px 0 0 7px;
+}
+
+.scale-bar > span:nth-last-child(2) {
+  border-radius: 0 7px 7px 0;
+}
+
+.scale-mark {
+  position: absolute;
+  top: -6px;
+  width: 4px;
+  height: 26px;
+  margin-left: -2px;
+  background: var(--text);
+  border: 2px solid var(--bg);
+  border-radius: 3px;
+  box-sizing: content-box;
+  transform: translateX(-2px);
+}
+
+.scale-ticks {
+  position: relative;
+  height: 1.3em;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.scale-ticks span {
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.scale-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.scale-legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 6px;
+}
+
+.scale-low { background: var(--scale-low); }
+.scale-good { background: var(--scale-good); }
+.scale-warn { background: var(--scale-warn); }
+.scale-bad { background: var(--scale-bad); }
+.scale-worse { background: var(--scale-worse); }
+.scale-worst { background: var(--scale-worst); }
+
+/* Полоса прогресса со значением: «неделя 11 из 40» */
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+
+.progress progress {
+  flex: 1;
+  height: 12px;
+  accent-color: var(--accent);
+}

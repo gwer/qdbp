@@ -2,6 +2,15 @@
   "title": "Calculadora de gravidez: data provável do parto e semanas",
   "description": "Calcule a data provável do parto e com quantas semanas você está a partir do primeiro dia da última menstruação, ajustando pela duração do ciclo.",
   "inputs": {
+    "method": {
+      "label": "Calcular pela",
+      "options": {
+        "lmp": "Última menstruação",
+        "conception": "Data da concepção",
+        "ivf3": "FIV: transferência de embrião D3",
+        "ivf5": "FIV: transferência de embrião D5"
+      }
+    },
     "lmp": {
       "label": "Primeiro dia da última menstruação"
     },
@@ -10,6 +19,12 @@
     },
     "on": {
       "label": "Semanas de gestação em"
+    },
+    "conception": {
+      "label": "Data da concepção"
+    },
+    "transfer": {
+      "label": "Data da transferência"
     }
   },
   "outputs": {
@@ -42,6 +57,17 @@
     },
     "trimester1": "Primeiro",
     "trimester2": "Segundo",
-    "trimester3": "Terceiro"
+    "trimester3": "Terceiro",
+    "week": "Semana {week}",
+    "milestones": {
+      "firstEnd": "Fim do 1º trimestre (13 semanas e 6 dias)",
+      "thirdStart": "Início do 3º trimestre (28 semanas)",
+      "term": "Gestação a termo (37 semanas)",
+      "due": "Data provável do parto (40 semanas)",
+      "late": "Gestação prolongada (42 semanas)"
+    }
+  },
+  "errors": {
+    "beforeStart": "A data é anterior ao início da gravidez."
   }
 }

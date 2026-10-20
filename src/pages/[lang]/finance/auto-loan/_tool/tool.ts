@@ -43,7 +43,7 @@ export const def = defineCalculator({
     overpay: { type: 'money' },
     totalCost: { type: 'money' },
   },
-  Extra: ({ result, lang, t }) => Schedule({ values: { kind: 'annuity' }, result, lang, t }),
+  Extra: (p) => Schedule({ ...p, values: { kind: 'annuity' } }),
 });
 
 export default island(def);
