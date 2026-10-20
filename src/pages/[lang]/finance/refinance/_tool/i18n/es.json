@@ -1,0 +1,50 @@
+{
+  "title": "Calculadora de subrogación y refinanciación: ahorro",
+  "description": "¿Compensa cambiar tu hipoteca o préstamo de banco? Nueva cuota, ahorro mensual, ahorro neto tras los gastos y en cuánto tiempo se recuperan.",
+  "inputs": {
+    "balance": {
+      "label": "Capital pendiente"
+    },
+    "rate": {
+      "label": "Tipo de interés actual"
+    },
+    "months": {
+      "label": "Meses restantes"
+    },
+    "newRate": {
+      "label": "Nuevo tipo de interés"
+    },
+    "newMonths": {
+      "label": "Nuevo plazo (meses)"
+    },
+    "fees": {
+      "label": "Gastos del cambio"
+    }
+  },
+  "outputs": {
+    "netSavings": {
+      "label": "Ahorro neto"
+    },
+    "monthlySaving": {
+      "label": "Ahorro al mes"
+    },
+    "newPayment": {
+      "label": "Nueva cuota"
+    },
+    "currentPayment": {
+      "label": "Cuota actual"
+    },
+    "breakEven": {
+      "label": "Los gastos se recuperan en"
+    }
+  },
+  "ui": {
+    "instant": "al momento (sin gastos)",
+    "never": "nunca: la cuota no baja",
+    "months": {
+      "one": "{count} mes",
+      "many": "{count} meses",
+      "other": "{count} meses"
+    }
+  }
+}

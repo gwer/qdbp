@@ -1,0 +1,50 @@
+{
+  "title": "Auto loan calculator: car payment and total interest",
+  "description": "Estimate your monthly car payment and total interest with down payment, trade-in, sales tax and fees.",
+  "inputs": {
+    "price": {
+      "label": "Vehicle price"
+    },
+    "down": {
+      "label": "Down payment"
+    },
+    "tradeIn": {
+      "label": "Trade-in value"
+    },
+    "tax": {
+      "label": "Sales tax"
+    },
+    "fees": {
+      "label": "Title, registration and other fees"
+    },
+    "rate": {
+      "label": "Interest rate (APR)"
+    },
+    "months": {
+      "label": "Loan term, months"
+    }
+  },
+  "outputs": {
+    "payment": {
+      "label": "Monthly payment"
+    },
+    "financed": {
+      "label": "Amount financed"
+    },
+    "overpay": {
+      "label": "Total interest"
+    },
+    "totalCost": {
+      "label": "Total cost: down payment + payments"
+    }
+  },
+  "ui": {
+    "schedule": "Amortization schedule",
+    "month": "Month",
+    "payment": "Payment",
+    "principal": "Principal",
+    "interest": "Interest",
+    "balance": "Balance",
+    "decreasing": "Payments decrease from {first} to {last}"
+  }
+}

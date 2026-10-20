@@ -1,0 +1,29 @@
+{
+  "title": "Break-even calculator: units and sales to break even",
+  "description": "Find how many units you need to sell to cover fixed costs, from the price and variable cost per unit.",
+  "inputs": {
+    "fixed": {
+      "label": "Fixed costs per period"
+    },
+    "price": {
+      "label": "Price per unit"
+    },
+    "variable": {
+      "label": "Variable cost per unit"
+    }
+  },
+  "outputs": {
+    "units": {
+      "label": "Break-even point, units"
+    },
+    "revenue": {
+      "label": "Break-even revenue"
+    },
+    "contribution": {
+      "label": "Contribution margin per unit"
+    },
+    "ratio": {
+      "label": "Contribution margin ratio"
+    }
+  }
+}

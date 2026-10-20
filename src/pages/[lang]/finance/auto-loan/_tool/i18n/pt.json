@@ -1,0 +1,50 @@
+{
+  "title": "Calculadora de financiamento de veículo: parcela e juros",
+  "description": "Calcule a parcela mensal e os juros do financiamento de carro com entrada, carro usado na troca e despesas financiadas.",
+  "inputs": {
+    "price": {
+      "label": "Preço do veículo"
+    },
+    "down": {
+      "label": "Entrada"
+    },
+    "tradeIn": {
+      "label": "Carro usado na troca"
+    },
+    "tax": {
+      "label": "Impostos financiados"
+    },
+    "fees": {
+      "label": "Despesas financiadas (TAC, registro…)"
+    },
+    "rate": {
+      "label": "Taxa de juros ao ano"
+    },
+    "months": {
+      "label": "Prazo em meses"
+    }
+  },
+  "outputs": {
+    "payment": {
+      "label": "Parcela mensal"
+    },
+    "financed": {
+      "label": "Valor financiado"
+    },
+    "overpay": {
+      "label": "Juros totais"
+    },
+    "totalCost": {
+      "label": "Total: entrada + parcelas"
+    }
+  },
+  "ui": {
+    "schedule": "Tabela de amortização",
+    "month": "Mês",
+    "payment": "Parcela",
+    "principal": "Amortização",
+    "interest": "Juros",
+    "balance": "Saldo devedor",
+    "decreasing": "A parcela cai de {first} para {last}"
+  }
+}

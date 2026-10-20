@@ -1,0 +1,55 @@
+{
+  "title": "Calculadora de amortização extra: economia de juros",
+  "description": "Veja quanto de juros você economiza com uma amortização extra no financiamento ou empréstimo e compare reduzir o prazo com reduzir a parcela.",
+  "inputs": {
+    "amount": {
+      "label": "Valor financiado"
+    },
+    "rate": {
+      "label": "Taxa de juros ao ano"
+    },
+    "months": {
+      "label": "Prazo em meses"
+    },
+    "after": {
+      "label": "Parcelas já pagas"
+    },
+    "extra": {
+      "label": "Valor da amortização extra"
+    },
+    "mode": {
+      "label": "O que reduzir",
+      "options": {
+        "term": "Prazo (mesma parcela)",
+        "payment": "Parcela (mesmo prazo)"
+      }
+    }
+  },
+  "outputs": {
+    "savings": {
+      "label": "Economia de juros"
+    },
+    "newPayment": {
+      "label": "Nova parcela"
+    },
+    "newMonths": {
+      "label": "Parcelas restantes"
+    },
+    "interestAfter": {
+      "label": "Juros totais com a amortização"
+    }
+  },
+  "ui": {
+    "schedule": "Tabela de amortização",
+    "month": "Mês",
+    "payment": "Parcela",
+    "principal": "Amortização",
+    "interest": "Juros",
+    "balance": "Saldo devedor",
+    "decreasing": "A parcela cai de {first} para {last}",
+    "variant": "Opção",
+    "monthsLeft": "Meses restantes",
+    "saved": "Economia",
+    "noPrepayment": "Sem amortização extra"
+  }
+}

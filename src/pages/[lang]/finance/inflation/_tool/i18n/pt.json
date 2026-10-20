@@ -1,0 +1,26 @@
+{
+  "title": "Calculadora de inflação: poder de compra no futuro",
+  "description": "Quanto vai custar no futuro o que hoje vale uma quantia, com a inflação que você informar, e quanto poder de compra suas economias perdem.",
+  "inputs": {
+    "amount": {
+      "label": "Valor hoje"
+    },
+    "rate": {
+      "label": "Inflação ao ano"
+    },
+    "years": {
+      "label": "Daqui a quantos anos"
+    }
+  },
+  "outputs": {
+    "future": {
+      "label": "Quanto vai custar no futuro"
+    },
+    "power": {
+      "label": "Quanto o dinheiro de hoje vai valer"
+    },
+    "loss": {
+      "label": "Perda de poder de compra"
+    }
+  }
+}

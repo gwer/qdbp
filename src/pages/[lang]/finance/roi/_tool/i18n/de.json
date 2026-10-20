@@ -1,0 +1,26 @@
+{
+  "title": "ROI-Rechner: Rendite einer Investition",
+  "description": "Return on Investment (ROI), Gewinn und durchschnittliche jährliche Rendite (CAGR) aus Einsatz, Endwert und Anlagedauer berechnen.",
+  "inputs": {
+    "invested": {
+      "label": "Eingesetztes Kapital"
+    },
+    "returned": {
+      "label": "Endwert"
+    },
+    "years": {
+      "label": "Anlagedauer, Jahre"
+    }
+  },
+  "outputs": {
+    "roi": {
+      "label": "ROI"
+    },
+    "cagr": {
+      "label": "Rendite pro Jahr (CAGR)"
+    },
+    "profit": {
+      "label": "Gewinn"
+    }
+  }
+}

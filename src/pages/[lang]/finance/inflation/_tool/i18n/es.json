@@ -1,0 +1,26 @@
+{
+  "title": "Calculadora de inflación: poder adquisitivo en el futuro",
+  "description": "Cuánto costará en el futuro lo que hoy vale una cantidad, con la inflación que indiques, y cuánto poder adquisitivo pierden tus ahorros.",
+  "inputs": {
+    "amount": {
+      "label": "Cantidad hoy"
+    },
+    "rate": {
+      "label": "Inflación anual"
+    },
+    "years": {
+      "label": "Dentro de cuántos años"
+    }
+  },
+  "outputs": {
+    "future": {
+      "label": "Lo que costará en el futuro"
+    },
+    "power": {
+      "label": "Lo que valdrá tu dinero de hoy"
+    },
+    "loss": {
+      "label": "Pérdida de poder adquisitivo"
+    }
+  }
+}

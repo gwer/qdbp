@@ -1,0 +1,55 @@
+{
+  "title": "Calculadora de amortización anticipada: ahorro en intereses",
+  "description": "Calcula cuántos intereses te ahorras al amortizar anticipadamente un préstamo o una hipoteca y qué conviene más: reducir plazo o reducir cuota.",
+  "inputs": {
+    "amount": {
+      "label": "Importe del préstamo"
+    },
+    "rate": {
+      "label": "Tipo de interés anual"
+    },
+    "months": {
+      "label": "Plazo (meses)"
+    },
+    "after": {
+      "label": "Cuotas ya pagadas"
+    },
+    "extra": {
+      "label": "Importe a amortizar"
+    },
+    "mode": {
+      "label": "Qué reducir",
+      "options": {
+        "term": "Plazo (misma cuota)",
+        "payment": "Cuota (mismo plazo)"
+      }
+    }
+  },
+  "outputs": {
+    "savings": {
+      "label": "Ahorro en intereses"
+    },
+    "newPayment": {
+      "label": "Nueva cuota"
+    },
+    "newMonths": {
+      "label": "Cuotas pendientes"
+    },
+    "interestAfter": {
+      "label": "Intereses totales con la amortización"
+    }
+  },
+  "ui": {
+    "schedule": "Cuadro de amortización",
+    "month": "Mes",
+    "payment": "Cuota",
+    "principal": "Capital",
+    "interest": "Intereses",
+    "balance": "Pendiente",
+    "decreasing": "La cuota baja de {first} a {last}",
+    "variant": "Opción",
+    "monthsLeft": "Meses pendientes",
+    "saved": "Ahorro",
+    "noPrepayment": "Sin amortización anticipada"
+  }
+}

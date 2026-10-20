@@ -1,0 +1,50 @@
+{
+  "title": "Calculadora de portabilidade e refinanciamento: economia",
+  "description": "Vale a pena fazer a portabilidade ou refinanciar? Nova parcela, economia por mês, economia líquida após os custos e em quanto tempo eles se pagam.",
+  "inputs": {
+    "balance": {
+      "label": "Saldo devedor"
+    },
+    "rate": {
+      "label": "Taxa atual ao ano"
+    },
+    "months": {
+      "label": "Meses restantes"
+    },
+    "newRate": {
+      "label": "Nova taxa ao ano"
+    },
+    "newMonths": {
+      "label": "Novo prazo em meses"
+    },
+    "fees": {
+      "label": "Custos da operação"
+    }
+  },
+  "outputs": {
+    "netSavings": {
+      "label": "Economia líquida"
+    },
+    "monthlySaving": {
+      "label": "Economia por mês"
+    },
+    "newPayment": {
+      "label": "Nova parcela"
+    },
+    "currentPayment": {
+      "label": "Parcela atual"
+    },
+    "breakEven": {
+      "label": "Os custos se pagam em"
+    }
+  },
+  "ui": {
+    "instant": "na hora (sem custos)",
+    "never": "nunca — a parcela não cai",
+    "months": {
+      "one": "{count} mês",
+      "many": "{count} meses",
+      "other": "{count} meses"
+    }
+  }
+}

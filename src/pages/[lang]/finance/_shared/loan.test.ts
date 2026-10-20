@@ -60,3 +60,13 @@ describe('loan: крайние случаи', () => {
     expect(() => loan({ amount: 1000, rate: 12, months: 1.5, kind: 'annuity' })).toThrow();
   });
 });
+
+describe('loan: округление ровно на половине копейки', () => {
+  it('остаток 272 682,00 под 11% даёт ровно 2 499,585 процентов за месяц → 2 499,59', () => {
+    // Эталон — Python decimal: месяц 244 графика 400 000 под 11% на 360 месяцев.
+    const r = loan({ amount: 400000, rate: 11, months: 360, kind: 'annuity' });
+    expect(r.schedule[242].balance).toBe(272682);
+    expect(r.schedule[243].interest).toBe(2499.59);
+    expect(r.overpay).toBeCloseTo(971355.5, 2);
+  });
+});

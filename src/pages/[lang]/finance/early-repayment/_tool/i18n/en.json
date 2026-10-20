@@ -1,0 +1,55 @@
+{
+  "title": "Extra payment calculator: loan and mortgage prepayment savings",
+  "description": "See how much interest a lump-sum extra payment saves on a loan or mortgage, and compare paying off sooner with lowering your monthly payment.",
+  "inputs": {
+    "amount": {
+      "label": "Loan amount"
+    },
+    "rate": {
+      "label": "Annual interest rate"
+    },
+    "months": {
+      "label": "Loan term, months"
+    },
+    "after": {
+      "label": "Payments already made"
+    },
+    "extra": {
+      "label": "Extra payment"
+    },
+    "mode": {
+      "label": "Apply it to",
+      "options": {
+        "term": "Shorter term (same payment)",
+        "payment": "Lower payment (same term)"
+      }
+    }
+  },
+  "outputs": {
+    "savings": {
+      "label": "Interest saved"
+    },
+    "newPayment": {
+      "label": "New monthly payment"
+    },
+    "newMonths": {
+      "label": "Payments left"
+    },
+    "interestAfter": {
+      "label": "Total interest with prepayment"
+    }
+  },
+  "ui": {
+    "schedule": "Amortization schedule",
+    "month": "Month",
+    "payment": "Payment",
+    "principal": "Principal",
+    "interest": "Interest",
+    "balance": "Balance",
+    "decreasing": "Payments decrease from {first} to {last}",
+    "variant": "Option",
+    "monthsLeft": "Months left",
+    "saved": "Interest saved",
+    "noPrepayment": "No extra payment"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Calculadora de préstamo para coche: cuota e intereses",
+  "description": "Calcula la cuota mensual y los intereses de la financiación de un coche con entrada, coche de segunda mano como parte del pago y gastos.",
+  "inputs": {
+    "price": {
+      "label": "Precio del coche"
+    },
+    "down": {
+      "label": "Entrada"
+    },
+    "tradeIn": {
+      "label": "Valor de tu coche usado (permuta)"
+    },
+    "tax": {
+      "label": "Impuestos financiados"
+    },
+    "fees": {
+      "label": "Gastos financiados (apertura, seguros…)"
+    },
+    "rate": {
+      "label": "Tipo de interés anual"
+    },
+    "months": {
+      "label": "Plazo (meses)"
+    }
+  },
+  "outputs": {
+    "payment": {
+      "label": "Cuota mensual"
+    },
+    "financed": {
+      "label": "Importe financiado"
+    },
+    "overpay": {
+      "label": "Intereses totales"
+    },
+    "totalCost": {
+      "label": "Coste total: entrada + cuotas"
+    }
+  },
+  "ui": {
+    "schedule": "Cuadro de amortización",
+    "month": "Mes",
+    "payment": "Cuota",
+    "principal": "Capital",
+    "interest": "Intereses",
+    "balance": "Pendiente",
+    "decreasing": "La cuota baja de {first} a {last}"
+  }
+}
