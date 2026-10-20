@@ -50,6 +50,10 @@
 /de/math/random-number/
 /de/math/roman-numerals/
 /de/math/what-percent/
+/de/random/
+/de/random/dice-roller/
+/de/random/random-picker/
+/de/random/team-generator/
 /de/repair/
 /de/repair/aerated-blocks/
 /de/repair/bricks/
@@ -120,6 +124,10 @@
 /en/math/random-number/
 /en/math/roman-numerals/
 /en/math/what-percent/
+/en/random/
+/en/random/dice-roller/
+/en/random/random-picker/
+/en/random/team-generator/
 /en/repair/
 /en/repair/bricks/
 /en/repair/concrete/
@@ -189,6 +197,10 @@
 /es/math/random-number/
 /es/math/roman-numerals/
 /es/math/what-percent/
+/es/random/
+/es/random/dice-roller/
+/es/random/random-picker/
+/es/random/team-generator/
 /es/repair/
 /es/repair/aerated-blocks/
 /es/repair/bricks/
@@ -259,6 +271,10 @@
 /pt/math/random-number/
 /pt/math/roman-numerals/
 /pt/math/what-percent/
+/pt/random/
+/pt/random/dice-roller/
+/pt/random/random-picker/
+/pt/random/team-generator/
 /pt/repair/
 /pt/repair/aerated-blocks/
 /pt/repair/bricks/
@@ -329,6 +345,10 @@
 /ru/math/random-number/
 /ru/math/roman-numerals/
 /ru/math/what-percent/
+/ru/random/
+/ru/random/dice-roller/
+/ru/random/random-picker/
+/ru/random/team-generator/
 /ru/repair/
 /ru/repair/aerated-blocks/
 /ru/repair/bricks/

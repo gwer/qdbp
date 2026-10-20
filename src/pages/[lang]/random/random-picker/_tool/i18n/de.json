@@ -1,0 +1,14 @@
+{
+  "title": "Zufallsgenerator für Namen: aus einer Liste auslosen",
+  "description": "Liste mit Namen oder Optionen einfügen und fair einen oder mehrere Gewinner ohne Wiederholung auslosen – ideal für Gewinnspiele.",
+  "ui": {
+    "list": "Liste (ein Eintrag pro Zeile)",
+    "placeholder": "Anna\nBen\nClara\nDavid",
+    "count": "Wie viele auslosen",
+    "pick": "Auslosen",
+    "items": {
+      "one": "{count} Eintrag",
+      "other": "{count} Einträge"
+    }
+  }
+}

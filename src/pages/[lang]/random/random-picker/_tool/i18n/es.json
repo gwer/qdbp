@@ -1,0 +1,15 @@
+{
+  "title": "Sorteo online: elegir al azar de una lista",
+  "description": "Pega una lista de nombres u opciones y elige uno o varios ganadores al azar, sin repetir. Ideal para sorteos y concursos.",
+  "ui": {
+    "list": "Lista (una opción por línea)",
+    "placeholder": "Ana\nBruno\nCarla\nDiego",
+    "count": "Cuántos elegir",
+    "pick": "Sortear",
+    "items": {
+      "one": "{count} opción",
+      "many": "{count} opciones",
+      "other": "{count} opciones"
+    }
+  }
+}

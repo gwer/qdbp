@@ -1,0 +1,14 @@
+{
+  "title": "Random name picker: choose from a list",
+  "description": "Paste a list of names or options and fairly pick one winner or several without repeats — great for giveaways, raffles and classrooms.",
+  "ui": {
+    "list": "List (one item per line)",
+    "placeholder": "Alice\nBob\nCharlie\nDiana",
+    "count": "How many to pick",
+    "pick": "Pick",
+    "items": {
+      "one": "{count} item",
+      "other": "{count} items"
+    }
+  }
+}

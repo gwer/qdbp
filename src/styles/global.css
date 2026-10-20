@@ -752,3 +752,52 @@ table.kv td {
   border-radius: 6px;
   background: repeating-conic-gradient(var(--surface) 0% 25%, var(--bg) 0% 50%) 50% / 16px 16px;
 }
+
+/* Случайный выбор */
+ol.picked {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 14px 0 0;
+}
+
+.teams {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.team {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+
+.team ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.dice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.die {
+  display: grid;
+  place-items: center;
+  min-width: 56px;
+  height: 56px;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+}
+
+.coin {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 14px;
+}
