@@ -22,6 +22,9 @@
     },
     "months": {
       "label": "Laufzeit in Monaten"
+    },
+    "owed": {
+      "label": "Restschuld des Altwagens"
     }
   },
   "outputs": {

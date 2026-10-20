@@ -4,7 +4,7 @@ Enter the vehicle price, your down payment, trade-in value, sales tax rate, any 
 
 ## How it's calculated
 
-- **Amount financed** = (price − trade-in) × (1 + sales tax %) + fees − down payment.
+- **Amount financed** = (price − trade-in) × (1 + sales tax %) + fees + amount owed on trade-in − down payment. If you still owe more on your trade-in than it's worth, the difference (negative equity) is rolled into the new loan.
 - **Monthly payment** — a fixed payment over the term.
 - **Total cost** = all payments + down payment.
 

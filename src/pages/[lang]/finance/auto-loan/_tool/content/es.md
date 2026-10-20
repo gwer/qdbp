@@ -4,7 +4,7 @@ Indica el precio del coche, la entrada, el valor de tu coche usado si lo entrega
 
 ## Cómo se calcula
 
-- **Importe financiado** = (precio − valor del usado) × (1 + impuestos %) + gastos − entrada.
+- **Importe financiado** = (precio − valor del usado) × (1 + impuestos %) + gastos + deuda pendiente del coche entregado − entrada.
 - **Cuota** — fija todos los meses (sistema francés).
 - **Coste total** = suma de cuotas + entrada.
 

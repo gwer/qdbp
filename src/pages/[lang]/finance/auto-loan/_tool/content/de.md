@@ -4,7 +4,7 @@ Geben Sie den Fahrzeugpreis, die Anzahlung, den Wert Ihres Gebrauchtwagens bei I
 
 ## So wird gerechnet
 
-- **Kreditbetrag** = (Preis − Inzahlungnahme) × (1 + Steuern %) + Gebühren − Anzahlung.
+- **Kreditbetrag** = (Preis − Inzahlungnahme) × (1 + Steuern %) + Gebühren + Restschuld des Altwagens − Anzahlung.
 - **Monatsrate** – gleichbleibend über die gesamte Laufzeit.
 - **Gesamtkosten** = alle Raten + Anzahlung.
 

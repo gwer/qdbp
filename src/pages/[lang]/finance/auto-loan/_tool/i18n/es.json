@@ -22,6 +22,9 @@
     },
     "months": {
       "label": "Plazo (meses)"
+    },
+    "owed": {
+      "label": "Deuda pendiente del coche entregado"
     }
   },
   "outputs": {

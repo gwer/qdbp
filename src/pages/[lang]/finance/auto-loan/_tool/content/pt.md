@@ -4,7 +4,7 @@ Informe o preço do veículo, a entrada, o valor do seu usado na troca, a taxa d
 
 ## Como é calculado
 
-- **Valor financiado** = (preço − valor do usado) × (1 + impostos %) + tarifas − entrada.
+- **Valor financiado** = (preço − valor do usado) × (1 + impostos %) + tarifas + saldo devedor do carro na troca − entrada.
 - **Parcela** — fixa durante todo o prazo (tabela Price).
 - **Custo total** = soma das parcelas + entrada.
 

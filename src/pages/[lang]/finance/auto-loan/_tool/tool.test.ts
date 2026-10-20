@@ -20,3 +20,11 @@ describe('autoLoan', () => {
     expect(() => autoLoan({ price: 10000, down: 10000, tradeIn: 0, tax: 0, fees: 0, rate: 5, months: 12 })).toThrow();
   });
 });
+
+describe('долг за сдаваемую машину', () => {
+  it('добавляется к сумме кредита', async () => {
+    const { autoLoan } = await import('./tool');
+    const base = { price: 35000, down: 5000, tradeIn: 10000, tax: 0, fees: 0, rate: 7, months: 60 };
+    expect(autoLoan({ ...base, owed: 12000 }).financed - autoLoan(base).financed).toBeCloseTo(12000, 9);
+  });
+});

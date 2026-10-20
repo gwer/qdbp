@@ -22,6 +22,9 @@
     },
     "months": {
       "label": "Prazo em meses"
+    },
+    "owed": {
+      "label": "Saldo devedor do carro na troca"
     }
   },
   "outputs": {

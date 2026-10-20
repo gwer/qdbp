@@ -22,6 +22,9 @@
     },
     "months": {
       "label": "Loan term, months"
+    },
+    "owed": {
+      "label": "Amount owed on trade-in"
     }
   },
   "outputs": {
