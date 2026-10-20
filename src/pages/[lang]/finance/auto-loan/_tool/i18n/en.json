@@ -45,6 +45,8 @@
     "principal": "Principal",
     "interest": "Interest",
     "balance": "Balance",
-    "decreasing": "Payments decrease from {first} to {last}"
+    "decreasing": "Payments decrease from {first} to {last}",
+    "year": "Year",
+    "chartPayments": "Payments by year: principal and interest"
   }
 }

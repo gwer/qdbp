@@ -77,6 +77,7 @@ function defaults(def: CalculatorDef, env: Env, now: Now, exact?: Exact, chosen:
     const byLang = 'byLang' in input ? input.byLang?.[env.lang] : undefined;
     const spec = (byMode ?? byLang) !== undefined ? ({ ...input, default: byMode ?? byLang } as InputSpec) : input;
     if (spec.type === 'select') raw[name] = selected[name];
+    else if (spec.type === 'custom') raw[name] = spec.default;
     else if (spec.type === 'date') {
       const iso = resolveDateDefault(spec.default, now?.date ?? null);
       raw[name] = iso ? formatDateInput(iso, env.lang) : '';
@@ -106,6 +107,8 @@ function parseInputs(def: CalculatorDef, raw: Raw, env: Env, now: Now, exact?: E
     const s = shown ? raw[name] : (fallback ??= defaults(def, env, now, undefined, raw))[name];
     if (spec.type === 'select') {
       values[name] = spec.options.includes(s) ? s : spec.default;
+    } else if (spec.type === 'custom') {
+      values[name] = s;
     } else if (spec.type === 'date') {
       const iso = parseDateInput(s, lang);
       if (iso) values[name] = iso;
@@ -145,7 +148,7 @@ function readQuery(def: CalculatorDef, env: Env, exact?: Exact): Raw {
   for (const [name, spec] of entries(def)) {
     const v = params.get(name);
     if (v === null || v === '') continue;
-    if (spec.type === 'select') raw[name] = v;
+    if (spec.type === 'select' || spec.type === 'custom') raw[name] = v;
     else if (spec.type === 'date') {
       if (isValidDate(v)) raw[name] = formatDateInput(v, env.lang);
     }
@@ -329,6 +332,13 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
             'aria-invalid': error ? ('true' as const) : undefined,
             'aria-describedby': error ? `${id}-err` : undefined,
           };
+          if (spec.type === 'custom') {
+            return (
+              <div class="field field-wide" key={name}>
+                <spec.Field id={id} name={name} value={raw[name]} lang={lang} t={t} onChange={(v) => set(name, v)} />
+              </div>
+            );
+          }
           const suffix =
             spec.type === 'percent' ? '%' : spec.type === 'quantity' ? unitSymbol(lang, displayUnit(spec, units)) : null;
           return (

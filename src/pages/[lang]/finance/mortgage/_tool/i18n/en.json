@@ -20,6 +20,9 @@
         "annuity": "Fixed payments",
         "differentiated": "Equal principal"
       }
+    },
+    "prepay": {
+      "label": "Extra payments"
     }
   },
   "outputs": {
@@ -46,6 +49,44 @@
     "paid": "Paid",
     "principal": "Principal",
     "interest": "Interest",
-    "balance": "Balance"
+    "balance": "Balance",
+    "chartPayments": "Payments by year: principal and interest",
+    "extra": "Extra",
+    "chartBalance": "Loan balance with and without extra payments",
+    "withoutPrepay": "Without extra payments",
+    "withPrepay": "With extra payments",
+    "years": {
+      "one": "{count} year",
+      "other": "{count} years"
+    },
+    "months": {
+      "one": "{count} month",
+      "other": "{count} months"
+    },
+    "effect": "Extra payments save {savings} in interest.",
+    "effectTerm": "The loan is paid off {term} sooner.",
+    "effectSameTerm": "The term stays the same — the payment goes down.",
+    "prepay": {
+      "add": "Add extra payment",
+      "after": "After payment #",
+      "amount": "Amount",
+      "repeat": "How often",
+      "mode": "Reduce",
+      "remove": "Remove",
+      "repeats": {
+        "once": "One time",
+        "monthly": "Monthly",
+        "quarterly": "Quarterly",
+        "yearly": "Yearly"
+      },
+      "modes": {
+        "term": "Term",
+        "payment": "Payment"
+      }
+    },
+    "month": "Month"
+  },
+  "errors": {
+    "prepayments": "The extra payments in the link are damaged — please check them."
   }
 }

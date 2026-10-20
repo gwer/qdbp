@@ -45,6 +45,8 @@
     "principal": "Amortização",
     "interest": "Juros",
     "balance": "Saldo devedor",
-    "decreasing": "A parcela cai de {first} para {last}"
+    "decreasing": "A parcela cai de {first} para {last}",
+    "year": "Ano",
+    "chartPayments": "Pagamentos por ano: amortização e juros"
   }
 }

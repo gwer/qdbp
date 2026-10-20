@@ -70,3 +70,27 @@ describe('loan: округление ровно на половине копей
     expect(r.overpay).toBeCloseTo(971355.5, 2);
   });
 });
+
+describe('loan: досрочные погашения', () => {
+  it('без погашений график прежний, extra в строках нет', () => {
+    const a = loan({ amount: 1_000_000, rate: 12, months: 60, kind: 'annuity' });
+    const b = loan({ amount: 1_000_000, rate: 12, months: 60, kind: 'annuity', prepayments: [] });
+    expect(b).toEqual(a);
+    expect(a.extraTotal).toBe(0);
+    expect(a.schedule.some((r) => 'extra' in r)).toBe(false);
+  });
+
+  it('погашение сразу после выдачи уменьшает сумму, с которой считается первый месяц', () => {
+    const r = loan({ amount: 1000, rate: 12, months: 12, kind: 'annuity', prepayments: [{ after: 0, amount: 1000, mode: 'term', repeat: 'once' }] });
+    expect(r).toMatchObject({ schedule: [], total: 1000, overpay: 0, extraTotal: 1000, payment: 0 });
+  });
+
+  it('сумма платежей и досрочных погашений = основной долг + проценты', () => {
+    const r = loan({ amount: 1_000_000, rate: 12, months: 120, kind: 'differentiated', prepayments: [{ after: 3, amount: 7000, mode: 'payment', repeat: 'monthly' }] });
+    const paid = r.schedule.reduce((s, x) => s + x.payment + (x.extra ?? 0), 0);
+    const interest = r.schedule.reduce((s, x) => s + x.interest, 0);
+    expect(paid).toBeCloseTo(r.total, 2);
+    expect(r.total - 1_000_000).toBeCloseTo(interest, 2);
+    expect(r.schedule.at(-1)!.balance).toBe(0);
+  });
+});

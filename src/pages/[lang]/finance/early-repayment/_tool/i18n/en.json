@@ -11,32 +11,29 @@
     "months": {
       "label": "Loan term, months"
     },
-    "after": {
-      "label": "Payments already made"
-    },
-    "extra": {
-      "label": "Extra payment"
-    },
-    "mode": {
-      "label": "Apply it to",
+    "kind": {
+      "label": "Repayment type",
       "options": {
-        "term": "Shorter term (same payment)",
-        "payment": "Lower payment (same term)"
+        "annuity": "Fixed monthly payments",
+        "differentiated": "Equal principal (decreasing)"
       }
+    },
+    "prepay": {
+      "label": "Extra payments"
     }
   },
   "outputs": {
     "savings": {
       "label": "Interest saved"
     },
-    "newPayment": {
-      "label": "New monthly payment"
+    "termSaved": {
+      "label": "Paid off sooner by"
     },
-    "newMonths": {
-      "label": "Payments left"
+    "newTerm": {
+      "label": "Term with extra payments"
     },
     "interestAfter": {
-      "label": "Total interest with prepayment"
+      "label": "Total interest with extra payments"
     }
   },
   "ui": {
@@ -46,13 +43,55 @@
     "principal": "Principal",
     "interest": "Interest",
     "balance": "Balance",
-    "decreasing": "Payments decrease from {first} to {last}",
     "variant": "Option",
-    "monthsLeft": "Months left",
     "saved": "Interest saved",
-    "noPrepayment": "No extra payment"
+    "noPrepayment": "No extra payments",
+    "term": "Term",
+    "asEntered": "As entered",
+    "allTo": {
+      "term": "All to a shorter term",
+      "payment": "All to a lower payment"
+    },
+    "paymentNote": "Payment is the last full monthly payment on the schedule: with a lower payment it is below the original.",
+    "year": "Year",
+    "chartPayments": "Payments by year: principal and interest",
+    "extra": "Extra",
+    "chartBalance": "Loan balance with and without extra payments",
+    "withoutPrepay": "Without extra payments",
+    "withPrepay": "With extra payments",
+    "years": {
+      "one": "{count} year",
+      "other": "{count} years"
+    },
+    "months": {
+      "one": "{count} month",
+      "other": "{count} months"
+    },
+    "effect": "Extra payments save {savings} in interest.",
+    "effectTerm": "The loan is paid off {term} sooner.",
+    "effectSameTerm": "The term stays the same — the payment goes down.",
+    "prepay": {
+      "add": "Add extra payment",
+      "after": "After payment #",
+      "amount": "Amount",
+      "repeat": "How often",
+      "mode": "Reduce",
+      "remove": "Remove",
+      "repeats": {
+        "once": "One time",
+        "monthly": "Monthly",
+        "quarterly": "Quarterly",
+        "yearly": "Yearly"
+      },
+      "modes": {
+        "term": "Term",
+        "payment": "Payment"
+      }
+    }
   },
   "errors": {
-    "afterTooLate": "The number of payments made must be less than the loan term in months."
+    "afterTooLate": "The payment number of an extra payment must be less than the loan term in months.",
+    "noPrepayments": "Add at least one extra payment.",
+    "prepayments": "The extra payments in the link are damaged — please check them."
   }
 }

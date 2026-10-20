@@ -39,6 +39,7 @@
     "year": "Ano",
     "contributed": "Investido",
     "interest": "Juros",
-    "balance": "Saldo"
+    "balance": "Saldo",
+    "chart": "Saldo por ano: aportes e juros"
   }
 }

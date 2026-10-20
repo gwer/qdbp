@@ -1,8 +1,8 @@
 ## How to use
 
-Enter the loan amount, interest rate, full term in months, how many payments you've already made and the size of your extra payment. You'll see the interest saved for the option you choose, and the table below compares both options side by side: pay the loan off sooner, or lower the monthly payment.
+Enter the loan amount, interest rate, full term in months and the repayment type. Then add your extra payments: after which payment, the amount, how often (one time, monthly, quarterly or yearly — until the loan ends) and whether it should shorten the term or lower the payment. Add as many as you like: for example, a one-time $20,000 after payment 60 plus $200 every month after payment 72.
 
-The calculation is for a fixed-payment (amortizing) loan and a one-time lump-sum extra payment. Amounts are rounded to the cent each month, as on a lender's amortization schedule.
+You'll see the interest saved and how much sooner the loan is paid off, a comparison of your plan with "everything to a shorter term" and "everything to a lower payment", a chart of the balance with and without extra payments, and the full schedule. Works for fixed payments and equal-principal loans. Amounts are rounded to the cent each month, as on a lender's amortization schedule.
 
 ## Shorter term or lower payment?
 
@@ -25,4 +25,4 @@ A $300,000 mortgage at 7% for 30 years has a payment of $1,995.91. After 60 paym
 
 **Are taxes, insurance or PMI included?** No — only loan interest.
 
-Results are estimates; lenders may calculate interest differently. See the full schedule in the [mortgage calculator](/en/finance/mortgage/) or the [loan calculator](/en/finance/loan-calculator/), and compare a lower rate with the [refinance calculator](/en/finance/refinance/).
+Results are estimates; lenders may calculate interest differently. You can add the same extra payments in the [mortgage calculator](/en/finance/mortgage/) (with a down payment and a term in years) or the [loan calculator](/en/finance/loan-calculator/), and compare a lower rate with the [refinance calculator](/en/finance/refinance/).

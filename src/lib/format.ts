@@ -31,6 +31,11 @@ export function formatNumber(lang: Lang, value: number, kind: NumberKind = 'numb
   }
 }
 
+/** Короткая запись для осей графиков: «1,2 млн», «350 тыс.», «1.2M». */
+export function formatCompact(lang: Lang, value: number): string {
+  return normalize(nf(lang, { notation: 'compact', maximumFractionDigits: 1 }).format(value));
+}
+
 /** Число для поля ввода: локальный десятичный разделитель, без группировки разрядов. */
 export function formatInput(lang: Lang, value: number): string {
   return nf(lang, { useGrouping: false, maximumFractionDigits: 10 }).format(value);

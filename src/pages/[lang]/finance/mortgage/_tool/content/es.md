@@ -2,6 +2,8 @@
 
 Introduce el precio de la vivienda, la entrada en porcentaje, el tipo de interés y el plazo en años, y elige el sistema de amortización. Verás el importe de la hipoteca, la cuota mensual, los intereses totales y un resumen por años de cuánto se destina a capital y a intereses.
 
+El gráfico muestra cómo se reparte cada año la cuota entre capital e intereses. Si piensas amortizar, añade amortizaciones anticipadas —puntuales o periódicas, reduciendo plazo o cuota— y se recalculan el cuadro y el ahorro. Para comparar opciones, usa la [calculadora de amortización anticipada](/es/finance/early-repayment/).
+
 ## Cómo se calcula la cuota
 
 Con el **sistema francés** (cuota fija), todas las cuotas son iguales:

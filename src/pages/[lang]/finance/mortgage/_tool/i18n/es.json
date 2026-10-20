@@ -20,6 +20,9 @@
         "annuity": "Francés (cuota fija)",
         "differentiated": "Alemán (cuota decreciente)"
       }
+    },
+    "prepay": {
+      "label": "Amortizaciones anticipadas"
     }
   },
   "outputs": {
@@ -46,6 +49,44 @@
     "paid": "Pagado",
     "principal": "Capital",
     "interest": "Intereses",
-    "balance": "Pendiente"
+    "balance": "Pendiente",
+    "chartPayments": "Pagos por año: capital e intereses",
+    "extra": "Anticipado",
+    "chartBalance": "Deuda pendiente con y sin amortizaciones anticipadas",
+    "withoutPrepay": "Sin amortizaciones anticipadas",
+    "withPrepay": "Con amortizaciones anticipadas",
+    "years": {
+      "one": "{count} año",
+      "other": "{count} años"
+    },
+    "months": {
+      "one": "{count} mes",
+      "other": "{count} meses"
+    },
+    "effect": "Las amortizaciones anticipadas ahorran {savings} en intereses.",
+    "effectTerm": "El préstamo se termina de pagar {term} antes.",
+    "effectSameTerm": "El plazo no cambia: baja la cuota.",
+    "prepay": {
+      "add": "Añadir amortización anticipada",
+      "after": "Tras la cuota n.º",
+      "amount": "Importe",
+      "repeat": "Frecuencia",
+      "mode": "Reducir",
+      "remove": "Eliminar",
+      "repeats": {
+        "once": "Una vez",
+        "monthly": "Cada mes",
+        "quarterly": "Cada trimestre",
+        "yearly": "Cada año"
+      },
+      "modes": {
+        "term": "Plazo",
+        "payment": "Cuota"
+      }
+    },
+    "month": "Mes"
+  },
+  "errors": {
+    "prepayments": "La lista de amortizaciones del enlace está dañada: revísela."
   }
 }

@@ -2,6 +2,8 @@
 
 Enter the loan amount, the annual interest rate and the term in months, then choose the repayment type. You'll instantly see the monthly payment, total interest and total amount paid, plus a month-by-month amortization schedule.
 
+The chart (by year, or by month for short loans) shows how much of your payments goes to interest. You can add extra payments — one-time or recurring — right here, and the schedule and interest saved are recalculated. To compare a shorter term with a lower payment, use the [extra payment calculator](/en/finance/early-repayment/).
+
 ## Fixed payments vs. equal principal
 
 **Fixed payments (amortizing loan)** — every payment is the same. Early on most of it goes to interest; towards the end, most goes to principal. Most personal loans, car loans and mortgages work this way.

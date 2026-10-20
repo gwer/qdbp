@@ -2,6 +2,8 @@
 
 Geben Sie Kreditbetrag, Sollzins pro Jahr und Laufzeit in Monaten ein und wählen Sie die Tilgungsart. Sie sehen sofort die monatliche Rate, die Zinskosten und den Gesamtbetrag – und darunter den vollständigen Tilgungsplan.
 
+Das Diagramm (pro Jahr, bei kurzen Krediten pro Monat) zeigt, welcher Teil der Raten auf Zinsen entfällt. Sondertilgungen – einmalig oder regelmäßig – können Sie direkt hier eintragen; Plan und Zinsersparnis werden neu berechnet. Laufzeit oder Rate vergleichen Sie im [Sondertilgungsrechner](/de/finance/early-repayment/).
+
 ## Annuitätendarlehen und Tilgungsdarlehen
 
 **Annuitätendarlehen** – die Rate bleibt über die gesamte Laufzeit gleich. Anfangs besteht sie überwiegend aus Zinsen, gegen Ende überwiegend aus Tilgung. So funktionieren die meisten Ratenkredite und Baufinanzierungen.

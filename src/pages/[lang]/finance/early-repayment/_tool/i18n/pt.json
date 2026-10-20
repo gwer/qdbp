@@ -11,32 +11,29 @@
     "months": {
       "label": "Prazo em meses"
     },
-    "after": {
-      "label": "Parcelas já pagas"
-    },
-    "extra": {
-      "label": "Valor da amortização extra"
-    },
-    "mode": {
-      "label": "O que reduzir",
+    "kind": {
+      "label": "Sistema de amortização",
       "options": {
-        "term": "Prazo (mesma parcela)",
-        "payment": "Parcela (mesmo prazo)"
+        "annuity": "Price (parcelas fixas)",
+        "differentiated": "SAC (parcelas decrescentes)"
       }
+    },
+    "prepay": {
+      "label": "Amortizações extraordinárias"
     }
   },
   "outputs": {
     "savings": {
       "label": "Economia de juros"
     },
-    "newPayment": {
-      "label": "Nova parcela"
+    "termSaved": {
+      "label": "O prazo diminui em"
     },
-    "newMonths": {
-      "label": "Parcelas restantes"
+    "newTerm": {
+      "label": "Prazo com amortizações extras"
     },
     "interestAfter": {
-      "label": "Juros totais com a amortização"
+      "label": "Juros totais com amortizações extras"
     }
   },
   "ui": {
@@ -46,13 +43,55 @@
     "principal": "Amortização",
     "interest": "Juros",
     "balance": "Saldo devedor",
-    "decreasing": "A parcela cai de {first} para {last}",
     "variant": "Opção",
-    "monthsLeft": "Meses restantes",
     "saved": "Economia",
-    "noPrepayment": "Sem amortização extra"
+    "noPrepayment": "Sem amortizações extras",
+    "term": "Prazo",
+    "asEntered": "Como informado",
+    "allTo": {
+      "term": "Tudo para reduzir o prazo",
+      "payment": "Tudo para reduzir a parcela"
+    },
+    "paymentNote": "Parcela é a última parcela cheia da tabela: ao reduzir a parcela, ela fica abaixo da original.",
+    "year": "Ano",
+    "chartPayments": "Pagamentos por ano: amortização e juros",
+    "extra": "Extra",
+    "chartBalance": "Saldo devedor com e sem amortizações extras",
+    "withoutPrepay": "Sem amortizações extras",
+    "withPrepay": "Com amortizações extras",
+    "years": {
+      "one": "{count} ano",
+      "other": "{count} anos"
+    },
+    "months": {
+      "one": "{count} mês",
+      "other": "{count} meses"
+    },
+    "effect": "As amortizações extras economizam {savings} em juros.",
+    "effectTerm": "O financiamento termina {term} antes.",
+    "effectSameTerm": "O prazo continua o mesmo — a parcela diminui.",
+    "prepay": {
+      "add": "Adicionar amortização",
+      "after": "Após a parcela nº",
+      "amount": "Valor",
+      "repeat": "Frequência",
+      "mode": "Reduzir",
+      "remove": "Remover",
+      "repeats": {
+        "once": "Uma vez",
+        "monthly": "Todo mês",
+        "quarterly": "Todo trimestre",
+        "yearly": "Todo ano"
+      },
+      "modes": {
+        "term": "Prazo",
+        "payment": "Parcela"
+      }
+    }
   },
   "errors": {
-    "afterTooLate": "O número de parcelas pagas deve ser menor que o prazo em meses."
+    "afterTooLate": "O número da parcela de uma amortização deve ser menor que o prazo em meses.",
+    "noPrepayments": "Adicione pelo menos uma amortização extra.",
+    "prepayments": "A lista de amortizações do link está corrompida — verifique."
   }
 }

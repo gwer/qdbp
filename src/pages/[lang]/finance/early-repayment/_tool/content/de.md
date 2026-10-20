@@ -1,8 +1,8 @@
 ## So funktioniert der Rechner
 
-Geben Sie Darlehensbetrag, Sollzins, die gesamte Laufzeit in Monaten, die Zahl der bereits gezahlten Raten und die Höhe der Sondertilgung ein. Sie sehen die Zinsersparnis für die gewählte Variante und in der Tabelle beide Varianten im Vergleich: kürzere Laufzeit oder niedrigere Rate.
+Geben Sie Darlehensbetrag, Sollzins, die gesamte Laufzeit in Monaten und die Tilgungsart ein. Darunter fügen Sie Sondertilgungen hinzu: nach welcher Rate, Betrag, wie oft (einmalig, monatlich, vierteljährlich oder jährlich – bis zum Ende) und ob sie die Laufzeit verkürzen oder die Rate senken. Beliebig viele sind möglich, zum Beispiel einmalig 10.000 € nach Rate 36 und jährlich 5.000 € ab Rate 48 (viele Verträge erlauben 5 % pro Jahr).
 
-Gerechnet wird für ein Annuitätendarlehen und eine einmalige Sondertilgung. Beträge werden jeden Monat auf den Cent gerundet, wie im Tilgungsplan der Bank.
+Sie sehen die Zinsersparnis und um wie viel früher das Darlehen abbezahlt ist, den Vergleich Ihres Plans mit „alles zur Laufzeitverkürzung“ und „alles zur Ratensenkung“, ein Diagramm der Restschuld mit und ohne Sondertilgungen und den vollständigen Tilgungsplan. Gerechnet wird für Annuitätendarlehen und Darlehen mit fallender Rate. Beträge werden jeden Monat auf den Cent gerundet, wie im Tilgungsplan der Bank.
 
 ## Was lohnt sich mehr: kürzere Laufzeit oder niedrigere Rate?
 
@@ -23,4 +23,4 @@ Baufinanzierung über 200.000 € mit 3,5 % Sollzins und 25 Jahren (300 Monate),
 
 **Was ist mit der Anschlussfinanzierung?** Eine geringere Restschuld am Ende der Zinsbindung verringert auch das Zinsrisiko danach.
 
-Die Berechnung ist ein Richtwert. Den vollständigen Plan ohne Sondertilgung zeigt der [Baufinanzierungsrechner](/de/finance/mortgage/) bzw. der [Kreditrechner](/de/finance/loan-calculator/); einen günstigeren Zins vergleichen Sie mit dem [Umschuldungsrechner](/de/finance/refinance/).
+Die Berechnung ist ein Richtwert. Dieselben Sondertilgungen lassen sich auch im [Baufinanzierungsrechner](/de/finance/mortgage/) (mit Eigenkapital und Laufzeit in Jahren) und im [Kreditrechner](/de/finance/loan-calculator/) eintragen; einen günstigeren Zins vergleichen Sie mit dem [Umschuldungsrechner](/de/finance/refinance/).

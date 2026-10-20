@@ -17,6 +17,9 @@
         "annuity": "Annuität (gleiche Rate)",
         "differentiated": "Tilgung (fallende Rate)"
       }
+    },
+    "prepay": {
+      "label": "Sondertilgungen"
     }
   },
   "outputs": {
@@ -37,6 +40,44 @@
     "payment": "Rate",
     "principal": "Tilgung",
     "interest": "Zinsen",
-    "balance": "Restschuld"
+    "balance": "Restschuld",
+    "year": "Jahr",
+    "chartPayments": "Zahlungen pro Jahr: Tilgung und Zinsen",
+    "extra": "Sondertilgung",
+    "chartBalance": "Restschuld mit und ohne Sondertilgungen",
+    "withoutPrepay": "Ohne Sondertilgungen",
+    "withPrepay": "Mit Sondertilgungen",
+    "years": {
+      "one": "{count} Jahr",
+      "other": "{count} Jahre"
+    },
+    "months": {
+      "one": "{count} Monat",
+      "other": "{count} Monate"
+    },
+    "effect": "Die Sondertilgungen sparen {savings} Zinsen.",
+    "effectTerm": "Der Kredit ist {term} früher abbezahlt.",
+    "effectSameTerm": "Die Laufzeit bleibt gleich – die Rate sinkt.",
+    "prepay": {
+      "add": "Sondertilgung hinzufügen",
+      "after": "Nach Rate Nr.",
+      "amount": "Betrag",
+      "repeat": "Wie oft",
+      "mode": "Senken",
+      "remove": "Entfernen",
+      "repeats": {
+        "once": "Einmalig",
+        "monthly": "Monatlich",
+        "quarterly": "Vierteljährlich",
+        "yearly": "Jährlich"
+      },
+      "modes": {
+        "term": "Laufzeit",
+        "payment": "Rate"
+      }
+    }
+  },
+  "errors": {
+    "prepayments": "Die Sondertilgungen im Link sind beschädigt – bitte prüfen."
   }
 }

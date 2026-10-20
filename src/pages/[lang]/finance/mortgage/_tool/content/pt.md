@@ -2,6 +2,8 @@
 
 Informe o valor do imóvel, a entrada em porcentagem, a taxa de juros anual e o prazo em anos, e escolha o sistema de amortização. Você vê o valor financiado, a parcela mensal, os juros totais e a evolução por ano: quanto foi pago, quanto amortizou e quanto foi de juros.
 
+O gráfico mostra como, a cada ano, os pagamentos se dividem entre amortização e juros. Se pretende amortizar, adicione amortizações extras — únicas ou periódicas, reduzindo o prazo ou a parcela — e a tabela e a economia são recalculadas. Para comparar opções, use a [calculadora de amortização](/pt/finance/early-repayment/).
+
 ## Como a parcela é calculada
 
 No **SAC** (Sistema de Amortização Constante), o mais usado no financiamento imobiliário, a amortização é igual todo mês e os juros incidem sobre o saldo devedor — a parcela começa mais alta e diminui. Por isso o SAC já vem selecionado.

@@ -1,8 +1,8 @@
 ## Cómo usarla
 
-Indica el importe y el tipo de interés del préstamo, el plazo total en meses, cuántas cuotas has pagado ya y el importe que quieres amortizar. Verás el ahorro en intereses de la opción elegida y, en la tabla, las dos opciones comparadas: reducir plazo o reducir cuota.
+Indica el importe y el tipo de interés del préstamo, el plazo total en meses y el sistema de amortización. Después añade las amortizaciones anticipadas: tras qué cuota, el importe, con qué frecuencia (una vez, cada mes, cada trimestre o cada año, hasta el final del préstamo) y si reducen plazo o cuota. Puedes añadir tantas como quieras: por ejemplo, 10 000 € una vez tras la cuota 36 y 100 € cada mes desde la cuota 48.
 
-El cálculo es para un préstamo con cuota fija (sistema francés) y una amortización anticipada puntual. Los importes se redondean al céntimo cada mes, como en el cuadro de amortización del banco.
+Verás el ahorro en intereses y cuánto antes terminas de pagar, la comparación de tu plan con «todo a reducir plazo» y «todo a reducir cuota», un gráfico de la deuda pendiente con y sin amortizaciones y el cuadro completo. Sirve para cuota fija (sistema francés) y para cuota decreciente (sistema alemán). Los importes se redondean al céntimo cada mes, como en el cuadro del banco.
 
 ## ¿Qué conviene más: reducir plazo o reducir cuota?
 
@@ -25,4 +25,4 @@ Hipoteca de 150 000 € al 3 % a 25 años (300 meses), cuota de 711,32 €. Tras
 
 **¿Incluye seguros o vinculaciones?** No, solo los intereses del préstamo.
 
-Es un cálculo orientativo. El cuadro completo sin amortización está en la [calculadora de hipotecas](/es/finance/mortgage/) y la [calculadora de préstamos](/es/finance/loan-calculator/); para comparar un tipo más bajo, usa la [calculadora de subrogación](/es/finance/refinance/).
+Es un cálculo orientativo. Las mismas amortizaciones se pueden añadir en la [calculadora de hipotecas](/es/finance/mortgage/) (con entrada y plazo en años) y en la [calculadora de préstamos](/es/finance/loan-calculator/); para comparar un tipo más bajo, usa la [calculadora de subrogación](/es/finance/refinance/).

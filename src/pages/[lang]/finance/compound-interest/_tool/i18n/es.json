@@ -39,6 +39,7 @@
     "year": "Año",
     "contributed": "Aportado",
     "interest": "Intereses",
-    "balance": "Saldo"
+    "balance": "Saldo",
+    "chart": "Saldo por año: aportaciones e intereses"
   }
 }

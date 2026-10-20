@@ -1,10 +1,24 @@
 import { formatNumber } from '@/lib/format';
+import { Chart } from '@/ui/Chart';
 import type { ExtraProps } from '@/ui/define';
 import type { DepositInput, deposit } from './deposit';
 
 export function ByYear({ result, lang, t }: ExtraProps<DepositInput, ReturnType<typeof deposit>>) {
   const money = (n: number) => formatNumber(lang, n, 'money');
   return (
+    <>
+      <Chart
+        kind="bars"
+        lang={lang}
+        label={t('ui.chart')}
+        format={money}
+        totalLabel={t('ui.balance')}
+        x={result.byYear.map((r) => `${t('ui.year')} ${r.year}`)}
+        series={[
+          { label: t('ui.contributed'), values: result.byYear.map((r) => r.contributed) },
+          { label: t('ui.interest'), values: result.byYear.map((r) => r.interest) },
+        ]}
+      />
     <details class="extra">
       <summary>{t('ui.byYear')}</summary>
       <div class="table-wrap">
@@ -30,5 +44,6 @@ export function ByYear({ result, lang, t }: ExtraProps<DepositInput, ReturnType<
         </table>
       </div>
     </details>
+    </>
   );
 }

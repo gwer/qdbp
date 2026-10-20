@@ -45,6 +45,8 @@
     "principal": "Capital",
     "interest": "Intereses",
     "balance": "Pendiente",
-    "decreasing": "La cuota baja de {first} a {last}"
+    "decreasing": "La cuota baja de {first} a {last}",
+    "year": "Año",
+    "chartPayments": "Pagos por año: capital e intereses"
   }
 }

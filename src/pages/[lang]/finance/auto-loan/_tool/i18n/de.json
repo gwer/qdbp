@@ -45,6 +45,8 @@
     "principal": "Tilgung",
     "interest": "Zinsen",
     "balance": "Restschuld",
-    "decreasing": "Die Rate sinkt von {first} auf {last}"
+    "decreasing": "Die Rate sinkt von {first} auf {last}",
+    "year": "Jahr",
+    "chartPayments": "Zahlungen pro Jahr: Tilgung und Zinsen"
   }
 }

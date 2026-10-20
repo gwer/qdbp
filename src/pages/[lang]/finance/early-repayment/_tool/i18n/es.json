@@ -11,32 +11,29 @@
     "months": {
       "label": "Plazo (meses)"
     },
-    "after": {
-      "label": "Cuotas ya pagadas"
-    },
-    "extra": {
-      "label": "Importe a amortizar"
-    },
-    "mode": {
-      "label": "Qué reducir",
+    "kind": {
+      "label": "Sistema de amortización",
       "options": {
-        "term": "Plazo (misma cuota)",
-        "payment": "Cuota (mismo plazo)"
+        "annuity": "Francés (cuota fija)",
+        "differentiated": "Alemán (cuota decreciente)"
       }
+    },
+    "prepay": {
+      "label": "Amortizaciones anticipadas"
     }
   },
   "outputs": {
     "savings": {
       "label": "Ahorro en intereses"
     },
-    "newPayment": {
-      "label": "Nueva cuota"
+    "termSaved": {
+      "label": "Se acorta el plazo en"
     },
-    "newMonths": {
-      "label": "Cuotas pendientes"
+    "newTerm": {
+      "label": "Plazo con amortizaciones"
     },
     "interestAfter": {
-      "label": "Intereses totales con la amortización"
+      "label": "Intereses totales con amortizaciones"
     }
   },
   "ui": {
@@ -46,13 +43,55 @@
     "principal": "Capital",
     "interest": "Intereses",
     "balance": "Pendiente",
-    "decreasing": "La cuota baja de {first} a {last}",
     "variant": "Opción",
-    "monthsLeft": "Meses pendientes",
     "saved": "Ahorro",
-    "noPrepayment": "Sin amortización anticipada"
+    "noPrepayment": "Sin amortizaciones anticipadas",
+    "term": "Plazo",
+    "asEntered": "Tal como se indicó",
+    "allTo": {
+      "term": "Todo a reducir plazo",
+      "payment": "Todo a reducir cuota"
+    },
+    "paymentNote": "La cuota es la última cuota completa del cuadro: si se reduce la cuota, es menor que la inicial.",
+    "year": "Año",
+    "chartPayments": "Pagos por año: capital e intereses",
+    "extra": "Anticipado",
+    "chartBalance": "Deuda pendiente con y sin amortizaciones anticipadas",
+    "withoutPrepay": "Sin amortizaciones anticipadas",
+    "withPrepay": "Con amortizaciones anticipadas",
+    "years": {
+      "one": "{count} año",
+      "other": "{count} años"
+    },
+    "months": {
+      "one": "{count} mes",
+      "other": "{count} meses"
+    },
+    "effect": "Las amortizaciones anticipadas ahorran {savings} en intereses.",
+    "effectTerm": "El préstamo se termina de pagar {term} antes.",
+    "effectSameTerm": "El plazo no cambia: baja la cuota.",
+    "prepay": {
+      "add": "Añadir amortización anticipada",
+      "after": "Tras la cuota n.º",
+      "amount": "Importe",
+      "repeat": "Frecuencia",
+      "mode": "Reducir",
+      "remove": "Eliminar",
+      "repeats": {
+        "once": "Una vez",
+        "monthly": "Cada mes",
+        "quarterly": "Cada trimestre",
+        "yearly": "Cada año"
+      },
+      "modes": {
+        "term": "Plazo",
+        "payment": "Cuota"
+      }
+    }
   },
   "errors": {
-    "afterTooLate": "Las cuotas ya pagadas deben ser menos que los meses del plazo."
+    "afterTooLate": "El número de cuota de una amortización debe ser menor que el plazo del préstamo en meses.",
+    "noPrepayments": "Añada al menos una amortización anticipada.",
+    "prepayments": "La lista de amortizaciones del enlace está dañada: revísela."
   }
 }

@@ -17,6 +17,9 @@
         "annuity": "Price (parcelas fixas)",
         "differentiated": "SAC (parcelas decrescentes)"
       }
+    },
+    "prepay": {
+      "label": "Amortizações extraordinárias"
     }
   },
   "outputs": {
@@ -37,6 +40,44 @@
     "payment": "Parcela",
     "principal": "Amortização",
     "interest": "Juros",
-    "balance": "Saldo devedor"
+    "balance": "Saldo devedor",
+    "year": "Ano",
+    "chartPayments": "Pagamentos por ano: amortização e juros",
+    "extra": "Extra",
+    "chartBalance": "Saldo devedor com e sem amortizações extras",
+    "withoutPrepay": "Sem amortizações extras",
+    "withPrepay": "Com amortizações extras",
+    "years": {
+      "one": "{count} ano",
+      "other": "{count} anos"
+    },
+    "months": {
+      "one": "{count} mês",
+      "other": "{count} meses"
+    },
+    "effect": "As amortizações extras economizam {savings} em juros.",
+    "effectTerm": "O financiamento termina {term} antes.",
+    "effectSameTerm": "O prazo continua o mesmo — a parcela diminui.",
+    "prepay": {
+      "add": "Adicionar amortização",
+      "after": "Após a parcela nº",
+      "amount": "Valor",
+      "repeat": "Frequência",
+      "mode": "Reduzir",
+      "remove": "Remover",
+      "repeats": {
+        "once": "Uma vez",
+        "monthly": "Todo mês",
+        "quarterly": "Todo trimestre",
+        "yearly": "Todo ano"
+      },
+      "modes": {
+        "term": "Prazo",
+        "payment": "Parcela"
+      }
+    }
+  },
+  "errors": {
+    "prepayments": "A lista de amortizações do link está corrompida — verifique."
   }
 }

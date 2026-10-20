@@ -199,7 +199,7 @@ h2 {
 }
 
 /* Подписи вариантов длинные — список всегда на всю ширину. */
-.calc-inputs .field:has(> select) {
+.calc-inputs > .field:has(> select) {
   grid-column: 1 / -1;
 }
 
@@ -1166,4 +1166,188 @@ table.diff tr.diff-skip td {
   .diff-stat-ins {
     color: #81c784;
   }
+}
+
+/* Графики (src/ui/Chart.tsx) */
+:root {
+  --chart-1: #3451d1;
+  --chart-2: #f08c3a;
+  --chart-3: #2e9e6a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --chart-1: #8ea2ff;
+    --chart-2: #f5a65b;
+    --chart-3: #5ccf97;
+  }
+}
+
+.chart {
+  position: relative;
+  margin: 16px 0 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.chart svg {
+  display: block;
+  overflow: visible;
+  touch-action: pan-y;
+}
+
+.chart-grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.chart-tick,
+.chart-x {
+  fill: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.chart-x {
+  text-anchor: middle;
+}
+
+.chart-hover {
+  fill: var(--surface);
+}
+
+.chart-s0 {
+  fill: var(--chart-1);
+  stroke: var(--chart-1);
+  background: var(--chart-1);
+}
+
+.chart-s1 {
+  fill: var(--chart-2);
+  stroke: var(--chart-2);
+  background: var(--chart-2);
+}
+
+.chart-s2 {
+  fill: var(--chart-3);
+  stroke: var(--chart-3);
+  background: var(--chart-3);
+}
+
+rect.chart-s0,
+rect.chart-s1,
+rect.chart-s2 {
+  stroke: none;
+}
+
+.chart-line {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.chart-legend,
+.chart-tip {
+  font-size: 0.85rem;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.chart-legend i,
+.chart-tip i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 6px;
+}
+
+.chart-tip {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.12);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.calc-inputs .field-wide {
+  grid-column: 1 / -1;
+}
+
+/* Список досрочных погашений (finance/_shared/PrepaymentsField.tsx) */
+.prepay {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.prepay legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0;
+  margin-bottom: 6px;
+}
+
+.prepay-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  gap: 8px;
+  align-items: end;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+
+.prepay-row .field label {
+  font-weight: 400;
+  font-size: 0.82rem;
+}
+
+.prepay-remove {
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 9px 12px;
+}
+
+.prepay-error {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  .prepay-row {
+    grid-template-columns: 1fr 1fr auto;
+  }
+  .prepay-row .field:nth-child(3),
+  .prepay-row .field:nth-child(4) {
+    grid-row: 2;
+  }
+  .prepay-row .field:nth-child(3) {
+    grid-column: 1;
+  }
+  .prepay-row .field:nth-child(4) {
+    grid-column: 2 / 4;
+  }
+}
+
+/* Короткий вывод под результатом: «досрочные погашения сэкономят…» */
+.calc-note {
+  margin: 16px 0 0;
+  padding: 10px 14px;
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
 }

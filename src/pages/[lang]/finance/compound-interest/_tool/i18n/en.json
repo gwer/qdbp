@@ -39,6 +39,7 @@
     "year": "Year",
     "contributed": "Contributions",
     "interest": "Interest",
-    "balance": "Balance"
+    "balance": "Balance",
+    "chart": "Balance by year: contributions and interest earned"
   }
 }

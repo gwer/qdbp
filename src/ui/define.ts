@@ -50,7 +50,19 @@ export type QuantityInput = {
   min?: number;
   max?: number;
 } & ByLang<number>;
-export type InputSpec = (NumberInput | SelectInput | DateInput | DurationInput | TimeInput | QuantityInput) & ShowIf;
+/**
+ * Поле со своим интерфейсом (например, список досрочных платежей). Значение — каноничная строка,
+ * как в URL: её пишет Field, а разбирает compute (бросает InputError, если строка не годится).
+ */
+export type CustomInput = { type: 'custom'; default: string; Field: ComponentType<CustomFieldProps> } & ByLang<string>;
+export interface CustomFieldProps extends ToolProps {
+  /** id для подписи; подпись — inputs.{name}.label, её показывает Field. */
+  id: string;
+  name: string;
+  value: string;
+  onChange: (value: string) => void;
+}
+export type InputSpec = (NumberInput | SelectInput | DateInput | DurationInput | TimeInput | QuantityInput | CustomInput) & ShowIf;
 
 export type OutputSpec =
   | { type?: NumberKind; digits?: number }
@@ -77,7 +89,7 @@ export interface FormatContext {
   clock: ClockMode;
 }
 
-type InputValue<S> = S extends SelectInput ? S['options'][number] : S extends DateInput ? string : number;
+type InputValue<S> = S extends SelectInput ? S['options'][number] : S extends DateInput | CustomInput ? string : number;
 export type Values<I extends Record<string, InputSpec>> = { [K in keyof I]: InputValue<I[K]> };
 
 export interface ToolProps {

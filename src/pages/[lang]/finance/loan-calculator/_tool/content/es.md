@@ -2,6 +2,8 @@
 
 Introduce el importe del préstamo, el tipo de interés anual (TIN) y el plazo en meses, y elige el sistema de amortización. Verás al momento la cuota mensual, los intereses totales y el total a pagar, además del cuadro de amortización mes a mes.
 
+El gráfico (por años, o por meses en préstamos cortos) muestra qué parte de las cuotas se va en intereses. Puedes añadir aquí amortizaciones anticipadas —puntuales o periódicas— y se recalculan el cuadro y el ahorro. Para comparar plazo y cuota, usa la [calculadora de amortización anticipada](/es/finance/early-repayment/).
+
 ## Sistema francés y sistema alemán
 
 **Francés (cuota fija)** — todas las cuotas son iguales. Al principio la mayor parte de la cuota son intereses y al final, capital. Es el sistema más habitual en préstamos personales e hipotecas.

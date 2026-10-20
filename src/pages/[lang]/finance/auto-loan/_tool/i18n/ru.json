@@ -45,6 +45,8 @@
     "principal": "Основной долг",
     "interest": "Проценты",
     "balance": "Остаток",
-    "decreasing": "Платёж уменьшается с {first} до {last}"
+    "decreasing": "Платёж уменьшается с {first} до {last}",
+    "year": "Год",
+    "chartPayments": "Платежи по годам: основной долг и проценты"
   }
 }

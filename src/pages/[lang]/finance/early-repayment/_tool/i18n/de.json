@@ -11,32 +11,29 @@
     "months": {
       "label": "Laufzeit in Monaten"
     },
-    "after": {
-      "label": "Bereits gezahlte Raten"
-    },
-    "extra": {
-      "label": "Sondertilgung"
-    },
-    "mode": {
-      "label": "Was soll sinken?",
+    "kind": {
+      "label": "Tilgungsart",
       "options": {
-        "term": "Laufzeit (gleiche Rate)",
-        "payment": "Rate (gleiche Laufzeit)"
+        "annuity": "Annuität (gleiche Rate)",
+        "differentiated": "Tilgung (fallende Rate)"
       }
+    },
+    "prepay": {
+      "label": "Sondertilgungen"
     }
   },
   "outputs": {
     "savings": {
       "label": "Zinsersparnis"
     },
-    "newPayment": {
-      "label": "Neue Monatsrate"
+    "termSaved": {
+      "label": "Früher abbezahlt um"
     },
-    "newMonths": {
-      "label": "Verbleibende Raten"
+    "newTerm": {
+      "label": "Laufzeit mit Sondertilgungen"
     },
     "interestAfter": {
-      "label": "Zinsen gesamt mit Sondertilgung"
+      "label": "Zinsen gesamt mit Sondertilgungen"
     }
   },
   "ui": {
@@ -46,13 +43,55 @@
     "principal": "Tilgung",
     "interest": "Zinsen",
     "balance": "Restschuld",
-    "decreasing": "Die Rate sinkt von {first} auf {last}",
     "variant": "Variante",
-    "monthsLeft": "Verbleibende Monate",
     "saved": "Ersparnis",
-    "noPrepayment": "Ohne Sondertilgung"
+    "noPrepayment": "Ohne Sondertilgungen",
+    "term": "Laufzeit",
+    "asEntered": "Wie eingegeben",
+    "allTo": {
+      "term": "Alle zur Laufzeitverkürzung",
+      "payment": "Alle zur Ratensenkung"
+    },
+    "paymentNote": "Rate ist die letzte volle Monatsrate im Plan: bei Ratensenkung liegt sie unter der ursprünglichen.",
+    "year": "Jahr",
+    "chartPayments": "Zahlungen pro Jahr: Tilgung und Zinsen",
+    "extra": "Sondertilgung",
+    "chartBalance": "Restschuld mit und ohne Sondertilgungen",
+    "withoutPrepay": "Ohne Sondertilgungen",
+    "withPrepay": "Mit Sondertilgungen",
+    "years": {
+      "one": "{count} Jahr",
+      "other": "{count} Jahre"
+    },
+    "months": {
+      "one": "{count} Monat",
+      "other": "{count} Monate"
+    },
+    "effect": "Die Sondertilgungen sparen {savings} Zinsen.",
+    "effectTerm": "Der Kredit ist {term} früher abbezahlt.",
+    "effectSameTerm": "Die Laufzeit bleibt gleich – die Rate sinkt.",
+    "prepay": {
+      "add": "Sondertilgung hinzufügen",
+      "after": "Nach Rate Nr.",
+      "amount": "Betrag",
+      "repeat": "Wie oft",
+      "mode": "Senken",
+      "remove": "Entfernen",
+      "repeats": {
+        "once": "Einmalig",
+        "monthly": "Monatlich",
+        "quarterly": "Vierteljährlich",
+        "yearly": "Jährlich"
+      },
+      "modes": {
+        "term": "Laufzeit",
+        "payment": "Rate"
+      }
+    }
   },
   "errors": {
-    "afterTooLate": "Die Zahl der geleisteten Raten muss kleiner sein als die Laufzeit in Monaten."
+    "afterTooLate": "Die Ratennummer einer Sondertilgung muss kleiner sein als die Laufzeit in Monaten.",
+    "noPrepayments": "Fügen Sie mindestens eine Sondertilgung hinzu.",
+    "prepayments": "Die Sondertilgungen im Link sind beschädigt – bitte prüfen."
   }
 }

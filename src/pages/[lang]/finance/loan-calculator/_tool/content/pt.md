@@ -2,6 +2,8 @@
 
 Digite o valor do empréstimo, a taxa de juros anual e o prazo em meses e escolha o sistema de amortização. Você vê na hora a parcela mensal, os juros totais e o total pago, além da tabela de amortização mês a mês.
 
+O gráfico (por ano, ou por mês em empréstimos curtos) mostra quanto das parcelas vai para juros. Você pode adicionar aqui amortizações extras — únicas ou periódicas — e a tabela e a economia são recalculadas. Para comparar prazo e parcela, use a [calculadora de amortização](/pt/finance/early-repayment/).
+
 ## Tabela Price e SAC
 
 **Price (parcelas fixas)** — todas as parcelas têm o mesmo valor. No começo, a maior parte é juros; no fim, a maior parte é amortização. É o sistema mais comum em empréstimos pessoais e financiamento de veículos.
