@@ -36,6 +36,9 @@ const BASE = {
   // покрытие (площадь на объём) → м²/м³
   m2_per_l: 1000,
   ft2_per_gal: 0.09290304 / 0.003785411784,
+  // расход на площадь (масса на площадь) → кг/м²
+  kg_per_m2: 1,
+  lb_per_ft2: 0.45359237 / 0.09290304,
 } as const;
 
 export type UnitId = keyof typeof BASE;
@@ -46,6 +49,7 @@ const DIMENSION: Record<UnitId, string> = {
   ml: 'volume', l: 'volume', m3: 'volume', floz: 'volume', gal: 'volume', ft3: 'volume', yd3: 'volume',
   g: 'mass', kg: 'mass', oz: 'mass', lb: 'mass',
   m2_per_l: 'coverage', ft2_per_gal: 'coverage',
+  kg_per_m2: 'areal-density', lb_per_ft2: 'areal-density',
 };
 
 export function convert(value: number, from: UnitId, to: UnitId): number {
@@ -71,14 +75,16 @@ const LATIN: Record<UnitId, string> = {
   ml: 'ml', l: 'l', m3: 'm³', floz: 'fl oz', gal: 'gal', ft3: 'ft³', yd3: 'yd³',
   g: 'g', kg: 'kg', oz: 'oz', lb: 'lb',
   m2_per_l: 'm²/l', ft2_per_gal: 'ft²/gal',
+  kg_per_m2: 'kg/m²', lb_per_ft2: 'lb/ft²',
 };
 const OVERRIDES: Partial<Record<Lang, Partial<Record<UnitId, string>>>> = {
   ru: {
     mm: 'мм', cm: 'см', m: 'м', km: 'км', in: 'дюйм', ft: 'фут', yd: 'ярд', mi: 'миля',
     m2: 'м²', ft2: 'фут²', ml: 'мл', l: 'л', m3: 'м³', floz: 'жидк. унц.', gal: 'гал', ft3: 'фут³', yd3: 'ярд³',
     g: 'г', kg: 'кг', oz: 'унц.', lb: 'фунт', m2_per_l: 'м²/л', ft2_per_gal: 'фут²/гал',
+    kg_per_m2: 'кг/м²', lb_per_ft2: 'фунт/фут²',
   },
-  en: { l: 'L', ml: 'mL', ft2: 'sq ft', ft3: 'cu ft', yd3: 'cu yd', ft2_per_gal: 'sq ft/gal', m2_per_l: 'm²/L' },
+  en: { l: 'L', ml: 'mL', ft2: 'sq ft', ft3: 'cu ft', yd3: 'cu yd', ft2_per_gal: 'sq ft/gal', m2_per_l: 'm²/L', lb_per_ft2: 'lb/sq ft' },
 };
 
 export const unitSymbol = (lang: Lang, unit: UnitId) => OVERRIDES[lang]?.[unit] ?? LATIN[unit];

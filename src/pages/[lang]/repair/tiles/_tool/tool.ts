@@ -36,21 +36,22 @@ export const def = defineCalculator({
   order: 30,
   related: ['laminate', 'paint', 'wallpaper'],
   inputs: {
-    area: { type: 'number', default: 10, min: 0 },
-    length: { type: 'number', default: 60, min: 1 },
-    width: { type: 'number', default: 30, min: 1 },
-    thickness: { type: 'number', default: 9, min: 1, max: 40 },
-    joint: { type: 'number', default: 2, min: 0, max: 20 },
-    reserve: { type: 'number', default: 10, min: 0, max: 50 },
+    area: { type: 'quantity', unit: 'm2', imperial: 'ft2', default: 10, defaultImperial: 100, min: 0 },
+    length: { type: 'quantity', unit: 'cm', imperial: 'in', default: 60, defaultImperial: 24, min: 1 },
+    width: { type: 'quantity', unit: 'cm', imperial: 'in', default: 30, defaultImperial: 12, min: 1 },
+    thickness: { type: 'quantity', unit: 'mm', imperial: 'in', default: 9, defaultImperial: 0.375, min: 1, max: 40 },
+    joint: { type: 'quantity', unit: 'mm', imperial: 'in', default: 2, defaultImperial: 0.125, min: 0, max: 20 },
+    reserve: { type: 'percent', default: 10, min: 0, max: 50 },
     perBox: { type: 'integer', default: 8, min: 1 },
-    adhesive: { type: 'number', default: 4, min: 0, max: 20 },
+    // 4 кг/м² ≈ зубчатый шпатель 8 мм; в США — около 1 lb/sq ft (мешок 50 lb на 40–50 sq ft).
+    adhesive: { type: 'quantity', unit: 'kg_per_m2', imperial: 'lb_per_ft2', default: 4, defaultImperial: 1, min: 0, max: 20 },
   },
   compute: (v) => tiles(v),
   outputs: {
     pieces: { type: 'integer' },
     boxes: { type: 'integer' },
-    grout: { digits: 1 },
-    glue: { digits: 1 },
+    grout: { type: 'quantity', unit: 'kg', imperial: 'lb', digits: 1 },
+    glue: { type: 'quantity', unit: 'kg', imperial: 'lb', digits: 1 },
   },
 });
 

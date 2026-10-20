@@ -3,16 +3,16 @@
   "description": "Wie viel Farbe brauche ich? Streichfläche ohne Fenster und Türen, Liter für alle Anstriche und Anzahl der Eimer.",
   "inputs": {
     "length": {
-      "label": "Raumlänge, m"
+      "label": "Raumlänge"
     },
     "width": {
-      "label": "Raumbreite, m"
+      "label": "Raumbreite"
     },
     "height": {
-      "label": "Raumhöhe, m"
+      "label": "Raumhöhe"
     },
     "openings": {
-      "label": "Fenster und Türen, m²"
+      "label": "Fenster und Türen"
     },
     "surface": {
       "label": "Was wird gestrichen",
@@ -25,22 +25,22 @@
     "coats": {
       "label": "Anstriche"
     },
-    "rate": {
-      "label": "Verbrauch, l/m² pro Anstrich"
+    "coverage": {
+      "label": "Ergiebigkeit"
     },
     "can": {
-      "label": "Eimergröße, l"
+      "label": "Eimergröße"
     }
   },
   "outputs": {
     "liters": {
-      "label": "Farbe, l"
+      "label": "Farbmenge"
     },
     "cans": {
       "label": "Eimer"
     },
     "area": {
-      "label": "Streichfläche, m²"
+      "label": "Streichfläche"
     }
   }
 }

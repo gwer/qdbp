@@ -1,6 +1,11 @@
 ## Cómo usar la calculadora de hormigón
 
-Introduce el largo, el ancho y el espesor en metros: de una losa, una solera, un camino o una zapata corrida. Añade un margen por pérdidas y desniveles, elige la dosificación y el peso del saco de cemento. La calculadora muestra el volumen de hormigón y el cemento, la arena, la grava y el agua necesarios.
+Introduce el largo, el ancho y el espesor de una losa, una solera, un camino o una zapata corrida, y añade un margen por pérdidas y desniveles. Después hay dos opciones:
+
+- **hormigón preparado en sacos** (mortero u hormigón seco): indica el peso del saco y verás cuántos comprar;
+- **hacer tú la mezcla**: elige la dosificación y el saco de cemento, y verás el cemento, la arena, la grava y el agua.
+
+Con el selector de unidades también puedes usar pies y pulgadas.
 
 ## Cómo se calcula
 
@@ -8,6 +13,7 @@ Introduce el largo, el ancho y el espesor en metros: de una losa, una solera, un
 2. Hace falta aproximadamente 1,54 veces más volumen de materiales secos que de hormigón terminado: el agua y los finos rellenan los huecos y la mezcla se compacta. Es el coeficiente habitual en los cálculos por dosificación en volumen.
 3. El volumen seco se reparte según la dosificación. El cemento se pasa a kilos con una densidad aparente de 1440 kg/m³; la arena y la grava quedan en metros cúbicos.
 4. El agua es orientativa, para una relación agua/cemento de 0,5. Añádela poco a poco hasta lograr la consistencia deseada.
+5. Para 1 m³ de hormigón hacen falta unas 2,1 t de hormigón seco preparado: un saco de 25 kg rinde unos 0,012 m³ (12 litros). El rendimiento exacto figura en el saco.
 
 Para 1 m³ de hormigón 1 : 2 : 4 salen unos **317 kg de cemento, 0,44 m³ de arena y 0,88 m³ de grava**.
 
@@ -23,7 +29,7 @@ Son valores orientativos, no una resistencia garantizada: depende del tipo de ce
 
 ## Ejemplos
 
-- Losa de 6 × 4 m y 15 cm de espesor, margen del 5 %, 1 : 2 : 4: **3,78 m³** de hormigón, unos **1198 kg de cemento: 48 sacos de 25 kg** (o 24 de 50 kg), 1,66 m³ de arena, 3,33 m³ de grava y unos 600 l de agua.
+- Losa de 6 × 4 m y 15 cm de espesor, margen del 5 %: **3,78 m³** de hormigón. En sacos de hormigón preparado serían **323 sacos de 25 kg**; con tanto volumen compensa pedir hormigón a la central. Haciendo la mezcla 1 : 2 : 4: unos **1198 kg de cemento: 48 sacos de 25 kg** (o 24 de 50 kg), 1,66 m³ de arena, 3,33 m³ de grava y unos 600 l de agua.
 - Zapata corrida de 40 m de largo, 0,4 m de ancho y 0,8 m de profundidad, margen del 5 %, 1 : 2 : 3: 13,44 m³ y unos 4967 kg de cemento.
 
 ## Preguntas frecuentes

@@ -1,11 +1,11 @@
 import { defineCalculator } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
 
-// Запас на подрезку полосы сверху и снизу, м.
+// Запас на подрезку полосы сверху и снизу, м (около 4 дюймов).
 const TRIM = 0.1;
 
 /**
- * Размеры комнаты, проёмов и рулона — в метрах, раппорт — в сантиметрах.
+ * Размеры комнаты, проёмов и рулона — м, раппорт — см.
  * Длина полосы = высота стены + подрезка; при раппорте она округляется вверх до целого числа раппортов,
  * чтобы рисунок совпадал на соседних полосах.
  */
@@ -32,20 +32,21 @@ export const def = defineCalculator({
   order: 20,
   related: ['paint', 'tiles'],
   inputs: {
-    length: { type: 'number', default: 5, min: 0 },
-    width: { type: 'number', default: 4, min: 0 },
-    height: { type: 'number', default: 2.7, min: 0 },
-    openings: { type: 'number', default: 2.2, min: 0 },
-    rollWidth: { type: 'number', default: 0.53, min: 0.1 },
-    rollLength: { type: 'number', default: 10.05, min: 0.5 },
-    repeat: { type: 'number', default: 0, min: 0, max: 200 },
+    length: { type: 'quantity', unit: 'm', imperial: 'ft', default: 5, defaultImperial: 16, min: 0 },
+    width: { type: 'quantity', unit: 'm', imperial: 'ft', default: 4, defaultImperial: 13, min: 0 },
+    height: { type: 'quantity', unit: 'm', imperial: 'ft', default: 2.7, defaultImperial: 8, min: 0 },
+    openings: { type: 'quantity', unit: 'm', imperial: 'ft', default: 2.2, defaultImperial: 6, min: 0 },
+    // Европейский рулон 0,53 × 10,05 м; в США — «double roll» 20,5 in × 33 ft (около 56 sq ft).
+    rollWidth: { type: 'quantity', unit: 'm', imperial: 'in', default: 0.53, defaultImperial: 20.5, min: 0.1 },
+    rollLength: { type: 'quantity', unit: 'm', imperial: 'ft', default: 10.05, defaultImperial: 33, min: 0.5 },
+    repeat: { type: 'quantity', unit: 'cm', imperial: 'in', default: 0, defaultImperial: 0, min: 0, max: 200 },
   },
   compute: (v) => wallpaper(v),
   outputs: {
     rolls: { type: 'integer' },
     strips: { type: 'integer' },
     perRoll: { type: 'integer' },
-    strip: { digits: 2 },
+    strip: { type: 'quantity', unit: 'm', imperial: 'ft', digits: 2 },
   },
 });
 

@@ -13,17 +13,17 @@ export const def = defineCalculator({
   order: 40,
   related: ['tiles', 'paint'],
   inputs: {
-    length: { type: 'number', default: 5, min: 0 },
-    width: { type: 'number', default: 4, min: 0 },
-    reserve: { type: 'number', default: 7, min: 0, max: 50 },
-    pack: { type: 'number', default: 2.13, min: 0.1 },
+    length: { type: 'quantity', unit: 'm', imperial: 'ft', default: 5, defaultImperial: 16, min: 0 },
+    width: { type: 'quantity', unit: 'm', imperial: 'ft', default: 4, defaultImperial: 13, min: 0 },
+    reserve: { type: 'percent', default: 7, min: 0, max: 50 },
+    pack: { type: 'quantity', unit: 'm2', imperial: 'ft2', default: 2.13, defaultImperial: 20, min: 0.1 },
   },
   compute: (v) => laminate(v),
   outputs: {
     packs: { type: 'integer' },
-    area: { digits: 2 },
-    needed: { digits: 2 },
-    bought: { digits: 2 },
+    area: { type: 'quantity', unit: 'm2', imperial: 'ft2', digits: 2 },
+    needed: { type: 'quantity', unit: 'm2', imperial: 'ft2', digits: 2 },
+    bought: { type: 'quantity', unit: 'm2', imperial: 'ft2', digits: 2 },
   },
 });
 

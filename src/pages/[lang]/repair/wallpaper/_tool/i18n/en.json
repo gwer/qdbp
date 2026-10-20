@@ -1,0 +1,41 @@
+{
+  "title": "Wallpaper calculator: how many rolls you need",
+  "description": "How many rolls of wallpaper you need for a room, based on wall height, doors and windows, roll size and pattern repeat.",
+  "inputs": {
+    "length": {
+      "label": "Room length"
+    },
+    "width": {
+      "label": "Room width"
+    },
+    "height": {
+      "label": "Wall height"
+    },
+    "openings": {
+      "label": "Width of doors and windows"
+    },
+    "rollWidth": {
+      "label": "Roll width"
+    },
+    "rollLength": {
+      "label": "Roll length"
+    },
+    "repeat": {
+      "label": "Pattern repeat"
+    }
+  },
+  "outputs": {
+    "rolls": {
+      "label": "Rolls"
+    },
+    "strips": {
+      "label": "Strips"
+    },
+    "perRoll": {
+      "label": "Strips per roll"
+    },
+    "strip": {
+      "label": "Strip length"
+    }
+  }
+}

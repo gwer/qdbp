@@ -3,25 +3,25 @@
   "description": "Wie viele Tapetenrollen brauche ich? Mit Wandhöhe, Fenstern und Türen, Rollenmaß und Rapport.",
   "inputs": {
     "length": {
-      "label": "Raumlänge, m"
+      "label": "Raumlänge"
     },
     "width": {
-      "label": "Raumbreite, m"
+      "label": "Raumbreite"
     },
     "height": {
-      "label": "Wandhöhe, m"
+      "label": "Wandhöhe"
     },
     "openings": {
-      "label": "Breite von Fenstern und Türen, m"
+      "label": "Breite von Fenstern und Türen"
     },
     "rollWidth": {
-      "label": "Rollenbreite, m"
+      "label": "Rollenbreite"
     },
     "rollLength": {
-      "label": "Rollenlänge, m"
+      "label": "Rollenlänge"
     },
     "repeat": {
-      "label": "Rapport, cm"
+      "label": "Rapport"
     }
   },
   "outputs": {
@@ -35,7 +35,7 @@
       "label": "Bahnen pro Rolle"
     },
     "strip": {
-      "label": "Bahnlänge, m"
+      "label": "Bahnlänge"
     }
   }
 }

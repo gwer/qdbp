@@ -11,6 +11,8 @@ describe('convert', () => {
     [1, 'lb', 'kg', 0.45359237],
     [100, 'cm', 'm', 1],
     [10, 'm2_per_l', 'ft2_per_gal', 407.45833333333337],
+    [1, 'lb_per_ft2', 'kg_per_m2', 4.882427636383005],
+    [4, 'kg_per_m2', 'lb_per_ft2', 0.8192645744900868],
   ] as const)('%d %s → %s', (v, from, to, expected) => {
     expect(convert(v, from, to)).toBeCloseTo(expected, 4);
   });
@@ -21,6 +23,7 @@ describe('convert', () => {
 
   it('разные измерения — ошибка', () => {
     expect(() => convert(1, 'm', 'kg')).toThrow();
+    expect(() => convert(1, 'kg_per_m2', 'kg')).toThrow();
   });
 });
 
@@ -44,6 +47,9 @@ describe('displayUnit, tidy, unitSymbol', () => {
     expect(unitSymbol('de', 'ft2')).toBe('ft²');
     expect(unitSymbol('en', 'l')).toBe('L');
     expect(unitSymbol('es', 'l')).toBe('l');
+    expect(unitSymbol('ru', 'kg_per_m2')).toBe('кг/м²');
+    expect(unitSymbol('en', 'lb_per_ft2')).toBe('lb/sq ft');
+    expect(unitSymbol('de', 'lb_per_ft2')).toBe('lb/ft²');
   });
 });
 

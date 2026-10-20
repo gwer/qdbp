@@ -3,13 +3,13 @@
   "description": "Quantos tijolos comprar para uma parede considerando formato, espessura, juntas, vãos e margem de perda.",
   "inputs": {
     "length": {
-      "label": "Comprimento da parede, m"
+      "label": "Comprimento da parede"
     },
     "height": {
-      "label": "Altura da parede, m"
+      "label": "Altura da parede"
     },
     "openings": {
-      "label": "Janelas e portas, m²"
+      "label": "Janelas e portas"
     },
     "format": {
       "label": "Formato do tijolo",
@@ -20,7 +20,8 @@
         "240x115x52": "DF 240 × 115 × 52 mm (Alemanha)",
         "240x115x50": "240 × 115 × 50 mm (Espanha)",
         "240x115x70": "240 × 115 × 70 mm (Espanha)",
-        "190x90x57": "Tijolo maciço 19 × 9 × 5,7 cm"
+        "190x90x57": "Tijolo maciço 19 × 9 × 5,7 cm",
+        "us-modular": "Modular 194 × 92 × 57 mm (EUA)"
       }
     },
     "thickness": {
@@ -33,21 +34,18 @@
       }
     },
     "joint": {
-      "label": "Junta, mm"
+      "label": "Junta"
     },
     "reserve": {
-      "label": "Margem de perda, %"
+      "label": "Margem de perda"
     }
   },
   "outputs": {
     "bricks": {
       "label": "Tijolos"
     },
-    "perM2": {
-      "label": "Tijolos por m²"
-    },
     "area": {
-      "label": "Área da parede, m²"
+      "label": "Área da parede"
     }
   }
 }

@@ -3,16 +3,16 @@
   "description": "Quantas caixas de piso laminado ou vinílico comprar para o cômodo, com margem de perda nos cortes.",
   "inputs": {
     "length": {
-      "label": "Comprimento do cômodo, m"
+      "label": "Comprimento do cômodo"
     },
     "width": {
-      "label": "Largura do cômodo, m"
+      "label": "Largura do cômodo"
     },
     "reserve": {
-      "label": "Margem de perda, %"
+      "label": "Margem de perda"
     },
     "pack": {
-      "label": "Área por caixa, m²"
+      "label": "Área por caixa"
     }
   },
   "outputs": {
@@ -20,13 +20,13 @@
       "label": "Caixas"
     },
     "area": {
-      "label": "Área do piso, m²"
+      "label": "Área do piso"
     },
     "needed": {
-      "label": "Com margem, m²"
+      "label": "Com margem"
     },
     "bought": {
-      "label": "Área comprada, m²"
+      "label": "Área comprada"
     }
   }
 }

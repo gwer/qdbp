@@ -3,25 +3,25 @@
   "description": "Cuántos bloques de hormigón celular necesitas para una pared y cuántos metros cúbicos son, según la medida del bloque, los huecos y el margen.",
   "inputs": {
     "length": {
-      "label": "Largo de la pared, m"
+      "label": "Largo de la pared"
     },
     "height": {
-      "label": "Alto de la pared, m"
+      "label": "Alto de la pared"
     },
     "openings": {
-      "label": "Ventanas y puertas, m²"
+      "label": "Ventanas y puertas"
     },
     "blockLength": {
-      "label": "Largo del bloque, mm"
+      "label": "Largo del bloque"
     },
     "blockHeight": {
-      "label": "Alto del bloque, mm"
+      "label": "Alto del bloque"
     },
     "blockThickness": {
-      "label": "Espesor del bloque, mm"
+      "label": "Espesor del bloque"
     },
     "reserve": {
-      "label": "Margen, %"
+      "label": "Margen"
     }
   },
   "outputs": {
@@ -29,10 +29,10 @@
       "label": "Bloques"
     },
     "volume": {
-      "label": "Volumen, m³"
+      "label": "Volumen"
     },
     "area": {
-      "label": "Superficie del muro, m²"
+      "label": "Superficie del muro"
     }
   }
 }

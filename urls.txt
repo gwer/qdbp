@@ -108,6 +108,13 @@
 /en/math/random-number/
 /en/math/roman-numerals/
 /en/math/what-percent/
+/en/repair/
+/en/repair/bricks/
+/en/repair/concrete/
+/en/repair/laminate/
+/en/repair/paint/
+/en/repair/tiles/
+/en/repair/wallpaper/
 /en/security/
 /en/security/base64/
 /en/security/hash/

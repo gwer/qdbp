@@ -3,25 +3,25 @@
   "description": "Quantos rolos de papel de parede comprar considerando altura das paredes, janelas e portas, medida do rolo e repetição da estampa.",
   "inputs": {
     "length": {
-      "label": "Comprimento do cômodo, m"
+      "label": "Comprimento do cômodo"
     },
     "width": {
-      "label": "Largura do cômodo, m"
+      "label": "Largura do cômodo"
     },
     "height": {
-      "label": "Altura das paredes, m"
+      "label": "Altura das paredes"
     },
     "openings": {
-      "label": "Largura de janelas e portas, m"
+      "label": "Largura de janelas e portas"
     },
     "rollWidth": {
-      "label": "Largura do rolo, m"
+      "label": "Largura do rolo"
     },
     "rollLength": {
-      "label": "Comprimento do rolo, m"
+      "label": "Comprimento do rolo"
     },
     "repeat": {
-      "label": "Repetição da estampa, cm"
+      "label": "Repetição da estampa"
     }
   },
   "outputs": {
@@ -35,7 +35,7 @@
       "label": "Faixas por rolo"
     },
     "strip": {
-      "label": "Comprimento da faixa, m"
+      "label": "Comprimento da faixa"
     }
   }
 }

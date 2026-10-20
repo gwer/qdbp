@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { convert } from '@/lib/units';
 import { laminate } from './tool';
 
 describe('laminate', () => {
@@ -12,5 +13,12 @@ describe('laminate', () => {
 
   it('ровно целое число упаковок — без лишней', () => {
     expect(laminate({ length: 2, width: 2, reserve: 0, pack: 2 }).packs).toBe(2);
+  });
+
+  it('США: 16 × 13 ft = 208 sq ft + 7 % = 222,56 sq ft → 12 коробок по 20 sq ft', () => {
+    const r = laminate({ length: convert(16, 'ft', 'm'), width: convert(13, 'ft', 'm'), reserve: 7, pack: convert(20, 'ft2', 'm2') });
+    expect(convert(r.area, 'm2', 'ft2')).toBeCloseTo(208, 6);
+    expect(convert(r.needed, 'm2', 'ft2')).toBeCloseTo(222.56, 6);
+    expect(r.packs).toBe(12);
   });
 });

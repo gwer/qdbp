@@ -1,0 +1,46 @@
+{
+  "title": "Paint calculator: how much paint for walls and ceiling",
+  "description": "How many gallons of paint you need for walls and ceilings: paintable area minus windows and doors, paint for all coats and the number of cans.",
+  "inputs": {
+    "length": {
+      "label": "Room length"
+    },
+    "width": {
+      "label": "Room width"
+    },
+    "height": {
+      "label": "Ceiling height"
+    },
+    "openings": {
+      "label": "Windows and doors"
+    },
+    "surface": {
+      "label": "What you're painting",
+      "options": {
+        "walls": "Walls",
+        "wallsCeiling": "Walls and ceiling",
+        "ceiling": "Ceiling"
+      }
+    },
+    "coats": {
+      "label": "Coats"
+    },
+    "coverage": {
+      "label": "Coverage"
+    },
+    "can": {
+      "label": "Can size"
+    }
+  },
+  "outputs": {
+    "liters": {
+      "label": "Paint needed"
+    },
+    "cans": {
+      "label": "Cans"
+    },
+    "area": {
+      "label": "Paintable area"
+    }
+  }
+}

@@ -3,28 +3,28 @@
   "description": "Quantas peças de piso ou azulejo comprar com junta e margem de perda, quantas caixas e uma estimativa de rejunte e argamassa.",
   "inputs": {
     "area": {
-      "label": "Área, m²"
+      "label": "Área"
     },
     "length": {
-      "label": "Comprimento da peça, cm"
+      "label": "Comprimento da peça"
     },
     "width": {
-      "label": "Largura da peça, cm"
+      "label": "Largura da peça"
     },
     "thickness": {
-      "label": "Espessura da peça, mm"
+      "label": "Espessura da peça"
     },
     "joint": {
-      "label": "Junta, mm"
+      "label": "Junta"
     },
     "reserve": {
-      "label": "Margem de perda, %"
+      "label": "Margem de perda"
     },
     "perBox": {
       "label": "Peças por caixa"
     },
     "adhesive": {
-      "label": "Consumo de argamassa, kg/m²"
+      "label": "Consumo de argamassa"
     }
   },
   "outputs": {
@@ -35,10 +35,10 @@
       "label": "Caixas"
     },
     "grout": {
-      "label": "Rejunte, kg"
+      "label": "Rejunte"
     },
     "glue": {
-      "label": "Argamassa colante, kg"
+      "label": "Argamassa colante"
     }
   }
 }
