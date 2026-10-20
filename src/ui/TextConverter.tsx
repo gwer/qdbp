@@ -27,7 +27,7 @@ export function TextConverter({
   modes: Mode[];
   placeholder?: string;
   /** Подробности ошибки для пользователя (например, «строка 3, столбец 5»). */
-  describeError?: (error: unknown, input: string) => string | null;
+  describeError?: (error: unknown, input: string, mode: string) => string | null;
   /** Короткая сводка под результатом («было 12 строк, стало 9»). */
   note?: (input: string, output: string) => string | null;
   /** Дополнительные кнопки рядом с «Копировать» (например, «Прослушать» у азбуки Морзе). */
@@ -44,7 +44,7 @@ export function TextConverter({
       output = modes.find((m) => m.id === mode)!.run(input);
     } catch (e) {
       error = true;
-      detail = describeError?.(e, input) ?? null;
+      detail = describeError?.(e, input, mode) ?? null;
     }
   }
   return (

@@ -36,3 +36,28 @@ describe('json', () => {
     expect(() => JSON.parse(input)).not.toThrow();
   });
 });
+
+describe('repairJson', () => {
+  it('комментарии, висячие запятые, одинарные кавычки, ключи без кавычек, True/None', async () => {
+    const { repairJson } = await import('./json');
+    const src = `{
+      // настройки
+      name: 'qdbp', /* старое: "x" */
+      "tags": ['a', "it's", 'say "hi"',],
+      ok: True, nothing: None,
+      url: "http://x.org//path",
+    }`;
+    expect(JSON.parse(repairJson(src))).toEqual({ name: 'qdbp', tags: ['a', "it's", 'say "hi"'], ok: true, nothing: null, url: 'http://x.org//path' });
+  });
+
+  it('строгий JSON не меняется по смыслу', async () => {
+    const { repairJson } = await import('./json');
+    const s = '{"a":[1,2,{"b":null}],"c":"d\\"e"}';
+    expect(JSON.parse(repairJson(s))).toEqual(JSON.parse(s));
+  });
+
+  it('безнадёжное — ошибка парсинга', async () => {
+    const { repairJson } = await import('./json');
+    expect(() => JSON.parse(repairJson('{a: [1, 2'))).toThrow();
+  });
+});

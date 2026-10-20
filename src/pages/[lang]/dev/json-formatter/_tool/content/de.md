@@ -6,6 +6,8 @@ JSON einfügen – es wird sofort mit Einrückung formatiert. Enthält es einen 
 - **Schlüssel sortieren** – Objektschlüssel auf allen Ebenen alphabetisch, praktisch zum Vergleichen zweier JSON-Dokumente;
 - **Minifizieren** – alles in einer Zeile ohne überflüssige Leerzeichen, für APIs und Konfigurationsdateien.
 
+„Reparieren“ korrigiert „fast JSON“ – Konfigurationen, JavaScript-Objekte, Python-Ausgaben: entfernt Kommentare und hängende Kommas, ersetzt einfache durch doppelte Anführungszeichen, setzt Schlüssel in Anführungszeichen und macht aus True/False/None true/false/null. Heraus kommt striktes, formatiertes JSON.
+
 Die Daten werden im Browser verarbeitet und nirgendwohin gesendet – Sie können also auch JSON mit Tokens oder persönlichen Daten prüfen.
 
 ## Häufige JSON-Fehler

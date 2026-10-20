@@ -104,3 +104,62 @@ export function lineColumn(input: string, offset: number) {
   const lines = input.slice(0, offset).split('\n');
   return { line: lines.length, column: lines[lines.length - 1].length + 1 };
 }
+
+const PY: Record<string, string> = { True: 'true', False: 'false', None: 'null' };
+
+/**
+ * Чинит частые поломки «почти JSON» (конфиги, JS-объекты, вывод Python): комментарии (строчные и блочные),
+ * висячие запятые, строки в одинарных кавычках, ключи без кавычек, True/False/None.
+ * Результат — строгий JSON; если починить не удалось, JSON.parse бросит ошибку как обычно.
+ */
+export function repairJson(input: string): string {
+  let out = '';
+  let i = 0;
+  const n = input.length;
+  const dropTrailingComma = () => {
+    const trimmed = out.trimEnd();
+    if (trimmed.endsWith(',')) out = trimmed.slice(0, -1) + out.slice(trimmed.length);
+  };
+  while (i < n) {
+    const c = input[i];
+    if (c === '/' && input[i + 1] === '/') {
+      while (i < n && input[i] !== '\n') i++;
+    } else if (c === '/' && input[i + 1] === '*') {
+      const end = input.indexOf('*/', i + 2);
+      i = end < 0 ? n : end + 2;
+    } else if (c === '"' || c === "'") {
+      // Строка: в одинарных кавычках — перекодировать в двойные.
+      let s = '';
+      i++;
+      while (i < n && input[i] !== c) {
+        if (input[i] === '\\') {
+          const next = input[i + 1];
+          s += c === "'" && next === "'" ? "'" : `\\${next}`;
+          i += 2;
+        } else {
+          s += c === "'" && input[i] === '"' ? '\\"' : input[i];
+          i++;
+        }
+      }
+      i++;
+      out += `"${s}"`;
+    } else if (c === ']' || c === '}') {
+      dropTrailingComma();
+      out += c;
+      i++;
+    } else if (/[A-Za-z_$]/.test(c)) {
+      let j = i;
+      while (j < n && /[\w$]/.test(input[j])) j++;
+      const word = input.slice(i, j);
+      let k = j;
+      while (k < n && /\s/.test(input[k])) k++;
+      out += input[k] === ':' ? `"${word}"` : (PY[word] ?? word);
+      i = j;
+    } else {
+      out += c;
+      i++;
+    }
+  }
+  dropTrailingComma();
+  return out;
+}

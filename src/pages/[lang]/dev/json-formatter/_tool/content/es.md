@@ -6,6 +6,8 @@ Pega el JSON y se formatea con sangría al instante. Si tiene un error, verás l
 - **Ordenar claves**: las claves de los objetos por orden alfabético en todos los niveles, útil para comparar dos JSON;
 - **Minificar**: todo en una línea sin espacios sobrantes, para API y archivos de configuración.
 
+«Reparar» arregla el «casi JSON» —configuraciones, objetos de JavaScript, salida de Python—: quita comentarios y comas finales, cambia comillas simples por dobles, pone comillas a las claves y convierte True/False/None en true/false/null. El resultado es JSON estricto y formateado.
+
 Los datos se procesan en el navegador y no se envían a ninguna parte, así que puedes revisar JSON con tokens o datos personales.
 
 ## Errores frecuentes en JSON

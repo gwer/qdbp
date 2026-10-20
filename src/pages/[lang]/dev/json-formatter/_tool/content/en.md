@@ -6,6 +6,8 @@ Paste JSON and it's formatted with indentation right away. If there's an error, 
 - **Sort keys** — object keys in alphabetical order at every level, handy for comparing two JSON documents;
 - **Minify** — everything on one line without extra whitespace, for APIs and config files.
 
+“Repair” fixes “almost JSON” — config files, JavaScript objects, Python output: it removes comments and trailing commas, turns single quotes into double quotes, quotes bare keys and converts True/False/None to true/false/null. You get strict, formatted JSON.
+
 Your data is processed in the browser and never sent anywhere, so it's safe to check JSON with tokens or personal data.
 
 ## Common JSON errors

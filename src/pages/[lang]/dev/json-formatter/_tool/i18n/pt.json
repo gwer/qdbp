@@ -12,7 +12,8 @@
       "format4": "Indentação de 4 espaços",
       "tab": "Tabulações",
       "sorted": "Ordenar chaves",
-      "minify": "Minificar"
+      "minify": "Minificar",
+      "repair": "Consertar"
     }
   }
 }

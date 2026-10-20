@@ -1,6 +1,6 @@
 import type { ToolProps } from '@/ui/define';
 import { TextConverter } from '@/ui/TextConverter';
-import { errorOffset, formatJson, lineColumn, minifyJson } from './json';
+import { errorOffset, formatJson, lineColumn, minifyJson, repairJson } from './json';
 
 export function JsonFormatter({ t }: ToolProps) {
   return (
@@ -13,8 +13,11 @@ export function JsonFormatter({ t }: ToolProps) {
         { id: 'tab', run: (s) => formatJson(s, '\t') },
         { id: 'sorted', run: (s) => formatJson(s, 2, true) },
         { id: 'minify', run: minifyJson },
+        { id: 'repair', run: (s) => formatJson(repairJson(s), 2) },
       ]}
-      describeError={(_, input) => {
+      describeError={(_, input, mode) => {
+        // В режиме «Исправить» ошибка — в уже починенном тексте, её позиция в исходнике не совпадёт: без подробностей.
+        if (mode === 'repair') return null;
         const off = errorOffset(input);
         return off === null ? null : t('ui.at', lineColumn(input, off));
       }}

@@ -12,7 +12,8 @@
       "format4": "4 Leerzeichen",
       "tab": "Tabulatoren",
       "sorted": "Schlüssel sortieren",
-      "minify": "Minifizieren"
+      "minify": "Minifizieren",
+      "repair": "Reparieren"
     }
   }
 }

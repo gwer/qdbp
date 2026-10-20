@@ -6,6 +6,8 @@ Cole o JSON e ele é formatado com indentação na hora. Se houver erro, você v
 - **Ordenar chaves** — chaves dos objetos em ordem alfabética em todos os níveis, útil para comparar dois JSON;
 - **Minificar** — tudo em uma linha, sem espaços extras, para APIs e arquivos de configuração.
 
+«Consertar» arruma o «quase JSON» — configurações, objetos de JavaScript, saída de Python: remove comentários e vírgulas sobrando, troca aspas simples por duplas, põe aspas nas chaves e converte True/False/None em true/false/null. O resultado é JSON estrito e formatado.
+
 Os dados são processados no navegador e não são enviados a lugar nenhum, então dá para conferir JSON com tokens ou dados pessoais.
 
 ## Erros comuns em JSON
