@@ -2,6 +2,8 @@
 
 Informe a área do piso ou da parede, as medidas e a espessura da peça, a largura da junta e a margem de perda. Diga quantas peças vêm na caixa e o consumo de argamassa indicado no saco. A calculadora mostra as peças e caixas necessárias e uma estimativa de rejunte e argamassa colante.
 
+Não sabe a área? Em «O que revestir», escolha piso ou paredes e informe as medidas do cômodo: para paredes, a calculadora usa perímetro × altura do revestimento e desconta portas e janelas. A perda depende da paginação — cerca de 10% reta, 15% diagonal, 20% espinha de peixe — e é preenchida ao escolher.
+
 ## Como é calculado
 
 - Cada peça com a junta ocupa (comprimento + junta) × (largura + junta). Peças = área ÷ esse valor × (1 + margem), arredondado para cima.

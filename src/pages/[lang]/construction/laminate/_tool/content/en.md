@@ -2,6 +2,8 @@
 
 Enter the room length and width, the waste allowance and the coverage per box — it's printed on the carton, usually 18–25 sq ft. You'll see the floor area, the area including waste and how many boxes to buy. The same math works for laminate, vinyl plank (LVP) and engineered wood.
 
+Waste depends on the layout: 5–7% is usually enough for straight, 10–15% for diagonal — it's filled in when you choose. The calculator also works out the baseboard: room perimeter minus door openings, and how many pieces of the chosen length to buy.
+
 ## How it's calculated
 
 Floor area × (1 + waste) ÷ coverage per box, rounded up to whole boxes.

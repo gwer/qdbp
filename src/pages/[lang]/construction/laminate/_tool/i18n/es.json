@@ -13,6 +13,19 @@
     },
     "pack": {
       "label": "Superficie por paquete"
+    },
+    "layout": {
+      "label": "Colocación",
+      "options": {
+        "straight": "Recta",
+        "diagonal": "En diagonal"
+      }
+    },
+    "doors": {
+      "label": "Ancho de las puertas"
+    },
+    "plinth": {
+      "label": "Largo del rodapié"
     }
   },
   "outputs": {
@@ -27,6 +40,12 @@
     },
     "bought": {
       "label": "Superficie comprada"
+    },
+    "plinthLength": {
+      "label": "Rodapié"
+    },
+    "plinths": {
+      "label": "Piezas de rodapié"
     }
   }
 }

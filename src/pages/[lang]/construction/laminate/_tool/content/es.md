@@ -2,6 +2,8 @@
 
 Introduce el largo y el ancho de la habitación, el margen para cortes y la superficie que trae cada paquete (figura en la caja, normalmente entre 1,5 y 2,5 m²). La calculadora muestra la superficie del suelo, la superficie con margen y cuántos paquetes comprar.
 
+El margen depende de la colocación: en recta suele bastar un 5–7 %, en diagonal se toma un 10–15 %, y se rellena al elegirla. También se calcula el rodapié: el perímetro menos las puertas y cuántas piezas del largo elegido hacen falta.
+
 ## Cómo se calcula
 
 Superficie del suelo × (1 + margen) ÷ superficie por paquete, redondeado hacia arriba a paquetes enteros.

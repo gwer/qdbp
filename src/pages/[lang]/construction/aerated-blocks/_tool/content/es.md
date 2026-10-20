@@ -2,6 +2,8 @@
 
 Introduce el largo y el alto de la pared, la superficie de ventanas y puertas y las medidas del bloque en milímetros. El espesor del bloque es el espesor del muro. La calculadora muestra cuántos bloques necesitas y su volumen en metros cúbicos.
 
+El adhesivo se calcula por consumo por m³ de fábrica: las fichas técnicas indican unos 16–26 kg por m³ con junta de 2 mm; por defecto, 20 kg. Consulta el dato exacto en el saco.
+
 ## Cómo se calcula
 
 - Superficie del muro = largo × alto − huecos.

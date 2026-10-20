@@ -22,3 +22,11 @@ describe('laminate', () => {
     expect(r.packs).toBe(12);
   });
 });
+
+describe('плинтус', () => {
+  it('комната 5 × 4, дверь 0,8 м: 17,2 м — 7 планок по 2,5 м', () => {
+    const r = laminate({ length: 5, width: 4, reserve: 7, pack: 2.13, doors: 0.8, plinth: 2.5 });
+    expect(r.plinthLength).toBeCloseTo(17.2, 9);
+    expect(r.plinths).toBe(7);
+  });
+});

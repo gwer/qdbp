@@ -2,6 +2,8 @@
 
 Introduce la superficie del suelo o de la pared, las medidas y el grosor de la baldosa, el ancho de la junta y el margen. Indica cuántas piezas trae cada caja y el consumo de cemento cola que figura en el saco. La calculadora muestra las baldosas y cajas necesarias y una estimación del material de rejuntado y del cemento cola.
 
+Si no conoces la superficie, elige en «Qué alicatar» el suelo o las paredes e introduce las medidas de la habitación: para las paredes se toma el perímetro × la altura del alicatado y se restan puertas y ventanas. El margen depende de la colocación —10 % recta, 15 % en diagonal, 20 % en espiga— y se rellena al elegirla.
+
 ## Cómo se calcula
 
 - Cada baldosa con su junta ocupa (largo + junta) × (ancho + junta). Piezas = superficie ÷ ese valor × (1 + margen), redondeado hacia arriba.

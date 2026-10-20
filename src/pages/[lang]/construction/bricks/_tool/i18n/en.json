@@ -46,6 +46,16 @@
     },
     "area": {
       "label": "Wall area"
+    },
+    "perM2": {
+      "label": "Bricks per area"
+    },
+    "mortar": {
+      "label": "Mortar"
     }
+  },
+  "ui": {
+    "perM2": "{n} per m²",
+    "perFt2": "{n} per sq ft"
   }
 }

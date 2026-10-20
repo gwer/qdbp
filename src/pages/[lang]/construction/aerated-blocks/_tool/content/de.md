@@ -2,6 +2,8 @@
 
 Geben Sie Länge und Höhe der Wand, die Fläche von Fenstern und Türen und das Steinmaß in Millimetern ein. Die Steinbreite entspricht der Wanddicke. Der Rechner zeigt die Anzahl der Steine und ihr Volumen in Kubikmetern.
 
+Der Dünnbettmörtel wird nach Verbrauch pro m³ Mauerwerk berechnet: Technische Merkblätter nennen bei 2 mm Fuge etwa 16–26 kg pro m³; voreingestellt sind 20 kg. Den genauen Wert finden Sie auf dem Sack.
+
 ## So wird gerechnet
 
 - Wandfläche = Länge × Höhe − Öffnungen.

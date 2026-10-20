@@ -2,6 +2,8 @@
 
 Introduce el largo y el alto de la pared y la superficie de ventanas y puertas. Elige el formato del ladrillo, el espesor del muro y el ancho de la junta, y fija un margen para roturas y cortes. La calculadora muestra cuántos ladrillos necesitas y la superficie del muro. Por defecto se usa el ladrillo perforado de 24 × 11,5 × 7 cm en muro de medio pie.
 
+También verás los ladrillos por m² de muro y el volumen de mortero: el volumen del muro menos el de los ladrillos, con el mismo margen. En obra se suele gastar algo más.
+
 ## Cómo se calcula
 
 - Superficie del muro = largo × alto − huecos.

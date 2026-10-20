@@ -2,6 +2,14 @@
   "title": "Concrete calculator: cubic yards, bags and mix",
   "description": "How much concrete you need for a slab, footing or patio in cubic yards, how many 60- or 80-lb bags of premix, or how much cement, sand and gravel to mix yourself.",
   "inputs": {
+    "shape": {
+      "label": "What to pour",
+      "options": {
+        "slab": "Slab",
+        "strip": "Strip footing",
+        "columns": "Columns / piers"
+      }
+    },
     "length": {
       "label": "Length"
     },
@@ -28,6 +36,24 @@
     },
     "bag": {
       "label": "Cement bag size"
+    },
+    "stripLength": {
+      "label": "Total footing length"
+    },
+    "stripWidth": {
+      "label": "Footing width"
+    },
+    "stripHeight": {
+      "label": "Footing depth"
+    },
+    "diameter": {
+      "label": "Column diameter"
+    },
+    "depth": {
+      "label": "Column height"
+    },
+    "count": {
+      "label": "Number of columns"
     }
   },
   "outputs": {

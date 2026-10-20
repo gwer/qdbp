@@ -2,6 +2,8 @@
 
 Geben Sie Länge und Breite des Raums, den Verschnitt und die Fläche pro Paket ein – sie steht auf dem Karton, meist zwischen 1,5 und 2,5 m². Der Rechner zeigt die Bodenfläche, die Fläche mit Verschnitt und die Anzahl der Pakete.
 
+Der Verschnitt hängt von der Verlegung ab: gerade reichen meist 5–7 %, diagonal 10–15 % – er wird beim Wählen eingesetzt. Außerdem berechnet der Rechner die Sockelleisten: Raumumfang minus Türöffnungen und die Zahl der Leisten in der gewählten Länge.
+
 ## So wird gerechnet
 
 Bodenfläche × (1 + Verschnitt) ÷ Fläche pro Paket, aufgerundet auf ganze Pakete.

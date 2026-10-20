@@ -2,6 +2,8 @@
 
 Introduce el largo, el ancho y el espesor de una losa, una solera, un camino o una zapata corrida, y añade un margen por pérdidas y desniveles. Después hay dos opciones:
 
+Para una zapata corrida, elígela en «Qué hormigonar» e introduce la longitud total (perímetro más muros de carga interiores), el ancho y la altura. Para pilares o pilotes, el diámetro, la altura y el número: cada uno ocupa π × d² / 4 × altura.
+
 - **hormigón preparado en sacos** (mortero u hormigón seco): indica el peso del saco y verás cuántos comprar;
 - **hacer tú la mezcla**: elige la dosificación y el saco de cemento, y verás el cemento, la arena, la grava y el agua.
 

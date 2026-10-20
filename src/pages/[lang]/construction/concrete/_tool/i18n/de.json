@@ -2,6 +2,14 @@
   "title": "Betonrechner: Menge, Zement, Sand und Kies",
   "description": "Betonmenge für Bodenplatte, Fundament oder Estrich, Säcke Fertigbeton oder Zement, Sand und Kies zum Selbstmischen.",
   "inputs": {
+    "shape": {
+      "label": "Was wird betoniert",
+      "options": {
+        "slab": "Platte",
+        "strip": "Streifenfundament",
+        "columns": "Säulen / Pfähle"
+      }
+    },
     "length": {
       "label": "Länge"
     },
@@ -28,6 +36,24 @@
     },
     "bag": {
       "label": "Zementsack"
+    },
+    "stripLength": {
+      "label": "Gesamtlänge des Fundaments"
+    },
+    "stripWidth": {
+      "label": "Fundamentbreite"
+    },
+    "stripHeight": {
+      "label": "Fundamenthöhe"
+    },
+    "diameter": {
+      "label": "Säulendurchmesser"
+    },
+    "depth": {
+      "label": "Säulenhöhe"
+    },
+    "count": {
+      "label": "Anzahl der Säulen"
     }
   },
   "outputs": {

@@ -2,6 +2,14 @@
   "title": "Calculadora de hormigón: volumen, cemento, arena y grava",
   "description": "Volumen de hormigón para una losa, zapata o solera, sacos de hormigón preparado o cemento, arena y grava para hacer la mezcla.",
   "inputs": {
+    "shape": {
+      "label": "Qué hormigonar",
+      "options": {
+        "slab": "Losa",
+        "strip": "Zapata corrida",
+        "columns": "Pilares / pilotes"
+      }
+    },
     "length": {
       "label": "Largo"
     },
@@ -28,6 +36,24 @@
     },
     "bag": {
       "label": "Saco de cemento"
+    },
+    "stripLength": {
+      "label": "Longitud total de la zapata"
+    },
+    "stripWidth": {
+      "label": "Ancho de la zapata"
+    },
+    "stripHeight": {
+      "label": "Altura de la zapata"
+    },
+    "diameter": {
+      "label": "Diámetro del pilar"
+    },
+    "depth": {
+      "label": "Altura del pilar"
+    },
+    "count": {
+      "label": "Número de pilares"
     }
   },
   "outputs": {

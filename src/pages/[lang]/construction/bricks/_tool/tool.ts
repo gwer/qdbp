@@ -1,4 +1,12 @@
-import { defineCalculator } from '@/ui/define';
+import type { Lang, UnitSystem } from '@/i18n/config';
+import type { T } from '@/i18n/t';
+import { formatNumber } from '@/lib/format';
+import { convert } from '@/lib/units';
+import { defineCalculator, type FormatContext } from '@/ui/define';
+
+/** «102,6 на м²» / «9,5 per sq ft». */
+const perArea = (n: number, lang: Lang, units: UnitSystem, t: T) =>
+  units === 'imperial' ? t('ui.perFt2', { n: formatNumber(lang, n / convert(1, 'm2', 'ft2'), 'number', 1) }) : t('ui.perM2', { n: formatNumber(lang, n, 'number', 1) });
 import { island } from '@/ui/ToolRoot';
 
 /** Форматы кирпича: длина × ширина × высота, мм. */
@@ -33,10 +41,15 @@ export function bricks(p: {
   joint: number;
   reserve: number;
 }) {
-  const [l, , h] = FORMATS[p.format];
+  const [l, w, h] = FORMATS[p.format];
   const area = Math.max(0, p.length * p.height - p.openings);
-  const perM2 = (1 / (((l + p.joint) / 1000) * ((h + p.joint) / 1000))) * THICKNESS[p.thickness];
-  return { bricks: Math.ceil(area * perM2 * (1 + p.reserve / 100) - 1e-9), area, perM2 };
+  const n = THICKNESS[p.thickness];
+  const perM2 = (1 / (((l + p.joint) / 1000) * ((h + p.joint) / 1000))) * n;
+  // Толщина стены: ½ — ширина кирпича, 1 — длина, 1½ — длина + шов + ширина, 2 — две длины + шов.
+  const wall = (n === 1 ? w : n === 2 ? l : n === 3 ? l + p.joint + w : 2 * l + p.joint) / 1000;
+  // Раствор — объём кладки минус объём кирпичей; запас тот же, что и для кирпича.
+  const mortar = Math.max(0, area * wall - area * perM2 * ((l * w * h) / 1e9)) * (1 + p.reserve / 100);
+  return { bricks: Math.ceil(area * perM2 * (1 + p.reserve / 100) - 1e-9), perM2, mortar, area };
 }
 
 export const def = defineCalculator({
@@ -59,6 +72,8 @@ export const def = defineCalculator({
   compute: (v) => bricks(v),
   outputs: {
     bricks: { type: 'integer' },
+    perM2: { type: 'custom', format: (n: number, { lang, units, t }: FormatContext) => perArea(n, lang, units, t) },
+    mortar: { type: 'quantity', unit: 'm3', imperial: 'ft3', digits: 2 },
     area: { type: 'quantity', unit: 'm2', imperial: 'ft2', digits: 2 },
   },
 });

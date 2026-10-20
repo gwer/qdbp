@@ -2,6 +2,8 @@
 
 Enter the length, width and thickness of a slab, patio, sidewalk or footing, and add extra for spills and an uneven base. Then there are two ways to buy:
 
+For a strip footing, choose it in “What to pour” and enter the total footing length (perimeter plus interior bearing walls), width and depth. For columns or piers, enter the diameter, height and count: each one is π × d² / 4 × height.
+
 - **bagged premix** (like Quikrete or Sakrete): enter the bag size — 60 or 80 lb — to see how many bags you need;
 - **mixing your own**: pick the mix ratio and cement bag size to see the cement, sand, gravel and water.
 

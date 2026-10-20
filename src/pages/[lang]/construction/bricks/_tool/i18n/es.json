@@ -46,6 +46,16 @@
     },
     "area": {
       "label": "Superficie del muro"
+    },
+    "perM2": {
+      "label": "Ladrillos por superficie"
+    },
+    "mortar": {
+      "label": "Mortero"
     }
+  },
+  "ui": {
+    "perM2": "{n} por m²",
+    "perFt2": "{n} por pie²"
   }
 }

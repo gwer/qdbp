@@ -2,6 +2,8 @@
 
 Enter the floor or wall area, the tile size and thickness, the grout joint width and the waste allowance. Add how many tiles come in a box and the thinset usage. You'll see how many tiles and boxes to buy, plus estimates for grout and thinset.
 
+Don't know the area? In “What to tile” choose the floor or the walls and enter the room size: for walls the calculator takes the perimeter × tiling height and subtracts doors and windows. Waste depends on the pattern — about 10% for straight, 15% for diagonal and 20% for herringbone — and is filled in when you pick one.
+
 ## How it's calculated
 
 - Each tile plus its joint takes up (length + joint) × (width + joint). Tiles = area ÷ that × (1 + waste), rounded up.

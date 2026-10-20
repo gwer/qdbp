@@ -22,6 +22,12 @@
     },
     "reserve": {
       "label": "Margem de perda"
+    },
+    "glueRate": {
+      "label": "Consumo de argamassa colante, kg por m³ de alvenaria"
+    },
+    "glueBag": {
+      "label": "Saco de argamassa, kg"
     }
   },
   "outputs": {
@@ -33,6 +39,12 @@
     },
     "area": {
       "label": "Área da parede"
+    },
+    "glue": {
+      "label": "Argamassa colante"
+    },
+    "glueBags": {
+      "label": "Sacos de argamassa"
     }
   }
 }

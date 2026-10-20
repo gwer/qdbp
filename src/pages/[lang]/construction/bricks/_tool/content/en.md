@@ -2,6 +2,8 @@
 
 Enter the wall length and height and the area of windows and doors. Choose the brick size, the number of wythes and the mortar joint width, and set extra for breakage and cuts. You'll see how many bricks you need and the wall area. The default is a US modular brick with 3/8 in joints.
 
+You'll also see bricks per unit of wall area and the mortar volume — the wall volume minus the bricks, with the same waste allowance. In practice you often use a bit more mortar than that.
+
 ## How it's calculated
 
 - Wall area = length × height − openings.

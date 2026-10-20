@@ -40,3 +40,13 @@ describe('tiles (США)', () => {
     expect(convert(r.glue, 'kg', 'lb')).toBeCloseTo(100, 6);
   });
 });
+
+describe('площадь по размерам', () => {
+  it('пол 2,5 × 1,7 = 4,25 м²; стены (2,5 + 1,7) × 2 × 2,5 − 1,4 = 19,6 м²', async () => {
+    const { surfaceArea } = await import('./tool');
+    const room = { area: 0, roomLength: 2.5, roomWidth: 1.7, wallHeight: 2.5, openings: 1.4 };
+    expect(surfaceArea({ ...room, surface: 'floor' })).toBeCloseTo(4.25, 9);
+    expect(surfaceArea({ ...room, surface: 'walls' })).toBeCloseTo(19.6, 9);
+    expect(surfaceArea({ ...room, surface: 'area', area: 10 })).toBe(10);
+  });
+});

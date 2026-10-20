@@ -22,6 +22,12 @@
     },
     "reserve": {
       "label": "Margen"
+    },
+    "glueRate": {
+      "label": "Consumo de adhesivo, kg por m³ de fábrica"
+    },
+    "glueBag": {
+      "label": "Saco de adhesivo, kg"
     }
   },
   "outputs": {
@@ -33,6 +39,12 @@
     },
     "area": {
       "label": "Superficie del muro"
+    },
+    "glue": {
+      "label": "Adhesivo"
+    },
+    "glueBags": {
+      "label": "Sacos de adhesivo"
     }
   }
 }

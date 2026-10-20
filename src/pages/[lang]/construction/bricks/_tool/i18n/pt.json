@@ -46,6 +46,16 @@
     },
     "area": {
       "label": "Área da parede"
+    },
+    "perM2": {
+      "label": "Tijolos por área"
+    },
+    "mortar": {
+      "label": "Argamassa"
     }
+  },
+  "ui": {
+    "perM2": "{n} por m²",
+    "perFt2": "{n} por pé²"
   }
 }

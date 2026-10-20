@@ -2,6 +2,14 @@
   "title": "Calculadora de concreto: volume, cimento, areia e brita",
   "description": "Volume de concreto para laje, sapata ou contrapiso, sacos de concreto pronto ou cimento, areia e brita para preparar a mistura.",
   "inputs": {
+    "shape": {
+      "label": "O que concretar",
+      "options": {
+        "slab": "Laje",
+        "strip": "Sapata corrida (baldrame)",
+        "columns": "Pilares / estacas"
+      }
+    },
     "length": {
       "label": "Comprimento"
     },
@@ -28,6 +36,24 @@
     },
     "bag": {
       "label": "Saco de cimento"
+    },
+    "stripLength": {
+      "label": "Comprimento total da sapata"
+    },
+    "stripWidth": {
+      "label": "Largura da sapata"
+    },
+    "stripHeight": {
+      "label": "Altura da sapata"
+    },
+    "diameter": {
+      "label": "Diâmetro do pilar"
+    },
+    "depth": {
+      "label": "Altura do pilar"
+    },
+    "count": {
+      "label": "Quantidade de pilares"
     }
   },
   "outputs": {

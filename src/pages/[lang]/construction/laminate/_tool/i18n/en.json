@@ -13,6 +13,19 @@
     },
     "pack": {
       "label": "Coverage per box"
+    },
+    "layout": {
+      "label": "Layout",
+      "options": {
+        "straight": "Straight",
+        "diagonal": "Diagonal"
+      }
+    },
+    "doors": {
+      "label": "Door openings width"
+    },
+    "plinth": {
+      "label": "Baseboard piece length"
     }
   },
   "outputs": {
@@ -27,6 +40,12 @@
     },
     "bought": {
       "label": "You'll buy"
+    },
+    "plinthLength": {
+      "label": "Baseboard"
+    },
+    "plinths": {
+      "label": "Baseboard pieces"
     }
   }
 }

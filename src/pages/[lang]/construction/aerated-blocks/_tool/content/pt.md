@@ -2,6 +2,8 @@
 
 Informe o comprimento e a altura da parede, a área de janelas e portas e as medidas do bloco em milímetros. A espessura do bloco é a espessura da parede. A calculadora mostra quantos blocos você precisa e o volume deles em metros cúbicos.
 
+A argamassa colante é calculada pelo consumo por m³ de alvenaria: as fichas técnicas indicam cerca de 16–26 kg por m³ com junta de 2 mm; o padrão é 20 kg. Confira o valor exato na embalagem.
+
 ## Como é calculado
 
 - Área da parede = comprimento × altura − vãos.

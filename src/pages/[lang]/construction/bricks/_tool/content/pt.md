@@ -2,6 +2,8 @@
 
 Informe o comprimento e a altura da parede e a área de janelas e portas. Escolha o formato do tijolo, a espessura da parede e a largura da junta e defina uma margem para quebras e cortes. A calculadora mostra quantos tijolos você precisa e a área da parede. O padrão é o tijolo maciço de 19 × 9 × 5,7 cm em parede de meia vez.
 
+Você também vê os tijolos por m² de parede e o volume de argamassa — o volume da parede menos o dos tijolos, com a mesma margem. Na obra costuma-se gastar um pouco mais.
+
 ## Como é calculado
 
 - Área da parede = comprimento × altura − vãos.

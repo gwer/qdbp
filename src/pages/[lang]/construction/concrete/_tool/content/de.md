@@ -2,6 +2,8 @@
 
 Geben Sie Länge, Breite und Dicke ein – für Bodenplatte, Estrich, Gehweg oder Streifenfundament – und ergänzen Sie eine Reserve für Verluste und unebenen Untergrund. Danach gibt es zwei Wege:
 
+Für ein Streifenfundament wählen Sie es unter „Was wird betoniert“ und geben die Gesamtlänge (Umfang plus tragende Innenwände), Breite und Höhe ein. Für Säulen oder Pfähle Durchmesser, Höhe und Anzahl: jede hat π × d² / 4 × Höhe.
+
 - **Fertigbeton aus dem Sack** (Trockenbeton): Sackgewicht eintragen, der Rechner zeigt die Anzahl der Säcke;
 - **selbst mischen**: Mischverhältnis und Zementsack wählen, der Rechner zeigt Zement, Sand, Kies und Wasser.
 

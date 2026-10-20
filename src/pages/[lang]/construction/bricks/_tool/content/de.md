@@ -2,6 +2,8 @@
 
 Geben Sie Länge und Höhe der Wand sowie die Fläche von Fenstern und Türen ein. Wählen Sie Ziegelformat, Wandstärke und Fugenbreite und legen Sie eine Reserve für Bruch und Zuschnitt fest. Der Rechner zeigt, wie viele Ziegel Sie brauchen, und die Wandfläche. Voreingestellt ist das Normalformat (NF) in ½-Stein-Wandstärke.
 
+Außerdem sehen Sie die Steine pro m² Wand und das Mörtelvolumen – Wandvolumen minus Steine, mit demselben Zuschlag. In der Praxis braucht man oft etwas mehr.
+
 ## So wird gerechnet
 
 - Wandfläche = Länge × Höhe − Öffnungen.

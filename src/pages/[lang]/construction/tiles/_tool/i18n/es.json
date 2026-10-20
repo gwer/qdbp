@@ -2,6 +2,14 @@
   "title": "Calculadora de azulejos: baldosas, juntas y cemento cola",
   "description": "Cuántos azulejos o baldosas necesitas con junta y margen, cuántas cajas y una estimación de material de rejuntado y cemento cola.",
   "inputs": {
+    "surface": {
+      "label": "Qué alicatar",
+      "options": {
+        "area": "Conozco la superficie",
+        "floor": "Suelo según la habitación",
+        "walls": "Paredes según la habitación"
+      }
+    },
     "area": {
       "label": "Superficie"
     },
@@ -25,6 +33,26 @@
     },
     "adhesive": {
       "label": "Consumo de cemento cola"
+    },
+    "roomLength": {
+      "label": "Largo de la habitación"
+    },
+    "roomWidth": {
+      "label": "Ancho de la habitación"
+    },
+    "wallHeight": {
+      "label": "Altura del alicatado"
+    },
+    "openings": {
+      "label": "Puertas y ventanas"
+    },
+    "layout": {
+      "label": "Colocación",
+      "options": {
+        "straight": "Recta",
+        "diagonal": "En diagonal",
+        "herringbone": "En espiga"
+      }
     }
   },
   "outputs": {
@@ -39,6 +67,9 @@
     },
     "glue": {
       "label": "Cemento cola"
+    },
+    "area": {
+      "label": "Superficie a cubrir"
     }
   }
 }

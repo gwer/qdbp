@@ -46,6 +46,16 @@
     },
     "area": {
       "label": "Wandfläche"
+    },
+    "perM2": {
+      "label": "Steine pro Fläche"
+    },
+    "mortar": {
+      "label": "Mörtel"
     }
+  },
+  "ui": {
+    "perM2": "{n} pro m²",
+    "perFt2": "{n} pro sq ft"
   }
 }

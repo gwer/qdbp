@@ -13,6 +13,19 @@
     },
     "pack": {
       "label": "Área por caixa"
+    },
+    "layout": {
+      "label": "Paginação",
+      "options": {
+        "straight": "Reta",
+        "diagonal": "Diagonal"
+      }
+    },
+    "doors": {
+      "label": "Largura das portas"
+    },
+    "plinth": {
+      "label": "Comprimento da peça de rodapé"
     }
   },
   "outputs": {
@@ -27,6 +40,12 @@
     },
     "bought": {
       "label": "Área comprada"
+    },
+    "plinthLength": {
+      "label": "Rodapé"
+    },
+    "plinths": {
+      "label": "Peças de rodapé"
     }
   }
 }

@@ -2,6 +2,8 @@
 
 Geben Sie die Boden- oder Wandfläche, Fliesenformat und -stärke, Fugenbreite und Verschnitt ein. Tragen Sie die Anzahl der Fliesen pro Karton und den Kleberverbrauch vom Sack ein. Der Rechner zeigt die Anzahl der Fliesen und Kartons sowie Richtwerte für Fugenmörtel und Fliesenkleber.
 
+Fläche unbekannt? Wählen Sie unter „Was wird gefliest“ Boden oder Wände und geben Sie die Raummaße ein: Bei Wänden rechnet der Rechner Umfang × Fliesenhöhe abzüglich Türen und Fenster. Der Verschnitt hängt vom Muster ab – etwa 10 % gerade, 15 % diagonal, 20 % Fischgrät – und wird beim Wählen eingesetzt.
+
 ## So wird gerechnet
 
 - Eine Fliese mit Fuge belegt (Länge + Fuge) × (Breite + Fuge). Anzahl = Fläche ÷ diesen Wert × (1 + Verschnitt), aufgerundet.

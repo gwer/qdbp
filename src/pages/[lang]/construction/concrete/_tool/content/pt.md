@@ -2,6 +2,8 @@
 
 Informe o comprimento, a largura e a espessura de uma laje, contrapiso, calçada ou sapata corrida e acrescente uma margem para perdas e irregularidades. Depois há dois caminhos:
 
+Para sapata corrida (baldrame), escolha a opção em «O que concretar» e informe o comprimento total (perímetro mais paredes internas), a largura e a altura. Para pilares ou estacas, o diâmetro, a altura e a quantidade: cada um tem π × d² / 4 × altura.
+
 - **concreto pronto ensacado**: informe o peso do saco e veja quantos comprar;
 - **preparar a mistura**: escolha o traço e o saco de cimento e veja o cimento, a areia, a brita e a água.
 

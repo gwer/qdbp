@@ -20,6 +20,12 @@ describe('bricks (метрика)', () => {
     expect(r.bricks).toBe(1530);
   });
 
+  it('раствор: в 1 кирпич (250 × 120 × 65, шов 10) — 0,2 м³ на 1 м³ кладки', () => {
+    const r = bricks({ length: 4, height: 1, openings: 0, joint: 10, reserve: 0, format: '250x120x65', thickness: 'one' });
+    // 4 м² × 0,25 м = 1 м³ кладки; кирпичей 4 × 102,56 × 0,00195 м³ = 0,8 м³.
+    expect(r.mortar).toBeCloseTo(0.2, 9);
+  });
+
   it('толщина кратна полукирпичам', () => {
     const half = bricks({ ...wall, format: '240x115x71', thickness: 'half', reserve: 0 }).perM2;
     expect(bricks({ ...wall, format: '240x115x71', thickness: 'two', reserve: 0 }).perM2).toBeCloseTo(half * 4, 10);

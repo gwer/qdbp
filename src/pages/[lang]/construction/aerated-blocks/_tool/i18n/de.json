@@ -22,6 +22,12 @@
     },
     "reserve": {
       "label": "Reserve"
+    },
+    "glueRate": {
+      "label": "Kleberverbrauch, kg pro m³ Mauerwerk"
+    },
+    "glueBag": {
+      "label": "Sack Dünnbettmörtel, kg"
     }
   },
   "outputs": {
@@ -33,6 +39,12 @@
     },
     "area": {
       "label": "Wandfläche"
+    },
+    "glue": {
+      "label": "Dünnbettmörtel"
+    },
+    "glueBags": {
+      "label": "Säcke"
     }
   }
 }

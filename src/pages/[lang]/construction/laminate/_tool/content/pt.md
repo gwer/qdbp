@@ -2,6 +2,8 @@
 
 Informe o comprimento e a largura do cômodo, a margem de perda nos cortes e a área de cada caixa (vem na embalagem, geralmente entre 1,5 e 2,5 m²). A calculadora mostra a área do piso, a área com margem e quantas caixas comprar.
 
+A perda depende da paginação: na reta costuma bastar 5–7%, na diagonal usa-se 10–15% — é preenchida ao escolher. A calculadora também calcula o rodapé: perímetro do cômodo menos as portas e quantas peças do comprimento escolhido comprar.
+
 ## Como é calculado
 
 Área do piso × (1 + margem) ÷ área por caixa, arredondado para cima até caixas inteiras.
