@@ -2,6 +2,13 @@
   "title": "Конвертер Unix timestamp: перевод в дату и время",
   "description": "Переведите Unix-время (секунды или миллисекунды с 1 января 1970 года) в обычную дату и время — в вашем часовом поясе и в UTC.",
   "inputs": {
+    "direction": {
+      "label": "Направление",
+      "options": {
+        "toDate": "Timestamp → дата",
+        "toTs": "Дата → timestamp"
+      }
+    },
     "ts": {
       "label": "Timestamp"
     },
@@ -10,6 +17,19 @@
       "options": {
         "s": "Секунды",
         "ms": "Миллисекунды"
+      }
+    },
+    "date": {
+      "label": "Дата"
+    },
+    "time": {
+      "label": "Время"
+    },
+    "zone": {
+      "label": "Часовой пояс",
+      "options": {
+        "local": "Мой местный",
+        "utc": "UTC"
       }
     }
   },
@@ -22,6 +42,12 @@
     },
     "iso": {
       "label": "ISO 8601"
+    },
+    "seconds": {
+      "label": "Timestamp, секунды"
+    },
+    "ms": {
+      "label": "Timestamp, миллисекунды"
     }
   },
   "ui": {

@@ -20,6 +20,10 @@ export function formatValue(lang: Lang, n: number): string {
   return f.format(n).replace(/[   ]/g, ' ');
 }
 
+/** Значения для таблицы «популярные значения»: у температуры — привычные точки шкалы. */
+const QUICK: Partial<Record<Dimension, number[]>> = { temperature: [-40, -20, -10, 0, 10, 20, 30, 36.6, 40, 100, 180, 200] };
+const QUICK_DEFAULT = [1, 2, 3, 5, 10, 15, 20, 25, 50, 100, 500, 1000];
+
 function readQuery(dim: Dimension) {
   const p = new URLSearchParams(location.search);
   const v = Number(p.get('v'));
@@ -142,6 +146,23 @@ export function Converter({ dim, defaults, lang, t }: ToolProps & { dim: Dimensi
           </div>
         </details>
       )}
+      <details class="extra">
+        <summary>{t('ui.quick', { from: name(from), to: name(to) })}</summary>
+        <div class="table-wrap">
+          <table class="kv">
+            <tbody>
+              {(QUICK[dim] ?? QUICK_DEFAULT)
+                .filter((v) => isValid(dim, v, from))
+                .map((v) => (
+                  <tr key={v}>
+                    <th scope="row">{formatValue(lang, v)}</th>
+                    <td class="mono">{formatValue(lang, convertValue(dim, v, from, to))}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
     </div>
   );
 }

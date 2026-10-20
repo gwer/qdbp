@@ -1,5 +1,6 @@
 import { addMonths, daysBetween, diffYMD } from '@/lib/date';
-import { defineCalculator, InputError } from '@/ui/define';
+import { LANG_META } from '@/i18n/config';
+import { defineCalculator, InputError, type FormatContext } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
 
 export function age(birth: string, on: string) {
@@ -8,8 +9,24 @@ export function age(birth: string, on: string) {
   // День рождения 29 февраля в невисокосный год — 28 февраля (так работает addMonths).
   let next = addMonths(birth, 12 * years);
   if (next < on) next = addMonths(birth, 12 * (years + 1));
-  return { years, months, days, totalDays: daysBetween(birth, on), nextBirthday: daysBetween(on, next) };
+  const totalDays = daysBetween(birth, on);
+  return {
+    years,
+    months,
+    days,
+    nextBirthday: daysBetween(on, next),
+    nextDate: next,
+    turning: next === on ? years : years + 1,
+    totalMonths: years * 12 + months,
+    totalWeeks: Math.floor(totalDays / 7),
+    totalDays,
+    bornOn: birth,
+  };
 }
+
+/** День недели даты 'YYYY-MM-DD': «пятница». */
+const weekday = (iso: string, { lang }: FormatContext) =>
+  new Intl.DateTimeFormat(LANG_META[lang].intl, { weekday: 'long', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
 
 export const def = defineCalculator({
   order: 10,
@@ -24,8 +41,13 @@ export const def = defineCalculator({
     years: { type: 'integer' },
     months: { type: 'integer' },
     days: { type: 'integer' },
-    totalDays: { type: 'integer' },
     nextBirthday: { type: 'integer' },
+    nextDate: { type: 'date', style: 'full' },
+    turning: { type: 'integer' },
+    totalMonths: { type: 'integer' },
+    totalWeeks: { type: 'integer' },
+    totalDays: { type: 'integer' },
+    bornOn: { type: 'custom', format: weekday },
   },
 });
 

@@ -2,6 +2,13 @@
   "title": "Unix timestamp converter: timestamp to date and time",
   "description": "Convert a Unix timestamp (seconds or milliseconds since January 1, 1970) to a readable date and time in your time zone and in UTC.",
   "inputs": {
+    "direction": {
+      "label": "Direction",
+      "options": {
+        "toDate": "Timestamp → date",
+        "toTs": "Date → timestamp"
+      }
+    },
     "ts": {
       "label": "Timestamp"
     },
@@ -10,6 +17,19 @@
       "options": {
         "s": "Seconds",
         "ms": "Milliseconds"
+      }
+    },
+    "date": {
+      "label": "Date"
+    },
+    "time": {
+      "label": "Time"
+    },
+    "zone": {
+      "label": "Time zone",
+      "options": {
+        "local": "My local time",
+        "utc": "UTC"
       }
     }
   },
@@ -22,6 +42,12 @@
     },
     "iso": {
       "label": "ISO 8601"
+    },
+    "seconds": {
+      "label": "Timestamp, seconds"
+    },
+    "ms": {
+      "label": "Timestamp, milliseconds"
     }
   },
   "ui": {

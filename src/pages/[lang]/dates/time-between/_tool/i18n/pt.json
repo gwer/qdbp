@@ -7,6 +7,9 @@
     },
     "end": {
       "label": "Horário de término"
+    },
+    "pause": {
+      "label": "Intervalo (h:mm)"
     }
   },
   "outputs": {
@@ -26,5 +29,8 @@
   "ui": {
     "sameDay": "No mesmo dia",
     "nextDay": "No dia seguinte"
+  },
+  "errors": {
+    "pauseTooLong": "O intervalo é maior que o tempo entre o início e o fim."
   }
 }

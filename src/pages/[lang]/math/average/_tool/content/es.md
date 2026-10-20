@@ -2,6 +2,8 @@
 
 Pega los números separados por espacios, saltos de línea o punto y coma; puedes copiar una columna directamente de una hoja de cálculo. Los decimales se escriben con coma o con punto: «1,5» y «1.5» son lo mismo. La media, la mediana, la moda y el resto de datos aparecen al instante.
 
+La desviación típica indica cuánto se alejan los valores de la media. La muestral (divide entre n − 1) se usa cuando los datos son una muestra de un grupo mayor; la poblacional (divide entre n), cuando tienes todos los valores. La varianza es la desviación típica al cuadrado.
+
 ## Qué se calcula
 
 - **Media aritmética**: la suma de todos los números dividida entre cuántos hay.

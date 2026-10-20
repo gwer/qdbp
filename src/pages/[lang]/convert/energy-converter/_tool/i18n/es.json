@@ -18,6 +18,7 @@
       "wh": "Vatios hora (Wh)",
       "kwh": "Kilovatios hora (kWh)",
       "btu": "Unidades térmicas británicas (BTU)"
-    }
+    },
+    "quick": "Valores habituales: {from} → {to}"
   }
 }

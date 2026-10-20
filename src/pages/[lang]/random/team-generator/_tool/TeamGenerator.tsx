@@ -1,13 +1,19 @@
 import { useState } from 'preact/hooks';
 import { listItems, splitIntoGroups } from '@/lib/random';
+import { CopyButton } from '@/ui/CopyButton';
 import type { ToolProps } from '@/ui/define';
+import { IntField, SelectField } from '@/ui/files/fields';
 
 export function TeamGenerator({ t }: ToolProps) {
   const [text, setText] = useState('');
+  const [by, setBy] = useState<'teams' | 'size'>('teams');
   const [teams, setTeams] = useState(2);
+  const [size, setSize] = useState(3);
   const [result, setResult] = useState<string[][] | null>(null);
   const items = listItems(text);
-  const n = Math.min(Math.max(2, teams), Math.max(2, items.length));
+  // «По N человек» — команд столько, чтобы в каждой было не больше N.
+  const wanted = by === 'size' ? Math.ceil(items.length / size) : teams;
+  const n = Math.min(Math.max(2, wanted), Math.max(2, items.length));
 
   return (
     <div>
@@ -16,10 +22,21 @@ export function TeamGenerator({ t }: ToolProps) {
         <textarea id="tg-list" rows={8} placeholder={t('ui.placeholder')} value={text} onInput={(e) => (setText(e.currentTarget.value), setResult(null))} />
       </div>
       <div class="calc-inputs">
-        <div class="field">
-          <label for="tg-teams">{t('ui.teams')}</label>
-          <input id="tg-teams" type="text" inputMode="numeric" value={String(teams)} onInput={(e) => setTeams(Number(e.currentTarget.value) || 2)} />
-        </div>
+        <SelectField
+          id="tg-by"
+          label={t('ui.by')}
+          value={by}
+          options={[
+            ['teams', t('ui.byTeams')],
+            ['size', t('ui.bySize')],
+          ]}
+          onChange={(v) => (setBy(v), setResult(null))}
+        />
+        {by === 'teams' ? (
+          <IntField key="teams" id="tg-teams" label={t('ui.teams')} value={teams} min={2} max={1000} onChange={setTeams} />
+        ) : (
+          <IntField key="size" id="tg-size" label={t('ui.size')} value={size} min={1} max={1000} onChange={setSize} />
+        )}
       </div>
       <div class="actions">
         <button type="button" class="btn" disabled={items.length < 2} onClick={() => setResult(splitIntoGroups(items, n))}>
@@ -39,6 +56,11 @@ export function TeamGenerator({ t }: ToolProps) {
               </ul>
             </div>
           ))}
+        </div>
+      )}
+      {result && (
+        <div class="actions">
+          <CopyButton text={result.map((team, i) => `${t('ui.team', { n: i + 1 })}\n${team.join('\n')}`).join('\n\n')} t={t} />
         </div>
       )}
     </div>

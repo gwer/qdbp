@@ -15,6 +15,7 @@
       "mph": "Miles per hour (mph)",
       "knot": "Knots (kn)",
       "fts": "Feet per second (ft/s)"
-    }
+    },
+    "quick": "Common values: {from} → {to}"
   }
 }

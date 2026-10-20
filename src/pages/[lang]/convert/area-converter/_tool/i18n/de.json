@@ -20,6 +20,7 @@
       "yd2": "Quadratyards",
       "acre": "Acres",
       "mi2": "Quadratmeilen"
-    }
+    },
+    "quick": "Häufige Werte: {from} → {to}"
   }
 }

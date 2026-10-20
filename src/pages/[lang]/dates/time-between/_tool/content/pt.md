@@ -1,6 +1,6 @@
 ## Como usar
 
-Informe o horário de início e o de término: você vê quantas horas e minutos há entre eles, além da duração em minutos e em horas decimais (útil para folha de ponto e cálculo de pagamento).
+Informe o horário de início e o de término: você vê quantas horas e minutos há entre eles, além da duração em minutos e em horas decimais (útil para folha de ponto e cálculo de pagamento). Se houve intervalo (almoço), informe-o e ele será descontado.
 
 Se o horário de término for anterior ao de início, considera-se que termina no dia seguinte — é assim que se contam os turnos noturnos.
 

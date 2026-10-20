@@ -10,6 +10,7 @@
       "one": "{count} opción",
       "many": "{count} opciones",
       "other": "{count} opciones"
-    }
+    },
+    "remove": "Quitar los elegidos de la lista"
   }
 }

@@ -24,6 +24,21 @@
     },
     "nextBirthday": {
       "label": "Дней до дня рождения"
+    },
+    "nextDate": {
+      "label": "Следующий день рождения"
+    },
+    "turning": {
+      "label": "Исполнится лет"
+    },
+    "totalMonths": {
+      "label": "Всего месяцев"
+    },
+    "totalWeeks": {
+      "label": "Всего недель"
+    },
+    "bornOn": {
+      "label": "День недели рождения"
     }
   },
   "errors": {

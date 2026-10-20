@@ -25,6 +25,7 @@
       "galUk": "Gallonen (UK)",
       "in3": "Kubikzoll",
       "ft3": "Kubikfuß"
-    }
+    },
+    "quick": "Häufige Werte: {from} → {to}"
   }
 }

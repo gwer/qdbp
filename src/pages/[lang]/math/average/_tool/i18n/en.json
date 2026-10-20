@@ -13,6 +13,9 @@
     "max": "Maximum",
     "range": "Range",
     "noMode": "none — all values are different",
-    "invalid": "Not recognized: {list}"
+    "invalid": "Not recognized: {list}",
+    "sd": "Standard deviation (sample)",
+    "sdPop": "Standard deviation (population)",
+    "variance": "Variance (sample)"
   }
 }

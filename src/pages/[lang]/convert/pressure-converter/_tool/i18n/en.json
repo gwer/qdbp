@@ -19,6 +19,7 @@
       "mmhg": "Millimeters of mercury (mmHg)",
       "psi": "Pounds per square inch (psi)",
       "inhg": "Inches of mercury (inHg)"
-    }
+    },
+    "quick": "Common values: {from} → {to}"
   }
 }

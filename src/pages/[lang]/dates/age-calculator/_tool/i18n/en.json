@@ -24,6 +24,21 @@
     },
     "nextBirthday": {
       "label": "Days to next birthday"
+    },
+    "nextDate": {
+      "label": "Next birthday"
+    },
+    "turning": {
+      "label": "Turning"
+    },
+    "totalMonths": {
+      "label": "Total months"
+    },
+    "totalWeeks": {
+      "label": "Total weeks"
+    },
+    "bornOn": {
+      "label": "Born on a"
     }
   },
   "errors": {

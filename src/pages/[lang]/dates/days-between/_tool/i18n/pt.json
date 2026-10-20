@@ -25,6 +25,27 @@
     },
     "weekdays": {
       "label": "Dias úteis (seg–sex)"
+    },
+    "ymd": {
+      "label": "Em anos, meses e dias"
+    }
+  },
+  "ui": {
+    "years": {
+      "one": "{count} ano",
+      "other": "{count} anos"
+    },
+    "months": {
+      "one": "{count} mês",
+      "other": "{count} meses"
+    },
+    "days": {
+      "one": "{count} dia",
+      "other": "{count} dias"
+    },
+    "weeks": {
+      "one": "{count} semana",
+      "other": "{count} semanas"
     }
   }
 }

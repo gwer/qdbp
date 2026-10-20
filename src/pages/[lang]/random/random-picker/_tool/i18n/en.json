@@ -9,6 +9,7 @@
     "items": {
       "one": "{count} item",
       "other": "{count} items"
-    }
+    },
+    "remove": "Remove picked from the list"
   }
 }

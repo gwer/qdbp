@@ -20,6 +20,7 @@
       "yd2": "Jardas quadradas",
       "acre": "Acres",
       "mi2": "Milhas quadradas"
-    }
+    },
+    "quick": "Valores comuns: {from} → {to}"
   }
 }

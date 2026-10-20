@@ -14,6 +14,7 @@
       "kml": "Kilometers per liter (km/L)",
       "mpgUs": "Miles per gallon, US (mpg)",
       "mpgUk": "Miles per gallon, UK (mpg)"
-    }
+    },
+    "quick": "Common values: {from} → {to}"
   }
 }

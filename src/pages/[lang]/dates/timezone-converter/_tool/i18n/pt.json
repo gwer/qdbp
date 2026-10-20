@@ -9,6 +9,9 @@
     "prevDay": "dia anterior",
     "remove": "Remover",
     "add": "Adicionar",
-    "addLabel": "Adicionar cidade…"
+    "addLabel": "Adicionar cidade: comece a digitar",
+    "now": "Agora",
+    "work": "horário comercial",
+    "offHours": "fora do horário comercial"
   }
 }

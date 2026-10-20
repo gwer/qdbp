@@ -18,4 +18,4 @@ Enter a data size and pick the units — the result and a table in every unit ap
 
 **Where did the missing space on my new drive go?** Nowhere — manufacturers count in decimal gigabytes, while your OS counts in binary ones. The gap is about 7% for GB and 9% for TB.
 
-**Are megabits and megabytes the same?** No: a byte has 8 bits, so divide Mbps by 8 to get MB/s.
+**Are megabits and megabytes the same?** No: a byte has 8 bits, so divide Mbps by 8 to get MB/s. Or skip the math: pick “Megabits (Mb)” in the list.

@@ -1,6 +1,6 @@
 ## So funktioniert der Rechner
 
-Geben Sie Beginn und Ende ein – Sie sehen die Stunden und Minuten dazwischen sowie die Dauer in Minuten und in Dezimalstunden (praktisch für Stundenzettel und Abrechnung).
+Geben Sie Beginn und Ende ein – Sie sehen die Stunden und Minuten dazwischen sowie die Dauer in Minuten und in Dezimalstunden (praktisch für Stundenzettel und Abrechnung). Gab es eine Pause (Mittag), tragen Sie sie ein – sie wird abgezogen.
 
 Liegt das Ende vor dem Beginn, wird angenommen, dass es am nächsten Tag ist – so werden Nachtschichten gezählt.
 

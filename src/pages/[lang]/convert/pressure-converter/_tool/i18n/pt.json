@@ -19,6 +19,7 @@
       "mmhg": "Milímetros de mercúrio (mmHg)",
       "psi": "Libras por polegada quadrada (psi)",
       "inhg": "Polegadas de mercúrio (inHg)"
-    }
+    },
+    "quick": "Valores comuns: {from} → {to}"
   }
 }

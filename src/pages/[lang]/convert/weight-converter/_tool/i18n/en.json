@@ -20,6 +20,7 @@
       "st": "Stones (st)",
       "shortTon": "US tons (short tons)",
       "longTon": "UK tons (long tons)"
-    }
+    },
+    "quick": "Common values: {from} → {to}"
   }
 }

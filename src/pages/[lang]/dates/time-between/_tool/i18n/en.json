@@ -7,6 +7,9 @@
     },
     "end": {
       "label": "End time"
+    },
+    "pause": {
+      "label": "Break (h:mm)"
     }
   },
   "outputs": {
@@ -26,5 +29,8 @@
   "ui": {
     "sameDay": "Same day",
     "nextDay": "Next day"
+  },
+  "errors": {
+    "pauseTooLong": "The break is longer than the time between start and end."
   }
 }

@@ -11,6 +11,9 @@
     "invalid": "Valor no válido",
     "units": {
       "bit": "Bits",
+      "kbit": "Kilobits (kb)",
+      "mbit": "Megabits (Mb)",
+      "gbit": "Gigabits (Gb)",
       "b": "Bytes (B)",
       "kb": "Kilobytes (KB, 1000 B)",
       "mb": "Megabytes (MB)",
@@ -20,6 +23,7 @@
       "mib": "Mebibytes (MiB)",
       "gib": "Gibibytes (GiB)",
       "tib": "Tebibytes (TiB)"
-    }
+    },
+    "quick": "Valores habituales: {from} → {to}"
   }
 }

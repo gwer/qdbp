@@ -18,6 +18,7 @@
       "wh": "Watt-hours (Wh)",
       "kwh": "Kilowatt-hours (kWh)",
       "btu": "British thermal units (BTU)"
-    }
+    },
+    "quick": "Common values: {from} → {to}"
   }
 }

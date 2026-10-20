@@ -3,7 +3,7 @@ import { age } from './tool';
 
 describe('age', () => {
   it('обычный случай', () => {
-    expect(age('1990-06-15', '2026-10-19')).toEqual({ years: 36, months: 4, days: 4, totalDays: 13275, nextBirthday: 239 });
+    expect(age('1990-06-15', '2026-10-19')).toMatchObject({ years: 36, months: 4, days: 4, totalDays: 13275, nextBirthday: 239 });
   });
 
   it('в день рождения — 0 дней до следующего', () => {
@@ -24,5 +24,15 @@ describe('age', () => {
 
   it('дата рождения позже — ошибка', () => {
     expect(() => age('2027-01-01', '2026-01-01')).toThrow();
+  });
+});
+
+describe('следующий день рождения и итоги', () => {
+  it('15.06.1990 на 20.10.2026: 36 лет, следующий — 15.06.2027, исполнится 37', () => {
+    expect(age('1990-06-15', '2026-10-20')).toMatchObject({ nextDate: '2027-06-15', turning: 37, totalMonths: 436 });
+  });
+
+  it('в сам день рождения — сегодня, исполнилось столько же', () => {
+    expect(age('1990-06-15', '2026-06-15')).toMatchObject({ nextBirthday: 0, nextDate: '2026-06-15', turning: 36 });
   });
 });

@@ -40,6 +40,12 @@ export interface Stats {
   min: number;
   max: number;
   range: number;
+  /** Выборочное стандартное отклонение (делитель n − 1); null при одном значении. */
+  sd: number | null;
+  /** Генеральное (делитель n). */
+  sdPop: number;
+  /** Выборочная дисперсия. */
+  variance: number | null;
 }
 
 export function stats(numbers: number[]): Stats | null {
@@ -61,5 +67,22 @@ export function stats(numbers: number[]): Stats | null {
   let top = 0; // не Math.max(...): на сотнях тысяч значений спред переполняет стек
   for (const f of freq.values()) if (f > top) top = f;
   const mode = top > 1 ? [...freq].filter(([, f]) => f === top).map(([x]) => x) : [];
-  return { count: n, sum, mean: sum / n, median, mode, min: sorted[0], max: sorted[n - 1], range: sorted[n - 1] - sorted[0] };
+  const mean = sum / n;
+  // Сумма квадратов отклонений — от среднего, а не через Σx² − n·mean²: так нет потери точности на больших числах.
+  let ss = 0;
+  for (const x of sorted) ss += (x - mean) ** 2;
+  const variance = n > 1 ? ss / (n - 1) : null;
+  return {
+    count: n,
+    sum,
+    mean,
+    median,
+    mode,
+    min: sorted[0],
+    max: sorted[n - 1],
+    range: sorted[n - 1] - sorted[0],
+    sd: variance === null ? null : Math.sqrt(variance),
+    sdPop: Math.sqrt(ss / n),
+    variance,
+  };
 }

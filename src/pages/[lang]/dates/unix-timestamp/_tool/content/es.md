@@ -6,6 +6,8 @@ El tiempo Unix es el número de segundos transcurridos desde la medianoche UTC d
 
 Pega el timestamp y elige las unidades. Verás la fecha y la hora en tu zona horaria, en UTC y en formato ISO 8601. Debajo aparece el timestamp actual, que se actualiza cada segundo.
 
+Para el cálculo inverso, elige «Fecha → timestamp», introduce fecha y hora e indica si están en tu hora local o en UTC.
+
 ## Ejemplos
 
 - `0`: 1 de enero de 1970, 00:00:00 UTC.

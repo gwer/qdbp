@@ -19,6 +19,7 @@
       "yd": "Yards (yd)",
       "mi": "Miles (mi)",
       "nmi": "Nautical miles (nmi)"
-    }
+    },
+    "quick": "Common values: {from} → {to}"
   }
 }

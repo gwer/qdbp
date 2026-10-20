@@ -10,6 +10,10 @@
     "people": {
       "one": "{count} Person",
       "other": "{count} Personen"
-    }
+    },
+    "by": "Aufteilen nach",
+    "byTeams": "Anzahl der Teams",
+    "bySize": "Personen pro Team",
+    "size": "Personen pro Team"
   }
 }

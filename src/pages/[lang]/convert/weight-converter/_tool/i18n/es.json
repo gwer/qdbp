@@ -20,6 +20,7 @@
       "st": "Stones (st)",
       "shortTon": "Toneladas cortas (EE. UU.)",
       "longTon": "Toneladas largas (R. U.)"
-    }
+    },
+    "quick": "Valores habituales: {from} → {to}"
   }
 }

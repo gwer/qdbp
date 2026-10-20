@@ -37,7 +37,7 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
   const [from, setFrom] = useState(DEFAULTS[lang].from);
   const [targets, setTargets] = useState(DEFAULTS[lang].to);
   const [zones, setZones] = useState<string[]>([]);
-  const [adding, setAdding] = useState('');
+  const [query, setQuery] = useState('');
 
   // «Сейчас», пояс пользователя, сохранённый формат времени и состояние из URL — только в браузере.
   useEffect(() => {
@@ -81,10 +81,24 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
 
   const option = (z: string) => (
     <option value={z} key={z}>
-      {cityName(z, lang)} ({formatOffset(offsetMinutes(z, ms ?? Date.now()))})
+      {label(z)}
     </option>
   );
   const sorted = [...zones].sort((a, b) => cityName(a, lang).localeCompare(cityName(b, lang), locale));
+  const label = (z: string) => `${cityName(z, lang)} (${formatOffset(offsetMinutes(z, ms ?? Date.now()))})`;
+  // Поиск города: подсказки — <datalist> (браузер ищет по подстроке), добавляется точное совпадение с подписью,
+  // названием города или идентификатором пояса.
+  const q = query.trim().toLowerCase();
+  const adding = q ? sorted.find((z) => !targets.includes(z) && [label(z), cityName(z, lang), z].some((s) => s.toLowerCase() === q)) : undefined;
+  const add = () => {
+    if (adding) setTargetsAndUrl([...targets, adding]);
+    setQuery('');
+  };
+  // Рабочее время — пн–пт с 9 до 18 по местному времени города: подсказка, когда удобно созвониться.
+  const working = (local: { date: string; minutes: number }) => {
+    const wd = new Date(`${local.date}T00:00:00Z`).getUTCDay();
+    return wd >= 1 && wd <= 5 && local.minutes >= 540 && local.minutes < 1080;
+  };
 
   return (
     <div>
@@ -120,6 +134,21 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
           </select>
         </div>
       </div>
+      <div class="actions">
+        <button
+          type="button"
+          class="btn btn-secondary btn-small"
+          onClick={() => {
+            const today = todayISO();
+            const now = parseClock(nowClock())!;
+            setDateText(formatDateInput(today, lang));
+            setTime(formatTyped(now, clock));
+            write({ date: today, time: formatTyped(now, '24') });
+          }}
+        >
+          {t('ui.now')}
+        </button>
+      </div>
       {dateText && !date && <p class="field-error">{t('calc.error.date')}</p>}
       {time && minutes === null && <p class="field-error">{t('calc.error.time')}</p>}
 
@@ -142,6 +171,12 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
                     <strong class="tz-time">{local ? formatClock(lang, local.minutes, clock) : '—'}</strong>
                     <br />
                     <span class="muted">{local ? `${shortDate(local.date)}${shift ? ` (${t(shift > 0 ? 'ui.nextDay' : 'ui.prevDay')})` : ''}` : ''}</span>
+                    {local && (
+                      <>
+                        <br />
+                        <span class={working(local) ? 'tz-work' : 'tz-off'}>{t(working(local) ? 'ui.work' : 'ui.offHours')}</span>
+                      </>
+                    )}
                   </td>
                   <td>
                     <button type="button" class="btn btn-secondary btn-small" aria-label={t('ui.remove')} onClick={() => setTargetsAndUrl(targets.filter((x) => x !== z))}>
@@ -154,15 +189,25 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
           </tbody>
         </table>
       </div>
-      <div class="tz-add">
-        <select aria-label={t('ui.addLabel')} value={adding} onChange={(e) => setAdding(e.currentTarget.value)}>
-          <option value="">{t('ui.addLabel')}</option>
-          {sorted.filter((z) => !targets.includes(z)).map(option)}
-        </select>
-        <button type="button" class="btn btn-small" disabled={!adding} onClick={() => (setTargetsAndUrl([...targets, adding]), setAdding(''))}>
+      <form class="tz-add" onSubmit={(e) => (e.preventDefault(), add())}>
+        <input
+          type="text"
+          list="tz-zones"
+          aria-label={t('ui.addLabel')}
+          placeholder={t('ui.addLabel')}
+          autoComplete="off"
+          value={query}
+          onInput={(e) => setQuery(e.currentTarget.value)}
+        />
+        <datalist id="tz-zones">
+          {sorted.filter((z) => !targets.includes(z)).map((z) => (
+            <option value={label(z)} key={z} />
+          ))}
+        </datalist>
+        <button type="submit" class="btn btn-small" disabled={!adding}>
           {t('ui.add')}
         </button>
-      </div>
+      </form>
     </div>
   );
 }

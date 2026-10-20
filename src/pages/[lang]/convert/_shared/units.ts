@@ -56,7 +56,8 @@ export const DIMENSIONS = {
   ],
   // база — байт
   data: [
-    lin('bit', 1 / 8), lin('b', 1), lin('kb', 1e3), lin('mb', 1e6), lin('gb', 1e9), lin('tb', 1e12),
+    // Биты — десятичные, как в скорости интернета: 1 Мбит = 10⁶ бит = 125 000 байт.
+    lin('bit', 1 / 8), lin('kbit', 125), lin('mbit', 125e3), lin('gbit', 125e6), lin('b', 1), lin('kb', 1e3), lin('mb', 1e6), lin('gb', 1e9), lin('tb', 1e12),
     lin('kib', 1024), lin('mib', 1024 ** 2), lin('gib', 1024 ** 3), lin('tib', 1024 ** 4),
   ],
   // база — литры на 100 км

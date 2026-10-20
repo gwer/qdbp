@@ -21,6 +21,9 @@ export function Average({ lang, t }: ToolProps) {
     ['min', s ? n(s.min) : '—'],
     ['max', s ? n(s.max) : '—'],
     ['range', s ? n(s.range) : '—'],
+    ['sd', s?.sd != null ? n(s.sd) : '—'],
+    ['sdPop', s ? n(s.sdPop) : '—'],
+    ['variance', s?.variance != null ? n(s.variance) : '—'],
   ];
 
   return (

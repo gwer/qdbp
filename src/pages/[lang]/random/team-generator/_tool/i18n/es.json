@@ -11,6 +11,10 @@
       "one": "{count} participante",
       "many": "{count} participantes",
       "other": "{count} participantes"
-    }
+    },
+    "by": "Cómo dividir",
+    "byTeams": "Número de equipos",
+    "bySize": "Personas por equipo",
+    "size": "Personas por equipo"
   }
 }

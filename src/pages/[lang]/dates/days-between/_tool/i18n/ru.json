@@ -25,6 +25,35 @@
     },
     "weekdays": {
       "label": "Будних дней (пн–пт)"
+    },
+    "ymd": {
+      "label": "В годах, месяцах и днях"
+    }
+  },
+  "ui": {
+    "years": {
+      "one": "{count} год",
+      "few": "{count} года",
+      "many": "{count} лет",
+      "other": "{count} года"
+    },
+    "months": {
+      "one": "{count} месяц",
+      "few": "{count} месяца",
+      "many": "{count} месяцев",
+      "other": "{count} месяца"
+    },
+    "days": {
+      "one": "{count} день",
+      "few": "{count} дня",
+      "many": "{count} дней",
+      "other": "{count} дня"
+    },
+    "weeks": {
+      "one": "{count} неделя",
+      "few": "{count} недели",
+      "many": "{count} недель",
+      "other": "{count} недели"
     }
   }
 }

@@ -18,4 +18,4 @@ Datenmenge eingeben und Einheiten wählen – Ergebnis und Tabelle mit allen Ein
 
 **Wo ist der fehlende Speicherplatz meiner neuen Festplatte?** Nirgends: Hersteller rechnen dezimal, das System binär. Der Unterschied beträgt etwa 7 % bei GB und 9 % bei TB.
 
-**Sind Megabit und Megabyte dasselbe?** Nein: Ein Byte hat 8 Bit, Mbit/s also durch 8 teilen.
+**Sind Megabit und Megabyte dasselbe?** Nein: Ein Byte hat 8 Bit, Mbit/s also durch 8 teilen. Oder wählen Sie einfach „Megabit (Mbit)“ in der Liste.

@@ -19,6 +19,7 @@
       "yd": "Jardas (yd)",
       "mi": "Milhas (mi)",
       "nmi": "Milhas náuticas"
-    }
+    },
+    "quick": "Valores comuns: {from} → {to}"
   }
 }

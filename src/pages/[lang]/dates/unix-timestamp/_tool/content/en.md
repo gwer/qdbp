@@ -6,6 +6,8 @@ Unix time is the number of seconds since midnight UTC on January 1, 1970. Databa
 
 Paste a timestamp and choose the units. You'll see the date and time in your time zone, in UTC and in ISO 8601 format. The current timestamp is shown below and updates every second.
 
+To go the other way, choose “Date → timestamp”, enter a date and time and say whether they are in your local time zone or in UTC.
+
 ## Examples
 
 - `0` — January 1, 1970, 00:00:00 UTC.

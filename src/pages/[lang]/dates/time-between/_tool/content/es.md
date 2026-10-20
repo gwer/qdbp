@@ -1,6 +1,6 @@
 ## Cómo usarla
 
-Indica la hora de inicio y la de fin: verás cuántas horas y minutos hay entre ellas, además de la duración en minutos y en horas decimales (útil para el registro de jornada y la nómina).
+Indica la hora de inicio y la de fin: verás cuántas horas y minutos hay entre ellas, además de la duración en minutos y en horas decimales (útil para el registro de jornada y la nómina). Si hubo una pausa (comida), indícala y se restará de la duración.
 
 Si la hora de fin es anterior a la de inicio, se entiende que termina al día siguiente, como en los turnos de noche.
 

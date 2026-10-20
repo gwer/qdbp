@@ -66,3 +66,16 @@ describe('stats на больших списках', () => {
     expect(r).toMatchObject({ count: 150_000, mean: 74_999.5, mode: [] });
   });
 });
+
+describe('стандартное отклонение', () => {
+  it('2 4 4 4 5 5 7 9: генеральное 2, выборочное √(32/7)', () => {
+    const r = stats([2, 4, 4, 4, 5, 5, 7, 9])!;
+    expect(r.sdPop).toBeCloseTo(2, 12);
+    expect(r.sd).toBeCloseTo(Math.sqrt(32 / 7), 12);
+    expect(r.variance).toBeCloseTo(32 / 7, 12);
+  });
+
+  it('одно значение — выборочного нет', () => {
+    expect(stats([5])).toMatchObject({ sd: null, sdPop: 0, variance: null });
+  });
+});

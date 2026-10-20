@@ -20,6 +20,7 @@
       "yd2": "Square yards (sq yd)",
       "acre": "Acres",
       "mi2": "Square miles (sq mi)"
-    }
+    },
+    "quick": "Common values: {from} → {to}"
   }
 }

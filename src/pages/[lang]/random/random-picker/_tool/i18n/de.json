@@ -9,6 +9,7 @@
     "items": {
       "one": "{count} Eintrag",
       "other": "{count} Einträge"
-    }
+    },
+    "remove": "Gezogene aus der Liste entfernen"
   }
 }

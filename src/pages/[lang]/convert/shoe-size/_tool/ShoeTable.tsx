@@ -5,7 +5,7 @@ import { SHOES } from './shoes';
 export function ShoeTable({ lang, t, result }: ExtraProps<unknown, { eu?: number } | null>) {
   const f = (n: number) => formatNumber(lang, n);
   return (
-    <details class="extra">
+    <details class="extra" open>
       <summary>{t('ui.table')}</summary>
       <div class="table-wrap">
         <table>

@@ -19,6 +19,7 @@
       "mmhg": "Millimeter Quecksilbersäule (mmHg)",
       "psi": "Pfund pro Quadratzoll (psi)",
       "inhg": "Zoll Quecksilbersäule (inHg)"
-    }
+    },
+    "quick": "Häufige Werte: {from} → {to}"
   }
 }

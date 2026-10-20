@@ -19,6 +19,7 @@
       "yd": "Yardas (yd)",
       "mi": "Millas (mi)",
       "nmi": "Millas náuticas"
-    }
+    },
+    "quick": "Valores habituales: {from} → {to}"
   }
 }

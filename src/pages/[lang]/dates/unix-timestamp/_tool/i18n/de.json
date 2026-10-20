@@ -2,6 +2,13 @@
   "title": "Unix-Timestamp-Konverter: Zeitstempel in Datum und Uhrzeit",
   "description": "Unix-Zeitstempel (Sekunden oder Millisekunden seit dem 1. Januar 1970) in Datum und Uhrzeit umrechnen – in Ihrer Zeitzone und in UTC.",
   "inputs": {
+    "direction": {
+      "label": "Richtung",
+      "options": {
+        "toDate": "Timestamp → Datum",
+        "toTs": "Datum → Timestamp"
+      }
+    },
     "ts": {
       "label": "Timestamp"
     },
@@ -10,6 +17,19 @@
       "options": {
         "s": "Sekunden",
         "ms": "Millisekunden"
+      }
+    },
+    "date": {
+      "label": "Datum"
+    },
+    "time": {
+      "label": "Uhrzeit"
+    },
+    "zone": {
+      "label": "Zeitzone",
+      "options": {
+        "local": "Meine Ortszeit",
+        "utc": "UTC"
       }
     }
   },
@@ -22,6 +42,12 @@
     },
     "iso": {
       "label": "ISO 8601"
+    },
+    "seconds": {
+      "label": "Timestamp, Sekunden"
+    },
+    "ms": {
+      "label": "Timestamp, Millisekunden"
     }
   },
   "ui": {

@@ -6,6 +6,8 @@ O tempo Unix é o número de segundos desde a meia-noite UTC de 1º de janeiro d
 
 Cole o timestamp e escolha a unidade. Você vê a data e a hora no seu fuso horário, em UTC e no formato ISO 8601. Logo abaixo aparece o timestamp atual, atualizado a cada segundo.
 
+Para o cálculo inverso, escolha «Data → timestamp», informe data e hora e diga se estão no seu horário local ou em UTC.
+
 ## Exemplos
 
 - `0` — 1º de janeiro de 1970, 00:00:00 UTC.

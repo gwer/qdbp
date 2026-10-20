@@ -711,8 +711,23 @@ table.kv td {
   margin-top: 10px;
 }
 
-.tz-add select {
+.tz-add input {
   flex: 1;
+  min-width: 0;
+}
+
+.tz-work,
+.tz-off {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.tz-work {
+  color: var(--scale-good);
+}
+
+.tz-off {
+  color: var(--muted);
 }
 
 .tz-table td:nth-child(2) .muted {

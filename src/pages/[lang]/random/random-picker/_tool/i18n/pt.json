@@ -10,6 +10,7 @@
       "one": "{count} opção",
       "many": "{count} opções",
       "other": "{count} opções"
-    }
+    },
+    "remove": "Tirar os sorteados da lista"
   }
 }

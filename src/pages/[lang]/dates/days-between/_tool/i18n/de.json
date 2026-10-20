@@ -25,6 +25,27 @@
     },
     "weekdays": {
       "label": "Werktage (Mo–Fr)"
+    },
+    "ymd": {
+      "label": "In Jahren, Monaten und Tagen"
+    }
+  },
+  "ui": {
+    "years": {
+      "one": "{count} Jahr",
+      "other": "{count} Jahre"
+    },
+    "months": {
+      "one": "{count} Monat",
+      "other": "{count} Monate"
+    },
+    "days": {
+      "one": "{count} Tag",
+      "other": "{count} Tage"
+    },
+    "weeks": {
+      "one": "{count} Woche",
+      "other": "{count} Wochen"
     }
   }
 }

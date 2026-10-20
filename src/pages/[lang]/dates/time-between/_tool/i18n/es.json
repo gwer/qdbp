@@ -7,6 +7,9 @@
     },
     "end": {
       "label": "Hora de fin"
+    },
+    "pause": {
+      "label": "Pausa (h:mm)"
     }
   },
   "outputs": {
@@ -26,5 +29,8 @@
   "ui": {
     "sameDay": "El mismo día",
     "nextDay": "Al día siguiente"
+  },
+  "errors": {
+    "pauseTooLong": "La pausa es más larga que el tiempo entre el inicio y el final."
   }
 }

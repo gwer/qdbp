@@ -6,6 +6,8 @@ Die Unixzeit ist die Anzahl der Sekunden seit Mitternacht UTC am 1. Januar 1970.
 
 Fügen Sie den Timestamp ein und wählen Sie die Einheit. Sie sehen Datum und Uhrzeit in Ihrer Zeitzone, in UTC und im Format ISO 8601. Darunter steht der aktuelle Timestamp, der sich jede Sekunde aktualisiert.
 
+Für die Gegenrichtung wählen Sie „Datum → Timestamp“, geben Datum und Uhrzeit ein und legen fest, ob sie in Ihrer Ortszeit oder in UTC gelten.
+
 ## Beispiele
 
 - `0` – 1. Januar 1970, 00:00:00 UTC.

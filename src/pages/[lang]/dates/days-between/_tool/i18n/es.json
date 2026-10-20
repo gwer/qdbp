@@ -25,6 +25,27 @@
     },
     "weekdays": {
       "label": "Días laborables (lun–vie)"
+    },
+    "ymd": {
+      "label": "En años, meses y días"
+    }
+  },
+  "ui": {
+    "years": {
+      "one": "{count} año",
+      "other": "{count} años"
+    },
+    "months": {
+      "one": "{count} mes",
+      "other": "{count} meses"
+    },
+    "days": {
+      "one": "{count} día",
+      "other": "{count} días"
+    },
+    "weeks": {
+      "one": "{count} semana",
+      "other": "{count} semanas"
     }
   }
 }

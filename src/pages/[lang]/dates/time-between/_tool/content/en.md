@@ -1,6 +1,6 @@
 ## How to use
 
-Enter a start time and an end time — you'll see the hours and minutes between them, plus the duration in minutes and in decimal hours (handy for timesheets and pay).
+Enter a start time and an end time — you'll see the hours and minutes between them, plus the duration in minutes and in decimal hours (handy for timesheets and pay). If there was a break (lunch), enter it and it will be subtracted.
 
 If the end time is earlier than the start time, it's treated as the next day — that's how night shifts are counted.
 

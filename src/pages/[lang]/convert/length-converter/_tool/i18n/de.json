@@ -19,6 +19,7 @@
       "yd": "Yards (yd)",
       "mi": "Meilen (mi)",
       "nmi": "Seemeilen (sm)"
-    }
+    },
+    "quick": "Häufige Werte: {from} → {to}"
   }
 }

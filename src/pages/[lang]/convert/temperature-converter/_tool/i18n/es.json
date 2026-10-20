@@ -13,6 +13,7 @@
       "c": "Grados Celsius (°C)",
       "f": "Grados Fahrenheit (°F)",
       "k": "Kelvin (K)"
-    }
+    },
+    "quick": "Valores habituales: {from} → {to}"
   }
 }

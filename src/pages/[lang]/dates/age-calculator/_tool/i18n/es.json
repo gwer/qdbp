@@ -24,6 +24,21 @@
     },
     "nextBirthday": {
       "label": "Días hasta el cumpleaños"
+    },
+    "nextDate": {
+      "label": "Próximo cumpleaños"
+    },
+    "turning": {
+      "label": "Cumplirá"
+    },
+    "totalMonths": {
+      "label": "Meses en total"
+    },
+    "totalWeeks": {
+      "label": "Semanas en total"
+    },
+    "bornOn": {
+      "label": "Día de la semana en que nació"
     }
   },
   "errors": {

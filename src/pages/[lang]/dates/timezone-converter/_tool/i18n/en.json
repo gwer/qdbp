@@ -9,6 +9,9 @@
     "prevDay": "previous day",
     "remove": "Remove",
     "add": "Add",
-    "addLabel": "Add a city…"
+    "addLabel": "Add a city: start typing",
+    "now": "Now",
+    "work": "business hours",
+    "offHours": "outside business hours"
   }
 }

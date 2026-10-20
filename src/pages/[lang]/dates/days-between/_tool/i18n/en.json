@@ -25,6 +25,27 @@
     },
     "weekdays": {
       "label": "Weekdays (Mon–Fri)"
+    },
+    "ymd": {
+      "label": "In years, months and days"
+    }
+  },
+  "ui": {
+    "years": {
+      "one": "{count} year",
+      "other": "{count} years"
+    },
+    "months": {
+      "one": "{count} month",
+      "other": "{count} months"
+    },
+    "days": {
+      "one": "{count} day",
+      "other": "{count} days"
+    },
+    "weeks": {
+      "one": "{count} week",
+      "other": "{count} weeks"
     }
   }
 }

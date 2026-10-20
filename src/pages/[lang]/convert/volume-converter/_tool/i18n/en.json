@@ -25,6 +25,7 @@
       "galUk": "Gallons (UK, imperial)",
       "in3": "Cubic inches (in³)",
       "ft3": "Cubic feet (ft³)"
-    }
+    },
+    "quick": "Common values: {from} → {to}"
   }
 }

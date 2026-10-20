@@ -18,4 +18,4 @@ Escribe un tamaño de datos y elige las unidades: el resultado y la tabla en tod
 
 **¿Dónde está el espacio que falta en mi disco nuevo?** En ningún sitio: el fabricante cuenta en gigabytes decimales y el sistema en binarios. La diferencia es de un 7 % en GB y un 9 % en TB.
 
-**¿Megabit y megabyte son lo mismo?** No: un byte tiene 8 bits, así que hay que dividir los Mbps entre 8.
+**¿Megabit y megabyte son lo mismo?** No: un byte tiene 8 bits, así que hay que dividir los Mbps entre 8. O elige «Megabits (Mb)» en la lista.

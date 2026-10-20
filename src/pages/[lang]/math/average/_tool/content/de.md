@@ -2,6 +2,8 @@
 
 Fügen Sie die Zahlen durch Leerzeichen, Zeilenumbruch oder Semikolon getrennt ein – Sie können auch eine Spalte direkt aus einer Tabelle kopieren. Dezimalzahlen mit Komma oder Punkt: „1,5“ und „1.5“ sind dasselbe. Mittelwert, Median, Modus und die übrigen Werte erscheinen sofort.
 
+Die Standardabweichung zeigt, wie stark die Werte um den Mittelwert streuen. Die Stichproben-Variante (Teiler n − 1) nimmt man, wenn die Zahlen eine Stichprobe aus einer größeren Gruppe sind, die Variante für die Grundgesamtheit (Teiler n), wenn alle Werte vorliegen. Die Varianz ist das Quadrat der Standardabweichung.
+
 ## Was berechnet wird
 
 - **Mittelwert** (arithmetisches Mittel) – die Summe aller Zahlen geteilt durch ihre Anzahl.

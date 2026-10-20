@@ -15,6 +15,7 @@
       "mph": "Millas por hora (mph)",
       "knot": "Nudos (kn)",
       "fts": "Pies por segundo (ft/s)"
-    }
+    },
+    "quick": "Valores habituales: {from} → {to}"
   }
 }

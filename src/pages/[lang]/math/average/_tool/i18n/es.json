@@ -13,6 +13,9 @@
     "max": "Máximo",
     "range": "Rango",
     "noMode": "no hay: todos los valores son distintos",
-    "invalid": "No reconocido: {list}"
+    "invalid": "No reconocido: {list}",
+    "sd": "Desviación típica (muestral)",
+    "sdPop": "Desviación típica (poblacional)",
+    "variance": "Varianza (muestral)"
   }
 }

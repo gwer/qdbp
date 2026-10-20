@@ -2,6 +2,13 @@
   "title": "Conversor de Unix timestamp: de timestamp a fecha y hora",
   "description": "Convierte un timestamp Unix (segundos o milisegundos desde el 1 de enero de 1970) en fecha y hora, en tu zona horaria y en UTC.",
   "inputs": {
+    "direction": {
+      "label": "Dirección",
+      "options": {
+        "toDate": "Timestamp → fecha",
+        "toTs": "Fecha → timestamp"
+      }
+    },
     "ts": {
       "label": "Timestamp"
     },
@@ -10,6 +17,19 @@
       "options": {
         "s": "Segundos",
         "ms": "Milisegundos"
+      }
+    },
+    "date": {
+      "label": "Fecha"
+    },
+    "time": {
+      "label": "Hora"
+    },
+    "zone": {
+      "label": "Zona horaria",
+      "options": {
+        "local": "Mi hora local",
+        "utc": "UTC"
       }
     }
   },
@@ -22,6 +42,12 @@
     },
     "iso": {
       "label": "ISO 8601"
+    },
+    "seconds": {
+      "label": "Timestamp, segundos"
+    },
+    "ms": {
+      "label": "Timestamp, milisegundos"
     }
   },
   "ui": {

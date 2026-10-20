@@ -2,6 +2,8 @@
 
 Paste numbers separated by spaces, commas or new lines — you can copy a column straight from a spreadsheet. Use a dot for decimals: "1.5". The mean, median, mode and other statistics appear instantly.
 
+Standard deviation shows how spread out the values are around the mean. Use the sample version (divides by n − 1) when your numbers are a sample from a larger group, and the population version (divides by n) when you have every value. Variance is the standard deviation squared.
+
 ## What's calculated
 
 - **Mean** — the sum of all numbers divided by how many there are.

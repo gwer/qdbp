@@ -13,6 +13,9 @@
     "max": "Maximum",
     "range": "Spannweite",
     "noMode": "keiner – alle Werte sind verschieden",
-    "invalid": "Nicht erkannt: {list}"
+    "invalid": "Nicht erkannt: {list}",
+    "sd": "Standardabweichung (Stichprobe)",
+    "sdPop": "Standardabweichung (Grundgesamtheit)",
+    "variance": "Varianz (Stichprobe)"
   }
 }

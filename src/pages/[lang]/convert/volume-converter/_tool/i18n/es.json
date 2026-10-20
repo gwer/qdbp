@@ -25,6 +25,7 @@
       "galUk": "Galones (R. U.)",
       "in3": "Pulgadas cúbicas",
       "ft3": "Pies cúbicos"
-    }
+    },
+    "quick": "Valores habituales: {from} → {to}"
   }
 }

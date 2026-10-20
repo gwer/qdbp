@@ -2,6 +2,8 @@
 
 Cole os números separados por espaço, quebra de linha ou ponto e vírgula; dá para copiar uma coluna direto da planilha. Decimais podem ter vírgula ou ponto: "1,5" e "1.5" são a mesma coisa. A média, a mediana, a moda e os demais valores aparecem na hora.
 
+O desvio padrão mostra o quanto os valores se espalham em torno da média. O amostral (divide por n − 1) é usado quando os números são uma amostra de um grupo maior; o populacional (divide por n), quando você tem todos os valores. A variância é o desvio padrão ao quadrado.
+
 ## O que é calculado
 
 - **Média aritmética**: a soma de todos os números dividida pela quantidade.

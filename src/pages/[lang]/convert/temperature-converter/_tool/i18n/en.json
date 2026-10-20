@@ -13,6 +13,7 @@
       "c": "Celsius (°C)",
       "f": "Fahrenheit (°F)",
       "k": "Kelvin (K)"
-    }
+    },
+    "quick": "Common values: {from} → {to}"
   }
 }
