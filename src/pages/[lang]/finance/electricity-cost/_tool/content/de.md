@@ -1,6 +1,6 @@
 ## So funktioniert's
 
-Leistung des Geräts in Watt, Betriebsstunden pro Tag und Ihren Preis pro Kilowattstunde eingeben. Sie sehen den Verbrauch und die Kosten pro Tag, Monat und Jahr.
+Leistung des Geräts in Watt, Betriebsstunden pro Tag und Ihren Preis pro Kilowattstunde eingeben. Sie sehen den Verbrauch und die Kosten pro Tag, Monat und Jahr. Für Geräte, die nicht täglich laufen (Waschmaschine, Sauna), stellen Sie die Tage pro Woche ein. Ein Monat ist ein Zwölftel des Jahres (rund 30,4 Tage), zwölf Monate ergeben also genau den Jahreswert.
 
 Die Leistung steht auf dem Typenschild oder in der Bedienungsanleitung. Bei Angaben in Kilowatt mit 1000 multiplizieren: 2 kW = 2000 W.
 
@@ -9,7 +9,7 @@ Die Leistung steht auf dem Typenschild oder in der Bedienungsanleitung. Bei Anga
 `kWh = Leistung (W) × Stunden / 1000`
 `Kosten = kWh × Preis pro kWh`
 
-Beispiel: Ein Heizlüfter mit 2000 W läuft 3 Stunden am Tag und verbraucht 6 kWh. Bei 38 Cent pro kWh sind das 2,28 € am Tag, **68,40 € im Monat**.
+Beispiel: Ein Heizlüfter mit 2000 W läuft 3 Stunden am Tag und verbraucht 6 kWh. Bei 38 Cent pro kWh sind das 2,28 € am Tag, **69,35 € im Monat**.
 
 ## Typische Leistung
 

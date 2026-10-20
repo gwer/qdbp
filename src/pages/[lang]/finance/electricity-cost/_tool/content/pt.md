@@ -1,6 +1,6 @@
 ## Como usar
 
-Informe a potência do aparelho em watts, quantas horas por dia ele fica ligado e a tarifa do quilowatt-hora. Você verá o consumo e o custo por dia, mês e ano.
+Informe a potência do aparelho em watts, quantas horas por dia ele fica ligado e a tarifa do quilowatt-hora. Você verá o consumo e o custo por dia, mês e ano. Para aparelhos que não funcionam todo dia (máquina de lavar, sauna), informe os dias por semana. O mês é a duodécima parte do ano (cerca de 30,4 dias): doze meses somam exatamente o valor anual.
 
 A potência está na etiqueta ou no manual do aparelho. Se estiver em quilowatts, multiplique por 1000: 2 kW = 2000 W.
 
@@ -9,7 +9,7 @@ A potência está na etiqueta ou no manual do aparelho. Se estiver em quilowatts
 `kWh = potência (W) × horas / 1000`
 `custo = kWh × tarifa`
 
-Exemplo: um chuveiro elétrico de 5500 W usado 30 minutos por dia gasta 2,75 kWh. Com tarifa de R$ 0,85, são R$ 2,34 por dia, **R$ 70,13 por mês**.
+Exemplo: um chuveiro elétrico de 5500 W usado 30 minutos por dia gasta 2,75 kWh. Com tarifa de R$ 0,85, são R$ 2,34 por dia, **R$ 71,10 por mês**.
 
 ## Potência típica
 

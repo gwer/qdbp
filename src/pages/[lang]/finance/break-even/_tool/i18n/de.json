@@ -10,14 +10,17 @@
     },
     "variable": {
       "label": "Variable Kosten pro Stück"
+    },
+    "profit": {
+      "label": "Gewünschter Gewinn pro Periode"
     }
   },
   "outputs": {
     "units": {
-      "label": "Break-even-Menge, Stück"
+      "label": "Benötigte Absatzmenge, Stück"
     },
     "revenue": {
-      "label": "Break-even-Umsatz"
+      "label": "Benötigter Umsatz"
     },
     "contribution": {
       "label": "Deckungsbeitrag pro Stück"
@@ -28,5 +31,11 @@
   },
   "errors": {
     "priceBelowCost": "Der Preis muss über den variablen Kosten je Stück liegen – sonst vergrößert jeder Verkauf den Verlust."
+  },
+  "ui": {
+    "chart": "Umsatz und Kosten nach Absatzmenge",
+    "units": "Stk.",
+    "revenue": "Umsatz",
+    "costs": "Gesamtkosten"
   }
 }

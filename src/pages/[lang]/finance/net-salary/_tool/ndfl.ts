@@ -31,12 +31,25 @@ export interface MonthRow {
   net: number;
 }
 
-/** Помесячное удержание при одинаковом окладе: налог с накопленного дохода минус уже удержанный. */
-export function salaryYear(gross: number) {
+/**
+ * Стандартный вычет на детей в месяц (ст. 218 НК, с 2025 года): 1 400 ₽ на первого, 2 800 ₽ на второго,
+ * 6 000 ₽ на третьего и каждого следующего. Без вычетов на детей-инвалидов и двойного вычета единственному родителю.
+ */
+export function childDeduction(children: number): number {
+  return (children >= 1 ? 1400 : 0) + (children >= 2 ? 2800 : 0) + Math.max(0, children - 2) * 6000;
+}
+
+/** Вычет на детей перестаёт действовать с месяца, в котором доход с начала года превысил 450 000 ₽. */
+const CHILD_LIMIT = 450_000;
+
+/** Помесячное удержание при одинаковом окладе: налог с накопленной базы минус уже удержанный. */
+export function salaryYear(gross: number, children = 0) {
   const months: MonthRow[] = [];
   let withheld = 0;
+  let deducted = 0;
   for (let n = 1; n <= 12; n++) {
-    const tax = rubles(annualTax(gross * n)) - withheld;
+    if (gross * n <= CHILD_LIMIT) deducted += childDeduction(children);
+    const tax = rubles(annualTax(Math.max(0, gross * n - deducted))) - withheld;
     withheld += tax;
     months.push({ n, gross, tax, net: gross - tax });
   }
@@ -53,13 +66,15 @@ export function salaryYear(gross: number) {
 }
 
 /** Оклад в целых рублях, при котором средняя зарплата на руки за год не меньше net. */
-export function grossFromNet(net: number): number {
-  let lo = net;
+export function grossFromNet(net: number, children = 0): number {
+  if (!(net > 0)) return 0;
+  let lo = 0;
   let hi = net / 0.78 + 1;
-  for (let i = 0; i < 100; i++) {
-    const mid = (lo + hi) / 2;
-    if (mid * 12 - annualTax(mid * 12) < net * 12) lo = mid;
+  // Двоичный поиск по целым рублям: на руки — монотонная функция оклада.
+  while (hi - lo > 1) {
+    const mid = Math.floor((lo + hi) / 2);
+    if (salaryYear(mid, children).yearNet < net * 12) lo = mid;
     else hi = mid;
   }
-  return Math.ceil(hi - 1e-6);
+  return Math.ceil(hi);
 }

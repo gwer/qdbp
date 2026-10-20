@@ -118,8 +118,8 @@ export interface CalculatorDef<
   compute: (values: Values<I>) => R;
   /** Ключи сообщений, которые compute может бросить через InputError. */
   errors?: readonly string[];
-  /** Простые значения результата, которые движок выводит сам. Первое — главное. */
-  outputs: { [K in keyof R]?: OutputSpec };
+  /** Простые значения результата, которые движок выводит сам. Первое видимое — главное; showIf — как у полей. */
+  outputs: { [K in keyof R]?: OutputSpec & ShowIf };
   /** Всё, что сложнее чисел: таблицы, графики, схемы. */
   Extra?: ComponentType<ExtraProps<Values<I>, R>>;
 }

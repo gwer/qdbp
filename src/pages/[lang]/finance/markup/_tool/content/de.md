@@ -2,6 +2,8 @@
 
 Geben Sie den Einkaufspreis und den Aufschlag in Prozent ein. Sie sehen den Verkaufspreis, den Gewinn pro Stück und die Handelsspanne, die sich daraus ergibt.
 
+Kennen Sie Verkaufspreis und Aufschlag und suchen den Einkaufspreis, wählen Sie unter „Berechnen“ „Einkaufspreis aus dem Verkaufspreis“.
+
 ## Formel
 
 `Verkaufspreis = Einkaufspreis × (1 + Aufschlag / 100)`

@@ -2,11 +2,21 @@
   "title": "Markup calculator: selling price from cost and markup",
   "description": "Find the selling price and profit from cost and markup percentage, plus the resulting profit margin.",
   "inputs": {
+    "find": {
+      "label": "Find",
+      "options": {
+        "price": "Selling price",
+        "cost": "Cost from selling price"
+      }
+    },
     "cost": {
       "label": "Cost"
     },
     "percent": {
       "label": "Markup"
+    },
+    "price": {
+      "label": "Selling price"
     }
   },
   "outputs": {
@@ -18,6 +28,9 @@
     },
     "margin": {
       "label": "Margin"
+    },
+    "cost": {
+      "label": "Cost"
     }
   }
 }

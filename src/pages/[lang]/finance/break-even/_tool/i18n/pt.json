@@ -10,14 +10,17 @@
     },
     "variable": {
       "label": "Custo variável por unidade"
+    },
+    "profit": {
+      "label": "Lucro desejado no período"
     }
   },
   "outputs": {
     "units": {
-      "label": "Ponto de equilíbrio, unidades"
+      "label": "Unidades a vender"
     },
     "revenue": {
-      "label": "Faturamento no ponto de equilíbrio"
+      "label": "Faturamento necessário"
     },
     "contribution": {
       "label": "Margem de contribuição por unidade"
@@ -28,5 +31,11 @@
   },
   "errors": {
     "priceBelowCost": "O preço deve ser maior que o custo variável por unidade — senão cada venda aumenta o prejuízo."
+  },
+  "ui": {
+    "chart": "Receita e custos conforme as vendas",
+    "units": "un.",
+    "revenue": "Receita",
+    "costs": "Custos totais"
   }
 }

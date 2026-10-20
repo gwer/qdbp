@@ -1,6 +1,6 @@
 ## Cómo usarlo
 
-Introduce la potencia del aparato en vatios, cuántas horas al día funciona y el precio del kilovatio hora. Verás el consumo y lo que cuesta al día, al mes y al año.
+Introduce la potencia del aparato en vatios, cuántas horas al día funciona y el precio del kilovatio hora. Verás el consumo y lo que cuesta al día, al mes y al año. Para aparatos que no se usan a diario (lavadora, sauna) indica los días por semana. El mes es la doceava parte del año (unos 30,4 días): doce meses suman exactamente el importe anual.
 
 La potencia aparece en la etiqueta o en el manual del aparato. Si viene en kilovatios, multiplica por 1000: 2 kW = 2000 W.
 
@@ -9,7 +9,7 @@ La potencia aparece en la etiqueta o en el manual del aparato. Si viene en kilov
 `kWh = potencia (W) × horas / 1000`
 `coste = kWh × precio del kWh`
 
-Ejemplo: una estufa de 2000 W encendida 3 horas al día gasta 6 kWh. A 0,15 € el kWh son 0,90 € al día, **27 € al mes**.
+Ejemplo: una estufa de 2000 W encendida 3 horas al día gasta 6 kWh. A 0,15 € el kWh son 0,90 € al día, **27,37 € al mes**.
 
 ## Potencia habitual
 

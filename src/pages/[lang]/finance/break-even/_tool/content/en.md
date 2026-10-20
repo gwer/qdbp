@@ -2,6 +2,8 @@
 
 Enter your fixed costs for the period (rent, salaries, subscriptions), the price per unit and the variable cost per unit (materials, fees, shipping). You'll see how many units you need to sell and how much revenue it takes to break even.
 
+If you need a profit, not just to break even, enter a target profit for the period: you'll see how many units it takes — (fixed costs + target profit) ÷ contribution margin per unit. With a target of 0 that's the break-even point. On the chart, the revenue and cost lines cross at the break-even point; to the right of it you're in profit.
+
 ## Formulas
 
 - **Contribution margin per unit** = price − variable cost.

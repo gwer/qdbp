@@ -2,6 +2,8 @@
 
 Digite o custo e o preço de venda: você vê a margem, o lucro e o markup.
 
+Para a conta inversa — que preço dá, por exemplo, 30% de margem — escolha «Preço para a margem desejada» em «Calcular».
+
 ## Fórmulas
 
 - `lucro = preço − custo`

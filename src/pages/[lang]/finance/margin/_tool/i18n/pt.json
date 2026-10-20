@@ -2,11 +2,21 @@
   "title": "Calculadora de margem de lucro: margem e markup",
   "description": "Calcule o lucro, a margem e o markup a partir do custo e do preço de venda — e entenda a diferença entre margem e markup.",
   "inputs": {
+    "find": {
+      "label": "Calcular",
+      "options": {
+        "margin": "Margem a partir do preço",
+        "price": "Preço para a margem desejada"
+      }
+    },
     "cost": {
       "label": "Custo"
     },
     "price": {
       "label": "Preço de venda"
+    },
+    "target": {
+      "label": "Margem desejada"
     }
   },
   "outputs": {
@@ -18,6 +28,12 @@
     },
     "markup": {
       "label": "Markup"
+    },
+    "price": {
+      "label": "Preço de venda"
     }
+  },
+  "errors": {
+    "marginTooHigh": "A margem precisa ser menor que 100%: ela é uma parte do preço."
   }
 }

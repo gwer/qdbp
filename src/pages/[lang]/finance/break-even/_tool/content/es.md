@@ -2,6 +2,8 @@
 
 Indica los costes fijos del periodo (alquiler, nóminas, suscripciones), el precio por unidad y el coste variable por unidad (materiales, comisiones, envío). Verás cuántas unidades tienes que vender y qué facturación necesitas para cubrir costes.
 
+Si buscas un beneficio y no solo cubrir costes, indica el beneficio deseado del periodo: verás cuántas unidades necesitas — (costes fijos + beneficio) ÷ margen de contribución por unidad. Con 0 es el punto de equilibrio. En el gráfico, las líneas de ingresos y costes se cruzan en el punto de equilibrio; a la derecha hay beneficio.
+
 ## Fórmulas
 
 - **Margen de contribución por unidad** = precio − coste variable.

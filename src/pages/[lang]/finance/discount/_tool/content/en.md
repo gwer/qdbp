@@ -1,6 +1,6 @@
 ## How to use
 
-Enter the original price and the discount percentage — you'll see the sale price and how much you save.
+Enter the original price and the discount percentage — you'll see the sale price and how much you save. Use the “Find” field for the reverse questions: the original price from a sale price, or the discount percentage from the old and new prices.
 
 ## Formula
 

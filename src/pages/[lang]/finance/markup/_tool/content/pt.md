@@ -2,6 +2,8 @@
 
 Digite o custo e o markup em porcentagem. Você vê o preço de venda, o lucro por unidade e a margem resultante.
 
+Se você sabe o preço de venda e o markup e precisa do custo (por exemplo, para conferir um preço de compra), escolha «Custo a partir do preço» em «Calcular».
+
 ## Fórmula
 
 `preço de venda = custo × (1 + markup / 100)`

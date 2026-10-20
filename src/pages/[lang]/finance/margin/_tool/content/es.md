@@ -2,6 +2,8 @@
 
 Introduce el coste y el precio de venta: verás el margen, el beneficio y el markup.
 
+Para el caso inverso —qué precio da, por ejemplo, un 30 % de margen— elige «Precio para un margen deseado» en «Calcular».
+
 ## Fórmulas
 
 - `beneficio = precio − coste`

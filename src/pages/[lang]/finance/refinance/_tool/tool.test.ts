@@ -23,6 +23,14 @@ describe('refinance', () => {
     expect(r.breakEven).toBe(breakEven);
   });
 
+  it('платёж ниже, но из-за удлинения срока выходит дороже — не окупается', () => {
+    const r = refinance({ balance: 1000000, rate: 12, months: 120, newRate: 11, newMonths: 240, fees: 0 });
+    expect(r.monthlySaving).toBeGreaterThan(0);
+    expect(r.netSavings).toBeLessThan(0);
+    expect(r.breakEven).toBe(-2);
+    expect(r.next.total - r.current.total).toBeCloseTo(-r.netSavings, 2);
+  });
+
   it('без расходов — сразу, платёж не снизился — не окупается', () => {
     expect(refinance({ balance: 1000, rate: 10, months: 12, newRate: 9, newMonths: 12, fees: 0 }).breakEven).toBe(0);
     expect(refinance({ balance: 1000, rate: 10, months: 12, newRate: 12, newMonths: 12, fees: 50 }).breakEven).toBe(-1);

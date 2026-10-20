@@ -2,11 +2,22 @@
   "title": "Calculadora de desconto: preço final com desconto",
   "description": "Calcule o preço com desconto e quanto você economiza: digite o preço e a porcentagem de desconto.",
   "inputs": {
+    "find": {
+      "label": "Calcular",
+      "options": {
+        "final": "Preço com desconto",
+        "original": "Preço original",
+        "percent": "Percentual de desconto"
+      }
+    },
     "price": {
       "label": "Preço"
     },
     "percent": {
       "label": "Desconto"
+    },
+    "sale": {
+      "label": "Preço com desconto"
     }
   },
   "outputs": {
@@ -15,6 +26,16 @@
     },
     "saving": {
       "label": "Economia"
+    },
+    "original": {
+      "label": "Preço original"
+    },
+    "percent": {
+      "label": "Desconto"
     }
+  },
+  "errors": {
+    "fullDiscount": "Com 100% de desconto não dá para calcular o preço original.",
+    "saleAbovePrice": "O preço com desconto é maior que o original — isso não é desconto."
   }
 }

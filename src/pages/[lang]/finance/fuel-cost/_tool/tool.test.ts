@@ -20,3 +20,12 @@ describe('fuelCost', () => {
 
   it('нулевой расход — ошибка', () => expect(() => fuelLiters(100, 0, 'l100km')).toThrow(RangeError));
 });
+
+describe('туда и обратно', () => {
+  it('вдвое больше топлива и денег', () => {
+    const one = fuelCost(500, 8, 'l100km', 62, 2);
+    const both = fuelCost(500, 8, 'l100km', 62, 2, true);
+    expect(both.fuel).toBeCloseTo(80, 9);
+    expect(both.cost).toBeCloseTo(one.cost * 2, 9);
+  });
+});

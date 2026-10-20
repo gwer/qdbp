@@ -13,7 +13,7 @@ Ejemplo: 500 km con un consumo de 8 l/100 km y la gasolina a 1,55 € el litro: 
 
 ## Preguntas frecuentes
 
-**¿Qué consumo pongo?** El real mejor que el homologado: en autopista el coche suele gastar menos y en ciudad o cargado, más. Si es ida y vuelta, duplica la distancia.
+**¿Qué consumo pongo?** El real mejor que el homologado: en autopista el coche suele gastar menos y en ciudad o cargado, más. Si es ida y vuelta, elígelo en «Viaje» y la distancia se duplica.
 
 **¿Cómo paso de km/l o mpg a l/100 km?** Elige la unidad que tengas o conviértela en el [conversor de consumo de combustible](/es/convert/fuel-consumption/).
 

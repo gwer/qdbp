@@ -44,6 +44,14 @@
     "months": {
       "one": "{count} month",
       "other": "{count} months"
-    }
+    },
+    "neverTotal": "never — with the new term and costs you pay more overall",
+    "now": "Now",
+    "after": "After refinancing",
+    "payment": "Payment",
+    "term": "Term",
+    "interest": "Total interest",
+    "fees": "Costs",
+    "total": "Total paid"
   }
 }

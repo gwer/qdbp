@@ -22,5 +22,11 @@
     "loss": {
       "label": "Kaufkraftverlust"
     }
+  },
+  "ui": {
+    "chart": "Preise und Kaufkraft pro Jahr",
+    "year": "Jahr {year}",
+    "future": "Nötig für denselben Einkauf",
+    "power": "Wert des heutigen Betrags"
   }
 }

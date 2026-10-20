@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { annualTax, grossFromNet, salaryYear } from './ndfl';
+import { annualTax, childDeduction, grossFromNet, salaryYear } from './ndfl';
 
 describe('НДФЛ', () => {
   it.each([
@@ -38,5 +38,29 @@ describe('НДФЛ', () => {
     const g = grossFromNet(400_000);
     expect(salaryYear(g).net).toBeGreaterThanOrEqual(400_000);
     expect(salaryYear(g - 1).net).toBeLessThan(400_000);
+  });
+});
+
+describe('вычет на детей', () => {
+  it('размеры с 2025 года: 1 400, 2 800, 6 000 на третьего и следующих', () => {
+    expect([0, 1, 2, 3, 4].map(childDeduction)).toEqual([0, 1400, 4200, 10200, 16200]);
+  });
+
+  it('двое детей, 50 000 в месяц: вычет 9 месяцев, с 10-го доход больше 450 000', () => {
+    const r = salaryYear(50_000, 2);
+    expect(r.months[0].tax).toBe(5954); // (50 000 − 4 200) × 13%
+    expect(r.months[9].tax).toBe(6500);
+    expect(r.yearTax).toBe(73_086); // (600 000 − 9 × 4 200) × 13%
+  });
+
+  it('трое детей, 100 000 в месяц: вычет только 4 месяца', () => {
+    expect(salaryYear(100_000, 3).yearTax).toBe(150_696); // (1 200 000 − 4 × 10 200) × 13%
+  });
+
+  it('обратный расчёт учитывает вычет', () => {
+    const g = grossFromNet(87_000, 1);
+    expect(g).toBeLessThan(100_000);
+    expect(salaryYear(g, 1).yearNet).toBeGreaterThanOrEqual(87_000 * 12);
+    expect(salaryYear(g - 1, 1).yearNet).toBeLessThan(87_000 * 12);
   });
 });

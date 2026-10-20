@@ -22,5 +22,11 @@
     "loss": {
       "label": "Pérdida de poder adquisitivo"
     }
+  },
+  "ui": {
+    "chart": "Precios y poder adquisitivo por año",
+    "year": "año {year}",
+    "future": "Necesario para comprar lo mismo",
+    "power": "Lo que vale la cantidad de hoy"
   }
 }

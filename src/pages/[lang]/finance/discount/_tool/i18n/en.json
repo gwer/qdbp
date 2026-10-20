@@ -2,11 +2,22 @@
   "title": "Discount calculator: sale price after a percentage off",
   "description": "Find the sale price and how much you save: enter the original price and the discount percentage.",
   "inputs": {
+    "find": {
+      "label": "Find",
+      "options": {
+        "final": "Sale price",
+        "original": "Original price",
+        "percent": "Discount percentage"
+      }
+    },
     "price": {
       "label": "Original price"
     },
     "percent": {
       "label": "Discount"
+    },
+    "sale": {
+      "label": "Sale price"
     }
   },
   "outputs": {
@@ -15,6 +26,16 @@
     },
     "saving": {
       "label": "You save"
+    },
+    "original": {
+      "label": "Original price"
+    },
+    "percent": {
+      "label": "Discount"
     }
+  },
+  "errors": {
+    "fullDiscount": "With a 100% discount the original price can’t be recovered from the sale price.",
+    "saleAbovePrice": "The sale price is higher than the original — that’s not a discount."
   }
 }

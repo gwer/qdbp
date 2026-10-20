@@ -44,6 +44,14 @@
     "months": {
       "one": "{count} Monat",
       "other": "{count} Monaten"
-    }
+    },
+    "neverTotal": "nie – mit neuer Laufzeit und Kosten zahlen Sie insgesamt mehr",
+    "now": "Jetzt",
+    "after": "Nach Umschuldung",
+    "payment": "Rate",
+    "term": "Laufzeit",
+    "interest": "Zinsen gesamt",
+    "fees": "Kosten",
+    "total": "Gesamt gezahlt"
   }
 }

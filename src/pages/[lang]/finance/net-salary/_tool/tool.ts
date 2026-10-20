@@ -10,10 +10,11 @@ export const def = defineCalculator({
   inputs: {
     mode: { type: 'select', options: ['gross', 'net'], default: 'gross' },
     amount: { type: 'number', default: 100_000, min: 0 },
+    children: { type: 'integer', default: 0, min: 0, max: 20 },
   },
-  compute: ({ mode, amount }) => {
-    const gross = mode === 'gross' ? amount : grossFromNet(amount);
-    return { gross, ...salaryYear(gross) };
+  compute: ({ mode, amount, children }) => {
+    const gross = mode === 'gross' ? amount : grossFromNet(amount, children);
+    return { gross, ...salaryYear(gross, children) };
   },
   outputs: {
     net: { type: 'money' },

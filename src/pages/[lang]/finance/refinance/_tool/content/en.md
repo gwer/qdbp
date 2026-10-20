@@ -2,6 +2,8 @@
 
 Enter your current loan balance, interest rate and remaining term, then the new rate and term, and the closing costs of refinancing. You'll see both payments, the net savings over the life of the loan and how many months it takes for the monthly savings to cover the costs.
 
+The table below the result puts both loans side by side: payment, term, interest, costs and the total you'll pay. With a longer new term the payment can drop while the total goes up — in that case the calculator says the costs never pay off.
+
 ## How it's calculated
 
 - **Monthly savings** = current payment − new payment.

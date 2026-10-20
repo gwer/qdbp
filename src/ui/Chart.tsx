@@ -58,8 +58,9 @@ export function Chart({
   const step = plotW / Math.max(1, n);
   const xAt = (i: number) => pad.left + step * (i + 0.5);
   const yAt = (v: number) => pad.top + plotH - (max ? (v / max) * plotH : 0);
-  // Подписи X не чаще, чем раз в ~44 px.
-  const every = Math.max(1, Math.ceil(44 / step));
+  // Подписи X не налезают друг на друга: ширина оценивается по самой длинной (≈ 6,5 px на символ).
+  const labelWidth = Math.max(...x.map((l) => l.length)) * 6.5 + 10;
+  const every = Math.max(1, Math.ceil(labelWidth / step));
 
   const pick = (clientX: number) => {
     const r = box.current!.getBoundingClientRect();

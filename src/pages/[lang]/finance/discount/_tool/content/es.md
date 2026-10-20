@@ -1,6 +1,6 @@
 ## Cómo usarla
 
-Introduce el precio y el porcentaje de descuento: verás el precio final y cuánto ahorras.
+Introduce el precio y el porcentaje de descuento: verás el precio final y cuánto ahorras. En «Calcular» puedes resolver también los casos inversos: el precio original a partir del precio rebajado o el porcentaje de descuento a partir de los dos precios.
 
 ## Fórmula
 

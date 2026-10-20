@@ -13,7 +13,7 @@ Exemplo: 500 km com um carro que faz 12 km/l e gasolina a R$ 6,20 o litro: cerca
 
 ## Perguntas frequentes
 
-**Que consumo usar?** O real, de preferência ao do Inmetro: na estrada o carro costuma gastar menos e na cidade ou carregado, mais. Para ida e volta, dobre a distância.
+**Que consumo usar?** O real, de preferência ao do Inmetro: na estrada o carro costuma gastar menos e na cidade ou carregado, mais. Para ida e volta, escolha a opção em «Viagem» e a distância é dobrada.
 
 **Etanol ou gasolina?** Faça a conta com o consumo e o preço de cada um. Como o carro faz menos km/l com etanol, ele só compensa se custar até cerca de 70% do preço da gasolina.
 

@@ -1,6 +1,6 @@
 ## So funktioniert der Rechner
 
-Geben Sie den Preis und den Rabatt in Prozent ein – Sie sehen den Endpreis und Ihre Ersparnis.
+Geben Sie den Preis und den Rabatt in Prozent ein – Sie sehen den Endpreis und Ihre Ersparnis. Unter „Berechnen“ lösen Sie auch die umgekehrten Aufgaben: den ursprünglichen Preis aus dem reduzierten Preis oder den Rabatt in Prozent aus altem und neuem Preis.
 
 ## Formel
 

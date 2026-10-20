@@ -23,9 +23,9 @@ export function fuelLiters(distance: number, economy: number, unit: Economy): nu
 }
 
 /** Цена — за литр, а для mpg US — за галлон США: так топливо продают там, где эта единица в ходу. */
-export function fuelCost(distance: number, economy: number, unit: Economy, price: number, people: number) {
+export function fuelCost(distance: number, economy: number, unit: Economy, price: number, people: number, roundTrip = false) {
   if (!Number.isInteger(people) || people < 1) throw new RangeError('people must be a positive integer');
-  const fuel = fuelLiters(distance, economy, unit);
+  const fuel = fuelLiters(roundTrip ? distance * 2 : distance, economy, unit);
   const cost = (unit === 'mpgus' ? convert(fuel, 'l', 'gal') : fuel) * price;
   return { cost, perPerson: cost / people, fuel };
 }
@@ -36,12 +36,13 @@ export const def = defineCalculator({
   related: ['electricity-cost', 'fuel-consumption', 'auto-loan'],
   inputs: {
     distance: { type: 'quantity', unit: 'km', imperial: 'mi', default: 500, defaultImperial: 300, min: 0 },
+    trip: { type: 'select', options: ['oneWay', 'round'], default: 'oneWay' },
     unit: { type: 'select', options: ['l100km', 'kml', 'mpgus', 'mpguk'], default: 'l100km', byLang: { en: 'mpgus', pt: 'kml' } },
     economy: { type: 'number', default: 8, min: 0, defaultBy: { unit: { l100km: 8, kml: 12, mpgus: 28, mpguk: 40 } } },
     price: { type: 'number', default: 1.7, min: 0, byLang: { ru: 62, en: 3.5, es: 1.55, de: 1.75, pt: 6.2 } },
     people: { type: 'integer', default: 2, min: 1, max: 100 },
   },
-  compute: ({ distance, unit, economy, price, people }) => fuelCost(distance, economy, unit, price, people),
+  compute: ({ distance, trip, unit, economy, price, people }) => fuelCost(distance, economy, unit, price, people, trip === 'round'),
   outputs: {
     cost: { type: 'money' },
     perPerson: { type: 'money' },

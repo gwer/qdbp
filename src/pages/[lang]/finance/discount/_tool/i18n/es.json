@@ -2,11 +2,22 @@
   "title": "Calculadora de descuentos: precio final con descuento",
   "description": "Calcula el precio final y cuánto ahorras: introduce el precio y el porcentaje de descuento.",
   "inputs": {
+    "find": {
+      "label": "Calcular",
+      "options": {
+        "final": "Precio con descuento",
+        "original": "Precio original",
+        "percent": "Porcentaje de descuento"
+      }
+    },
     "price": {
       "label": "Precio"
     },
     "percent": {
       "label": "Descuento"
+    },
+    "sale": {
+      "label": "Precio con descuento"
     }
   },
   "outputs": {
@@ -15,6 +26,16 @@
     },
     "saving": {
       "label": "Ahorro"
+    },
+    "original": {
+      "label": "Precio original"
+    },
+    "percent": {
+      "label": "Descuento"
     }
+  },
+  "errors": {
+    "fullDiscount": "Con un descuento del 100 % no se puede obtener el precio original.",
+    "saleAbovePrice": "El precio con descuento es mayor que el original: no es un descuento."
   }
 }

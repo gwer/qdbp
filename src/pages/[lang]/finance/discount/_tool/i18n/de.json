@@ -2,11 +2,22 @@
   "title": "Rabattrechner: Preis nach Rabatt",
   "description": "Endpreis nach Rabatt und Ersparnis berechnen: Preis und Rabatt in Prozent eingeben.",
   "inputs": {
+    "find": {
+      "label": "Berechnen",
+      "options": {
+        "final": "Preis nach Rabatt",
+        "original": "Ursprünglichen Preis",
+        "percent": "Rabatt in Prozent"
+      }
+    },
     "price": {
       "label": "Preis"
     },
     "percent": {
       "label": "Rabatt"
+    },
+    "sale": {
+      "label": "Preis nach Rabatt"
     }
   },
   "outputs": {
@@ -15,6 +26,16 @@
     },
     "saving": {
       "label": "Ersparnis"
+    },
+    "original": {
+      "label": "Ursprünglicher Preis"
+    },
+    "percent": {
+      "label": "Rabatt"
     }
+  },
+  "errors": {
+    "fullDiscount": "Bei 100 % Rabatt lässt sich der ursprüngliche Preis nicht berechnen.",
+    "saleAbovePrice": "Der reduzierte Preis ist höher als der ursprüngliche – das ist kein Rabatt."
   }
 }

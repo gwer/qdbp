@@ -1,5 +1,6 @@
 import { defineCalculator } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
+import { ByYear } from './ByYear';
 
 /** Инфляция по заданной среднегодовой ставке (без исторических данных). */
 export function inflation(amount: number, rate: number, years: number) {
@@ -22,6 +23,7 @@ export const def = defineCalculator({
     power: { type: 'money' },
     loss: { type: 'percent' },
   },
+  Extra: ByYear,
 });
 
 export default island(def);

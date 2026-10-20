@@ -2,11 +2,21 @@
   "title": "Margin calculator: profit margin from cost and price",
   "description": "Find profit, profit margin and markup from cost and selling price — and see how margin differs from markup.",
   "inputs": {
+    "find": {
+      "label": "Find",
+      "options": {
+        "margin": "Margin from price",
+        "price": "Price for a target margin"
+      }
+    },
     "cost": {
       "label": "Cost"
     },
     "price": {
       "label": "Selling price"
+    },
+    "target": {
+      "label": "Target margin"
     }
   },
   "outputs": {
@@ -18,6 +28,12 @@
     },
     "markup": {
       "label": "Markup"
+    },
+    "price": {
+      "label": "Selling price"
     }
+  },
+  "errors": {
+    "marginTooHigh": "Margin must be below 100%: it’s a share of the price."
   }
 }

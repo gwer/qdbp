@@ -22,6 +22,13 @@
     },
     "people": {
       "label": "People in the car"
+    },
+    "trip": {
+      "label": "Trip",
+      "options": {
+        "oneWay": "One way",
+        "round": "Round trip"
+      }
     }
   },
   "outputs": {

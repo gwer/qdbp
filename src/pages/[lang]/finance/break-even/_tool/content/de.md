@@ -2,6 +2,8 @@
 
 Geben Sie die Fixkosten für den Zeitraum (Miete, Gehälter, Abos), den Preis pro Stück und die variablen Kosten pro Stück (Material, Gebühren, Versand) ein. Sie sehen, wie viele Einheiten Sie verkaufen müssen und welcher Umsatz die Gewinnschwelle erreicht.
 
+Soll nicht nur die Gewinnschwelle, sondern ein Gewinn erreicht werden, tragen Sie den gewünschten Gewinn ein: Sie sehen die nötige Menge – (Fixkosten + Gewinn) ÷ Deckungsbeitrag pro Stück. Bei 0 ist das die Break-even-Menge. Im Diagramm schneiden sich Umsatz- und Kostenlinie im Break-even-Punkt; rechts davon beginnt die Gewinnzone.
+
 ## Formeln
 
 - **Deckungsbeitrag pro Stück** = Preis − variable Kosten.

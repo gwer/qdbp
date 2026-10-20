@@ -2,6 +2,8 @@
 
 Informe os custos fixos do período (aluguel, salários, assinaturas), o preço por unidade e o custo variável por unidade (matéria-prima, taxas, frete). Você vê quantas unidades precisa vender e qual faturamento é necessário para empatar.
 
+Se a meta é lucrar, e não só empatar, informe o lucro desejado no período: você vê quantas unidades precisa vender — (custos fixos + lucro) ÷ margem de contribuição por unidade. Com 0, é o ponto de equilíbrio. No gráfico, as linhas de receita e de custos se cruzam no ponto de equilíbrio; à direita dele há lucro.
+
 ## Fórmulas
 
 - **Margem de contribuição por unidade** = preço − custo variável.

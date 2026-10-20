@@ -2,6 +2,8 @@
 
 Enter the cost and the markup percentage. You'll see the selling price, the profit per unit and the profit margin that markup gives you.
 
+If you know the selling price and the markup and need the cost (say, to check a purchase price), choose “Cost from selling price” in the “Find” field.
+
 ## Formula
 
 `selling price = cost × (1 + markup / 100)`

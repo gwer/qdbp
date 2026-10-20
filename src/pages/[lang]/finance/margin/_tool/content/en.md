@@ -2,6 +2,8 @@
 
 Enter the cost and the selling price — you'll see the profit margin, the profit and the markup.
 
+For the reverse question — what price gives, say, a 30% margin — choose “Price for a target margin” in the “Find” field.
+
 ## Formulas
 
 - `profit = price − cost`

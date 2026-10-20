@@ -2,6 +2,8 @@
 
 Informe o saldo devedor do financiamento atual, a taxa e o prazo restante; depois, a nova taxa, o novo prazo e os custos da troca (avaliação do imóvel, registro, tarifas). Você vê as duas parcelas, a economia líquida total e em quantos meses os custos se pagam.
 
+A tabela abaixo do resultado põe os dois financiamentos lado a lado: parcela, prazo, juros, custos e o total a pagar. Com prazo maior, a parcela pode cair e o total subir — nesse caso a calculadora avisa que os custos não se pagam.
+
 ## Como é calculado
 
 - **Economia mensal** = parcela atual − parcela nova.

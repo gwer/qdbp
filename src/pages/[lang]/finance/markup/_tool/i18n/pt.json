@@ -2,11 +2,21 @@
   "title": "Calculadora de markup: preço de venda a partir do custo",
   "description": "Calcule o preço de venda e o lucro a partir do custo e do markup em porcentagem, além da margem resultante.",
   "inputs": {
+    "find": {
+      "label": "Calcular",
+      "options": {
+        "price": "Preço de venda",
+        "cost": "Custo a partir do preço"
+      }
+    },
     "cost": {
       "label": "Custo"
     },
     "percent": {
       "label": "Markup"
+    },
+    "price": {
+      "label": "Preço de venda"
     }
   },
   "outputs": {
@@ -18,6 +28,9 @@
     },
     "margin": {
       "label": "Margem"
+    },
+    "cost": {
+      "label": "Custo"
     }
   }
 }

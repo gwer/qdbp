@@ -1,6 +1,6 @@
 ## Como usar
 
-Digite o preço e a porcentagem de desconto: você vê o preço final e quanto economiza.
+Digite o preço e a porcentagem de desconto: você vê o preço final e quanto economiza. Em «Calcular» dá para resolver também as contas inversas: o preço original a partir do preço com desconto, ou o percentual de desconto a partir dos dois preços.
 
 ## Fórmula
 

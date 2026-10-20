@@ -10,14 +10,17 @@
     },
     "variable": {
       "label": "Variable cost per unit"
+    },
+    "profit": {
+      "label": "Target profit per period"
     }
   },
   "outputs": {
     "units": {
-      "label": "Break-even point, units"
+      "label": "Units to sell"
     },
     "revenue": {
-      "label": "Break-even revenue"
+      "label": "Revenue needed"
     },
     "contribution": {
       "label": "Contribution margin per unit"
@@ -28,5 +31,11 @@
   },
   "errors": {
     "priceBelowCost": "The price must exceed the variable cost per unit — otherwise every sale adds to the loss."
+  },
+  "ui": {
+    "chart": "Revenue and costs by units sold",
+    "units": "units",
+    "revenue": "Revenue",
+    "costs": "Total costs"
   }
 }

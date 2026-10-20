@@ -1,6 +1,7 @@
 import { defineCalculator, type FormatContext } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
 import { loan } from '../../_shared/loan';
+import { Compare } from './Compare';
 
 export interface RefinanceInput {
   balance: number;
@@ -21,13 +22,17 @@ export function refinance({ balance, rate, months, newRate, newMonths, fees }: R
   const current = loan({ amount: balance, rate, months, kind: 'annuity' });
   const next = loan({ amount: balance, rate: newRate, months: newMonths, kind: 'annuity' });
   const monthlySaving = current.payment - next.payment;
+  const netSavings = current.overpay - next.overpay - fees;
   return {
     monthlySaving,
     newPayment: next.payment,
     currentPayment: current.payment,
-    netSavings: current.overpay - next.overpay - fees,
-    // 0 — окупается сразу (расходов нет), −1 — не окупается (платёж не снижается).
-    breakEven: fees <= 0 ? 0 : monthlySaving > 0 ? Math.ceil(fees / monthlySaving - 1e-9) : -1,
+    netSavings,
+    // 0 — окупается сразу (расходов нет), −1 — платёж не снижается, −2 — платёж ниже, но из-за срока
+    // и расходов в сумме выйдет дороже: экономия в месяц тогда обманчива.
+    breakEven: netSavings <= 0 && monthlySaving > 0 ? -2 : fees <= 0 ? 0 : monthlySaving > 0 ? Math.ceil(fees / monthlySaving - 1e-9) : -1,
+    current: { payment: current.payment, months, interest: current.overpay, fees: 0, total: current.total },
+    next: { payment: next.payment, months: newMonths, interest: next.overpay, fees, total: next.total + fees },
   };
 }
 
@@ -51,9 +56,11 @@ export const def = defineCalculator({
     currentPayment: { type: 'money' },
     breakEven: {
       type: 'custom',
-      format: (m: number, { t }: FormatContext) => (m === 0 ? t('ui.instant') : m < 0 ? t('ui.never') : t('ui.months', { count: m })),
+      format: (m: number, { t }: FormatContext) =>
+        m === 0 ? t('ui.instant') : m === -1 ? t('ui.never') : m === -2 ? t('ui.neverTotal') : t('ui.months', { count: m }),
     },
   },
+  Extra: Compare,
 });
 
 export default island(def);

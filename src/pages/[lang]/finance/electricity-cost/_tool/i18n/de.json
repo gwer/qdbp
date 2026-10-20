@@ -10,6 +10,9 @@
     },
     "tariff": {
       "label": "Preis pro kWh"
+    },
+    "days": {
+      "label": "Tage pro Woche"
     }
   },
   "outputs": {

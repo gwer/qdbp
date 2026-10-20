@@ -45,6 +45,14 @@
       "one": "{count} mes",
       "many": "{count} meses",
       "other": "{count} meses"
-    }
+    },
+    "neverTotal": "nunca: con el nuevo plazo y los gastos pagas más en total",
+    "now": "Ahora",
+    "after": "Tras la subrogación",
+    "payment": "Cuota",
+    "term": "Plazo",
+    "interest": "Intereses totales",
+    "fees": "Gastos",
+    "total": "Total pagado"
   }
 }

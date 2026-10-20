@@ -45,6 +45,14 @@
       "one": "{count} mês",
       "many": "{count} meses",
       "other": "{count} meses"
-    }
+    },
+    "neverTotal": "nunca — com o novo prazo e os custos, você paga mais no total",
+    "now": "Agora",
+    "after": "Após a portabilidade",
+    "payment": "Parcela",
+    "term": "Prazo",
+    "interest": "Juros totais",
+    "fees": "Custos",
+    "total": "Total pago"
   }
 }

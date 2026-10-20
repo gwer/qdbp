@@ -28,7 +28,7 @@ function inputMode(spec: NumberInput | QuantityInput): 'numeric' | 'decimal' | u
 }
 
 const entries = (def: CalculatorDef) => Object.entries<InputSpec>(def.inputs);
-const outputs = (def: CalculatorDef) => Object.entries<OutputSpec | undefined>(def.outputs);
+const outputs = (def: CalculatorDef) => Object.entries<(OutputSpec & { showIf?: InputSpec['showIf'] }) | undefined>(def.outputs);
 
 /**
  * Точные значения величин, показанных в полях с округлением (после конвертации единиц).
@@ -45,7 +45,7 @@ function quantityText(spec: QuantityInput, value: number, env: Env, exact?: Exac
 }
 
 /** Видно ли поле при текущем выборе в select'ах (showIf). */
-function visible(spec: InputSpec, selected: Record<string, unknown>): boolean {
+function visible(spec: Pick<InputSpec, 'showIf'>, selected: Record<string, unknown>): boolean {
   return Object.entries(spec.showIf ?? {}).every(([field, want]) =>
     typeof want === 'string' ? selected[field] === want : want.includes(selected[field] as string),
   );
@@ -384,7 +384,9 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
         {computeError ? (
           <p class="calc-error">{computeError}</p>
         ) : (
-          outputs(def).map(([name, spec], i) => (
+          outputs(def)
+            .filter(([, spec]) => !spec || visible(spec, raw))
+            .map(([name, spec], i) => (
             <div class={i === 0 ? 'out out-primary' : 'out'} key={name}>
               <span class="out-label">{t(`outputs.${name}.label`)}</span>
               <output class="out-value">{result ? formatOutput(env, result[name], spec) : '—'}</output>

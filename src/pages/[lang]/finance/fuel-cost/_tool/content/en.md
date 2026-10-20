@@ -13,7 +13,7 @@ Example: a 300-mile trip in a car that gets 28 mpg with gas at $3.50 a gallon �
 
 ## FAQ
 
-**Which mpg should I use?** Your real-world number rather than the sticker rating: highway driving usually beats it, while city traffic and a loaded car do worse. For a round trip, double the distance.
+**Which mpg should I use?** Your real-world number rather than the sticker rating: highway driving usually beats it, while city traffic and a loaded car do worse. For a round trip, choose it in the “Trip” field and the distance is doubled.
 
 **How do I convert between mpg and L/100 km?** Just pick the unit you have, or use the [fuel economy converter](/en/convert/fuel-consumption/).
 

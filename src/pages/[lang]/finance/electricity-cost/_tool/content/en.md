@@ -1,6 +1,6 @@
 ## How to use
 
-Enter the appliance's power in watts, how many hours a day it runs and your price per kilowatt-hour. You'll see how much energy it uses and what it costs per day, month and year.
+Enter the appliance's power in watts, how many hours a day it runs and your price per kilowatt-hour. You'll see how much energy it uses and what it costs per day, month and year. For appliances that don't run every day (a washing machine, a sauna) set the days per week. A month is one twelfth of a year (about 30.4 days), so twelve months add up exactly to the yearly figure.
 
 The wattage is on the appliance's label or in its manual. If it's given in kilowatts, multiply by 1,000: 1.5 kW = 1,500 W.
 
@@ -9,7 +9,7 @@ The wattage is on the appliance's label or in its manual. If it's given in kilow
 `kWh = watts × hours / 1000`
 `cost = kWh × price per kWh`
 
-Example: a 2,000 W space heater running 3 hours a day uses 6 kWh. At 17¢ per kWh that's $1.02 a day, **$30.60 a month**.
+Example: a 2,000 W space heater running 3 hours a day uses 6 kWh. At 17¢ per kWh that's $1.02 a day, **$31.03 a month**.
 
 ## Typical wattage
 

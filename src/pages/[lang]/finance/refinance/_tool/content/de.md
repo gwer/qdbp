@@ -2,6 +2,8 @@
 
 Geben Sie die Restschuld Ihres aktuellen Kredits, den Sollzins und die Restlaufzeit ein, dann den neuen Zins, die neue Laufzeit und die Kosten der Umschuldung (Grundbuch, Notar, Vorfälligkeitsentschädigung). Sie sehen beide Raten, die Nettoersparnis über die gesamte Laufzeit und nach wie vielen Monaten sich die Kosten amortisieren.
 
+Die Tabelle unter dem Ergebnis stellt beide Kredite gegenüber: Rate, Laufzeit, Zinsen, Kosten und die Gesamtsumme. Bei längerer Laufzeit kann die Rate sinken und die Gesamtsumme steigen – dann zeigt der Rechner, dass sich die Kosten nie amortisieren.
+
 ## So wird gerechnet
 
 - **Monatliche Ersparnis** = alte Rate − neue Rate.

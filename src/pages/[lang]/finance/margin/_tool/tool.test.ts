@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { margin } from './tool';
+import { margin, priceForMargin } from './tool';
 
 describe('margin', () => {
   it('себестоимость 800, цена 1000', () => {
@@ -16,5 +16,18 @@ describe('margin', () => {
 
   it('нулевая себестоимость — наценка не определена', () => {
     expect(margin(0, 100).markup).toBeNaN();
+  });
+});
+
+describe('priceForMargin', () => {
+  it('себестоимость 700, маржа 30% — цена 1000', () => {
+    const r = priceForMargin(700, 30);
+    expect(r.price).toBeCloseTo(1000, 9);
+    expect(r.markup).toBeCloseTo(42.857142857, 6);
+    expect(margin(700, r.price).margin).toBeCloseTo(30, 9);
+  });
+
+  it('маржа 100% и больше невозможна', () => {
+    expect(() => priceForMargin(100, 100)).toThrow('marginTooHigh');
   });
 });

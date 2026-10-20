@@ -10,14 +10,17 @@
     },
     "variable": {
       "label": "Coste variable por unidad"
+    },
+    "profit": {
+      "label": "Beneficio deseado del periodo"
     }
   },
   "outputs": {
     "units": {
-      "label": "Punto de equilibrio, unidades"
+      "label": "Unidades a vender"
     },
     "revenue": {
-      "label": "Facturación en el punto de equilibrio"
+      "label": "Facturación necesaria"
     },
     "contribution": {
       "label": "Margen de contribución por unidad"
@@ -28,5 +31,11 @@
   },
   "errors": {
     "priceBelowCost": "El precio debe superar el coste variable por unidad; si no, cada venta aumenta la pérdida."
+  },
+  "ui": {
+    "chart": "Ingresos y costes según las unidades vendidas",
+    "units": "uds.",
+    "revenue": "Ingresos",
+    "costs": "Costes totales"
   }
 }

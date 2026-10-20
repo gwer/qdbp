@@ -22,5 +22,11 @@
     "loss": {
       "label": "Purchasing power lost"
     }
+  },
+  "ui": {
+    "chart": "Prices and purchasing power by year",
+    "year": "year {year}",
+    "future": "Needed to buy the same",
+    "power": "What today’s amount is worth"
   }
 }

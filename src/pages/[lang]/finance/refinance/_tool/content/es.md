@@ -2,6 +2,8 @@
 
 Indica el capital pendiente de tu préstamo, su tipo de interés y el plazo restante; después, el nuevo tipo, el nuevo plazo y los gastos del cambio (tasación, notaría, comisión de subrogación o cancelación). Verás las dos cuotas, el ahorro neto total y en cuántos meses se recuperan los gastos.
 
+La tabla bajo el resultado compara los dos préstamos: cuota, plazo, intereses, gastos y el total a pagar. Con un plazo más largo la cuota puede bajar y el total subir; en ese caso la calculadora indica que los gastos no se recuperan.
+
 ## Cómo se calcula
 
 - **Ahorro mensual** = cuota actual − cuota nueva.

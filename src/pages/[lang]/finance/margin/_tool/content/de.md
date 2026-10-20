@@ -2,6 +2,8 @@
 
 Geben Sie Einkaufs- und Verkaufspreis ein – Sie sehen Marge, Gewinn und Aufschlag.
 
+Für die umgekehrte Frage – welcher Preis ergibt zum Beispiel 30 % Marge – wählen Sie unter „Berechnen“ „Preis für eine Zielmarge“.
+
 ## Formeln
 
 - `Gewinn = Verkaufspreis − Einkaufspreis`

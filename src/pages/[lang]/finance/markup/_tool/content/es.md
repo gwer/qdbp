@@ -2,6 +2,8 @@
 
 Introduce el coste y el porcentaje de markup (recargo sobre el coste). Verás el precio de venta, el beneficio por unidad y el margen que resulta.
 
+Si conoces el precio de venta y el markup y necesitas el coste (por ejemplo, para comprobar un precio de compra), elige «Coste a partir del precio» en «Calcular».
+
 ## Fórmula
 
 `precio de venta = coste × (1 + markup / 100)`
