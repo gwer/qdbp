@@ -54,11 +54,11 @@ const others = alternates.filter((a) => a.lang !== lang);
   <body>
     <header class="site-header">
       <div class="wrap header-row">
-        <a class="logo" href={`/${lang}/`} aria-label={t('nav.home')}>qdbp</a>
+        <a class="logo" href={`/${lang}/`} aria-label={`qdbp, ${t('nav.home')}`}>qdbp</a>
         {
           others.length > 0 && (
             <details class="lang-menu">
-              <summary aria-label={t('nav.language')}>{LANG_META[lang].name}</summary>
+              <summary aria-label={`${LANG_META[lang].name}, ${t('nav.language')}`}>{LANG_META[lang].name}</summary>
               <ul>
                 {others.map((a) => (
                   <li>
