@@ -1,0 +1,35 @@
+{
+  "title": "Конвертер изображений в Base64: data URL для HTML и CSS",
+  "description": "Переведите картинку в Base64 или data URL, чтобы вставить её прямо в HTML, CSS или JSON, — и обратно: покажите и сохраните изображение из Base64.",
+  "files": {
+    "drop": "Перетащите изображения сюда или",
+    "choose": "выберите файлы",
+    "paste": "Можно вставить из буфера обмена (Ctrl+V)",
+    "notImage": "это не изображение",
+    "tooLarge": "файл больше {max}",
+    "privacy": "Файлы обрабатываются в вашем браузере и никуда не загружаются.",
+    "download": "Скачать",
+    "downloadAll": "Скачать всё (ZIP)",
+    "clear": "Очистить",
+    "processing": "Обработка…",
+    "error": "Не удалось обработать файл"
+  },
+  "ui": {
+    "mode": "Направление",
+    "modes": {
+      "encode": "Картинка → Base64",
+      "decode": "Base64 → картинка"
+    },
+    "format": "Вид результата",
+    "formats": {
+      "dataUrl": "data URL",
+      "base64": "Только Base64",
+      "css": "CSS",
+      "html": "HTML <img>"
+    },
+    "sizes": "было {before}, в Base64 — {after}",
+    "paste": "Вставьте data URL или Base64",
+    "error": "Это не Base64 с изображением",
+    "preview": "Изображение из Base64"
+  }
+}

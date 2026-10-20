@@ -1,0 +1,49 @@
+{
+  "title": "Visor y eliminador de EXIF: metadatos y ubicación de fotos",
+  "description": "Mira qué guarda una foto (cámara, fecha, ajustes y coordenadas GPS) y elimina los metadatos de los JPEG sin recomprimirlos antes de compartirlos.",
+  "files": {
+    "drop": "Arrastra imágenes aquí o",
+    "choose": "elige archivos",
+    "paste": "También puedes pegar desde el portapapeles (Ctrl+V)",
+    "notImage": "no es una imagen",
+    "tooLarge": "el archivo pesa más de {max}",
+    "privacy": "Los archivos se procesan en tu navegador y no se suben a ningún sitio.",
+    "download": "Descargar",
+    "downloadAll": "Descargar todo (ZIP)",
+    "clear": "Borrar",
+    "processing": "Procesando…",
+    "error": "No se pudo procesar el archivo"
+  },
+  "ui": {
+    "keepOrientation": "Mantener la rotación de la foto",
+    "keepIcc": "Mantener el perfil de color (ICC)",
+    "fields": {
+      "camera": "Cámara",
+      "lens": "Objetivo",
+      "taken": "Tomada",
+      "modified": "Modificada",
+      "exposure": "Velocidad de obturación",
+      "aperture": "Apertura",
+      "focal": "Distancia focal",
+      "software": "Programa",
+      "artist": "Autor",
+      "copyright": "Copyright",
+      "serial": "Número de serie de la cámara",
+      "orientation": "Orientación"
+    },
+    "blocks": {
+      "xmp": "XMP",
+      "iptc": "IPTC",
+      "comment": "comentario",
+      "icc": "perfil de color ICC"
+    },
+    "alsoFound": "También encontrado",
+    "none": "No se han encontrado metadatos",
+    "notJpeg": "La lectura y eliminación sin pérdida funciona con JPEG. Para PNG y WebP, vuelve a guardar el archivo con el conversor de imágenes: los metadatos no se copian.",
+    "broken": "No se ha podido leer este JPEG; puede que el archivo esté dañado.",
+    "gpsWarning": "Esta foto contiene la ubicación donde se tomó:",
+    "map": "Ver en el mapa",
+    "download": "Descargar sin metadatos",
+    "cleanSize": "sin metadatos: {size}"
+  }
+}

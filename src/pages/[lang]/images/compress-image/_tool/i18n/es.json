@@ -1,0 +1,27 @@
+{
+  "title": "Compresor de imágenes: reducir el peso de fotos",
+  "description": "Reduce el peso de archivos JPG, PNG y WebP para una web, el correo o WhatsApp. Verás cuánto has ahorrado; los archivos no se suben a ningún sitio.",
+  "files": {
+    "drop": "Arrastra imágenes aquí o",
+    "choose": "elige archivos",
+    "paste": "También puedes pegar desde el portapapeles (Ctrl+V)",
+    "notImage": "no es una imagen",
+    "tooLarge": "el archivo pesa más de {max}",
+    "privacy": "Los archivos se procesan en tu navegador y no se suben a ningún sitio.",
+    "download": "Descargar",
+    "downloadAll": "Descargar todo (ZIP)",
+    "clear": "Borrar",
+    "processing": "Procesando…",
+    "error": "No se pudo procesar el archivo"
+  },
+  "ui": {
+    "quality": "Calidad",
+    "target": "Formato del resultado",
+    "targets": {
+      "auto": "Auto (JPG → JPG, PNG → WebP)",
+      "jpeg": "JPG",
+      "webp": "WebP"
+    },
+    "pngNote": "PNG se comprime sin pérdidas y el navegador casi nunca lo deja más pequeño que el original. Por eso, en modo «Auto», PNG se guarda como WebP: pesa bastante menos y conserva la transparencia."
+  }
+}

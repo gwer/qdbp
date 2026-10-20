@@ -1,0 +1,35 @@
+{
+  "title": "Bild-zu-Base64-Konverter: Data-URL für HTML und CSS",
+  "description": "Ein Bild in Base64 oder eine Data-URL umwandeln, um es direkt in HTML, CSS oder JSON einzubetten – und zurück: Bild aus Base64 anzeigen und speichern.",
+  "files": {
+    "drop": "Bilder hierher ziehen oder",
+    "choose": "Dateien auswählen",
+    "paste": "Einfügen aus der Zwischenablage geht auch (Strg+V)",
+    "notImage": "kein Bild",
+    "tooLarge": "Datei ist größer als {max}",
+    "privacy": "Die Dateien werden in Ihrem Browser verarbeitet und nirgendwo hochgeladen.",
+    "download": "Herunterladen",
+    "downloadAll": "Alle herunterladen (ZIP)",
+    "clear": "Leeren",
+    "processing": "Wird verarbeitet …",
+    "error": "Datei konnte nicht verarbeitet werden"
+  },
+  "ui": {
+    "mode": "Richtung",
+    "modes": {
+      "encode": "Bild → Base64",
+      "decode": "Base64 → Bild"
+    },
+    "format": "Ausgabe",
+    "formats": {
+      "dataUrl": "Data-URL",
+      "base64": "Nur Base64",
+      "css": "CSS",
+      "html": "HTML <img>"
+    },
+    "sizes": "Datei {before}, als Base64 {after}",
+    "paste": "Data-URL oder Base64 einfügen",
+    "error": "Das ist kein Base64 eines Bildes",
+    "preview": "Bild aus Base64"
+  }
+}
