@@ -25,20 +25,20 @@ export function Comparison({ values, result, lang, t }: ExtraProps<EarlyInput, R
           <thead>
             <tr>
               <th>{t('ui.variant')}</th>
-              <th>{t('ui.payment')}</th>
-              <th>{t('ui.term')}</th>
-              <th class="hide-narrow">{t('ui.interest')}</th>
               <th>{t('ui.saved')}</th>
+              <th>{t('ui.term')}</th>
+              <th>{t('ui.payment')}</th>
+              <th class="hide-narrow">{t('ui.interest')}</th>
             </tr>
           </thead>
           <tbody>
             {rows.map(([name, payment, months, interest, saved]) => (
               <tr key={name}>
                 <td>{name}</td>
-                <td>{money(payment)}</td>
-                <td>{formatTerm(t, months)}</td>
-                <td class="hide-narrow">{money(interest)}</td>
                 <td>{saved === null ? '—' : money(saved)}</td>
+                <td>{formatTerm(t, months)}</td>
+                <td>{money(payment)}</td>
+                <td class="hide-narrow">{money(interest)}</td>
               </tr>
             ))}
           </tbody>

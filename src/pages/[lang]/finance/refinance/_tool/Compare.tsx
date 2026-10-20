@@ -15,7 +15,7 @@ export function Compare({ result, lang, t }: ExtraProps<RefinanceInput, ReturnTy
   ];
   return (
     <div class="table-wrap">
-      <table>
+      <table class="wrap">
         <thead>
           <tr>
             <th />

@@ -1643,6 +1643,7 @@ ol.steps li + li {
 }
 
 /* Таблица с длинными подписями в первой колонке: на телефоне текст переносится, а не прокручивается. */
+table.wrap th,
 table.wrap td {
   white-space: normal;
 }
@@ -1660,4 +1661,17 @@ table.wrap td {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+}
+
+/* На телефоне таблицы плотнее: три-четыре колонки чисел помещаются без прокрутки. */
+@media (max-width: 600px) {
+  .calc th,
+  .calc td,
+  .tool table th,
+  .tool table td {
+    padding: 5px 5px;
+  }
+  .tool table {
+    font-size: 0.86rem;
+  }
 }

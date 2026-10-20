@@ -11,7 +11,7 @@ export function Cycles({ values, lang, t }: ExtraProps<{ lmp: string; cycle: num
     <details class="extra" open>
       <summary>{t('ui.cycles')}</summary>
       <div class="table-wrap">
-        <table>
+        <table class="wrap">
           <thead>
             <tr>
               <th>{t('ui.period')}</th>

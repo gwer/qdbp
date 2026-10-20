@@ -60,6 +60,8 @@
     }
   },
   "ui": {
-    "table": "Dieselbe Menge in anderen Maßen"
+    "table": "Dieselbe Menge in anderen Maßen",
+    "all": "Alle Zutaten: {amount} × „{measure}“ in Gramm",
+    "g": "g"
   }
 }
