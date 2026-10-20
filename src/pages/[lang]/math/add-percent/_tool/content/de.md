@@ -2,6 +2,8 @@
 
 Geben Sie eine Zahl ein, wählen Sie Addieren oder Abziehen und tragen Sie den Prozentsatz ein. Sie sehen das Ergebnis und den Prozentwert, also wie viel die Prozente ausmachen.
 
+Enthält die Zahl den Aufschlag schon (Preis mit MwSt., Gehalt mit Bonus) und Sie suchen den Ausgangswert, wählen Sie „Bereits aufgeschlagene Prozent herausrechnen“. 1.200 mit 20 % Aufschlag sind 1.000, nicht 960 – 20 % von 1.200 abzuziehen ist falsch, denn die 20 % wurden vom kleineren Betrag berechnet.
+
 ## Formeln
 
 - Prozent addieren: `Zahl × (100 + Prozentsatz) / 100`.

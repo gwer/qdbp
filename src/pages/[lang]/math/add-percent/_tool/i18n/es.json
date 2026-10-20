@@ -9,7 +9,8 @@
       "label": "Operación",
       "options": {
         "add": "Sumar",
-        "subtract": "Restar"
+        "subtract": "Restar",
+        "remove": "Quitar un porcentaje ya sumado"
       }
     },
     "percent": {

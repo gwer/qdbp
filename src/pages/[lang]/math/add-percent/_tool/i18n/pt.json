@@ -9,7 +9,8 @@
       "label": "Operação",
       "options": {
         "add": "Somar",
-        "subtract": "Subtrair"
+        "subtract": "Subtrair",
+        "remove": "Tirar uma porcentagem já somada"
       }
     },
     "percent": {

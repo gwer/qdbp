@@ -2,6 +2,8 @@
 
 Digite um número, escolha somar ou subtrair e informe a porcentagem. Você vê o resultado e quanto vale a própria porcentagem.
 
+Se o número já inclui o acréscimo (preço com imposto, salário com bônus) e você quer o original, escolha «Tirar uma porcentagem já somada». 1.200 com 20% somados são 1.000, não 960 — tirar 20% de 1.200 está errado, porque os 20% foram calculados sobre o número menor.
+
 ## Fórmulas
 
 - Somar uma porcentagem: `número × (100 + porcentagem) / 100`.

@@ -9,7 +9,8 @@
       "label": "Operation",
       "options": {
         "add": "Add",
-        "subtract": "Subtract"
+        "subtract": "Subtract",
+        "remove": "Remove a percentage already added"
       }
     },
     "percent": {

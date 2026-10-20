@@ -18,3 +18,12 @@ describe('addPercent', () => {
     expect(addPercent(addPercent(100, 20, 1).result, 20, -1).result).toBeCloseTo(96, 10);
   });
 });
+
+describe('убрать начисленные проценты', () => {
+  it('1200 с надбавкой 20% — исходное 1000, надбавка 200', async () => {
+    const { removePercent } = await import('./tool');
+    const r = removePercent(1200, 20);
+    expect(r.result).toBeCloseTo(1000, 9);
+    expect(r.part).toBeCloseTo(200, 9);
+  });
+});

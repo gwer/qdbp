@@ -1653,3 +1653,11 @@ table.wrap td {
     display: none;
   }
 }
+
+/* Значение результата и кнопка «Копировать» в одну строку. */
+.out-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}

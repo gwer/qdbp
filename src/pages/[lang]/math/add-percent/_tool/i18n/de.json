@@ -9,7 +9,8 @@
       "label": "Rechenart",
       "options": {
         "add": "Addieren",
-        "subtract": "Abziehen"
+        "subtract": "Abziehen",
+        "remove": "Bereits aufgeschlagene Prozent herausrechnen"
       }
     },
     "percent": {

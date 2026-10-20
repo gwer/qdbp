@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { formatNumber } from '@/lib/format';
 import { parseNumber } from '@/lib/parse';
+import { CopyButton } from '@/ui/CopyButton';
 import type { ToolProps } from '@/ui/define';
 import { MAX_ABS, draw } from './random';
 
@@ -93,6 +94,12 @@ export function Random({ lang, t }: ToolProps) {
           </output>
         </div>
       </section>
+      {result && (
+        <div class="actions">
+          {/* По одному числу в строке — так их удобно вставить в таблицу. */}
+          <CopyButton text={result.join('\n')} t={t} />
+        </div>
+      )}
     </div>
   );
 }

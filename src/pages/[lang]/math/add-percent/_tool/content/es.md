@@ -2,6 +2,8 @@
 
 Introduce un número, elige sumar o restar e indica el porcentaje. Verás el resultado y a cuánto equivale el propio porcentaje.
 
+Si el número ya incluye el aumento (un precio con IVA, un sueldo con prima) y buscas el original, elige «Quitar un porcentaje ya sumado». 1200 con un 20 % añadido es 1000, no 960: restar el 20 % de 1200 es un error, porque el 20 % se calculó sobre la cifra menor.
+
 ## Fórmulas
 
 - Sumar un porcentaje: `número × (100 + porcentaje) / 100`.

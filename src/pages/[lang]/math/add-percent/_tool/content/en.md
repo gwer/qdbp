@@ -2,6 +2,8 @@
 
 Enter a number, choose add or subtract, and enter the percentage. You'll see the result and how much the percentage itself amounts to.
 
+If the number already includes the increase (a price with tax, a salary with a bonus) and you need the original, choose “Remove a percentage already added”. 1,200 with 20% added is 1,000, not 960 — taking 20% off 1,200 is wrong, because the 20% was calculated on the smaller number.
+
 ## Formulas
 
 - Add a percentage: `number × (100 + percentage) / 100`.

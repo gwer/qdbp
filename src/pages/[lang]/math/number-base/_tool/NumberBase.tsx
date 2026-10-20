@@ -1,4 +1,5 @@
 import { useState } from 'preact/hooks';
+import { CopyButton } from '@/ui/CopyButton';
 import type { ToolProps } from '@/ui/define';
 import { isBase, parseInBase, toBase } from './base';
 
@@ -48,9 +49,12 @@ export function NumberBase({ t }: ToolProps) {
         {rows.map(([key, b]) => (
           <div class="out" style={{ flexBasis: '100%' }} key={b}>
             <span class="out-label">{t(key)}</span>
-            <output class="out-value" style={MONO}>
-              {value === null ? '—' : toBase(value, b)}
-            </output>
+            <div class="out-row">
+              <output class="out-value" style={MONO}>
+                {value === null ? '—' : toBase(value, b)}
+              </output>
+              {value !== null && <CopyButton text={toBase(value, b)} t={t} />}
+            </div>
           </div>
         ))}
         <div class="out" style={{ flexBasis: '100%' }}>
