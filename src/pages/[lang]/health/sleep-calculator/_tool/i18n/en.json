@@ -1,0 +1,33 @@
+{
+  "title": "Sleep calculator: when to go to bed and wake up",
+  "description": "Work out what time to go to bed to wake up refreshed, or when to set your alarm, based on 90-minute sleep cycles.",
+  "inputs": {
+    "mode": {
+      "label": "I want to",
+      "options": {
+        "wake": "Wake up at",
+        "bed": "Go to bed at"
+      }
+    },
+    "time": {
+      "label": "Time"
+    },
+    "fallAsleep": {
+      "label": "Minutes to fall asleep"
+    }
+  },
+  "outputs": {
+    "c5": {
+      "label": "5 cycles — 7.5 hours of sleep"
+    },
+    "c6": {
+      "label": "6 cycles — 9 hours of sleep"
+    },
+    "c4": {
+      "label": "4 cycles — 6 hours of sleep"
+    },
+    "c3": {
+      "label": "3 cycles — 4.5 hours of sleep"
+    }
+  }
+}

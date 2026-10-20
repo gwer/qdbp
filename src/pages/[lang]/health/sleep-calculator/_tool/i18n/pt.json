@@ -1,0 +1,33 @@
+{
+  "title": "Calculadora do sono: hora de deitar e de acordar",
+  "description": "Calcule a que horas deitar para acordar descansado ou a que horas pôr o despertador, com base em ciclos de sono de 90 minutos.",
+  "inputs": {
+    "mode": {
+      "label": "Quero",
+      "options": {
+        "wake": "Acordar às",
+        "bed": "Deitar às"
+      }
+    },
+    "time": {
+      "label": "Horário"
+    },
+    "fallAsleep": {
+      "label": "Minutos para pegar no sono"
+    }
+  },
+  "outputs": {
+    "c5": {
+      "label": "5 ciclos — 7,5 h de sono"
+    },
+    "c6": {
+      "label": "6 ciclos — 9 h de sono"
+    },
+    "c4": {
+      "label": "4 ciclos — 6 h de sono"
+    },
+    "c3": {
+      "label": "3 ciclos — 4,5 h de sono"
+    }
+  }
+}

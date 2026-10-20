@@ -47,6 +47,7 @@
 /de/health/ideal-weight/
 /de/health/ovulation/
 /de/health/running-pace/
+/de/health/sleep-calculator/
 /de/health/water-intake/
 /de/images/
 /de/images/compress-image/
@@ -145,6 +146,7 @@
 /en/health/ideal-weight/
 /en/health/ovulation/
 /en/health/running-pace/
+/en/health/sleep-calculator/
 /en/health/water-intake/
 /en/images/
 /en/images/compress-image/
@@ -242,6 +244,7 @@
 /es/health/ideal-weight/
 /es/health/ovulation/
 /es/health/running-pace/
+/es/health/sleep-calculator/
 /es/health/water-intake/
 /es/images/
 /es/images/compress-image/
@@ -340,6 +343,7 @@
 /pt/health/ideal-weight/
 /pt/health/ovulation/
 /pt/health/running-pace/
+/pt/health/sleep-calculator/
 /pt/health/water-intake/
 /pt/images/
 /pt/images/compress-image/
@@ -438,6 +442,7 @@
 /ru/health/ideal-weight/
 /ru/health/ovulation/
 /ru/health/running-pace/
+/ru/health/sleep-calculator/
 /ru/health/water-intake/
 /ru/images/
 /ru/images/compress-image/
