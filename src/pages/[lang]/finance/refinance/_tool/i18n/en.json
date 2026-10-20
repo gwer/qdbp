@@ -1,0 +1,49 @@
+{
+  "title": "Refinance calculator: savings and break-even point",
+  "description": "Is refinancing worth it? See your new payment, monthly savings, net savings after closing costs and how long it takes to break even.",
+  "inputs": {
+    "balance": {
+      "label": "Current loan balance"
+    },
+    "rate": {
+      "label": "Current interest rate"
+    },
+    "months": {
+      "label": "Months remaining"
+    },
+    "newRate": {
+      "label": "New interest rate"
+    },
+    "newMonths": {
+      "label": "New loan term, months"
+    },
+    "fees": {
+      "label": "Closing costs"
+    }
+  },
+  "outputs": {
+    "netSavings": {
+      "label": "Net savings"
+    },
+    "monthlySaving": {
+      "label": "Monthly savings"
+    },
+    "newPayment": {
+      "label": "New monthly payment"
+    },
+    "currentPayment": {
+      "label": "Current monthly payment"
+    },
+    "breakEven": {
+      "label": "Break-even point"
+    }
+  },
+  "ui": {
+    "instant": "right away (no costs)",
+    "never": "never — the payment doesn't go down",
+    "months": {
+      "one": "{count} month",
+      "other": "{count} months"
+    }
+  }
+}

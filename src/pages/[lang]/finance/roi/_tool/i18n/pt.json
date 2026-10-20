@@ -1,0 +1,26 @@
+{
+  "title": "Calculadora de ROI: retorno sobre investimento",
+  "description": "Calcule o retorno sobre investimento (ROI), o lucro e a rentabilidade anual média (CAGR) a partir do valor investido, do valor final e do prazo.",
+  "inputs": {
+    "invested": {
+      "label": "Valor investido"
+    },
+    "returned": {
+      "label": "Valor final"
+    },
+    "years": {
+      "label": "Prazo, anos"
+    }
+  },
+  "outputs": {
+    "roi": {
+      "label": "ROI"
+    },
+    "cagr": {
+      "label": "Rentabilidade anual (CAGR)"
+    },
+    "profit": {
+      "label": "Lucro"
+    }
+  }
+}

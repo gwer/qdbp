@@ -7,7 +7,7 @@ import { mortgage } from './mortgage';
 // В Бразилии ипотеку чаще всего оформляют по SAC — он и стоит по умолчанию для pt.
 export const def = defineCalculator({
   order: 20,
-  related: ['loan-calculator', 'compound-interest'],
+  related: ['early-repayment', 'refinance', 'loan-calculator', 'compound-interest'],
   inputs: {
     price: { type: 'number', default: 400000, min: 1, byLang: { ru: 8000000, en: 400000, es: 250000, de: 400000, pt: 500000 } },
     down: { type: 'percent', default: 20, min: 0, max: 99, byLang: { ru: 20, en: 20, es: 20, de: 20, pt: 20 } },

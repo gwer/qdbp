@@ -1,0 +1,26 @@
+{
+  "title": "Calculadora de ROI: rentabilidad de una inversión",
+  "description": "Calcula el retorno de la inversión (ROI), el beneficio y la rentabilidad anualizada (TAE/CAGR) a partir de lo invertido, lo obtenido y el plazo.",
+  "inputs": {
+    "invested": {
+      "label": "Importe invertido"
+    },
+    "returned": {
+      "label": "Importe obtenido (valor final)"
+    },
+    "years": {
+      "label": "Plazo, años"
+    }
+  },
+  "outputs": {
+    "roi": {
+      "label": "ROI"
+    },
+    "cagr": {
+      "label": "Rentabilidad anualizada (CAGR)"
+    },
+    "profit": {
+      "label": "Beneficio"
+    }
+  }
+}

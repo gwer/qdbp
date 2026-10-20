@@ -6,7 +6,7 @@ import { deposit } from './deposit';
 // Правдоподобные для страны языка суммы и ставки — это пример, а не текущие ставки банков.
 export const def = defineCalculator({
   order: 30,
-  related: ['loan-calculator', 'mortgage'],
+  related: ['inflation', 'roi', 'loan-calculator', 'mortgage'],
   inputs: {
     initial: { type: 'number', default: 10000, min: 0, byLang: { ru: 100000, en: 10000, es: 10000, de: 10000, pt: 10000 } },
     monthly: { type: 'number', default: 200, min: 0, byLang: { ru: 10000, en: 200, es: 200, de: 200, pt: 500 } },

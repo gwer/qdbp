@@ -1,0 +1,29 @@
+{
+  "title": "Calculadora del punto de equilibrio: cuánto hay que vender",
+  "description": "Cuántas unidades hay que vender para cubrir los costes fijos, según el precio y el coste variable por unidad.",
+  "inputs": {
+    "fixed": {
+      "label": "Costes fijos del periodo"
+    },
+    "price": {
+      "label": "Precio por unidad"
+    },
+    "variable": {
+      "label": "Coste variable por unidad"
+    }
+  },
+  "outputs": {
+    "units": {
+      "label": "Punto de equilibrio, unidades"
+    },
+    "revenue": {
+      "label": "Facturación en el punto de equilibrio"
+    },
+    "contribution": {
+      "label": "Margen de contribución por unidad"
+    },
+    "ratio": {
+      "label": "Margen de contribución"
+    }
+  }
+}

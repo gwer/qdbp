@@ -10,7 +10,7 @@ export function margin(cost: number, price: number) {
 
 export const def = defineCalculator({
   order: 60,
-  related: ['markup', 'discount', 'vat'],
+  related: ['markup', 'break-even', 'discount', 'vat'],
   inputs: {
     cost: { type: 'number', default: 800, min: 0 },
     price: { type: 'number', default: 1000, min: 0 },

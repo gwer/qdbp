@@ -1,0 +1,49 @@
+{
+  "title": "Umschuldungsrechner: Ersparnis und Amortisation",
+  "description": "Lohnt sich die Umschuldung? Neue Rate, Ersparnis pro Monat, Nettoersparnis nach Kosten und wann sich die Kosten amortisieren.",
+  "inputs": {
+    "balance": {
+      "label": "Restschuld"
+    },
+    "rate": {
+      "label": "Aktueller Sollzins"
+    },
+    "months": {
+      "label": "Restlaufzeit in Monaten"
+    },
+    "newRate": {
+      "label": "Neuer Sollzins"
+    },
+    "newMonths": {
+      "label": "Neue Laufzeit in Monaten"
+    },
+    "fees": {
+      "label": "Kosten der Umschuldung"
+    }
+  },
+  "outputs": {
+    "netSavings": {
+      "label": "Nettoersparnis"
+    },
+    "monthlySaving": {
+      "label": "Ersparnis pro Monat"
+    },
+    "newPayment": {
+      "label": "Neue Monatsrate"
+    },
+    "currentPayment": {
+      "label": "Aktuelle Monatsrate"
+    },
+    "breakEven": {
+      "label": "Kosten amortisiert nach"
+    }
+  },
+  "ui": {
+    "instant": "sofort (keine Kosten)",
+    "never": "nie – die Rate sinkt nicht",
+    "months": {
+      "one": "{count} Monat",
+      "other": "{count} Monaten"
+    }
+  }
+}

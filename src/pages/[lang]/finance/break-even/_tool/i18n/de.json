@@ -1,0 +1,29 @@
+{
+  "title": "Break-even-Rechner: Gewinnschwelle berechnen",
+  "description": "Wie viele Einheiten Sie verkaufen müssen, um die Fixkosten zu decken – aus Preis und variablen Kosten pro Stück.",
+  "inputs": {
+    "fixed": {
+      "label": "Fixkosten pro Periode"
+    },
+    "price": {
+      "label": "Preis pro Stück"
+    },
+    "variable": {
+      "label": "Variable Kosten pro Stück"
+    }
+  },
+  "outputs": {
+    "units": {
+      "label": "Break-even-Menge, Stück"
+    },
+    "revenue": {
+      "label": "Break-even-Umsatz"
+    },
+    "contribution": {
+      "label": "Deckungsbeitrag pro Stück"
+    },
+    "ratio": {
+      "label": "Deckungsbeitragsquote"
+    }
+  }
+}

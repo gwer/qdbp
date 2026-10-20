@@ -1,0 +1,29 @@
+{
+  "title": "Calculadora de ponto de equilíbrio: quanto é preciso vender",
+  "description": "Quantas unidades é preciso vender para cobrir os custos fixos, a partir do preço e do custo variável por unidade.",
+  "inputs": {
+    "fixed": {
+      "label": "Custos fixos do período"
+    },
+    "price": {
+      "label": "Preço por unidade"
+    },
+    "variable": {
+      "label": "Custo variável por unidade"
+    }
+  },
+  "outputs": {
+    "units": {
+      "label": "Ponto de equilíbrio, unidades"
+    },
+    "revenue": {
+      "label": "Faturamento no ponto de equilíbrio"
+    },
+    "contribution": {
+      "label": "Margem de contribuição por unidade"
+    },
+    "ratio": {
+      "label": "Índice de margem de contribuição"
+    }
+  }
+}

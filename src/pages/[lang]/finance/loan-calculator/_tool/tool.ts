@@ -5,7 +5,7 @@ import { Schedule } from '../../_shared/Schedule';
 
 export const def = defineCalculator({
   order: 10,
-  related: ['percent-of'],
+  related: ['early-repayment', 'refinance', 'auto-loan', 'percent-of'],
   inputs: {
     amount: { type: 'number', default: 500000, min: 1 },
     rate: { type: 'percent', default: 12, min: 0, max: 100 },

@@ -1,0 +1,26 @@
+{
+  "title": "Inflationsrechner: Kaufkraft in der Zukunft",
+  "description": "Was ein heutiger Betrag bei einer angenommenen Inflationsrate in einigen Jahren kostet – und wie viel Kaufkraft Ersparnisse verlieren.",
+  "inputs": {
+    "amount": {
+      "label": "Betrag heute"
+    },
+    "rate": {
+      "label": "Inflationsrate pro Jahr"
+    },
+    "years": {
+      "label": "Anzahl Jahre"
+    }
+  },
+  "outputs": {
+    "future": {
+      "label": "So viel kostet es dann"
+    },
+    "power": {
+      "label": "So viel ist das Geld dann wert"
+    },
+    "loss": {
+      "label": "Kaufkraftverlust"
+    }
+  }
+}

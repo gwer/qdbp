@@ -55,7 +55,9 @@ export function loan({ amount, rate, months, kind }: LoanInput): LoanResult {
   let total = new Decimal(0);
 
   for (let n = 1; n <= months; n++) {
-    const interest = cents(balance.mul(r));
+    // Сначала умножить на годовую ставку, потом делить: остаток × ставка / 1200 считается точно,
+    // а месячная ставка ставка/1200 — бесконечная дробь, и на границе полкопейки округление «съезжало».
+    const interest = cents(balance.mul(rate).div(1200));
     let principal = kind === 'annuity' ? annuity.minus(interest) : evenPrincipal;
     if (n === months || principal.gt(balance)) principal = balance;
     const payment = principal.plus(interest);

@@ -1,0 +1,26 @@
+{
+  "title": "ROI calculator: return on investment and annualized return",
+  "description": "Work out return on investment (ROI), profit and annualized return (CAGR) from the amount invested, the amount returned and the holding period.",
+  "inputs": {
+    "invested": {
+      "label": "Amount invested"
+    },
+    "returned": {
+      "label": "Amount returned (final value)"
+    },
+    "years": {
+      "label": "Holding period, years"
+    }
+  },
+  "outputs": {
+    "roi": {
+      "label": "ROI"
+    },
+    "cagr": {
+      "label": "Annualized return (CAGR)"
+    },
+    "profit": {
+      "label": "Profit"
+    }
+  }
+}
