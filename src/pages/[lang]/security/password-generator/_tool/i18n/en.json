@@ -17,6 +17,7 @@
       "strong": "strong",
       "veryStrong": "very strong"
     },
-    "pickSet": "Pick at least one character set"
+    "pickSet": "Pick at least one character set",
+    "count": "How many passwords"
   }
 }

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'preact/hooks';
 import { CopyButton } from '@/ui/CopyButton';
 import type { ToolProps } from '@/ui/define';
+import { downloadBlob } from '@/ui/files/download';
+import { IntField } from '@/ui/files/fields';
 import { formatUuid, uuidV4, uuidV7 } from './uuid';
 
 const random16 = () => crypto.getRandomValues(new Uint8Array(16));
@@ -32,11 +34,8 @@ export function UuidGenerator({ t }: ToolProps) {
           </button>
         ))}
       </div>
-      <div class="field">
-        <label for="uuid-count">
-          {t('ui.count')}: <strong>{count}</strong>
-        </label>
-        <input id="uuid-count" type="range" min={1} max={50} value={count} onInput={(e) => setCount(Number(e.currentTarget.value))} />
+      <div class="calc-inputs">
+        <IntField id="uuid-count" label={t('ui.count')} value={count} min={1} max={10000} onChange={setCount} />
       </div>
       <div class="checks">
         <label>
@@ -53,6 +52,9 @@ export function UuidGenerator({ t }: ToolProps) {
         <CopyButton text={text} t={t} />
         <button type="button" class="btn btn-secondary btn-small" onClick={generate}>
           {t('common.regenerate')}
+        </button>
+        <button type="button" class="btn btn-secondary btn-small" onClick={() => downloadBlob('uuids.txt', new Blob([text + '\n'], { type: 'text/plain' }))}>
+          {t('ui.download')}
         </button>
       </div>
     </div>

@@ -10,6 +10,7 @@
     "count": "Количество",
     "upper": "Заглавными буквами",
     "noHyphens": "Без дефисов",
-    "result": "UUID"
+    "result": "UUID",
+    "download": "Скачать .txt"
   }
 }

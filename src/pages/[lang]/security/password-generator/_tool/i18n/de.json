@@ -17,6 +17,7 @@
       "strong": "stark",
       "veryStrong": "sehr stark"
     },
-    "pickSet": "Mindestens eine Zeichenart auswählen"
+    "pickSet": "Mindestens eine Zeichenart auswählen",
+    "count": "Anzahl Passwörter"
   }
 }

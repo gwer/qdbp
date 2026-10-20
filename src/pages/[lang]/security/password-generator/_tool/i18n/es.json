@@ -17,6 +17,7 @@
       "strong": "alta",
       "veryStrong": "muy alta"
     },
-    "pickSet": "Elige al menos un tipo de caracteres"
+    "pickSet": "Elige al menos un tipo de caracteres",
+    "count": "Cuántas contraseñas"
   }
 }

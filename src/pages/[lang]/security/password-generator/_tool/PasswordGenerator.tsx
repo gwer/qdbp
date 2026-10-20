@@ -2,6 +2,7 @@ import { useEffect, useState } from 'preact/hooks';
 import { formatNumber } from '@/lib/format';
 import { CopyButton } from '@/ui/CopyButton';
 import type { ToolProps } from '@/ui/define';
+import { IntField } from '@/ui/files/fields';
 import { entropyBits, generate, SETS, strength, type SetName } from './password';
 
 const SET_NAMES = Object.keys(SETS) as SetName[];
@@ -11,12 +12,15 @@ export function PasswordGenerator({ lang, t }: ToolProps) {
   const [sets, setSets] = useState<SetName[]>(SET_NAMES);
   const [noSimilar, setNoSimilar] = useState(false);
   // Пароль создаётся только в браузере: при сборке случайности нет.
-  const [password, setPassword] = useState('');
+  const [passwords, setPasswords] = useState<string[]>([]);
+  // Несколько паролей разом — например, для нескольких учётных записей или чтобы выбрать понравившийся.
+  const [count, setCount] = useState(1);
   const opts = { length, sets, noSimilar };
   const valid = sets.length > 0 && length >= sets.length;
-  const regenerate = () => setPassword(valid ? generate(opts) : '');
+  const regenerate = () => setPasswords(valid ? Array.from({ length: count }, () => generate(opts)) : []);
+  const password = passwords.join('\n');
 
-  useEffect(regenerate, [length, sets.join(), noSimilar]);
+  useEffect(regenerate, [length, sets.join(), noSimilar, count]);
 
   const toggle = (s: SetName) => setSets((cur) => (cur.includes(s) ? cur.filter((x) => x !== s) : SET_NAMES.filter((x) => x === s || cur.includes(x))));
   const bits = valid ? entropyBits(opts) : 0;
@@ -41,7 +45,10 @@ export function PasswordGenerator({ lang, t }: ToolProps) {
           {t('ui.noSimilar')}
         </label>
       </div>
-      <p class="mono-out" aria-live="polite">
+      <div class="calc-inputs">
+        <IntField id="pw-count" label={t('ui.count')} value={count} min={1} max={100} onChange={setCount} />
+      </div>
+      <p class="mono-out pw-list" aria-live="polite">
         {password || '—'}
       </p>
       <div class="actions">

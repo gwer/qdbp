@@ -1627,3 +1627,7 @@ ol.steps {
 ol.steps li + li {
   margin-top: 4px;
 }
+
+.pw-list {
+  white-space: pre-line;
+}

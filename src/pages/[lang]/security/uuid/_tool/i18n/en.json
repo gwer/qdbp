@@ -10,6 +10,7 @@
     "count": "How many",
     "upper": "Uppercase",
     "noHyphens": "No hyphens",
-    "result": "UUIDs"
+    "result": "UUIDs",
+    "download": "Download .txt"
   }
 }

@@ -17,6 +17,7 @@
       "strong": "forte",
       "veryStrong": "muito forte"
     },
-    "pickSet": "Escolha pelo menos um tipo de caractere"
+    "pickSet": "Escolha pelo menos um tipo de caractere",
+    "count": "Quantas senhas"
   }
 }

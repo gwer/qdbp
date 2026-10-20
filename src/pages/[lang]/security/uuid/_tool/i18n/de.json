@@ -10,6 +10,7 @@
     "count": "Anzahl",
     "upper": "Großbuchstaben",
     "noHyphens": "Ohne Bindestriche",
-    "result": "UUIDs"
+    "result": "UUIDs",
+    "download": "Als .txt herunterladen"
   }
 }
