@@ -1,0 +1,65 @@
+{
+  "title": "Conversor de xícaras em gramas: farinha, açúcar, manteiga…",
+  "description": "Quantos gramas de farinha, açúcar, manteiga e outros ingredientes cabem em uma xícara, um copo, uma colher de sopa ou de chá — e o contrário: gramas em xícaras e colheres.",
+  "inputs": {
+    "ingredient": {
+      "label": "Ingrediente",
+      "options": {
+        "flour": "Farinha de trigo (com colher, nivelada)",
+        "flourScooped": "Farinha de trigo (pegando com a xícara)",
+        "wholeWheatFlour": "Farinha integral",
+        "ryeFlour": "Farinha de centeio",
+        "almondFlour": "Farinha de amêndoas",
+        "semolina": "Semolina",
+        "cornmeal": "Fubá",
+        "cornstarch": "Amido de milho",
+        "sugar": "Açúcar refinado",
+        "brownSugar": "Açúcar mascavo (compactado)",
+        "powderedSugar": "Açúcar de confeiteiro",
+        "honey": "Mel",
+        "mapleSyrup": "Xarope de bordo",
+        "butter": "Manteiga",
+        "oil": "Óleo",
+        "water": "Água",
+        "milk": "Leite",
+        "cream": "Creme de leite fresco",
+        "yogurt": "Iogurte",
+        "sourCream": "Creme azedo",
+        "cocoa": "Cacau em pó",
+        "oats": "Aveia em flocos",
+        "rice": "Arroz (cru)",
+        "buckwheat": "Trigo-sarraceno",
+        "raisins": "Uvas-passas",
+        "walnuts": "Nozes (picadas)",
+        "chocolateChips": "Gotas de chocolate",
+        "peanutButter": "Pasta de amendoim",
+        "coconut": "Coco ralado",
+        "salt": "Sal"
+      }
+    },
+    "amount": {
+      "label": "Quantidade"
+    },
+    "measure": {
+      "label": "Medida",
+      "options": {
+        "cupUs": "Xícara americana (cup, 236,6 ml)",
+        "cup240": "Xícara (240 ml)",
+        "cup250": "Copo grande (250 ml)",
+        "glass200": "Copo (200 ml)",
+        "tbsp": "Colher de sopa (15 ml)",
+        "tsp": "Colher de chá (5 ml)",
+        "ml": "Mililitros",
+        "g": "Gramas"
+      }
+    }
+  },
+  "outputs": {
+    "grams": {
+      "label": "Peso, g"
+    }
+  },
+  "ui": {
+    "table": "A mesma quantidade em outras medidas"
+  }
+}

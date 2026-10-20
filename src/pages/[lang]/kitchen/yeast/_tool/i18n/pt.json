@@ -1,0 +1,28 @@
+{
+  "title": "Calculadora de fermento: fresco, seco e instantâneo",
+  "description": "Quanto fermento seco substitui o fresco — e vice-versa: converta entre fermento biológico fresco, seco ativo e seco instantâneo pelo peso.",
+  "inputs": {
+    "amount": {
+      "label": "Quantidade, g"
+    },
+    "from": {
+      "label": "Fermento da receita",
+      "options": {
+        "fresh": "Fresco (biológico)",
+        "active": "Seco ativo",
+        "instant": "Seco instantâneo"
+      }
+    }
+  },
+  "outputs": {
+    "fresh": {
+      "label": "Fresco, g"
+    },
+    "active": {
+      "label": "Seco ativo, g"
+    },
+    "instant": {
+      "label": "Instantâneo, g"
+    }
+  }
+}

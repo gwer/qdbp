@@ -1,0 +1,28 @@
+{
+  "title": "Calculadora de levadura: fresca, seca e instantánea",
+  "description": "Cuánta levadura seca equivale a la fresca y al revés: convierte entre levadura fresca, seca activa e instantánea (de panadería) por peso.",
+  "inputs": {
+    "amount": {
+      "label": "Cantidad, g"
+    },
+    "from": {
+      "label": "Levadura de la receta",
+      "options": {
+        "fresh": "Fresca (prensada)",
+        "active": "Seca activa",
+        "instant": "Seca instantánea"
+      }
+    }
+  },
+  "outputs": {
+    "fresh": {
+      "label": "Fresca, g"
+    },
+    "active": {
+      "label": "Seca activa, g"
+    },
+    "instant": {
+      "label": "Instantánea, g"
+    }
+  }
+}

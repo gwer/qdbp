@@ -1,0 +1,47 @@
+{
+  "title": "Calculadora de moldes: adaptar una receta a otro molde",
+  "description": "Adapta una receta a un molde de otro tamaño o forma: redondo, cuadrado o rectangular. La calculadora compara la superficie de la base y te dice por cuánto multiplicar los ingredientes.",
+  "inputs": {
+    "fromShape": {
+      "label": "Molde de la receta",
+      "options": {
+        "round": "Redondo",
+        "square": "Cuadrado",
+        "rect": "Rectangular"
+      }
+    },
+    "fromA": {
+      "label": "Diámetro o lado"
+    },
+    "fromB": {
+      "label": "Ancho (molde rectangular)"
+    },
+    "toShape": {
+      "label": "Tu molde",
+      "options": {
+        "round": "Redondo",
+        "square": "Cuadrado",
+        "rect": "Rectangular"
+      }
+    },
+    "toA": {
+      "label": "Diámetro o lado"
+    },
+    "toB": {
+      "label": "Ancho (molde rectangular)"
+    }
+  },
+  "outputs": {
+    "factor": {
+      "label": "Multiplicar ingredientes por"
+    },
+    "change": {
+      "label": "Cambio"
+    }
+  },
+  "ui": {
+    "more": "Un {p} % más de ingredientes",
+    "less": "Un {p} % menos de ingredientes",
+    "same": "Las mismas cantidades"
+  }
+}

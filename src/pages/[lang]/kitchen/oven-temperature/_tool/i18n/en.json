@@ -1,0 +1,39 @@
+{
+  "title": "Oven temperature converter: °F, °C and gas mark",
+  "description": "Convert oven temperatures between Fahrenheit, Celsius and UK gas marks, with the adjustment for convection and fan ovens.",
+  "inputs": {
+    "value": {
+      "label": "Temperature or gas mark"
+    },
+    "scale": {
+      "label": "Scale",
+      "options": {
+        "c": "Celsius (°C)",
+        "f": "Fahrenheit (°F)",
+        "gas": "Gas mark"
+      }
+    }
+  },
+  "outputs": {
+    "c": {
+      "label": "Celsius"
+    },
+    "f": {
+      "label": "Fahrenheit"
+    },
+    "gas": {
+      "label": "Gas mark"
+    },
+    "fanC": {
+      "label": "Fan oven, °C"
+    },
+    "fanF": {
+      "label": "Convection, °F"
+    }
+  },
+  "ui": {
+    "table": "Gas mark chart",
+    "gas": "Gas mark",
+    "fan": "Fan oven, °C"
+  }
+}

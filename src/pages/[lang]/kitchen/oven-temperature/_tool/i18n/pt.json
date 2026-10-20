@@ -1,0 +1,39 @@
+{
+  "title": "Temperatura do forno: °C, °F e marcas de gás",
+  "description": "Converta a temperatura do forno entre graus Celsius, Fahrenheit e as marcas de gás britânicas (gas mark), com o ajuste para forno com ventilação.",
+  "inputs": {
+    "value": {
+      "label": "Temperatura ou marca"
+    },
+    "scale": {
+      "label": "Escala",
+      "options": {
+        "c": "Graus Celsius (°C)",
+        "f": "Graus Fahrenheit (°F)",
+        "gas": "Marca de gás (gas mark)"
+      }
+    }
+  },
+  "outputs": {
+    "c": {
+      "label": "Celsius"
+    },
+    "f": {
+      "label": "Fahrenheit"
+    },
+    "gas": {
+      "label": "Marca de gás"
+    },
+    "fanC": {
+      "label": "Com ventilação, °C"
+    },
+    "fanF": {
+      "label": "Convecção, °F"
+    }
+  },
+  "ui": {
+    "table": "Tabela de marcas de gás",
+    "gas": "Marca",
+    "fan": "Com ventilação, °C"
+  }
+}

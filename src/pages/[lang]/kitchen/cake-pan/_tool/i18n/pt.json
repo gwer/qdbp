@@ -1,0 +1,47 @@
+{
+  "title": "Calculadora de formas: adaptar a receita a outra forma",
+  "description": "Adapte uma receita a uma forma de outro tamanho ou formato — redonda, quadrada ou retangular. A calculadora compara a área do fundo e mostra por quanto multiplicar os ingredientes.",
+  "inputs": {
+    "fromShape": {
+      "label": "Forma da receita",
+      "options": {
+        "round": "Redonda",
+        "square": "Quadrada",
+        "rect": "Retangular"
+      }
+    },
+    "fromA": {
+      "label": "Diâmetro ou lado"
+    },
+    "fromB": {
+      "label": "Largura (forma retangular)"
+    },
+    "toShape": {
+      "label": "Sua forma",
+      "options": {
+        "round": "Redonda",
+        "square": "Quadrada",
+        "rect": "Retangular"
+      }
+    },
+    "toA": {
+      "label": "Diâmetro ou lado"
+    },
+    "toB": {
+      "label": "Largura (forma retangular)"
+    }
+  },
+  "outputs": {
+    "factor": {
+      "label": "Multiplicar ingredientes por"
+    },
+    "change": {
+      "label": "Mudança"
+    }
+  },
+  "ui": {
+    "more": "{p}% a mais de ingredientes",
+    "less": "{p}% a menos de ingredientes",
+    "same": "As mesmas quantidades"
+  }
+}

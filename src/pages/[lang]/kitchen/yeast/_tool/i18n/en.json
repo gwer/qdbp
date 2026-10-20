@@ -1,0 +1,28 @@
+{
+  "title": "Yeast converter: fresh, active dry and instant",
+  "description": "Swap fresh yeast for dry or the other way round — convert between fresh (cake), active dry and instant yeast by weight.",
+  "inputs": {
+    "amount": {
+      "label": "Amount, g"
+    },
+    "from": {
+      "label": "Yeast in the recipe",
+      "options": {
+        "fresh": "Fresh (cake) yeast",
+        "active": "Active dry yeast",
+        "instant": "Instant yeast"
+      }
+    }
+  },
+  "outputs": {
+    "fresh": {
+      "label": "Fresh yeast, g"
+    },
+    "active": {
+      "label": "Active dry, g"
+    },
+    "instant": {
+      "label": "Instant, g"
+    }
+  }
+}
