@@ -1,0 +1,19 @@
+{
+  "title": "Fuel economy converter: mpg to L/100 km",
+  "description": "Convert fuel economy between US mpg, UK mpg, liters per 100 km and kilometers per liter.",
+  "ui": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "table": "{value} {unit} in other units",
+    "error": "Enter a number",
+    "invalid": "Fuel economy must be greater than zero",
+    "units": {
+      "l100": "Liters per 100 km (L/100 km)",
+      "kml": "Kilometers per liter (km/L)",
+      "mpgUs": "Miles per gallon, US (mpg)",
+      "mpgUk": "Miles per gallon, UK (mpg)"
+    }
+  }
+}

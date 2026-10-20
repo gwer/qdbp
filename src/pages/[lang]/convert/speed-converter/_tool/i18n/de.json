@@ -1,0 +1,20 @@
+{
+  "title": "Geschwindigkeitsumrechner: km/h, mph, m/s und Knoten",
+  "description": "Geschwindigkeit zwischen Kilometer pro Stunde, Meilen pro Stunde, Meter pro Sekunde, Fuß pro Sekunde und Knoten umrechnen.",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Ungültiger Wert",
+    "units": {
+      "ms": "Meter pro Sekunde (m/s)",
+      "kmh": "Kilometer pro Stunde (km/h)",
+      "mph": "Meilen pro Stunde (mph)",
+      "knot": "Knoten (kn)",
+      "fts": "Fuß pro Sekunde (ft/s)"
+    }
+  }
+}

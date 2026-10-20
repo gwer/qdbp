@@ -1,0 +1,25 @@
+{
+  "title": "Conversor de peso: quilos, libras e onças",
+  "description": "Converta peso entre quilogramas, gramas, toneladas, libras, onças, stones e quilates.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "Para",
+    "swap": "Inverter",
+    "table": "{value} {unit} em outras unidades",
+    "error": "Digite um número",
+    "invalid": "Valor inválido",
+    "units": {
+      "mg": "Miligramas (mg)",
+      "g": "Gramas (g)",
+      "kg": "Quilogramas (kg)",
+      "t": "Toneladas (t)",
+      "ct": "Quilates (ct)",
+      "oz": "Onças (oz)",
+      "lb": "Libras (lb)",
+      "st": "Stones (st)",
+      "shortTon": "Toneladas curtas (EUA)",
+      "longTon": "Toneladas longas (Reino Unido)"
+    }
+  }
+}

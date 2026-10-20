@@ -1,0 +1,24 @@
+{
+  "title": "Längenumrechner: Meter, Zoll, Fuß und Meilen",
+  "description": "Längen und Entfernungen zwischen metrischen und angloamerikanischen Einheiten umrechnen: Millimeter, Zentimeter, Meter, Kilometer, Zoll, Fuß, Yards und Meilen.",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Ungültiger Wert",
+    "units": {
+      "mm": "Millimeter (mm)",
+      "cm": "Zentimeter (cm)",
+      "m": "Meter (m)",
+      "km": "Kilometer (km)",
+      "in": "Zoll (in)",
+      "ft": "Fuß (ft)",
+      "yd": "Yards (yd)",
+      "mi": "Meilen (mi)",
+      "nmi": "Seemeilen (sm)"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Weight converter: pounds, kilograms and ounces",
+  "description": "Convert weight between pounds, ounces, stones, US and UK tons, kilograms, grams, metric tons and carats.",
+  "ui": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "table": "{value} {unit} in other units",
+    "error": "Enter a number",
+    "invalid": "Invalid value",
+    "units": {
+      "mg": "Milligrams (mg)",
+      "g": "Grams (g)",
+      "kg": "Kilograms (kg)",
+      "t": "Metric tons (t)",
+      "ct": "Carats (ct)",
+      "oz": "Ounces (oz)",
+      "lb": "Pounds (lb)",
+      "st": "Stones (st)",
+      "shortTon": "US tons (short tons)",
+      "longTon": "UK tons (long tons)"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Conversor de volumen: litros, galones y metros cúbicos",
+  "description": "Convierte el volumen entre litros, mililitros, metros cúbicos, galones estadounidenses y británicos, pintas, onzas líquidas, tazas y cucharadas.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "A",
+    "swap": "Intercambiar",
+    "table": "{value} {unit} en otras unidades",
+    "error": "Introduce un número",
+    "invalid": "Valor no válido",
+    "units": {
+      "ml": "Mililitros (ml)",
+      "l": "Litros (l)",
+      "m3": "Metros cúbicos (m³)",
+      "tsp": "Cucharaditas (EE. UU.)",
+      "tbsp": "Cucharadas (EE. UU.)",
+      "flozUs": "Onzas líquidas (EE. UU.)",
+      "cupUs": "Tazas (EE. UU.)",
+      "pintUs": "Pintas (EE. UU.)",
+      "quartUs": "Cuartos (EE. UU.)",
+      "galUs": "Galones (EE. UU.)",
+      "flozUk": "Onzas líquidas (R. U.)",
+      "pintUk": "Pintas (R. U.)",
+      "galUk": "Galones (R. U.)",
+      "in3": "Pulgadas cúbicas",
+      "ft3": "Pies cúbicos"
+    }
+  }
+}

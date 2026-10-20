@@ -1,0 +1,25 @@
+{
+  "title": "Conversor de peso: kilos, libras y onzas",
+  "description": "Convierte el peso entre kilogramos, gramos, toneladas, libras, onzas, stones y quilates.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "A",
+    "swap": "Intercambiar",
+    "table": "{value} {unit} en otras unidades",
+    "error": "Introduce un número",
+    "invalid": "Valor no válido",
+    "units": {
+      "mg": "Miligramos (mg)",
+      "g": "Gramos (g)",
+      "kg": "Kilogramos (kg)",
+      "t": "Toneladas (t)",
+      "ct": "Quilates (ct)",
+      "oz": "Onzas (oz)",
+      "lb": "Libras (lb)",
+      "st": "Stones (st)",
+      "shortTon": "Toneladas cortas (EE. UU.)",
+      "longTon": "Toneladas largas (R. U.)"
+    }
+  }
+}

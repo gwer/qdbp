@@ -1,0 +1,42 @@
+{
+  "title": "Tamanho de calçado: EU, UK, EUA e comprimento do pé",
+  "description": "Converta tamanhos de calçado adulto entre os sistemas europeu, britânico e americano (masculino e feminino) e veja o comprimento do pé em centímetros.",
+  "inputs": {
+    "size": {
+      "label": "Tamanho"
+    },
+    "system": {
+      "label": "Sistema",
+      "options": {
+        "eu": "Europeu (EU)",
+        "uk": "Britânico (UK)",
+        "usM": "EUA masculino",
+        "usW": "EUA feminino",
+        "cm": "Comprimento do pé, cm"
+      }
+    }
+  },
+  "outputs": {
+    "eu": {
+      "label": "Europeu (EU)"
+    },
+    "uk": {
+      "label": "Britânico (UK)"
+    },
+    "usM": {
+      "label": "EUA masculino"
+    },
+    "usW": {
+      "label": "EUA feminino"
+    },
+    "cm": {
+      "label": "Comprimento do pé, cm"
+    }
+  },
+  "ui": {
+    "table": "Tabela de tamanhos",
+    "usM": "EUA masc.",
+    "usW": "EUA fem.",
+    "cm": "Pé, cm"
+  }
+}

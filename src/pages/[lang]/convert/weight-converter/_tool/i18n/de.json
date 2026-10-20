@@ -1,0 +1,25 @@
+{
+  "title": "Gewichtsumrechner: Kilogramm, Pfund und Unzen",
+  "description": "Gewicht zwischen Kilogramm, Gramm, Tonnen, Pfund (lb), Unzen, Stone und Karat umrechnen.",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Ungültiger Wert",
+    "units": {
+      "mg": "Milligramm (mg)",
+      "g": "Gramm (g)",
+      "kg": "Kilogramm (kg)",
+      "t": "Tonnen (t)",
+      "ct": "Karat (ct)",
+      "oz": "Unzen (oz)",
+      "lb": "Pfund (lb)",
+      "st": "Stone (st)",
+      "shortTon": "US-Tonnen (short ton)",
+      "longTon": "Britische Tonnen (long ton)"
+    }
+  }
+}

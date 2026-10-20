@@ -1,0 +1,23 @@
+{
+  "title": "Conversor de energia: kcal, kJ, kWh e BTU",
+  "description": "Converta energia entre quilocalorias, quilojoules, joules, quilowatts-hora e BTU.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "Para",
+    "swap": "Inverter",
+    "table": "{value} {unit} em outras unidades",
+    "error": "Digite um número",
+    "invalid": "Valor inválido",
+    "units": {
+      "j": "Joules (J)",
+      "kj": "Quilojoules (kJ)",
+      "mj": "Megajoules (MJ)",
+      "cal": "Calorias (cal)",
+      "kcal": "Quilocalorias (kcal)",
+      "wh": "Watts-hora (Wh)",
+      "kwh": "Quilowatts-hora (kWh)",
+      "btu": "Unidades térmicas britânicas (BTU)"
+    }
+  }
+}

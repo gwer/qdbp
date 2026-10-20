@@ -1,0 +1,25 @@
+{
+  "title": "Conversor de área: hectares, metros quadrados e acres",
+  "description": "Converta áreas entre metros quadrados, ares, hectares, quilômetros quadrados, acres e pés quadrados.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "Para",
+    "swap": "Inverter",
+    "table": "{value} {unit} em outras unidades",
+    "error": "Digite um número",
+    "invalid": "Valor inválido",
+    "units": {
+      "cm2": "Centímetros quadrados (cm²)",
+      "m2": "Metros quadrados (m²)",
+      "are": "Ares (a)",
+      "ha": "Hectares (ha)",
+      "km2": "Quilômetros quadrados (km²)",
+      "in2": "Polegadas quadradas",
+      "ft2": "Pés quadrados",
+      "yd2": "Jardas quadradas",
+      "acre": "Acres",
+      "mi2": "Milhas quadradas"
+    }
+  }
+}

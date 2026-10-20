@@ -1,0 +1,30 @@
+{
+  "title": "Conversor de volume: litros, galões e metros cúbicos",
+  "description": "Converta volume entre litros, mililitros, metros cúbicos, galões americanos e britânicos, pints, onças fluidas, xícaras e colheres.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "Para",
+    "swap": "Inverter",
+    "table": "{value} {unit} em outras unidades",
+    "error": "Digite um número",
+    "invalid": "Valor inválido",
+    "units": {
+      "ml": "Mililitros (ml)",
+      "l": "Litros (l)",
+      "m3": "Metros cúbicos (m³)",
+      "tsp": "Colheres de chá (EUA)",
+      "tbsp": "Colheres de sopa (EUA)",
+      "flozUs": "Onças fluidas (EUA)",
+      "cupUs": "Xícaras (EUA)",
+      "pintUs": "Pints (EUA)",
+      "quartUs": "Quartos (EUA)",
+      "galUs": "Galões (EUA)",
+      "flozUk": "Onças fluidas (Reino Unido)",
+      "pintUk": "Pints (Reino Unido)",
+      "galUk": "Galões (Reino Unido)",
+      "in3": "Polegadas cúbicas",
+      "ft3": "Pés cúbicos"
+    }
+  }
+}

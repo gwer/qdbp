@@ -1,0 +1,18 @@
+{
+  "title": "Conversor de temperatura: Celsius, Fahrenheit y Kelvin",
+  "description": "Convierte temperaturas entre grados Celsius, Fahrenheit y kelvin: para recetas, el tiempo o física.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "A",
+    "swap": "Intercambiar",
+    "table": "{value} {unit} en otras unidades",
+    "error": "Introduce un número",
+    "invalid": "La temperatura no puede ser inferior al cero absoluto (−273,15 °C)",
+    "units": {
+      "c": "Grados Celsius (°C)",
+      "f": "Grados Fahrenheit (°F)",
+      "k": "Kelvin (K)"
+    }
+  }
+}

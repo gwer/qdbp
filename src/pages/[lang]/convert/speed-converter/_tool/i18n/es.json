@@ -1,0 +1,20 @@
+{
+  "title": "Conversor de velocidad: km/h, mph, m/s y nudos",
+  "description": "Convierte la velocidad entre kilómetros por hora, millas por hora, metros por segundo, pies por segundo y nudos.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "A",
+    "swap": "Intercambiar",
+    "table": "{value} {unit} en otras unidades",
+    "error": "Introduce un número",
+    "invalid": "Valor no válido",
+    "units": {
+      "ms": "Metros por segundo (m/s)",
+      "kmh": "Kilómetros por hora (km/h)",
+      "mph": "Millas por hora (mph)",
+      "knot": "Nudos (kn)",
+      "fts": "Pies por segundo (ft/s)"
+    }
+  }
+}
