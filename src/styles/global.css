@@ -580,3 +580,36 @@ table.kv td {
 .mono {
   font-family: var(--mono);
 }
+
+/* Часовые пояса */
+.tz-table {
+  margin-top: 14px;
+}
+
+.tz-table td {
+  white-space: normal;
+  vertical-align: top;
+}
+
+.tz-table td:nth-child(2) {
+  text-align: right;
+}
+
+.tz-time {
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tz-add {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tz-add select {
+  flex: 1;
+}
+
+.tz-table td:nth-child(2) .muted {
+  white-space: nowrap;
+}

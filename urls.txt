@@ -5,6 +5,7 @@
 /de/dates/days-between/
 /de/dates/time-between/
 /de/dates/time-calculator/
+/de/dates/timezone-converter/
 /de/dates/unix-timestamp/
 /de/dates/week-number/
 /de/dev/
@@ -69,6 +70,7 @@
 /en/dates/days-between/
 /en/dates/time-between/
 /en/dates/time-calculator/
+/en/dates/timezone-converter/
 /en/dates/unix-timestamp/
 /en/dates/week-number/
 /en/dev/
@@ -132,6 +134,7 @@
 /es/dates/days-between/
 /es/dates/time-between/
 /es/dates/time-calculator/
+/es/dates/timezone-converter/
 /es/dates/unix-timestamp/
 /es/dates/week-number/
 /es/dev/
@@ -196,6 +199,7 @@
 /pt/dates/days-between/
 /pt/dates/time-between/
 /pt/dates/time-calculator/
+/pt/dates/timezone-converter/
 /pt/dates/unix-timestamp/
 /pt/dates/week-number/
 /pt/dev/
@@ -260,6 +264,7 @@
 /ru/dates/days-between/
 /ru/dates/time-between/
 /ru/dates/time-calculator/
+/ru/dates/timezone-converter/
 /ru/dates/unix-timestamp/
 /ru/dates/week-number/
 /ru/dev/
