@@ -10,9 +10,9 @@ Fügen Sie das Token in das Feld ein – allein oder mit dem Präfix `Authorizat
 
 Das Token wird im Browser dekodiert und nicht hochgeladen. Behandeln Sie echte Zugangstokens vertraulich: Ein offengelegtes, gültiges Bearer-Token kann im Rahmen seiner Berechtigungen bis zum Ablauf oder Widerruf Zugriff ermöglichen. Das Dekodieren bestätigt nicht die Gültigkeit.
 
-## Die Signatur wird nicht geprüft
+## Signatur prüfen
 
-Der Decoder zeigt den Inhalt, prüft aber die Signatur nicht – dafür braucht man den geheimen oder öffentlichen Schlüssel des Servers. Die Payload eines normalen JWT ist nicht verschlüsselt, sondern nur Base64URL-kodiert: Lesen kann sie jeder, fälschen ohne Schlüssel niemand. Deshalb:
+Tokens mit HS256, HS384 oder HS512 werden mit einem gemeinsamen Secret signiert. Haben Sie es, tragen Sie es im Feld unter dem Token ein – die Signatur wird direkt im Browser geprüft. RS- und ES-Signaturen (öffentlicher Schlüssel) prüft das Tool nicht, dafür braucht man den öffentlichen Schlüssel des Servers. Die Payload eines normalen JWT ist nicht verschlüsselt, sondern nur Base64URL-kodiert: Lesen kann sie jeder, fälschen ohne Schlüssel niemand. Deshalb:
 
 - keine Passwörter und personenbezogenen Daten in Tokens speichern;
 - nichts auf Claims stützen, bevor der Server die Signatur geprüft hat;

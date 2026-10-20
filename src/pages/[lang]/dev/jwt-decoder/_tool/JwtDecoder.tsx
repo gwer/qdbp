@@ -5,7 +5,7 @@ import { Toggle } from '@/ui/Calculator';
 import { CopyButton } from '@/ui/CopyButton';
 import type { ToolProps } from '@/ui/define';
 import { readPref, writePref } from '@/ui/prefs';
-import { decodeJwt, JwtError, jwtStatus, timeClaims, type DecodedJwt } from './jwt';
+import { decodeJwt, isHmac, JwtError, jwtStatus, timeClaims, verifyHmac, type DecodedJwt } from './jwt';
 
 const SAMPLE =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY3MjI1NjAwLCJuYmYiOjE3NjcyMjU2MDAsImV4cCI6MTc5ODc2MTYwMH0.RDvudNA1pyyGaAIcSdO7DgEmU2_VncMo0ojXM6gg53U';
@@ -33,6 +33,9 @@ export function JwtDecoder({ lang, t }: ToolProps) {
   const [clock, setClock] = useState<ClockMode>(LANG_META[lang].clock);
   // null — пререндер: «сейчас» и часовой пояс известны только в браузере.
   const [now, setNow] = useState<number | null>(null);
+  const [secret, setSecret] = useState('');
+  // null — нечего проверять (нет секрета или токен не HS*).
+  const [verified, setVerified] = useState<boolean | null>(null);
 
   useEffect(() => {
     const stored = readPref('clock');
@@ -51,6 +54,16 @@ export function JwtDecoder({ lang, t }: ToolProps) {
     error = t(`ui.errors.${err.code}`, { part: err.part ? t(`ui.parts.${err.part}`) : '', count: err.count ?? 0 });
   }
   const claims = jwt ? timeClaims(jwt.payload) : [];
+  const hmac = !!jwt && isHmac(jwt.header.alg);
+
+  useEffect(() => {
+    let cancelled = false;
+    setVerified(null);
+    if (hmac && secret) verifyHmac(input, secret).then((ok) => !cancelled && setVerified(ok), () => !cancelled && setVerified(false));
+    return () => {
+      cancelled = true;
+    };
+  }, [input, secret, hmac]);
   const status = jwt && now !== null ? jwtStatus(jwt.payload, now) : null;
 
   return (
@@ -71,9 +84,25 @@ export function JwtDecoder({ lang, t }: ToolProps) {
         />
         {error && <p class="field-error">{error}</p>}
         <p id="jwt-note" class="muted jwt-note">
-          {t('ui.noVerify')}
+          {t(hmac ? 'ui.verifyNote' : 'ui.noVerify')}
         </p>
       </div>
+      {hmac && (
+        <div class="field">
+          <label for="jwt-secret">{t('ui.secret', { alg: String(jwt!.header.alg) })}</label>
+          <input
+            id="jwt-secret"
+            type="text"
+            class="mono"
+            autoComplete="off"
+            spellcheck={false}
+            value={secret}
+            placeholder={input === SAMPLE ? t('ui.sampleSecret') : undefined}
+            onInput={(e) => setSecret(e.currentTarget.value)}
+          />
+          {verified !== null && <p class={verified ? 'hash-ok' : 'field-error'}>{t(verified ? 'ui.sigOk' : 'ui.sigBad')}</p>}
+        </div>
+      )}
 
       {jwt && (
         <>

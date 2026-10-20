@@ -10,9 +10,9 @@ Cole o token no campo, sozinho ou com o prefixo `Authorization: Bearer …`; que
 
 O token é decodificado no navegador e não é enviado a um servidor. Mantenha os tokens de acesso reais em segredo: um token bearer válido que vaze pode permitir acesso dentro de suas permissões até expirar ou ser revogado. A decodificação não confirma a validade do token.
 
-## A assinatura não é verificada
+## Verificar a assinatura
 
-O decodificador mostra o conteúdo, mas não confere a assinatura: para isso é preciso a chave secreta ou pública do servidor. O payload de um JWT comum não é criptografado, só codificado em Base64URL: qualquer um consegue ler, mas ninguém consegue falsificar sem a chave. Por isso:
+Tokens HS256, HS384 e HS512 são assinados com um segredo compartilhado. Se você o tem, digite-o no campo abaixo do token e a assinatura é conferida no próprio navegador. Assinaturas RS e ES (chave pública) não são verificadas aqui: exigem a chave pública do servidor. O payload de um JWT comum não é criptografado, só codificado em Base64URL: qualquer um consegue ler, mas ninguém consegue falsificar sem a chave. Por isso:
 
 - não guarde senhas nem dados pessoais no token;
 - não tome decisões com base nos dados do token antes de o servidor validar a assinatura;

@@ -3,7 +3,7 @@
   "description": "JWT einfügen und Header und Payload als lesbares JSON sehen, dazu exp, iat und nbf in Ihrer Zeitzone und ob das Token abgelaufen ist. Das Token verlässt Ihren Browser nicht.",
   "ui": {
     "input": "JWT",
-    "noVerify": "Die Signatur wird nicht geprüft: Das Tool zeigt nur den Inhalt. Ein JWT kann jeder lesen – vertrauen Sie seinen Daten erst, wenn der Server die Signatur geprüft hat.",
+    "noVerify": "Die Signatur dieses Tokens wird hier nicht geprüft: RS- und ES-Algorithmen brauchen den öffentlichen Schlüssel des Servers. Ein JWT kann jeder lesen – vertrauen Sie seinen Daten erst nach der Signaturprüfung.",
     "header": "Header",
     "payload": "Payload",
     "signature": "Signatur",
@@ -29,6 +29,11 @@
       "iat": "ausgestellt",
       "nbf": "gültig ab",
       "exp": "läuft ab"
-    }
+    },
+    "verifyNote": "Zum Prüfen der Signatur geben Sie unten das Secret ein: Die Prüfung läuft im Browser, nichts wird gesendet. Produktive Secrets sollten Sie trotzdem nirgends einfügen.",
+    "secret": "Secret zur Signaturprüfung ({alg})",
+    "sampleSecret": "Secret des Beispieltokens: qdbp",
+    "sigOk": "Signatur gültig: Der Token wurde mit diesem Secret signiert und nicht verändert.",
+    "sigBad": "Signatur ungültig: anderes Secret oder der Token wurde verändert."
   }
 }

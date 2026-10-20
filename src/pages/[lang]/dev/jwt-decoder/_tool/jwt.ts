@@ -48,8 +48,10 @@ export interface DecodedJwt {
  * Пробелы и переносы строк внутри и префикс «Bearer » игнорируются — так токен обычно копируют.
  * Пустой ввод — null.
  */
+const cleanToken = (input: string) => input.trim().replace(/^Bearer\s+/i, '').replace(/\s+/g, '');
+
 export function decodeJwt(input: string): DecodedJwt | null {
-  const token = input.trim().replace(/^Bearer\s+/i, '').replace(/\s+/g, '');
+  const token = cleanToken(input);
   if (!token) return null;
   const parts = token.split('.');
   if (parts.length === 5) throw new JwtError('jwe');
@@ -79,4 +81,27 @@ export function jwtStatus(payload: Record<string, unknown>, nowMs: number): JwtS
   if (t.exp !== undefined && nowMs >= t.exp) return 'expired';
   if (t.nbf !== undefined && nowMs < t.nbf) return 'notYet';
   return t.exp !== undefined ? 'valid' : 'noExp';
+}
+
+const HMAC: Record<string, string> = { HS256: 'SHA-256', HS384: 'SHA-384', HS512: 'SHA-512' };
+
+/** Алгоритм токена подписывается общим секретом (HS256/384/512) — такую подпись можно проверить в браузере. */
+export const isHmac = (alg: unknown) => typeof alg === 'string' && alg in HMAC;
+
+/**
+ * Проверка подписи HS256/384/512 секретом (строка в UTF-8) через WebCrypto.
+ * Подпись — HMAC от «заголовок.payload» в исходной записи токена, в Base64URL.
+ */
+export async function verifyHmac(input: string, secret: string): Promise<boolean> {
+  const token = cleanToken(input);
+  const [h, p, sig] = token.split('.');
+  const alg = decodePart(h, 'header').alg as string;
+  if (!isHmac(alg)) throw new Error('not an HMAC token');
+  const enc = new TextEncoder();
+  const key = await crypto.subtle.importKey('raw', enc.encode(secret), { name: 'HMAC', hash: HMAC[alg] }, false, ['sign']);
+  const mac = new Uint8Array(await crypto.subtle.sign('HMAC', key, enc.encode(`${h}.${p}`)));
+  let bin = '';
+  for (const b of mac) bin += String.fromCharCode(b);
+  const expected = btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  return expected === sig.replace(/=+$/, '');
 }

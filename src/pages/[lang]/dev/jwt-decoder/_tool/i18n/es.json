@@ -3,7 +3,7 @@
   "description": "Pega un JWT y verás la cabecera y el payload como JSON legible, las fechas exp, iat y nbf en tu zona horaria y si el token ha caducado. El token no sale de tu navegador.",
   "ui": {
     "input": "Token JWT",
-    "noVerify": "La firma no se verifica: la herramienta solo muestra el contenido. Cualquiera puede leer un JWT, así que no te fíes de sus datos hasta que el servidor compruebe la firma.",
+    "noVerify": "Aquí no se verifica la firma de este token: los algoritmos RS y ES necesitan la clave pública del servidor. Cualquiera puede leer un JWT, así que no te fíes de sus datos sin comprobar la firma.",
     "header": "Cabecera (header)",
     "payload": "Datos (payload)",
     "signature": "Firma (signature)",
@@ -29,6 +29,11 @@
       "iat": "emitido",
       "nbf": "válido desde",
       "exp": "caduca"
-    }
+    },
+    "verifyNote": "Para verificar la firma, escribe el secreto abajo: se comprueba en tu navegador y no se envía a ningún sitio. Aun así, mejor no pegar secretos de producción en webs.",
+    "secret": "Secreto para verificar la firma ({alg})",
+    "sampleSecret": "el secreto del token de ejemplo es qdbp",
+    "sigOk": "Firma válida: el token se firmó con este secreto y no se ha modificado.",
+    "sigBad": "La firma no coincide: otro secreto o el token se ha modificado."
   }
 }

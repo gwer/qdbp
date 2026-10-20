@@ -3,7 +3,7 @@
   "description": "Paste a JWT to see its header and payload as readable JSON, the exp, iat and nbf times in your time zone, and whether the token has expired. The token never leaves your browser.",
   "ui": {
     "input": "JWT",
-    "noVerify": "The signature is not verified: this tool only shows what is inside. Anyone can read a JWT, so never trust its contents until the signature has been checked on the server.",
+    "noVerify": "This token’s signature isn’t verified here: RS and ES algorithms need the server’s public key. Anyone can read a JWT, so never trust its contents until the signature has been checked.",
     "header": "Header",
     "payload": "Payload",
     "signature": "Signature",
@@ -29,6 +29,11 @@
       "iat": "issued at",
       "nbf": "not before",
       "exp": "expires"
-    }
+    },
+    "verifyNote": "To verify the signature, enter the secret below: it’s checked in your browser and never sent anywhere. Still, avoid pasting production secrets into websites.",
+    "secret": "Secret to verify the signature ({alg})",
+    "sampleSecret": "the sample token’s secret is qdbp",
+    "sigOk": "Signature verified: the token was signed with this secret and hasn’t been changed.",
+    "sigBad": "Invalid signature: a different secret, or the token was modified."
   }
 }

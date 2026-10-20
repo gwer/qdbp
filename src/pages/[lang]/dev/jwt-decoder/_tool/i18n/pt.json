@@ -3,7 +3,7 @@
   "description": "Cole um JWT e veja o header e o payload em JSON legível, as datas exp, iat e nbf no seu fuso horário e se o token já expirou. O token não sai do seu navegador.",
   "ui": {
     "input": "Token JWT",
-    "noVerify": "A assinatura não é verificada: a ferramenta só mostra o conteúdo. Qualquer pessoa consegue ler um JWT, então não confie nos dados dele antes de o servidor validar a assinatura.",
+    "noVerify": "A assinatura deste token não é verificada aqui: os algoritmos RS e ES exigem a chave pública do servidor. Qualquer um pode ler um JWT, então não confie nos dados sem verificar a assinatura.",
     "header": "Cabeçalho (header)",
     "payload": "Dados (payload)",
     "signature": "Assinatura (signature)",
@@ -29,6 +29,11 @@
       "iat": "emitido em",
       "nbf": "válido a partir de",
       "exp": "expira em"
-    }
+    },
+    "verifyNote": "Para verificar a assinatura, digite o segredo abaixo: a verificação é feita no navegador e nada é enviado. Mesmo assim, evite colar segredos de produção em sites.",
+    "secret": "Segredo para verificar a assinatura ({alg})",
+    "sampleSecret": "o segredo do token de exemplo é qdbp",
+    "sigOk": "Assinatura válida: o token foi assinado com este segredo e não foi alterado.",
+    "sigBad": "A assinatura não confere: outro segredo ou o token foi alterado."
   }
 }

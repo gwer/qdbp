@@ -10,9 +10,9 @@ Paste the token into the box — on its own or with the `Authorization: Bearer �
 
 The token is decoded in your browser and is not uploaded. Treat real access tokens as secrets: a leaked, valid bearer token may grant access within its permissions until it expires or is revoked. Decoding does not verify that a token is valid.
 
-## The signature is not verified
+## Verifying the signature
 
-The decoder shows what's inside but doesn't check the signature — that takes the server's secret or public key. The payload of a regular JWT is not encrypted, only Base64URL-encoded: anyone can read it, but nobody can forge it without the key. So:
+Tokens using HS256, HS384 or HS512 are signed with a shared secret. If you have it, enter it in the field below the token and the signature is checked right in your browser. RS and ES signatures (public-key) aren't verified here — they need the server's public key. The payload of a regular JWT is not encrypted, only Base64URL-encoded: anyone can read it, but nobody can forge it without the key. So:
 
 - don't put passwords or personal data in a token;
 - don't act on a token's claims until the server has verified the signature;

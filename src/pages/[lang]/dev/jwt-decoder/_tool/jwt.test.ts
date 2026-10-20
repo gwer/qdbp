@@ -75,3 +75,14 @@ describe('time claims', () => {
     expect(jwtStatus({ iat: 100 }, 0)).toBe('noExp');
   });
 });
+
+describe('проверка подписи HS256', () => {
+  // Известный пример с jwt.io: секрет your-256-bit-secret.
+  const T = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
+  it('верный секрет — true, неверный — false, Bearer и переносы не мешают', async () => {
+    const { verifyHmac } = await import('./jwt');
+    expect(await verifyHmac(T, 'your-256-bit-secret')).toBe(true);
+    expect(await verifyHmac(T, 'wrong')).toBe(false);
+    expect(await verifyHmac(`Bearer ${T.slice(0, 40)}\n${T.slice(40)}`, 'your-256-bit-secret')).toBe(true);
+  });
+});

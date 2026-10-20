@@ -10,9 +10,9 @@ Pega el token en el campo, solo o con el prefijo `Authorization: Bearer …`; lo
 
 El token se decodifica en tu navegador y no se sube a un servidor. Trata los tokens de acceso reales como secretos: un token bearer válido que se filtre puede dar acceso dentro de sus permisos hasta que caduque o se revoque. Decodificarlo no confirma su validez.
 
-## La firma no se verifica
+## Verificar la firma
 
-El decodificador muestra el contenido, pero no comprueba la firma: para eso hace falta la clave secreta o pública del servidor. El payload de un JWT normal no está cifrado, solo codificado en Base64URL: cualquiera puede leerlo, pero nadie puede falsificarlo sin la clave. Por eso:
+Los tokens HS256, HS384 y HS512 se firman con un secreto compartido. Si lo tienes, escríbelo en el campo bajo el token y la firma se comprobará en tu navegador. Las firmas RS y ES (de clave pública) no se verifican aquí: necesitan la clave pública del servidor. El payload de un JWT normal no está cifrado, solo codificado en Base64URL: cualquiera puede leerlo, pero nadie puede falsificarlo sin la clave. Por eso:
 
 - no guardes contraseñas ni datos personales en un token;
 - no tomes decisiones con los datos del token hasta que el servidor haya verificado la firma;
