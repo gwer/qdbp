@@ -819,3 +819,40 @@ ol.picked {
   font-weight: 700;
   margin-top: 14px;
 }
+
+/* Обратный отсчёт */
+.countdown-box {
+  margin-top: 20px;
+}
+
+.countdown-title {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.countdown div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 4px;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.countdown strong {
+  font-size: 2rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.countdown span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}

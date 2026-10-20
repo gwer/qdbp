@@ -14,6 +14,7 @@
 /de/dates/
 /de/dates/add-to-date/
 /de/dates/age-calculator/
+/de/dates/countdown/
 /de/dates/days-between/
 /de/dates/time-between/
 /de/dates/time-calculator/
@@ -116,6 +117,7 @@
 /en/dates/
 /en/dates/add-to-date/
 /en/dates/age-calculator/
+/en/dates/countdown/
 /en/dates/days-between/
 /en/dates/time-between/
 /en/dates/time-calculator/
@@ -217,6 +219,7 @@
 /es/dates/
 /es/dates/add-to-date/
 /es/dates/age-calculator/
+/es/dates/countdown/
 /es/dates/days-between/
 /es/dates/time-between/
 /es/dates/time-calculator/
@@ -319,6 +322,7 @@
 /pt/dates/
 /pt/dates/add-to-date/
 /pt/dates/age-calculator/
+/pt/dates/countdown/
 /pt/dates/days-between/
 /pt/dates/time-between/
 /pt/dates/time-calculator/
@@ -421,6 +425,7 @@
 /ru/dates/
 /ru/dates/add-to-date/
 /ru/dates/age-calculator/
+/ru/dates/countdown/
 /ru/dates/days-between/
 /ru/dates/time-between/
 /ru/dates/time-calculator/

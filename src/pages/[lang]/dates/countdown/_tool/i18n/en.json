@@ -1,0 +1,42 @@
+{
+  "title": "Countdown timer: how many days until a date",
+  "description": "See how many days, hours, minutes and seconds are left until New Year, a birthday, a vacation or any other date — with a live countdown.",
+  "inputs": {
+    "date": {
+      "label": "Event date"
+    },
+    "time": {
+      "label": "Time"
+    }
+  },
+  "outputs": {
+    "date": {
+      "label": "Event"
+    }
+  },
+  "ui": {
+    "until": "Time left",
+    "since": "Time since",
+    "days": {
+      "one": "day",
+      "other": "days"
+    },
+    "hours": {
+      "one": "hour",
+      "other": "hours"
+    },
+    "minutes": {
+      "one": "minute",
+      "other": "minutes"
+    },
+    "seconds": {
+      "one": "second",
+      "other": "seconds"
+    },
+    "weeks": {
+      "one": "{n} week",
+      "other": "{n} weeks"
+    },
+    "totals": "That’s {weeks}, or {hours} hours, or {minutes} minutes."
+  }
+}
