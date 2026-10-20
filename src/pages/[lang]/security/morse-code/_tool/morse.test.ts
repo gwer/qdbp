@@ -24,3 +24,11 @@ describe('морзе', () => {
     expect(() => decodeMorse('......', 'latin')).toThrow();
   });
 });
+
+describe('звук', () => {
+  it('SOS: точки 1, тире 3, паузы 1 / 3 / 7', async () => {
+    const { morseTimeline } = await import('./morse');
+    expect(morseTimeline('... --- ...')).toEqual([[0, 1], [2, 1], [4, 1], [8, 3], [12, 3], [16, 3], [22, 1], [24, 1], [26, 1]]);
+    expect(morseTimeline('. / .')).toEqual([[0, 1], [8, 1]]);
+  });
+});

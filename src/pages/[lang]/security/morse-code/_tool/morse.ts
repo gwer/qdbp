@@ -60,3 +60,26 @@ export function decodeMorse(morse: string, alphabet: 'latin' | 'cyrillic'): stri
     )
     .join(' ');
 }
+
+/**
+ * Расписание звука для записи Морзе: [начало, длительность] в единицах (точка = 1).
+ * Тире — 3, пауза внутри знака — 1, между знаками — 3, между словами («/») — 7.
+ */
+export function morseTimeline(morse: string): [number, number][] {
+  const out: [number, number][] = [];
+  let t = 0;
+  for (const word of morse.trim().split(/\s*\/\s*/)) {
+    for (const letter of word.split(/\s+/).filter(Boolean)) {
+      for (const sym of letter) {
+        const len = sym === '-' ? 3 : 1;
+        out.push([t, len]);
+        t += len + 1;
+      }
+      t += 2; // до 3 между знаками
+    }
+    t += 4; // до 7 между словами
+  }
+  return out;
+}
+
+export const isMorse = (s: string) => /^[.\-/\s]+$/.test(s) && /[.-]/.test(s);

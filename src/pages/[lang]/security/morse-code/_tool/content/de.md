@@ -2,6 +2,8 @@
 
 Um Text in Morsecode zu übersetzen, „In Morse“ wählen und eingeben – Buchstaben mit Umlauten, Ziffern und Satzzeichen werden unterstützt. Zum Entschlüsseln „Aus Morse“ wählen und Punkte und Striche einfügen.
 
+„Anhören“ spielt den Code mit 18 Wörtern pro Minute und 600 Hz ab – so lernt man Morsen nach Gehör.
+
 Buchstaben werden durch Leerzeichen getrennt, Wörter durch einen Schrägstrich `/`. Statt Punkt und Strich können Sie auch `·` und `—` einfügen.
 
 ## Beispiele

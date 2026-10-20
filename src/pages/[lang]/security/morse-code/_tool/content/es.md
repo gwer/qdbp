@@ -2,6 +2,8 @@
 
 Para traducir un texto a morse, elige «A morse» y escribe: se admiten letras (incluida la Ñ), números y signos de puntuación. Para descifrar, elige «Desde morse» y pega los puntos y rayas.
 
+El botón «Escuchar» reproduce el código a 18 palabras por minuto con un tono de 600 Hz, como se aprende Morse de oído.
+
 Las letras se separan con un espacio y las palabras con una barra `/`. También puedes pegar `·` y `—` en lugar de puntos y rayas.
 
 ## Ejemplos

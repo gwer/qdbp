@@ -2,6 +2,8 @@
 
 Para traduzir um texto para Morse, escolha "Para Morse" e digite — letras (inclusive Ç), números e pontuação são aceitos. Para decifrar, escolha "De Morse" e cole os pontos e traços.
 
+O botão «Ouvir» toca o código a 18 palavras por minuto com tom de 600 Hz — como se aprende Morse de ouvido.
+
 As letras são separadas por espaço e as palavras por uma barra `/`. Também dá para colar `·` e `—` no lugar de pontos e traços.
 
 ## Exemplos

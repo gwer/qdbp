@@ -10,6 +10,8 @@
       "encode": "A morse",
       "decode": "Desde morse",
       "decodeCyrillic": "Desde morse (cirílico)"
-    }
+    },
+    "play": "Escuchar",
+    "stop": "Detener"
   }
 }

@@ -10,6 +10,8 @@
       "encode": "Para Morse",
       "decode": "De Morse",
       "decodeCyrillic": "De Morse (cirílico)"
-    }
+    },
+    "play": "Ouvir",
+    "stop": "Parar"
   }
 }

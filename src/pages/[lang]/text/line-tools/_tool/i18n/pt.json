@@ -14,6 +14,7 @@
       "removeEmpty": "Remover linhas vazias",
       "trim": "Remover espaços",
       "reverse": "Inverter ordem"
-    }
+    },
+    "stats": "Linhas antes: {from}, depois: {to}"
   }
 }

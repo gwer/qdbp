@@ -25,3 +25,13 @@ describe('регистр', () => {
     expect(kebab('Hello big World', 'en-US')).toBe('hello-big-world');
   });
 });
+
+describe('CONSTANT_CASE и dot.case', () => {
+  it('из обычной фразы и из camelCase', async () => {
+    const { constant, dot } = await import('./case');
+    expect(constant('max retry count', 'en')).toBe('MAX_RETRY_COUNT');
+    expect(dot('appTitleMain', 'en')).toBe('app.title.main');
+    expect(constant('XMLHttpRequest', 'en')).toBe('XML_HTTP_REQUEST');
+    expect(constant('version2Beta', 'en')).toBe('VERSION2_BETA');
+  });
+});

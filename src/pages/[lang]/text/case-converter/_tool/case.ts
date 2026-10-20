@@ -2,7 +2,8 @@
 // турецкая i работала правильно, когда язык появится.
 
 const WORD = /[\p{L}\p{N}]+(?:['’][\p{L}\p{N}]+)*/gu;
-const words = (s: string) => s.match(WORD) ?? [];
+// Слова в программном коде разделяются и сменой регистра: camelCase, PascalCase, XMLHttpRequest → XML Http Request.
+const words = (s: string) => (s.match(WORD) ?? []).flatMap((w) => w.split(/(?<=\p{Ll}|\p{N})(?=\p{Lu})|(?<=\p{Lu})(?=\p{Lu}\p{Ll})/u));
 const cap = (w: string, locale: string) => w.charAt(0).toLocaleUpperCase(locale) + w.slice(1).toLocaleLowerCase(locale);
 
 export const upper = (s: string, locale: string) => s.toLocaleUpperCase(locale);
@@ -25,3 +26,7 @@ export const camel = (s: string, locale: string) =>
 export const pascal = (s: string, locale: string) => words(s).map((w) => cap(w, locale)).join('');
 export const snake = (s: string, locale: string) => words(s).map((w) => w.toLocaleLowerCase(locale)).join('_');
 export const kebab = (s: string, locale: string) => words(s).map((w) => w.toLocaleLowerCase(locale)).join('-');
+/** Константы в коде: MAX_RETRY_COUNT. */
+export const constant = (s: string, locale: string) => words(s).map((w) => w.toLocaleUpperCase(locale)).join('_');
+/** Ключи настроек и переводов: app.title.main. */
+export const dot = (s: string, locale: string) => words(s).map((w) => w.toLocaleLowerCase(locale)).join('.');

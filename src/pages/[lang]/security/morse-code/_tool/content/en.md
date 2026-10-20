@@ -2,6 +2,8 @@
 
 To translate text to Morse code, choose "To Morse" and type — letters, numbers and punctuation are supported. To decode, choose "From Morse" and paste the dots and dashes.
 
+The “Play” button sounds the code out at 18 words per minute on a 600 Hz tone — the way Morse is learned by ear.
+
 Letters are separated by a space and words by a slash `/`. You can also paste `·` and `—` instead of dots and dashes.
 
 ## Examples

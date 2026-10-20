@@ -1,3 +1,4 @@
+import type { ComponentChildren } from 'preact';
 import { useState } from 'preact/hooks';
 import type { T } from '@/i18n/t';
 import { CopyButton } from './CopyButton';
@@ -19,12 +20,18 @@ export function TextConverter({
   modes,
   placeholder,
   describeError,
+  note,
+  actions,
 }: {
   t: T;
   modes: Mode[];
   placeholder?: string;
   /** Подробности ошибки для пользователя (например, «строка 3, столбец 5»). */
   describeError?: (error: unknown, input: string) => string | null;
+  /** Короткая сводка под результатом («было 12 строк, стало 9»). */
+  note?: (input: string, output: string) => string | null;
+  /** Дополнительные кнопки рядом с «Копировать» (например, «Прослушать» у азбуки Морзе). */
+  actions?: (input: string, output: string) => ComponentChildren;
 }) {
   const [mode, setMode] = useState(modes[0].id);
   const [input, setInput] = useState('');
@@ -67,6 +74,7 @@ export function TextConverter({
       <div class="field">
         <label for="tc-out">{t('ui.output')}</label>
         <textarea id="tc-out" class="mono" rows={6} readOnly value={error ? '' : output} />
+        {!error && output && note && <p class="muted">{note(input, output)}</p>}
         {error && (
           <p class="field-error" id="tc-err">
             {t('ui.error')}
@@ -89,6 +97,7 @@ export function TextConverter({
         >
           ↑ {t('common.useOutput')}
         </button>
+        {!error && actions?.(input, output)}
       </div>
     </div>
   );

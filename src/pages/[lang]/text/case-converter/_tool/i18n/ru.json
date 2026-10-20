@@ -14,7 +14,9 @@
       "camel": "camelCase",
       "pascal": "PascalCase",
       "snake": "snake_case",
-      "kebab": "kebab-case"
+      "kebab": "kebab-case",
+      "constant": "CONSTANT_CASE",
+      "dot": "dot.case"
     }
   }
 }

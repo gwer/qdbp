@@ -8,6 +8,10 @@ export function LineTools({ lang, t }: ToolProps) {
   return (
     <TextConverter
       t={t}
+      note={(input, output) => {
+        const count = (s: string) => s.replace(/\r\n?/g, '\n').split('\n').length;
+        return t('ui.stats', { from: count(input), to: count(output) });
+      }}
       modes={[
         { id: 'dedupe', run: dedupe },
         { id: 'dedupeIgnoreCase', run: (s) => dedupeIgnoreCase(s, locale) },
