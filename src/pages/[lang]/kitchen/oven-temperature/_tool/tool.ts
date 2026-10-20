@@ -11,7 +11,7 @@ export const def = defineCalculator({
   order: 10,
   related: ['cake-pan', 'cups-to-grams'],
   inputs: {
-    value: { type: 'number', default: 180, byLang: { en: 350 } },
+    value: { type: 'number', default: 180, defaultBy: { scale: { c: 180, f: 350, gas: 4 } } },
     scale: { type: 'select', options: ['c', 'f', 'gas'], default: 'c', byLang: { en: 'f' } },
   },
   compute: ({ value, scale }) => oven(value, scale),

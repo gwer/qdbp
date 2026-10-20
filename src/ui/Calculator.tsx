@@ -44,13 +44,39 @@ function quantityText(spec: QuantityInput, value: number, env: Env, exact?: Exac
   return text;
 }
 
-/** Значения по умолчанию в виде текста полей. Пока «сейчас» неизвестно (сервер), поля «today…»/«now» пустые. */
-function defaults(def: CalculatorDef, env: Env, now: Now, exact?: Exact): Raw {
+/** Видно ли поле при текущем выборе в select'ах (showIf). */
+function visible(spec: InputSpec, selected: Record<string, unknown>): boolean {
+  return Object.entries(spec.showIf ?? {}).every(([field, want]) =>
+    typeof want === 'string' ? selected[field] === want : want.includes(selected[field] as string),
+  );
+}
+
+/** Выбор в select'ах: из chosen (текущие поля или URL), если там допустимое значение, иначе по умолчанию. */
+function selection(def: CalculatorDef, lang: Lang, chosen: Raw): Raw {
+  const out: Raw = {};
+  for (const [name, spec] of entries(def)) {
+    if (spec.type !== 'select') continue;
+    out[name] = spec.options.includes(chosen[name]) ? chosen[name] : (spec.byLang?.[lang] ?? spec.default);
+  }
+  return out;
+}
+
+/**
+ * Значения по умолчанию в виде текста полей. Пока «сейчас» неизвестно (сервер), поля «today…»/«now» пустые.
+ * chosen — текущий выбор в select'ах: от него зависят значения по умолчанию с defaultBy.
+ */
+function defaults(def: CalculatorDef, env: Env, now: Now, exact?: Exact, chosen: Raw = {}): Raw {
+  const selected = selection(def, env.lang, chosen);
   const raw: Raw = {};
   for (const [name, input] of entries(def)) {
-    // Значение по умолчанию для языка страницы, если задано (byLang), иначе общее.
-    const spec = 'byLang' in input && input.byLang?.[env.lang] !== undefined ? ({ ...input, default: input.byLang[env.lang] } as InputSpec) : input;
-    if (spec.type === 'select') raw[name] = spec.default;
+    // Значение по умолчанию: по выбору в select (defaultBy), для языка страницы (byLang) или общее.
+    const byMode =
+      'defaultBy' in input && input.defaultBy
+        ? Object.entries(input.defaultBy).map(([field, map]) => map[selected[field]]).find((v) => v !== undefined)
+        : undefined;
+    const byLang = 'byLang' in input ? input.byLang?.[env.lang] : undefined;
+    const spec = (byMode ?? byLang) !== undefined ? ({ ...input, default: byMode ?? byLang } as InputSpec) : input;
+    if (spec.type === 'select') raw[name] = selected[name];
     else if (spec.type === 'date') {
       const iso = resolveDateDefault(spec.default, now?.date ?? null);
       raw[name] = iso ? formatDateInput(iso, env.lang) : '';
@@ -69,12 +95,15 @@ function defaults(def: CalculatorDef, env: Env, now: Now, exact?: Exact): Raw {
   return raw;
 }
 
-function parseInputs(def: CalculatorDef, raw: Raw, env: Env, exact?: Exact) {
+function parseInputs(def: CalculatorDef, raw: Raw, env: Env, now: Now, exact?: Exact) {
   const { lang, t } = env;
   const values: Values = {};
   const errors: Record<string, string> = {};
+  // Скрытые поля (showIf) не проверяются: в расчёт уходит их значение по умолчанию.
+  let fallback: Raw | null = null;
   for (const [name, spec] of entries(def)) {
-    const s = raw[name];
+    const shown = visible(spec, raw);
+    const s = shown ? raw[name] : (fallback ??= defaults(def, env, now, undefined, raw))[name];
     if (spec.type === 'select') {
       values[name] = spec.options.includes(s) ? s : spec.default;
     } else if (spec.type === 'date') {
@@ -134,7 +163,7 @@ function readQuery(def: CalculatorDef, env: Env, exact?: Exact): Raw {
 function writeQuery(def: CalculatorDef, values: Values, initial: Values) {
   const params = new URLSearchParams();
   for (const [name, spec] of entries(def)) {
-    if (!(name in values) || values[name] === initial[name]) continue;
+    if (!(name in values) || values[name] === initial[name] || !visible(spec, values)) continue;
     const v = values[name];
     params.set(name, spec.type === 'time' ? clockValue(v as number) : spec.type === 'quantity' ? String(tidy(v as number)) : String(v));
   }
@@ -164,15 +193,15 @@ function formatOutput(env: Env, value: unknown, spec: OutputSpec = {}): string {
  */
 function reformat(def: CalculatorDef, raw: Raw, from: Env, to: Env, now: Now, exact: Exact): Raw {
   const out = { ...raw };
-  const { values } = parseInputs(def, raw, from, exact);
-  const oldDefaults = defaults(def, from, now);
+  const { values } = parseInputs(def, raw, from, now, exact);
+  const oldDefaults = defaults(def, from, now, undefined, raw);
   for (const [name, spec] of entries(def)) {
     if (!(name in values)) continue;
     if (spec.type === 'time') out[name] = formatTyped(values[name] as number, to.clock);
     if (spec.type === 'quantity' && from.units !== to.units) {
       out[name] =
         raw[name] === oldDefaults[name]
-          ? defaults(def, to, now, exact)[name]
+          ? defaults(def, to, now, exact, raw)[name]
           : quantityText(spec, values[name] as number, to, exact, name);
     }
   }
@@ -209,7 +238,8 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
     setClock(e.clock);
     setUnits(e.units);
     setNow(current);
-    setRaw((r) => ({ ...r, ...defaults(def, e, current, exact), ...readQuery(def, e, exact) }));
+    const query = readQuery(def, e, exact);
+    setRaw((r) => ({ ...r, ...defaults(def, e, current, exact, query), ...query }));
   }, []);
 
   // Сохраняется только изменённая настройка: остальные остаются «по языку страницы».
@@ -221,13 +251,15 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
     writePref(key, value);
   };
 
-  const { values, errors } = parseInputs(def, raw, env, exact);
+  const { values, errors } = parseInputs(def, raw, env, now, exact);
   const valid = Object.keys(errors).length === 0;
 
   useEffect(() => {
     if (!fromUser.current || !valid || !now) return;
     const initialExact: Exact = {};
-    writeQuery(def, values, parseInputs(def, defaults(def, env, now, initialExact), env, initialExact).values);
+    // Выбор в select'ах сравнивается с обычным умолчанием, остальные поля — с умолчанием для текущего выбора.
+    const initial = { ...defaults(def, env, now, initialExact, raw), ...selection(def, lang, {}) };
+    writeQuery(def, values, parseInputs(def, initial, env, now, initialExact).values);
   }, [raw]);
 
   let result: Record<string, unknown> | null = null;
@@ -241,7 +273,18 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
 
   const set = (name: string, value: string) => {
     fromUser.current = true;
-    setRaw((r) => ({ ...r, [name]: value }));
+    setRaw((r) => {
+      const next = { ...r, [name]: value };
+      // Смена выбора в select: поля, где стояло прежнее значение по умолчанию (defaultBy), получают новое.
+      if (def.inputs[name]?.type === 'select') {
+        const before = defaults(def, env, now, undefined, r);
+        const after = defaults(def, env, now, undefined, next);
+        for (const [field] of entries(def)) {
+          if (field !== name && before[field] !== after[field] && r[field] === before[field]) next[field] = after[field];
+        }
+      }
+      return next;
+    });
   };
 
   return (
@@ -274,6 +317,7 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
       )}
       <form class="calc-inputs" onSubmit={(e) => e.preventDefault()}>
         {entries(def).map(([name, spec]) => {
+          if (!visible(spec, raw)) return null;
           const id = `in-${name}`;
           // До гидратации поля «сегодня»/«сейчас» пустые — это не ошибка пользователя.
           const error = now ? errors[name] : undefined;

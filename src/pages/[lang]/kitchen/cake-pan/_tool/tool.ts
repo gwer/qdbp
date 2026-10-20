@@ -11,10 +11,10 @@ export const def = defineCalculator({
   inputs: {
     fromShape: { type: 'select', options: SHAPES, default: 'round' },
     fromA: { type: 'quantity', unit: 'cm', imperial: 'in', default: 24, defaultImperial: 9, min: 1, max: 200 },
-    fromB: { type: 'quantity', unit: 'cm', imperial: 'in', default: 18, defaultImperial: 9, min: 0, max: 200 },
+    fromB: { type: 'quantity', unit: 'cm', imperial: 'in', default: 18, defaultImperial: 9, min: 0, max: 200, showIf: { fromShape: 'rect' } },
     toShape: { type: 'select', options: SHAPES, default: 'round' },
     toA: { type: 'quantity', unit: 'cm', imperial: 'in', default: 26, defaultImperial: 10, min: 1, max: 200 },
-    toB: { type: 'quantity', unit: 'cm', imperial: 'in', default: 18, defaultImperial: 9, min: 0, max: 200 },
+    toB: { type: 'quantity', unit: 'cm', imperial: 'in', default: 18, defaultImperial: 9, min: 0, max: 200, showIf: { toShape: 'rect' } },
   },
   compute: (v) => {
     const factor = panFactor({ shape: v.fromShape, a: v.fromA, b: v.fromB }, { shape: v.toShape, a: v.toA, b: v.toB });

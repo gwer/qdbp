@@ -14,7 +14,7 @@
       "label": "Diámetro o lado"
     },
     "fromB": {
-      "label": "Ancho (molde rectangular)"
+      "label": "Ancho"
     },
     "toShape": {
       "label": "Tu molde",
@@ -28,7 +28,7 @@
       "label": "Diámetro o lado"
     },
     "toB": {
-      "label": "Ancho (molde rectangular)"
+      "label": "Ancho"
     }
   },
   "outputs": {

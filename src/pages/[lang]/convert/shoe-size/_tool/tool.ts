@@ -7,7 +7,7 @@ export const def = defineCalculator({
   order: 110,
   related: ['length-converter', 'weight-converter'],
   inputs: {
-    size: { type: 'number', default: 41, byLang: { en: 10 } },
+    size: { type: 'number', default: 41, defaultBy: { system: { eu: 41, uk: 8, usM: 10, usW: 8, cm: 26 } } },
     system: { type: 'select', options: SYSTEMS, default: 'eu', byLang: { en: 'usM' } },
   },
   compute: ({ size, system }) => {
