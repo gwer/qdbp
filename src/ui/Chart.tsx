@@ -73,6 +73,7 @@ export function Chart({
       <svg
         viewBox={`0 0 ${width} ${height}`}
         width="100%"
+        height={height}
         role="img"
         aria-label={label}
         onPointerMove={(e) => pick(e.clientX)}

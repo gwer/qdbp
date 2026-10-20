@@ -27,7 +27,7 @@ export function Scale({
   const pos = (v: number) => ((Math.min(max, Math.max(min, v)) - min) / (max - min)) * 100;
   let from = min;
   return (
-    <figure class="scale" role="img" aria-label={label}>
+    <div class="scale" role="img" aria-label={label}>
       <div class="scale-bar">
         {bands.map((b) => {
           const left = pos(from);
@@ -43,14 +43,14 @@ export function Scale({
           </span>
         ))}
       </div>
-      <figcaption class="scale-legend" aria-hidden="true">
+      <div class="scale-legend" aria-hidden="true">
         {bands.map((b) => (
           <span key={b.label}>
             <i class={`scale-${b.tone}`} />
             {b.label}
           </span>
         ))}
-      </figcaption>
-    </figure>
+      </div>
+    </div>
   );
 }
