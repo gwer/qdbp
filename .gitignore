@@ -5,3 +5,6 @@ dist/
 .env
 *.log
 .claude/worktrees/
+
+# Сырые материалы аудитов (обходы, скриншоты, тестовые файлы) — локально, не в git
+docs/reviews/*/evidence/
