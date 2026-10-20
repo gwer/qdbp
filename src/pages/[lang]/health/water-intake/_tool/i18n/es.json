@@ -1,0 +1,37 @@
+{
+  "title": "Calculadora de agua: cuánta agua beber al día",
+  "description": "Calcula cuánta agua beber al día según tu peso, el ejercicio y el calor, en litros y vasos.",
+  "inputs": {
+    "weight": {
+      "label": "Peso"
+    },
+    "exercise": {
+      "label": "Ejercicio al día"
+    },
+    "climate": {
+      "label": "Clima",
+      "options": {
+        "normal": "Normal",
+        "hot": "Calor"
+      }
+    }
+  },
+  "outputs": {
+    "total": {
+      "label": "Agua al día"
+    },
+    "glasses": {
+      "label": "En vasos"
+    }
+  },
+  "ui": {
+    "glasses": {
+      "one": "≈ {count} vaso de 250 ml",
+      "other": "≈ {count} vasos de 250 ml"
+    },
+    "cups": {
+      "one": "≈ {count} taza de 8 oz",
+      "other": "≈ {count} tazas de 8 oz"
+    }
+  }
+}

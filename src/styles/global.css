@@ -315,6 +315,24 @@ td:first-child {
   text-align: left;
 }
 
+/* В текстах таблицы словесные: переносим строки, чтобы не вылезать за экран. */
+.content th,
+.content td {
+  white-space: normal;
+}
+
+/* Широкие таблицы и длинный код в текстах на телефоне прокручиваются или переносятся сами. */
+.content code {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .content table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
 details.extra {
   margin-top: 16px;
 }

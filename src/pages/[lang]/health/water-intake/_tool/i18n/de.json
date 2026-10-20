@@ -1,0 +1,37 @@
+{
+  "title": "Trinkmengen-Rechner: wie viel Wasser am Tag",
+  "description": "Berechnen Sie, wie viel Wasser Sie am Tag trinken sollten – abhängig von Gewicht, Sport und Hitze, in Litern und Gläsern.",
+  "inputs": {
+    "weight": {
+      "label": "Gewicht"
+    },
+    "exercise": {
+      "label": "Sport pro Tag"
+    },
+    "climate": {
+      "label": "Wetter",
+      "options": {
+        "normal": "Normal",
+        "hot": "Hitze"
+      }
+    }
+  },
+  "outputs": {
+    "total": {
+      "label": "Wasser pro Tag"
+    },
+    "glasses": {
+      "label": "In Gläsern"
+    }
+  },
+  "ui": {
+    "glasses": {
+      "one": "≈ {count} Glas à 250 ml",
+      "other": "≈ {count} Gläser à 250 ml"
+    },
+    "cups": {
+      "one": "≈ {count} Cup à 8 fl oz",
+      "other": "≈ {count} Cups à 8 fl oz"
+    }
+  }
+}

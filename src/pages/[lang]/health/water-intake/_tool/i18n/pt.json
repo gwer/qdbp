@@ -1,0 +1,37 @@
+{
+  "title": "Calculadora de água: quanto beber por dia",
+  "description": "Calcule quanta água beber por dia de acordo com o peso, os exercícios e o calor, em litros e copos.",
+  "inputs": {
+    "weight": {
+      "label": "Peso"
+    },
+    "exercise": {
+      "label": "Exercícios por dia"
+    },
+    "climate": {
+      "label": "Clima",
+      "options": {
+        "normal": "Normal",
+        "hot": "Calor"
+      }
+    }
+  },
+  "outputs": {
+    "total": {
+      "label": "Água por dia"
+    },
+    "glasses": {
+      "label": "Em copos"
+    }
+  },
+  "ui": {
+    "glasses": {
+      "one": "≈ {count} copo de 250 ml",
+      "other": "≈ {count} copos de 250 ml"
+    },
+    "cups": {
+      "one": "≈ {count} xícara de 8 oz",
+      "other": "≈ {count} xícaras de 8 oz"
+    }
+  }
+}

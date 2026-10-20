@@ -1,0 +1,51 @@
+{
+  "title": "Calculadora de gordura corporal: método da Marinha dos EUA",
+  "description": "Estime seu percentual de gordura pelas medidas do pescoço, da cintura e do quadril com o método da Marinha dos EUA, além da massa gorda e da massa magra.",
+  "inputs": {
+    "sex": {
+      "label": "Sexo",
+      "options": {
+        "male": "Masculino",
+        "female": "Feminino"
+      }
+    },
+    "weight": {
+      "label": "Peso"
+    },
+    "height": {
+      "label": "Altura"
+    },
+    "neck": {
+      "label": "Pescoço"
+    },
+    "waist": {
+      "label": "Cintura"
+    },
+    "hip": {
+      "label": "Quadril (só mulheres)"
+    }
+  },
+  "outputs": {
+    "percent": {
+      "label": "Gordura corporal"
+    },
+    "category": {
+      "label": "Categoria"
+    },
+    "fat": {
+      "label": "Massa gorda"
+    },
+    "lean": {
+      "label": "Massa magra"
+    }
+  },
+  "ui": {
+    "categories": {
+      "essential": "Abaixo da gordura essencial",
+      "athletes": "Atletas",
+      "fitness": "Em forma",
+      "average": "Média",
+      "obese": "Obesidade"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Water intake calculator: how much water to drink a day",
+  "description": "Work out how much water to drink a day based on your weight, exercise and hot weather — in ounces, liters and cups.",
+  "inputs": {
+    "weight": {
+      "label": "Weight"
+    },
+    "exercise": {
+      "label": "Exercise per day"
+    },
+    "climate": {
+      "label": "Weather",
+      "options": {
+        "normal": "Normal",
+        "hot": "Hot"
+      }
+    }
+  },
+  "outputs": {
+    "total": {
+      "label": "Water per day"
+    },
+    "glasses": {
+      "label": "In cups"
+    }
+  },
+  "ui": {
+    "glasses": {
+      "one": "≈ {count} glass (250 mL)",
+      "other": "≈ {count} glasses (250 mL)"
+    },
+    "cups": {
+      "one": "≈ {count} cup (8 fl oz)",
+      "other": "≈ {count} cups (8 fl oz)"
+    }
+  }
+}

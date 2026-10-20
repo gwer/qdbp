@@ -1,0 +1,36 @@
+{
+  "title": "Idealgewicht-Rechner: Normalgewicht nach Größe",
+  "description": "Berechnen Sie Ihr Idealgewicht nach Größe und Geschlecht mit den Formeln von Devine, Robinson, Miller und Hamwi sowie den BMI-Normalbereich.",
+  "inputs": {
+    "sex": {
+      "label": "Geschlecht",
+      "options": {
+        "male": "Männlich",
+        "female": "Weiblich"
+      }
+    },
+    "height": {
+      "label": "Größe"
+    }
+  },
+  "outputs": {
+    "devine": {
+      "label": "Formel nach Devine"
+    },
+    "robinson": {
+      "label": "Formel nach Robinson"
+    },
+    "miller": {
+      "label": "Formel nach Miller"
+    },
+    "hamwi": {
+      "label": "Formel nach Hamwi"
+    },
+    "bmiMin": {
+      "label": "Normalgewicht nach BMI ab"
+    },
+    "bmiMax": {
+      "label": "Normalgewicht nach BMI bis"
+    }
+  }
+}

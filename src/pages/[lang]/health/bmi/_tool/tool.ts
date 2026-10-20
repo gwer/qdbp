@@ -23,7 +23,7 @@ export function bmi(weight: number, height: number) {
 
 export const def = defineCalculator({
   order: 10,
-  related: ['calorie-calculator'],
+  related: ['calorie-calculator', 'ideal-weight', 'body-fat'],
   inputs: {
     weight: { type: 'quantity', unit: 'kg', imperial: 'lb', default: 70, defaultImperial: 160, min: 1, max: 700 },
     height: { type: 'quantity', unit: 'cm', imperial: 'in', default: 175, defaultImperial: 69, min: 30, max: 300 },

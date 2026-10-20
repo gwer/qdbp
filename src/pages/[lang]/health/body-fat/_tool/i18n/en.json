@@ -1,0 +1,51 @@
+{
+  "title": "Body fat calculator: U.S. Navy method",
+  "description": "Estimate your body fat percentage from neck, waist and hip measurements using the U.S. Navy method, plus fat mass and lean body mass.",
+  "inputs": {
+    "sex": {
+      "label": "Sex",
+      "options": {
+        "male": "Male",
+        "female": "Female"
+      }
+    },
+    "weight": {
+      "label": "Weight"
+    },
+    "height": {
+      "label": "Height"
+    },
+    "neck": {
+      "label": "Neck"
+    },
+    "waist": {
+      "label": "Waist"
+    },
+    "hip": {
+      "label": "Hips (women only)"
+    }
+  },
+  "outputs": {
+    "percent": {
+      "label": "Body fat"
+    },
+    "category": {
+      "label": "Category"
+    },
+    "fat": {
+      "label": "Fat mass"
+    },
+    "lean": {
+      "label": "Lean mass"
+    }
+  },
+  "ui": {
+    "categories": {
+      "essential": "Below essential fat",
+      "athletes": "Athletes",
+      "fitness": "Fitness",
+      "average": "Average",
+      "obese": "Obese"
+    }
+  }
+}

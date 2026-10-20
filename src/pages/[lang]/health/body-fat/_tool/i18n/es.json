@@ -1,0 +1,51 @@
+{
+  "title": "Calculadora de grasa corporal: método de la Marina de EE. UU.",
+  "description": "Estima tu porcentaje de grasa corporal a partir de los perímetros de cuello, cintura y cadera con el método de la Marina de EE. UU., además de la masa grasa y la masa magra.",
+  "inputs": {
+    "sex": {
+      "label": "Sexo",
+      "options": {
+        "male": "Hombre",
+        "female": "Mujer"
+      }
+    },
+    "weight": {
+      "label": "Peso"
+    },
+    "height": {
+      "label": "Estatura"
+    },
+    "neck": {
+      "label": "Cuello"
+    },
+    "waist": {
+      "label": "Cintura"
+    },
+    "hip": {
+      "label": "Cadera (solo mujeres)"
+    }
+  },
+  "outputs": {
+    "percent": {
+      "label": "Grasa corporal"
+    },
+    "category": {
+      "label": "Categoría"
+    },
+    "fat": {
+      "label": "Masa grasa"
+    },
+    "lean": {
+      "label": "Masa magra"
+    }
+  },
+  "ui": {
+    "categories": {
+      "essential": "Por debajo de la grasa esencial",
+      "athletes": "Atletas",
+      "fitness": "En forma",
+      "average": "Promedio",
+      "obese": "Obesidad"
+    }
+  }
+}

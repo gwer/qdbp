@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de peso ideal: peso pela altura",
+  "description": "Descubra o peso ideal para sua altura e sexo pelas fórmulas de Devine, Robinson, Miller e Hamwi, além da faixa de peso saudável pelo IMC.",
+  "inputs": {
+    "sex": {
+      "label": "Sexo",
+      "options": {
+        "male": "Masculino",
+        "female": "Feminino"
+      }
+    },
+    "height": {
+      "label": "Altura"
+    }
+  },
+  "outputs": {
+    "devine": {
+      "label": "Fórmula de Devine"
+    },
+    "robinson": {
+      "label": "Fórmula de Robinson"
+    },
+    "miller": {
+      "label": "Fórmula de Miller"
+    },
+    "hamwi": {
+      "label": "Fórmula de Hamwi"
+    },
+    "bmiMin": {
+      "label": "Peso saudável pelo IMC de"
+    },
+    "bmiMax": {
+      "label": "Peso saudável pelo IMC até"
+    }
+  }
+}

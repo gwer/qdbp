@@ -1,0 +1,29 @@
+{
+  "title": "Calculadora de ovulação: período fértil",
+  "description": "Calcule a data da ovulação e seus dias mais férteis a partir do primeiro dia da última menstruação e da duração do ciclo.",
+  "inputs": {
+    "lmp": {
+      "label": "Primeiro dia da última menstruação"
+    },
+    "cycle": {
+      "label": "Duração do ciclo, dias"
+    }
+  },
+  "outputs": {
+    "ovulation": {
+      "label": "Ovulação prevista"
+    },
+    "fertileStart": {
+      "label": "Período fértil de"
+    },
+    "fertileEnd": {
+      "label": "Período fértil até"
+    },
+    "nextPeriod": {
+      "label": "Próxima menstruação"
+    },
+    "due": {
+      "label": "Data do parto se engravidar neste ciclo"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Ovulation calculator: fertile window",
+  "description": "Estimate your ovulation date and most fertile days from the first day of your last period and your cycle length.",
+  "inputs": {
+    "lmp": {
+      "label": "First day of last period"
+    },
+    "cycle": {
+      "label": "Cycle length, days"
+    }
+  },
+  "outputs": {
+    "ovulation": {
+      "label": "Estimated ovulation"
+    },
+    "fertileStart": {
+      "label": "Fertile window from"
+    },
+    "fertileEnd": {
+      "label": "Fertile window to"
+    },
+    "nextPeriod": {
+      "label": "Next period"
+    },
+    "due": {
+      "label": "Due date if you conceive this cycle"
+    }
+  }
+}

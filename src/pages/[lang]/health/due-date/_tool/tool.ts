@@ -28,7 +28,7 @@ const weeksDays = (days: number, { t }: FormatContext) => {
 
 export const def = defineCalculator({
   order: 40,
-  related: ['bmi', 'calorie-calculator'],
+  related: ['ovulation', 'bmi'],
   inputs: {
     lmp: { type: 'date', default: 'today-70' },
     cycle: { type: 'integer', default: 28, min: 21, max: 45 },

@@ -1,0 +1,36 @@
+{
+  "title": "Calculadora de peso ideal: peso según tu estatura",
+  "description": "Calcula tu peso ideal según estatura y sexo con las fórmulas de Devine, Robinson, Miller y Hamwi, y el rango de peso saludable según el IMC.",
+  "inputs": {
+    "sex": {
+      "label": "Sexo",
+      "options": {
+        "male": "Hombre",
+        "female": "Mujer"
+      }
+    },
+    "height": {
+      "label": "Estatura"
+    }
+  },
+  "outputs": {
+    "devine": {
+      "label": "Fórmula de Devine"
+    },
+    "robinson": {
+      "label": "Fórmula de Robinson"
+    },
+    "miller": {
+      "label": "Fórmula de Miller"
+    },
+    "hamwi": {
+      "label": "Fórmula de Hamwi"
+    },
+    "bmiMin": {
+      "label": "Peso saludable según IMC desde"
+    },
+    "bmiMax": {
+      "label": "Peso saludable según IMC hasta"
+    }
+  }
+}

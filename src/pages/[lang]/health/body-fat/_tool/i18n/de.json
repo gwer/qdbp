@@ -1,0 +1,51 @@
+{
+  "title": "Körperfett-Rechner: Methode der US Navy",
+  "description": "Schätzen Sie Ihren Körperfettanteil aus Hals-, Taillen- und Hüftumfang nach der Methode der US Navy, dazu Fettmasse und fettfreie Masse.",
+  "inputs": {
+    "sex": {
+      "label": "Geschlecht",
+      "options": {
+        "male": "Männlich",
+        "female": "Weiblich"
+      }
+    },
+    "weight": {
+      "label": "Gewicht"
+    },
+    "height": {
+      "label": "Größe"
+    },
+    "neck": {
+      "label": "Halsumfang"
+    },
+    "waist": {
+      "label": "Taillenumfang"
+    },
+    "hip": {
+      "label": "Hüftumfang (nur Frauen)"
+    }
+  },
+  "outputs": {
+    "percent": {
+      "label": "Körperfettanteil"
+    },
+    "category": {
+      "label": "Kategorie"
+    },
+    "fat": {
+      "label": "Fettmasse"
+    },
+    "lean": {
+      "label": "Fettfreie Masse"
+    }
+  },
+  "ui": {
+    "categories": {
+      "essential": "Unter dem essenziellen Fett",
+      "athletes": "Athleten",
+      "fitness": "Fit",
+      "average": "Durchschnitt",
+      "obese": "Adipös"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Eisprungrechner: fruchtbare Tage",
+  "description": "Berechnen Sie Ihren Eisprung und Ihre fruchtbarsten Tage aus dem ersten Tag der letzten Periode und der Zykluslänge.",
+  "inputs": {
+    "lmp": {
+      "label": "Erster Tag der letzten Periode"
+    },
+    "cycle": {
+      "label": "Zykluslänge, Tage"
+    }
+  },
+  "outputs": {
+    "ovulation": {
+      "label": "Voraussichtlicher Eisprung"
+    },
+    "fertileStart": {
+      "label": "Fruchtbare Tage ab"
+    },
+    "fertileEnd": {
+      "label": "Fruchtbare Tage bis"
+    },
+    "nextPeriod": {
+      "label": "Nächste Periode"
+    },
+    "due": {
+      "label": "Geburtstermin bei Empfängnis in diesem Zyklus"
+    }
+  }
+}

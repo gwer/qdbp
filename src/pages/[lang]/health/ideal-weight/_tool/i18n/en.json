@@ -1,0 +1,36 @@
+{
+  "title": "Ideal weight calculator: healthy weight for your height",
+  "description": "Find your ideal body weight for your height and sex using the Devine, Robinson, Miller and Hamwi formulas, plus the healthy BMI weight range.",
+  "inputs": {
+    "sex": {
+      "label": "Sex",
+      "options": {
+        "male": "Male",
+        "female": "Female"
+      }
+    },
+    "height": {
+      "label": "Height"
+    }
+  },
+  "outputs": {
+    "devine": {
+      "label": "Devine formula"
+    },
+    "robinson": {
+      "label": "Robinson formula"
+    },
+    "miller": {
+      "label": "Miller formula"
+    },
+    "hamwi": {
+      "label": "Hamwi formula"
+    },
+    "bmiMin": {
+      "label": "Healthy BMI weight from"
+    },
+    "bmiMax": {
+      "label": "Healthy BMI weight to"
+    }
+  }
+}
