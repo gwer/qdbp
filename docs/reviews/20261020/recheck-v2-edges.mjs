@@ -2,7 +2,7 @@ import './ts-loader.mjs';
 import fs from 'node:fs';
 import {launch,sleep} from './audit.mjs';
 const {stripJpeg}=await import('/home/gwer/code/qdbp/src/ui/files/jpeg.ts');
-const base='evidence/recheck-v2/evidence/';
+const base=(process.env.QDBP_RECHECK_DIR??'evidence/recheck-v2')+'/evidence/';
 const browser=await launch(),page=await browser.newPage(),results=[];
 await page.goto('http://localhost:4321/ru/',{waitUntil:'networkidle0'});
 const run=async(name,fn)=>{try{results.push({name,...await fn()});}catch(e){results.push({name,pass:false,error:e.message});}fs.writeFileSync(base+'extended.json',JSON.stringify(results,null,2));console.log(name,results.at(-1).pass);};
