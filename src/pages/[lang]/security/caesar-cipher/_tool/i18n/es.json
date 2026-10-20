@@ -1,0 +1,14 @@
+{
+  "title": "Cifrado César: cifrar y descifrar online",
+  "description": "Cifra o descifra un texto con el cifrado César y cualquier desplazamiento, incluido ROT13.",
+  "ui": {
+    "mode": "Acción",
+    "modes": {
+      "encrypt": "Cifrar",
+      "decrypt": "Descifrar"
+    },
+    "shift": "Desplazamiento",
+    "input": "Texto",
+    "output": "Resultado"
+  }
+}

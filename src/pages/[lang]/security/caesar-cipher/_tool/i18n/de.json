@@ -1,0 +1,14 @@
+{
+  "title": "Caesar-Verschlüsselung: verschlüsseln und entschlüsseln",
+  "description": "Text mit der Caesar-Verschlüsselung und beliebiger Verschiebung ver- oder entschlüsseln – inklusive ROT13.",
+  "ui": {
+    "mode": "Aktion",
+    "modes": {
+      "encrypt": "Verschlüsseln",
+      "decrypt": "Entschlüsseln"
+    },
+    "shift": "Verschiebung",
+    "input": "Text",
+    "output": "Ergebnis"
+  }
+}

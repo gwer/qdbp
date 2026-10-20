@@ -1,0 +1,15 @@
+{
+  "title": "Morse code translator: text to Morse and back",
+  "description": "Translate text to Morse code or decode dots and dashes back to text — letters, numbers and punctuation.",
+  "ui": {
+    "mode": "Mode",
+    "input": "Text or Morse code",
+    "output": "Result",
+    "error": "Some characters don't exist in Morse code",
+    "modes": {
+      "encode": "To Morse",
+      "decode": "From Morse",
+      "decodeCyrillic": "From Morse (Cyrillic)"
+    }
+  }
+}

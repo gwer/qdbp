@@ -1,0 +1,15 @@
+{
+  "title": "Traductor de código morse: texto a morse y viceversa",
+  "description": "Traduce texto a código morse o descifra puntos y rayas a texto, con letras (incluida la Ñ), números y signos.",
+  "ui": {
+    "mode": "Acción",
+    "input": "Texto o código morse",
+    "output": "Resultado",
+    "error": "Hay caracteres que no existen en morse",
+    "modes": {
+      "encode": "A morse",
+      "decode": "Desde morse",
+      "decodeCyrillic": "Desde morse (cirílico)"
+    }
+  }
+}

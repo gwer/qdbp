@@ -64,7 +64,9 @@
 /de/repair/wallpaper/
 /de/security/
 /de/security/base64/
+/de/security/caesar-cipher/
 /de/security/hash/
+/de/security/morse-code/
 /de/security/password-generator/
 /de/security/url-encode/
 /de/security/uuid/
@@ -137,7 +139,9 @@
 /en/repair/wallpaper/
 /en/security/
 /en/security/base64/
+/en/security/caesar-cipher/
 /en/security/hash/
+/en/security/morse-code/
 /en/security/password-generator/
 /en/security/url-encode/
 /en/security/uuid/
@@ -211,7 +215,9 @@
 /es/repair/wallpaper/
 /es/security/
 /es/security/base64/
+/es/security/caesar-cipher/
 /es/security/hash/
+/es/security/morse-code/
 /es/security/password-generator/
 /es/security/url-encode/
 /es/security/uuid/
@@ -285,7 +291,9 @@
 /pt/repair/wallpaper/
 /pt/security/
 /pt/security/base64/
+/pt/security/caesar-cipher/
 /pt/security/hash/
+/pt/security/morse-code/
 /pt/security/password-generator/
 /pt/security/url-encode/
 /pt/security/uuid/
@@ -359,7 +367,9 @@
 /ru/repair/wallpaper/
 /ru/security/
 /ru/security/base64/
+/ru/security/caesar-cipher/
 /ru/security/hash/
+/ru/security/morse-code/
 /ru/security/password-generator/
 /ru/security/url-encode/
 /ru/security/uuid/

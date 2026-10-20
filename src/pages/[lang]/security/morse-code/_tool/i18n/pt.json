@@ -1,0 +1,15 @@
+{
+  "title": "Tradutor de código Morse: texto para Morse e de volta",
+  "description": "Traduza texto para código Morse ou decifre pontos e traços de volta para texto — letras (com Ç), números e pontuação.",
+  "ui": {
+    "mode": "Ação",
+    "input": "Texto ou código Morse",
+    "output": "Resultado",
+    "error": "Há caracteres que não existem em Morse",
+    "modes": {
+      "encode": "Para Morse",
+      "decode": "De Morse",
+      "decodeCyrillic": "De Morse (cirílico)"
+    }
+  }
+}
