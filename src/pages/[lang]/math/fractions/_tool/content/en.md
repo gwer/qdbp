@@ -2,6 +2,8 @@
 
 Enter the numerators and denominators of two fractions and choose an operation. The result is simplified automatically and shown three ways: as a fraction, as a mixed number and as a decimal.
 
+For mixed numbers (like 2 1/3) fill in the whole number; leave it at 0 if there isn’t one. Below the result you’ll see the steps: common denominator, numerators, simplifying.
+
 For a negative fraction, put a minus sign in front of the numerator. A whole number is a fraction with a denominator of 1.
 
 ## How it works

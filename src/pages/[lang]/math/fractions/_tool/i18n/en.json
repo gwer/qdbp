@@ -22,6 +22,12 @@
     },
     "d2": {
       "label": "Denominator 2"
+    },
+    "w1": {
+      "label": "Whole number 1"
+    },
+    "w2": {
+      "label": "Whole number 2"
     }
   },
   "outputs": {
@@ -38,5 +44,16 @@
   "errors": {
     "divisionByZero": "You can’t divide by zero: the second fraction equals zero.",
     "tooLarge": "The numbers are too large: enter at most 15 digits."
+  },
+  "ui": {
+    "solution": "Solution",
+    "steps": {
+      "mixed": "Convert mixed numbers to improper fractions: {list}.",
+      "common": "Use the common denominator {l} (least common multiple): {expr}.",
+      "combine": "Add or subtract the numerators, keep the denominator: {expr}, which gives {result}.",
+      "divide": "Dividing by a fraction means multiplying by its reciprocal: {expr}.",
+      "multiply": "Multiply numerators and denominators: {expr}.",
+      "reduce": "Simplify by {g} (greatest common divisor): {result}."
+    }
   }
 }

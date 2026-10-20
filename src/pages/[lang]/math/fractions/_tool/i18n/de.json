@@ -22,6 +22,12 @@
     },
     "d2": {
       "label": "Nenner 2"
+    },
+    "w1": {
+      "label": "Ganze Zahl 1"
+    },
+    "w2": {
+      "label": "Ganze Zahl 2"
     }
   },
   "outputs": {
@@ -38,5 +44,16 @@
   "errors": {
     "divisionByZero": "Durch null kann man nicht teilen: Der zweite Bruch ist null.",
     "tooLarge": "Die Zahlen sind zu groß: Geben Sie höchstens 15 Ziffern ein."
+  },
+  "ui": {
+    "solution": "Lösungsweg",
+    "steps": {
+      "mixed": "Gemischte Zahlen in unechte Brüche umwandeln: {list}.",
+      "common": "Auf den gemeinsamen Nenner {l} bringen (kleinstes gemeinsames Vielfaches): {expr}.",
+      "combine": "Zähler addieren oder subtrahieren, Nenner bleibt: {expr}, ergibt {result}.",
+      "divide": "Durch einen Bruch teilen heißt mit dem Kehrwert malnehmen: {expr}.",
+      "multiply": "Zähler mal Zähler, Nenner mal Nenner: {expr}.",
+      "reduce": "Mit {g} kürzen (größter gemeinsamer Teiler): {result}."
+    }
   }
 }

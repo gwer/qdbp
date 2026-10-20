@@ -22,6 +22,12 @@
     },
     "d2": {
       "label": "Denominador 2"
+    },
+    "w1": {
+      "label": "Parte entera 1"
+    },
+    "w2": {
+      "label": "Parte entera 2"
     }
   },
   "outputs": {
@@ -38,5 +44,16 @@
   "errors": {
     "divisionByZero": "No se puede dividir entre cero: la segunda fracción vale cero.",
     "tooLarge": "Los números son demasiado grandes: introduce como máximo 15 cifras."
+  },
+  "ui": {
+    "solution": "Solución",
+    "steps": {
+      "mixed": "Pasamos los números mixtos a fracciones impropias: {list}.",
+      "common": "Reducimos a común denominador {l} (mínimo común múltiplo): {expr}.",
+      "combine": "Sumamos o restamos los numeradores con el mismo denominador: {expr}, queda {result}.",
+      "divide": "Dividir entre una fracción es multiplicar por su inversa: {expr}.",
+      "multiply": "Multiplicamos numeradores y denominadores: {expr}.",
+      "reduce": "Simplificamos entre {g} (máximo común divisor): {result}."
+    }
   }
 }

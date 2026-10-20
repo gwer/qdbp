@@ -22,6 +22,12 @@
     },
     "d2": {
       "label": "Denominador 2"
+    },
+    "w1": {
+      "label": "Parte inteira 1"
+    },
+    "w2": {
+      "label": "Parte inteira 2"
     }
   },
   "outputs": {
@@ -38,5 +44,16 @@
   "errors": {
     "divisionByZero": "Não dá para dividir por zero: a segunda fração é igual a zero.",
     "tooLarge": "Os números são grandes demais: digite no máximo 15 algarismos."
+  },
+  "ui": {
+    "solution": "Resolução",
+    "steps": {
+      "mixed": "Transformamos os números mistos em frações impróprias: {list}.",
+      "common": "Reduzimos ao denominador comum {l} (mínimo múltiplo comum): {expr}.",
+      "combine": "Somamos ou subtraímos os numeradores com o mesmo denominador: {expr}, resultando {result}.",
+      "divide": "Dividir por uma fração é multiplicar pelo inverso: {expr}.",
+      "multiply": "Multiplicamos numeradores e denominadores: {expr}.",
+      "reduce": "Simplificamos por {g} (máximo divisor comum): {result}."
+    }
   }
 }

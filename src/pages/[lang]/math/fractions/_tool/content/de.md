@@ -2,6 +2,8 @@
 
 Geben Sie Zähler und Nenner zweier Brüche ein und wählen Sie die Rechenart. Das Ergebnis wird automatisch gekürzt und auf drei Arten angezeigt: als Bruch, als gemischte Zahl und als Dezimalzahl.
 
+Für gemischte Zahlen (etwa 2 1/3) die ganze Zahl eintragen; ohne ganze Zahl bleibt 0 stehen. Unter dem Ergebnis steht der Lösungsweg: gemeinsamer Nenner, Zähler, Kürzen.
+
 Für einen negativen Bruch setzen Sie ein Minus vor den Zähler. Eine ganze Zahl ist ein Bruch mit dem Nenner 1.
 
 ## So wird gerechnet

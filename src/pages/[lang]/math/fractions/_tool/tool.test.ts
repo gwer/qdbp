@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fractions } from './tool';
+import { fractions, steps } from './tool';
 
 // Эталоны — Python fractions.Fraction.
 describe('fractions', () => {
@@ -23,5 +23,28 @@ describe('fractions', () => {
 
   it('деление на ноль', () => {
     expect(() => fractions(1, 2, 'divide', 0, 5)).toThrow();
+  });
+});
+
+describe('смешанные числа', () => {
+  it('1 1/2 + 2 1/3 = 23/6 = 3 5/6; −1 1/2 × 2 = −3', () => {
+    expect(fractions(1, 2, 'add', 1, 3, 1, 2)).toMatchObject({ fraction: '23/6', mixed: '3 5/6' });
+    expect(fractions(1, 2, 'multiply', 2, 1, -1, 0).fraction).toBe('−3');
+  });
+});
+
+describe('ход решения', () => {
+  it('сложение: общий знаменатель по НОК, сокращение', () => {
+    expect(steps(0n, 1n, 4n, 'add', 0n, 1n, 6n).map((s) => [s.key, s.params])).toEqual([
+      ['common', { l: '12', expr: '3/12 + 2/12' }],
+      ['combine', { expr: '3 + 2 = 5', result: '5/12' }],
+    ]);
+    expect(steps(0n, 1n, 4n, 'add', 0n, 1n, 4n).map((s) => s.key)).toEqual(['combine', 'reduce']);
+  });
+
+  it('деление через перевёрнутую дробь, знак — в числитель', () => {
+    const s = steps(0n, 3n, 4n, 'divide', 0n, -1n, 8n);
+    expect(s[0]).toEqual({ key: 'divide', params: { expr: '3/4 × −8/1' } });
+    expect(s.at(-1)).toEqual({ key: 'reduce', params: { g: '4', result: '−6' } });
   });
 });

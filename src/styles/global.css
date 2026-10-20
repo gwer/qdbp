@@ -1617,3 +1617,13 @@ tr.row-current td {
   stroke: var(--bg);
   stroke-width: 2;
 }
+
+ol.steps {
+  margin: 8px 0 0;
+  padding-left: 1.4em;
+  font-variant-numeric: tabular-nums;
+}
+
+ol.steps li + li {
+  margin-top: 4px;
+}

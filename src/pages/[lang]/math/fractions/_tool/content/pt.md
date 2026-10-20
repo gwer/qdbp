@@ -2,6 +2,8 @@
 
 Digite os numeradores e denominadores de duas frações e escolha a operação. O resultado é simplificado automaticamente e aparece de três formas: como fração, como número misto e como decimal.
 
+Para números mistos (por exemplo, 2 1/3), preencha a parte inteira; se não houver, deixe 0. Abaixo do resultado aparece a resolução: denominador comum, numeradores e simplificação.
+
 Para uma fração negativa, coloque o sinal de menos antes do numerador. Um número inteiro é uma fração com denominador 1.
 
 ## Como é calculado
