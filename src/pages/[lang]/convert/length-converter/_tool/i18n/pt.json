@@ -1,0 +1,24 @@
+{
+  "title": "Conversor de comprimento: metros, polegadas, pés e milhas",
+  "description": "Converta comprimentos e distâncias entre unidades métricas e americanas: milímetros, centímetros, metros, quilômetros, polegadas, pés, jardas e milhas.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "Para",
+    "swap": "Inverter",
+    "table": "{value} {unit} em outras unidades",
+    "error": "Digite um número",
+    "invalid": "Valor inválido",
+    "units": {
+      "mm": "Milímetros (mm)",
+      "cm": "Centímetros (cm)",
+      "m": "Metros (m)",
+      "km": "Quilômetros (km)",
+      "in": "Polegadas (in)",
+      "ft": "Pés (ft)",
+      "yd": "Jardas (yd)",
+      "mi": "Milhas (mi)",
+      "nmi": "Milhas náuticas"
+    }
+  }
+}

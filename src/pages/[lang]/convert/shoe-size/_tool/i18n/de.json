@@ -1,0 +1,42 @@
+{
+  "title": "Schuhgrößen: EU, UK, US und Fußlänge",
+  "description": "Rechnen Sie Schuhgrößen für Erwachsene zwischen europäischem, britischem und amerikanischem System (Herren und Damen) um – mit Fußlänge in Zentimetern.",
+  "inputs": {
+    "size": {
+      "label": "Größe"
+    },
+    "system": {
+      "label": "System",
+      "options": {
+        "eu": "Europäisch (EU)",
+        "uk": "Britisch (UK)",
+        "usM": "US Herren",
+        "usW": "US Damen",
+        "cm": "Fußlänge, cm"
+      }
+    }
+  },
+  "outputs": {
+    "eu": {
+      "label": "Europäisch (EU)"
+    },
+    "uk": {
+      "label": "Britisch (UK)"
+    },
+    "usM": {
+      "label": "US Herren"
+    },
+    "usW": {
+      "label": "US Damen"
+    },
+    "cm": {
+      "label": "Fußlänge, cm"
+    }
+  },
+  "ui": {
+    "table": "Größentabelle",
+    "usM": "US Herren",
+    "usW": "US Damen",
+    "cm": "Fuß, cm"
+  }
+}

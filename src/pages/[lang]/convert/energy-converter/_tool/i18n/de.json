@@ -1,0 +1,23 @@
+{
+  "title": "Energieumrechner: kcal, kJ, kWh und BTU",
+  "description": "Energie zwischen Kilokalorien, Kilojoule, Joule, Kilowattstunden und BTU umrechnen.",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Ungültiger Wert",
+    "units": {
+      "j": "Joule (J)",
+      "kj": "Kilojoule (kJ)",
+      "mj": "Megajoule (MJ)",
+      "cal": "Kalorien (cal)",
+      "kcal": "Kilokalorien (kcal)",
+      "wh": "Wattstunden (Wh)",
+      "kwh": "Kilowattstunden (kWh)",
+      "btu": "British Thermal Units (BTU)"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Temperature converter: Fahrenheit, Celsius and Kelvin",
+  "description": "Convert temperatures between Fahrenheit, Celsius and Kelvin — for recipes, weather forecasts or science homework.",
+  "ui": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "table": "{value} {unit} in other units",
+    "error": "Enter a number",
+    "invalid": "Temperature can’t be below absolute zero (−459.67 °F)",
+    "units": {
+      "c": "Celsius (°C)",
+      "f": "Fahrenheit (°F)",
+      "k": "Kelvin (K)"
+    }
+  }
+}

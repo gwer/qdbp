@@ -1,0 +1,25 @@
+{
+  "title": "Datengrößen-Umrechner: Byte, KB, MB, GB und TB",
+  "description": "Datenmengen zwischen Bit, Byte, Kilobyte, Megabyte, Gigabyte und Terabyte umrechnen – dezimal und binär (KiB, MiB, GiB).",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Ungültiger Wert",
+    "units": {
+      "bit": "Bits",
+      "b": "Byte (B)",
+      "kb": "Kilobyte (KB, 1000 B)",
+      "mb": "Megabyte (MB)",
+      "gb": "Gigabyte (GB)",
+      "tb": "Terabyte (TB)",
+      "kib": "Kibibyte (KiB, 1024 B)",
+      "mib": "Mebibyte (MiB)",
+      "gib": "Gibibyte (GiB)",
+      "tib": "Tebibyte (TiB)"
+    }
+  }
+}

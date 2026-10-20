@@ -1,0 +1,20 @@
+{
+  "title": "Conversor de velocidade: km/h, mph, m/s e nós",
+  "description": "Converta velocidade entre quilômetros por hora, milhas por hora, metros por segundo, pés por segundo e nós.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "Para",
+    "swap": "Inverter",
+    "table": "{value} {unit} em outras unidades",
+    "error": "Digite um número",
+    "invalid": "Valor inválido",
+    "units": {
+      "ms": "Metros por segundo (m/s)",
+      "kmh": "Quilômetros por hora (km/h)",
+      "mph": "Milhas por hora (mph)",
+      "knot": "Nós (kn)",
+      "fts": "Pés por segundo (ft/s)"
+    }
+  }
+}

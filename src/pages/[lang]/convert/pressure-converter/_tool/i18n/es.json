@@ -1,0 +1,24 @@
+{
+  "title": "Conversor de presión: bar, atm, psi y kPa",
+  "description": "Convierte la presión entre bares, atmósferas, psi, kilopascales, pascales y milímetros de mercurio: para neumáticos, manómetros y meteorología.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "A",
+    "swap": "Intercambiar",
+    "table": "{value} {unit} en otras unidades",
+    "error": "Introduce un número",
+    "invalid": "Valor no válido",
+    "units": {
+      "pa": "Pascales (Pa)",
+      "kpa": "Kilopascales (kPa)",
+      "mpa": "Megapascales (MPa)",
+      "bar": "Bares (bar)",
+      "atm": "Atmósferas (atm)",
+      "at": "Kilogramos por cm² (kgf/cm²)",
+      "mmhg": "Milímetros de mercurio (mmHg)",
+      "psi": "Libras por pulgada cuadrada (psi)",
+      "inhg": "Pulgadas de mercurio (inHg)"
+    }
+  }
+}

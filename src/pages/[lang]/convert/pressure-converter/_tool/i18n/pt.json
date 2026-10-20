@@ -1,0 +1,24 @@
+{
+  "title": "Conversor de pressão: bar, psi, atm e kPa",
+  "description": "Converta pressão entre bar, psi, atmosferas, quilopascals, pascals e mmHg — para pneus, manômetros e meteorologia.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "Para",
+    "swap": "Inverter",
+    "table": "{value} {unit} em outras unidades",
+    "error": "Digite um número",
+    "invalid": "Valor inválido",
+    "units": {
+      "pa": "Pascals (Pa)",
+      "kpa": "Quilopascals (kPa)",
+      "mpa": "Megapascals (MPa)",
+      "bar": "Bar",
+      "atm": "Atmosferas (atm)",
+      "at": "Quilogramas-força por cm² (kgf/cm²)",
+      "mmhg": "Milímetros de mercúrio (mmHg)",
+      "psi": "Libras por polegada quadrada (psi)",
+      "inhg": "Polegadas de mercúrio (inHg)"
+    }
+  }
+}

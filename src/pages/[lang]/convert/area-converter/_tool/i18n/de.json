@@ -1,0 +1,25 @@
+{
+  "title": "Flächenumrechner: Hektar, Quadratmeter und Acre",
+  "description": "Flächen zwischen Quadratmeter, Ar, Hektar, Quadratkilometer, Acre und Quadratfuß umrechnen.",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Ungültiger Wert",
+    "units": {
+      "cm2": "Quadratzentimeter (cm²)",
+      "m2": "Quadratmeter (m²)",
+      "are": "Ar (a)",
+      "ha": "Hektar (ha)",
+      "km2": "Quadratkilometer (km²)",
+      "in2": "Quadratzoll",
+      "ft2": "Quadratfuß",
+      "yd2": "Quadratyards",
+      "acre": "Acres",
+      "mi2": "Quadratmeilen"
+    }
+  }
+}

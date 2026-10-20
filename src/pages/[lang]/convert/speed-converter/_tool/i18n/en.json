@@ -1,0 +1,20 @@
+{
+  "title": "Speed converter: mph, km/h, m/s and knots",
+  "description": "Convert speed between miles per hour, kilometers per hour, meters per second, feet per second and knots.",
+  "ui": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "table": "{value} {unit} in other units",
+    "error": "Enter a number",
+    "invalid": "Invalid value",
+    "units": {
+      "ms": "Meters per second (m/s)",
+      "kmh": "Kilometers per hour (km/h)",
+      "mph": "Miles per hour (mph)",
+      "knot": "Knots (kn)",
+      "fts": "Feet per second (ft/s)"
+    }
+  }
+}

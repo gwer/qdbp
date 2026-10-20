@@ -1,0 +1,18 @@
+{
+  "title": "Temperaturumrechner: Celsius, Fahrenheit und Kelvin",
+  "description": "Temperaturen zwischen Grad Celsius, Fahrenheit und Kelvin umrechnen – für Rezepte, Wetterberichte oder Physik.",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Die Temperatur kann nicht unter dem absoluten Nullpunkt (−273,15 °C) liegen",
+    "units": {
+      "c": "Grad Celsius (°C)",
+      "f": "Grad Fahrenheit (°F)",
+      "k": "Kelvin (K)"
+    }
+  }
+}

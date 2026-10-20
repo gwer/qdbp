@@ -1,0 +1,19 @@
+{
+  "title": "Verbrauchsumrechner: l/100 km, mpg und km/l",
+  "description": "Kraftstoffverbrauch zwischen Liter pro 100 km, Kilometer pro Liter und Meilen pro Gallone (US und UK) umrechnen.",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Der Verbrauch muss größer als null sein",
+    "units": {
+      "l100": "Liter pro 100 km (l/100 km)",
+      "kml": "Kilometer pro Liter (km/l)",
+      "mpgUs": "Meilen pro US-Gallone (mpg)",
+      "mpgUk": "Meilen pro britische Gallone (mpg UK)"
+    }
+  }
+}

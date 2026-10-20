@@ -1,0 +1,24 @@
+{
+  "title": "Length converter: feet, inches, meters and miles",
+  "description": "Convert length and distance between US and metric units: inches, feet, yards, miles, millimeters, centimeters, meters and kilometers.",
+  "ui": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "table": "{value} {unit} in other units",
+    "error": "Enter a number",
+    "invalid": "Invalid value",
+    "units": {
+      "mm": "Millimeters (mm)",
+      "cm": "Centimeters (cm)",
+      "m": "Meters (m)",
+      "km": "Kilometers (km)",
+      "in": "Inches (in)",
+      "ft": "Feet (ft)",
+      "yd": "Yards (yd)",
+      "mi": "Miles (mi)",
+      "nmi": "Nautical miles (nmi)"
+    }
+  }
+}

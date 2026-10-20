@@ -1,0 +1,23 @@
+{
+  "title": "Energy converter: kWh, BTU, calories and joules",
+  "description": "Convert energy between kilowatt-hours, BTUs, kilocalories (food Calories), kilojoules and joules.",
+  "ui": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "table": "{value} {unit} in other units",
+    "error": "Enter a number",
+    "invalid": "Invalid value",
+    "units": {
+      "j": "Joules (J)",
+      "kj": "Kilojoules (kJ)",
+      "mj": "Megajoules (MJ)",
+      "cal": "Calories (cal)",
+      "kcal": "Kilocalories (kcal, Cal)",
+      "wh": "Watt-hours (Wh)",
+      "kwh": "Kilowatt-hours (kWh)",
+      "btu": "British thermal units (BTU)"
+    }
+  }
+}

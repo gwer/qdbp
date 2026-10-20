@@ -1,0 +1,25 @@
+{
+  "title": "Conversor de unidades de dados: bytes, KB, MB, GB e TB",
+  "description": "Converta tamanhos de dados entre bits, bytes, kilobytes, megabytes, gigabytes e terabytes — unidades decimais e binárias (KiB, MiB, GiB).",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "Para",
+    "swap": "Inverter",
+    "table": "{value} {unit} em outras unidades",
+    "error": "Digite um número",
+    "invalid": "Valor inválido",
+    "units": {
+      "bit": "Bits",
+      "b": "Bytes (B)",
+      "kb": "Kilobytes (KB, 1000 B)",
+      "mb": "Megabytes (MB)",
+      "gb": "Gigabytes (GB)",
+      "tb": "Terabytes (TB)",
+      "kib": "Kibibytes (KiB, 1024 B)",
+      "mib": "Mebibytes (MiB)",
+      "gib": "Gibibytes (GiB)",
+      "tib": "Tebibytes (TiB)"
+    }
+  }
+}

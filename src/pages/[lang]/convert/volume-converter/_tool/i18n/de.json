@@ -1,0 +1,30 @@
+{
+  "title": "Volumenumrechner: Liter, Gallonen und Kubikmeter",
+  "description": "Volumen zwischen Liter, Milliliter, Kubikmeter, US- und britischen Gallonen, Pints, Flüssigunzen, Cups und Löffeln umrechnen.",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Ungültiger Wert",
+    "units": {
+      "ml": "Milliliter (ml)",
+      "l": "Liter (l)",
+      "m3": "Kubikmeter (m³)",
+      "tsp": "Teelöffel (US)",
+      "tbsp": "Esslöffel (US)",
+      "flozUs": "Flüssigunzen (US fl oz)",
+      "cupUs": "Cups (US)",
+      "pintUs": "Pints (US)",
+      "quartUs": "Quarts (US)",
+      "galUs": "Gallonen (US)",
+      "flozUk": "Flüssigunzen (UK)",
+      "pintUk": "Pints (UK)",
+      "galUk": "Gallonen (UK)",
+      "in3": "Kubikzoll",
+      "ft3": "Kubikfuß"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Conversor de consumo de combustible: l/100 km, km/l y mpg",
+  "description": "Convierte el consumo de combustible entre litros a los 100 km, kilómetros por litro y millas por galón (de EE. UU. y del Reino Unido).",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "A",
+    "swap": "Intercambiar",
+    "table": "{value} {unit} en otras unidades",
+    "error": "Introduce un número",
+    "invalid": "El consumo debe ser mayor que cero",
+    "units": {
+      "l100": "Litros a los 100 km (l/100 km)",
+      "kml": "Kilómetros por litro (km/l)",
+      "mpgUs": "Millas por galón EE. UU. (mpg)",
+      "mpgUk": "Millas por galón británico (mpg UK)"
+    }
+  }
+}

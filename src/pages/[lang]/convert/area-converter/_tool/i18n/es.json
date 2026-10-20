@@ -1,0 +1,25 @@
+{
+  "title": "Conversor de superficie: hectáreas, metros cuadrados y acres",
+  "description": "Convierte superficies entre metros cuadrados, áreas, hectáreas, kilómetros cuadrados, acres y pies cuadrados.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "A",
+    "swap": "Intercambiar",
+    "table": "{value} {unit} en otras unidades",
+    "error": "Introduce un número",
+    "invalid": "Valor no válido",
+    "units": {
+      "cm2": "Centímetros cuadrados (cm²)",
+      "m2": "Metros cuadrados (m²)",
+      "are": "Áreas (a)",
+      "ha": "Hectáreas (ha)",
+      "km2": "Kilómetros cuadrados (km²)",
+      "in2": "Pulgadas cuadradas",
+      "ft2": "Pies cuadrados",
+      "yd2": "Yardas cuadradas",
+      "acre": "Acres",
+      "mi2": "Millas cuadradas"
+    }
+  }
+}

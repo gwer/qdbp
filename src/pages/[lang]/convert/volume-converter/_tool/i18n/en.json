@@ -1,0 +1,30 @@
+{
+  "title": "Volume converter: gallons, liters, cups and fluid ounces",
+  "description": "Convert volume between US and UK gallons, quarts, pints, cups, fluid ounces, tablespoons, teaspoons, liters, milliliters and cubic units.",
+  "ui": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "table": "{value} {unit} in other units",
+    "error": "Enter a number",
+    "invalid": "Invalid value",
+    "units": {
+      "ml": "Milliliters (mL)",
+      "l": "Liters (L)",
+      "m3": "Cubic meters (m³)",
+      "tsp": "Teaspoons (tsp)",
+      "tbsp": "Tablespoons (tbsp)",
+      "flozUs": "Fluid ounces (US fl oz)",
+      "cupUs": "Cups (US)",
+      "pintUs": "Pints (US)",
+      "quartUs": "Quarts (US)",
+      "galUs": "Gallons (US)",
+      "flozUk": "Fluid ounces (UK)",
+      "pintUk": "Pints (UK)",
+      "galUk": "Gallons (UK, imperial)",
+      "in3": "Cubic inches (in³)",
+      "ft3": "Cubic feet (ft³)"
+    }
+  }
+}

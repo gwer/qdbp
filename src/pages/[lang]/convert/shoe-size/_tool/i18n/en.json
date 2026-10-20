@@ -1,0 +1,42 @@
+{
+  "title": "Shoe size converter: US, UK, EU and foot length",
+  "description": "Convert adult shoe sizes between US men's, US women's, UK and European systems, and see the matching foot length in centimeters.",
+  "inputs": {
+    "size": {
+      "label": "Size"
+    },
+    "system": {
+      "label": "System",
+      "options": {
+        "eu": "European (EU)",
+        "uk": "UK",
+        "usM": "US men's",
+        "usW": "US women's",
+        "cm": "Foot length, cm"
+      }
+    }
+  },
+  "outputs": {
+    "eu": {
+      "label": "European (EU)"
+    },
+    "uk": {
+      "label": "UK"
+    },
+    "usM": {
+      "label": "US men's"
+    },
+    "usW": {
+      "label": "US women's"
+    },
+    "cm": {
+      "label": "Foot length, cm"
+    }
+  },
+  "ui": {
+    "table": "Shoe size chart",
+    "usM": "US men's",
+    "usW": "US women's",
+    "cm": "Foot, cm"
+  }
+}

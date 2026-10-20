@@ -1,0 +1,24 @@
+{
+  "title": "Pressure converter: psi, bar, atm and kPa",
+  "description": "Convert pressure between psi, bar, atmospheres, kilopascals, pascals, mmHg and inches of mercury — for tires, gauges and weather.",
+  "ui": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "table": "{value} {unit} in other units",
+    "error": "Enter a number",
+    "invalid": "Invalid value",
+    "units": {
+      "pa": "Pascals (Pa)",
+      "kpa": "Kilopascals (kPa)",
+      "mpa": "Megapascals (MPa)",
+      "bar": "Bar",
+      "atm": "Atmospheres (atm)",
+      "at": "Kilogram-force per cm² (at)",
+      "mmhg": "Millimeters of mercury (mmHg)",
+      "psi": "Pounds per square inch (psi)",
+      "inhg": "Inches of mercury (inHg)"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Druckumrechner: bar, psi, atm und kPa",
+  "description": "Druck zwischen bar, psi, Atmosphären, Kilopascal, Pascal und mmHg umrechnen – für Reifen, Manometer und Wetter.",
+  "ui": {
+    "value": "Wert",
+    "from": "Von",
+    "to": "In",
+    "swap": "Tauschen",
+    "table": "{value} {unit} in anderen Einheiten",
+    "error": "Bitte eine Zahl eingeben",
+    "invalid": "Ungültiger Wert",
+    "units": {
+      "pa": "Pascal (Pa)",
+      "kpa": "Kilopascal (kPa)",
+      "mpa": "Megapascal (MPa)",
+      "bar": "Bar",
+      "atm": "Physikalische Atmosphären (atm)",
+      "at": "Technische Atmosphären (at)",
+      "mmhg": "Millimeter Quecksilbersäule (mmHg)",
+      "psi": "Pfund pro Quadratzoll (psi)",
+      "inhg": "Zoll Quecksilbersäule (inHg)"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Tallas de calzado: EU, UK, EE. UU. y largo del pie",
+  "description": "Convierte tallas de calzado de adulto entre los sistemas europeo, británico y estadounidense (hombre y mujer) y consulta el largo del pie en centímetros.",
+  "inputs": {
+    "size": {
+      "label": "Talla"
+    },
+    "system": {
+      "label": "Sistema",
+      "options": {
+        "eu": "Europea (EU)",
+        "uk": "Británica (UK)",
+        "usM": "EE. UU. hombre",
+        "usW": "EE. UU. mujer",
+        "cm": "Largo del pie, cm"
+      }
+    }
+  },
+  "outputs": {
+    "eu": {
+      "label": "Europea (EU)"
+    },
+    "uk": {
+      "label": "Británica (UK)"
+    },
+    "usM": {
+      "label": "EE. UU. hombre"
+    },
+    "usW": {
+      "label": "EE. UU. mujer"
+    },
+    "cm": {
+      "label": "Largo del pie, cm"
+    }
+  },
+  "ui": {
+    "table": "Tabla de tallas",
+    "usM": "EE. UU. hombre",
+    "usW": "EE. UU. mujer",
+    "cm": "Pie, cm"
+  }
+}

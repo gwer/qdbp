@@ -1,0 +1,24 @@
+{
+  "title": "Conversor de longitud: metros, pulgadas, pies y millas",
+  "description": "Convierte longitudes y distancias entre unidades métricas y anglosajonas: milímetros, centímetros, metros, kilómetros, pulgadas, pies, yardas y millas.",
+  "ui": {
+    "value": "Valor",
+    "from": "De",
+    "to": "A",
+    "swap": "Intercambiar",
+    "table": "{value} {unit} en otras unidades",
+    "error": "Introduce un número",
+    "invalid": "Valor no válido",
+    "units": {
+      "mm": "Milímetros (mm)",
+      "cm": "Centímetros (cm)",
+      "m": "Metros (m)",
+      "km": "Kilómetros (km)",
+      "in": "Pulgadas (in)",
+      "ft": "Pies (ft)",
+      "yd": "Yardas (yd)",
+      "mi": "Millas (mi)",
+      "nmi": "Millas náuticas"
+    }
+  }
+}

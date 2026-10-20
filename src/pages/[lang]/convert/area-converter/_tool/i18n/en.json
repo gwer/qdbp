@@ -1,0 +1,25 @@
+{
+  "title": "Area converter: square feet, acres and square meters",
+  "description": "Convert area between square feet, square yards, acres, square miles, square meters, hectares and square kilometers.",
+  "ui": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "table": "{value} {unit} in other units",
+    "error": "Enter a number",
+    "invalid": "Invalid value",
+    "units": {
+      "cm2": "Square centimeters (cm²)",
+      "m2": "Square meters (m²)",
+      "are": "Ares (a)",
+      "ha": "Hectares (ha)",
+      "km2": "Square kilometers (km²)",
+      "in2": "Square inches (sq in)",
+      "ft2": "Square feet (sq ft)",
+      "yd2": "Square yards (sq yd)",
+      "acre": "Acres",
+      "mi2": "Square miles (sq mi)"
+    }
+  }
+}
