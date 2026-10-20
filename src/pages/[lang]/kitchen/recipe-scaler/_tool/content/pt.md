@@ -2,7 +2,7 @@
 
 Cole a receita — um ingrediente por linha — e informe quantas porções a receita rende e quantas você precisa. Todas as quantidades são multiplicadas pelo mesmo fator e o resto do texto é mantido. Linhas sem número ("sal a gosto") não mudam.
 
-São reconhecidos números inteiros e decimais ("1,5", "0.75"), frações ("1/2"), números mistos ("1 1/2") e intervalos ("2–3 dentes").
+São reconhecidos números inteiros e decimais ("1,5", "0.75"), frações ("1/2"), números mistos ("1 1/2") e intervalos ("2–3 dentes"). A quantidade também pode vir depois do ingrediente, como em muitos sites de receitas: «Farinha – 500 g», «Sal: 1 colher de chá».
 
 ## Exemplo
 

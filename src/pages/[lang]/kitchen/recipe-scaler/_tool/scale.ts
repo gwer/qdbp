@@ -1,6 +1,7 @@
 // Пересчёт строк рецепта: в начале строки ищется количество — целое, десятичное («1,5», «0.75»),
 // дробь («1/2»), смешанное число («1 1/2», «1½»), символ дроби («½») или диапазон («2–3»).
-// Всё остальное в строке (единица, продукт) остаётся как есть.
+// Если в начале числа нет, количество ищется после разделителя: «Мука — 500 г», «Соль: 1 ч. л.»
+// (так пишут в рецептах на сайтах). Всё остальное в строке (единица, продукт) остаётся как есть.
 
 const UNICODE: Record<string, number> = { '¼': 0.25, '½': 0.5, '¾': 0.75, '⅓': 1 / 3, '⅔': 2 / 3, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875 };
 const NUM = String.raw`(?:\d+\s+\d+\/\d+|\d+\/\d+|\d+\s*[¼½¾⅓⅔⅛⅜⅝⅞]|[¼½¾⅓⅔⅛⅜⅝⅞]|\d+(?:[.,]\d+)?)`;
@@ -24,7 +25,19 @@ export interface Line {
   rest: string;
 }
 
+/** Название и разделитель перед количеством: «Мука — », «Соль: », «Сахар<Tab>». */
+const AFTER_SEPARATOR = /^([^\d¼½¾⅓⅔⅛⅜⅝⅞]*?(?:\s[—–-]\s*|:\s*|\t+))(.*)$/;
+
 export function parseLine(line: string): Line {
+  const direct = parseLeading(line);
+  if (direct.qty !== null) return direct;
+  const sep = AFTER_SEPARATOR.exec(line);
+  if (!sep) return direct;
+  const tail = parseLeading(sep[2]);
+  return tail.qty === null ? direct : { ...tail, prefix: sep[1] + tail.prefix };
+}
+
+function parseLeading(line: string): Line {
   const m = LINE.exec(line);
   if (!m) return { prefix: '', qty: null, qty2: null, rest: line };
   const qty = parseQuantity(m[2]);

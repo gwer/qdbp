@@ -2,7 +2,7 @@
 
 Paste your recipe — one ingredient per line — and enter how many servings it makes and how many you need. Every amount is multiplied by the same factor and the rest of each line is kept. Lines without numbers ("salt to taste") stay as they are.
 
-Whole numbers, decimals, fractions ("1/2"), mixed numbers ("1 1/2", "1½") and ranges ("2–3 cloves") are all understood. Results are shown as kitchen fractions where possible (½, ⅓, ¼, ¾, ⅛).
+Whole numbers, decimals, fractions ("1/2"), mixed numbers ("1 1/2", "1½") and ranges ("2–3 cloves") are all understood. Results are shown as kitchen fractions where possible (½, ⅓, ¼, ¾, ⅛). The amount can also come after the ingredient, as many recipe sites write it: “Flour – 500 g”, “Salt: 1 tsp”.
 
 ## Example
 

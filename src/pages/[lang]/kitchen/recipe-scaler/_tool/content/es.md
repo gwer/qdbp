@@ -2,7 +2,7 @@
 
 Pega la receta —un ingrediente por línea— e indica para cuántas raciones es y cuántas necesitas. Todas las cantidades se multiplican por el mismo factor y el resto del texto se mantiene. Las líneas sin números («sal al gusto») no cambian.
 
-Se entienden números enteros y decimales («1,5», «0.75»), fracciones («1/2»), números mixtos («1 1/2») y rangos («2–3 dientes»).
+Se entienden números enteros y decimales («1,5», «0.75»), fracciones («1/2»), números mixtos («1 1/2») y rangos («2–3 dientes»). La cantidad también puede ir después del ingrediente, como en muchas webs de recetas: «Harina – 500 g», «Sal: 1 cucharadita».
 
 ## Ejemplo
 

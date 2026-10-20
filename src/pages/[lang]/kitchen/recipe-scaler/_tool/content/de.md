@@ -2,7 +2,7 @@
 
 Rezept einfügen – eine Zutat pro Zeile – und angeben, für wie viele Portionen es gedacht ist und wie viele Sie brauchen. Alle Mengen werden mit demselben Faktor multipliziert, der übrige Text bleibt erhalten. Zeilen ohne Zahl („Salz nach Geschmack“) bleiben unverändert.
 
-Erkannt werden ganze Zahlen und Dezimalzahlen („1,5“, „0.75“), Brüche („1/2“), gemischte Zahlen („1 1/2“) und Bereiche („2–3 Zehen“).
+Erkannt werden ganze Zahlen und Dezimalzahlen („1,5“, „0.75“), Brüche („1/2“), gemischte Zahlen („1 1/2“) und Bereiche („2–3 Zehen“). Die Menge darf auch nach der Zutat stehen, wie auf vielen Rezeptseiten: „Mehl – 500 g“, „Salz: 1 TL“.
 
 ## Beispiel
 
