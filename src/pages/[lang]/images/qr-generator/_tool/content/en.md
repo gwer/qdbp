@@ -2,6 +2,8 @@
 
 Paste a link or any text — the QR code appears instantly. For Wi-Fi, choose "Wi-Fi" and enter the network name and password: guests can join just by pointing their phone camera at it. Download the code as PNG (for documents and social media) or SVG (for printing at any size).
 
+Besides text and Wi-Fi you can make a QR code for a contact card (vCard — the phone offers to save the contact), an email with a ready subject, a phone call or an SMS. If the code is lighter than the background or the colors are too close, you’ll get a warning: many scanners can’t read such codes.
+
 The QR code is created in your browser — neither the link nor your Wi-Fi password is sent anywhere. The code never expires: it contains the data itself, not a link to our service.
 
 ## Error correction level

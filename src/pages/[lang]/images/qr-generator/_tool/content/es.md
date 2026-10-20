@@ -2,6 +2,8 @@
 
 Pega un enlace o un texto y el código QR aparece al instante. Para el wifi, elige «Wifi» e indica el nombre de la red y la contraseña: tus invitados podrán conectarse solo con apuntar la cámara del móvil. Descarga el código en PNG (para documentos y redes sociales) o en SVG (para imprimir a cualquier tamaño).
 
+Además de texto y wifi, puedes crear un QR de tarjeta de contacto (vCard: el móvil ofrece guardar el contacto), de correo con asunto, de llamada y de SMS. Si el código es más claro que el fondo o los colores se parecen demasiado, verás un aviso: muchos lectores no leen esos códigos.
+
 El código QR se genera en tu navegador: ni el enlace ni la contraseña del wifi se envían a ninguna parte. El código no caduca, porque contiene los propios datos y no un enlace a nuestro servicio.
 
 ## Nivel de corrección de errores

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { targetSize } from './size';
+import { coverCrop, targetSize } from './size';
 
 describe('targetSize', () => {
   it('проценты', () => {
@@ -21,5 +21,20 @@ describe('targetSize', () => {
     expect(targetSize(800, 600, { mode: 'width', width: 1920, noUpscale: true })).toEqual({ width: 800, height: 600 });
     expect(targetSize(800, 600, { mode: 'width', width: 1920 })).toEqual({ width: 1920, height: 1440 });
     expect(targetSize(100, 1, { mode: 'percent', percent: 10 })).toEqual({ width: 10, height: 1 });
+  });
+});
+
+describe('coverCrop', () => {
+  it('4000×3000 в квадрат 1080 — центральный квадрат 3000×3000', () => {
+    expect(coverCrop(4000, 3000, 1080, 1080)).toEqual({ crop: { x: 500, y: 0, width: 3000, height: 3000 }, size: { width: 1080, height: 1080 } });
+  });
+
+  it('портрет 1000×2000 в 16:9 1920×1080 — полоса по центру', () => {
+    const r = coverCrop(1000, 2000, 1920, 1080);
+    expect(r.crop).toEqual({ x: 0, y: 718, width: 1000, height: 563 }); // (2000 − 563) / 2 = 718,5 → 718
+  });
+
+  it('маленький исходник без увеличения — размер области обрезки', () => {
+    expect(coverCrop(800, 600, 1080, 1080, true).size).toEqual({ width: 600, height: 600 });
   });
 });

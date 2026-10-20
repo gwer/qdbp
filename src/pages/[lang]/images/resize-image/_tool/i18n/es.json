@@ -7,6 +7,7 @@
       "width": "Ancho",
       "height": "Alto",
       "fit": "Encajar en un recuadro",
+      "cover": "Ancho × alto exactos (recortar al centro)",
       "percent": "Porcentaje"
     },
     "percent": "Escala",

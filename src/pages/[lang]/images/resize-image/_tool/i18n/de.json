@@ -7,6 +7,7 @@
       "width": "Breite",
       "height": "Höhe",
       "fit": "In Rahmen einpassen",
+      "cover": "Genau Breite × Höhe (mittig zuschneiden)",
       "percent": "Prozent"
     },
     "percent": "Skalierung",

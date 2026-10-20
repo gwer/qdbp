@@ -2,6 +2,8 @@
 
 Wählen Sie, wie die Größe geändert werden soll – nach Breite, nach Höhe, in einen Rahmen eingepasst oder in Prozent – und fügen Sie Fotos hinzu: hineinziehen, auf dem Gerät auswählen oder aus der Zwischenablage einfügen. Das Seitenverhältnis bleibt immer erhalten, nichts wird verzerrt. Mehrere Dateien lassen sich auf einmal bearbeiten und einzeln oder als ZIP herunterladen.
 
+Für ein exaktes Format – Quadrat 1080 × 1080 für soziale Netzwerke, Avatar, Titelbild 1920 × 1080 – wählen Sie „Genau Breite × Höhe“: Die Ränder werden abgeschnitten, die Mitte bleibt.
+
 Die Bilder werden direkt im Browser verarbeitet und nirgendwo hochgeladen.
 
 ## Beispiele

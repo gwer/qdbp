@@ -3,7 +3,7 @@ import type { ToolProps } from '@/ui/define';
 import { IntField, QualityField, SelectField } from '@/ui/files/fields';
 import { decode, encode, LOSSY, outputName, sameType, type OutputType } from '@/ui/files/image';
 import { ImageBatch, type Processed } from '@/ui/files/ImageBatch';
-import { targetSize, type ResizeMode } from '@/ui/files/size';
+import { coverCrop, targetSize, type ResizeMode } from '@/ui/files/size';
 
 type Format = 'same' | 'image/jpeg' | 'image/webp' | 'image/png';
 
@@ -18,13 +18,22 @@ export function ResizeImage({ lang, t }: ToolProps) {
 
   const process = async (file: File): Promise<Processed> => {
     const bitmap = await decode(file);
+    let cropped: ImageBitmap | null = null;
     try {
-      const size = targetSize(bitmap.width, bitmap.height, { mode, percent, width, height, noUpscale });
       const type: OutputType = format === 'same' ? sameType(file) : format;
-      const blob = await encode(bitmap, { ...size, type, quality: quality / 100 });
+      let source = bitmap;
+      let size = targetSize(bitmap.width, bitmap.height, { mode, percent, width, height, noUpscale });
+      if (mode === 'cover') {
+        // Сначала вырезаем центральную область нужных пропорций, потом масштабируем её целиком.
+        const c = coverCrop(bitmap.width, bitmap.height, width, height, noUpscale);
+        source = cropped = await createImageBitmap(bitmap, c.crop.x, c.crop.y, c.crop.width, c.crop.height);
+        size = c.size;
+      }
+      const blob = await encode(source, { ...size, type, quality: quality / 100 });
       return { blob, name: outputName(file.name, type, `-${size.width}x${size.height}`), ...size, srcWidth: bitmap.width, srcHeight: bitmap.height };
     } finally {
       bitmap.close();
+      cropped?.close();
     }
   };
 
@@ -36,12 +45,12 @@ export function ResizeImage({ lang, t }: ToolProps) {
           id="rs-mode"
           label={t('ui.mode')}
           value={mode}
-          options={(['width', 'height', 'fit', 'percent'] as const).map((m) => [m, t(`ui.modes.${m}`)])}
+          options={(['width', 'height', 'fit', 'cover', 'percent'] as const).map((m) => [m, t(`ui.modes.${m}`)])}
           onChange={setMode}
         />
         {mode === 'percent' && <IntField id="rs-percent" label={t('ui.percent')} value={percent} min={1} max={1000} suffix="%" onChange={setPercent} />}
-        {(mode === 'width' || mode === 'fit') && <IntField id="rs-width" label={t('ui.width')} value={width} min={1} max={20000} suffix="px" onChange={setWidth} />}
-        {(mode === 'height' || mode === 'fit') && <IntField id="rs-height" label={t('ui.height')} value={height} min={1} max={20000} suffix="px" onChange={setHeight} />}
+        {(mode === 'width' || mode === 'fit' || mode === 'cover') && <IntField id="rs-width" label={t('ui.width')} value={width} min={1} max={20000} suffix="px" onChange={setWidth} />}
+        {(mode === 'height' || mode === 'fit' || mode === 'cover') && <IntField id="rs-height" label={t('ui.height')} value={height} min={1} max={20000} suffix="px" onChange={setHeight} />}
         <SelectField
           id="rs-format"
           label={t('ui.format')}

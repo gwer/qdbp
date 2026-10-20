@@ -5,7 +5,11 @@
     "kind": "Tipo",
     "kinds": {
       "text": "Texto ou link",
-      "wifi": "Wi-Fi"
+      "wifi": "Wi-Fi",
+      "vcard": "Cartão de contato",
+      "email": "E-mail",
+      "tel": "Ligação",
+      "sms": "SMS"
     },
     "text": "Texto ou link",
     "ssid": "Nome da rede (SSID)",
@@ -30,6 +34,20 @@
     "empty": "Digite um texto ou link",
     "tooLong": "Dados demais para um QR code — encurte o texto ou escolha um nível de correção menor",
     "downloadPng": "Baixar PNG",
-    "downloadSvg": "Baixar SVG"
+    "downloadSvg": "Baixar SVG",
+    "colors": {
+      "inverted": "Muitos leitores não leem um código claro sobre fundo escuro — deixe o código mais escuro que o fundo.",
+      "low": "O código e o fundo têm brilho parecido demais: com pouca luz o código pode não ser lido."
+    },
+    "to": "Para (endereço)",
+    "subject": "Assunto",
+    "body": "Texto do e-mail",
+    "phone": "Telefone",
+    "message": "Mensagem",
+    "first": "Nome",
+    "last": "Sobrenome",
+    "email": "E-mail",
+    "org": "Empresa",
+    "url": "Site"
   }
 }

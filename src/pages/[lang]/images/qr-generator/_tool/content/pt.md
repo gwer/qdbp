@@ -2,6 +2,8 @@
 
 Cole um link ou um texto e o QR code aparece na hora. Para Wi-Fi, escolha "Wi-Fi" e informe o nome da rede e a senha: as visitas se conectam só apontando a câmera do celular. Baixe o código em PNG (para documentos e redes sociais) ou em SVG (para imprimir em qualquer tamanho).
 
+Além de texto e Wi-Fi, dá para gerar QR de cartão de contato (vCard — o celular oferece salvar o contato), de e-mail com assunto, de ligação e de SMS. Se o código for mais claro que o fundo ou as cores forem parecidas demais, aparece um aviso: muitos leitores não leem esses códigos.
+
 O QR code é gerado no seu navegador — nem o link nem a senha do Wi-Fi são enviados a lugar nenhum. O código não expira: ele contém os próprios dados, não um link para o nosso serviço.
 
 ## Nível de correção de erros

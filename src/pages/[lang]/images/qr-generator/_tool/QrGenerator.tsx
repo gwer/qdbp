@@ -1,8 +1,9 @@
 import { useState } from 'preact/hooks';
 import type { ToolProps } from '@/ui/define';
-import { qrMatrix, qrSvg, wifiPayload, type Level } from './qr';
+import { colorProblem, emailPayload, qrMatrix, qrSvg, smsPayload, telPayload, vcardPayload, wifiPayload, type Level } from './qr';
 
-type Kind = 'text' | 'wifi';
+type Kind = 'text' | 'wifi' | 'email' | 'tel' | 'sms' | 'vcard';
+const KINDS: Kind[] = ['text', 'wifi', 'vcard', 'email', 'tel', 'sms'];
 type Security = 'WPA' | 'WEP' | 'nopass';
 
 function download(name: string, blob: Blob) {
@@ -33,11 +34,35 @@ export function QrGenerator({ t }: ToolProps) {
   const [password, setPassword] = useState('');
   const [security, setSecurity] = useState<Security>('WPA');
   const [hidden, setHidden] = useState(false);
+  // Поля письма, звонка, SMS и визитки — одним объектом: их много, а логика одинаковая.
+  const [f, setF] = useState({ to: '', subject: '', body: '', phone: '', first: '', last: '', email: '', org: '', url: '' });
+  const field = (key: keyof typeof f, label: string, multiline = false) => (
+    <div class="field" key={key}>
+      <label for={`qr-${key}`}>{label}</label>
+      {multiline ? (
+        <textarea id={`qr-${key}`} rows={3} value={f[key]} onInput={(e) => setF({ ...f, [key]: e.currentTarget.value })} />
+      ) : (
+        <input id={`qr-${key}`} type="text" autoComplete="off" value={f[key]} onInput={(e) => setF({ ...f, [key]: e.currentTarget.value })} />
+      )}
+    </div>
+  );
   const [level, setLevel] = useState<Level>('M');
   const [fg, setFg] = useState('#000000');
   const [bg, setBg] = useState('#ffffff');
 
-  const payload = kind === 'text' ? text : ssid ? wifiPayload(ssid, password, security, hidden) : '';
+  const payload =
+    kind === 'text'
+      ? text
+      : kind === 'wifi'
+        ? ssid && wifiPayload(ssid, password, security, hidden)
+        : kind === 'email'
+          ? f.to.trim() && emailPayload(f.to, f.subject, f.body)
+          : kind === 'tel'
+            ? f.phone.trim() && telPayload(f.phone)
+            : kind === 'sms'
+              ? f.phone.trim() && smsPayload(f.phone, f.body)
+              : (f.first || f.last).trim() && vcardPayload(f);
+  const colors = colorProblem(fg, bg);
   let matrix: boolean[][] | null = null;
   let tooLong = false;
   if (payload) {
@@ -51,7 +76,7 @@ export function QrGenerator({ t }: ToolProps) {
   return (
     <div>
       <div class="calc-options" role="group" aria-label={t('ui.kind')}>
-        {(['text', 'wifi'] as const).map((k) => (
+        {KINDS.map((k) => (
           <button type="button" key={k} aria-pressed={kind === k} onClick={() => setKind(k)}>
             {t(`ui.kinds.${k}`)}
           </button>
@@ -61,6 +86,16 @@ export function QrGenerator({ t }: ToolProps) {
         <div class="field">
           <label for="qr-text">{t('ui.text')}</label>
           <textarea id="qr-text" rows={3} value={text} onInput={(e) => setText(e.currentTarget.value)} />
+        </div>
+      ) : kind === 'email' ? (
+        <div class="calc-inputs">{[field('to', t('ui.to')), field('subject', t('ui.subject'))]}<div class="field-wide">{field('body', t('ui.body'), true)}</div></div>
+      ) : kind === 'tel' ? (
+        <div class="calc-inputs">{field('phone', t('ui.phone'))}</div>
+      ) : kind === 'sms' ? (
+        <div class="calc-inputs">{field('phone', t('ui.phone'))}<div class="field-wide">{field('body', t('ui.message'), true)}</div></div>
+      ) : kind === 'vcard' ? (
+        <div class="calc-inputs">
+          {[field('first', t('ui.first')), field('last', t('ui.last')), field('phone', t('ui.phone')), field('email', t('ui.email')), field('org', t('ui.org')), field('url', t('ui.url'))]}
         </div>
       ) : (
         <div class="calc-inputs">
@@ -110,6 +145,7 @@ export function QrGenerator({ t }: ToolProps) {
           <input id="qr-bg" type="color" value={bg} onInput={(e) => setBg(e.currentTarget.value)} />
         </div>
       </div>
+      {colors && <p class="field-error">{t(`ui.colors.${colors}`)}</p>}
       <div class="qr-preview" aria-live="polite">
         {matrix ? (
           <div role="img" aria-label={t('ui.preview')} dangerouslySetInnerHTML={{ __html: qrSvg(matrix, fg, bg) }} />

@@ -2,6 +2,8 @@
 
 Link oder Text einfügen – der QR-Code erscheint sofort. Für WLAN wählen Sie „WLAN“ und geben Netzwerkname und Passwort ein: Gäste verbinden sich, indem sie einfach die Handykamera darauf richten. Den Code laden Sie als PNG (für Dokumente und Social Media) oder als SVG (für den Druck in beliebiger Größe) herunter.
 
+Neben Text und WLAN gibt es QR-Codes für eine Visitenkarte (vCard – das Handy bietet an, den Kontakt zu speichern), eine E-Mail mit Betreff, einen Anruf und eine SMS. Ist der Code heller als der Hintergrund oder sind die Farben zu ähnlich, warnt der Rechner: Solche Codes lesen viele Scanner nicht.
+
 Der QR-Code entsteht direkt im Browser – weder der Link noch Ihr WLAN-Passwort werden irgendwohin gesendet. Der Code läuft nicht ab: Er enthält die Daten selbst, keinen Link zu unserem Dienst.
 
 ## Fehlerkorrektur

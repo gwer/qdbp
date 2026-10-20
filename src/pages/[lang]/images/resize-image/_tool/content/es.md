@@ -2,6 +2,8 @@
 
 Elige cómo cambiar el tamaño (por ancho, por alto, encajando en un recuadro o por porcentaje) y añade las fotos: arrástralas, elígelas en tu dispositivo o pégalas desde el portapapeles. Las proporciones se mantienen siempre, así que nada se deforma. Puedes procesar varios archivos a la vez y descargarlos uno a uno o en un ZIP.
 
+Para un tamaño exacto —un cuadrado de 1080 × 1080 para redes, un avatar, una portada de 1920 × 1080— elige «Ancho × alto exactos»: se recortan los bordes y se conserva el centro.
+
 Las imágenes se procesan en tu navegador y no se suben a ningún sitio.
 
 ## Ejemplos

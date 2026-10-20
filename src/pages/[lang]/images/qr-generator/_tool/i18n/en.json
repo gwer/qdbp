@@ -5,7 +5,11 @@
     "kind": "Type",
     "kinds": {
       "text": "Text or URL",
-      "wifi": "Wi-Fi"
+      "wifi": "Wi-Fi",
+      "vcard": "Contact card",
+      "email": "Email",
+      "tel": "Phone call",
+      "sms": "SMS"
     },
     "text": "Text or URL",
     "ssid": "Network name (SSID)",
@@ -30,6 +34,20 @@
     "empty": "Enter some text or a URL",
     "tooLong": "Too much data for one QR code — shorten the text or choose a lower error correction level",
     "downloadPng": "Download PNG",
-    "downloadSvg": "Download SVG"
+    "downloadSvg": "Download SVG",
+    "colors": {
+      "inverted": "Many scanners can’t read a light code on a dark background — make the code darker than the background.",
+      "low": "The code and background are too close in brightness: it may not scan in poor light."
+    },
+    "to": "To (address)",
+    "subject": "Subject",
+    "body": "Message body",
+    "phone": "Phone",
+    "message": "Message",
+    "first": "First name",
+    "last": "Last name",
+    "email": "Email",
+    "org": "Company",
+    "url": "Website"
   }
 }

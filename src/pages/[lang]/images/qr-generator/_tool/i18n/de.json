@@ -5,7 +5,11 @@
     "kind": "Typ",
     "kinds": {
       "text": "Text oder Link",
-      "wifi": "WLAN"
+      "wifi": "WLAN",
+      "vcard": "Visitenkarte",
+      "email": "E-Mail",
+      "tel": "Anruf",
+      "sms": "SMS"
     },
     "text": "Text oder Link",
     "ssid": "Netzwerkname (SSID)",
@@ -30,6 +34,20 @@
     "empty": "Text oder Link eingeben",
     "tooLong": "Zu viele Daten für einen QR-Code – Text kürzen oder niedrigere Fehlerkorrektur wählen",
     "downloadPng": "PNG herunterladen",
-    "downloadSvg": "SVG herunterladen"
+    "downloadSvg": "SVG herunterladen",
+    "colors": {
+      "inverted": "Viele Scanner lesen keinen hellen Code auf dunklem Grund – machen Sie den Code dunkler als den Hintergrund.",
+      "low": "Code und Hintergrund sind zu ähnlich hell: Bei schlechtem Licht wird der Code eventuell nicht erkannt."
+    },
+    "to": "An (Adresse)",
+    "subject": "Betreff",
+    "body": "Nachricht",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "first": "Vorname",
+    "last": "Nachname",
+    "email": "E-Mail",
+    "org": "Firma",
+    "url": "Website"
   }
 }

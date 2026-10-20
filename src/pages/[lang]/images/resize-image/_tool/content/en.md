@@ -2,6 +2,8 @@
 
 Choose how to resize — by width, by height, to fit in a box or by percentage — then add photos: drag them in, pick them from your device or paste from the clipboard. The aspect ratio is always kept, so nothing gets stretched. Process several files at once and download them one by one or as a ZIP.
 
+For an exact size — a 1080 × 1080 square for social media, an avatar, a 1920 × 1080 cover — choose “Exact width × height”: the edges are cropped and the center is kept.
+
 Images are processed right in your browser and never uploaded.
 
 ## Examples
