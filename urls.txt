@@ -449,6 +449,7 @@
 /ru/finance/margin/
 /ru/finance/markup/
 /ru/finance/mortgage/
+/ru/finance/net-salary/
 /ru/finance/refinance/
 /ru/finance/roi/
 /ru/finance/tip/
