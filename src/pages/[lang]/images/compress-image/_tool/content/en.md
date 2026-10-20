@@ -18,8 +18,8 @@ How much smaller the file gets depends on the photo — you see the result right
 
 **Why does PNG become WebP?** PNG is lossless, and a browser almost never saves it smaller than the original. Lossy WebP is much lighter and keeps transparency. If you need JPG, pick it — transparent areas become white.
 
-**What if the compressed file is bigger?** That happens when a photo was already heavily compressed. In that case the original is kept — a 0% change.
+**What if the compressed file is bigger?** That happens when a photo was already heavily compressed. In that case the original image is kept without re-compressing, so the file doesn't grow. Metadata is still removed from a JPEG, so it may get slightly smaller.
 
 **How else can I reduce file size?** Most often the photo is simply too large in pixels: a 4000-pixel-wide phone photo isn't needed on a website. [Resize it](/en/images/resize-image/) first, then compress.
 
-**Is metadata removed?** Yes — EXIF and GPS data aren't carried over when re-saving. To remove them without re-compressing, use the [EXIF remover](/en/images/exif/).
+**Is metadata removed?** Yes — EXIF, GPS and comments aren't carried over when re-saving, and they're stripped when the original JPEG is kept. The exception is a WebP that couldn't be made smaller: it's returned unchanged. To remove them without re-compressing, use the [EXIF remover](/en/images/exif/).

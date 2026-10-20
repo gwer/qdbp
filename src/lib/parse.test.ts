@@ -14,6 +14,7 @@ describe('parseNumber', () => {
     ['.5', 0.5],
     ['  12  ', 12],
     ['−3', -3],
+    ['-1.234.567,89', -1234567.89],
   ])('ru: «%s» → %d', (input, expected) => {
     expect(parseNumber(input, 'ru')).toBe(expected);
   });
@@ -27,7 +28,7 @@ describe('parseNumber', () => {
     expect(parseNumber('1,500', 'ru')).toBe(1.5);
   });
 
-  it.each(['', '-', 'abc', '1,2,3.4.5', '12a', '1e5', '--1'])('«%s» — не число', (input) => {
+  it.each(['', '-', 'abc', '1,2,3.4.5', '12a', '1e5', '--1', '1.2.3', '1,23,4', '12,34.5', '1.23,4', '1234.567.890'])('«%s» — не число', (input) => {
     expect(parseNumber(input, 'ru')).toBeNull();
   });
 });

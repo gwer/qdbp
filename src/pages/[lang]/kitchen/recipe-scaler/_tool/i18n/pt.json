@@ -1,6 +1,6 @@
 {
   "title": "Calculadora de receitas: ajustar para mais ou menos porções",
-  "description": "Ajuste uma receita para outro número de porções: cole a lista de ingredientes, informe para quantas porções ela rende e quantas você precisa — as quantidades são recalculadas.",
+  "description": "Ajuste uma receita para outro número de porções: cole a lista de ingredientes, informe quantas porções a receita rende e quantas você precisa — as quantidades são recalculadas.",
   "ui": {
     "from": "Porções da receita",
     "to": "Porções desejadas",

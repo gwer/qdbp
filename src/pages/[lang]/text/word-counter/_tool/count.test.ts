@@ -21,4 +21,12 @@ describe('countText', () => {
   it('слова с апострофом и числа', () => {
     expect(countText("don't stop 2026", 'en-US').words).toBe(3);
   });
+
+  it('слово через дефис — одно слово', () => {
+    expect(countText('из-за кто-то', 'ru-RU').words).toBe(2);
+    expect(countText('a well-known E-Mail', 'en-US').words).toBe(3);
+    expect(countText('franco-alemán guarda-chuva', 'es-ES').words).toBe(2);
+    expect(countText('слово - слово', 'ru-RU').words).toBe(2);
+    expect(countText('2020-2026', 'ru-RU').words).toBe(1);
+  });
 });

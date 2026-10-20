@@ -25,6 +25,6 @@ Por exemplo, com 70 kg e 1,75 m: 70 / 1,75² = **22,9** — peso normal. Para 1,
 
 **Por que um atleta pode aparecer com "sobrepeso"?** O IMC não diferencia músculo de gordura; com muita massa muscular, o valor fica mais alto.
 
-**Posso usar o IMC na gravidez?** Não, ele não é usado durante a gestação.
+**Posso usar esta calculadora na gravidez?** As categorias de peso para adultos não se destinam a avaliar o peso atual durante a gestação. A equipe de saúde pode considerar o IMC anterior à gravidez no planejamento do acompanhamento.
 
 O IMC é um indicador de triagem, não um diagnóstico. Para dúvidas sobre peso e saúde, procure um médico ou nutricionista. Para saber quantas calorias você precisa por dia, use a [calculadora de calorias](/pt/health/calorie-calculator/).

@@ -26,7 +26,7 @@
     },
     "alsoFound": "También encontrado",
     "none": "No se han encontrado metadatos",
-    "notJpeg": "La lectura y eliminación sin pérdida funciona con JPEG. Para PNG y WebP, vuelve a guardar el archivo con el conversor de imágenes: los metadatos no se copian.",
+    "notJpeg": "La lectura y la eliminación sin pérdidas funcionan con JPEG. Para PNG y WebP, vuelve a guardar el archivo con el conversor de imágenes: los metadatos no se copian.",
     "broken": "No se ha podido leer este JPEG; puede que el archivo esté dañado.",
     "gpsWarning": "Esta foto contiene la ubicación donde se tomó:",
     "map": "Ver en el mapa",

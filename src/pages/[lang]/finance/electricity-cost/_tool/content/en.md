@@ -26,6 +26,6 @@ Example: a 2,000 W space heater running 3 hours a day uses 6 kWh. At 17¢ per kW
 
 ## FAQ
 
-**Why is a fridge's figure so low?** The compressor cycles on and off. For anything with a thermostat — fridges, heaters, water heaters — enter the time it actually runs, not the time it's plugged in.
+**How do I enter power for a fridge?** If you use a 24-hour average power, enter 24 hours per day: the off periods are already included in that average. If you use the power while the compressor is running, enter only its actual running time. Do not apply both adjustments.
 
 **Where do I find my rate?** On your electric bill: divide the total by the kWh used to get the all-in rate, including delivery charges. The U.S. average is around 17¢ per kWh, but it varies widely by state.

@@ -8,7 +8,7 @@ import { formatDuration, formatDurationSeconds, parseDuration, parseDurationSeco
 import { formatClock, formatDate, formatDateTime, formatInput, formatNumber } from '@/lib/format';
 import { parseNumber } from '@/lib/parse';
 import { convert, displayUnit, forField, parseFeetInches, tidy, unitSymbol } from '@/lib/units';
-import type { CalculatorDef, InputSpec, NumberInput, OutputSpec, QuantityInput, ToolProps } from './define';
+import { InputError, type CalculatorDef, type InputSpec, type NumberInput, type OutputSpec, type QuantityInput, type ToolProps } from './define';
 import { readPref, writePref } from './prefs';
 import { DateField } from './DateField';
 import { TimeField } from './TimeField';
@@ -263,11 +263,13 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
   }, [raw]);
 
   let result: Record<string, unknown> | null = null;
+  let computeError: string | null = null;
   if (valid) {
     try {
       result = def.compute(values) as Record<string, unknown>;
-    } catch {
-      result = null;
+    } catch (e) {
+      // Поля по отдельности верны, но вместе расчёт невозможен: объясняем, а не показываем прочерки.
+      computeError = e instanceof InputError && def.errors?.includes(e.key) ? t(`errors.${e.key}`) : t('calc.error.compute');
     }
   }
 
@@ -369,12 +371,16 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
       </form>
 
       <section class="calc-result" aria-live="polite" aria-label={t('calc.result')}>
-        {outputs(def).map(([name, spec], i) => (
-          <div class={i === 0 ? 'out out-primary' : 'out'} key={name}>
-            <span class="out-label">{t(`outputs.${name}.label`)}</span>
-            <output class="out-value">{result ? formatOutput(env, result[name], spec) : '—'}</output>
-          </div>
-        ))}
+        {computeError ? (
+          <p class="calc-error">{computeError}</p>
+        ) : (
+          outputs(def).map(([name, spec], i) => (
+            <div class={i === 0 ? 'out out-primary' : 'out'} key={name}>
+              <span class="out-label">{t(`outputs.${name}.label`)}</span>
+              <output class="out-value">{result ? formatOutput(env, result[name], spec) : '—'}</output>
+            </div>
+          ))
+        )}
       </section>
 
       {def.Extra && result && <def.Extra values={values as any} result={result} lang={lang} t={t} />}

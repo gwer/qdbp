@@ -11,7 +11,7 @@ const DIMS: Record<string, Dimension> = {
   'speed-converter': 'speed',
   'pressure-converter': 'pressure',
   'energy-converter': 'energy',
-  'data-converter': 'data',
+  'data-size-converter': 'data',
   'fuel-consumption': 'fuel',
 };
 

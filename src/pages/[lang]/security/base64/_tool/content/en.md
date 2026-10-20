@@ -17,7 +17,7 @@ Choose "Encode" or "Decode" and paste your text — the result appears instantly
 
 **Why is the encoded string longer?** Every 3 bytes become 4 characters, so the size grows by about a third.
 
-**What do the `=` signs at the end mean?** They're padding: the length of Base64 is always a multiple of 4.
+**What do the `=` signs at the end mean?** They're padding: with padding, the length is a multiple of 4. Unpadded Base64 is also accepted here.
 
 **Why do I get an error when decoding?** The string contains invalid characters, or the decoded data isn't text (an image, for example).
 

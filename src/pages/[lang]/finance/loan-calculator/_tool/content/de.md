@@ -20,4 +20,4 @@ Ratenkredit über 15.000 € mit 6 % Sollzins und 60 Monaten Laufzeit als Annuit
 
 **Sind Gebühren und Versicherungen enthalten?** Nein, berechnet werden nur Tilgung und Zinsen. Die Gesamtkosten zeigt der effektive Jahreszins im Kreditangebot.
 
-**Stimmt das Ergebnis mit dem Angebot der Bank überein?** In der Regel auf den Cent. Manche Banken rechnen Zinsen taggenau ab, dann sind kleine Abweichungen möglich.
+**Stimmt das Ergebnis mit dem Angebot der Bank überein?** Es kann übereinstimmen, wenn Zinssatz, Zahlungsplan, Zinsberechnung und Rundungsregeln gleich sind. Gebühren und Versicherungen sind hier nicht enthalten; vergleichen Sie die Annahmen mit Ihrem Kreditvertrag.

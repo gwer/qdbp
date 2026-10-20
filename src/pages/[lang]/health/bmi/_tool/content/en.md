@@ -25,6 +25,6 @@ For example, 160 lb at 5'9" (69 in): 703 × 160 / 69² ≈ **23.6** — a health
 
 **Why can athletes come out as "overweight"?** BMI doesn't tell muscle from fat, so people with a lot of muscle get a higher number.
 
-**Can I use BMI during pregnancy?** No, BMI isn't used to assess weight during pregnancy.
+**Can I use this calculator during pregnancy?** Its adult weight categories are not intended to assess your current weight during pregnancy. Healthcare professionals may use your pre-pregnancy BMI when planning care.
 
 BMI is a screening measure, not a diagnosis. Talk to a doctor about your weight and health. To estimate how many calories you need a day, try the [calorie calculator](/en/health/calorie-calculator/).

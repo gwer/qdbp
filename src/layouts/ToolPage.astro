@@ -39,7 +39,7 @@ const url = new URL(toolUrl(tool, lang), Astro.site).href;
   alternates={alternates}
   jsonLd={[webAppLd({ name, description, url, lang: LANG_META[lang].hreflang }), breadcrumbLd(crumbs, Astro.site!)]}
 >
-  <Breadcrumbs items={crumbs} />
+  <Breadcrumbs items={crumbs} label={t('nav.breadcrumbs')} />
   <h1>{title}</h1>
   <p class="lead">{description}</p>
 

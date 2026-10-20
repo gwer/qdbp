@@ -25,5 +25,8 @@
     "ratio": {
       "label": "Índice de margem de contribuição"
     }
+  },
+  "errors": {
+    "priceBelowCost": "O preço deve ser maior que o custo variável por unidade — senão cada venda aumenta o prejuízo."
   }
 }

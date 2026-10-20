@@ -8,7 +8,7 @@ O QR code é gerado no seu navegador — nem o link nem a senha do Wi-Fi são en
 
 Um QR code pode ser lido mesmo com parte dele danificada ou coberta. Quanto maior o nível, mais dano ele aguenta, mas mais denso fica:
 
-- **L** — até 7% da área, o código mais compacto;
+- **L** — recuperação de cerca de 7% do total de palavras de código, o código mais compacto;
 - **M** — até 15%, serve para a maioria dos usos;
 - **Q** — até 25%, para embalagens e placas;
 - **H** — até 30%, se for colocar um logotipo por cima.
@@ -19,6 +19,6 @@ Um QR code pode ser lido mesmo com parte dele danificada ou coberta. Quanto maio
 
 **Qual tamanho usar na impressão?** No mínimo cerca de 2 × 2 cm num cartão de visita e, em geral, um décimo da distância de leitura — uns 30 cm para ler a 3 metros. Para imprimir, use SVG.
 
-**Quantos dados cabem?** Até 2.953 bytes — cerca de 2.900 caracteres sem acento; letras acentuadas e ç ocupam 2 bytes.
+**Quantos dados cabem?** No modo byte, o máximo teórico é de 2.953 bytes na versão 40 com correção de erros L. Níveis de correção mais altos comportam menos dados. A quantidade de caracteres também depende do tamanho de cada um em bytes UTF-8.
 
-**O QR code de Pix funciona aqui?** Não: o QR do Pix segue um formato próprio (BR Code) e deve ser gerado pelo app do seu banco.
+**Esta ferramenta gera QR codes de pagamento Pix?** Ela não monta os dados de pagamento do Pix (BR Code). Para obter esses dados, use o aplicativo do seu banco.

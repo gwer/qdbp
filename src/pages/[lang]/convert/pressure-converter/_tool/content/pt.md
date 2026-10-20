@@ -13,7 +13,7 @@ Digite uma pressão e escolha as unidades: o resultado e a tabela em todas as un
 
 - Pneus a 32 psi ("32 libras") = **2,21 bar**.
 - 2,2 bar = **31,9 psi**.
-- 120 mmHg (pressão arterial "12 por 8") = **16 kPa**.
+- 120 mmHg = **16 kPa**.
 
 ## Perguntas frequentes
 

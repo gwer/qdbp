@@ -18,6 +18,6 @@ Ejemplo: un ciclo de 28 días que empezó el 1 de marzo. Ovulación hacia el **1
 
 **¿Sirve para evitar un embarazo?** No. El método del calendario es uno de los anticonceptivos menos fiables.
 
-**¿Y si mi ciclo es irregular?** Haz el cálculo con tu ciclo más corto y con el más largo de los últimos seis meses: la ventana fértil estará probablemente entre ambos.
+**¿Y si mi ciclo es irregular?** La estimación por calendario es especialmente incierta. Los cálculos con el ciclo más corto y el más largo no delimitan de forma fiable la ventana fértil. No uses esta calculadora como método anticonceptivo.
 
 Si ya estás embarazada, la [calculadora de fecha de parto](/es/health/due-date/) te dice de cuántas semanas estás.

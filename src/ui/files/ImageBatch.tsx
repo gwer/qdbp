@@ -35,6 +35,8 @@ let nextId = 1;
  * Строки инструмента: files.* (см. DropZone) и files.download, files.downloadAll, files.clear,
  * files.processing, files.error.
  */
+const PARALLEL = 2;
+
 export function ImageBatch({
   t,
   lang,
@@ -52,49 +54,67 @@ export function ImageBatch({
   accept?: string;
 }) {
   const [items, setItems] = useState<Item[]>([]);
+  const itemsRef = useRef(items);
+  itemsRef.current = items;
   const processRef = useRef(process);
   processRef.current = process;
   // Номер прогона: результат устаревшего прогона (опции уже сменились) отбрасывается.
   const run = useRef(0);
+  // Одна очередь на компонент и не больше PARALLEL обработок одновременно — с учётом повторных добавлений
+  // и ещё не завершённых задач прошлого прогона: каждый декодированный снимок занимает ширина × высота × 4 байта,
+  // и пакет 48-мегапиксельных фото разом может уронить вкладку на телефоне.
+  const queue = useRef<Item[]>([]);
+  const active = useRef(0);
 
   useEffect(preloadZip, []);
 
-  const work = (list: Item[], runId: number) => {
-    for (const item of list) {
-      processRef.current(item.file).then(
-        (result) => {
-          if (run.current !== runId) return;
-          const url = URL.createObjectURL(result.blob);
-          setItems((cur) => cur.map((i) => (i.id === item.id ? (i.url && URL.revokeObjectURL(i.url), { ...i, status: 'done', result, url }) : i)));
-        },
-        (e) => {
-          if (run.current !== runId) return;
-          const error = e instanceof FileError ? e.message : undefined;
-          setItems((cur) => cur.map((i) => (i.id === item.id ? { ...i, status: 'error', error } : i)));
-        },
-      );
+  const pump = () => {
+    while (active.current < PARALLEL && queue.current.length) {
+      const item = queue.current.shift()!;
+      const runId = run.current;
+      const ok = (result: Processed) => {
+        if (run.current !== runId) return;
+        const url = URL.createObjectURL(result.blob);
+        setItems((cur) => cur.map((i) => (i.id === item.id ? (i.url && URL.revokeObjectURL(i.url), { ...i, status: 'done', result, url }) : i)));
+      };
+      const failed = (e: unknown) => {
+        if (run.current !== runId) return;
+        const error = e instanceof FileError ? e.message : undefined;
+        setItems((cur) => cur.map((i) => (i.id === item.id ? { ...i, status: 'error', error } : i)));
+      };
+      active.current++;
+      processRef.current(item.file)
+        .then(ok, failed)
+        .finally(() => {
+          active.current--;
+          pump();
+        });
     }
   };
 
   const add = (files: File[]) => {
     const fresh: Item[] = files.map((file) => ({ id: nextId++, file, status: 'pending' }));
     setItems((cur) => [...cur, ...fresh]);
-    work(fresh, run.current);
+    queue.current.push(...fresh);
+    pump();
   };
 
   // Смена опций — пересчитать всё (с небольшой паузой, чтобы не пересчитывать на каждое движение ползунка).
+  // Берём актуальный список: файл, добавленный за эти 250 мс, тоже попадает в новый прогон.
   useEffect(() => {
     if (!items.length) return;
     const id = setTimeout(() => {
-      const runId = ++run.current;
+      run.current++;
+      queue.current = [...itemsRef.current];
       setItems((cur) => cur.map((i) => ({ ...i, status: 'pending' })));
-      work(items, runId);
+      pump();
     }, 250);
     return () => clearTimeout(id);
   }, [optionsKey]);
 
   const clear = () => {
     run.current++;
+    queue.current = [];
     items.forEach((i) => i.url && URL.revokeObjectURL(i.url));
     setItems([]);
   };
@@ -129,7 +149,7 @@ export function ImageBatch({
                       </span>
                     )}
                   </div>
-                  {r && (
+                  {r && i.status === 'done' && (
                     <button type="button" class="btn btn-secondary btn-small" onClick={() => downloadBlob(r.name, r.blob)}>
                       {t('files.download')}
                     </button>

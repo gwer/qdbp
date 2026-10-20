@@ -15,6 +15,7 @@ export const def = defineCalculator({
     extra: { type: 'number', default: 20000, min: 1, byLang: { ru: 500000, en: 20000, es: 10000, de: 10000, pt: 40000 } },
     mode: { type: 'select', options: ['term', 'payment'], default: 'term' },
   },
+  errors: ['afterTooLate'],
   compute: (v) => earlyRepayment(v),
   outputs: {
     savings: { type: 'money' },

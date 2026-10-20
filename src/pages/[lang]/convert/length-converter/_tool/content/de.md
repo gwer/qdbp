@@ -18,7 +18,7 @@ Zahl eingeben, Ausgangs- und Zieleinheit wählen – das Ergebnis erscheint sofo
 
 ## Häufige Fragen
 
-**Wie viel Zentimeter hat ein Zoll?** Genau 2,54.
+**Wie viele Zentimeter hat ein Zoll?** Genau 2,54.
 
 **Wie rechne ich Fuß und Zoll in Zentimeter um?** Fuß mal 12, Zoll addieren, dann mal 2,54.
 

@@ -1,5 +1,7 @@
 // Часовые пояса через Intl: база поясов и правила летнего времени — из браузера (IANA tzdata).
 
+const DAY_MS = 86400000;
+
 const dtfCache = new Map<string, Intl.DateTimeFormat>();
 function parts(zone: string, ms: number) {
   let f = dtfCache.get(zone);
@@ -33,13 +35,13 @@ export function offsetMinutes(zone: string, ms: number): number {
 export function zonedToUtc(zone: string, date: string, minutes: number): number {
   const [y, mo, d] = date.split('-').map(Number);
   const local = Date.UTC(y, mo - 1, d) + minutes * 60000;
-  let ms = local - offsetMinutes(zone, local) * 60000;
-  const o2 = offsetMinutes(zone, ms);
-  ms = local - o2 * 60000;
-  // Осенний перевод: если и предыдущее смещение даёт то же местное время — берём более ранний момент.
-  const earlier = local - offsetMinutes(zone, ms - 3600000) * 60000;
-  if (earlier < ms && offsetMinutes(zone, earlier) === offsetMinutes(zone, ms - 3600000)) ms = earlier;
-  return ms;
+  // Смещения за сутки до и после: если между ними был перевод часов, это смещения по обе стороны от него.
+  const before = local - offsetMinutes(zone, local - DAY_MS) * 60000;
+  const after = local - offsetMinutes(zone, local + DAY_MS) * 60000;
+  const valid = (ms: number) => offsetMinutes(zone, ms) * 60000 === local - ms;
+  if (valid(before)) return valid(after) ? Math.min(before, after) : before; // осенью подходят оба — берём первое
+  if (valid(after)) return after;
+  return before; // весенний пропуск: со «старым» смещением получаем время после перевода
 }
 
 /** Местные дата ('YYYY-MM-DD') и время (минуты от полуночи) в поясе для момента ms. */

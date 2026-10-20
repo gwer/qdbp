@@ -8,7 +8,7 @@ Fügen Sie das Token in das Feld ein – allein oder mit dem Präfix `Authorizat
 - **den Status** – ob das Token abgelaufen ist;
 - **die Signatur** – unverändert als Base64URL-Zeichenkette.
 
-Das Token wird direkt im Browser dekodiert und nirgendwohin gesendet – Sie können hier also auch echte Tokens prüfen. Bedenken Sie trotzdem: Ein JWT, das in fremde Hände gerät, ist bis zum Ablauf ein gültiger Zugang zum System.
+Das Token wird im Browser dekodiert und nicht hochgeladen. Behandeln Sie echte Zugangstokens vertraulich: Ein offengelegtes, gültiges Bearer-Token kann im Rahmen seiner Berechtigungen bis zum Ablauf oder Widerruf Zugriff ermöglichen. Das Dekodieren bestätigt nicht die Gültigkeit.
 
 ## Die Signatur wird nicht geprüft
 

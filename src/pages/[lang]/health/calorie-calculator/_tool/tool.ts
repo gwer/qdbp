@@ -14,7 +14,7 @@ export const def = defineCalculator({
   related: ['bmi'],
   inputs: {
     sex: { type: 'select', options: ['male', 'female'], default: 'male' },
-    age: { type: 'integer', default: 30, min: 15, max: 100 },
+    age: { type: 'integer', default: 30, min: 18, max: 100 },
     weight: { type: 'quantity', unit: 'kg', imperial: 'lb', default: 75, defaultImperial: 170, min: 20, max: 400 },
     height: { type: 'quantity', unit: 'cm', imperial: 'in', default: 178, defaultImperial: 70, min: 100, max: 250 },
     activity: { type: 'select', options: Object.keys(ACTIVITY) as Activity[], default: 'light' },

@@ -3,8 +3,9 @@ import { LANG_META, type ClockMode, type Lang } from '@/i18n/config';
 // Node и браузеры (разные версии CLDR) используют разные пробелы в разделителях
 // разрядов и перед единицами. Приводим всё к обычному неразрывному пробелу,
 // чтобы пререндер и клиент давали одинаковые строки.
+// Заодно убираем минус у значения, округлившегося до нуля («-0», «-0,00 %»).
 const SPACES = /[   ]/g;
-const normalize = (s: string) => s.replace(SPACES, ' ');
+const normalize = (s: string) => s.replace(SPACES, ' ').replace(/^[-−](?=[^1-9]*$)/, '');
 
 const cache = new Map<string, Intl.NumberFormat>();
 

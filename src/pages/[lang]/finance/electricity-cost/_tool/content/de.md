@@ -26,6 +26,6 @@ Beispiel: Ein Heizlüfter mit 2000 W läuft 3 Stunden am Tag und verbraucht 6 kW
 
 ## Häufige Fragen
 
-**Warum ist der Wert beim Kühlschrank so niedrig?** Der Kompressor schaltet sich immer wieder ab. Bei Geräten mit Thermostat (Kühlschrank, Heizlüfter, Boiler) geben Sie die tatsächliche Laufzeit an, nicht die Zeit am Netz.
+**Wie gebe ich die Leistung des Kühlschranks ein?** Bei einer über den ganzen Tag gemittelten Leistung geben Sie 24 Stunden an: Die Pausen sind darin bereits berücksichtigt. Bei der Leistung während des Kompressorbetriebs geben Sie nur dessen tatsächliche Laufzeit an. Wenden Sie nicht beide Korrekturen zugleich an.
 
 **Welchen Preis nehme ich?** Den Arbeitspreis aus Ihrer Stromrechnung. Die monatliche Grundgebühr fällt unabhängig vom Verbrauch an und gehört nicht in diese Rechnung.

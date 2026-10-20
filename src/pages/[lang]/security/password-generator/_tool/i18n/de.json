@@ -1,6 +1,6 @@
 {
   "title": "Passwort-Generator: sichere Zufallspasswörter",
-  "description": "Erstellen Sie ein sicheres Zufallspasswort in beliebiger Länge aus Buchstaben, Zahlen und Sonderzeichen. Es wird im Browser erzeugt und nirgendwohin gesendet.",
+  "description": "Erstellen Sie ein sicheres Zufallspasswort mit 4 bis 64 Zeichen aus Buchstaben, Zahlen und Sonderzeichen. Es wird im Browser erzeugt und nirgendwohin gesendet.",
   "ui": {
     "length": "Länge",
     "sets": {

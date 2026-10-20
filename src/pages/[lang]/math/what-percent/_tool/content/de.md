@@ -13,7 +13,7 @@ Beispiel: 30 von 150 – 30 × 100 / 150 = **20 %**.
 - 45 von 60 Fragen richtig beantwortet: 45 × 100 / 60 = **75 %**.
 - 42 von 50 Punkten in einer Prüfung: **84 %**.
 - 250 Verkäufe bei einem Ziel von 200: Ziel zu **125 %** erreicht.
-- 1 von 3 sind **33,33 %** (genau ein Drittel).
+- 1 von 3 ist genau ein Drittel: **33⅓ %**, gerundet **33,33 %**.
 
 ## Häufige Fragen
 

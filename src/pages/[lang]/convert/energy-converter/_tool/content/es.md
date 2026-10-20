@@ -6,7 +6,7 @@ Escribe un valor y elige las unidades: el resultado y la tabla en todas las unid
 
 - 1 kilocaloría (kcal) = **4,184 kJ**: la «caloría» de las etiquetas de los alimentos.
 - 1 kWh = **3,6 MJ** ≈ 860 kcal: así se factura la electricidad.
-- 1 BTU (unidad térmica británica) ≈ **1055 J**: se usa para la potencia de los aires acondicionados.
+- 1 BTU (unidad térmica británica) ≈ **1055 J**: es una unidad de energía; la potencia de los aires acondicionados se expresa en BTU/h.
 
 ## Ejemplos
 

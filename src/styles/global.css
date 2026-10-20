@@ -266,6 +266,11 @@ select[aria-invalid='true'] {
   border-radius: var(--radius);
 }
 
+.calc-error {
+  margin: 0;
+  color: var(--error);
+}
+
 .out {
   display: flex;
   flex-direction: column;
@@ -362,6 +367,34 @@ details.extra summary {
 .home-category h2 a {
   color: var(--text);
   text-decoration: none;
+}
+
+/* Главная: разделы вверху и компактные списки — описания инструментов есть на страницах разделов */
+.home-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.home-nav a {
+  display: block;
+  padding: 6px 12px;
+  background: var(--surface);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.tool-list-compact {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 6px;
+}
+
+.tool-list-compact li {
+  padding: 8px 12px;
 }
 
 .not-found {
@@ -531,6 +564,18 @@ details.extra summary {
 textarea.mono {
   font-family: var(--mono);
   font-size: 0.92rem;
+}
+
+/* На сенсорных экранах поля не мельче 16 px: иначе iOS Safari увеличивает страницу при фокусе.
+   Селекторы не слабее базовых (input[type='text'] с font: inherit), иначе поле внутри мелкой подписи остаётся мелким. */
+@media (pointer: coarse) {
+  input[type='text'],
+  input[type='date'],
+  select,
+  textarea,
+  textarea.mono {
+    font-size: max(1rem, 16px);
+  }
 }
 
 input[type='range'] {

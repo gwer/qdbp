@@ -8,7 +8,7 @@ Pega el token en el campo, solo o con el prefijo `Authorization: Bearer …`; lo
 - **el estado**: si el token ha caducado o sigue vigente;
 - **la firma**: tal cual, como cadena Base64URL.
 
-El token se decodifica en tu navegador y no se envía a ningún sitio, así que puedes revisar aquí tokens reales. Aun así, recuerda que un JWT filtrado es una llave válida al sistema hasta que caduca.
+El token se decodifica en tu navegador y no se sube a un servidor. Trata los tokens de acceso reales como secretos: un token bearer válido que se filtre puede dar acceso dentro de sus permisos hasta que caduque o se revoque. Decodificarlo no confirma su validez.
 
 ## La firma no se verifica
 

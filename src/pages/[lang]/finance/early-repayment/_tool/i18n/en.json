@@ -51,5 +51,8 @@
     "monthsLeft": "Months left",
     "saved": "Interest saved",
     "noPrepayment": "No extra payment"
+  },
+  "errors": {
+    "afterTooLate": "The number of payments made must be less than the loan term in months."
   }
 }

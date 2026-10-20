@@ -8,7 +8,7 @@
     "error": "Der Text konnte nicht verarbeitet werden",
     "modes": {
       "dedupe": "Duplikate entfernen",
-      "dedupeIgnoreCase": "Duplikate ohne Groß/klein",
+      "dedupeIgnoreCase": "Duplikate (Groß-/Kleinschreibung egal)",
       "sortAsc": "Sortieren A→Z",
       "sortDesc": "Sortieren Z→A",
       "removeEmpty": "Leere Zeilen entfernen",

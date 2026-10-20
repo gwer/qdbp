@@ -4,7 +4,7 @@ import type { ToolProps } from '@/ui/define';
 import { formatBytes } from '@/ui/files/bytes';
 import { downloadBlob, downloadZip } from '@/ui/files/download';
 import { DropZone } from '@/ui/files/DropZone';
-import { isJpeg, readMeta, stripJpeg, type Meta } from './jpeg';
+import { isJpeg, readMeta, stripJpeg, type Meta } from '@/ui/files/jpeg';
 
 interface Item {
   id: number;
@@ -30,6 +30,7 @@ export function ExifTool({ lang, t }: ToolProps) {
         const bytes = new Uint8Array(await file.arrayBuffer());
         if (!isJpeg(bytes)) return { id: nextId++, file, problem: 'notJpeg' };
         try {
+          stripJpeg(bytes, { keepIcc: true, keepOrientation: false }); // разбор всего файла: битый не дойдёт до рендера
           return { id: nextId++, file, bytes, meta: readMeta(bytes) };
         } catch {
           return { id: nextId++, file, problem: 'broken' };
@@ -41,7 +42,7 @@ export function ExifTool({ lang, t }: ToolProps) {
 
   const cleaned = (i: Item) => {
     const out = stripJpeg(i.bytes!, { keepIcc, keepOrientation });
-    return { name: i.file.name.replace(/(\.[^.]+)?$/, (ext) => `-clean${ext || '.jpg'}`), blob: new Blob([new Uint8Array(out)], { type: 'image/jpeg' }) };
+    return { name: i.file.name.replace(/(\.[^.]+)?$/, (ext) => `-clean${ext || '.jpg'}`), blob: new Blob([out], { type: 'image/jpeg' }) };
   };
   const ready = items.filter((i) => i.meta);
   const num = (n: number, digits = 1) => formatNumber(lang, n, 'number', digits);

@@ -18,6 +18,6 @@ Example: a 28-day cycle that started on March 1. Ovulation is around **March 15*
 
 **Can I use this to avoid pregnancy?** No. The calendar method is one of the least reliable forms of birth control.
 
-**What if my cycle is irregular?** Run the calculation with your shortest and your longest cycle from the past six months — your fertile window is likely somewhere in between.
+**What if my cycle is irregular?** Calendar estimates are especially uncertain with irregular cycles. Calculating your shortest and longest cycles does not establish reliable boundaries for your fertile window. Do not use this calculator for contraception.
 
 If you're already pregnant, the [due date calculator](/en/health/due-date/) shows how far along you are.

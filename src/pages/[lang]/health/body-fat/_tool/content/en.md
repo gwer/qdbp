@@ -12,12 +12,12 @@ Keep the tape snug but not tight. Measure two or three times and use the average
 
 ## Formula
 
-The method was developed at the Naval Health Research Center (Hodgdon and Beckett, 1984) and is still used for military fitness checks. In inches:
+The method was developed at the Naval Health Research Center (Hodgdon and Beckett, 1984). The calculator uses the original formulas in centimeters; inches are converted first:
 
-- Men: `body fat % = 86.010 × log10(waist − neck) − 70.041 × log10(height) + 36.76`
-- Women: `body fat % = 163.205 × log10(waist + hip − neck) − 97.684 × log10(height) − 78.387`
+- Men: `body fat % = 495 / (1.0324 − 0.19077 × log10(waist − neck) + 0.15456 × log10(height)) − 450`
+- Women: `body fat % = 495 / (1.29579 − 0.35004 × log10(waist + hip − neck) + 0.221 × log10(height)) − 450`
 
-A 5′10″ man with a 15″ neck and 34″ waist comes out at about **17.5%**.
+A 5′10″ man with a 15″ neck and 34″ waist comes out at about **17.4%**. The simplified inch formulas you may see elsewhere give a slightly different number (17.5%).
 
 ## Body fat ranges (ACE)
 

@@ -4,7 +4,7 @@ Geben Sie das Geburtsdatum ein. Standardmäßig wird das Alter zum heutigen Tag 
 
 ## Wie das Alter berechnet wird
 
-Zuerst werden die vollen Monate ab dem Geburtsdatum gezählt, danach die restlichen Tage. Kurze Monate werden berücksichtigt: Vom 31. Januar bis zum 29. Februar eines Schaltjahres sind es 29 Tage, nicht „ein Monat“.
+Zuerst werden die vollen Monate ab dem Geburtsdatum gezählt, danach die restlichen Tage. Hat ein Monat den passenden Tag nicht, endet der Monat an seinem letzten Tag: Vom 31. Januar bis zum 29. Februar eines Schaltjahres ist es genau ein Monat.
 
 Wer am 29. Februar geboren ist, hat in Nicht-Schaltjahren rechnerisch am 28. Februar Geburtstag.
 

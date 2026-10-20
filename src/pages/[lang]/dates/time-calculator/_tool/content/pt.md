@@ -22,7 +22,7 @@ Por padrão aparecem a data de hoje e o horário atual — basta informar quanta
 
 **A que horas coloco o assado no forno?** O jantar é às 19:00 e precisa de 2 horas e 30 minutos: coloque às **16:30**.
 
-**Quando programar o início da máquina de lavar com início programado?** Para um ciclo de 2 horas e 30 minutos terminar às 7:00, subtraia 2:30 de 7:00: **4:30**.
+**Quando a máquina de lavar deve começar para terminar no horário desejado?** Para um ciclo de 2 horas e 30 minutos terminar às 7:00, subtraia 2:30 de 7:00: **4:30**.
 
 **Quando termina o jejum intermitente 16:8?** Última refeição às 20:00 + 16 horas = **12:00 do dia seguinte**.
 

@@ -17,7 +17,7 @@ Escolha "Codificar" ou "Decodificar" e cole o texto: o resultado aparece na hora
 
 **Por que o texto codificado fica maior?** Cada 3 bytes viram 4 caracteres, então o tamanho cresce cerca de um terço.
 
-**O que significam os `=` no final?** São preenchimento: o tamanho de um Base64 é sempre múltiplo de 4.
+**O que significam os `=` no final?** São preenchimento: com preenchimento, o tamanho é múltiplo de 4. Esta ferramenta também aceita textos sem os sinais `=` finais.
 
 **Por que dá erro ao decodificar?** O texto tem caracteres inválidos ou o conteúdo não é texto (uma imagem, por exemplo).
 

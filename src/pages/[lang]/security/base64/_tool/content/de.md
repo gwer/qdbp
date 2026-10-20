@@ -17,7 +17,7 @@ Wählen Sie „Kodieren“ oder „Dekodieren“ und fügen Sie den Text ein –
 
 **Warum ist die kodierte Zeichenkette länger?** Je 3 Byte werden zu 4 Zeichen, die Größe wächst also um etwa ein Drittel.
 
-**Was bedeuten die `=` am Ende?** Das ist Auffüllung: Die Länge von Base64 ist immer ein Vielfaches von 4.
+**Was bedeuten die `=` am Ende?** Das ist Auffüllung: Mit Auffüllung ist die Länge ein Vielfaches von 4. Dieses Tool akzeptiert auch Zeichenketten ohne abschließende `=`.
 
 **Warum gibt es beim Dekodieren einen Fehler?** Die Zeichenkette enthält ungültige Zeichen, oder die Daten sind kein Text (zum Beispiel ein Bild).
 

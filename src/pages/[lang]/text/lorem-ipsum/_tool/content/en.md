@@ -1,6 +1,6 @@
 ## How to use
 
-Choose how many paragraphs, sentences or words you need and the text appears instantly. Copy it with the button or click "Regenerate" for a different version. Tick "Wrap paragraphs in `<p>` tags" if you're pasting straight into HTML.
+Choose how many paragraphs, sentences or words you need and the text appears instantly. Copy it with the button or click "Generate again" for a different version. Tick "Wrap paragraphs in `<p>` tags" if you're pasting straight into HTML.
 
 ## What is Lorem ipsum?
 

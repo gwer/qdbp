@@ -17,11 +17,11 @@ Por exemplo, um homem de 1,78 m (cerca de 70 polegadas, 10 acima de 5 pés): pel
 
 ## Em qual fórmula confiar?
 
-Em nenhuma sozinha. A de Devine foi criada para calcular doses de remédios, não para avaliar o corpo, e as outras são ajustes dela. A diferença entre elas é a resposta honesta: o "peso ideal" é uma faixa, não um número. A faixa mais ampla é a do IMC entre 18,5 e 24,9, usada pela OMS.
+Em nenhuma sozinha. A de Devine foi criada para calcular doses de remédios, não para avaliar o corpo; as outras usam coeficientes diferentes. A diferença entre elas é a resposta honesta: o "peso ideal" é uma faixa, não um número. A faixa mais ampla é a do IMC entre 18,5 e 24,9, usada pela OMS.
 
 ## Perguntas frequentes
 
-**Por que as fórmulas não consideram idade nem biotipo?** Elas são simples e usam só a altura. Quem tem ossatura larga ou muita massa muscular pode pesar mais sem prejuízo à saúde — nesse caso, vale mais estimar o [percentual de gordura](/pt/health/body-fat/).
+**Por que as fórmulas não consideram idade nem biotipo?** Elas são simples e usam só a altura e o sexo. Quem tem ossatura larga ou muita massa muscular pode pesar mais do que elas indicam — nesse caso, vale mais estimar o [percentual de gordura](/pt/health/body-fat/).
 
 **Funcionam para quem tem menos de 1,52 m?** Não muito bem: subtraem quilos do peso-base e tendem a subestimar. Use a faixa do IMC.
 

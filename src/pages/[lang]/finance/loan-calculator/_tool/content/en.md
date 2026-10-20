@@ -20,4 +20,4 @@ A $25,000 loan at 7% annual interest for 5 years (60 months), fixed payments: ab
 
 **Are fees and insurance included?** No, the calculation covers principal and interest only. Check your loan's APR disclosure for the full cost.
 
-**Will it match my lender's numbers?** Usually to the cent. Some lenders charge interest by the actual number of days in each month, which can cause small differences.
+**Will it match my lender’s numbers?** It can match only when the rate, payment schedule, interest calculation and rounding rules are the same. Fees and insurance are not included here; compare the assumptions in your loan agreement.

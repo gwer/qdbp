@@ -18,6 +18,6 @@ Pega o escribe tu texto en el cuadro: los contadores se actualizan mientras escr
 
 ## Preguntas frecuentes
 
-**¿Por qué mi procesador de textos da otra cifra?** Cada editor trata de forma algo distinta las palabras con guion, los números y la puntuación. La diferencia suele ser de un 1–2%.
+**¿Por qué mi procesador de textos da otra cifra?** Cada editor trata de forma algo distinta las palabras con guion, los números y la puntuación.
 
 **¿Hay un límite de longitud?** No, solo la memoria de tu dispositivo.

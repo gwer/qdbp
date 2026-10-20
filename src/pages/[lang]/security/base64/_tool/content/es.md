@@ -17,7 +17,7 @@ Elige «Codificar» o «Decodificar» y pega el texto: el resultado aparece al i
 
 **¿Por qué la cadena codificada es más larga?** Cada 3 bytes se convierten en 4 caracteres, así que el tamaño crece alrededor de un tercio.
 
-**¿Qué significan los `=` del final?** Son relleno: la longitud de Base64 siempre es múltiplo de 4.
+**¿Qué significan los `=` del final?** Son relleno: con relleno, la longitud es múltiplo de 4. Esta herramienta también acepta cadenas sin los signos `=` finales.
 
 **¿Por qué da error al decodificar?** La cadena tiene caracteres no válidos o lo que contiene no es texto (por ejemplo, una imagen).
 

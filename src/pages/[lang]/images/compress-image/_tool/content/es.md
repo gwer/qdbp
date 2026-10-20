@@ -18,8 +18,8 @@ Cuánto se reduce el archivo depende de la foto: el resultado se ve al momento y
 
 **¿Por qué PNG se convierte en WebP?** PNG se comprime sin pérdidas y el navegador casi nunca consigue guardarlo más pequeño que el original. WebP con pérdidas pesa bastante menos y conserva la transparencia. Si necesitas JPG, elígelo: las zonas transparentes quedarán blancas.
 
-**¿Y si al comprimir el archivo pesa más?** Pasa cuando la foto ya estaba muy comprimida. En ese caso se queda el archivo original, con un cambio del 0 %.
+**¿Y si al comprimir el archivo pesa más?** Pasa cuando la foto ya estaba muy comprimida. En ese caso se queda la imagen original sin recomprimir, así que el archivo no crece. Aun así, a un JPEG se le quitan los metadatos, por lo que puede quedar algo más ligero.
 
 **¿Cómo reduzco más el peso?** Lo más habitual es que la foto sea demasiado grande en píxeles: una foto de móvil de 4000 píxeles de ancho no hace falta en una web. Primero [reduce el tamaño](/es/images/resize-image/) y después comprime.
 
-**¿Se eliminan los metadatos?** Sí, al volver a guardar no se copian los datos EXIF ni el GPS. Para quitarlos sin recomprimir, usa el [eliminador de EXIF](/es/images/exif/).
+**¿Se eliminan los metadatos?** Sí: los datos EXIF, el GPS y los comentarios no se copian al volver a guardar y se quitan si se conserva el JPEG original. La excepción es un WebP que no se pudo reducir: se devuelve sin cambios. Para quitarlos sin recomprimir, usa el [eliminador de EXIF](/es/images/exif/).

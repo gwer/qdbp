@@ -1,6 +1,6 @@
 {
   "title": "Inflation calculator: future cost and purchasing power",
-  "description": "See what today's money will cost in the future at a given inflation rate and how much buying power your savings lose.",
+  "description": "Estimate future prices at a given inflation rate and the purchasing power of an unchanged amount of money.",
   "inputs": {
     "amount": {
       "label": "Amount today"

@@ -8,7 +8,7 @@ Cole o token no campo, sozinho ou com o prefixo `Authorization: Bearer …`; que
 - **o status**: se o token já expirou ou ainda vale;
 - **a assinatura**: do jeito que está, como texto Base64URL.
 
-O token é decodificado no seu navegador e não é enviado a lugar nenhum, então dá para inspecionar tokens reais aqui. Mesmo assim, lembre que um JWT vazado é uma chave válida para o sistema até expirar.
+O token é decodificado no navegador e não é enviado a um servidor. Mantenha os tokens de acesso reais em segredo: um token bearer válido que vaze pode permitir acesso dentro de suas permissões até expirar ou ser revogado. A decodificação não confirma a validade do token.
 
 ## A assinatura não é verificada
 

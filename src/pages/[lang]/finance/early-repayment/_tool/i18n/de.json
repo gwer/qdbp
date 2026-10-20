@@ -51,5 +51,8 @@
     "monthsLeft": "Verbleibende Monate",
     "saved": "Ersparnis",
     "noPrepayment": "Ohne Sondertilgung"
+  },
+  "errors": {
+    "afterTooLate": "Die Zahl der geleisteten Raten muss kleiner sein als die Laufzeit in Monaten."
   }
 }

@@ -25,5 +25,8 @@
     "ratio": {
       "label": "Margen de contribución"
     }
+  },
+  "errors": {
+    "priceBelowCost": "El precio debe superar el coste variable por unidad; si no, cada venta aumenta la pérdida."
   }
 }

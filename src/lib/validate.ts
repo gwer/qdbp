@@ -17,6 +17,7 @@ export function requiredToolKeys(def: ToolDef): string[] {
     if (spec.type === 'select') keys.push(...spec.options.map((o) => `inputs.${name}.options.${o}`));
   }
   for (const name of Object.keys(def.outputs)) keys.push(`outputs.${name}.label`);
+  for (const key of def.errors ?? []) keys.push(`errors.${key}`);
   return keys;
 }
 

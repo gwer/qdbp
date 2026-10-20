@@ -51,5 +51,8 @@
     "monthsLeft": "Meses restantes",
     "saved": "Economia",
     "noPrepayment": "Sem amortização extra"
+  },
+  "errors": {
+    "afterTooLate": "O número de parcelas pagas deve ser menor que o prazo em meses."
   }
 }

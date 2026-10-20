@@ -25,6 +25,6 @@ Beispiel: 70 kg bei 1,75 m ergibt 70 / 1,75² = **22,9** – Normalgewicht. Für
 
 **Warum haben Sportler manchmal „Übergewicht“?** Der BMI unterscheidet nicht zwischen Muskeln und Fett. Bei viel Muskelmasse fällt er höher aus.
 
-**Kann ich den BMI in der Schwangerschaft verwenden?** Nein, in der Schwangerschaft wird er nicht angewendet.
+**Kann ich diesen Rechner in der Schwangerschaft verwenden?** Seine Gewichtskategorien für Erwachsene sind nicht zur Beurteilung des aktuellen Gewichts in der Schwangerschaft gedacht. Für die Betreuung kann der BMI vor der Schwangerschaft relevant sein.
 
 Der BMI ist ein grober Richtwert, keine Diagnose. Bei Fragen zu Gewicht und Gesundheit wenden Sie sich an Ihre Ärztin oder Ihren Arzt. Wie viele Kalorien Sie täglich brauchen, zeigt der [Kalorienrechner](/de/health/calorie-calculator/).

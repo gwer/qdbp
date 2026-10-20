@@ -40,8 +40,8 @@
     }
   },
   "ui": {
-    "more": "{p}% more ingredients",
-    "less": "{p}% fewer ingredients",
+    "more": "Increase ingredient quantities by {p}%",
+    "less": "Reduce ingredient quantities by {p}%",
     "same": "Same amounts"
   }
 }

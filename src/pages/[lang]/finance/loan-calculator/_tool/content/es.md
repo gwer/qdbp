@@ -20,4 +20,4 @@ Préstamo de 20 000 € al 8% TIN a 5 años (60 meses), sistema francés: cuota 
 
 **¿Incluye comisiones y seguros?** No, solo capital e intereses. Para conocer el coste total del préstamo, fíjate en la TAE.
 
-**¿Coincidirá con el cálculo del banco?** Normalmente al céntimo, aunque algunos bancos calculan los intereses por días naturales y puede haber pequeñas diferencias.
+**¿Coincidirá con el cálculo del banco?** Puede coincidir si son iguales el tipo de interés, el calendario de pagos y las reglas de cálculo y redondeo. Aquí no se incluyen comisiones ni seguros; compara estos supuestos con los del contrato.

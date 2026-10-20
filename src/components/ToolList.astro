@@ -5,17 +5,19 @@ import { toolName, toolUrl, type Tool } from '@/lib/catalog';
 interface Props {
   tools: Tool[];
   lang: Lang;
+  /** Только названия, без описаний — для главной. */
+  compact?: boolean;
 }
 
-const { tools, lang } = Astro.props;
+const { tools, lang, compact = false } = Astro.props;
 ---
 
-<ul class="tool-list">
+<ul class:list={['tool-list', { 'tool-list-compact': compact }]}>
   {
     tools.map((tool) => (
       <li>
         <a href={toolUrl(tool, lang)}>{toolName(tool, lang)}</a>
-        <p>{tool.strings[lang]!.description as string}</p>
+        {!compact && <p>{tool.strings[lang]!.description as string}</p>}
       </li>
     ))
   }

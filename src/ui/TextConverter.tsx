@@ -29,11 +29,14 @@ export function TextConverter({
   let output = '';
   let error = false;
   let detail: string | null = null;
-  try {
-    output = modes.find((m) => m.id === mode)!.run(input);
-  } catch (e) {
-    error = true;
-    detail = describeError?.(e, input) ?? null;
+  // Пустое поле — не ошибка: пользователь ещё ничего не ввёл. Пробелы — уже данные (их кодируют Base64 и URL).
+  if (input !== '') {
+    try {
+      output = modes.find((m) => m.id === mode)!.run(input);
+    } catch (e) {
+      error = true;
+      detail = describeError?.(e, input) ?? null;
+    }
   }
   return (
     <div>
@@ -48,13 +51,22 @@ export function TextConverter({
       )}
       <div class="field">
         <label for="tc-in">{t('ui.input')}</label>
-        <textarea id="tc-in" class="mono" rows={6} value={input} placeholder={placeholder} onInput={(e) => setInput(e.currentTarget.value)} />
+        <textarea
+          id="tc-in"
+          class="mono"
+          rows={6}
+          value={input}
+          placeholder={placeholder}
+          aria-invalid={error ? 'true' : undefined}
+          aria-describedby={error ? 'tc-err' : undefined}
+          onInput={(e) => setInput(e.currentTarget.value)}
+        />
       </div>
       <div class="field">
         <label for="tc-out">{t('ui.output')}</label>
-        <textarea id="tc-out" class="mono" rows={6} readOnly value={error ? '' : output} aria-invalid={error ? 'true' : undefined} />
+        <textarea id="tc-out" class="mono" rows={6} readOnly value={error ? '' : output} />
         {error && (
-          <p class="field-error">
+          <p class="field-error" id="tc-err">
             {t('ui.error')}
             {detail && `: ${detail}`}
           </p>

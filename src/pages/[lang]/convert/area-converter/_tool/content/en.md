@@ -19,6 +19,6 @@ Enter an area and pick the units — the result and a table in every area unit a
 
 **How many square feet are in an acre?** 43,560.
 
-**How do I find the square footage of a room?** Multiply length by width in feet. For flooring, the [laminate calculator](/en/repair/laminate/) adds waste and box counts.
+**How do I find the square footage of a room?** Multiply length by width in feet. For flooring, the [laminate calculator](/en/construction/laminate/) adds waste and box counts.
 
 For lengths, use the [length converter](/en/convert/length-converter/).

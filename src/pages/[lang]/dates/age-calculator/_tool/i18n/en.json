@@ -25,5 +25,8 @@
     "nextBirthday": {
       "label": "Days to next birthday"
     }
+  },
+  "errors": {
+    "beforeBirth": "The “as of” date is before the date of birth."
   }
 }

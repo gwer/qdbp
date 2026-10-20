@@ -28,6 +28,13 @@ describe('formatNumber', () => {
     expect(formatNumber('en', 12.5, 'percent')).toBe('12.5%');
     expect(formatNumber('ru', 12.5, 'percent')).toBe(`12,5${NBSP}%`);
   });
+
+  it('округлённый до нуля минус не показывается', () => {
+    expect(formatNumber('en', -1e-9)).toBe('0');
+    expect(formatNumber('ru', -0.001, 'money')).toBe('0,00');
+    expect(formatNumber('de', -0.0001, 'percent')).toBe(`0${NBSP}%`);
+    expect(formatNumber('en', -0.5)).toBe('-0.5');
+  });
 });
 
 describe('formatInput', () => {

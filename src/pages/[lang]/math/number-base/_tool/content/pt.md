@@ -2,7 +2,7 @@
 
 Digite um número inteiro e escolha em que base ele está. Você vê na hora o valor em binário, octal, decimal e hexadecimal, além de qualquer base de 2 a 36.
 
-Maiúsculas e minúsculas tanto faz, espaços e sublinhados entre os dígitos são ignorados, e os prefixos `0b`, `0o` e `0x` são reconhecidos. Os números podem ter qualquer tamanho, sem perder precisão.
+Não há distinção entre letras maiúsculas e minúsculas, espaços e sublinhados entre os dígitos são ignorados, e os prefixos `0b`, `0o` e `0x` são reconhecidos. Os números podem ter qualquer tamanho, sem perder precisão.
 
 ## Como funciona
 

@@ -4,7 +4,7 @@ Enter a date of birth. By default the age is calculated as of today, but you can
 
 ## How age is calculated
 
-First the calculator counts full months from the date of birth, then the remaining days. Short months are taken into account: from January 31 to February 29 in a leap year is 29 days, not "one month".
+First the calculator counts full months from the date of birth, then the remaining days. If a month has no matching day, the month ends on its last day: from January 31 to February 29 in a leap year is exactly one month.
 
 If someone was born on February 29, their birthday in non-leap years is counted as February 28.
 

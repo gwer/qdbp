@@ -4,6 +4,7 @@
     "description": "Calculadoras e ferramentas online grátis: finanças, datas, porcentagens, reformas e texto. Todos os cálculos são feitos no seu navegador."
   },
   "nav": {
+    "breadcrumbs": "Trilha de navegação",
     "home": "Início",
     "language": "Idioma"
   },
@@ -25,6 +26,7 @@
   "calc": {
     "result": "Resultado",
     "error": {
+      "compute": "Não é possível calcular com esses valores. Confira os campos.",
       "number": "Digite um número",
       "integer": "Digite um número inteiro",
       "min": "Deve ser no mínimo {min}",
@@ -50,7 +52,7 @@
     }
   },
   "footer": {
-    "privacy": "Todos os cálculos são feitos no seu navegador. Os dados digitados não são enviados a lugar nenhum."
+    "privacy": "Todos os cálculos são feitos no seu navegador. Os arquivos são processados no seu dispositivo e não são enviados a nenhum servidor."
   },
   "common": {
     "copy": "Copiar",

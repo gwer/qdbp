@@ -34,5 +34,9 @@
     "decimal": {
       "label": "Decimal"
     }
+  },
+  "errors": {
+    "divisionByZero": "No se puede dividir entre cero: la segunda fracción vale cero.",
+    "tooLarge": "Los números son demasiado grandes: introduce como máximo 15 cifras."
   }
 }

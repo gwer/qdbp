@@ -99,8 +99,13 @@ export interface CalculatorDef<
   order?: number;
   related?: string[];
   inputs: I;
-  /** Чистая функция; бросает исключение, если расчёт невозможен. */
+  /**
+   * Чистая функция; бросает исключение, если расчёт невозможен.
+   * InputError('key') — понятная пользователю причина: текст из errors.{key} в i18n инструмента, ключ объявлен в errors.
+   */
   compute: (values: Values<I>) => R;
+  /** Ключи сообщений, которые compute может бросить через InputError. */
+  errors?: readonly string[];
   /** Простые значения результата, которые движок выводит сам. Первое — главное. */
   outputs: { [K in keyof R]?: OutputSpec };
   /** Всё, что сложнее чисел: таблицы, графики, схемы. */
@@ -116,6 +121,13 @@ export interface CustomDef {
 }
 
 export type ToolDef = CalculatorDef<any, any> | CustomDef;
+
+/** Расчёт невозможен по понятной причине («цена ниже переменных затрат»); key — из CalculatorDef.errors. */
+export class InputError extends Error {
+  constructor(readonly key: string) {
+    super(key);
+  }
+}
 
 export const defineCalculator = <const I extends Record<string, InputSpec>, R extends object>(
   def: Omit<CalculatorDef<I, R>, 'kind'>,

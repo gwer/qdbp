@@ -8,7 +8,7 @@ Paste the token into the box — on its own or with the `Authorization: Bearer �
 - **the status** — whether the token has expired;
 - **the signature** — as is, a Base64URL string.
 
-The token is decoded right in your browser and is never sent anywhere, so it's fine to inspect real tokens here. Still, keep in mind that any JWT that leaks is a working key to the system until it expires.
+The token is decoded in your browser and is not uploaded. Treat real access tokens as secrets: a leaked, valid bearer token may grant access within its permissions until it expires or is revoked. Decoding does not verify that a token is valid.
 
 ## The signature is not verified
 

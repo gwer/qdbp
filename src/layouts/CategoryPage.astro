@@ -22,7 +22,7 @@ const alternates = cat.langs.map((l) => ({ lang: l, href: categoryUrl(cat, l) })
 ---
 
 <Base lang={lang} title={`${name} — qdbp`} description={description} alternates={alternates} jsonLd={[breadcrumbLd(crumbs, Astro.site!)]}>
-  <Breadcrumbs items={crumbs} />
+  <Breadcrumbs items={crumbs} label={t('nav.breadcrumbs')} />
   <h1>{name}</h1>
   <p class="lead">{description}</p>
   <slot />

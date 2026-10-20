@@ -5,7 +5,7 @@ Indica cuánto invertiste, cuánto recuperaste en total (venta más los ingresos
 ## Fórmulas
 
 - **ROI** = (importe recuperado − importe invertido) ÷ importe invertido × 100 %.
-- **Rentabilidad anualizada (TAC)** = (recuperado ÷ invertido)^(1 ÷ años) − 1.
+- **Rentabilidad anualizada (CAGR)** = (recuperado ÷ invertido)^(1 ÷ años) − 1.
 
 El ROI muestra el resultado de todo el periodo; la rentabilidad anualizada permite comparar inversiones de distinta duración.
 

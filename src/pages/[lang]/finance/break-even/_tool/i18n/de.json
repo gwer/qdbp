@@ -25,5 +25,8 @@
     "ratio": {
       "label": "Deckungsbeitragsquote"
     }
+  },
+  "errors": {
+    "priceBelowCost": "Der Preis muss über den variablen Kosten je Stück liegen – sonst vergrößert jeder Verkauf den Verlust."
   }
 }

@@ -3,12 +3,13 @@ import type { Crumb } from '@/lib/seo';
 
 interface Props {
   items: Crumb[];
+  label: string;
 }
 
-const { items } = Astro.props;
+const { items, label } = Astro.props;
 ---
 
-<nav class="breadcrumbs" aria-label="Breadcrumb">
+<nav class="breadcrumbs" aria-label={label}>
   <ol>
     {
       items.map((item, i) =>

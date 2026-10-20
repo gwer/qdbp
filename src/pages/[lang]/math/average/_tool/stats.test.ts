@@ -59,3 +59,10 @@ describe('stats', () => {
     expect(stats([])).toBeNull();
   });
 });
+
+describe('stats на больших списках', () => {
+  it('150 000 разных чисел — без переполнения стека', () => {
+    const r = stats(Array.from({ length: 150_000 }, (_, i) => i));
+    expect(r).toMatchObject({ count: 150_000, mean: 74_999.5, mode: [] });
+  });
+});

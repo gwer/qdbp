@@ -28,6 +28,19 @@ describe('часовые пояса', () => {
     expect(iso(zonedToUtc('Europe/Berlin', '2026-10-25', 150))).toBe('2026-10-25T00:30:00.000Z');
   });
 
+  it.each([
+    // [пояс, дата, местное время, ожидаемый UTC] — весенний пропуск: время после перевода
+    ['America/New_York', '2026-03-08', 150, '2026-03-08T07:30:00.000Z'],
+    ['Europe/Berlin', '2026-03-29', 150, '2026-03-29T01:30:00.000Z'],
+    ['Australia/Lord_Howe', '2026-10-04', 135, '2026-10-03T15:45:00.000Z'],
+    // осенний повтор: первое из двух
+    ['America/New_York', '2026-11-01', 90, '2026-11-01T05:30:00.000Z'],
+    ['Australia/Sydney', '2026-04-05', 150, '2026-04-04T15:30:00.000Z'],
+    ['Australia/Lord_Howe', '2026-04-05', 105, '2026-04-04T14:45:00.000Z'],
+  ] as const)('перевод часов: %s %s %d мин → %s', (zone, date, minutes, utc) => {
+    expect(iso(zonedToUtc(zone, date, minutes))).toBe(utc);
+  });
+
   it('UTC → местное время, смена даты', () => {
     expect(utcToZoned('Asia/Tokyo', Date.UTC(2026, 9, 20, 18, 0))).toEqual({ date: '2026-10-21', minutes: 180 });
   });

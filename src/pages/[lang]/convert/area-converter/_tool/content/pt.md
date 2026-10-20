@@ -19,6 +19,6 @@ Digite uma área e escolha as unidades: o resultado e a tabela em todas as unida
 
 **Quantos metros quadrados tem um hectare?** 10.000.
 
-**Como calcular a área de um cômodo?** Multiplique o comprimento pela largura em metros. Para pisos, a [calculadora de piso laminado](/pt/repair/laminate/) já inclui a perda e as caixas.
+**Como calcular a área de um cômodo?** Multiplique o comprimento pela largura em metros. Para pisos, a [calculadora de piso laminado](/pt/construction/laminate/) já inclui a perda e as caixas.
 
 Para comprimentos, use o [conversor de comprimento](/pt/convert/length-converter/).

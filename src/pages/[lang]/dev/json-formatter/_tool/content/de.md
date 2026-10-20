@@ -18,8 +18,10 @@ Die Daten werden im Browser verarbeitet und nirgendwohin gesendet – Sie könne
 
 ## Häufige Fragen
 
-**Warum werden Umlaute nicht als `ü` maskiert?** Das ist nicht nötig: JSON ist per Definition UTF-8.
+**Warum wird `ü` nicht als `\u00fc` geschrieben?** Dieses Zeichen darf in JSON direkt stehen; die Unicode-Escape-Sequenz ist optional.
 
-**Gibt es eine Größenbeschränkung?** Nur den Speicher Ihres Geräts; Dateien mit mehreren Megabyte sind in Sekundenbruchteilen verarbeitet.
+**Gibt es eine Größenbeschränkung?** Die verarbeitbare Größe hängt vom verfügbaren Arbeitsspeicher und der Leistung Ihres Geräts ab. Große Dokumente können länger dauern.
+
+**Können sich Zahlen ändern?** Sehr große Ganzzahlen und Dezimalzahlen mit vielen Stellen ja: Der Browser speichert JSON-Zahlen mit etwa 15–17 signifikanten Stellen. So wird aus `9007199254740993` die Zahl `9007199254740992`. Enthalten Ihre Daten solche IDs oder Beträge, speichern Sie sie als Strings.
 
 Um JSON für eine URL oder als Base64 zu kodieren, nutzen Sie die [URL-Kodierung](/de/security/url-encode/) oder [Base64](/de/security/base64/).

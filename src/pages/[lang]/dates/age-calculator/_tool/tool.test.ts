@@ -16,6 +16,9 @@ describe('age', () => {
 
   it('родился 29 февраля', () => {
     expect(age('2000-02-29', '2025-03-01')).toMatchObject({ years: 25, months: 0, days: 1 });
+    // День рождения в невисокосный год — 28 февраля: в этот день полных лет уже 25, до дня рождения 0
+    expect(age('2000-02-29', '2025-02-28')).toMatchObject({ years: 25, months: 0, days: 0, nextBirthday: 0 });
+    expect(age('2000-02-29', '2025-02-27')).toMatchObject({ years: 24, months: 11, days: 29, nextBirthday: 1 });
     expect(age('2000-02-29', '2026-02-27')).toMatchObject({ nextBirthday: 1 });
   });
 

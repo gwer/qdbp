@@ -3,6 +3,7 @@ import type { ToolProps } from '@/ui/define';
 import { QualityField, SelectField } from '@/ui/files/fields';
 import { decode, encode, outputName, type OutputType } from '@/ui/files/image';
 import { ImageBatch, type Processed } from '@/ui/files/ImageBatch';
+import { stripJpeg } from '@/ui/files/jpeg';
 import { compressedType, type Target } from './target';
 
 export function CompressImage({ lang, t }: ToolProps) {
@@ -15,10 +16,15 @@ export function CompressImage({ lang, t }: ToolProps) {
       const size = { width: bitmap.width, height: bitmap.height };
       const type: OutputType = compressedType(file.type, target);
       const blob = await encode(bitmap, { ...size, type, quality: quality / 100 });
-      // Если «сжатый» файл вышел больше исходника того же формата — честно оставляем исходник.
-      const keep = blob.size >= file.size && type === file.type;
+      // Если «сжатый» файл вышел не меньше исходника того же формата — честно оставляем исходник.
+      // Из JPEG при этом без перекодирования вырезаем метаданные (EXIF, GPS, XMP, комментарии), как и при пересохранении.
+      let original: Blob = file;
+      if (type === file.type && type === 'image/jpeg') {
+        original = new Blob([stripJpeg(new Uint8Array(await file.arrayBuffer()), { keepIcc: true, keepOrientation: true })], { type });
+      }
+      const keep = type === file.type && blob.size >= original.size;
       return {
-        blob: keep ? file : blob,
+        blob: keep ? original : blob,
         name: keep ? file.name : outputName(file.name, type, '-compressed'),
         ...size,
         srcWidth: size.width,

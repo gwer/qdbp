@@ -16,7 +16,7 @@ Enter a speed and pick the units — the result and a table in every speed unit 
 
 ## FAQ
 
-**How do I convert km/h to mph in my head?** Multiply by 0.6 (or by 5 and divide by 8): 100 km/h → about 62 mph.
+**How do I convert km/h to mph in my head?** For a rough estimate, multiply by 5 and divide by 8: 100 km/h → 62.5 mph (about 62.14 mph using the exact conversion).
 
 **What's a knot?** One nautical mile (1,852 m) per hour — used for wind, boats and aircraft.
 

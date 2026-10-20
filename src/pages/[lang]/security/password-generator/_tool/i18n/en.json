@@ -1,6 +1,6 @@
 {
   "title": "Password generator: strong random passwords",
-  "description": "Create a strong random password of any length from letters, numbers and symbols. It's generated in your browser and never sent anywhere.",
+  "description": "Create a strong random password between 4 and 64 characters long from letters, numbers and symbols. It's generated in your browser and never sent anywhere.",
   "ui": {
     "length": "Length",
     "sets": {

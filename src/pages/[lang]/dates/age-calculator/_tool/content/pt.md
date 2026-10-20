@@ -4,7 +4,7 @@ Informe a data de nascimento. Por padrão, a idade é calculada para hoje, mas v
 
 ## Como a idade é calculada
 
-Primeiro são contados os meses completos desde a data de nascimento e depois os dias restantes. Os meses mais curtos são levados em conta: de 31 de janeiro a 29 de fevereiro de um ano bissexto são 29 dias, e não "um mês".
+Primeiro são contados os meses completos desde a data de nascimento e depois os dias restantes. Se o mês não tem o dia correspondente, o mês termina no seu último dia: de 31 de janeiro a 29 de fevereiro de um ano bissexto é exatamente um mês.
 
 Quem nasceu em 29 de fevereiro tem o aniversário contado em 28 de fevereiro nos anos não bissextos.
 

@@ -18,8 +18,10 @@ Os dados são processados no navegador e não são enviados a lugar nenhum, ent�
 
 ## Perguntas frequentes
 
-**Por que os acentos não viram `ç`?** Não é preciso escapar: JSON é UTF-8 por definição.
+**Por que `ç` não vira `\u00e7`?** JSON permite escrever esse caractere diretamente; a sequência de escape Unicode é opcional.
 
-**Existe limite de tamanho?** Só a memória do seu dispositivo; arquivos de vários megabytes são processados em frações de segundo.
+**Existe limite de tamanho?** O processamento depende da memória disponível e do desempenho do seu dispositivo. Documentos grandes podem demorar mais.
+
+**Os números podem mudar?** Inteiros muito grandes e decimais com muitas casas, sim: o navegador guarda os números do JSON com cerca de 15–17 dígitos significativos. Por exemplo, `9007199254740993` vira `9007199254740992`. Se os seus dados têm IDs ou valores assim, guarde-os como strings.
 
 Para codificar o JSON em uma URL ou em Base64, use a [codificação de URL](/pt/security/url-encode/) ou o [Base64](/pt/security/base64/).

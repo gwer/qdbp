@@ -26,6 +26,6 @@ Ejemplo: una estufa de 2000 W encendida 3 horas al día gasta 6 kWh. A 0,15 € 
 
 ## Preguntas frecuentes
 
-**¿Por qué el frigorífico tiene una potencia tan baja?** El compresor se enciende y se apaga. En los aparatos con termostato (frigorífico, estufa, termo) pon el tiempo que funcionan de verdad, no el que están enchufados.
+**¿Cómo indico la potencia del frigorífico?** Si usas la potencia media de todo el día, indica 24 horas: las pausas ya están incluidas en esa media. Si usas la potencia con el compresor en marcha, indica solo el tiempo real de funcionamiento. No apliques ambos ajustes a la vez.
 
 **¿Qué precio pongo?** El de tu factura. Con la tarifa regulada PVPC el precio cambia cada hora y depende del tramo (punta, llano, valle): usa una media o haz el cálculo por tramos.

@@ -18,8 +18,10 @@ Your data is processed in the browser and never sent anywhere, so it's safe to c
 
 ## FAQ
 
-**Why aren't non-English characters escaped as `é`?** Escaping isn't required — JSON is UTF-8 by definition.
+**Why isn't `é` written as `\u00e9`?** JSON allows this character to be written directly; the Unicode escape is optional.
 
-**Is there a size limit?** Only your device's memory; files of several megabytes are processed in a fraction of a second.
+**Is there a size limit?** Processing depends on your device’s available memory and performance. Large documents can take longer.
+
+**Can numbers change?** Very large integers and decimals with many digits can: the browser stores JSON numbers with about 15–17 significant digits. For example, `9007199254740993` becomes `9007199254740992`. If your data has IDs or amounts like that, keep them as strings.
 
 To encode JSON for a URL or as Base64, use the [URL encoder](/en/security/url-encode/) or [Base64](/en/security/base64/).

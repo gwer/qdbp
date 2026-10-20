@@ -17,11 +17,11 @@ Beispiel: ein Mann mit 178 cm (rund 70 Zoll, also 10 über 5 Fuß) – nach Devi
 
 ## Welcher Formel soll ich glauben?
 
-Keiner allein. Die Devine-Formel wurde zur Dosierung von Medikamenten entwickelt, nicht zur Beurteilung der Figur; die anderen verfeinern sie. Die Spanne zwischen ihnen ist die ehrliche Antwort: Das „Idealgewicht“ ist ein Bereich, keine Zahl. Am breitesten ist der Bereich nach BMI 18,5–24,9, den die WHO verwendet.
+Keiner allein. Die Devine-Formel wurde zur Dosierung von Medikamenten entwickelt, nicht zur Beurteilung der Figur; die anderen verwenden andere Koeffizienten. Die Spanne zwischen ihnen ist die ehrliche Antwort: Das „Idealgewicht“ ist ein Bereich, keine Zahl. Am breitesten ist der Bereich nach BMI 18,5–24,9, den die WHO verwendet.
 
 ## Häufige Fragen
 
-**Warum berücksichtigen die Formeln weder Alter noch Körperbau?** Sie sind bewusst einfach und nutzen nur die Größe. Wer einen kräftigen Körperbau oder viel Muskelmasse hat, kann ohne Gesundheitsrisiko mehr wiegen – dann ist der [Körperfettanteil](/de/health/body-fat/) aussagekräftiger.
+**Warum berücksichtigen die Formeln weder Alter noch Körperbau?** Sie sind bewusst einfach und nutzen nur Größe und Geschlecht. Wer einen kräftigen Körperbau oder viel Muskelmasse hat, kann mehr wiegen, als die Formeln ergeben – dann ist der [Körperfettanteil](/de/health/body-fat/) aussagekräftiger.
 
 **Funktionieren sie unter 152 cm?** Nicht gut: Sie ziehen vom Grundgewicht ab und schätzen eher zu niedrig. Orientieren Sie sich am BMI-Bereich.
 

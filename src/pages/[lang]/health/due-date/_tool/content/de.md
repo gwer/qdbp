@@ -18,7 +18,7 @@ Bei einem 32-Tage-Zyklus verschiebt sich der Termin auf den 10. Dezember.
 
 ## Häufige Fragen
 
-**Wie genau ist der Termin?** Nur etwa 4–5 % der Babys kommen am errechneten Termin zur Welt; eine Geburt zwischen der 37. und 42. Woche gilt als normal. Genauer ist die Bestimmung per Ultraschall im ersten Trimester.
+**Wie genau ist der Termin?** Nur etwa 4–5 % der Babys kommen am errechneten Termin zur Welt; der Termin ist eine Schätzung, keine Vorhersage des Geburtstags. Die Schwangerschaftsdatierung und nötige Kontrollen werden ärztlich beurteilt; die Datierung per Ultraschall im ersten Trimester ist genauer und kann von der Berechnung nach der letzten Periode abweichen.
 
 **Warum „10+0“ und „11. SSW“?** 10 vollendete Wochen bedeuten, dass Sie sich in der 11. Schwangerschaftswoche befinden. Im Mutterpass steht meist die Schreibweise „10+0“.
 

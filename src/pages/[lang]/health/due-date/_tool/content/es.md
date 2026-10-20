@@ -18,7 +18,7 @@ Con un ciclo de 32 días, la fecha pasa al 10 de diciembre.
 
 ## Preguntas frecuentes
 
-**¿Es exacta la fecha?** Solo un 4–5 % de los bebés nace en la fecha probable de parto; se considera normal nacer entre las semanas 37 y 42. La ecografía del primer trimestre da una fecha más precisa.
+**¿Es exacta la fecha?** Solo un 4–5 % de los bebés nace en la fecha probable de parto; es una estimación, no una predicción del día del parto. Tu equipo sanitario determina la edad gestacional y el seguimiento; la datación por ecografía del primer trimestre es más precisa y puede diferir del cálculo por la última regla.
 
 **¿Qué diferencia hay entre semanas de embarazo y semanas desde la concepción?** Las semanas de embarazo son unas 2 más, porque se cuentan desde el inicio del último ciclo.
 

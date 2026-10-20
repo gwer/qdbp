@@ -18,8 +18,10 @@ Los datos se procesan en el navegador y no se envían a ninguna parte, así que 
 
 ## Preguntas frecuentes
 
-**¿Por qué las tildes y la ñ no se convierten en `ñ`?** No hace falta escaparlas: JSON se escribe en UTF-8.
+**¿Por qué `ñ` no se convierte en `\u00f1`?** JSON permite escribir este carácter directamente; la secuencia de escape Unicode es opcional.
 
-**¿Hay límite de tamaño?** Solo la memoria de tu dispositivo; archivos de varios megas se procesan en una fracción de segundo.
+**¿Hay límite de tamaño?** La capacidad de procesamiento depende de la memoria disponible y del rendimiento de tu dispositivo. Los documentos grandes pueden tardar más.
+
+**¿Pueden cambiar los números?** Los enteros muy grandes y los decimales con muchas cifras, sí: el navegador guarda los números de JSON con unas 15–17 cifras significativas. Por ejemplo, `9007199254740993` se convierte en `9007199254740992`. Si tus datos tienen ID o importes así, guárdalos como cadenas.
 
 Para codificar el JSON en una URL o en Base64, usa la [codificación URL](/es/security/url-encode/) o [Base64](/es/security/base64/).

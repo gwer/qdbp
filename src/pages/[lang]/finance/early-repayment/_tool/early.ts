@@ -1,3 +1,4 @@
+import { InputError } from '@/ui/define';
 import DecimalBase from 'decimal.js-light';
 import { loan, type LoanRow } from '../../_shared/loan';
 
@@ -50,7 +51,8 @@ const sumInterest = (rows: LoanRow[]) => rows.reduce((a, r) => a.plus(r.interest
  * Все суммы округляются до копеек на каждом шаге, как в банковском графике.
  */
 export function earlyRepayment({ amount, rate, months, after, extra, mode }: EarlyInput) {
-  if (!Number.isInteger(after) || after < 0 || after >= months || !(extra > 0)) throw new RangeError('invalid input');
+  if (after >= months) throw new InputError('afterTooLate');
+  if (!Number.isInteger(after) || after < 0 || !(extra > 0)) throw new RangeError('invalid input');
   const base = loan({ amount, rate, months, kind: 'annuity' });
   const paid = base.schedule.slice(0, after);
   const balance = after ? paid[after - 1].balance : amount;

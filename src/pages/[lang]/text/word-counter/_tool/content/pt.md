@@ -18,6 +18,6 @@ Cole ou digite seu texto no campo: os contadores são atualizados enquanto você
 
 ## Perguntas frequentes
 
-**Por que meu editor de texto mostra outro número?** Cada editor trata de um jeito um pouco diferente as palavras com hífen, os números e a pontuação. A diferença costuma ficar em 1–2%.
+**Por que meu editor de texto mostra outro número?** Cada editor trata de um jeito um pouco diferente as palavras com hífen, os números e a pontuação.
 
 **Existe limite de tamanho?** Não, só a memória do seu dispositivo.

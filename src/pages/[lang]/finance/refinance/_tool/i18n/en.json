@@ -35,7 +35,7 @@
       "label": "Current monthly payment"
     },
     "breakEven": {
-      "label": "Break-even point"
+      "label": "Closing costs recovered in"
     }
   },
   "ui": {

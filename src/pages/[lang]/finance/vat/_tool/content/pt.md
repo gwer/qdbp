@@ -19,7 +19,7 @@ Por padrão aparece **23%**, a taxa normal do IVA em Portugal continental; as ta
 
 ## E no Brasil?
 
-O Brasil ainda não tem um IVA único: hoje o consumo é tributado por ICMS, ISS, IPI, PIS e Cofins. A reforma tributária cria um "IVA dual" — a CBS (federal) e o IBS (estadual e municipal). Em 2026 é um ano de teste, com alíquotas simbólicas de 0,9% de CBS e 0,1% de IBS (LC 214/2025); a transição termina em 2033, e a alíquota total de referência ainda não está definida.
+O Brasil ainda não tem um IVA único: hoje o consumo é tributado por ICMS, ISS, IPI, PIS e Cofins. A reforma tributária cria um "IVA dual" — a CBS (federal) e o IBS (estadual e municipal). O ano de 2026 é um ano de teste, com alíquotas simbólicas de 0,9% de CBS e 0,1% de IBS (LC 214/2025); a transição termina em 2033, e a alíquota total de referência ainda não está definida.
 
 Atenção: o ICMS é calculado "por dentro", ou seja, a alíquota incide sobre o preço que já inclui o imposto (ICMS = preço × alíquota). Para o ICMS, a opção "Retirar IVA" desta calculadora **não** dá o resultado correto.
 

@@ -18,7 +18,7 @@ Com um ciclo de 32 dias, a data passa para 10 de dezembro.
 
 ## Perguntas frequentes
 
-**A data é exata?** Só cerca de 4–5% dos bebês nascem na data provável; o parto entre 37 e 42 semanas é considerado normal. O ultrassom do primeiro trimestre dá uma data mais precisa.
+**A data é exata?** Só cerca de 4–5% dos bebês nascem na data provável; é uma estimativa, não uma previsão do dia do parto. A equipe de pré-natal determina a idade gestacional e o acompanhamento; a datação pelo ultrassom do primeiro trimestre é mais precisa e pode diferir do cálculo pela última menstruação.
 
 **Qual a diferença entre idade gestacional e semanas desde a concepção?** A idade gestacional é cerca de 2 semanas maior, porque conta a partir do início do último ciclo.
 

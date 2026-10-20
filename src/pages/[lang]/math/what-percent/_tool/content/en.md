@@ -13,7 +13,7 @@ For example, 30 out of 150: 30 × 100 / 150 = **20%**.
 - 45 correct answers out of 60 questions: 45 × 100 / 60 = **75%**.
 - A score of 42 out of 50: **84%**.
 - Sales of 250 against a target of 200: **125%** of target.
-- 1 out of 3 is **33.33%** (exactly one third).
+- 1 out of 3 is exactly one third: **33⅓%**, or approximately **33.33%**.
 
 ## FAQ
 

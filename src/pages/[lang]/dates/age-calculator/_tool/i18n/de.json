@@ -25,5 +25,8 @@
     "nextBirthday": {
       "label": "Tage bis zum Geburtstag"
     }
+  },
+  "errors": {
+    "beforeBirth": "Das Stichtagsdatum liegt vor dem Geburtsdatum."
   }
 }

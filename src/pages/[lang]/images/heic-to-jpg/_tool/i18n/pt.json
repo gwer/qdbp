@@ -9,7 +9,7 @@
     "errors": {
       "notHeic": "não é um arquivo HEIC/HEIF. Para JPG, PNG e WebP use o conversor de imagens",
       "broken": "o arquivo está danificado ou incompleto — não dá para ler o HEIC",
-      "tooLarge": "a imagem tem mais de 100 megapixels — falta memória no navegador",
+      "tooLarge": "a imagem excede o limite de 100 megapixels",
       "memory": "faltou memória no navegador. Feche outras abas e tente de novo",
       "load": "o decodificador HEIC não carregou"
     }

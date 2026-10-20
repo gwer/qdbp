@@ -1,6 +1,6 @@
 ## Como usar
 
-Cole a receita — um ingrediente por linha — e informe para quantas porções ela rende e quantas você precisa. Todas as quantidades são multiplicadas pelo mesmo fator e o resto do texto é mantido. Linhas sem número ("sal a gosto") não mudam.
+Cole a receita — um ingrediente por linha — e informe quantas porções a receita rende e quantas você precisa. Todas as quantidades são multiplicadas pelo mesmo fator e o resto do texto é mantido. Linhas sem número ("sal a gosto") não mudam.
 
 São reconhecidos números inteiros e decimais ("1,5", "0.75"), frações ("1/2"), números mistos ("1 1/2") e intervalos ("2–3 dentes").
 

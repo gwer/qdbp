@@ -18,6 +18,6 @@ Text in das Feld einfügen oder eintippen – die Zähler aktualisieren sich bei
 
 ## Häufige Fragen
 
-**Warum zeigt mein Textprogramm eine andere Zahl?** Programme behandeln Bindestriche, Zahlen und Satzzeichen leicht unterschiedlich. Der Unterschied liegt meist bei 1–2 %.
+**Warum zeigt mein Textprogramm eine andere Zahl?** Programme behandeln Bindestriche, Zahlen und Satzzeichen leicht unterschiedlich.
 
-**Gibt es eine Längenbegrenzung?** Nein, nur den Speicher Ihres Geräts.
+**Gibt es eine Längenbegrenzung?** Die maximale Textlänge hängt vom verfügbaren Arbeitsspeicher Ihres Geräts ab.

@@ -1,4 +1,4 @@
-import { defineCalculator } from '@/ui/define';
+import { defineCalculator, InputError } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
 
 /**
@@ -7,7 +7,8 @@ import { island } from '@/ui/ToolRoot';
  */
 export function breakEven(fixed: number, price: number, variable: number) {
   const contribution = price - variable;
-  if (!(contribution > 0) || fixed < 0) throw new RangeError('price must exceed variable cost');
+  if (!(contribution > 0)) throw new InputError('priceBelowCost');
+  if (fixed < 0) throw new RangeError('negative fixed costs');
   const units = Math.ceil(fixed / contribution - 1e-9);
   return { units, revenue: units * price, contribution, ratio: (contribution / price) * 100 };
 }
@@ -20,6 +21,7 @@ export const def = defineCalculator({
     price: { type: 'number', default: 50, min: 0.01, byLang: { ru: 1500 } },
     variable: { type: 'number', default: 30, min: 0, byLang: { ru: 900 } },
   },
+  errors: ['priceBelowCost'],
   compute: ({ fixed, price, variable }) => breakEven(fixed, price, variable),
   outputs: {
     units: { type: 'integer' },

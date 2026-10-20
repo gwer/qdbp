@@ -13,7 +13,7 @@ Por exemplo, 30 de 150: 30 × 100 / 150 = **20%**.
 - 45 acertos em uma prova de 60 questões: 45 × 100 / 60 = **75%**.
 - Nota 42 de 50: **84%**.
 - Vendas de 250 para uma meta de 200: **125%** da meta.
-- 1 de 3 é **33,33%** (exatamente um terço).
+- 1 de 3 é exatamente um terço: **33⅓%**, ou aproximadamente **33,33%**.
 
 ## Perguntas frequentes
 

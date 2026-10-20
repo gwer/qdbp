@@ -4,6 +4,7 @@
     "description": "Kostenlose Online-Rechner und Tools: Finanzen, Datum, Prozente, Renovierung und Text. Alle Berechnungen laufen in Ihrem Browser."
   },
   "nav": {
+    "breadcrumbs": "Navigationspfad",
     "home": "Startseite",
     "language": "Sprache"
   },
@@ -24,6 +25,7 @@
   "calc": {
     "result": "Ergebnis",
     "error": {
+      "compute": "Mit diesen Werten ist keine Berechnung möglich. Bitte prüfen Sie die Felder.",
       "number": "Bitte eine Zahl eingeben",
       "integer": "Bitte eine ganze Zahl eingeben",
       "min": "Mindestens {min}",
@@ -49,7 +51,7 @@
     }
   },
   "footer": {
-    "privacy": "Alle Berechnungen laufen in Ihrem Browser. Ihre Eingaben werden nirgendwohin gesendet."
+    "privacy": "Alle Berechnungen laufen in Ihrem Browser. Dateien werden auf Ihrem Gerät verarbeitet und nicht hochgeladen."
   },
   "common": {
     "copy": "Kopieren",

@@ -8,7 +8,7 @@ The QR code is created in your browser — neither the link nor your Wi-Fi passw
 
 A QR code can still be read when part of it is damaged or covered. A higher level survives more damage but makes the code denser:
 
-- **L** — up to 7% of the area, the most compact code;
+- **L** — recovery of about 7% of total codewords, the most compact code;
 - **M** — up to 15%, fine for most uses;
 - **Q** — up to 25%, for packaging and signs;
 - **H** — up to 30%, if you'll put a logo on top.
@@ -19,6 +19,6 @@ A QR code can still be read when part of it is damaged or covered. A higher leve
 
 **How big should a printed QR code be?** At least about 0.8 × 0.8 in (2 × 2 cm) on a business card, and roughly 1/10 of the scanning distance — about 1 ft (30 cm) wide to scan from 10 ft away. Use SVG for print.
 
-**How much data fits?** Up to 2,953 bytes — roughly 2,900 Latin characters; accented and non-Latin characters take 2–4 bytes each.
+**How much data fits?** In byte mode, the theoretical maximum is 2,953 bytes for version 40 at error correction level L. Capacity is lower at higher correction levels. The number of characters also depends on their UTF-8 byte length.
 
 **Can I make a QR code for a Wi-Fi network without sharing the password out loud?** That's exactly what the Wi-Fi option is for: print it and put it on the fridge.

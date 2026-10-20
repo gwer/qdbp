@@ -25,5 +25,8 @@
     "ratio": {
       "label": "Contribution margin ratio"
     }
+  },
+  "errors": {
+    "priceBelowCost": "The price must exceed the variable cost per unit — otherwise every sale adds to the loss."
   }
 }

@@ -13,7 +13,7 @@ Por ejemplo, 30 de 150: 30 × 100 / 150 = **20 %**.
 - 45 respuestas correctas de 60 preguntas: 45 × 100 / 60 = **75 %**.
 - Un 42 sobre 50 en un examen: **84 %**.
 - Ventas de 250 frente a un objetivo de 200: objetivo cumplido al **125 %**.
-- 1 de 3 es el **33,33 %** (exactamente un tercio).
+- 1 de 3 es exactamente un tercio: **33⅓ %**, o aproximadamente **33,33 %**.
 
 ## Preguntas frecuentes
 

@@ -26,6 +26,6 @@ Exemplo: um chuveiro elétrico de 5500 W usado 30 minutos por dia gasta 2,75 kWh
 
 ## Perguntas frequentes
 
-**Por que a geladeira tem potência tão baixa?** O compressor liga e desliga. Em aparelhos com termostato (geladeira, aquecedor) informe o tempo em que realmente funcionam, não o tempo na tomada.
+**Como informo a potência da geladeira?** Se usar a potência média das 24 horas, informe 24 horas por dia: as pausas já estão incluídas nessa média. Se usar a potência com o compressor ligado, informe apenas o tempo real de funcionamento. Não aplique os dois ajustes ao mesmo tempo.
 
 **Que tarifa usar?** Divida o valor da conta de luz pelos kWh consumidos: assim entram impostos (ICMS, PIS/Cofins) e a bandeira tarifária do mês.

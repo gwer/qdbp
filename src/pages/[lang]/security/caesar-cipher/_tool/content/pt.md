@@ -4,7 +4,7 @@ Digite o texto, escolha o deslocamento e se quer criptografar ou descriptografar
 
 ## Exemplos
 
-- Olá, mundo com deslocamento 3 → **Rná, pxqgr** (letras acentuadas ficam iguais)
+- Olá, mundo com deslocamento 3 → **Roá, pxqgr** (letras acentuadas ficam iguais)
 - O deslocamento 13 é o **ROT13**: aplicá-lo duas vezes devolve o texto original.
 
 ## Perguntas frequentes

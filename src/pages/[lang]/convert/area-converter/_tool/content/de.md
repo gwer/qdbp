@@ -19,6 +19,6 @@ Fläche eingeben und Einheiten wählen – Ergebnis und Tabelle mit allen Fläch
 
 **Wie viele Quadratmeter hat ein Hektar?** 10.000.
 
-**Wie berechne ich die Fläche eines Raums?** Länge mal Breite in Metern. Für Bodenbeläge rechnet der [Laminatrechner](/de/repair/laminate/) Verschnitt und Pakete mit ein.
+**Wie berechne ich die Fläche eines Raums?** Länge mal Breite in Metern. Für Bodenbeläge rechnet der [Laminatrechner](/de/construction/laminate/) Verschnitt und Pakete mit ein.
 
 Längen rechnet der [Längenumrechner](/de/convert/length-converter/) um.

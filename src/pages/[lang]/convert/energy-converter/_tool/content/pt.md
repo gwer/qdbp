@@ -12,7 +12,7 @@ Digite um valor e escolha as unidades: o resultado e a tabela em todas as unidad
 
 - 2.000 kcal = **8.368 kJ**.
 - 1 kWh = **3.412 BTU**.
-- Um ar-condicionado de 12.000 BTUs ≈ **3,5 kW** de refrigeração.
+- Um ar-condicionado de 12.000 BTU/h ≈ **3,5 kW** de refrigeração.
 
 ## Perguntas frequentes
 

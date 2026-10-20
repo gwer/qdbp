@@ -10,13 +10,17 @@ export function downloadBlob(name: string, blob: Blob) {
 
 /** Уникальные имена в архиве: photo.jpg, photo (2).jpg … */
 export function uniqueNames(names: string[]): string[] {
-  const seen = new Map<string, number>();
+  const original = new Set(names);
+  const taken = new Set<string>();
   return names.map((n) => {
-    const count = (seen.get(n) ?? 0) + 1;
-    seen.set(n, count);
-    if (count === 1) return n;
     const dot = n.lastIndexOf('.');
-    return dot > 0 ? `${n.slice(0, dot)} (${count})${n.slice(dot)}` : `${n} (${count})`;
+    let name = n;
+    // Номер не должен совпасть ни с выданным, ни с исходным именем другого файла («a (2).jpg» рядом с двумя «a.jpg»)
+    for (let i = 2; taken.has(name) || (name !== n && original.has(name)); i++) {
+      name = dot > 0 ? `${n.slice(0, dot)} (${i})${n.slice(dot)}` : `${n} (${i})`;
+    }
+    taken.add(name);
+    return name;
   });
 }
 

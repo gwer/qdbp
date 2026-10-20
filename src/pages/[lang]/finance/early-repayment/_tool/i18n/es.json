@@ -51,5 +51,8 @@
     "monthsLeft": "Meses pendientes",
     "saved": "Ahorro",
     "noPrepayment": "Sin amortización anticipada"
+  },
+  "errors": {
+    "afterTooLate": "Las cuotas ya pagadas deben ser menos que los meses del plazo."
   }
 }

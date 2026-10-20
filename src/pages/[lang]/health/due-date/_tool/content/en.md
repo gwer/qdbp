@@ -18,7 +18,7 @@ With a 32-day cycle, the due date moves to December 10.
 
 ## FAQ
 
-**How accurate is the due date?** Only about 4–5% of babies are born on their due date; birth anywhere from 37 to 42 weeks is considered normal. A first-trimester ultrasound gives a more accurate date.
+**How accurate is the due date?** Only about 4–5% of babies are born on their due date; it's an estimate, not a prediction of the day of birth. Your maternity care team determines pregnancy dating and follow-up; first-trimester ultrasound dating is more accurate and may differ from a calculation based on your last period.
 
 **How are gestational weeks different from weeks since conception?** Gestational age is about 2 weeks more, because it's counted from the start of your last cycle.
 

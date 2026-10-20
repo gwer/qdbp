@@ -6,7 +6,7 @@ Informe a distância e o tempo: você vê o pace (minutos por quilômetro) e a v
 
 - Pace = tempo / distância: 50 minutos em 10 km dão **5:00 min/km**.
 - Velocidade = distância / tempo: 10 km em 50 minutos são **12 km/h**.
-- A previsão usa a fórmula de Peter Riegel: `T₂ = T₁ × (D₂ / D₁)^1,06` — quanto mais longa a prova, mais o pace cai.
+- A previsão usa a fórmula de Peter Riegel: `T₂ = T₁ × (D₂ / D₁)^1,06` — quanto maior a distância, maior o tempo por quilômetro previsto por esse modelo.
 
 ## Exemplo
 

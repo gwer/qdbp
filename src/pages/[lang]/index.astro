@@ -17,13 +17,24 @@ const alternates = SITE_LANGS.map((l) => ({ lang: l, href: `/${l}/` }));
 
 <Base lang={lang} title={t('home.title')} description={t('site.description')} alternates={alternates}>
   <h1>{t('site.tagline')}</h1>
+  <nav class="home-nav" aria-label={t('home.allCategories')}>
+    <ul>
+      {
+        cats.map((cat) => (
+          <li>
+            <a href={`#${cat.id}`}>{categoryName(cat, lang)}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
   {
     cats.map((cat) => (
-      <section class="home-category">
+      <section class="home-category" id={cat.id}>
         <h2>
           <a href={categoryUrl(cat, lang)}>{categoryName(cat, lang)}</a>
         </h2>
-        <ToolList tools={toolsIn(cat, lang)} lang={lang} />
+        <ToolList tools={toolsIn(cat, lang)} lang={lang} compact />
       </section>
     ))
   }

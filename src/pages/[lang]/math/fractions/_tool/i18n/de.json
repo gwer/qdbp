@@ -34,5 +34,9 @@
     "decimal": {
       "label": "Dezimalzahl"
     }
+  },
+  "errors": {
+    "divisionByZero": "Durch null kann man nicht teilen: Der zweite Bruch ist null.",
+    "tooLarge": "Die Zahlen sind zu groß: Geben Sie höchstens 15 Ziffern ein."
   }
 }

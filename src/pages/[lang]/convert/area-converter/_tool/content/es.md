@@ -19,6 +19,6 @@ Escribe una superficie y elige las unidades: el resultado y la tabla en todas la
 
 **¿Cuántos metros cuadrados tiene una hectárea?** 10 000.
 
-**¿Cómo calculo los metros cuadrados de una habitación?** Multiplica el largo por el ancho en metros. Para suelos, la [calculadora de tarima](/es/repair/laminate/) añade el desperdicio y las cajas.
+**¿Cómo calculo los metros cuadrados de una habitación?** Multiplica el largo por el ancho en metros. Para suelos, la [calculadora de tarima](/es/construction/laminate/) añade el desperdicio y las cajas.
 
 Para longitudes, usa el [conversor de longitud](/es/convert/length-converter/).

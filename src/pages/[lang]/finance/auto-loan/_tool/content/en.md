@@ -8,7 +8,7 @@ Enter the vehicle price, your down payment, trade-in value, sales tax rate, any 
 - **Monthly payment** — a fixed payment over the term.
 - **Total cost** = all payments + down payment.
 
-Sales tax is applied to the price minus the trade-in, as most US states do. If your state taxes the full price, enter a trade-in of 0 and subtract it from the down payment instead.
+Sales tax is applied to the price minus the trade-in, as most US states do. If your state taxes the full price, enter a trade-in of 0 and add its value to the down payment instead.
 
 ## Example
 

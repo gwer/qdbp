@@ -12,7 +12,7 @@ Aparecen tu fecha, tu hora y tu zona horaria actuales, y debajo ves al instante 
 
 ## Horario de verano
 
-Las reglas del horario de verano salen de la base de zonas horarias de tu navegador (IANA tz database), así que la diferencia cambia sola cuando se adelantan o atrasan los relojes. Por ejemplo, México dejó de aplicar el horario de verano en 2022, mientras que España sigue cambiando la hora.
+Las reglas del horario de verano salen de la base de zonas horarias de tu navegador (IANA tz database), así que la diferencia cambia sola cuando se adelantan o atrasan los relojes. Por ejemplo, la mayor parte de México dejó de aplicar el horario de verano en 2022, con excepciones en la frontera norte, mientras que España sigue cambiando la hora.
 
 El día del cambio hay horas que no existen (en primavera se adelanta el reloj) y horas que se repiten (en otoño). En el primer caso se usa la hora ya cambiada; en el segundo, la primera de las dos.
 

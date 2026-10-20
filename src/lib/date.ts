@@ -47,20 +47,25 @@ export const daysBetween = (from: string, to: string) => dayNumber(to)! - dayNum
 
 /**
  * Полных лет, месяцев и дней от from до to (to ≥ from), как считают возраст:
- * сначала целые месяцы (с учётом коротких месяцев), затем остаток дней.
+ * сначала целые месяцы, затем остаток дней. Если в месяце нет нужного числа, месяц
+ * заканчивается в его последний день (как в addMonths): 31.01 → 29.02 — ровно месяц,
+ * а родившемуся 29.02 в невисокосный год исполняется полный год 28.02.
  */
 export function diffYMD(from: string, to: string): { years: number; months: number; days: number } {
   const [fy, fm, fd] = parts(from);
   const [ty, tm, td] = parts(to);
   let months = (ty - fy) * 12 + (tm - fm);
-  if (td < fd) months--;
+  if (td < fd && addMonths(from, months) > to) months--;
   const anchor = addMonths(from, months);
   const days = daysBetween(anchor, to);
   return { years: Math.floor(months / 12), months: months % 12, days };
 }
 
+/** День недели по номеру дня от 1970-01-01 (четверг): 0 — понедельник … 6 — воскресенье. Даты до 1970 дают отрицательный номер. */
+const weekdayOf = (day: number) => (((day + 3) % 7) + 7) % 7;
+
 /** День недели: 0 — понедельник … 6 — воскресенье. */
-export const weekday = (iso: string) => (dayNumber(iso)! + 3) % 7; // 1970-01-01 — четверг
+export const weekday = (iso: string) => weekdayOf(dayNumber(iso)!);
 
 /** Количество будних дней (пн–пт) в полуинтервале [from, to). */
 export function weekdaysBetween(from: string, to: string): number {
@@ -68,7 +73,7 @@ export function weekdaysBetween(from: string, to: string): number {
   const b = dayNumber(to)!;
   if (b <= a) return 0;
   let count = Math.floor((b - a) / 7) * 5;
-  for (a += Math.floor((b - a) / 7) * 7; a < b; a++) if ((a + 3) % 7 < 5) count++;
+  for (a += Math.floor((b - a) / 7) * 7; a < b; a++) if (weekdayOf(a) < 5) count++;
   return count;
 }
 

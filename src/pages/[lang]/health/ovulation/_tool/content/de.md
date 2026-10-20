@@ -18,6 +18,6 @@ Beispiel: Ein 28-Tage-Zyklus begann am 1. März. Eisprung um den **15. März**, 
 
 **Kann ich damit verhüten?** Nein. Die reine Kalendermethode gehört zu den unsichersten Verhütungsmethoden.
 
-**Und bei unregelmäßigem Zyklus?** Rechnen Sie mit Ihrem kürzesten und längsten Zyklus der letzten sechs Monate – die fruchtbaren Tage liegen vermutlich dazwischen.
+**Und bei unregelmäßigem Zyklus?** Kalenderschätzungen sind dann besonders unsicher. Berechnungen mit dem kürzesten und längsten Zyklus grenzen die fruchtbaren Tage nicht zuverlässig ein. Verwenden Sie diesen Rechner nicht zur Verhütung.
 
 Sind Sie bereits schwanger, zeigt der [Geburtsterminrechner](/de/health/due-date/), in welcher Woche Sie sind.

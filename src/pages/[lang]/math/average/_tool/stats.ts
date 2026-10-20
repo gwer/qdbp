@@ -58,7 +58,8 @@ export function stats(numbers: number[]): Stats | null {
   const median = n % 2 ? sorted[(n - 1) / 2] : (sorted[n / 2 - 1] + sorted[n / 2]) / 2;
   const freq = new Map<number, number>();
   for (const x of sorted) freq.set(x, (freq.get(x) ?? 0) + 1);
-  const top = Math.max(...freq.values());
+  let top = 0; // не Math.max(...): на сотнях тысяч значений спред переполняет стек
+  for (const f of freq.values()) if (f > top) top = f;
   const mode = top > 1 ? [...freq].filter(([, f]) => f === top).map(([x]) => x) : [];
   return { count: n, sum, mean: sum / n, median, mode, min: sorted[0], max: sorted[n - 1], range: sorted[n - 1] - sorted[0] };
 }

@@ -17,11 +17,11 @@ For example, a man who is 5′10″: Devine gives 50 + 2.3 × 10 = **73 kg (161 
 
 ## Which formula should I trust?
 
-None of them on its own. The Devine formula was designed to dose medication, not to judge body shape, and the others refine it. The spread between them is the honest answer: an "ideal weight" is a range, not a single number. The widest range is the one based on a BMI of 18.5–24.9, used by the World Health Organization.
+None of them on its own. The Devine formula was designed to dose medication, not to judge body shape — the others use different coefficients. The spread between them is the honest answer: an "ideal weight" is a range, not a single number. The widest range is the one based on a BMI of 18.5–24.9, used by the World Health Organization.
 
 ## FAQ
 
-**Why don't the formulas account for age or build?** They're deliberately simple and use height alone. People with a large frame or lots of muscle can weigh more without any health risk — for them, [body fat percentage](/en/health/body-fat/) is a better measure.
+**Why don't the formulas account for age or build?** They're deliberately simple and use only height and sex. People with a large frame or lots of muscle can weigh more than the formulas suggest — for them, [body fat percentage](/en/health/body-fat/) is a better measure.
 
 **Do they work for people shorter than 5 feet?** Not well: they subtract weight below 5 feet and tend to underestimate. Use the BMI range instead.
 

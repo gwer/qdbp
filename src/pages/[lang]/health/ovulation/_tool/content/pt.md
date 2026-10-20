@@ -18,6 +18,6 @@ Exemplo: um ciclo de 28 dias que começou em 1º de março. Ovulação por volta
 
 **Posso usar para evitar a gravidez?** Não. A tabelinha é um dos métodos anticoncepcionais menos confiáveis.
 
-**E se meu ciclo for irregular?** Faça o cálculo com o ciclo mais curto e com o mais longo dos últimos seis meses: o período fértil provavelmente está entre os dois.
+**E se meu ciclo for irregular?** A estimativa pelo calendário é especialmente incerta. Calcular com o ciclo mais curto e o mais longo não define limites confiáveis para o período fértil. Não use esta calculadora como método anticoncepcional.
 
 Se você já está grávida, a [calculadora de data do parto](/pt/health/due-date/) mostra com quantas semanas você está.

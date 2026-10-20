@@ -25,5 +25,8 @@
     "nextBirthday": {
       "label": "Días hasta el cumpleaños"
     }
+  },
+  "errors": {
+    "beforeBirth": "La fecha de cálculo es anterior a la de nacimiento."
   }
 }

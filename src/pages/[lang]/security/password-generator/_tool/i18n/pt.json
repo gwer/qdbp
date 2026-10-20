@@ -1,6 +1,6 @@
 {
   "title": "Gerador de senhas: senhas fortes e aleatórias",
-  "description": "Crie uma senha forte e aleatória do tamanho que quiser, com letras, números e símbolos. Ela é gerada no seu navegador e não é enviada a lugar nenhum.",
+  "description": "Crie uma senha forte e aleatória com 4 a 64 caracteres, com letras, números e símbolos. Ela é gerada no seu navegador e não é enviada a lugar nenhum.",
   "ui": {
     "length": "Tamanho",
     "sets": {

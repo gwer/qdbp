@@ -4,7 +4,7 @@ Introduce la fecha de nacimiento. Por defecto la edad se calcula a día de hoy, 
 
 ## Cómo se calcula la edad
 
-Primero se cuentan los meses completos desde la fecha de nacimiento y después los días restantes. Se tienen en cuenta los meses cortos: del 31 de enero al 29 de febrero de un año bisiesto hay 29 días, no «un mes».
+Primero se cuentan los meses completos desde la fecha de nacimiento y después los días restantes. Si un mes no tiene ese día, el mes termina en su último día: del 31 de enero al 29 de febrero de un año bisiesto hay exactamente un mes.
 
 Si alguien nació el 29 de febrero, en los años no bisiestos su cumpleaños se cuenta el 28 de febrero.
 

@@ -30,8 +30,8 @@
       "other": "≈ {count} vasos de 250 ml"
     },
     "cups": {
-      "one": "≈ {count} taza de 8 oz",
-      "other": "≈ {count} tazas de 8 oz"
+      "one": "≈ {count} taza de 8 fl oz",
+      "other": "≈ {count} tazas de 8 fl oz"
     }
   }
 }

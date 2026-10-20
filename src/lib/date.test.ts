@@ -49,9 +49,11 @@ describe('diffYMD (возраст)', () => {
     ['1990-06-15', '2026-10-19', { years: 36, months: 4, days: 4 }],
     ['1990-06-15', '2026-06-15', { years: 36, months: 0, days: 0 }],
     ['1990-06-15', '2026-06-14', { years: 35, months: 11, days: 30 }],
-    ['2000-01-31', '2000-02-29', { years: 0, months: 0, days: 29 }],
+    ['2000-01-31', '2000-02-29', { years: 0, months: 1, days: 0 }],
+    ['2000-01-31', '2000-02-28', { years: 0, months: 0, days: 28 }],
     ['2000-01-31', '2000-03-01', { years: 0, months: 1, days: 1 }],
-    ['2024-02-29', '2025-02-28', { years: 0, months: 11, days: 30 }],
+    ['2024-02-29', '2025-02-28', { years: 1, months: 0, days: 0 }],
+    ['2024-02-29', '2025-02-27', { years: 0, months: 11, days: 29 }],
     ['2024-02-29', '2025-03-01', { years: 1, months: 0, days: 1 }],
   ])('%s → %s', (from, to, expected) => {
     expect(diffYMD(from, to)).toEqual(expected);
@@ -63,6 +65,18 @@ describe('дни недели', () => {
     expect(weekday('1970-01-01')).toBe(3);
     expect(weekday('2026-10-19')).toBe(0);
     expect(weekday('2026-10-25')).toBe(6);
+  });
+
+  it('weekday до 1970 совпадает с Date.getUTCDay', () => {
+    for (let d = '1969-12-20'; d < '1970-01-10'; d = addDays(d, 1)) {
+      expect(weekday(d), d).toBe((new Date(`${d}T00:00:00Z`).getUTCDay() + 6) % 7);
+    }
+    expect(weekday('1900-01-01')).toBe(0);
+  });
+
+  it('weekdaysBetween до 1970: суббота и воскресенье — 0 будних', () => {
+    expect(weekdaysBetween('1969-12-27', '1969-12-29')).toBe(0);
+    expect(weekdaysBetween('1969-12-22', '1970-01-05')).toBe(10);
   });
 
   it('weekdaysBetween совпадает с перебором', () => {
@@ -85,6 +99,8 @@ describe('недели', () => {
     ['2027-01-01', 53, 2026],
     ['2024-12-30', 1, 2025],
     ['2021-01-03', 53, 2020],
+    ['1969-12-28', 52, 1969],
+    ['1969-12-29', 1, 1970],
   ])('ISO %s → неделя %d (%d)', (iso, week, year) => {
     expect(isoWeek(iso)).toMatchObject({ week, year });
   });
@@ -98,6 +114,8 @@ describe('недели', () => {
     ['2026-01-04', 2],
     ['2026-10-19', 43],
     ['2026-12-31', 53],
+    ['1969-12-27', 52],
+    ['1969-12-28', 53],
   ])('US %s → неделя %d', (iso, week) => {
     expect(usWeek(iso).week).toBe(week);
   });

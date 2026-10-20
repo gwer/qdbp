@@ -30,8 +30,8 @@
       "other": "≈ {count} copos de 250 ml"
     },
     "cups": {
-      "one": "≈ {count} xícara de 8 oz",
-      "other": "≈ {count} xícaras de 8 oz"
+      "one": "≈ {count} xícara de 8 fl oz",
+      "other": "≈ {count} xícaras de 8 fl oz"
     }
   }
 }

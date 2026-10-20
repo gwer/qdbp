@@ -18,6 +18,6 @@ Paste or type your text into the box — the counts update as you type. Your tex
 
 ## FAQ
 
-**Why does my word processor show a different number?** Editors treat hyphenated words, numbers and punctuation slightly differently. The difference is usually within 1–2%.
+**Why does my word processor show a different number?** Editors treat hyphenated words, numbers and punctuation slightly differently.
 
 **Is there a length limit?** No, only your device's memory.
