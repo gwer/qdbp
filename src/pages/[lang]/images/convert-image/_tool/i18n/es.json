@@ -1,19 +1,6 @@
 {
   "title": "Conversor de imágenes: JPG, PNG y WebP",
   "description": "Convierte imágenes de un formato a otro: PNG a JPG, JPG a PNG, WebP a JPG y al revés. Varios archivos a la vez y sin subirlos.",
-  "files": {
-    "drop": "Arrastra imágenes aquí o",
-    "choose": "elige archivos",
-    "paste": "También puedes pegar desde el portapapeles (Ctrl+V)",
-    "notImage": "no es una imagen",
-    "tooLarge": "el archivo pesa más de {max}",
-    "privacy": "Los archivos se procesan en tu navegador y no se suben a ningún sitio.",
-    "download": "Descargar",
-    "downloadAll": "Descargar todo (ZIP)",
-    "clear": "Borrar",
-    "processing": "Procesando…",
-    "error": "No se pudo procesar el archivo"
-  },
   "ui": {
     "to": "Convertir a",
     "quality": "Calidad",

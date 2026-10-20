@@ -1,19 +1,6 @@
 {
   "title": "Conversor de imagem para Base64: data URL para HTML e CSS",
   "description": "Transforme uma imagem em Base64 ou data URL para colocá-la direto no HTML, CSS ou JSON — e o contrário: veja e salve uma imagem a partir de Base64.",
-  "files": {
-    "drop": "Arraste imagens para cá ou",
-    "choose": "escolha arquivos",
-    "paste": "Também dá para colar da área de transferência (Ctrl+V)",
-    "notImage": "não é uma imagem",
-    "tooLarge": "o arquivo tem mais de {max}",
-    "privacy": "Os arquivos são processados no seu navegador e não são enviados a lugar nenhum.",
-    "download": "Baixar",
-    "downloadAll": "Baixar tudo (ZIP)",
-    "clear": "Limpar",
-    "processing": "Processando…",
-    "error": "Não foi possível processar o arquivo"
-  },
   "ui": {
     "mode": "Direção",
     "modes": {

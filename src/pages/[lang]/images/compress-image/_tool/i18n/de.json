@@ -1,19 +1,6 @@
 {
   "title": "Bildkomprimierung: Dateigröße von Fotos verringern",
   "description": "JPG-, PNG- und WebP-Dateien verkleinern – für Website, E-Mail oder Messenger. Sie sehen die Ersparnis; die Dateien werden nicht hochgeladen.",
-  "files": {
-    "drop": "Bilder hierher ziehen oder",
-    "choose": "Dateien auswählen",
-    "paste": "Einfügen aus der Zwischenablage geht auch (Strg+V)",
-    "notImage": "kein Bild",
-    "tooLarge": "Datei ist größer als {max}",
-    "privacy": "Die Dateien werden in Ihrem Browser verarbeitet und nirgendwo hochgeladen.",
-    "download": "Herunterladen",
-    "downloadAll": "Alle herunterladen (ZIP)",
-    "clear": "Leeren",
-    "processing": "Wird verarbeitet …",
-    "error": "Datei konnte nicht verarbeitet werden"
-  },
   "ui": {
     "quality": "Qualität",
     "target": "Zielformat",

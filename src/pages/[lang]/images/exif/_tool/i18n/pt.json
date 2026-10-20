@@ -1,19 +1,6 @@
 {
   "title": "Visualizador e removedor de EXIF: metadados e localização de fotos",
   "description": "Veja o que fica guardado numa foto — câmera, data, configurações e localização GPS — e remova os metadados de JPEGs sem recomprimir antes de compartilhar.",
-  "files": {
-    "drop": "Arraste imagens para cá ou",
-    "choose": "escolha arquivos",
-    "paste": "Também dá para colar da área de transferência (Ctrl+V)",
-    "notImage": "não é uma imagem",
-    "tooLarge": "o arquivo tem mais de {max}",
-    "privacy": "Os arquivos são processados no seu navegador e não são enviados a lugar nenhum.",
-    "download": "Baixar",
-    "downloadAll": "Baixar tudo (ZIP)",
-    "clear": "Limpar",
-    "processing": "Processando…",
-    "error": "Não foi possível processar o arquivo"
-  },
   "ui": {
     "keepOrientation": "Manter a rotação da foto",
     "keepIcc": "Manter o perfil de cor (ICC)",

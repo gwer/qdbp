@@ -1,19 +1,6 @@
 {
   "title": "Compressor de imagens: reduzir o tamanho de fotos",
   "description": "Diminua o tamanho de arquivos JPG, PNG e WebP para site, e-mail ou WhatsApp. Veja quanto economizou — os arquivos não são enviados a lugar nenhum.",
-  "files": {
-    "drop": "Arraste imagens para cá ou",
-    "choose": "escolha arquivos",
-    "paste": "Também dá para colar da área de transferência (Ctrl+V)",
-    "notImage": "não é uma imagem",
-    "tooLarge": "o arquivo tem mais de {max}",
-    "privacy": "Os arquivos são processados no seu navegador e não são enviados a lugar nenhum.",
-    "download": "Baixar",
-    "downloadAll": "Baixar tudo (ZIP)",
-    "clear": "Limpar",
-    "processing": "Processando…",
-    "error": "Não foi possível processar o arquivo"
-  },
   "ui": {
     "quality": "Qualidade",
     "target": "Formato do resultado",

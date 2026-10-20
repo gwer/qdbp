@@ -1,19 +1,6 @@
 {
   "title": "EXIF-Viewer und -Entferner: Metadaten und GPS aus Fotos",
   "description": "Sehen, was in einem Foto steckt – Kamera, Aufnahmedatum, Einstellungen und GPS-Standort – und Metadaten aus JPEGs ohne Neukomprimierung entfernen, bevor Sie sie teilen.",
-  "files": {
-    "drop": "Bilder hierher ziehen oder",
-    "choose": "Dateien auswählen",
-    "paste": "Einfügen aus der Zwischenablage geht auch (Strg+V)",
-    "notImage": "kein Bild",
-    "tooLarge": "Datei ist größer als {max}",
-    "privacy": "Die Dateien werden in Ihrem Browser verarbeitet und nirgendwo hochgeladen.",
-    "download": "Herunterladen",
-    "downloadAll": "Alle herunterladen (ZIP)",
-    "clear": "Leeren",
-    "processing": "Wird verarbeitet …",
-    "error": "Datei konnte nicht verarbeitet werden"
-  },
   "ui": {
     "keepOrientation": "Drehung des Fotos beibehalten",
     "keepIcc": "Farbprofil (ICC) beibehalten",

@@ -1,19 +1,6 @@
 {
   "title": "EXIF viewer and remover: photo metadata and GPS location",
   "description": "See what's hidden in a photo — camera, date taken, settings and GPS location — and remove metadata from JPEGs without re-compressing before you share them.",
-  "files": {
-    "drop": "Drop images here or",
-    "choose": "choose files",
-    "paste": "You can also paste from the clipboard (Ctrl+V)",
-    "notImage": "not an image",
-    "tooLarge": "file is larger than {max}",
-    "privacy": "Files are processed in your browser and never uploaded.",
-    "download": "Download",
-    "downloadAll": "Download all (ZIP)",
-    "clear": "Clear",
-    "processing": "Processing…",
-    "error": "Couldn't process this file"
-  },
   "ui": {
     "keepOrientation": "Keep photo rotation",
     "keepIcc": "Keep color profile (ICC)",
