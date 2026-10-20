@@ -59,6 +59,7 @@
 /de/images/compress-image/
 /de/images/convert-image/
 /de/images/exif/
+/de/images/heic-to-jpg/
 /de/images/image-to-base64/
 /de/images/qr-generator/
 /de/images/resize-image/
@@ -165,6 +166,7 @@
 /en/images/compress-image/
 /en/images/convert-image/
 /en/images/exif/
+/en/images/heic-to-jpg/
 /en/images/image-to-base64/
 /en/images/qr-generator/
 /en/images/resize-image/
@@ -270,6 +272,7 @@
 /es/images/compress-image/
 /es/images/convert-image/
 /es/images/exif/
+/es/images/heic-to-jpg/
 /es/images/image-to-base64/
 /es/images/qr-generator/
 /es/images/resize-image/
@@ -376,6 +379,7 @@
 /pt/images/compress-image/
 /pt/images/convert-image/
 /pt/images/exif/
+/pt/images/heic-to-jpg/
 /pt/images/image-to-base64/
 /pt/images/qr-generator/
 /pt/images/resize-image/
@@ -483,6 +487,7 @@
 /ru/images/compress-image/
 /ru/images/convert-image/
 /ru/images/exif/
+/ru/images/heic-to-jpg/
 /ru/images/image-to-base64/
 /ru/images/qr-generator/
 /ru/images/resize-image/

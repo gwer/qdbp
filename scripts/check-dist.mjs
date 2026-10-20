@@ -71,7 +71,7 @@ for (const file of files.filter((f) => f.endsWith('.html'))) {
 // 3. бюджеты
 // Исключение: обвязка декодера HEIC (libheif-js, LGPL) — сторонний файл как есть, грузится только
 // на странице heic-to-jpg и только после выбора первого файла, в первую загрузку страницы не входит.
-const UNBUDGETED = /^\/_astro\/libheif-[\w-]+\.js$/;
+const UNBUDGETED = /^\/_astro\/libheif[.-][\w-]+\.js$/;
 const sizes = [];
 for (const file of files) {
   const ext = file.split('.').pop();
