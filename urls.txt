@@ -30,6 +30,8 @@
 /de/finance/compound-interest/
 /de/finance/discount/
 /de/finance/early-repayment/
+/de/finance/electricity-cost/
+/de/finance/fuel-cost/
 /de/finance/inflation/
 /de/finance/loan-calculator/
 /de/finance/margin/
@@ -129,6 +131,8 @@
 /en/finance/compound-interest/
 /en/finance/discount/
 /en/finance/early-repayment/
+/en/finance/electricity-cost/
+/en/finance/fuel-cost/
 /en/finance/inflation/
 /en/finance/loan-calculator/
 /en/finance/margin/
@@ -227,6 +231,8 @@
 /es/finance/compound-interest/
 /es/finance/discount/
 /es/finance/early-repayment/
+/es/finance/electricity-cost/
+/es/finance/fuel-cost/
 /es/finance/inflation/
 /es/finance/loan-calculator/
 /es/finance/margin/
@@ -326,6 +332,8 @@
 /pt/finance/compound-interest/
 /pt/finance/discount/
 /pt/finance/early-repayment/
+/pt/finance/electricity-cost/
+/pt/finance/fuel-cost/
 /pt/finance/inflation/
 /pt/finance/loan-calculator/
 /pt/finance/margin/
@@ -425,6 +433,8 @@
 /ru/finance/compound-interest/
 /ru/finance/discount/
 /ru/finance/early-repayment/
+/ru/finance/electricity-cost/
+/ru/finance/fuel-cost/
 /ru/finance/inflation/
 /ru/finance/loan-calculator/
 /ru/finance/margin/

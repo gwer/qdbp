@@ -1,0 +1,38 @@
+{
+  "title": "Calculadora de combustível: custo de uma viagem",
+  "description": "Calcule quanto combustível a viagem vai gastar, quanto vai custar e quanto cada passageiro paga — em km/l ou l/100 km.",
+  "inputs": {
+    "distance": {
+      "label": "Distância"
+    },
+    "unit": {
+      "label": "Unidade de consumo",
+      "options": {
+        "l100km": "l/100 km",
+        "kml": "km/l",
+        "mpgus": "mpg (EUA)",
+        "mpguk": "mpg (Reino Unido)"
+      }
+    },
+    "economy": {
+      "label": "Consumo"
+    },
+    "price": {
+      "label": "Preço do combustível por litro (por galão com mpg EUA)"
+    },
+    "people": {
+      "label": "Pessoas no carro"
+    }
+  },
+  "outputs": {
+    "cost": {
+      "label": "Custo do combustível"
+    },
+    "perPerson": {
+      "label": "Por pessoa"
+    },
+    "fuel": {
+      "label": "Combustível necessário"
+    }
+  }
+}

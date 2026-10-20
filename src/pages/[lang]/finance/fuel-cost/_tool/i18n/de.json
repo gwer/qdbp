@@ -1,0 +1,38 @@
+{
+  "title": "Spritkostenrechner: Benzinkosten einer Fahrt",
+  "description": "Berechnen Sie, wie viel Kraftstoff eine Fahrt braucht, was sie kostet und wie viel jede Person im Auto zahlt.",
+  "inputs": {
+    "distance": {
+      "label": "Strecke"
+    },
+    "unit": {
+      "label": "Verbrauchseinheit",
+      "options": {
+        "l100km": "l/100 km",
+        "kml": "km/l",
+        "mpgus": "mpg (USA)",
+        "mpguk": "mpg (UK)"
+      }
+    },
+    "economy": {
+      "label": "Verbrauch"
+    },
+    "price": {
+      "label": "Spritpreis pro Liter (bei mpg USA pro Gallone)"
+    },
+    "people": {
+      "label": "Personen im Auto"
+    }
+  },
+  "outputs": {
+    "cost": {
+      "label": "Spritkosten"
+    },
+    "perPerson": {
+      "label": "Pro Person"
+    },
+    "fuel": {
+      "label": "Benötigter Kraftstoff"
+    }
+  }
+}

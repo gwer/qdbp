@@ -1,0 +1,38 @@
+{
+  "title": "Calculadora de gasolina: coste de un viaje en coche",
+  "description": "Calcula cuánto combustible gastarás en un viaje, cuánto costará y cuánto paga cada pasajero.",
+  "inputs": {
+    "distance": {
+      "label": "Distancia"
+    },
+    "unit": {
+      "label": "Unidad de consumo",
+      "options": {
+        "l100km": "l/100 km",
+        "kml": "km/l",
+        "mpgus": "mpg (EE. UU.)",
+        "mpguk": "mpg (Reino Unido)"
+      }
+    },
+    "economy": {
+      "label": "Consumo"
+    },
+    "price": {
+      "label": "Precio del combustible por litro (por galón con mpg EE. UU.)"
+    },
+    "people": {
+      "label": "Personas en el coche"
+    }
+  },
+  "outputs": {
+    "cost": {
+      "label": "Coste del combustible"
+    },
+    "perPerson": {
+      "label": "Por persona"
+    },
+    "fuel": {
+      "label": "Combustible necesario"
+    }
+  }
+}
