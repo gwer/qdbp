@@ -6,7 +6,7 @@ Base64 ist **eine Kodierung, keine Verschlüsselung**: Jeder kann es ohne Passwo
 
 ## So funktioniert's
 
-Wählen Sie „Kodieren“ oder „Dekodieren“ und fügen Sie den Text ein – das Ergebnis erscheint sofort. Text wird als UTF-8 kodiert, Umlaute und Emojis funktionieren also korrekt. Beim Dekodieren werden auch die URL-sichere Variante (`-` und `_` statt `+` und `/`) und Zeichenketten ohne `=` am Ende akzeptiert.
+Wählen Sie „Kodieren“ oder „Dekodieren“ und fügen Sie den Text ein – das Ergebnis erscheint sofort. Text wird als UTF-8 kodiert, Umlaute und Emojis funktionieren also korrekt. Beim Dekodieren werden auch die URL-sichere Variante (`-` und `_` statt `+` und `/`) und Zeichenketten ohne `=` am Ende akzeptiert. Für URLs, JWTs und Dateinamen gibt es „Kodieren (URL-safe)“: `-` und `_` statt `+` und `/`, ohne `=` am Ende.
 
 ## Beispiele
 

@@ -57,7 +57,8 @@
     "copy": "Copy",
     "copied": "Copied",
     "regenerate": "Generate again",
-    "clear": "Clear"
+    "clear": "Clear",
+    "useOutput": "Use result as input"
   },
   "files": {
     "drop": "Drop images here or",

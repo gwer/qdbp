@@ -17,6 +17,8 @@
       "other": "⋯ {n} unveränderte Zeilen"
     },
     "sampleA": "Einkaufsliste:\nMilch – 2 Liter\nBrot\nEier – 10 Stück\nKäse\nKaffee",
-    "sampleB": "Einkaufsliste:\nMilch – 1 Liter\nBrot\nEier – 10 Stück\nKaffee\nZucker"
+    "sampleB": "Einkaufsliste:\nMilch – 1 Liter\nBrot\nEier – 10 Stück\nKaffee\nZucker",
+    "ignoreSpace": "Leerzeichen ignorieren",
+    "ignoreCase": "Groß-/Kleinschreibung ignorieren"
   }
 }

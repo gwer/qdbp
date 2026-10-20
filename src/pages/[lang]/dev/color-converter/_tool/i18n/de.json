@@ -13,6 +13,8 @@
       "AA": "für normalen Text (AA)",
       "AA18": "nur für großen Text (AA)",
       "fail": "nicht ausreichend"
-    }
+    },
+    "onCustom": "Auf {color}",
+    "background": "Eigene Hintergrundfarbe"
   }
 }

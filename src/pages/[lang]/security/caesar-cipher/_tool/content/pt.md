@@ -2,6 +2,8 @@
 
 Digite o texto, escolha o deslocamento e se quer criptografar ou descriptografar. Cada letra é trocada pela que está aquele número de posições à frente no alfabeto (ou atrás, ao descriptografar). Números, espaços e pontuação ficam iguais, e maiúsculas e minúsculas são mantidas.
 
+Não sabe a chave? Escolha «Testar todos os deslocamentos»: você vê o texto com cada um, e o legível salta aos olhos.
+
 ## Exemplos
 
 - Olá, mundo com deslocamento 3 → **Roá, pxqgr** (letras acentuadas ficam iguais)

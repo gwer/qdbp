@@ -1467,3 +1467,28 @@ rect.chart-s2 {
   height: 12px;
   accent-color: var(--accent);
 }
+
+.hash-match {
+  outline: 2px solid var(--scale-good);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.hash-ok {
+  color: var(--scale-good);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.caesar-brute td:last-child {
+  text-align: left;
+  white-space: normal;
+  font-family: var(--mono);
+}

@@ -18,6 +18,8 @@
       "other": "⋯ {n} linhas iguais"
     },
     "sampleA": "Lista de compras:\nleite — 2 litros\npão\novos — 1 dúzia\nqueijo\ncafé",
-    "sampleB": "Lista de compras:\nleite — 1 litro\npão\novos — 1 dúzia\ncafé\naçúcar"
+    "sampleB": "Lista de compras:\nleite — 1 litro\npão\novos — 1 dúzia\ncafé\naçúcar",
+    "ignoreSpace": "Ignorar espaços",
+    "ignoreCase": "Ignorar maiúsculas"
   }
 }

@@ -13,6 +13,8 @@
       "AA": "passes for normal text (AA)",
       "AA18": "large text only (AA)",
       "fail": "fails"
-    }
+    },
+    "onCustom": "On {color}",
+    "background": "Your background color"
   }
 }

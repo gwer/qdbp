@@ -8,6 +8,9 @@
     "chars": "Caracteres",
     "charsNoSpaces": "Caracteres sin espacios",
     "sentences": "Frases",
-    "paragraphs": "Párrafos"
+    "paragraphs": "Párrafos",
+    "reading": "Tiempo de lectura (≈{wpm} palabras/min)",
+    "speaking": "Tiempo de habla (≈{wpm} palabras/min)",
+    "top": "Palabras más frecuentes"
   }
 }

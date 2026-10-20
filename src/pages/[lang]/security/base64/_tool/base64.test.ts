@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { decodeBase64, encodeBase64 } from './base64';
+import { decodeBase64, encodeBase64, encodeBase64Url } from './base64';
 
 describe('base64', () => {
   it.each([
@@ -20,5 +20,14 @@ describe('base64', () => {
   it('мусор — ошибка', () => {
     expect(() => decodeBase64('не base64')).toThrow();
     expect(() => decodeBase64('/w==')).toThrow(); // байт 0xFF — не UTF-8
+  });
+});
+
+describe('URL-safe', () => {
+  it('«-» и «_» вместо «+» и «/», без «=»; декодируется обратно', () => {
+    // «>>?» → «Pj4/», «ü» → «w7w=»
+    expect(encodeBase64Url('>>?')).toBe('Pj4_');
+    expect(encodeBase64Url('ü')).toBe('w7w');
+    expect(decodeBase64(encodeBase64Url('Привет, мир! ~~~'))).toBe('Привет, мир! ~~~');
   });
 });

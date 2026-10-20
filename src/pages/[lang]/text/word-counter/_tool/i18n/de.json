@@ -8,6 +8,9 @@
     "chars": "Zeichen",
     "charsNoSpaces": "Zeichen ohne Leerzeichen",
     "sentences": "Sätze",
-    "paragraphs": "Absätze"
+    "paragraphs": "Absätze",
+    "reading": "Lesezeit (≈{wpm} Wörter/min)",
+    "speaking": "Sprechzeit (≈{wpm} Wörter/min)",
+    "top": "Häufigste Wörter"
   }
 }

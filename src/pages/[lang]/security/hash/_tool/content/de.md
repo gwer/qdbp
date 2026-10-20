@@ -8,6 +8,8 @@ Hashes werden für Prüfsummen von Dateien, digitale Signaturen, Git und Blockch
 
 Text eingeben oder einfügen – die Hashwerte aller Algorithmen werden sofort berechnet. Der Text wird als UTF-8 kodiert, alles läuft im Browser.
 
+Um einen Download zu prüfen, klicken Sie auf „Datei wählen“ und fügen die Prüfsumme von der Website des Herstellers in „Mit erwartetem Hash vergleichen“ ein: Der passende Algorithmus wird hervorgehoben. Die Datei wird nirgends hochgeladen – der Hash entsteht im Browser (bis 1 GB).
+
 ## Beispiele
 
 - `hello` → MD5 `5d41402abc4b2a76b9719d911017c592`

@@ -2,6 +2,8 @@
 
 Text eingeben, Verschiebung wählen und festlegen, ob ver- oder entschlüsselt wird. Jeder Buchstabe wird durch den Buchstaben ersetzt, der die gewählte Anzahl an Stellen weiter im Alphabet steht (beim Entschlüsseln zurück). Ziffern, Leer- und Satzzeichen bleiben unverändert, Groß- und Kleinschreibung auch.
 
+Schlüssel unbekannt? Wählen Sie „Alle Verschiebungen testen“: Sie sehen den Text für jede Verschiebung, und die lesbare fällt sofort auf.
+
 ## Beispiele
 
 - Hallo Welt mit Verschiebung 3 → **Kdoor Zhow**

@@ -2,6 +2,8 @@
 
 Cole o texto original em "Original" e a versão nova em "Alterado". As diferenças aparecem na hora:
 
+«Ignorar espaços» e «Ignorar maiúsculas» deixam de fora espaços extras, recuos e diferenças de maiúsculas: aparecem só as mudanças de conteúdo.
+
 - **em vermelho**, as linhas que não estão no segundo texto (removidas);
 - **em verde**, as que não estavam no primeiro (adicionadas);
 - uma linha alterada aparece como o par "removida + adicionada", com as palavras e os sinais que mudaram destacados com mais força.

@@ -5,10 +5,12 @@
     "mode": "Acción",
     "modes": {
       "encrypt": "Cifrar",
-      "decrypt": "Descifrar"
+      "decrypt": "Descifrar",
+      "brute": "Probar todos los desplazamientos"
     },
     "shift": "Desplazamiento",
     "input": "Texto",
-    "output": "Resultado"
+    "output": "Resultado",
+    "bruteNote": "Pulsa el número del desplazamiento junto a la fila legible para abrir el descifrado completo. En el alfabeto latino, a partir de 26 se repiten."
   }
 }

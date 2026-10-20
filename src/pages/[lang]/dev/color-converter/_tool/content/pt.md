@@ -18,6 +18,8 @@ Para um texto acessível, ele precisa se destacar do fundo. Pela WCAG 2.x:
 - **3:1** — para texto grande (24 px, ou 19 px em negrito);
 - **7:1** — nível reforçado AAA.
 
+Para conferir o contraste sobre o seu próprio fundo (por exemplo, texto num banner colorido), digite a cor de fundo no campo abaixo das verificações ou escolha-a.
+
 Por exemplo, `#777777` sobre branco dá 4,48:1 — um pouco abaixo do mínimo AA para texto normal.
 
 ## Perguntas frequentes

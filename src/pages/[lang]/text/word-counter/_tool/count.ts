@@ -51,3 +51,31 @@ export function countText(text: string, locale: string): TextStats {
     paragraphs: text.split(/\n/).filter((s) => s.trim()).length,
   };
 }
+
+/** Средняя скорость чтения про себя и вслух, слов в минуту (Brysbaert, 2019: ≈238 про себя; речь — 130–150). */
+export const READ_WPM = 230;
+export const SPEAK_WPM = 140;
+
+/** Время в секундах на words слов при скорости wpm. */
+export const readingSeconds = (words: number, wpm: number) => Math.round((words / wpm) * 60);
+
+/**
+ * Самые частые слова (без учёта регистра) — для проверки «плотности ключевых слов».
+ * Слова короче трёх букв пропускаются: это в основном предлоги и союзы.
+ */
+export function topWords(text: string, locale: string, limit = 10): { word: string; count: number }[] {
+  const freq = new Map<string, number>();
+  const words = hasSegmenter
+    ? Array.from(new Intl.Segmenter(locale, { granularity: 'word' }).segment(text), (s) => (s.isWordLike ? s.segment : ''))
+    : (text.match(/[\p{L}\p{N}]+/gu) ?? []);
+  for (const w of words) {
+    if (Array.from(w).length < 3 || /^\d+$/.test(w)) continue;
+    const key = w.toLocaleLowerCase(locale);
+    freq.set(key, (freq.get(key) ?? 0) + 1);
+  }
+  return [...freq]
+    .filter(([, count]) => count > 1)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], locale))
+    .slice(0, limit)
+    .map(([word, count]) => ({ word, count }));
+}

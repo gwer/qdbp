@@ -15,6 +15,6 @@ Wählen Sie „Kodieren“, um Text URL-sicher zu machen, oder „Dekodieren“,
 
 **Warum ist ein Leerzeichen mal `%20` und mal `+`?** In Formular-Abfragezeichenfolgen wird ein Leerzeichen traditionell als `+` geschrieben, sonst in der URL als `%20`. Beim Dekodieren gilt `+` als Leerzeichen; beim Kodieren wird immer `%20` verwendet – das funktioniert überall.
 
-**Wird `/` kodiert?** Ja: Das Tool kodiert wie einen Parameterwert (`encodeURIComponent`), daher werden auch `/`, `?`, `&` und `=` zu `%XX`. Kodieren Sie einzelne Werte, nicht die ganze URL.
+**Wird `/` kodiert?** Im Modus „Kodieren“ ja: Es wird wie ein Parameterwert kodiert (`encodeURIComponent`), daher werden auch `/`, `?`, `&` und `=` zu `%XX`. Für eine ganze URL wählen Sie „Ganze URL kodieren“ (`encodeURI`): Die URL-Zeichen bleiben, Leerzeichen und Umlaute werden kodiert.
 
 Für beliebige Daten gibt es [Base64](/de/security/base64/).

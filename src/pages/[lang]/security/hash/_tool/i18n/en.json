@@ -3,6 +3,15 @@
   "description": "Hash any text with MD5, SHA-1, SHA-256, SHA-384 and SHA-512 at once. Your text never leaves your browser.",
   "ui": {
     "input": "Text",
-    "upper": "Uppercase"
+    "upper": "Uppercase",
+    "chooseFile": "Choose a file",
+    "file": "File",
+    "backToText": "Back to text",
+    "tooLarge": "The file is larger than 1 GB — too big to hash in the browser.",
+    "readError": "Couldn’t read the file.",
+    "matches": "matches",
+    "expected": "Compare with expected hash",
+    "matchOk": "Match: it’s {alg}.",
+    "matchNone": "No match — the file is different or it’s another algorithm."
   }
 }

@@ -2,6 +2,8 @@
 
 Enter text, choose a shift and whether to encrypt or decrypt. Each letter is replaced by the letter a set number of places further along the alphabet (or back, when decrypting). Numbers, spaces and punctuation stay as they are, and upper and lower case are preserved.
 
+Don’t know the key? Choose “Try all shifts”: you’ll see the text at every shift, and the readable one stands out.
+
 ## Examples
 
 - Hello, World! with shift 3 → **Khoor, Zruog!**

@@ -17,6 +17,8 @@
       "other": "⋯ {n} unchanged lines"
     },
     "sampleA": "Shopping list:\nmilk — 1 gallon\nbread\neggs — 12\ncheese\ncoffee",
-    "sampleB": "Shopping list:\nmilk — half a gallon\nbread\neggs — 12\ncoffee\nsugar"
+    "sampleB": "Shopping list:\nmilk — half a gallon\nbread\neggs — 12\ncoffee\nsugar",
+    "ignoreSpace": "Ignore whitespace",
+    "ignoreCase": "Ignore case"
   }
 }

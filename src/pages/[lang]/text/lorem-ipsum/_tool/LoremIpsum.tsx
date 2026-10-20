@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { CopyButton } from '@/ui/CopyButton';
 import type { ToolProps } from '@/ui/define';
+import { IntField } from '@/ui/files/fields';
 import { lorem, type Unit } from './lorem';
 
 const UNITS: Unit[] = ['paragraphs', 'sentences', 'words'];
@@ -23,10 +24,7 @@ export function LoremIpsum({ t }: ToolProps) {
   return (
     <div>
       <div class="calc-inputs">
-        <div class="field">
-          <label for="li-count">{t('ui.count')}</label>
-          <input id="li-count" type="number" inputMode="numeric" min={1} max={MAX[unit]} value={count} onInput={(e) => setCount(Number(e.currentTarget.value))} />
-        </div>
+        <IntField id="li-count" label={t('ui.count')} value={count} min={1} max={MAX[unit]} onChange={setCount} />
         <div class="field">
           <label for="li-unit">{t('ui.unit')}</label>
           <select id="li-unit" value={unit} onChange={(e) => setUnit(e.currentTarget.value as Unit)}>

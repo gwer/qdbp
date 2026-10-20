@@ -2,6 +2,8 @@
 
 Pega o escribe tu texto en el cuadro: los contadores se actualizan mientras escribes. El texto no sale de tu dispositivo, todo se cuenta en el navegador.
 
+El tiempo de lectura usa una velocidad media de lectura en silencio de unas 230 palabras por minuto; el de habla, 140 palabras por minuto (charla, vídeo, pódcast). Debajo verás las palabras más frecuentes con su porcentaje: útil para detectar repeticiones o revisar la densidad de palabras clave. Las palabras de menos de tres letras no se cuentan.
+
 ## Qué se cuenta
 
 - **Palabras** — secuencias de letras y números. Las palabras con guion («franco-alemán») cuentan como una.

@@ -5,10 +5,12 @@
     "mode": "Aktion",
     "modes": {
       "encrypt": "Verschlüsseln",
-      "decrypt": "Entschlüsseln"
+      "decrypt": "Entschlüsseln",
+      "brute": "Alle Verschiebungen testen"
     },
     "shift": "Verschiebung",
     "input": "Text",
-    "output": "Ergebnis"
+    "output": "Ergebnis",
+    "bruteNote": "Klicken Sie auf die Nummer neben der lesbaren Zeile, um die vollständige Entschlüsselung zu öffnen. Im lateinischen Alphabet wiederholen sich Verschiebungen ab 26."
   }
 }

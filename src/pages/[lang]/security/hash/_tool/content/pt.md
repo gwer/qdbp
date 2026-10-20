@@ -8,6 +8,8 @@ Hashes são usados em checksums de arquivos, assinaturas digitais, Git e blockch
 
 Digite ou cole um texto: os hashes de todos os algoritmos são calculados na hora. O texto é codificado em UTF-8 e tudo roda no navegador.
 
+Para conferir um download, clique em «Escolher arquivo» e cole o checksum do site do programa em «Comparar com o hash esperado»: o algoritmo que confere é destacado. O arquivo não é enviado a lugar nenhum — o hash é calculado no navegador (até 1 GB).
+
 ## Exemplos
 
 - `hello` → MD5 `5d41402abc4b2a76b9719d911017c592`

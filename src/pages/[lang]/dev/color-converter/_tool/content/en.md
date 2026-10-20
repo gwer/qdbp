@@ -18,6 +18,8 @@ For accessible text, foreground and background must differ enough. WCAG 2.x requ
 - **3:1** — for large text (24 px, or 19 px bold);
 - **7:1** — enhanced level AAA.
 
+To check contrast against your own background (say, text on a colored banner), enter the background color in the field below the checks or pick it.
+
 For example, `#777777` on white is 4.48:1 — just short of the AA minimum for normal text.
 
 ## FAQ

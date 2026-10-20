@@ -30,6 +30,8 @@ export function TextDiff({ lang, t }: ToolProps) {
   const [b, setB] = useState(() => t('ui.sampleB'));
   const [mode, setMode] = useState<Mode>('split');
   const [collapse, setCollapse] = useState(true);
+  const [ignoreSpace, setIgnoreSpace] = useState(false);
+  const [ignoreCase, setIgnoreCase] = useState(false);
   // До гидратации ширина экрана неизвестна — единый список подходит для любой.
   const [wide, setWide] = useState(false);
 
@@ -41,7 +43,7 @@ export function TextDiff({ lang, t }: ToolProps) {
     return () => mq.removeEventListener('change', update);
   }, []);
 
-  const { blocks, added, removed } = useMemo(() => diffTexts(a, b), [a, b]);
+  const { blocks, added, removed } = useMemo(() => diffTexts(a, b, { ignoreSpace, ignoreCase }), [a, b, ignoreSpace, ignoreCase]);
   const view: Mode = wide ? mode : 'unified';
   const same = added === 0 && removed === 0;
 
@@ -128,6 +130,14 @@ export function TextDiff({ lang, t }: ToolProps) {
         >
           {t('ui.swap')}
         </button>
+      </div>
+      <div class="checks">
+        <label>
+          <input type="checkbox" checked={ignoreSpace} onChange={(e) => setIgnoreSpace(e.currentTarget.checked)} /> {t('ui.ignoreSpace')}
+        </label>
+        <label>
+          <input type="checkbox" checked={ignoreCase} onChange={(e) => setIgnoreCase(e.currentTarget.checked)} /> {t('ui.ignoreCase')}
+        </label>
       </div>
 
       {same ? (

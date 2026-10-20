@@ -131,3 +131,11 @@ describe('diffWords', () => {
     expect(diffWords('alpha beta', 'gamma delta')).toBeNull();
   });
 });
+
+describe('опции сравнения', () => {
+  it('пробелы и регистр', () => {
+    expect(diffTexts('a  b\nC', ' a b \nc').added).toBe(2);
+    expect(diffTexts('a  b\nC', ' a b \nc', { ignoreSpace: true }).added).toBe(1);
+    expect(diffTexts('a  b\nC', ' a b \nc', { ignoreSpace: true, ignoreCase: true }).added).toBe(0);
+  });
+});

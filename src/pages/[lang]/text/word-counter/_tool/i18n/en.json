@@ -8,6 +8,9 @@
     "chars": "Characters",
     "charsNoSpaces": "Characters without spaces",
     "sentences": "Sentences",
-    "paragraphs": "Paragraphs"
+    "paragraphs": "Paragraphs",
+    "reading": "Reading time (≈{wpm} wpm)",
+    "speaking": "Speaking time (≈{wpm} wpm)",
+    "top": "Most frequent words"
   }
 }

@@ -30,3 +30,19 @@ describe('countText', () => {
     expect(countText('2020-2026', 'ru-RU').words).toBe(1);
   });
 });
+
+describe('время чтения и частые слова', () => {
+  it('460 слов — 2 минуты чтения и 3:17 вслух', async () => {
+    const { readingSeconds } = await import('./count');
+    expect(readingSeconds(460, 230)).toBe(120);
+    expect(readingSeconds(460, 140)).toBe(197);
+  });
+
+  it('частые слова без учёта регистра, короткие пропускаются', async () => {
+    const { topWords } = await import('./count');
+    expect(topWords('Кот и кот. И КОТ спит, кот не спит. Он и мы.', 'ru')).toEqual([
+      { word: 'кот', count: 4 },
+      { word: 'спит', count: 2 },
+    ]);
+  });
+});

@@ -162,10 +162,21 @@ export function diffWords(a: string, b: string): [Part[], Part[]] | null {
   return shared ? [pa, pb] : null;
 }
 
+export interface DiffOptions {
+  /** Строки, отличающиеся только пробелами (количество, в начале и в конце), считаются одинаковыми. */
+  ignoreSpace?: boolean;
+  ignoreCase?: boolean;
+}
+
 /** Построчное сравнение двух текстов с подсветкой слов в парах изменённых строк. */
-export function diffTexts(a: string, b: string) {
+export function diffTexts(a: string, b: string, opts: DiffOptions = {}) {
   const la = splitLines(a);
   const lb = splitLines(b);
+  // Сравниваются ключи строк, а показывается исходный текст.
+  const key = (s: string) => {
+    if (opts.ignoreSpace) s = s.replace(/\s+/g, ' ').trim();
+    return opts.ignoreCase ? s.toLowerCase() : s;
+  };
   const blocks: Block[] = [];
   let i = 0;
   let j = 0;
@@ -178,7 +189,7 @@ export function diffTexts(a: string, b: string) {
     blocks.push(created);
     return created;
   };
-  for (const op of diff(la, lb)) {
+  for (const op of diff(la.map(key), lb.map(key))) {
     if (op === 'e') {
       const bl = block('equal');
       bl.a.push({ no: i + 1, text: la[i++] });

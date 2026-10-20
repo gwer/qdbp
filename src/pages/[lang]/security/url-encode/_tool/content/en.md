@@ -15,6 +15,6 @@ Choose "Encode" to make text safe for a URL, or "Decode" to turn a link full of 
 
 **Why is a space sometimes `%20` and sometimes `+`?** In form query strings a space is traditionally `+`; elsewhere in a URL it's `%20`. When decoding, `+` is treated as a space; when encoding, `%20` is always used — it works everywhere.
 
-**Is `/` encoded?** Yes: the tool encodes the way you'd encode a parameter value (`encodeURIComponent`), so `/`, `?`, `&` and `=` become `%XX` too. Encode individual values, not a whole URL.
+**Is `/` encoded?** In “Encode” mode, yes: it encodes a parameter value (`encodeURIComponent`), so `/`, `?`, `&` and `=` become `%XX` too. To encode a whole link, choose “Encode full URL” (`encodeURI`): the URL's own characters stay, while spaces and non-ASCII letters are encoded.
 
 For arbitrary data, use [Base64](/en/security/base64/).

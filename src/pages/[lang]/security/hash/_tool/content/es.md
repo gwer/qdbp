@@ -8,6 +8,8 @@ Los hashes se usan como sumas de verificación de archivos, en firmas digitales,
 
 Escribe o pega un texto: los hashes de todos los algoritmos se calculan al instante. El texto se codifica en UTF-8 y todo se hace en tu navegador.
 
+Para comprobar una descarga, pulsa «Elegir archivo» y pega la suma de verificación de la web del programa en «Comparar con el hash esperado»: se resaltará el algoritmo que coincide. El archivo no se sube a ningún sitio: el hash se calcula en tu navegador (hasta 1 GB).
+
 ## Ejemplos
 
 - `hello` → MD5 `5d41402abc4b2a76b9719d911017c592`

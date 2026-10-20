@@ -6,7 +6,7 @@ Base64 es **codificación, no cifrado**: cualquiera puede decodificarlo sin cont
 
 ## Cómo usarlo
 
-Elige «Codificar» o «Decodificar» y pega el texto: el resultado aparece al instante. El texto se codifica en UTF-8, así que las tildes, la ñ y los emojis funcionan bien. Al decodificar también se acepta la variante URL-safe (`-` y `_` en lugar de `+` y `/`) y las cadenas sin `=` al final.
+Elige «Codificar» o «Decodificar» y pega el texto: el resultado aparece al instante. El texto se codifica en UTF-8, así que las tildes, la ñ y los emojis funcionan bien. Al decodificar también se acepta la variante URL-safe (`-` y `_` en lugar de `+` y `/`) y las cadenas sin `=` al final. Para URL, JWT y nombres de archivo está «Codificar (URL-safe)»: `-` y `_` en lugar de `+` y `/`, sin `=` al final.
 
 ## Ejemplos
 

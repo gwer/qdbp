@@ -7,6 +7,9 @@ export function encodeBase64(text: string): string {
   return btoa(bin);
 }
 
+/** URL-safe Base64 (RFC 4648, §5): «-» и «_» вместо «+» и «/», без выравнивания «=» — для URL, JWT, имён файлов. */
+export const encodeBase64Url = (text: string) => encodeBase64(text).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+
 /** Понимает и обычный, и URL-safe вариант (- и _), пробелы и переносы, отсутствующее выравнивание «=». */
 export function decodeBase64(input: string): string {
   let s = input.replace(/\s+/g, '').replace(/-/g, '+').replace(/_/g, '/');

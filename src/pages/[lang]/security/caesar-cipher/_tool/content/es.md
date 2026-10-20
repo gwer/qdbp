@@ -2,6 +2,8 @@
 
 Escribe el texto, elige el desplazamiento y si quieres cifrar o descifrar. Cada letra se sustituye por la que está ese número de posiciones más adelante en el alfabeto (o más atrás al descifrar). Los números, los espacios y los signos se quedan igual, y se respetan mayúsculas y minúsculas.
 
+¿No sabes la clave? Elige «Probar todos los desplazamientos»: verás el texto con cada uno y el legible salta a la vista.
+
 ## Ejemplos
 
 - Hola, mundo con desplazamiento 3 → **Krod, pxqgr**

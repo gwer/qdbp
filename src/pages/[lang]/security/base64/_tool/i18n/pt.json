@@ -8,7 +8,8 @@
     "error": "Não é um Base64 válido ou não contém texto UTF-8",
     "modes": {
       "encode": "Codificar",
-      "decode": "Decodificar"
+      "decode": "Decodificar",
+      "encodeUrlSafe": "Codificar (URL-safe)"
     }
   }
 }

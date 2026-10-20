@@ -8,6 +8,8 @@ Hashes are used for file checksums, digital signatures, Git and blockchains.
 
 Type or paste text — hashes for every algorithm are computed instantly. Text is encoded as UTF-8 and everything runs in your browser.
 
+To verify a download, click “Choose a file” and paste the checksum from the publisher’s site into “Compare with expected hash”: the matching algorithm is highlighted. The file isn’t uploaded anywhere — hashing happens in your browser (up to 1 GB).
+
 ## Examples
 
 - `hello` → MD5 `5d41402abc4b2a76b9719d911017c592`

@@ -57,7 +57,8 @@
     "copy": "Kopieren",
     "copied": "Kopiert",
     "regenerate": "Neu erzeugen",
-    "clear": "Leeren"
+    "clear": "Leeren",
+    "useOutput": "Ergebnis als Eingabe"
   },
   "files": {
     "drop": "Bilder hierher ziehen oder",

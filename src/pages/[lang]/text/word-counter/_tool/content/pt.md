@@ -2,6 +2,8 @@
 
 Cole ou digite seu texto no campo: os contadores são atualizados enquanto você escreve. O texto não sai do seu dispositivo, tudo é contado no navegador.
 
+O tempo de leitura usa uma velocidade média de leitura silenciosa de cerca de 230 palavras por minuto; o de fala, 140 palavras por minuto (palestra, vídeo, podcast). Abaixo aparecem as palavras mais frequentes com sua porcentagem — útil para ver repetições ou a densidade de palavras-chave. Palavras com menos de três letras não entram.
+
 ## O que é contado
 
 - **Palavras** — sequências de letras e números. Palavras com hífen («guarda-chuva») contam como uma só.

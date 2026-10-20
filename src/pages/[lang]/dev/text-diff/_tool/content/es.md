@@ -2,6 +2,8 @@
 
 Pega el texto original en «Original» y la versión nueva en «Modificado». Las diferencias aparecen al momento:
 
+«Ignorar espacios» e «Ignorar mayúsculas» dejan fuera los espacios de más, la sangría y las mayúsculas: solo se ven los cambios de contenido.
+
 - **en rojo**, las líneas que faltan en el segundo texto (eliminadas);
 - **en verde**, las que no estaban en el primero (añadidas);
 - una línea modificada se muestra como la pareja «eliminada + añadida», con las palabras y signos que cambian resaltados con más intensidad.

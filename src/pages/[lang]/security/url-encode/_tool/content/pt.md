@@ -15,6 +15,6 @@ Escolha "Codificar" para deixar o texto seguro para URL ou "Decodificar" para to
 
 **Por que o espaço às vezes é `%20` e às vezes `+`?** Em strings de consulta de formulários o espaço é tradicionalmente `+`; no restante da URL, `%20`. Na decodificação, `+` é tratado como espaço; na codificação usamos sempre `%20`, que funciona em qualquer lugar.
 
-**A `/` é codificada?** Sim: a ferramenta codifica como o valor de um parâmetro (`encodeURIComponent`), então `/`, `?`, `&` e `=` também viram `%XX`. Codifique valores isolados, não a URL inteira.
+**A `/` é codificada?** No modo «Codificar», sim: codifica-se como o valor de um parâmetro (`encodeURIComponent`), então `/`, `?`, `&` e `=` viram `%XX`. Para uma URL inteira, escolha «Codificar URL inteira» (`encodeURI`): os caracteres da URL ficam, e espaços e acentos são codificados.
 
 Para dados em geral, use o [Base64](/pt/security/base64/).

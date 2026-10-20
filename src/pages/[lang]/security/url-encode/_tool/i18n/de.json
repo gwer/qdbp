@@ -8,7 +8,8 @@
     "error": "Ungültige %XX-Folge",
     "modes": {
       "encode": "Kodieren",
-      "decode": "Dekodieren"
+      "decode": "Dekodieren",
+      "encodeFull": "Ganze URL kodieren"
     }
   }
 }

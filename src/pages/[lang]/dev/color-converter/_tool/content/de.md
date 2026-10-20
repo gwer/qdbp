@@ -18,6 +18,8 @@ Barrierefreier Text muss sich deutlich vom Hintergrund abheben. WCAG 2.x verlang
 - **3:1** – für großen Text (24 px oder 19 px fett);
 - **7:1** – erhöhte Stufe AAA.
 
+Um den Kontrast auf einem eigenen Hintergrund zu prüfen (etwa Text auf einem farbigen Banner), geben Sie die Hintergrundfarbe im Feld unter den Prüfungen ein oder wählen Sie sie aus.
+
 Beispiel: `#777777` auf Weiß ergibt 4,48:1 – knapp unter dem AA-Minimum für normalen Text.
 
 ## Häufige Fragen

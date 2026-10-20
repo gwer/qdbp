@@ -3,6 +3,15 @@
   "description": "Calcula el hash de un texto con MD5, SHA-1, SHA-256, SHA-384 y SHA-512 a la vez. El texto no sale de tu navegador.",
   "ui": {
     "input": "Texto",
-    "upper": "En mayúsculas"
+    "upper": "En mayúsculas",
+    "chooseFile": "Elegir archivo",
+    "file": "Archivo",
+    "backToText": "Volver al texto",
+    "tooLarge": "El archivo pasa de 1 GB: es demasiado grande para el navegador.",
+    "readError": "No se pudo leer el archivo.",
+    "matches": "coincide",
+    "expected": "Comparar con el hash esperado",
+    "matchOk": "Coincide: es {alg}.",
+    "matchNone": "No coincide con ninguno: el archivo es distinto o es otro algoritmo."
   }
 }

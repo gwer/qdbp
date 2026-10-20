@@ -5,10 +5,12 @@
     "mode": "Ação",
     "modes": {
       "encrypt": "Criptografar",
-      "decrypt": "Descriptografar"
+      "decrypt": "Descriptografar",
+      "brute": "Testar todos os deslocamentos"
     },
     "shift": "Deslocamento",
     "input": "Texto",
-    "output": "Resultado"
+    "output": "Resultado",
+    "bruteNote": "Clique no número ao lado da linha legível para abrir a decifração completa. No alfabeto latino, a partir de 26 os deslocamentos se repetem."
   }
 }

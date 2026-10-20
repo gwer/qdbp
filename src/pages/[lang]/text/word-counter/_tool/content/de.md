@@ -2,6 +2,8 @@
 
 Text in das Feld einfügen oder eintippen – die Zähler aktualisieren sich beim Schreiben. Der Text verlässt Ihr Gerät nicht: Gezählt wird direkt im Browser.
 
+Die Lesezeit beruht auf einer durchschnittlichen Lesegeschwindigkeit von etwa 230 Wörtern pro Minute, die Sprechzeit auf 140 Wörtern pro Minute (Vortrag, Video, Podcast). Darunter stehen die häufigsten Wörter mit ihrem Anteil – praktisch, um Wiederholungen oder die Keyword-Dichte zu prüfen. Wörter mit weniger als drei Buchstaben werden nicht gezählt.
+
 ## Was gezählt wird
 
 - **Wörter** – Folgen aus Buchstaben und Ziffern. Zusammensetzungen mit Bindestrich („E-Mail“, „Baden-Württemberg“) zählen als ein Wort.

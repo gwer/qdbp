@@ -2,6 +2,8 @@
 
 Fügen Sie den ursprünglichen Text in „Vorher“ und die neue Fassung in „Nachher“ ein. Die Unterschiede erscheinen sofort:
 
+„Leerzeichen ignorieren“ und „Groß-/Kleinschreibung ignorieren“ blenden überzählige Leerzeichen, Einrückungen und Großschreibung aus – sichtbar bleiben nur inhaltliche Änderungen.
+
 - **rot** – Zeilen, die im zweiten Text fehlen (entfernt);
 - **grün** – Zeilen, die im ersten Text nicht vorkamen (hinzugefügt);
 - eine geänderte Zeile erscheint als Paar „entfernt + hinzugefügt“, die abweichenden Wörter und Zeichen darin sind kräftiger markiert.

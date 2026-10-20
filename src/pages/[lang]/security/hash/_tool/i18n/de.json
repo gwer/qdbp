@@ -3,6 +3,15 @@
   "description": "Hashwerte eines Textes mit MD5, SHA-1, SHA-256, SHA-384 und SHA-512 auf einmal berechnen. Der Text verlässt Ihren Browser nicht.",
   "ui": {
     "input": "Text",
-    "upper": "Großbuchstaben"
+    "upper": "Großbuchstaben",
+    "chooseFile": "Datei wählen",
+    "file": "Datei",
+    "backToText": "Zurück zum Text",
+    "tooLarge": "Die Datei ist größer als 1 GB – zu groß für den Browser.",
+    "readError": "Die Datei konnte nicht gelesen werden.",
+    "matches": "stimmt überein",
+    "expected": "Mit erwartetem Hash vergleichen",
+    "matchOk": "Stimmt überein: {alg}.",
+    "matchNone": "Keine Übereinstimmung – die Datei ist anders oder es ist ein anderer Algorithmus."
   }
 }

@@ -28,7 +28,11 @@ const BLACK: Rgba = { r: 0, g: 0, b: 0, a: 1 };
 
 export function ColorConverter({ lang, t }: ToolProps) {
   const [input, setInput] = useState('#3451d1');
+  // Свой фон для проверки контраста: «мой текст на моём фоне».
+  const [bgInput, setBgInput] = useState('#fff4e5');
   const color = parseColor(input);
+  const bgColor = parseColor(bgInput);
+  const custom = bgColor && { ...bgColor, a: 1 };
   const solid = color && { ...color, a: 1 };
 
   const rating = (ratio: number) => (ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : ratio >= 3 ? 'AA18' : 'fail');
@@ -65,6 +69,7 @@ export function ColorConverter({ lang, t }: ToolProps) {
           {[
             [t('ui.onWhite'), WHITE],
             [t('ui.onBlack'), BLACK],
+            ...(custom ? [[t('ui.onCustom', { color: toHex(custom) }), custom]] : []),
           ].map(([label, bg]) => {
             // Два знака, округление вниз: WCAG не разрешает округлять 4,499 до 4,5.
             const ratio = contrast(solid!, bg as Rgba);
@@ -79,6 +84,14 @@ export function ColorConverter({ lang, t }: ToolProps) {
               </div>
             );
           })}
+          <div class="color-input">
+            <div class="field">
+              <label for="color-bg">{t('ui.background')}</label>
+              <input id="color-bg" type="text" autoComplete="off" spellcheck={false} value={bgInput} onInput={(e) => setBgInput(e.currentTarget.value)} />
+            </div>
+            <input type="color" aria-label={t('ui.background')} value={custom ? toHex(custom) : '#ffffff'} onInput={(e) => setBgInput(e.currentTarget.value)} />
+          </div>
+          {!bgColor && <p class="field-error">{t('ui.error')}</p>}
         </>
       )}
     </div>

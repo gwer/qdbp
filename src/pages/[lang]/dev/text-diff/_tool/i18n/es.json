@@ -18,6 +18,8 @@
       "other": "⋯ {n} líneas sin cambios"
     },
     "sampleA": "Lista de la compra:\nleche — 2 litros\npan\nhuevos — una docena\nqueso\ncafé",
-    "sampleB": "Lista de la compra:\nleche — 1 litro\npan\nhuevos — una docena\ncafé\nazúcar"
+    "sampleB": "Lista de la compra:\nleche — 1 litro\npan\nhuevos — una docena\ncafé\nazúcar",
+    "ignoreSpace": "Ignorar espacios",
+    "ignoreCase": "Ignorar mayúsculas"
   }
 }

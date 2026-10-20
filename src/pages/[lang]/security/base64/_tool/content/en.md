@@ -6,7 +6,7 @@ Base64 is **encoding, not encryption**: anyone can decode it, no password needed
 
 ## How to use
 
-Choose "Encode" or "Decode" and paste your text — the result appears instantly. Text is encoded as UTF-8, so accented letters and emoji work correctly. When decoding, the URL-safe variant (`-` and `_` instead of `+` and `/`) and strings without trailing `=` are accepted too.
+Choose "Encode" or "Decode" and paste your text — the result appears instantly. Text is encoded as UTF-8, so accented letters and emoji work correctly. When decoding, the URL-safe variant (`-` and `_` instead of `+` and `/`) and strings without trailing `=` are accepted too. For URLs, JWTs and file names there's “Encode (URL-safe)”: `-` and `_` instead of `+` and `/`, with no trailing `=`.
 
 ## Examples
 

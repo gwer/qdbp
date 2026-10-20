@@ -2,6 +2,8 @@
 
 Paste the original text into "Original" and the new version into "Changed". The differences appear right away:
 
+“Ignore whitespace” and “Ignore case” leave out extra spaces, indentation and capitalization, so only real edits are shown.
+
 - **red** — lines missing from the second text (removed);
 - **green** — lines that weren't in the first text (added);
 - a changed line is shown as a removed + added pair, with the words and characters that differ highlighted more strongly.

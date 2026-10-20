@@ -8,7 +8,8 @@
     "error": "Invalid %XX sequence",
     "modes": {
       "encode": "Encode",
-      "decode": "Decode"
+      "decode": "Decode",
+      "encodeFull": "Encode full URL"
     }
   }
 }

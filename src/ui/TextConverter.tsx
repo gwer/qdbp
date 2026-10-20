@@ -6,6 +6,8 @@ export interface Mode {
   id: string;
   /** Бросает исключение, если вход некорректен для этого режима. */
   run: (input: string) => string;
+  /** Обратный режим: «результат — в поле ввода» переключает на него (кодировать → декодировать). */
+  inverse?: string;
 }
 
 /**
@@ -74,6 +76,19 @@ export function TextConverter({
       </div>
       <div class="actions">
         <CopyButton text={error ? '' : output} t={t} />
+        {/* Цепочки действий: убрать пустые → удалить дубли → отсортировать; или проверить декодированием. */}
+        <button
+          type="button"
+          class="btn btn-secondary"
+          disabled={error || !output}
+          onClick={() => {
+            setInput(output);
+            const inverse = modes.find((m) => m.id === mode)?.inverse;
+            if (inverse) setMode(inverse);
+          }}
+        >
+          ↑ {t('common.useOutput')}
+        </button>
       </div>
     </div>
   );

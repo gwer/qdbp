@@ -5,10 +5,12 @@
     "mode": "Mode",
     "modes": {
       "encrypt": "Encrypt",
-      "decrypt": "Decrypt"
+      "decrypt": "Decrypt",
+      "brute": "Try all shifts"
     },
     "shift": "Shift",
     "input": "Text",
-    "output": "Result"
+    "output": "Result",
+    "bruteNote": "Click the shift number next to the row that reads like real text to open the full decryption. For the Latin alphabet shifts above 25 repeat, since it has 26 letters."
   }
 }
