@@ -2,6 +2,8 @@
 
 IP-Adresse mit Präfix (`192.168.1.10/24`) oder mit Maske (`10.0.0.0 255.255.0.0`) eingeben. Sie erhalten Netzadresse, Subnetz- und Wildcard-Maske, Broadcast-Adresse, den nutzbaren Host-Bereich und die Anzahl der Hosts.
 
+Um ein Netz aufzuteilen, wählen Sie unter „In Subnetze aufteilen“ ein neues Präfix – etwa ein /24 in vier /26 – und sehen Netz, Bereich und Broadcast jedes Subnetzes. Adresse und Maske werden auch binär angezeigt: So sieht man, welche Bits zum Netz und welche zu den Hosts gehören.
+
 ## Beispiel
 
 `192.168.1.10/24`:

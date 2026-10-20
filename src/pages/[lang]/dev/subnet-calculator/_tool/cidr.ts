@@ -54,3 +54,15 @@ export function subnet(ip: number, prefix: number) {
     ].some(([net, p]) => ((ip & maskOf(p)) >>> 0) === net),
   };
 }
+
+/** Разбиение сети на подсети с префиксом newPrefix (не больше limit штук). */
+export function split(network: number, prefix: number, newPrefix: number, limit = 256) {
+  const size = 2 ** (32 - newPrefix);
+  const count = 2 ** (newPrefix - prefix);
+  const out: ReturnType<typeof subnet>[] = [];
+  for (let i = 0; i < Math.min(count, limit); i++) out.push(subnet(network + i * size, newPrefix));
+  return { count, subnets: out };
+}
+
+/** Адрес в двоичном виде по октетам: 11000000.10101000.00000001.00001010. */
+export const binaryIp = (ip: number) => [24, 16, 8, 0].map((sh) => ((ip >>> sh) & 255).toString(2).padStart(8, '0')).join('.');

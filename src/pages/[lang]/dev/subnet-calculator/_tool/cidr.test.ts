@@ -33,3 +33,22 @@ describe('subnet-calculator', () => {
     expect(subnet(parseIp('8.8.8.8')!, 0)).toMatchObject({ size: 4294967296, network: 0 });
   });
 });
+
+describe('разбиение и двоичный вид', () => {
+  it('192.168.1.0/24 на /26 — четыре подсети по 64 адреса', async () => {
+    const { split, formatIp } = await import('./cidr');
+    const r = split(0xc0a80100, 24, 26);
+    expect(r.count).toBe(4);
+    expect(r.subnets.map((s) => `${formatIp(s.network)}-${formatIp(s.broadcast)}`)).toEqual([
+      '192.168.1.0-192.168.1.63',
+      '192.168.1.64-192.168.1.127',
+      '192.168.1.128-192.168.1.191',
+      '192.168.1.192-192.168.1.255',
+    ]);
+  });
+
+  it('двоичный вид', async () => {
+    const { binaryIp } = await import('./cidr');
+    expect(binaryIp(0xc0a8010a)).toBe('11000000.10101000.00000001.00001010');
+  });
+});

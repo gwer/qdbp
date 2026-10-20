@@ -14,7 +14,18 @@
       "range": "Диапазон хостов",
       "usable": "Доступно хостов",
       "size": "Всего адресов",
-      "private": "Частная сеть (RFC 1918)"
-    }
+      "private": "Частная сеть (RFC 1918)",
+      "binaryIp": "Адрес в двоичном виде",
+      "binaryMask": "Маска в двоичном виде"
+    },
+    "split": "Разбить на подсети",
+    "noSplit": "Не разбивать",
+    "splitInto": {
+      "one": "{count} подсеть /{prefix}",
+      "few": "{count} подсети /{prefix}",
+      "many": "{count} подсетей /{prefix}",
+      "other": "{count} подсети /{prefix}"
+    },
+    "more": "…и ещё {n}"
   }
 }

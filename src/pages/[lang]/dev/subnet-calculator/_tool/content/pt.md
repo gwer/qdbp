@@ -2,6 +2,8 @@
 
 Digite um endereço IP com prefixo (`192.168.1.10/24`) ou com máscara (`10.0.0.0 255.255.0.0`). Você vê o endereço de rede, a máscara e a máscara curinga, o broadcast, a faixa de endereços para hosts e quantos cabem.
 
+Para dividir uma rede, escolha um novo prefixo em «Dividir em sub-redes» — por exemplo, uma /24 em quatro /26 — e veja a rede, a faixa e o broadcast de cada uma. O endereço e a máscara também aparecem em binário: dá para ver quais bits são da rede e quais dos hosts.
+
 ## Exemplo
 
 `192.168.1.10/24`:

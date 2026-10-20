@@ -2,6 +2,8 @@
 
 Enter an IP address with a prefix (`192.168.1.10/24`) or a mask (`10.0.0.0 255.255.0.0`). You'll get the network address, subnet mask and wildcard mask, broadcast address, the usable host range and how many hosts it holds.
 
+To divide a network, pick a new prefix under “Split into subnets” — say, a /24 into four /26 subnets — and you’ll get the network, range and broadcast address of each. The address and mask are also shown in binary, so you can see which bits belong to the network and which to hosts.
+
 ## Example
 
 `192.168.1.10/24`:

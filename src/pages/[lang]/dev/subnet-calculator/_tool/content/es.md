@@ -2,6 +2,8 @@
 
 Escribe una dirección IP con prefijo (`192.168.1.10/24`) o con máscara (`10.0.0.0 255.255.0.0`). Verás la dirección de red, la máscara y la wildcard, la dirección de broadcast, el rango de direcciones para hosts y cuántos caben.
 
+Para dividir una red, elige un nuevo prefijo en «Dividir en subredes» —por ejemplo, una /24 en cuatro /26— y verás la red, el rango y el broadcast de cada una. La dirección y la máscara también aparecen en binario: se ve qué bits son de red y cuáles de host.
+
 ## Ejemplo
 
 `192.168.1.10/24`:

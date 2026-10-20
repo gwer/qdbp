@@ -14,7 +14,16 @@
       "range": "Host-Bereich",
       "usable": "Nutzbare Hosts",
       "size": "Adressen gesamt",
-      "private": "Privates Netz (RFC 1918)"
-    }
+      "private": "Privates Netz (RFC 1918)",
+      "binaryIp": "Adresse binär",
+      "binaryMask": "Maske binär"
+    },
+    "split": "In Subnetze aufteilen",
+    "noSplit": "Nicht aufteilen",
+    "splitInto": {
+      "one": "{count} Subnetz /{prefix}",
+      "other": "{count} Subnetze /{prefix}"
+    },
+    "more": "…und {n} weitere"
   }
 }

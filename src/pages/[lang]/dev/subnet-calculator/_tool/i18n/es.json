@@ -14,7 +14,16 @@
       "range": "Rango de hosts",
       "usable": "Hosts utilizables",
       "size": "Direcciones en total",
-      "private": "Red privada (RFC 1918)"
-    }
+      "private": "Red privada (RFC 1918)",
+      "binaryIp": "Dirección en binario",
+      "binaryMask": "Máscara en binario"
+    },
+    "split": "Dividir en subredes",
+    "noSplit": "No dividir",
+    "splitInto": {
+      "one": "{count} subred /{prefix}",
+      "other": "{count} subredes /{prefix}"
+    },
+    "more": "…y {n} más"
   }
 }
