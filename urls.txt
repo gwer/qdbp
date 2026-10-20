@@ -24,6 +24,9 @@
 /de/dev/cidr/
 /de/dev/color-converter/
 /de/dev/json-formatter/
+/de/dev/jwt-decoder/
+/de/dev/regex-tester/
+/de/dev/text-diff/
 /de/finance/
 /de/finance/auto-loan/
 /de/finance/break-even/
@@ -122,6 +125,9 @@
 /en/dev/cidr/
 /en/dev/color-converter/
 /en/dev/json-formatter/
+/en/dev/jwt-decoder/
+/en/dev/regex-tester/
+/en/dev/text-diff/
 /en/finance/
 /en/finance/auto-loan/
 /en/finance/break-even/
@@ -219,6 +225,9 @@
 /es/dev/cidr/
 /es/dev/color-converter/
 /es/dev/json-formatter/
+/es/dev/jwt-decoder/
+/es/dev/regex-tester/
+/es/dev/text-diff/
 /es/finance/
 /es/finance/auto-loan/
 /es/finance/break-even/
@@ -317,6 +326,9 @@
 /pt/dev/cidr/
 /pt/dev/color-converter/
 /pt/dev/json-formatter/
+/pt/dev/jwt-decoder/
+/pt/dev/regex-tester/
+/pt/dev/text-diff/
 /pt/finance/
 /pt/finance/auto-loan/
 /pt/finance/break-even/
@@ -415,6 +427,9 @@
 /ru/dev/cidr/
 /ru/dev/color-converter/
 /ru/dev/json-formatter/
+/ru/dev/jwt-decoder/
+/ru/dev/regex-tester/
+/ru/dev/text-diff/
 /ru/finance/
 /ru/finance/auto-loan/
 /ru/finance/break-even/

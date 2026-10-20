@@ -1,0 +1,35 @@
+{
+  "title": "Testador de expressões regulares: teste regex online",
+  "description": "Teste uma expressão regular de JavaScript no seu texto: as correspondências ficam destacadas, os grupos (inclusive nomeados) aparecem em lista e as flags g, i, m, s, u, y ligam com um clique. Tem substituição com $1 e $<nome>.",
+  "ui": {
+    "pattern": "Expressão regular",
+    "flagsLabel": "Flags",
+    "flags": {
+      "g": "todas as correspondências",
+      "i": "ignorar maiúsculas/minúsculas",
+      "m": "^ e $ em cada linha",
+      "s": "ponto inclui quebra de linha",
+      "u": "Unicode",
+      "y": "só a partir de lastIndex"
+    },
+    "text": "Texto",
+    "sampleText": "A versão 2.4 saiu em 2026-03-15 e a correção, em 2026-04-02.\nO próximo lançamento está previsto para 2026-11-30.",
+    "sampleReplacement": "$<day>/$<month>/$<year>",
+    "syntaxError": "Erro na expressão regular",
+    "timeout": "A expressão está rodando há mais de {seconds} s: parece backtracking catastrófico (por exemplo, quantificadores aninhados como (a+)+). O cálculo foi interrompido.",
+    "count": {
+      "one": "{n} correspondência",
+      "many": "{n} correspondências",
+      "other": "{n} correspondências"
+    },
+    "noMatches": "Nenhuma correspondência",
+    "truncated": "(mostrando as primeiras {limit})",
+    "index": "Posição",
+    "match": "Correspondência",
+    "groups": "Grupos",
+    "empty": "string vazia",
+    "replace": "Substituir",
+    "replacement": "Substituição ($1, $<nome>, $&)",
+    "result": "Resultado"
+  }
+}

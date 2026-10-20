@@ -1,0 +1,34 @@
+{
+  "title": "Regex-Tester: reguläre Ausdrücke online testen",
+  "description": "Testen Sie einen regulären Ausdruck in JavaScript an Ihrem Text: Treffer werden markiert, Gruppen (auch benannte) aufgelistet, die Flags g, i, m, s, u, y per Klick geschaltet. Mit Ersetzen über $1 und $<Name>.",
+  "ui": {
+    "pattern": "Regulärer Ausdruck",
+    "flagsLabel": "Flags",
+    "flags": {
+      "g": "alle Treffer",
+      "i": "Groß-/Kleinschreibung egal",
+      "m": "^ und $ für jede Zeile",
+      "s": "Punkt passt auch auf Zeilenumbruch",
+      "u": "Unicode",
+      "y": "nur ab lastIndex"
+    },
+    "text": "Text",
+    "sampleText": "Version 2.4 erschien am 2026-03-15, der Patch am 2026-04-02.\nDas nächste Release ist für 2026-11-30 geplant.",
+    "sampleReplacement": "$<day>.$<month>.$<year>",
+    "syntaxError": "Fehler im regulären Ausdruck",
+    "timeout": "Der Ausdruck läuft schon über {seconds} s – das sieht nach katastrophalem Backtracking aus (etwa verschachtelte Quantoren wie (a+)+). Abgebrochen.",
+    "count": {
+      "one": "{n} Treffer",
+      "other": "{n} Treffer"
+    },
+    "noMatches": "Keine Treffer",
+    "truncated": "(die ersten {limit} werden angezeigt)",
+    "index": "Position",
+    "match": "Treffer",
+    "groups": "Gruppen",
+    "empty": "leerer String",
+    "replace": "Ersetzen",
+    "replacement": "Ersetzung ($1, $<Name>, $&)",
+    "result": "Ergebnis"
+  }
+}

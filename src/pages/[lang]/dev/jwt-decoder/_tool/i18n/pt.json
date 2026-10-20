@@ -1,0 +1,34 @@
+{
+  "title": "Decodificador JWT: ver o conteúdo de um token online",
+  "description": "Cole um JWT e veja o header e o payload em JSON legível, as datas exp, iat e nbf no seu fuso horário e se o token já expirou. O token não sai do seu navegador.",
+  "ui": {
+    "input": "Token JWT",
+    "noVerify": "A assinatura não é verificada: a ferramenta só mostra o conteúdo. Qualquer pessoa consegue ler um JWT, então não confie nos dados dele antes de o servidor validar a assinatura.",
+    "header": "Cabeçalho (header)",
+    "payload": "Dados (payload)",
+    "signature": "Assinatura (signature)",
+    "noSignature": "Sem assinatura: token desprotegido (alg: none)",
+    "parts": {
+      "header": "cabeçalho",
+      "payload": "payload"
+    },
+    "errors": {
+      "parts": "Um JWT tem três partes separadas por pontos (encontradas: {count})",
+      "jwe": "É um token criptografado (JWE, cinco partes): sem a chave não dá para ler o conteúdo",
+      "base64": "A parte “{part}” não é Base64URL válido: tem caracteres inválidos ou está cortada",
+      "json": "A parte “{part}” é decodificada, mas não é JSON",
+      "object": "A parte “{part}” precisa ser um objeto JSON entre chaves"
+    },
+    "status": {
+      "expired": "Expirado (exp)",
+      "notYet": "Ainda não é válido (nbf)",
+      "valid": "Não expirou",
+      "noExp": "Sem data de expiração (não há exp)"
+    },
+    "claims": {
+      "iat": "emitido em",
+      "nbf": "válido a partir de",
+      "exp": "expira em"
+    }
+  }
+}

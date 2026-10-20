@@ -1,0 +1,23 @@
+{
+  "title": "Comparador de textos: encontrar diferenças online",
+  "description": "Cole duas versões de um texto e veja as linhas adicionadas, removidas e alteradas, com as palavras que mudaram destacadas. Visualização lado a lado ou unificada e contagem de mudanças.",
+  "ui": {
+    "original": "Original",
+    "changed": "Alterado",
+    "swap": "Inverter",
+    "same": "Os textos são idênticos",
+    "added": "Linhas adicionadas: {n}",
+    "removed": "Linhas removidas: {n}",
+    "view": "Visualização",
+    "split": "Lado a lado",
+    "unified": "Unificada",
+    "collapse": "Ocultar linhas iguais",
+    "hidden": {
+      "one": "⋯ {n} linha igual",
+      "many": "⋯ {n} linhas iguais",
+      "other": "⋯ {n} linhas iguais"
+    },
+    "sampleA": "Lista de compras:\nleite — 2 litros\npão\novos — 1 dúzia\nqueijo\ncafé",
+    "sampleB": "Lista de compras:\nleite — 1 litro\npão\novos — 1 dúzia\ncafé\naçúcar"
+  }
+}

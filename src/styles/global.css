@@ -630,6 +630,7 @@ table.kv td {
 
 .tz-table td:nth-child(2) .muted {
   white-space: nowrap;
+}
 
 /* ---- Инструменты для файлов (src/ui/files) ---- */
 .visually-hidden {
@@ -818,4 +819,227 @@ ol.picked {
   font-size: 1.8rem;
   font-weight: 700;
   margin-top: 14px;
+}
+
+/* JWT */
+.jwt-note {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+}
+
+.jwt-status {
+  margin: 14px 0 10px;
+  font-weight: 600;
+}
+
+pre.jwt-json {
+  white-space: pre-wrap;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  font-size: 0.9rem;
+}
+
+.jwt-times td {
+  white-space: normal;
+}
+
+/* Регулярные выражения */
+.rx-pattern {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rx-pattern input {
+  flex: 1;
+  min-width: 0;
+}
+
+input.mono {
+  font-family: var(--mono);
+}
+
+fieldset.rx-flags {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.rx-count {
+  margin: 14px 0 8px;
+  font-weight: 600;
+}
+
+.rx-highlight {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.92rem;
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 12px 14px;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.rx-highlight mark {
+  color: inherit;
+  border-radius: 3px;
+}
+
+.rx-m0 {
+  background: rgba(52, 81, 209, 0.25);
+}
+
+.rx-m1 {
+  background: rgba(230, 150, 0, 0.35);
+}
+
+mark.rx-empty {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  vertical-align: text-bottom;
+  background: var(--accent);
+}
+
+.rx-table {
+  margin-top: 12px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.rx-table th,
+.rx-table td {
+  text-align: left;
+  vertical-align: top;
+}
+
+.rx-table td.mono {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  min-width: 7em;
+}
+
+.rx-replace-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 18px 0 10px;
+  font-weight: 600;
+}
+
+/* Сравнение текстов */
+.diff-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .diff-inputs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.diff-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 16px 0 10px;
+  font-weight: 600;
+}
+
+.diff-stat-ins {
+  color: #2e7d32;
+}
+
+.diff-stat-del {
+  color: var(--error);
+}
+
+.diff-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.diff-collapse {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+}
+
+table.diff {
+  table-layout: fixed;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+}
+
+table.diff td {
+  padding: 1px 6px;
+  border: 0;
+  vertical-align: top;
+}
+
+.diff-col-no {
+  width: 3.4em;
+}
+
+table.diff td.diff-no {
+  color: var(--muted);
+  text-align: right;
+  user-select: none;
+}
+
+table.diff td.diff-text {
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.diff-del td,
+td.diff-del {
+  background: rgba(198, 40, 40, 0.12);
+}
+
+.diff-ins td,
+td.diff-ins {
+  background: rgba(46, 125, 50, 0.14);
+}
+
+td.diff-none {
+  background: var(--surface);
+}
+
+table.diff mark {
+  color: inherit;
+  border-radius: 2px;
+}
+
+.diff-del mark,
+td.diff-del mark {
+  background: rgba(198, 40, 40, 0.35);
+}
+
+.diff-ins mark,
+td.diff-ins mark {
+  background: rgba(46, 125, 50, 0.4);
+}
+
+table.diff tr.diff-skip td {
+  text-align: center;
+  color: var(--muted);
+  background: var(--surface);
+  font-family: var(--font);
+  padding: 3px 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .diff-stat-ins {
+    color: #81c784;
+  }
 }

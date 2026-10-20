@@ -1,0 +1,34 @@
+{
+  "title": "JWT decoder: decode a JSON Web Token online",
+  "description": "Paste a JWT to see its header and payload as readable JSON, the exp, iat and nbf times in your time zone, and whether the token has expired. The token never leaves your browser.",
+  "ui": {
+    "input": "JWT",
+    "noVerify": "The signature is not verified: this tool only shows what is inside. Anyone can read a JWT, so never trust its contents until the signature has been checked on the server.",
+    "header": "Header",
+    "payload": "Payload",
+    "signature": "Signature",
+    "noSignature": "No signature — an unsecured token (alg: none)",
+    "parts": {
+      "header": "header",
+      "payload": "payload"
+    },
+    "errors": {
+      "parts": "A JWT has three parts separated by dots (found: {count})",
+      "jwe": "This is an encrypted token (JWE, five parts): its contents can't be read without the key",
+      "base64": "The {part} is not valid Base64URL: it contains invalid characters or is cut off",
+      "json": "The {part} decodes, but it isn't JSON",
+      "object": "The {part} must be a JSON object in curly braces"
+    },
+    "status": {
+      "expired": "Expired (exp)",
+      "notYet": "Not valid yet (nbf)",
+      "valid": "Not expired",
+      "noExp": "No expiry set (no exp claim)"
+    },
+    "claims": {
+      "iat": "issued at",
+      "nbf": "not before",
+      "exp": "expires"
+    }
+  }
+}

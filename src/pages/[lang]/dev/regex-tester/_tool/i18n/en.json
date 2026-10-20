@@ -1,0 +1,34 @@
+{
+  "title": "Regex tester: test JavaScript regular expressions online",
+  "description": "Test a JavaScript regular expression against your text: matches are highlighted, capture groups (named ones too) are listed, and the g, i, m, s, u, y flags are one click away. Includes replace with $1 and $<name>.",
+  "ui": {
+    "pattern": "Regular expression",
+    "flagsLabel": "Flags",
+    "flags": {
+      "g": "global, all matches",
+      "i": "ignore case",
+      "m": "multiline: ^ and $ match at line breaks",
+      "s": "dot matches newlines",
+      "u": "Unicode",
+      "y": "sticky: only at lastIndex"
+    },
+    "text": "Test string",
+    "sampleText": "Version 2.4 shipped on 2026-03-15, with a patch on 2026-04-02.\nThe next release is planned for 2026-11-30.",
+    "sampleReplacement": "$<month>/$<day>/$<year>",
+    "syntaxError": "Invalid regular expression",
+    "timeout": "The expression has been running for over {seconds} s — this looks like catastrophic backtracking (for example, nested quantifiers like (a+)+). Stopped.",
+    "count": {
+      "one": "{n} match",
+      "other": "{n} matches"
+    },
+    "noMatches": "No matches",
+    "truncated": "(showing the first {limit})",
+    "index": "Index",
+    "match": "Match",
+    "groups": "Groups",
+    "empty": "empty string",
+    "replace": "Replace",
+    "replacement": "Replacement ($1, $<name>, $&)",
+    "result": "Result"
+  }
+}

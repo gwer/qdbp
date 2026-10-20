@@ -329,7 +329,7 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
   );
 }
 
-function Toggle<V extends string>(props: { label: string; value: V; options: [V, string][]; onChange: (v: V) => void }) {
+export function Toggle<V extends string>(props: { label: string; value: V; options: [V, string][]; onChange: (v: V) => void }) {
   return (
     <div class="calc-options" role="group" aria-label={props.label}>
       <span>{props.label}</span>

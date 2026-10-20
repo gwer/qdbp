@@ -1,0 +1,35 @@
+{
+  "title": "Probador de expresiones regulares: prueba regex online",
+  "description": "Prueba una expresión regular de JavaScript con tu texto: las coincidencias se resaltan, los grupos (también los con nombre) aparecen en una lista y los flags g, i, m, s, u, y se activan con un clic. Incluye reemplazo con $1 y $<nombre>.",
+  "ui": {
+    "pattern": "Expresión regular",
+    "flagsLabel": "Flags",
+    "flags": {
+      "g": "todas las coincidencias",
+      "i": "sin distinguir mayúsculas",
+      "m": "^ y $ en cada línea",
+      "s": "el punto incluye saltos de línea",
+      "u": "Unicode",
+      "y": "solo desde lastIndex"
+    },
+    "text": "Texto",
+    "sampleText": "La versión 2.4 salió el 2026-03-15 y el parche, el 2026-04-02.\nLa próxima versión está prevista para el 2026-11-30.",
+    "sampleReplacement": "$<day>/$<month>/$<year>",
+    "syntaxError": "Error en la expresión regular",
+    "timeout": "La expresión lleva más de {seconds} s ejecutándose: parece backtracking catastrófico (por ejemplo, cuantificadores anidados como (a+)+). Se ha detenido.",
+    "count": {
+      "one": "{n} coincidencia",
+      "many": "{n} coincidencias",
+      "other": "{n} coincidencias"
+    },
+    "noMatches": "No hay coincidencias",
+    "truncated": "(se muestran las primeras {limit})",
+    "index": "Posición",
+    "match": "Coincidencia",
+    "groups": "Grupos",
+    "empty": "cadena vacía",
+    "replace": "Reemplazar",
+    "replacement": "Reemplazo ($1, $<nombre>, $&)",
+    "result": "Resultado"
+  }
+}

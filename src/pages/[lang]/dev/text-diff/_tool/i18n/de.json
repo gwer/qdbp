@@ -1,0 +1,22 @@
+{
+  "title": "Textvergleich: Unterschiede zwischen zwei Texten finden",
+  "description": "Zwei Fassungen eines Textes einfügen und hinzugefügte, gelöschte und geänderte Zeilen sehen, geänderte Wörter farbig markiert. Ansicht nebeneinander oder untereinander, mit Zählung der Änderungen.",
+  "ui": {
+    "original": "Vorher",
+    "changed": "Nachher",
+    "swap": "Tauschen",
+    "same": "Die Texte sind identisch",
+    "added": "Zeilen hinzugefügt: {n}",
+    "removed": "Zeilen entfernt: {n}",
+    "view": "Ansicht",
+    "split": "Nebeneinander",
+    "unified": "Untereinander",
+    "collapse": "Unveränderte Zeilen ausblenden",
+    "hidden": {
+      "one": "⋯ {n} unveränderte Zeile",
+      "other": "⋯ {n} unveränderte Zeilen"
+    },
+    "sampleA": "Einkaufsliste:\nMilch – 2 Liter\nBrot\nEier – 10 Stück\nKäse\nKaffee",
+    "sampleB": "Einkaufsliste:\nMilch – 1 Liter\nBrot\nEier – 10 Stück\nKaffee\nZucker"
+  }
+}

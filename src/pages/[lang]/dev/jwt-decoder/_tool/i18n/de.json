@@ -1,0 +1,34 @@
+{
+  "title": "JWT-Decoder: JSON Web Token online dekodieren",
+  "description": "JWT einfügen und Header und Payload als lesbares JSON sehen, dazu exp, iat und nbf in Ihrer Zeitzone und ob das Token abgelaufen ist. Das Token verlässt Ihren Browser nicht.",
+  "ui": {
+    "input": "JWT",
+    "noVerify": "Die Signatur wird nicht geprüft: Das Tool zeigt nur den Inhalt. Ein JWT kann jeder lesen – vertrauen Sie seinen Daten erst, wenn der Server die Signatur geprüft hat.",
+    "header": "Header",
+    "payload": "Payload",
+    "signature": "Signatur",
+    "noSignature": "Keine Signatur – ungesichertes Token (alg: none)",
+    "parts": {
+      "header": "Header",
+      "payload": "Payload"
+    },
+    "errors": {
+      "parts": "Ein JWT besteht aus drei durch Punkte getrennten Teilen (gefunden: {count})",
+      "jwe": "Das ist ein verschlüsseltes Token (JWE, fünf Teile): Ohne Schlüssel lässt sich der Inhalt nicht lesen",
+      "base64": "Der Teil „{part}“ ist kein gültiges Base64URL: unzulässige Zeichen oder abgeschnitten",
+      "json": "Der Teil „{part}“ lässt sich dekodieren, ist aber kein JSON",
+      "object": "Der Teil „{part}“ muss ein JSON-Objekt in geschweiften Klammern sein"
+    },
+    "status": {
+      "expired": "Abgelaufen (exp)",
+      "notYet": "Noch nicht gültig (nbf)",
+      "valid": "Nicht abgelaufen",
+      "noExp": "Kein Ablaufdatum (kein exp)"
+    },
+    "claims": {
+      "iat": "ausgestellt",
+      "nbf": "gültig ab",
+      "exp": "läuft ab"
+    }
+  }
+}

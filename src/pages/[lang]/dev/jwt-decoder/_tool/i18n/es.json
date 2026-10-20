@@ -1,0 +1,34 @@
+{
+  "title": "Decodificador JWT: ver el contenido de un token online",
+  "description": "Pega un JWT y verás la cabecera y el payload como JSON legible, las fechas exp, iat y nbf en tu zona horaria y si el token ha caducado. El token no sale de tu navegador.",
+  "ui": {
+    "input": "Token JWT",
+    "noVerify": "La firma no se verifica: la herramienta solo muestra el contenido. Cualquiera puede leer un JWT, así que no te fíes de sus datos hasta que el servidor compruebe la firma.",
+    "header": "Cabecera (header)",
+    "payload": "Datos (payload)",
+    "signature": "Firma (signature)",
+    "noSignature": "Sin firma: token sin protección (alg: none)",
+    "parts": {
+      "header": "cabecera",
+      "payload": "payload"
+    },
+    "errors": {
+      "parts": "Un JWT tiene tres partes separadas por puntos (encontradas: {count})",
+      "jwe": "Es un token cifrado (JWE, cinco partes): sin la clave no se puede leer su contenido",
+      "base64": "La parte «{part}» no es Base64URL válido: tiene caracteres no permitidos o está cortada",
+      "json": "La parte «{part}» se decodifica, pero no es JSON",
+      "object": "La parte «{part}» debe ser un objeto JSON entre llaves"
+    },
+    "status": {
+      "expired": "Caducado (exp)",
+      "notYet": "Todavía no es válido (nbf)",
+      "valid": "No ha caducado",
+      "noExp": "Sin fecha de caducidad (no hay exp)"
+    },
+    "claims": {
+      "iat": "emitido",
+      "nbf": "válido desde",
+      "exp": "caduca"
+    }
+  }
+}

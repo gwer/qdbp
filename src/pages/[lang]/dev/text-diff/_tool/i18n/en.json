@@ -1,0 +1,22 @@
+{
+  "title": "Text compare: find the differences between two texts",
+  "description": "Paste two versions of a text to see added, removed and changed lines, with the changed words highlighted. Side-by-side or unified view and a count of changes.",
+  "ui": {
+    "original": "Original",
+    "changed": "Changed",
+    "swap": "Swap",
+    "same": "The texts are identical",
+    "added": "Lines added: {n}",
+    "removed": "Lines removed: {n}",
+    "view": "View",
+    "split": "Side by side",
+    "unified": "Unified",
+    "collapse": "Hide unchanged lines",
+    "hidden": {
+      "one": "⋯ {n} unchanged line",
+      "other": "⋯ {n} unchanged lines"
+    },
+    "sampleA": "Shopping list:\nmilk — 1 gallon\nbread\neggs — 12\ncheese\ncoffee",
+    "sampleB": "Shopping list:\nmilk — half a gallon\nbread\neggs — 12\ncoffee\nsugar"
+  }
+}
