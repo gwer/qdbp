@@ -27,13 +27,22 @@ function inputMode(spec: NumberInput | QuantityInput): 'numeric' | 'decimal' | u
 const entries = (def: CalculatorDef) => Object.entries<InputSpec>(def.inputs);
 const outputs = (def: CalculatorDef) => Object.entries<OutputSpec | undefined>(def.outputs);
 
+/**
+ * Точные значения величин, показанных в полях с округлением (после конвертации единиц).
+ * Пока пользователь не правил поле, расчёт берёт точное значение, а не разбирает «19,69 ft»
+ * обратно в 6,0015 м: иначе переключение систем единиц накапливало бы погрешность.
+ */
+type Exact = Record<string, { text: string; value: number }>;
+
 /** Значение величины (в unit поля) → текст поля в единице выбранной системы. */
-function quantityText(spec: QuantityInput, value: number, env: Env): string {
-  return formatInput(env.lang, forField(convert(value, spec.unit, displayUnit(spec, env.units))));
+function quantityText(spec: QuantityInput, value: number, env: Env, exact?: Exact, name?: string): string {
+  const text = formatInput(env.lang, forField(convert(value, spec.unit, displayUnit(spec, env.units))));
+  if (exact && name) exact[name] = { text, value };
+  return text;
 }
 
 /** Значения по умолчанию в виде текста полей. Пока «сейчас» неизвестно (сервер), поля «today…»/«now» пустые. */
-function defaults(def: CalculatorDef, env: Env, now: Now): Raw {
+function defaults(def: CalculatorDef, env: Env, now: Now, exact?: Exact): Raw {
   const raw: Raw = {};
   for (const [name, input] of entries(def)) {
     // Значение по умолчанию для языка страницы, если задано (byLang), иначе общее.
@@ -48,13 +57,13 @@ function defaults(def: CalculatorDef, env: Env, now: Now): Raw {
       raw[name] =
         env.units === 'imperial' && spec.imperial && spec.defaultImperial !== undefined
           ? formatInput(env.lang, spec.defaultImperial)
-          : quantityText(spec, spec.default, env);
+          : quantityText(spec, spec.default, env, exact, name);
     } else raw[name] = formatInput(env.lang, spec.default);
   }
   return raw;
 }
 
-function parseInputs(def: CalculatorDef, raw: Raw, env: Env) {
+function parseInputs(def: CalculatorDef, raw: Raw, env: Env, exact?: Exact) {
   const { lang, t } = env;
   const values: Values = {};
   const errors: Record<string, string> = {};
@@ -77,7 +86,8 @@ function parseInputs(def: CalculatorDef, raw: Raw, env: Env) {
       const unit = spec.type === 'quantity' ? displayUnit(spec, env.units) : null;
       const shown = parseNumber(s, lang) ?? (unit === 'in' ? parseFeetInches(s) : null);
       // Величины проверяются и передаются в расчёт в единице инструмента.
-      const n = shown !== null && spec.type === 'quantity' ? convert(shown, displayUnit(spec, env.units), spec.unit) : shown;
+      const kept = spec.type === 'quantity' && exact?.[name]?.text === s ? exact[name].value : null;
+      const n = kept ?? (shown !== null && spec.type === 'quantity' ? convert(shown, displayUnit(spec, env.units), spec.unit) : shown);
       const bound = (b: number) =>
         formatNumber(lang, spec.type === 'quantity' ? tidy(convert(b, spec.unit, displayUnit(spec, env.units))) : b);
       if (n === null) errors[name] = t('calc.error.number');
@@ -93,7 +103,7 @@ function parseInputs(def: CalculatorDef, raw: Raw, env: Env) {
 // Состояние в query: в URL пишутся только значения, отличные от умолчаний, в каноничной записи,
 // не зависящей от настроек пользователя: числа с точкой, даты 'YYYY-MM-DD', время 'HH:MM' (24 ч),
 // длительности в минутах, величины — в единице инструмента (метрической).
-function readQuery(def: CalculatorDef, env: Env): Raw {
+function readQuery(def: CalculatorDef, env: Env, exact?: Exact): Raw {
   const params = new URLSearchParams(location.search);
   const raw: Raw = {};
   for (const [name, spec] of entries(def)) {
@@ -105,7 +115,7 @@ function readQuery(def: CalculatorDef, env: Env): Raw {
       if (m !== null) raw[name] = formatTyped(m, env.clock);
     } else if (!Number.isFinite(Number(v))) continue;
     else if (spec.type === 'duration') raw[name] = spec.seconds ? formatDurationSeconds(Number(v)) : formatDuration(Number(v));
-    else if (spec.type === 'quantity') raw[name] = quantityText(spec, Number(v), env);
+    else if (spec.type === 'quantity') raw[name] = quantityText(spec, Number(v), env, exact, name);
     else raw[name] = formatInput(env.lang, Number(v));
   }
   return raw;
@@ -142,16 +152,18 @@ function formatOutput(env: Env, value: unknown, spec: OutputSpec = {}): string {
  * Переносит текст полей при смене настройки: разбирает в старом окружении, показывает в новом.
  * Поле, где осталось значение по умолчанию, получает «круглое» значение по умолчанию новой системы.
  */
-function reformat(def: CalculatorDef, raw: Raw, from: Env, to: Env, now: Now): Raw {
+function reformat(def: CalculatorDef, raw: Raw, from: Env, to: Env, now: Now, exact: Exact): Raw {
   const out = { ...raw };
-  const { values } = parseInputs(def, raw, from);
+  const { values } = parseInputs(def, raw, from, exact);
   const oldDefaults = defaults(def, from, now);
-  const newDefaults = defaults(def, to, now);
   for (const [name, spec] of entries(def)) {
     if (!(name in values)) continue;
     if (spec.type === 'time') out[name] = formatTyped(values[name] as number, to.clock);
     if (spec.type === 'quantity' && from.units !== to.units) {
-      out[name] = raw[name] === oldDefaults[name] ? newDefaults[name] : quantityText(spec, values[name] as number, to);
+      out[name] =
+        raw[name] === oldDefaults[name]
+          ? defaults(def, to, now, exact)[name]
+          : quantityText(spec, values[name] as number, to, exact, name);
     }
   }
   return out;
@@ -162,7 +174,8 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
   const [clock, setClock] = useState<ClockMode>(LANG_META[lang].clock);
   const [units, setUnits] = useState<UnitSystem>(LANG_META[lang].units);
   const env: Env = { lang, t, clock, units };
-  const [raw, setRaw] = useState(() => defaults(def, env, null));
+  const exact = useRef<Exact>({}).current;
+  const [raw, setRaw] = useState(() => defaults(def, env, null, exact));
   // null — ещё не в браузере: пререндер и первый рендер при гидратации совпадают.
   const [now, setNow] = useState<Now>(null);
   const fromUser = useRef(false);
@@ -186,24 +199,25 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
     setClock(e.clock);
     setUnits(e.units);
     setNow(current);
-    setRaw((r) => ({ ...r, ...defaults(def, e, current), ...readQuery(def, e) }));
+    setRaw((r) => ({ ...r, ...defaults(def, e, current, exact), ...readQuery(def, e, exact) }));
   }, []);
 
   // Сохраняется только изменённая настройка: остальные остаются «по языку страницы».
   const switchSetting = (key: 'clock' | 'units', value: string) => {
     const next = { ...env, [key]: value } as Env;
-    setRaw((r) => reformat(def, r, env, next, now));
+    setRaw((r) => reformat(def, r, env, next, now, exact));
     setClock(next.clock);
     setUnits(next.units);
     writePref(key, value);
   };
 
-  const { values, errors } = parseInputs(def, raw, env);
+  const { values, errors } = parseInputs(def, raw, env, exact);
   const valid = Object.keys(errors).length === 0;
 
   useEffect(() => {
     if (!fromUser.current || !valid || !now) return;
-    writeQuery(def, values, parseInputs(def, defaults(def, env, now), env).values);
+    const initialExact: Exact = {};
+    writeQuery(def, values, parseInputs(def, defaults(def, env, now, initialExact), env, initialExact).values);
   }, [raw]);
 
   let result: Record<string, unknown> | null = null;
