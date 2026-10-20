@@ -422,6 +422,48 @@ details.extra summary {
   width: auto;
 }
 
+.date-field {
+  position: relative;
+}
+
+.date-field input[type='text'] {
+  padding-right: 40px;
+}
+
+/* Кнопка календаря — внутри поля справа, как суффикс единицы у чисел. */
+.date-pick {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  padding: 0;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.date-pick:hover {
+  color: var(--accent);
+}
+
+/* Нативный календарь: невидимое поле под кнопкой, чтобы окно выбора открывалось рядом с ней. */
+.date-native {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 38px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Кнопки */
 .btn {
   font: inherit;

@@ -3,12 +3,14 @@ import { LANG_META, type ClockMode, type Lang, type UnitSystem } from '@/i18n/co
 import type { T } from '@/i18n/t';
 import { clockValue, formatTyped, nowClock, parseClock, parseTyped } from '@/lib/clock';
 import { isValidDate, resolveDateDefault, todayISO } from '@/lib/date';
+import { formatDateInput, parseDateInput } from '@/lib/date-input';
 import { formatDuration, formatDurationSeconds, parseDuration, parseDurationSeconds } from '@/lib/duration';
 import { formatClock, formatDate, formatDateTime, formatInput, formatNumber } from '@/lib/format';
 import { parseNumber } from '@/lib/parse';
 import { convert, displayUnit, forField, parseFeetInches, tidy, unitSymbol } from '@/lib/units';
 import type { CalculatorDef, InputSpec, NumberInput, OutputSpec, QuantityInput, ToolProps } from './define';
 import { readPref, writePref } from './prefs';
+import { DateField } from './DateField';
 import { TimeField } from './TimeField';
 
 type Raw = Record<string, string>;
@@ -49,7 +51,10 @@ function defaults(def: CalculatorDef, env: Env, now: Now, exact?: Exact): Raw {
     // Значение по умолчанию для языка страницы, если задано (byLang), иначе общее.
     const spec = 'byLang' in input && input.byLang?.[env.lang] !== undefined ? ({ ...input, default: input.byLang[env.lang] } as InputSpec) : input;
     if (spec.type === 'select') raw[name] = spec.default;
-    else if (spec.type === 'date') raw[name] = resolveDateDefault(spec.default, now?.date ?? null) ?? '';
+    else if (spec.type === 'date') {
+      const iso = resolveDateDefault(spec.default, now?.date ?? null);
+      raw[name] = iso ? formatDateInput(iso, env.lang) : '';
+    }
     else if (spec.type === 'time') {
       const canonical = spec.default === 'now' ? now?.time : spec.default;
       raw[name] = canonical ? formatTyped(parseClock(canonical)!, env.clock) : '';
@@ -73,7 +78,8 @@ function parseInputs(def: CalculatorDef, raw: Raw, env: Env, exact?: Exact) {
     if (spec.type === 'select') {
       values[name] = spec.options.includes(s) ? s : spec.default;
     } else if (spec.type === 'date') {
-      if (isValidDate(s)) values[name] = s;
+      const iso = parseDateInput(s, lang);
+      if (iso) values[name] = iso;
       else errors[name] = t('calc.error.date');
     } else if (spec.type === 'time') {
       const m = parseTyped(s, env.clock);
@@ -110,7 +116,10 @@ function readQuery(def: CalculatorDef, env: Env, exact?: Exact): Raw {
   for (const [name, spec] of entries(def)) {
     const v = params.get(name);
     if (v === null || v === '') continue;
-    if (spec.type === 'select' || spec.type === 'date') raw[name] = v;
+    if (spec.type === 'select') raw[name] = v;
+    else if (spec.type === 'date') {
+      if (isValidDate(v)) raw[name] = formatDateInput(v, env.lang);
+    }
     else if (spec.type === 'time') {
       const m = parseClock(v);
       if (m !== null) raw[name] = formatTyped(m, env.clock);
@@ -288,7 +297,7 @@ export function Calculator({ def, lang, t }: ToolProps & { def: CalculatorDef })
                   ))}
                 </select>
               ) : spec.type === 'date' ? (
-                <input {...common} type="date" onInput={(e) => set(name, e.currentTarget.value)} />
+                <DateField common={common} raw={raw[name]} lang={lang} t={t} onChange={(v) => set(name, v)} />
               ) : spec.type === 'time' ? (
                 <TimeField common={common} raw={raw[name]} mode={clock} onChange={(v) => set(name, v)} />
               ) : (
