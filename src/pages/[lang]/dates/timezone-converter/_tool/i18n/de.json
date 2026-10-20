@@ -1,0 +1,14 @@
+{
+  "title": "Zeitzonenrechner: wie spät ist es in einer anderen Stadt",
+  "description": "Uhrzeit von einer Zeitzone in mehrere andere umrechnen – Sommerzeit wird automatisch berücksichtigt. Praktisch für Telefonate und Meetings über Ländergrenzen.",
+  "ui": {
+    "date": "Datum",
+    "time": "Uhrzeit",
+    "from": "Zeitzone",
+    "nextDay": "nächster Tag",
+    "prevDay": "Vortag",
+    "remove": "Entfernen",
+    "add": "Hinzufügen",
+    "addLabel": "Stadt hinzufügen …"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Redimensionador de imagens: diminuir fotos online",
+  "description": "Mude o tamanho das fotos por largura, altura ou porcentagem — várias de uma vez, sem distorcer. Funciona com JPG, PNG e WebP.",
+  "ui": {
+    "mode": "Redimensionar por",
+    "modes": {
+      "width": "Largura",
+      "height": "Altura",
+      "fit": "Caber em um quadro",
+      "percent": "Porcentagem"
+    },
+    "percent": "Escala",
+    "width": "Largura",
+    "height": "Altura",
+    "format": "Formato",
+    "formats": {
+      "same": "Igual ao original"
+    },
+    "quality": "Qualidade",
+    "noUpscale": "Não aumentar imagens menores"
+  }
+}

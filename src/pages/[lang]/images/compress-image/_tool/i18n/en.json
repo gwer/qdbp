@@ -1,0 +1,14 @@
+{
+  "title": "Image compressor: reduce photo file size",
+  "description": "Make JPG, PNG and WebP files smaller for websites, email or messengers. See how much you saved — files are never uploaded.",
+  "ui": {
+    "quality": "Quality",
+    "target": "Output format",
+    "targets": {
+      "auto": "Auto (JPG → JPG, PNG → WebP)",
+      "jpeg": "JPG",
+      "webp": "WebP"
+    },
+    "pngNote": "PNG is lossless, and a browser almost never makes it smaller than the original. That's why Auto saves PNG as WebP — much lighter, and transparency is kept."
+  }
+}

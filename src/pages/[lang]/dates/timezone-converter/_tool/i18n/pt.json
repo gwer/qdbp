@@ -1,0 +1,14 @@
+{
+  "title": "Conversor de fuso horário: que horas são em outra cidade",
+  "description": "Converta um horário de um fuso para vários outros, com o horário de verão considerado automaticamente — útil para ligações e reuniões entre cidades e países.",
+  "ui": {
+    "date": "Data",
+    "time": "Horário",
+    "from": "Fuso horário",
+    "nextDay": "dia seguinte",
+    "prevDay": "dia anterior",
+    "remove": "Remover",
+    "add": "Adicionar",
+    "addLabel": "Adicionar cidade…"
+  }
+}

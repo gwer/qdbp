@@ -1,0 +1,14 @@
+{
+  "title": "Conversor de zonas horarias: qué hora es en otra ciudad",
+  "description": "Convierte una hora de una zona horaria a varias otras, con el horario de verano incluido; útil para llamadas y reuniones entre ciudades y países.",
+  "ui": {
+    "date": "Fecha",
+    "time": "Hora",
+    "from": "Zona horaria",
+    "nextDay": "día siguiente",
+    "prevDay": "día anterior",
+    "remove": "Quitar",
+    "add": "Añadir",
+    "addLabel": "Añadir ciudad…"
+  }
+}

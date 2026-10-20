@@ -1,0 +1,15 @@
+{
+  "title": "Team generator: split people into random teams",
+  "description": "Split a list of people into any number of random teams — team sizes come out as even as possible.",
+  "ui": {
+    "list": "Participants (one per line)",
+    "placeholder": "Alice\nBob\nCharlie\nDiana\nEthan\nFiona",
+    "teams": "Number of teams",
+    "split": "Make teams",
+    "team": "Team {n}",
+    "people": {
+      "one": "{count} person",
+      "other": "{count} people"
+    }
+  }
+}

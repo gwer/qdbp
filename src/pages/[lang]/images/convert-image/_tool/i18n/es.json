@@ -1,0 +1,9 @@
+{
+  "title": "Conversor de imágenes: JPG, PNG y WebP",
+  "description": "Convierte imágenes de un formato a otro: PNG a JPG, JPG a PNG, WebP a JPG y al revés. Varios archivos a la vez y sin subirlos.",
+  "ui": {
+    "to": "Convertir a",
+    "quality": "Calidad",
+    "background": "Fondo para la transparencia"
+  }
+}

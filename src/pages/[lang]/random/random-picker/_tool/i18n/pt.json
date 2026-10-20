@@ -1,0 +1,15 @@
+{
+  "title": "Sorteio online: escolher aleatoriamente de uma lista",
+  "description": "Cole uma lista de nomes ou opções e sorteie um ou vários vencedores sem repetição — ideal para sorteios e promoções.",
+  "ui": {
+    "list": "Lista (uma opção por linha)",
+    "placeholder": "Ana\nBruno\nCarla\nDiego",
+    "count": "Quantos sortear",
+    "pick": "Sortear",
+    "items": {
+      "one": "{count} opção",
+      "many": "{count} opções",
+      "other": "{count} opções"
+    }
+  }
+}

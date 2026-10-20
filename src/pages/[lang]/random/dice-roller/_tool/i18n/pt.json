@@ -1,0 +1,19 @@
+{
+  "title": "Rolar dados online: dados e cara ou coroa",
+  "description": "Role um ou vários dados (d4, d6, d8, d10, d12, d20, d100) ou jogue cara ou coroa — resultado aleatório e justo.",
+  "ui": {
+    "mode": "O que jogar",
+    "modes": {
+      "dice": "Dados",
+      "coin": "Moeda"
+    },
+    "count": "Quantidade de dados",
+    "sides": "Dado",
+    "dN": "d{n}",
+    "roll": "Rolar",
+    "total": "Soma",
+    "flip": "Jogar moeda",
+    "heads": "Cara",
+    "tails": "Coroa"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Bildkomprimierung: Dateigröße von Fotos verringern",
+  "description": "JPG-, PNG- und WebP-Dateien verkleinern – für Website, E-Mail oder Messenger. Sie sehen die Ersparnis; die Dateien werden nicht hochgeladen.",
+  "ui": {
+    "quality": "Qualität",
+    "target": "Zielformat",
+    "targets": {
+      "auto": "Auto (JPG → JPG, PNG → WebP)",
+      "jpeg": "JPG",
+      "webp": "WebP"
+    },
+    "pngNote": "PNG ist verlustfrei, und der Browser macht es fast nie kleiner als das Original. Deshalb speichert „Auto“ PNG als WebP – deutlich leichter und mit Transparenz."
+  }
+}

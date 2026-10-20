@@ -1,0 +1,9 @@
+{
+  "title": "Image converter: JPG, PNG and WebP",
+  "description": "Convert images between formats — PNG to JPG, JPG to PNG, WebP to JPG and back. Several files at once, no upload.",
+  "ui": {
+    "to": "Convert to",
+    "quality": "Quality",
+    "background": "Background for transparency"
+  }
+}
