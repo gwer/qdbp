@@ -1,0 +1,22 @@
+{
+  "title": "Redimensionador de imágenes: cambiar el tamaño de fotos online",
+  "description": "Cambia el tamaño de tus fotos por ancho, alto o porcentaje, varias a la vez y sin deformarlas. Funciona con JPG, PNG y WebP.",
+  "ui": {
+    "mode": "Cambiar tamaño por",
+    "modes": {
+      "width": "Ancho",
+      "height": "Alto",
+      "fit": "Encajar en un recuadro",
+      "percent": "Porcentaje"
+    },
+    "percent": "Escala",
+    "width": "Ancho",
+    "height": "Alto",
+    "format": "Formato",
+    "formats": {
+      "same": "Igual que el original"
+    },
+    "quality": "Calidad",
+    "noUpscale": "No ampliar imágenes más pequeñas"
+  }
+}

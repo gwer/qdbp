@@ -1,0 +1,15 @@
+{
+  "title": "Morsecode-Übersetzer: Text in Morsezeichen und zurück",
+  "description": "Text in Morsecode übersetzen oder Punkte und Striche zurück in Text – mit Umlauten, Ziffern und Satzzeichen.",
+  "ui": {
+    "mode": "Aktion",
+    "input": "Text oder Morsecode",
+    "output": "Ergebnis",
+    "error": "Einige Zeichen gibt es im Morsecode nicht",
+    "modes": {
+      "encode": "In Morse",
+      "decode": "Aus Morse",
+      "decodeCyrillic": "Aus Morse (Kyrillisch)"
+    }
+  }
+}

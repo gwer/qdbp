@@ -1,0 +1,19 @@
+{
+  "title": "Online würfeln: Würfel und Münzwurf",
+  "description": "Einen oder mehrere Würfel werfen (W4, W6, W8, W10, W12, W20, W100) oder eine Münze werfen – fairer Zufall im Browser.",
+  "ui": {
+    "mode": "Was werfen",
+    "modes": {
+      "dice": "Würfel",
+      "coin": "Münze"
+    },
+    "count": "Anzahl der Würfel",
+    "sides": "Würfel",
+    "dN": "W{n}",
+    "roll": "Würfeln",
+    "total": "Summe",
+    "flip": "Münze werfen",
+    "heads": "Kopf",
+    "tails": "Zahl"
+  }
+}

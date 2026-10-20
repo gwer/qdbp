@@ -52,5 +52,18 @@
     "copied": "Copied",
     "regenerate": "Generate again",
     "clear": "Clear"
+  },
+  "files": {
+    "drop": "Drop images here or",
+    "choose": "choose files",
+    "paste": "You can also paste from the clipboard (Ctrl+V)",
+    "notImage": "not an image",
+    "tooLarge": "file is larger than {max}",
+    "privacy": "Files are processed in your browser and never uploaded.",
+    "download": "Download",
+    "downloadAll": "Download all (ZIP)",
+    "clear": "Clear",
+    "processing": "Processing…",
+    "error": "Couldn't process this file"
   }
 }

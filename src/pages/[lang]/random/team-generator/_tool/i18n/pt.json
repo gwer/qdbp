@@ -1,0 +1,16 @@
+{
+  "title": "Gerador de times: dividir pessoas em times aleatórios",
+  "description": "Divida uma lista de participantes no número de times que quiser, de forma aleatória — os times ficam o mais equilibrados possível em quantidade.",
+  "ui": {
+    "list": "Participantes (um por linha)",
+    "placeholder": "Ana\nBruno\nCarla\nDiego\nElisa\nFábio",
+    "teams": "Número de times",
+    "split": "Dividir",
+    "team": "Time {n}",
+    "people": {
+      "one": "{count} participante",
+      "many": "{count} participantes",
+      "other": "{count} participantes"
+    }
+  }
+}

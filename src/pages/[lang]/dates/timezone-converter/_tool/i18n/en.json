@@ -1,0 +1,14 @@
+{
+  "title": "Time zone converter: what time it is in another city",
+  "description": "Convert a time from one time zone to several others, with daylight saving time handled automatically — handy for calls and meetings across cities and countries.",
+  "ui": {
+    "date": "Date",
+    "time": "Time",
+    "from": "Time zone",
+    "nextDay": "next day",
+    "prevDay": "previous day",
+    "remove": "Remove",
+    "add": "Add",
+    "addLabel": "Add a city…"
+  }
+}

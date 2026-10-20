@@ -1,0 +1,14 @@
+{
+  "title": "Compressor de imagens: reduzir o tamanho de fotos",
+  "description": "Diminua o tamanho de arquivos JPG, PNG e WebP para site, e-mail ou WhatsApp. Veja quanto economizou — os arquivos não são enviados a lugar nenhum.",
+  "ui": {
+    "quality": "Qualidade",
+    "target": "Formato do resultado",
+    "targets": {
+      "auto": "Auto (JPG → JPG, PNG → WebP)",
+      "jpeg": "JPG",
+      "webp": "WebP"
+    },
+    "pngNote": "O PNG é sem perdas, e o navegador quase nunca o deixa menor que o original. Por isso, no modo \"Auto\", o PNG é salvo como WebP — bem mais leve e com transparência."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Caesar cipher: encode and decode online",
+  "description": "Encrypt or decrypt text with a Caesar cipher using any shift, including ROT13.",
+  "ui": {
+    "mode": "Mode",
+    "modes": {
+      "encrypt": "Encrypt",
+      "decrypt": "Decrypt"
+    },
+    "shift": "Shift",
+    "input": "Text",
+    "output": "Result"
+  }
+}

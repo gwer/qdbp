@@ -1,0 +1,19 @@
+{
+  "title": "Tirar dados online: dados y cara o cruz",
+  "description": "Lanza uno o varios dados (d4, d6, d8, d10, d12, d20, d100) o tira una moneda: resultados aleatorios y justos.",
+  "ui": {
+    "mode": "Qué lanzar",
+    "modes": {
+      "dice": "Dados",
+      "coin": "Moneda"
+    },
+    "count": "Número de dados",
+    "sides": "Dado",
+    "dN": "d{n}",
+    "roll": "Tirar",
+    "total": "Suma",
+    "flip": "Lanzar moneda",
+    "heads": "Cara",
+    "tails": "Cruz"
+  }
+}

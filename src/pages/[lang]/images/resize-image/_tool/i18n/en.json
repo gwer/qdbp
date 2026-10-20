@@ -1,0 +1,22 @@
+{
+  "title": "Image resizer: resize photos online",
+  "description": "Resize photos by width, height or percentage — several at once, keeping the aspect ratio. Works with JPG, PNG and WebP.",
+  "ui": {
+    "mode": "Resize by",
+    "modes": {
+      "width": "Width",
+      "height": "Height",
+      "fit": "Fit in a box",
+      "percent": "Percentage"
+    },
+    "percent": "Scale",
+    "width": "Width",
+    "height": "Height",
+    "format": "Format",
+    "formats": {
+      "same": "Same as original"
+    },
+    "quality": "Quality",
+    "noUpscale": "Don't enlarge smaller images"
+  }
+}

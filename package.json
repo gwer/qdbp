@@ -21,6 +21,7 @@
     "@astrojs/sitemap": "3.7.4",
     "astro": "7.3.5",
     "decimal.js-light": "2.5.1",
+    "fflate": "0.8.3",
     "preact": "10.29.8",
     "qrcode-generator": "2.0.4"
   },

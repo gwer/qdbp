@@ -1,0 +1,22 @@
+{
+  "title": "Bildgrößenänderung: Fotos online verkleinern",
+  "description": "Fotos nach Breite, Höhe oder Prozent verkleinern oder vergrößern – mehrere auf einmal, ohne Verzerrung. Für JPG, PNG und WebP.",
+  "ui": {
+    "mode": "Größe ändern nach",
+    "modes": {
+      "width": "Breite",
+      "height": "Höhe",
+      "fit": "In Rahmen einpassen",
+      "percent": "Prozent"
+    },
+    "percent": "Skalierung",
+    "width": "Breite",
+    "height": "Höhe",
+    "format": "Format",
+    "formats": {
+      "same": "Wie Original"
+    },
+    "quality": "Qualität",
+    "noUpscale": "Kleinere Bilder nicht vergrößern"
+  }
+}

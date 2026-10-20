@@ -1,0 +1,14 @@
+{
+  "title": "Cifra de César: criptografar e descriptografar online",
+  "description": "Criptografe ou descriptografe um texto com a cifra de César e qualquer deslocamento, incluindo ROT13.",
+  "ui": {
+    "mode": "Ação",
+    "modes": {
+      "encrypt": "Criptografar",
+      "decrypt": "Descriptografar"
+    },
+    "shift": "Deslocamento",
+    "input": "Texto",
+    "output": "Resultado"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Teamgenerator: Teams zufällig einteilen",
+  "description": "Teilnehmerliste zufällig in beliebig viele Teams aufteilen – die Teams werden so gleich groß wie möglich.",
+  "ui": {
+    "list": "Teilnehmer (einer pro Zeile)",
+    "placeholder": "Anna\nBen\nClara\nDavid\nEmma\nFinn",
+    "teams": "Anzahl der Teams",
+    "split": "Teams bilden",
+    "team": "Team {n}",
+    "people": {
+      "one": "{count} Person",
+      "other": "{count} Personen"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Generador de equipos: hacer equipos al azar",
+  "description": "Divide una lista de participantes en el número de equipos que quieras al azar; los equipos quedan lo más equilibrados posible en número.",
+  "ui": {
+    "list": "Participantes (uno por línea)",
+    "placeholder": "Ana\nBruno\nCarla\nDiego\nElena\nFede",
+    "teams": "Número de equipos",
+    "split": "Hacer equipos",
+    "team": "Equipo {n}",
+    "people": {
+      "one": "{count} participante",
+      "many": "{count} participantes",
+      "other": "{count} participantes"
+    }
+  }
+}
