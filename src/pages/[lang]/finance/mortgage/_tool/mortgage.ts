@@ -9,6 +9,8 @@ export interface MortgageInput {
   rate: number;
   years: number;
   kind: LoanKind;
+  /** Налоги и страховка в год — показываются отдельно, в расчёт кредита не входят. */
+  costs?: number;
   /** Досрочные погашения в записи поля (см. _shared/prepayments.ts); пусто — без них. */
   prepay?: string;
 }

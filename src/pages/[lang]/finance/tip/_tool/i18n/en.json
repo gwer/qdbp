@@ -10,6 +10,15 @@
     },
     "people": {
       "label": "Number of people"
+    },
+    "round": {
+      "label": "Round each share up",
+      "options": {
+        "no": "Don’t round",
+        "1": "To a whole dollar",
+        "10": "To $10",
+        "100": "To $100"
+      }
     }
   },
   "outputs": {
@@ -24,6 +33,9 @@
     },
     "tipPerPerson": {
       "label": "Tip per person"
+    },
+    "actual": {
+      "label": "Actual tip"
     }
   }
 }

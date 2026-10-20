@@ -2,6 +2,8 @@
 
 Informe o valor inicial, o aporte mensal, a taxa de juros anual, o prazo em anos e a frequência de capitalização. Você vê o valor final, quanto investiu e quanto ganhou de juros, além de uma tabela ano a ano.
 
+Se pretende aumentar o aporte junto com a renda, informe o aumento anual: a partir do segundo ano o aporte mensal sobe esse percentual, e de novo a cada ano. O gráfico mostra quanto do saldo final são seus aportes e quanto são juros.
+
 ## Como funcionam os juros compostos
 
 Os juros ganhos se somam ao saldo e passam a render também. Sem aportes, a fórmula é:

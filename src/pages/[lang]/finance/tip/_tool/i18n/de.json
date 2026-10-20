@@ -10,6 +10,15 @@
     },
     "people": {
       "label": "Anzahl Personen"
+    },
+    "round": {
+      "label": "Pro Person aufrunden",
+      "options": {
+        "no": "Nicht runden",
+        "1": "Auf ganze Euro",
+        "10": "Auf 10",
+        "100": "Auf 100"
+      }
     }
   },
   "outputs": {
@@ -24,6 +33,9 @@
     },
     "tipPerPerson": {
       "label": "Trinkgeld pro Person"
+    },
+    "actual": {
+      "label": "Tatsächliches Trinkgeld"
     }
   }
 }

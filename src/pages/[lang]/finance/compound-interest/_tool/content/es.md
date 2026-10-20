@@ -2,6 +2,8 @@
 
 Introduce el capital inicial, la aportación mensual, el tipo de interés anual, el plazo en años y la frecuencia de capitalización. Verás el saldo final, cuánto has aportado tú y cuántos intereses has generado, además de una tabla año a año.
 
+Si piensas aumentar la aportación a medida que suban tus ingresos, indica el porcentaje anual: desde el segundo año la aportación mensual sube ese porcentaje, y así cada año. El gráfico muestra qué parte del saldo final son tus aportaciones y qué parte intereses.
+
 ## Cómo funciona el interés compuesto
 
 Con la capitalización, los intereses se suman al capital y los siguientes se calculan sobre una cantidad mayor. Sin aportaciones, la fórmula es:

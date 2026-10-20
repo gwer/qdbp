@@ -2,6 +2,8 @@
 
 Geben Sie Anfangskapital, monatliche Sparrate, Zinssatz, Laufzeit in Jahren und die Häufigkeit der Zinsgutschrift ein. Sie sehen das Endkapital, Ihre Einzahlungen und die Zinserträge sowie die Entwicklung pro Jahr.
 
+Wenn Sie die Sparrate mit dem Einkommen erhöhen möchten, geben Sie die jährliche Steigerung an: Ab dem zweiten Jahr steigt die monatliche Rate um diesen Prozentsatz, danach jedes Jahr erneut. Das Diagramm zeigt, welcher Teil des Endbetrags Einzahlungen und welcher Zinsen sind.
+
 ## So wirkt der Zinseszins
 
 Gutgeschriebene Zinsen werden ab dann mitverzinst – das Kapital wächst immer schneller. Ohne Sparrate gilt:

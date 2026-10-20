@@ -21,6 +21,9 @@
         "quarterly": "Vierteljährlich",
         "yearly": "Jährlich"
       }
+    },
+    "increase": {
+      "label": "Sparrate jährlich erhöhen um"
     }
   },
   "outputs": {

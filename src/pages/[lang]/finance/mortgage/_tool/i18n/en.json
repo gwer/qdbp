@@ -23,6 +23,9 @@
     },
     "prepay": {
       "label": "Extra payments"
+    },
+    "costs": {
+      "label": "Property tax, insurance and HOA per year"
     }
   },
   "outputs": {
@@ -84,7 +87,8 @@
         "payment": "Payment"
       }
     },
-    "month": "Month"
+    "month": "Month",
+    "withCosts": "With taxes, insurance and HOA ({costs} a month), that’s {total} a month."
   },
   "errors": {
     "prepayments": "The extra payments in the link are damaged — please check them."

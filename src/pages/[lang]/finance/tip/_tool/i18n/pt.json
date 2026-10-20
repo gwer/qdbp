@@ -10,6 +10,15 @@
     },
     "people": {
       "label": "Número de pessoas"
+    },
+    "round": {
+      "label": "Arredondar por pessoa",
+      "options": {
+        "no": "Não arredondar",
+        "1": "Para o real inteiro",
+        "10": "Para 10",
+        "100": "Para 100"
+      }
     }
   },
   "outputs": {
@@ -24,6 +33,9 @@
     },
     "tipPerPerson": {
       "label": "Gorjeta por pessoa"
+    },
+    "actual": {
+      "label": "Gorjeta real"
     }
   }
 }

@@ -11,6 +11,9 @@ export function ByYear({ values, result, lang, t }: ExtraProps<MortgageInput, Re
       {values.kind === 'differentiated' && (
         <p class="muted">{t('ui.decreasing', { first: money(result.payment), last: money(result.lastPayment) })}</p>
       )}
+      {!!values.costs && (
+        <p class="calc-note">{t('ui.withCosts', { total: money(result.payment + values.costs / 12), costs: money(values.costs / 12) })}</p>
+      )}
       {base && (
         <PrepayEffect schedule={result.schedule} base={base.schedule} overpay={result.overpay} baseOverpay={base.overpay} lang={lang} t={t} />
       )}

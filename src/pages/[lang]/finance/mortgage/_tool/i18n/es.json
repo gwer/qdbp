@@ -23,6 +23,9 @@
     },
     "prepay": {
       "label": "Amortizaciones anticipadas"
+    },
+    "costs": {
+      "label": "Impuestos y seguros al año"
     }
   },
   "outputs": {
@@ -84,7 +87,8 @@
         "payment": "Cuota"
       }
     },
-    "month": "Mes"
+    "month": "Mes",
+    "withCosts": "Con impuestos y seguros ({costs} al mes): {total} al mes."
   },
   "errors": {
     "prepayments": "La lista de amortizaciones del enlace está dañada: revísela."

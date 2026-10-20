@@ -13,6 +13,8 @@ export interface DepositInput {
   rate: number;
   years: number;
   cap: Capitalization;
+  /** Ежегодное увеличение пополнения, % (с ростом дохода): со второго года пополнение больше на эту долю. */
+  increase?: number;
 }
 
 export interface DepositYear {
@@ -27,7 +29,7 @@ export interface DepositYear {
  * в конце периода капитализации; пополнение — в конце месяца, после начисления.
  * При ежеквартальной и ежегодной капитализации это даёт ровно (1 + r/4)^(4t) и (1 + r)^t.
  */
-export function deposit({ initial, monthly, rate, years, cap }: DepositInput) {
+export function deposit({ initial, monthly, rate, years, cap, increase = 0 }: DepositInput) {
   if (!(initial >= 0) || !(monthly >= 0) || !(rate >= 0) || !Number.isInteger(years) || years < 1) {
     throw new RangeError('invalid deposit input');
   }
@@ -44,8 +46,9 @@ export function deposit({ initial, monthly, rate, years, cap }: DepositInput) {
       balance = balance.plus(accrued);
       accrued = new Decimal(0);
     }
-    balance = balance.plus(monthly);
-    contributed = contributed.plus(monthly);
+    const add = new Decimal(monthly).mul(new Decimal(1).plus(new Decimal(increase).div(100)).pow(Math.floor((m - 1) / 12))).toDecimalPlaces(2);
+    balance = balance.plus(add);
+    contributed = contributed.plus(add);
     if (m % 12 === 0) {
       byYear.push({
         year: m / 12,

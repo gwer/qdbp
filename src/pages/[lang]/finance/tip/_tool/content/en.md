@@ -2,6 +2,8 @@
 
 Enter the bill amount, the tip percentage and the number of people. You'll see the tip, the total with tip and how much each person pays.
 
+To avoid small change, use “Round each share up” — to a whole dollar, $10 or $100 — and see the actual tip percentage that results.
+
 ## Formula
 
 - `tip = bill × tip % / 100`

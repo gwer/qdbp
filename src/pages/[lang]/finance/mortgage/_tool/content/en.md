@@ -1,6 +1,6 @@
 ## How to use
 
-Enter the home price, your down payment as a percentage, the interest rate and the loan term in years, then pick the repayment type. You'll see the loan amount, the monthly payment, total interest and a year-by-year summary of what goes to principal and to interest.
+Enter the home price, your down payment as a percentage, the interest rate and the loan term in years, then pick the repayment type. You'll see the loan amount, the monthly payment, total interest and a year-by-year summary of what goes to principal and to interest. To see the full monthly cost (PITI), enter yearly property tax, homeowners insurance and HOA fees: they’re added to the loan payment.
 
 The chart shows how each year's payments split between principal and interest. If you plan to pay extra, add extra payments — one-time or recurring, shortening the term or lowering the payment — and the schedule and interest saved are recalculated. For a side-by-side comparison, use the [extra payment calculator](/en/finance/early-repayment/).
 

@@ -13,6 +13,7 @@ export const def = defineCalculator({
     rate: { type: 'percent', default: 5, min: 0, max: 100, byLang: { ru: 12, en: 5, es: 3, de: 3, pt: 10 } },
     years: { type: 'integer', default: 10, min: 1, max: 100, byLang: { ru: 3, en: 10, es: 10, de: 10, pt: 10 } },
     cap: { type: 'select', options: ['monthly', 'quarterly', 'yearly'], default: 'monthly' },
+    increase: { type: 'percent', default: 0, min: 0, max: 100 },
   },
   compute: (v) => deposit(v),
   outputs: {

@@ -10,6 +10,15 @@
     },
     "people": {
       "label": "Número de personas"
+    },
+    "round": {
+      "label": "Redondear lo de cada uno",
+      "options": {
+        "no": "No redondear",
+        "1": "Al euro",
+        "10": "A 10",
+        "100": "A 100"
+      }
     }
   },
   "outputs": {
@@ -24,6 +33,9 @@
     },
     "tipPerPerson": {
       "label": "Propina por persona"
+    },
+    "actual": {
+      "label": "Propina real"
     }
   }
 }

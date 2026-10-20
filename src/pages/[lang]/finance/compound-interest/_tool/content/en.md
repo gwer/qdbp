@@ -2,6 +2,8 @@
 
 Enter the starting amount, your monthly contribution, the annual interest rate, the number of years and how often interest is compounded. You'll see the final balance, how much you put in yourself and how much interest you earned, plus a year-by-year table.
 
+If you plan to raise your contributions as your income grows, enter the yearly increase: from the second year each monthly contribution goes up by that percentage, and again every year after. The chart shows how much of the final balance is your money and how much is interest.
+
 ## How compound interest works
 
 With compounding, earned interest is added to the balance, so the next interest is calculated on a bigger amount. Without contributions the formula is:

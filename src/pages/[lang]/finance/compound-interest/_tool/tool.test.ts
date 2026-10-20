@@ -45,3 +45,13 @@ describe('deposit', () => {
   });
 
 });
+
+describe('ежегодное увеличение пополнений', () => {
+  it('без ставки: 100 в месяц, +10% в год, 3 года — 1200 + 1320 + 1452', () => {
+    expect(deposit({ initial: 0, monthly: 100, rate: 0, years: 3, cap: 'monthly', increase: 10 })).toMatchObject({ contributed: 3972, total: 3972 });
+  });
+
+  it('0% — как раньше', () => {
+    expect(deposit({ initial: 0, monthly: 200, rate: 5, years: 10, cap: 'monthly', increase: 0 }).total).toBe(31056.46);
+  });
+});

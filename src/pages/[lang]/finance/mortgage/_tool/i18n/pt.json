@@ -23,6 +23,9 @@
     },
     "prepay": {
       "label": "Amortizações extraordinárias"
+    },
+    "costs": {
+      "label": "IPTU e seguros por ano"
     }
   },
   "outputs": {
@@ -84,7 +87,8 @@
         "payment": "Parcela"
       }
     },
-    "month": "Mês"
+    "month": "Mês",
+    "withCosts": "Com IPTU e seguros ({costs} por mês): {total} por mês."
   },
   "errors": {
     "prepayments": "A lista de amortizações do link está corrompida — verifique."

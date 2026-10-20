@@ -2,6 +2,8 @@
 
 Introduce el importe de la cuenta, el porcentaje de propina y el número de personas. Verás la propina, el total y cuánto paga cada uno.
 
+Para no andar con monedas, usa «Redondear lo de cada uno» —al euro, a 10 o a 100— y verás qué porcentaje de propina queda en realidad.
+
 ## Fórmula
 
 - `propina = cuenta × porcentaje / 100`

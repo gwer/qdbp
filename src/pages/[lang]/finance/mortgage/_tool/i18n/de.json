@@ -23,6 +23,9 @@
     },
     "prepay": {
       "label": "Sondertilgungen"
+    },
+    "costs": {
+      "label": "Grundsteuer und Versicherungen pro Jahr"
     }
   },
   "outputs": {
@@ -84,7 +87,8 @@
         "payment": "Rate"
       }
     },
-    "month": "Monat"
+    "month": "Monat",
+    "withCosts": "Mit Steuern und Versicherungen ({costs} im Monat): {total} im Monat."
   },
   "errors": {
     "prepayments": "Die Sondertilgungen im Link sind beschädigt – bitte prüfen."

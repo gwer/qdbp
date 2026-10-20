@@ -15,6 +15,8 @@ export const def = defineCalculator({
     rate: { type: 'percent', default: 6.5, min: 0, max: 100, byLang: { ru: 16, en: 6.5, es: 3, de: 3.5, pt: 11 } },
     years: { type: 'integer', default: 30, min: 1, max: 50, byLang: { ru: 20, en: 30, es: 25, de: 25, pt: 30 } },
     kind: { type: 'select', options: ['annuity', 'differentiated'], default: 'annuity', byLang: { pt: 'differentiated' } },
+    // Налог на недвижимость, страховка (в США — property tax, homeowners insurance, HOA) — к платежу банку.
+    costs: { type: 'number', default: 0, min: 0 },
     prepay: { type: 'custom', default: '', Field: PrepaymentsField },
   },
   errors: ['prepayments'],

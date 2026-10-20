@@ -21,6 +21,9 @@
         "quarterly": "Quarterly",
         "yearly": "Annually"
       }
+    },
+    "increase": {
+      "label": "Increase contributions each year by"
     }
   },
   "outputs": {

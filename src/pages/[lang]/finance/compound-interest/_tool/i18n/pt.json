@@ -21,6 +21,9 @@
         "quarterly": "Trimestral",
         "yearly": "Anual"
       }
+    },
+    "increase": {
+      "label": "Aumentar o aporte todo ano em"
     }
   },
   "outputs": {

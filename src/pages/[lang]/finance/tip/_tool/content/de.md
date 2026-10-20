@@ -2,6 +2,8 @@
 
 Geben Sie Rechnungsbetrag, Trinkgeld in Prozent und die Anzahl der Personen ein. Sie sehen das Trinkgeld, die Gesamtsumme und den Betrag pro Person.
 
+Um Kleingeld zu vermeiden, runden Sie mit „Pro Person aufrunden“ auf ganze Euro, 10 oder 100 auf – der Rechner zeigt, wie viel Prozent Trinkgeld es tatsächlich sind.
+
 ## Formel
 
 - `Trinkgeld = Rechnung × Prozent / 100`

@@ -1,6 +1,6 @@
 ## So funktioniert der Rechner
 
-Geben Sie Kaufpreis, Eigenkapital in Prozent, Sollzins und Laufzeit in Jahren ein und wählen Sie die Tilgungsart. Sie sehen den Darlehensbetrag, die monatliche Rate, die Zinskosten und einen Tilgungsplan nach Jahren.
+Geben Sie Kaufpreis, Eigenkapital in Prozent, Sollzins und Laufzeit in Jahren ein und wählen Sie die Tilgungsart. Sie sehen den Darlehensbetrag, die monatliche Rate, die Zinskosten und einen Tilgungsplan nach Jahren. Um die gesamte monatliche Belastung zu sehen, tragen Sie Grundsteuer und Versicherungen pro Jahr ein: Sie werden zur Rate addiert.
 
 Das Diagramm zeigt, wie sich die Zahlungen jedes Jahr auf Tilgung und Zinsen verteilen. Planen Sie Sondertilgungen, tragen Sie sie ein – einmalig oder regelmäßig, mit kürzerer Laufzeit oder niedrigerer Rate –, und Plan und Zinsersparnis werden neu berechnet. Den Vergleich der Varianten zeigt der [Sondertilgungsrechner](/de/finance/early-repayment/).
 

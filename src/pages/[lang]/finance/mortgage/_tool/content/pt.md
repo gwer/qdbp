@@ -1,6 +1,6 @@
 ## Como usar
 
-Informe o valor do imóvel, a entrada em porcentagem, a taxa de juros anual e o prazo em anos, e escolha o sistema de amortização. Você vê o valor financiado, a parcela mensal, os juros totais e a evolução por ano: quanto foi pago, quanto amortizou e quanto foi de juros.
+Informe o valor do imóvel, a entrada em porcentagem, a taxa de juros anual e o prazo em anos, e escolha o sistema de amortização. Você vê o valor financiado, a parcela mensal, os juros totais e a evolução por ano: quanto foi pago, quanto amortizou e quanto foi de juros. Para ver o custo mensal completo, informe o IPTU e os seguros do ano: eles são somados à parcela.
 
 O gráfico mostra como, a cada ano, os pagamentos se dividem entre amortização e juros. Se pretende amortizar, adicione amortizações extras — únicas ou periódicas, reduzindo o prazo ou a parcela — e a tabela e a economia são recalculadas. Para comparar opções, use a [calculadora de amortização](/pt/finance/early-repayment/).
 

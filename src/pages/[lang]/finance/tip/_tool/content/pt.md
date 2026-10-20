@@ -2,6 +2,8 @@
 
 Digite o valor da conta, a porcentagem de gorjeta e o número de pessoas. Você vê a gorjeta, o total e quanto cada um paga.
 
+Para não lidar com trocado, use «Arredondar por pessoa» — para o real inteiro, para 10 ou para 100 — e veja a porcentagem real de gorjeta.
+
 ## Fórmula
 
 - `gorjeta = conta × porcentagem / 100`
