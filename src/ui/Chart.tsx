@@ -80,14 +80,7 @@ export function Chart({
         onPointerLeave={(e) => e.pointerType === 'mouse' && setActive(null)}
       >
         {ticks.map((v, k) => (
-          <g key={k}>
-            <line class="chart-grid" x1={pad.left} x2={width - pad.right} y1={yAt(v)} y2={yAt(v)} />
-            {k > 0 && (
-              <text class="chart-tick" x={pad.left + 2} y={yAt(v) - 3}>
-                {tickLabels[k]}
-              </text>
-            )}
-          </g>
+          <line key={k} class="chart-grid" x1={pad.left} x2={width - pad.right} y1={yAt(v)} y2={yAt(v)} />
         ))}
         {active !== null && <rect class="chart-hover" x={xAt(active) - step / 2} y={pad.top} width={step} height={plotH} />}
         {kind === 'bars'
@@ -112,6 +105,14 @@ export function Chart({
                 points={s.values.map((v, i) => `${xAt(i).toFixed(1)},${yAt(v).toFixed(1)}`).join(' ')}
               />
             ))}
+        {/* Подписи оси Y — после данных, чтобы линии их не перечёркивали. */}
+        {ticks.map((v, k) =>
+          k > 0 ? (
+            <text key={k} class="chart-tick" x={pad.left + 2} y={yAt(v) - 3}>
+              {tickLabels[k]}
+            </text>
+          ) : null,
+        )}
         {x.map((t, i) =>
           i % every === 0 ? (
             <text key={i} class="chart-x" x={xAt(i)} y={height - 6}>

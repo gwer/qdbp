@@ -22,7 +22,7 @@ export function KeyDates({ result, lang, t }: ExtraProps<unknown, { start: strin
         </div>
       )}
       <div class="table-wrap">
-        <table>
+        <table class="wrap">
           <tbody>
             {MILESTONES.map(([key, days]) => (
               <tr key={key} class={result.age >= days ? 'muted' : undefined}>

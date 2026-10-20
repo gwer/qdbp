@@ -21,13 +21,13 @@ export function Comparison({ values, result, lang, t }: ExtraProps<EarlyInput, R
   return (
     <>
       <div class="table-wrap">
-        <table>
+        <table class="wrap">
           <thead>
             <tr>
               <th>{t('ui.variant')}</th>
               <th>{t('ui.payment')}</th>
               <th>{t('ui.term')}</th>
-              <th>{t('ui.interest')}</th>
+              <th class="hide-narrow">{t('ui.interest')}</th>
               <th>{t('ui.saved')}</th>
             </tr>
           </thead>
@@ -37,7 +37,7 @@ export function Comparison({ values, result, lang, t }: ExtraProps<EarlyInput, R
                 <td>{name}</td>
                 <td>{money(payment)}</td>
                 <td>{formatTerm(t, months)}</td>
-                <td>{money(interest)}</td>
+                <td class="hide-narrow">{money(interest)}</td>
                 <td>{saved === null ? '—' : money(saved)}</td>
               </tr>
             ))}

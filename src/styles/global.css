@@ -719,7 +719,6 @@ table.kv td {
 .tz-work,
 .tz-off {
   font-size: 0.8rem;
-  white-space: nowrap;
 }
 
 .tz-work {
@@ -730,8 +729,11 @@ table.kv td {
   color: var(--muted);
 }
 
-.tz-table td:nth-child(2) .muted {
-  white-space: nowrap;
+/* На узком экране дата «21 окт. (следующий день)» переносится, иначе время уезжает за край. */
+@media (min-width: 601px) {
+  .tz-table td:nth-child(2) .muted {
+    white-space: nowrap;
+  }
 }
 
 /* ---- Инструменты для файлов (src/ui/files) ---- */
@@ -1227,6 +1229,14 @@ table.diff tr.diff-skip td {
   text-anchor: middle;
 }
 
+/* Подписи оси Y поверх линий: обводка цветом фона, чтобы линия не перечёркивала цифры. */
+.chart-tick {
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
 .chart-hover {
   fill: var(--surface);
 }
@@ -1630,4 +1640,16 @@ ol.steps li + li {
 
 .pw-list {
   white-space: pre-line;
+}
+
+/* Таблица с длинными подписями в первой колонке: на телефоне текст переносится, а не прокручивается. */
+table.wrap td {
+  white-space: normal;
+}
+
+/* Второстепенная колонка, которую на телефоне можно опустить: остальное в ней выводится иначе. */
+@media (max-width: 600px) {
+  .hide-narrow {
+    display: none;
+  }
 }

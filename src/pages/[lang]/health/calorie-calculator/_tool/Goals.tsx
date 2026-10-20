@@ -19,7 +19,7 @@ export function Goals({ values, result, lang, t, units }: ExtraProps<{ sex: 'mal
   return (
     <>
       <div class="table-wrap">
-        <table>
+        <table class="wrap">
           <thead>
             <tr>
               <th>{t('ui.goal')}</th>
