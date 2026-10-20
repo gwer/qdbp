@@ -1,0 +1,16 @@
+{
+  "title": "Gerador de Lorem ipsum: texto de preenchimento",
+  "description": "Gere texto de preenchimento Lorem ipsum por parágrafos, frases ou palavras, com ou sem tags HTML, e copie com um clique.",
+  "ui": {
+    "count": "Quantidade",
+    "unit": "De",
+    "units": {
+      "paragraphs": "Parágrafos",
+      "sentences": "Frases",
+      "words": "Palavras"
+    },
+    "classic": "Começar com \"Lorem ipsum dolor sit amet…\"",
+    "html": "Envolver parágrafos em <p>",
+    "result": "Texto"
+  }
+}

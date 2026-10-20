@@ -1,0 +1,16 @@
+{
+  "title": "Generador de Lorem ipsum: texto de relleno",
+  "description": "Genera texto de relleno Lorem ipsum por párrafos, frases o palabras, con o sin etiquetas HTML, y cópialo con un clic.",
+  "ui": {
+    "count": "Cantidad",
+    "unit": "De",
+    "units": {
+      "paragraphs": "Párrafos",
+      "sentences": "Frases",
+      "words": "Palabras"
+    },
+    "classic": "Empezar con «Lorem ipsum dolor sit amet…»",
+    "html": "Envolver párrafos en <p>",
+    "result": "Texto"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Lorem-ipsum-Generator: Blindtext für Layouts",
+  "description": "Erzeugen Sie Lorem-ipsum-Blindtext nach Absätzen, Sätzen oder Wörtern, mit oder ohne HTML-Tags, und kopieren Sie ihn mit einem Klick.",
+  "ui": {
+    "count": "Anzahl",
+    "unit": "Einheit",
+    "units": {
+      "paragraphs": "Absätze",
+      "sentences": "Sätze",
+      "words": "Wörter"
+    },
+    "classic": "Mit „Lorem ipsum dolor sit amet …“ beginnen",
+    "html": "Absätze in <p> einschließen",
+    "result": "Text"
+  }
+}

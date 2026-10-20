@@ -98,6 +98,7 @@
 /de/text/
 /de/text/case-converter/
 /de/text/line-tools/
+/de/text/lorem-ipsum/
 /de/text/word-counter/
 /en/
 /en/convert/
@@ -198,6 +199,7 @@
 /en/text/
 /en/text/case-converter/
 /en/text/line-tools/
+/en/text/lorem-ipsum/
 /en/text/word-counter/
 /es/
 /es/convert/
@@ -299,6 +301,7 @@
 /es/text/
 /es/text/case-converter/
 /es/text/line-tools/
+/es/text/lorem-ipsum/
 /es/text/word-counter/
 /pt/
 /pt/convert/
@@ -400,6 +403,7 @@
 /pt/text/
 /pt/text/case-converter/
 /pt/text/line-tools/
+/pt/text/lorem-ipsum/
 /pt/text/word-counter/
 /ru/
 /ru/convert/
@@ -501,5 +505,6 @@
 /ru/text/
 /ru/text/case-converter/
 /ru/text/line-tools/
+/ru/text/lorem-ipsum/
 /ru/text/transliteration/
 /ru/text/word-counter/
