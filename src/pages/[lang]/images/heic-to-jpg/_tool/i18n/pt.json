@@ -1,0 +1,17 @@
+{
+  "title": "Conversor de HEIC para JPG: fotos do iPhone",
+  "description": "Converta fotos do iPhone de HEIC para JPG (ou PNG, WebP) para abri-las no Windows, no e-mail e em sites. Vários arquivos de uma vez, sem upload.",
+  "ui": {
+    "to": "Converter para",
+    "quality": "Qualidade",
+    "loading": "Carregando o decodificador HEIC (cerca de 0,5 MB) — só no primeiro arquivo…",
+    "loadFailed": "Não foi possível carregar o decodificador HEIC. Verifique a conexão com a internet e adicione os arquivos de novo.",
+    "errors": {
+      "notHeic": "não é um arquivo HEIC/HEIF. Para JPG, PNG e WebP use o conversor de imagens",
+      "broken": "o arquivo está danificado ou incompleto — não dá para ler o HEIC",
+      "tooLarge": "a imagem tem mais de 100 megapixels — falta memória no navegador",
+      "memory": "faltou memória no navegador. Feche outras abas e tente de novo",
+      "load": "o decodificador HEIC não carregou"
+    }
+  }
+}

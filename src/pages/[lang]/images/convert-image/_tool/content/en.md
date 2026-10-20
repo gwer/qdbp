@@ -14,7 +14,7 @@ Conversion runs in your browser; files are never uploaded.
 
 **How do I convert WebP to JPG?** Add the .webp file and choose "JPG" — handy when a website or app doesn't accept WebP.
 
-**Can I convert HEIC photos from an iPhone?** Only in browsers that can open HEIC themselves, such as Safari. Elsewhere the file won't open — it's easier to set Settings → Camera → Formats → Most Compatible on the iPhone.
+**Can I convert HEIC photos from an iPhone?** Only in browsers that can open HEIC themselves, such as Safari. Elsewhere the file won't open — use the [HEIC to JPG converter](/en/images/heic-to-jpg/), which works in any browser.
 
 **Why isn't AVIF available?** The AVIF option only appears in browsers that can save in that format. Most can't yet.
 

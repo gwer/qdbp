@@ -15,10 +15,14 @@ export interface Processed {
   srcHeight: number;
 }
 
+/** Ошибка с понятным пользователю текстом — показывается вместо общего files.error. */
+export class FileError extends Error {}
+
 interface Item {
   id: number;
   file: File;
   status: 'pending' | 'done' | 'error';
+  error?: string;
   result?: Processed;
   url?: string;
 }
@@ -37,12 +41,15 @@ export function ImageBatch({
   process,
   optionsKey,
   zipName,
+  accept,
 }: {
   t: T;
   lang: Lang;
   process: (file: File) => Promise<Processed>;
   optionsKey: string;
   zipName: string;
+  /** Атрибут accept поля выбора файлов (по умолчанию image/*). */
+  accept?: string;
 }) {
   const [items, setItems] = useState<Item[]>([]);
   const processRef = useRef(process);
@@ -60,9 +67,10 @@ export function ImageBatch({
           const url = URL.createObjectURL(result.blob);
           setItems((cur) => cur.map((i) => (i.id === item.id ? (i.url && URL.revokeObjectURL(i.url), { ...i, status: 'done', result, url }) : i)));
         },
-        () => {
+        (e) => {
           if (run.current !== runId) return;
-          setItems((cur) => cur.map((i) => (i.id === item.id ? { ...i, status: 'error' } : i)));
+          const error = e instanceof FileError ? e.message : undefined;
+          setItems((cur) => cur.map((i) => (i.id === item.id ? { ...i, status: 'error', error } : i)));
         },
       );
     }
@@ -94,7 +102,7 @@ export function ImageBatch({
   const done = items.filter((i) => i.status === 'done' && i.result);
   return (
     <div>
-      <DropZone t={t} onFiles={add} />
+      <DropZone t={t} accept={accept} onFiles={add} />
       {items.length > 0 && (
         <>
           <ul class="file-list">
@@ -107,7 +115,7 @@ export function ImageBatch({
                   <div class="file-info">
                     <strong class="file-name">{r?.name ?? i.file.name}</strong>
                     {i.status === 'pending' && <span class="muted">{t('files.processing')}</span>}
-                    {i.status === 'error' && <span class="field-error">{t('files.error')}</span>}
+                    {i.status === 'error' && <span class="field-error">{i.error ?? t('files.error')}</span>}
                     {i.status === 'done' && r && (
                       <span class="muted">
                         {formatBytes(lang, i.file.size)} → {formatBytes(lang, r.blob.size)}{' '}

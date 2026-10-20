@@ -12,7 +12,7 @@ export const EXT: Record<OutputType, string> = {
 /** Форматы с параметром качества. */
 export const LOSSY = new Set<OutputType>(['image/jpeg', 'image/webp', 'image/avif']);
 
-export const isImage = (file: File) => file.type.startsWith('image/') || /\.(jpe?g|png|webp|gif|bmp|avif)$/i.test(file.name);
+export const isImage = (file: File) => file.type.startsWith('image/') || /\.(jpe?g|png|webp|gif|bmp|avif|heic|heif)$/i.test(file.name);
 
 /** Имя результата: «photo.png» → «photo-small.jpg». */
 export function outputName(name: string, type: OutputType, suffix = ''): string {

@@ -69,10 +69,13 @@ for (const file of files.filter((f) => f.endsWith('.html'))) {
 }
 
 // 3. бюджеты
+// Исключение: обвязка декодера HEIC (libheif-js, LGPL) — сторонний файл как есть, грузится только
+// на странице heic-to-jpg и только после выбора первого файла, в первую загрузку страницы не входит.
+const UNBUDGETED = /^\/_astro\/libheif-[\w-]+\.js$/;
 const sizes = [];
 for (const file of files) {
   const ext = file.split('.').pop();
-  if (!(ext in BUDGET)) continue;
+  if (!(ext in BUDGET) || UNBUDGETED.test(file)) continue;
   const gz = gzipSync(readFileSync(join(DIST, file)), { level: 9 }).length;
   sizes.push({ file, ext, gz });
   if (gz > BUDGET[ext]) errors.push(`${file}: ${(gz / 1024).toFixed(1)} КБ gzip > бюджета ${BUDGET[ext] / 1024} КБ`);
