@@ -9,6 +9,11 @@
       "jpeg": "JPG",
       "webp": "WebP"
     },
-    "pngNote": "PNG ist verlustfrei, und der Browser macht es fast nie kleiner als das Original. Deshalb speichert „Auto“ PNG als WebP – deutlich leichter und mit Transparenz."
+    "pngNote": "PNG ist verlustfrei, und der Browser macht es fast nie kleiner als das Original. Deshalb speichert „Auto“ PNG als WebP – deutlich leichter und mit Transparenz.",
+    "by": "Komprimieren nach",
+    "byQuality": "Qualität",
+    "bySize": "Zieldateigröße",
+    "maxSize": "Höchstens",
+    "kb": "KB"
   }
 }

@@ -72,6 +72,11 @@
     "downloadAll": "Descargar todo (ZIP)",
     "clear": "Borrar",
     "processing": "Procesando…",
-    "error": "No se pudo procesar el archivo"
+    "error": "No se pudo procesar el archivo",
+    "compare": "Comparar",
+    "before": "Antes",
+    "after": "Después",
+    "actualSize": "Tamaño real",
+    "closeCompare": "Cerrar comparación"
   }
 }

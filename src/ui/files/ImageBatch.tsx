@@ -4,6 +4,7 @@ import type { T } from '@/i18n/t';
 import { formatNumber } from '@/lib/format';
 import { formatBytes, sizeChange } from './bytes';
 import { downloadBlob, downloadZip, preloadZip } from './download';
+import { Compare } from './Compare';
 import { DropZone } from './DropZone';
 
 export interface Processed {
@@ -44,6 +45,7 @@ export function ImageBatch({
   optionsKey,
   zipName,
   accept,
+  compare,
 }: {
   t: T;
   lang: Lang;
@@ -52,7 +54,10 @@ export function ImageBatch({
   zipName: string;
   /** Атрибут accept поля выбора файлов (по умолчанию image/*). */
   accept?: string;
+  /** Кнопка «Сравнить»: исходник и результат шторкой (для сжатия, где важны артефакты). */
+  compare?: boolean;
 }) {
+  const [comparing, setComparing] = useState<number | null>(null);
   const [items, setItems] = useState<Item[]>([]);
   const itemsRef = useRef(items);
   itemsRef.current = items;
@@ -113,6 +118,7 @@ export function ImageBatch({
   }, [optionsKey]);
 
   const clear = () => {
+    setComparing(null);
     run.current++;
     queue.current = [];
     items.forEach((i) => i.url && URL.revokeObjectURL(i.url));
@@ -150,14 +156,25 @@ export function ImageBatch({
                     )}
                   </div>
                   {r && i.status === 'done' && (
-                    <button type="button" class="btn btn-secondary btn-small" onClick={() => downloadBlob(r.name, r.blob)}>
-                      {t('files.download')}
-                    </button>
+                    <div class="file-actions">
+                      {compare && (
+                        <button type="button" class="btn btn-secondary btn-small" aria-pressed={comparing === i.id} onClick={() => setComparing(comparing === i.id ? null : i.id)}>
+                          {t('files.compare')}
+                        </button>
+                      )}
+                      <button type="button" class="btn btn-secondary btn-small" onClick={() => downloadBlob(r.name, r.blob)}>
+                        {t('files.download')}
+                      </button>
+                    </div>
                   )}
                 </li>
               );
             })}
           </ul>
+          {(() => {
+            const c = items.find((i) => i.id === comparing && i.status === 'done' && i.url);
+            return c ? <Compare key={c.id} file={c.file} after={c.url!} t={t} onClose={() => setComparing(null)} /> : null;
+          })()}
           <div class="actions">
             {done.length > 1 && (
               <button type="button" class="btn btn-small" onClick={() => downloadZip(zipName, done.map((i) => ({ name: i.result!.name, blob: i.result!.blob })))}>

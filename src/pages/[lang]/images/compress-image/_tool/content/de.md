@@ -2,6 +2,8 @@
 
 Fotos hinzufügen – hineinziehen, auswählen oder aus der Zwischenablage einfügen – und die Qualität mit dem Regler einstellen. Für jede Datei sehen Sie die Größe vorher und nachher. Die Ergebnisse einzeln oder als ZIP herunterladen.
 
+Verlangt eine Website oder ein Formular eine Datei „höchstens N KB“, wählen Sie „Zieldateigröße“ und geben das Limit ein: Das Tool sucht die höchste Qualität, die passt. „Vergleichen“ zeigt Original und Ergebnis mit Schieberegler; mit „Originalgröße“ sehen Sie Kompressionsartefakte besser.
+
 Die Komprimierung läuft im Browser: Die Dateien werden nicht hochgeladen.
 
 ## Wie es funktioniert

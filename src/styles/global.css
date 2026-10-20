@@ -1492,3 +1492,74 @@ rect.chart-s2 {
   white-space: normal;
   font-family: var(--mono);
 }
+
+/* Сравнение «до / после» (src/ui/files/Compare.tsx) */
+.compare {
+  margin-top: 12px;
+}
+
+.compare-view {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.compare-actual {
+  overflow: auto;
+  max-height: 70vh;
+}
+
+.compare-stack {
+  position: relative;
+  display: grid;
+}
+
+.compare-actual .compare-stack {
+  width: max-content;
+}
+
+.compare-stack img {
+  grid-area: 1 / 1;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.compare-actual .compare-stack img {
+  width: auto;
+  max-width: none;
+}
+
+.compare-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.4);
+  pointer-events: none;
+}
+
+.compare-tag {
+  position: absolute;
+  top: 6px;
+  padding: 1px 6px;
+  font-size: 0.75rem;
+  color: #fff;
+  background: rgb(0 0 0 / 0.55);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.compare input[type='range'] {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.file-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}

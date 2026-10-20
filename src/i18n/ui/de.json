@@ -71,6 +71,11 @@
     "downloadAll": "Alle herunterladen (ZIP)",
     "clear": "Leeren",
     "processing": "Wird verarbeitet …",
-    "error": "Datei konnte nicht verarbeitet werden"
+    "error": "Datei konnte nicht verarbeitet werden",
+    "compare": "Vergleichen",
+    "before": "Vorher",
+    "after": "Nachher",
+    "actualSize": "Originalgröße",
+    "closeCompare": "Vergleich schließen"
   }
 }

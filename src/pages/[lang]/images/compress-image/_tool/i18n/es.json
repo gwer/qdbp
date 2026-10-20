@@ -9,6 +9,11 @@
       "jpeg": "JPG",
       "webp": "WebP"
     },
-    "pngNote": "PNG se comprime sin pérdidas y el navegador casi nunca lo deja más pequeño que el original. Por eso, en modo «Auto», PNG se guarda como WebP: pesa bastante menos y conserva la transparencia."
+    "pngNote": "PNG se comprime sin pérdidas y el navegador casi nunca lo deja más pequeño que el original. Por eso, en modo «Auto», PNG se guarda como WebP: pesa bastante menos y conserva la transparencia.",
+    "by": "Cómo comprimir",
+    "byQuality": "Por calidad",
+    "bySize": "A un tamaño máximo",
+    "maxSize": "No más de",
+    "kb": "KB"
   }
 }

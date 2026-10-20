@@ -2,6 +2,8 @@
 
 Adicione as fotos — arraste, escolha ou cole da área de transferência — e ajuste a qualidade no controle deslizante. Cada arquivo mostra quanto pesava e quanto pesa depois da compressão. Baixe o resultado um por um ou em ZIP.
 
+Se um site ou formulário exige arquivo «de no máximo N KB», escolha «Até um tamanho máximo» e informe o limite: a ferramenta encontra a maior qualidade que cabe. O botão «Comparar» de cada arquivo mostra o original e o resultado com um controle deslizante; com «Tamanho real» os artefatos de compressão ficam mais visíveis.
+
 A compressão acontece no seu navegador: os arquivos não são enviados a nenhum servidor.
 
 ## Como funciona

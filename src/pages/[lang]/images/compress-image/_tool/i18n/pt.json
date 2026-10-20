@@ -9,6 +9,11 @@
       "jpeg": "JPG",
       "webp": "WebP"
     },
-    "pngNote": "O PNG é sem perdas, e o navegador quase nunca o deixa menor que o original. Por isso, no modo \"Auto\", o PNG é salvo como WebP — bem mais leve e com transparência."
+    "pngNote": "O PNG é sem perdas, e o navegador quase nunca o deixa menor que o original. Por isso, no modo \"Auto\", o PNG é salvo como WebP — bem mais leve e com transparência.",
+    "by": "Como comprimir",
+    "byQuality": "Por qualidade",
+    "bySize": "Até um tamanho máximo",
+    "maxSize": "No máximo",
+    "kb": "KB"
   }
 }

@@ -9,6 +9,11 @@
       "jpeg": "JPG",
       "webp": "WebP"
     },
-    "pngNote": "PNG is lossless, and a browser almost never makes it smaller than the original. That's why Auto saves PNG as WebP — much lighter, and transparency is kept."
+    "pngNote": "PNG is lossless, and a browser almost never makes it smaller than the original. That's why Auto saves PNG as WebP — much lighter, and transparency is kept.",
+    "by": "Compress by",
+    "byQuality": "Quality",
+    "bySize": "Target file size",
+    "maxSize": "No larger than",
+    "kb": "KB"
   }
 }

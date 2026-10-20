@@ -71,6 +71,11 @@
     "downloadAll": "Download all (ZIP)",
     "clear": "Clear",
     "processing": "Processing…",
-    "error": "Couldn't process this file"
+    "error": "Couldn't process this file",
+    "compare": "Compare",
+    "before": "Before",
+    "after": "After",
+    "actualSize": "Actual size",
+    "closeCompare": "Close comparison"
   }
 }

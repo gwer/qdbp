@@ -2,6 +2,8 @@
 
 Añade las fotos (arrástralas, elígelas o pégalas desde el portapapeles) y ajusta la calidad con el control deslizante. En cada archivo verás cuánto pesaba y cuánto pesa después de comprimirlo. Descarga el resultado archivo a archivo o en un ZIP.
 
+Si una web o un formulario pide un archivo «de no más de N KB», elige «A un tamaño máximo» e indica el límite: se busca la mayor calidad que cabe. El botón «Comparar» de cada archivo muestra el original y el resultado con un control deslizante; con «Tamaño real» se ven mejor los artefactos.
+
 La compresión se hace en tu navegador: los archivos no se suben a ningún servidor.
 
 ## Cómo funciona
