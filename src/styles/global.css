@@ -517,3 +517,66 @@ input[type='color'] {
   width: 100%;
   height: auto;
 }
+
+/* Цвет */
+.color-input {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.color-input .field {
+  flex: 1;
+}
+
+.color-input input[type='color'] {
+  width: 56px;
+  height: 42px;
+  flex: none;
+}
+
+.color-swatch {
+  height: 64px;
+  margin: 14px 0 4px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-image: none;
+}
+
+.color-h {
+  font-size: 1rem;
+  margin: 18px 0 8px;
+}
+
+.contrast-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.contrast-sample {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 32px;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+/* Таблица «ключ — значение» */
+table.kv th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: normal;
+}
+
+table.kv td {
+  text-align: right;
+}
+
+.mono {
+  font-family: var(--mono);
+}

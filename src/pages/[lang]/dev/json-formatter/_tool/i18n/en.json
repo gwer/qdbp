@@ -1,0 +1,18 @@
+{
+  "title": "JSON formatter and validator",
+  "description": "Pretty-print JSON with indentation, validate it with the exact line and column of any error, sort keys or minify it to one line.",
+  "ui": {
+    "mode": "Action",
+    "input": "JSON",
+    "output": "Result",
+    "error": "Invalid JSON",
+    "at": "line {line}, column {column}",
+    "modes": {
+      "format2": "2-space indent",
+      "format4": "4-space indent",
+      "tab": "Tabs",
+      "sorted": "Sort keys",
+      "minify": "Minify"
+    }
+  }
+}

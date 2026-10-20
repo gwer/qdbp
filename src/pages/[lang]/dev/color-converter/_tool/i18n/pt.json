@@ -1,0 +1,18 @@
+{
+  "title": "Conversor de cores: HEX, RGB, HSL, OKLCH e contraste",
+  "description": "Converta uma cor entre HEX, RGB, HSL, HSV, CMYK e OKLCH e confira o contraste WCAG com branco e preto.",
+  "ui": {
+    "input": "Cor (HEX, rgb(), hsl() ou oklch())",
+    "picker": "Escolher cor",
+    "error": "Não foi possível reconhecer a cor — tente #3451d1 ou rgb(52 81 209)",
+    "contrast": "Contraste de texto WCAG",
+    "onWhite": "No branco",
+    "onBlack": "No preto",
+    "rating": {
+      "AAA": "serve para qualquer texto (AAA)",
+      "AA": "serve para texto normal (AA)",
+      "AA18": "só para texto grande (AA)",
+      "fail": "insuficiente"
+    }
+  }
+}

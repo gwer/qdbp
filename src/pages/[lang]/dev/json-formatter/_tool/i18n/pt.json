@@ -1,0 +1,18 @@
+{
+  "title": "Formatador de JSON: formatar e validar JSON online",
+  "description": "Formate JSON com indentação, valide com a linha e a coluna exatas do erro, ordene as chaves ou minifique em uma única linha.",
+  "ui": {
+    "mode": "Ação",
+    "input": "JSON",
+    "output": "Resultado",
+    "error": "JSON inválido",
+    "at": "linha {line}, coluna {column}",
+    "modes": {
+      "format2": "Indentação de 2 espaços",
+      "format4": "Indentação de 4 espaços",
+      "tab": "Tabulações",
+      "sorted": "Ordenar chaves",
+      "minify": "Minificar"
+    }
+  }
+}

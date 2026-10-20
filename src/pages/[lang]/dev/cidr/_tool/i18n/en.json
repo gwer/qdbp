@@ -1,0 +1,20 @@
+{
+  "title": "Subnet calculator: IPv4 CIDR, mask and address range",
+  "description": "Enter an IP address with a prefix or mask to get the network address, subnet mask, broadcast address, host range and number of hosts.",
+  "ui": {
+    "input": "IP address with prefix (192.168.1.10/24) or mask",
+    "error": "Enter an address like 192.168.1.10/24 or 10.0.0.0 255.255.0.0",
+    "yes": "yes",
+    "no": "no",
+    "rows": {
+      "network": "Network address",
+      "mask": "Subnet mask",
+      "wildcard": "Wildcard mask",
+      "broadcast": "Broadcast address",
+      "range": "Host range",
+      "usable": "Usable hosts",
+      "size": "Total addresses",
+      "private": "Private network (RFC 1918)"
+    }
+  }
+}

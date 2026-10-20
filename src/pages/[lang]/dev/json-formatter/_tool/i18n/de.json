@@ -1,0 +1,18 @@
+{
+  "title": "JSON-Formatierer: JSON formatieren und validieren",
+  "description": "JSON mit Einrückung formatieren, mit genauer Zeilen- und Spaltenangabe validieren, Schlüssel sortieren oder auf eine Zeile minifizieren.",
+  "ui": {
+    "mode": "Aktion",
+    "input": "JSON",
+    "output": "Ergebnis",
+    "error": "Ungültiges JSON",
+    "at": "Zeile {line}, Spalte {column}",
+    "modes": {
+      "format2": "2 Leerzeichen",
+      "format4": "4 Leerzeichen",
+      "tab": "Tabulatoren",
+      "sorted": "Schlüssel sortieren",
+      "minify": "Minifizieren"
+    }
+  }
+}

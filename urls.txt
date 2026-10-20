@@ -7,6 +7,10 @@
 /de/dates/time-calculator/
 /de/dates/unix-timestamp/
 /de/dates/week-number/
+/de/dev/
+/de/dev/cidr/
+/de/dev/color-converter/
+/de/dev/json-formatter/
 /de/finance/
 /de/finance/compound-interest/
 /de/finance/discount/
@@ -61,6 +65,10 @@
 /en/dates/time-calculator/
 /en/dates/unix-timestamp/
 /en/dates/week-number/
+/en/dev/
+/en/dev/cidr/
+/en/dev/color-converter/
+/en/dev/json-formatter/
 /en/finance/
 /en/finance/compound-interest/
 /en/finance/discount/
@@ -107,6 +115,10 @@
 /es/dates/time-calculator/
 /es/dates/unix-timestamp/
 /es/dates/week-number/
+/es/dev/
+/es/dev/cidr/
+/es/dev/color-converter/
+/es/dev/json-formatter/
 /es/finance/
 /es/finance/compound-interest/
 /es/finance/discount/
@@ -161,6 +173,10 @@
 /pt/dates/time-calculator/
 /pt/dates/unix-timestamp/
 /pt/dates/week-number/
+/pt/dev/
+/pt/dev/cidr/
+/pt/dev/color-converter/
+/pt/dev/json-formatter/
 /pt/finance/
 /pt/finance/compound-interest/
 /pt/finance/discount/
@@ -215,6 +231,10 @@
 /ru/dates/time-calculator/
 /ru/dates/unix-timestamp/
 /ru/dates/week-number/
+/ru/dev/
+/ru/dev/cidr/
+/ru/dev/color-converter/
+/ru/dev/json-formatter/
 /ru/finance/
 /ru/finance/compound-interest/
 /ru/finance/discount/

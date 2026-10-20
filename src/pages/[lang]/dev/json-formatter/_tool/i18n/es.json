@@ -1,0 +1,18 @@
+{
+  "title": "Formateador de JSON: formatear y validar JSON online",
+  "description": "Formatea JSON con sangría, valídalo con la línea y la columna exactas del error, ordena las claves o minifícalo en una sola línea.",
+  "ui": {
+    "mode": "Acción",
+    "input": "JSON",
+    "output": "Resultado",
+    "error": "JSON no válido",
+    "at": "línea {line}, columna {column}",
+    "modes": {
+      "format2": "Sangría de 2 espacios",
+      "format4": "Sangría de 4 espacios",
+      "tab": "Tabulaciones",
+      "sorted": "Ordenar claves",
+      "minify": "Minificar"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Color converter: HEX, RGB, HSL, OKLCH and contrast",
+  "description": "Convert a color between HEX, RGB, HSL, HSV, CMYK and OKLCH and check its WCAG contrast against white and black.",
+  "ui": {
+    "input": "Color (HEX, rgb(), hsl() or oklch())",
+    "picker": "Pick a color",
+    "error": "Couldn't read that color — try #3451d1 or rgb(52 81 209)",
+    "contrast": "WCAG text contrast",
+    "onWhite": "On white",
+    "onBlack": "On black",
+    "rating": {
+      "AAA": "passes for all text (AAA)",
+      "AA": "passes for normal text (AA)",
+      "AA18": "large text only (AA)",
+      "fail": "fails"
+    }
+  }
+}

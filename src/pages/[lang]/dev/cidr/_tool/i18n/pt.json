@@ -1,0 +1,20 @@
+{
+  "title": "Calculadora de sub-rede IPv4: CIDR, máscara e faixa",
+  "description": "Digite um IP com prefixo ou máscara para ver o endereço de rede, a máscara, o broadcast, a faixa de hosts e quantos hosts cabem.",
+  "ui": {
+    "input": "Endereço IP com prefixo (192.168.1.10/24) ou máscara",
+    "error": "Digite um endereço como 192.168.1.10/24 ou 10.0.0.0 255.255.0.0",
+    "yes": "sim",
+    "no": "não",
+    "rows": {
+      "network": "Endereço de rede",
+      "mask": "Máscara de sub-rede",
+      "wildcard": "Máscara curinga (wildcard)",
+      "broadcast": "Endereço de broadcast",
+      "range": "Faixa de hosts",
+      "usable": "Hosts utilizáveis",
+      "size": "Total de endereços",
+      "private": "Rede privada (RFC 1918)"
+    }
+  }
+}

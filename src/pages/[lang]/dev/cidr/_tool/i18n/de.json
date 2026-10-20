@@ -1,0 +1,20 @@
+{
+  "title": "Subnetzrechner: IPv4-CIDR, Subnetzmaske und Adressbereich",
+  "description": "IP-Adresse mit Präfix oder Maske eingeben – Netzadresse, Subnetzmaske, Broadcast-Adresse, Host-Bereich und Anzahl der Hosts.",
+  "ui": {
+    "input": "IP-Adresse mit Präfix (192.168.1.10/24) oder Maske",
+    "error": "Adresse wie 192.168.1.10/24 oder 10.0.0.0 255.255.0.0 eingeben",
+    "yes": "ja",
+    "no": "nein",
+    "rows": {
+      "network": "Netzadresse",
+      "mask": "Subnetzmaske",
+      "wildcard": "Wildcard-Maske",
+      "broadcast": "Broadcast-Adresse",
+      "range": "Host-Bereich",
+      "usable": "Nutzbare Hosts",
+      "size": "Adressen gesamt",
+      "private": "Privates Netz (RFC 1918)"
+    }
+  }
+}

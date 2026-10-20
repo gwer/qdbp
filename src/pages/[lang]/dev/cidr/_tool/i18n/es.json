@@ -1,0 +1,20 @@
+{
+  "title": "Calculadora de subredes IPv4: CIDR, máscara y rango",
+  "description": "Introduce una IP con prefijo o máscara y obtén la dirección de red, la máscara, el broadcast, el rango de hosts y su número.",
+  "ui": {
+    "input": "Dirección IP con prefijo (192.168.1.10/24) o máscara",
+    "error": "Escribe una dirección como 192.168.1.10/24 o 10.0.0.0 255.255.0.0",
+    "yes": "sí",
+    "no": "no",
+    "rows": {
+      "network": "Dirección de red",
+      "mask": "Máscara de subred",
+      "wildcard": "Máscara wildcard",
+      "broadcast": "Dirección de broadcast",
+      "range": "Rango de hosts",
+      "usable": "Hosts utilizables",
+      "size": "Direcciones en total",
+      "private": "Red privada (RFC 1918)"
+    }
+  }
+}

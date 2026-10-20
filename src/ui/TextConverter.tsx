@@ -12,15 +12,28 @@ export interface Mode {
  * Текст → преобразование → текст. Строки инструмента: ui.input, ui.output, ui.error, ui.modes.<id>.
  * Режимы — переключатель над полем (кодировать/декодировать, регистр и т. п.).
  */
-export function TextConverter({ t, modes, placeholder }: { t: T; modes: Mode[]; placeholder?: string }) {
+export function TextConverter({
+  t,
+  modes,
+  placeholder,
+  describeError,
+}: {
+  t: T;
+  modes: Mode[];
+  placeholder?: string;
+  /** Подробности ошибки для пользователя (например, «строка 3, столбец 5»). */
+  describeError?: (error: unknown, input: string) => string | null;
+}) {
   const [mode, setMode] = useState(modes[0].id);
   const [input, setInput] = useState('');
   let output = '';
   let error = false;
+  let detail: string | null = null;
   try {
     output = modes.find((m) => m.id === mode)!.run(input);
-  } catch {
+  } catch (e) {
     error = true;
+    detail = describeError?.(e, input) ?? null;
   }
   return (
     <div>
@@ -40,7 +53,12 @@ export function TextConverter({ t, modes, placeholder }: { t: T; modes: Mode[]; 
       <div class="field">
         <label for="tc-out">{t('ui.output')}</label>
         <textarea id="tc-out" class="mono" rows={6} readOnly value={error ? '' : output} aria-invalid={error ? 'true' : undefined} />
-        {error && <p class="field-error">{t('ui.error')}</p>}
+        {error && (
+          <p class="field-error">
+            {t('ui.error')}
+            {detail && `: ${detail}`}
+          </p>
+        )}
       </div>
       <div class="actions">
         <CopyButton text={error ? '' : output} t={t} />
