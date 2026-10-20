@@ -14,6 +14,8 @@
     "total": "Summe",
     "flip": "Münze werfen",
     "heads": "Kopf",
-    "tails": "Zahl"
+    "tails": "Zahl",
+    "history": "Letzte Würfe (Summe)",
+    "tally": "Stand: Kopf {heads}, Zahl {tails}"
   }
 }

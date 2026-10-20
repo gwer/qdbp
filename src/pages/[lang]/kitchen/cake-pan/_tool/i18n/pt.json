@@ -37,11 +37,19 @@
     },
     "change": {
       "label": "Mudança"
+    },
+    "fromArea": {
+      "label": "Área da forma original"
+    },
+    "toArea": {
+      "label": "Área da forma nova"
     }
   },
   "ui": {
     "more": "{p}% a mais de ingredientes",
     "less": "{p}% a menos de ingredientes",
-    "same": "As mesmas quantidades"
+    "same": "As mesmas quantidades",
+    "cm2": "cm²",
+    "in2": "pol²"
   }
 }

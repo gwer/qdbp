@@ -1,9 +1,15 @@
 import { formatNumber } from '@/lib/format';
-import { defineCalculator } from '@/ui/define';
+import { defineCalculator, type FormatContext } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
-import { panFactor } from './pan';
+import { panArea, panFactor } from './pan';
 
 const SHAPES = ['round', 'square', 'rect'] as const;
+
+/** Площадь дна формы: см² или квадратные дюймы — по выбранной системе. */
+const area = (cm2: number, { lang, units, t }: FormatContext) =>
+  units === 'imperial'
+    ? `${formatNumber(lang, cm2 / 6.4516, 'number', 0)} ${t('ui.in2')}`
+    : `${formatNumber(lang, cm2, 'number', 0)} ${t('ui.cm2')}`;
 
 export const def = defineCalculator({
   order: 20,
@@ -18,7 +24,7 @@ export const def = defineCalculator({
   },
   compute: (v) => {
     const factor = panFactor({ shape: v.fromShape, a: v.fromA, b: v.fromB }, { shape: v.toShape, a: v.toA, b: v.toB });
-    return { factor, change: factor };
+    return { factor, change: factor, fromArea: panArea(v.fromShape, v.fromA, v.fromB), toArea: panArea(v.toShape, v.toA, v.toB) };
   },
   outputs: {
     factor: { type: 'custom', format: (f: number, { lang }) => `×${formatNumber(lang, f, 'number', 2)}` },
@@ -30,6 +36,8 @@ export const def = defineCalculator({
         return t(p > 0 ? 'ui.more' : 'ui.less', { p: formatNumber(lang, Math.abs(p), 'integer') });
       },
     },
+    fromArea: { type: 'custom', format: area },
+    toArea: { type: 'custom', format: area },
   },
 });
 

@@ -37,11 +37,19 @@
     },
     "change": {
       "label": "Cambio"
+    },
+    "fromArea": {
+      "label": "Superficie del molde original"
+    },
+    "toArea": {
+      "label": "Superficie del molde nuevo"
     }
   },
   "ui": {
     "more": "Un {p} % más de ingredientes",
     "less": "Un {p} % menos de ingredientes",
-    "same": "Las mismas cantidades"
+    "same": "Las mismas cantidades",
+    "cm2": "cm²",
+    "in2": "pulg²"
   }
 }

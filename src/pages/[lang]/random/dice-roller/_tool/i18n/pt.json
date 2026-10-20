@@ -14,6 +14,8 @@
     "total": "Soma",
     "flip": "Jogar moeda",
     "heads": "Cara",
-    "tails": "Coroa"
+    "tails": "Coroa",
+    "history": "Últimos lances (soma)",
+    "tally": "Placar: Cara {heads}, Coroa {tails}"
   }
 }

@@ -37,11 +37,19 @@
     },
     "change": {
       "label": "Change"
+    },
+    "fromArea": {
+      "label": "Original pan area"
+    },
+    "toArea": {
+      "label": "New pan area"
     }
   },
   "ui": {
     "more": "Increase ingredient quantities by {p}%",
     "less": "Reduce ingredient quantities by {p}%",
-    "same": "Same amounts"
+    "same": "Same amounts",
+    "cm2": "cm²",
+    "in2": "sq in"
   }
 }

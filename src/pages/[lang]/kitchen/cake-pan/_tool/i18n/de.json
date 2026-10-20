@@ -37,11 +37,19 @@
     },
     "change": {
       "label": "Änderung"
+    },
+    "fromArea": {
+      "label": "Bodenfläche der alten Form"
+    },
+    "toArea": {
+      "label": "Bodenfläche der neuen Form"
     }
   },
   "ui": {
     "more": "{p} % mehr Zutaten",
     "less": "{p} % weniger Zutaten",
-    "same": "Gleiche Mengen"
+    "same": "Gleiche Mengen",
+    "cm2": "cm²",
+    "in2": "sq in"
   }
 }
