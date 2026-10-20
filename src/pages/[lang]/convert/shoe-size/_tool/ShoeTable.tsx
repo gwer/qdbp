@@ -2,7 +2,7 @@ import { formatNumber } from '@/lib/format';
 import type { ExtraProps } from '@/ui/define';
 import { SHOES } from './shoes';
 
-export function ShoeTable({ lang, t, result }: ExtraProps<unknown, { eu: number } | null>) {
+export function ShoeTable({ lang, t, result }: ExtraProps<unknown, { eu?: number } | null>) {
   const f = (n: number) => formatNumber(lang, n);
   return (
     <details class="extra">

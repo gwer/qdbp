@@ -115,10 +115,8 @@ export function Converter({ dim, defaults, lang, t }: ToolProps & { dim: Dimensi
       </div>
       <section class="calc-result" aria-live="polite" aria-label={t('calc.result')}>
         <div class="out out-primary">
-          <span class="out-label">
-            {valid ? `${formatValue(lang, value!)} ${name(from)} =` : t('calc.result')}
-          </span>
-          <output class="out-value">{valid ? `${formatValue(lang, convertValue(dim, value!, from, to))} ${name(to)}` : '—'}</output>
+          <span class="out-label">{name(to)}</span>
+          <output class="out-value">{valid ? formatValue(lang, convertValue(dim, value!, from, to)) : '—'}</output>
         </div>
       </section>
       {valid && (
