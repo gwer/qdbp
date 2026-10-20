@@ -1,0 +1,42 @@
+{
+  "title": "Countdown: wie viele Tage bis zu einem Datum",
+  "description": "Wie viele Tage, Stunden, Minuten und Sekunden noch bis Silvester, zum Geburtstag, zum Urlaub oder zu einem anderen Datum? Mit Live-Countdown.",
+  "inputs": {
+    "date": {
+      "label": "Datum des Ereignisses"
+    },
+    "time": {
+      "label": "Uhrzeit"
+    }
+  },
+  "outputs": {
+    "date": {
+      "label": "Ereignis"
+    }
+  },
+  "ui": {
+    "until": "Noch",
+    "since": "Vergangen",
+    "days": {
+      "one": "Tag",
+      "other": "Tage"
+    },
+    "hours": {
+      "one": "Stunde",
+      "other": "Stunden"
+    },
+    "minutes": {
+      "one": "Minute",
+      "other": "Minuten"
+    },
+    "seconds": {
+      "one": "Sekunde",
+      "other": "Sekunden"
+    },
+    "weeks": {
+      "one": "{n} Woche",
+      "other": "{n} Wochen"
+    },
+    "totals": "Das sind {weeks} oder {hours} Stunden oder {minutes} Minuten."
+  }
+}

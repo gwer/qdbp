@@ -1,0 +1,42 @@
+{
+  "title": "Contagem regressiva: quantos dias faltam para uma data",
+  "description": "Veja quantos dias, horas, minutos e segundos faltam para o Ano-Novo, um aniversário, as férias ou qualquer outra data, com contagem regressiva ao vivo.",
+  "inputs": {
+    "date": {
+      "label": "Data do evento"
+    },
+    "time": {
+      "label": "Horário"
+    }
+  },
+  "outputs": {
+    "date": {
+      "label": "Evento"
+    }
+  },
+  "ui": {
+    "until": "Faltam",
+    "since": "Já se passaram",
+    "days": {
+      "one": "dia",
+      "other": "dias"
+    },
+    "hours": {
+      "one": "hora",
+      "other": "horas"
+    },
+    "minutes": {
+      "one": "minuto",
+      "other": "minutos"
+    },
+    "seconds": {
+      "one": "segundo",
+      "other": "segundos"
+    },
+    "weeks": {
+      "one": "{n} semana",
+      "other": "{n} semanas"
+    },
+    "totals": "São {weeks}, ou {hours} horas, ou {minutes} minutos."
+  }
+}

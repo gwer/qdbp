@@ -1,0 +1,33 @@
+{
+  "title": "Calculadora de sueño: a qué hora acostarse y levantarse",
+  "description": "Calcula a qué hora acostarte para despertar descansado o a qué hora poner el despertador, según ciclos de sueño de 90 minutos.",
+  "inputs": {
+    "mode": {
+      "label": "Quiero",
+      "options": {
+        "wake": "Despertarme a las",
+        "bed": "Acostarme a las"
+      }
+    },
+    "time": {
+      "label": "Hora"
+    },
+    "fallAsleep": {
+      "label": "Minutos para dormirme"
+    }
+  },
+  "outputs": {
+    "c5": {
+      "label": "5 ciclos — 7,5 h de sueño"
+    },
+    "c6": {
+      "label": "6 ciclos — 9 h de sueño"
+    },
+    "c4": {
+      "label": "4 ciclos — 6 h de sueño"
+    },
+    "c3": {
+      "label": "3 ciclos — 4,5 h de sueño"
+    }
+  }
+}

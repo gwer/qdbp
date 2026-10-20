@@ -1,0 +1,32 @@
+{
+  "title": "Electricity cost calculator: what an appliance costs to run",
+  "description": "Find out how much electricity an appliance uses and what it costs to run per day, month and year at your rate.",
+  "inputs": {
+    "power": {
+      "label": "Power, watts"
+    },
+    "hours": {
+      "label": "Hours of use per day"
+    },
+    "tariff": {
+      "label": "Price per kWh"
+    }
+  },
+  "outputs": {
+    "costMonth": {
+      "label": "Per month"
+    },
+    "costDay": {
+      "label": "Per day"
+    },
+    "costYear": {
+      "label": "Per year"
+    },
+    "kwhDay": {
+      "label": "kWh per day"
+    },
+    "kwhMonth": {
+      "label": "kWh per month"
+    }
+  }
+}

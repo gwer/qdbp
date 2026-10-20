@@ -1,0 +1,32 @@
+{
+  "title": "Calculadora de consumo eléctrico: cuánto gasta un aparato",
+  "description": "Averigua cuánta electricidad consume un aparato y cuánto cuesta al día, al mes y al año con tu tarifa.",
+  "inputs": {
+    "power": {
+      "label": "Potencia, W"
+    },
+    "hours": {
+      "label": "Horas de uso al día"
+    },
+    "tariff": {
+      "label": "Precio del kWh"
+    }
+  },
+  "outputs": {
+    "costMonth": {
+      "label": "Al mes"
+    },
+    "costDay": {
+      "label": "Al día"
+    },
+    "costYear": {
+      "label": "Al año"
+    },
+    "kwhDay": {
+      "label": "kWh al día"
+    },
+    "kwhMonth": {
+      "label": "kWh al mes"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Schlafrechner: wann ins Bett, wann aufstehen",
+  "description": "Berechnen Sie, wann Sie ins Bett gehen sollten, um ausgeruht aufzuwachen, oder wann der Wecker klingeln sollte – nach 90-minütigen Schlafzyklen.",
+  "inputs": {
+    "mode": {
+      "label": "Ich möchte",
+      "options": {
+        "wake": "Aufwachen um",
+        "bed": "Ins Bett gehen um"
+      }
+    },
+    "time": {
+      "label": "Uhrzeit"
+    },
+    "fallAsleep": {
+      "label": "Einschlafen dauert, Minuten"
+    }
+  },
+  "outputs": {
+    "c5": {
+      "label": "5 Zyklen – 7,5 Std. Schlaf"
+    },
+    "c6": {
+      "label": "6 Zyklen – 9 Std. Schlaf"
+    },
+    "c4": {
+      "label": "4 Zyklen – 6 Std. Schlaf"
+    },
+    "c3": {
+      "label": "3 Zyklen – 4,5 Std. Schlaf"
+    }
+  }
+}

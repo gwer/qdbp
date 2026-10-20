@@ -1,0 +1,38 @@
+{
+  "title": "Fuel cost calculator: gas cost of a trip",
+  "description": "Work out how much fuel a road trip will take, what it will cost and how much each passenger owes — in mpg or L/100 km.",
+  "inputs": {
+    "distance": {
+      "label": "Distance"
+    },
+    "unit": {
+      "label": "Fuel economy unit",
+      "options": {
+        "l100km": "L/100 km",
+        "kml": "km/L",
+        "mpgus": "mpg (US)",
+        "mpguk": "mpg (UK)"
+      }
+    },
+    "economy": {
+      "label": "Fuel economy"
+    },
+    "price": {
+      "label": "Fuel price per US gallon (per liter for other units)"
+    },
+    "people": {
+      "label": "People in the car"
+    }
+  },
+  "outputs": {
+    "cost": {
+      "label": "Trip fuel cost"
+    },
+    "perPerson": {
+      "label": "Cost per person"
+    },
+    "fuel": {
+      "label": "Fuel needed"
+    }
+  }
+}

@@ -14,7 +14,7 @@ export type NumberInput = {
   max?: number;
 } & ByLang<number>;
 export type SelectInput = { type: 'select'; options: readonly string[]; default: string } & ByLang<string>;
-/** default: 'YYYY-MM-DD', 'today', 'today+N', 'today-N'. «Сегодня» подставляется только в браузере. */
+/** default: 'YYYY-MM-DD', 'today', 'today±N' или 'next-MM-DD' (ближайшая такая дата). Относительные — только в браузере. */
 export type DateInput = { type: 'date'; default: string };
 /**
  * Длительность «ч:мм»; default и значение — в минутах.

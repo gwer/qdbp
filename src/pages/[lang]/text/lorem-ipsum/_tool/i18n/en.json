@@ -1,0 +1,16 @@
+{
+  "title": "Lorem ipsum generator: placeholder text",
+  "description": "Generate Lorem ipsum placeholder text by paragraphs, sentences or words, with or without HTML tags, and copy it in one click.",
+  "ui": {
+    "count": "How many",
+    "unit": "Of",
+    "units": {
+      "paragraphs": "Paragraphs",
+      "sentences": "Sentences",
+      "words": "Words"
+    },
+    "classic": "Start with \"Lorem ipsum dolor sit amet…\"",
+    "html": "Wrap paragraphs in <p> tags",
+    "result": "Text"
+  }
+}

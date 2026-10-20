@@ -1,0 +1,32 @@
+{
+  "title": "Stromkostenrechner: was ein Gerät im Betrieb kostet",
+  "description": "Berechnen Sie, wie viel Strom ein Gerät verbraucht und was es pro Tag, Monat und Jahr bei Ihrem Tarif kostet.",
+  "inputs": {
+    "power": {
+      "label": "Leistung, Watt"
+    },
+    "hours": {
+      "label": "Betriebsstunden pro Tag"
+    },
+    "tariff": {
+      "label": "Preis pro kWh"
+    }
+  },
+  "outputs": {
+    "costMonth": {
+      "label": "Pro Monat"
+    },
+    "costDay": {
+      "label": "Pro Tag"
+    },
+    "costYear": {
+      "label": "Pro Jahr"
+    },
+    "kwhDay": {
+      "label": "kWh pro Tag"
+    },
+    "kwhMonth": {
+      "label": "kWh pro Monat"
+    }
+  }
+}

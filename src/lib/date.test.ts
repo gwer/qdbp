@@ -110,5 +110,9 @@ describe('resolveDateDefault', () => {
     expect(resolveDateDefault('today', '2026-10-19')).toBe('2026-10-19');
     expect(resolveDateDefault('today+30', '2026-10-19')).toBe('2026-11-18');
     expect(resolveDateDefault('today-1', '2026-01-01')).toBe('2025-12-31');
+    expect(resolveDateDefault('next-01-01', null)).toBeNull();
+    expect(resolveDateDefault('next-01-01', '2026-10-19')).toBe('2027-01-01');
+    expect(resolveDateDefault('next-01-01', '2027-01-01')).toBe('2028-01-01');
+    expect(resolveDateDefault('next-12-25', '2026-10-19')).toBe('2026-12-25');
   });
 });

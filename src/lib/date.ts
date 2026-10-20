@@ -94,12 +94,19 @@ export function usWeek(iso: string): { week: number; year: number; start: string
 }
 
 /**
- * Значение по умолчанию для поля даты: 'YYYY-MM-DD', 'today', 'today+30', 'today-7'.
- * 'today…' возвращает null на сервере — «сегодня» известно только в браузере.
+ * Значение по умолчанию для поля даты: 'YYYY-MM-DD', 'today', 'today+30', 'today-7'
+ * или 'next-MM-DD' — ближайшая такая дата после сегодняшней (например, Новый год).
+ * Относительные значения на сервере дают null — «сегодня» известно только в браузере.
  */
 export function resolveDateDefault(spec: string, today: string | null): string | null {
   const m = /^today([+-]\d+)?$/.exec(spec);
-  if (!m) return spec;
+  const next = /^next-(\d\d-\d\d)$/.exec(spec);
+  if (!m && !next) return spec;
   if (!today) return null;
-  return m[1] ? addDays(today, Number(m[1])) : today;
+  if (next) {
+    const year = Number(today.slice(0, 4));
+    const candidate = `${year}-${next[1]}`;
+    return candidate > today ? candidate : `${year + 1}-${next[1]}`;
+  }
+  return m![1] ? addDays(today, Number(m![1])) : today;
 }

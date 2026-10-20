@@ -1,0 +1,42 @@
+{
+  "title": "Cuenta regresiva: cuántos días faltan para una fecha",
+  "description": "Mira cuántos días, horas, minutos y segundos faltan para Año Nuevo, un cumpleaños, las vacaciones o cualquier otra fecha, con una cuenta atrás en directo.",
+  "inputs": {
+    "date": {
+      "label": "Fecha del evento"
+    },
+    "time": {
+      "label": "Hora"
+    }
+  },
+  "outputs": {
+    "date": {
+      "label": "Evento"
+    }
+  },
+  "ui": {
+    "until": "Faltan",
+    "since": "Han pasado",
+    "days": {
+      "one": "día",
+      "other": "días"
+    },
+    "hours": {
+      "one": "hora",
+      "other": "horas"
+    },
+    "minutes": {
+      "one": "minuto",
+      "other": "minutos"
+    },
+    "seconds": {
+      "one": "segundo",
+      "other": "segundos"
+    },
+    "weeks": {
+      "one": "{n} semana",
+      "other": "{n} semanas"
+    },
+    "totals": "Son {weeks}, o {hours} horas, o {minutes} minutos."
+  }
+}

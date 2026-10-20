@@ -14,6 +14,7 @@
 /de/dates/
 /de/dates/add-to-date/
 /de/dates/age-calculator/
+/de/dates/countdown/
 /de/dates/days-between/
 /de/dates/time-between/
 /de/dates/time-calculator/
@@ -33,6 +34,8 @@
 /de/finance/compound-interest/
 /de/finance/discount/
 /de/finance/early-repayment/
+/de/finance/electricity-cost/
+/de/finance/fuel-cost/
 /de/finance/inflation/
 /de/finance/loan-calculator/
 /de/finance/margin/
@@ -50,6 +53,7 @@
 /de/health/ideal-weight/
 /de/health/ovulation/
 /de/health/running-pace/
+/de/health/sleep-calculator/
 /de/health/water-intake/
 /de/images/
 /de/images/compress-image/
@@ -98,6 +102,7 @@
 /de/text/
 /de/text/case-converter/
 /de/text/line-tools/
+/de/text/lorem-ipsum/
 /de/text/word-counter/
 /en/
 /en/convert/
@@ -115,6 +120,7 @@
 /en/dates/
 /en/dates/add-to-date/
 /en/dates/age-calculator/
+/en/dates/countdown/
 /en/dates/days-between/
 /en/dates/time-between/
 /en/dates/time-calculator/
@@ -134,6 +140,8 @@
 /en/finance/compound-interest/
 /en/finance/discount/
 /en/finance/early-repayment/
+/en/finance/electricity-cost/
+/en/finance/fuel-cost/
 /en/finance/inflation/
 /en/finance/loan-calculator/
 /en/finance/margin/
@@ -151,6 +159,7 @@
 /en/health/ideal-weight/
 /en/health/ovulation/
 /en/health/running-pace/
+/en/health/sleep-calculator/
 /en/health/water-intake/
 /en/images/
 /en/images/compress-image/
@@ -198,6 +207,7 @@
 /en/text/
 /en/text/case-converter/
 /en/text/line-tools/
+/en/text/lorem-ipsum/
 /en/text/word-counter/
 /es/
 /es/convert/
@@ -215,6 +225,7 @@
 /es/dates/
 /es/dates/add-to-date/
 /es/dates/age-calculator/
+/es/dates/countdown/
 /es/dates/days-between/
 /es/dates/time-between/
 /es/dates/time-calculator/
@@ -234,6 +245,8 @@
 /es/finance/compound-interest/
 /es/finance/discount/
 /es/finance/early-repayment/
+/es/finance/electricity-cost/
+/es/finance/fuel-cost/
 /es/finance/inflation/
 /es/finance/loan-calculator/
 /es/finance/margin/
@@ -251,6 +264,7 @@
 /es/health/ideal-weight/
 /es/health/ovulation/
 /es/health/running-pace/
+/es/health/sleep-calculator/
 /es/health/water-intake/
 /es/images/
 /es/images/compress-image/
@@ -299,6 +313,7 @@
 /es/text/
 /es/text/case-converter/
 /es/text/line-tools/
+/es/text/lorem-ipsum/
 /es/text/word-counter/
 /pt/
 /pt/convert/
@@ -316,6 +331,7 @@
 /pt/dates/
 /pt/dates/add-to-date/
 /pt/dates/age-calculator/
+/pt/dates/countdown/
 /pt/dates/days-between/
 /pt/dates/time-between/
 /pt/dates/time-calculator/
@@ -335,6 +351,8 @@
 /pt/finance/compound-interest/
 /pt/finance/discount/
 /pt/finance/early-repayment/
+/pt/finance/electricity-cost/
+/pt/finance/fuel-cost/
 /pt/finance/inflation/
 /pt/finance/loan-calculator/
 /pt/finance/margin/
@@ -352,6 +370,7 @@
 /pt/health/ideal-weight/
 /pt/health/ovulation/
 /pt/health/running-pace/
+/pt/health/sleep-calculator/
 /pt/health/water-intake/
 /pt/images/
 /pt/images/compress-image/
@@ -400,6 +419,7 @@
 /pt/text/
 /pt/text/case-converter/
 /pt/text/line-tools/
+/pt/text/lorem-ipsum/
 /pt/text/word-counter/
 /ru/
 /ru/convert/
@@ -417,6 +437,7 @@
 /ru/dates/
 /ru/dates/add-to-date/
 /ru/dates/age-calculator/
+/ru/dates/countdown/
 /ru/dates/days-between/
 /ru/dates/time-between/
 /ru/dates/time-calculator/
@@ -436,11 +457,14 @@
 /ru/finance/compound-interest/
 /ru/finance/discount/
 /ru/finance/early-repayment/
+/ru/finance/electricity-cost/
+/ru/finance/fuel-cost/
 /ru/finance/inflation/
 /ru/finance/loan-calculator/
 /ru/finance/margin/
 /ru/finance/markup/
 /ru/finance/mortgage/
+/ru/finance/net-salary/
 /ru/finance/refinance/
 /ru/finance/roi/
 /ru/finance/tip/
@@ -453,6 +477,7 @@
 /ru/health/ideal-weight/
 /ru/health/ovulation/
 /ru/health/running-pace/
+/ru/health/sleep-calculator/
 /ru/health/water-intake/
 /ru/images/
 /ru/images/compress-image/
@@ -501,5 +526,6 @@
 /ru/text/
 /ru/text/case-converter/
 /ru/text/line-tools/
+/ru/text/lorem-ipsum/
 /ru/text/transliteration/
 /ru/text/word-counter/

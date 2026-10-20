@@ -1,0 +1,32 @@
+{
+  "title": "Calculadora de consumo de energia: quanto gasta um aparelho",
+  "description": "Descubra quanta energia um aparelho consome e quanto custa por dia, mês e ano com a sua tarifa.",
+  "inputs": {
+    "power": {
+      "label": "Potência, W"
+    },
+    "hours": {
+      "label": "Horas de uso por dia"
+    },
+    "tariff": {
+      "label": "Tarifa por kWh"
+    }
+  },
+  "outputs": {
+    "costMonth": {
+      "label": "Por mês"
+    },
+    "costDay": {
+      "label": "Por dia"
+    },
+    "costYear": {
+      "label": "Por ano"
+    },
+    "kwhDay": {
+      "label": "kWh por dia"
+    },
+    "kwhMonth": {
+      "label": "kWh por mês"
+    }
+  }
+}

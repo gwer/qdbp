@@ -1,0 +1,14 @@
+---
+// Одинаковый у всех инструментов: всё своё у инструмента лежит в _tool/.
+import ToolPage from '@/layouts/ToolPage.astro';
+import { toolPaths, type ToolPageProps } from '@/lib/catalog';
+import Tool, { def } from './_tool/tool';
+
+export const getStaticPaths = () => toolPaths(def);
+
+const { island, ...page } = Astro.props as ToolPageProps;
+---
+
+<ToolPage {...page}>
+  <Tool client:load {...island} />
+</ToolPage>
