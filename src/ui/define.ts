@@ -124,6 +124,11 @@ export interface CalculatorDef<
   outputs: { [K in keyof R]?: OutputSpec & ShowIf };
   /** Всё, что сложнее чисел: таблицы, графики, схемы. */
   Extra?: ComponentType<ExtraProps<Values<I>, R>>;
+  /**
+   * Старые параметры ссылок → новые поля (в каноничной записи, как в URL). Применяется, только если
+   * нового параметра в ссылке нет; некорректные старые значения не переносятся (вернуть без этого поля).
+   */
+  legacy?: (params: URLSearchParams) => Partial<Record<keyof I & string, string>>;
 }
 
 export interface CustomDef {

@@ -63,3 +63,16 @@ describe('earlyRepayment: ошибки', () => {
     expect(() => earlyRepayment({ ...v, prepay: '1:100:sideways:once' })).toThrow('prepayments');
   });
 });
+
+describe('старые ссылки', () => {
+  it('after/extra/mode → одна запись; новый prepay важнее; некорректное не переносится', async () => {
+    const { def } = await import('./tool');
+    const q = (s: string) => def.legacy!(new URLSearchParams(s));
+    expect(q('after=12&extra=10000&mode=payment')).toEqual({ prepay: '12:10000:payment:once' });
+    expect(q('after=12&extra=10000')).toEqual({ prepay: '12:10000:term:once' });
+    expect(q('after=1.5&extra=10000')).toEqual({});
+    expect(q('after=12&extra=-5')).toEqual({});
+    expect(q('after=12&extra=10000&mode=sideways')).toEqual({});
+    expect(q('amount=100')).toEqual({});
+  });
+});

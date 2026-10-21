@@ -144,6 +144,10 @@ function parseInputs(def: CalculatorDef, raw: Raw, env: Env, now: Now, exact?: E
 // длительности в минутах, величины — в единице инструмента (метрической).
 function readQuery(def: CalculatorDef, env: Env, exact?: Exact): Raw {
   const params = new URLSearchParams(location.search);
+  // Совместимость со ссылками старого формата: новые параметры важнее.
+  for (const [name, v] of Object.entries(def.legacy?.(params) ?? {})) {
+    if (v !== undefined && !params.has(name)) params.set(name, v);
+  }
   const raw: Raw = {};
   for (const [name, spec] of entries(def)) {
     const v = params.get(name);

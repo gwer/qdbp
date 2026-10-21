@@ -1675,3 +1675,25 @@ table.wrap td {
     font-size: 0.86rem;
   }
 }
+
+/* Карточка файла не шире списка: элементы грида по умолчанию не сжимаются уже содержимого. */
+.file-list > li {
+  min-width: 0;
+}
+
+/* На телефоне кнопки файла — отдельной строкой под описанием, иначе «Скачать» уходит за край экрана. */
+@media (max-width: 600px) {
+  .file-row {
+    flex-wrap: wrap;
+  }
+  .file-info {
+    flex-basis: calc(100% - 68px);
+  }
+  .file-actions,
+  .file-row > .btn {
+    margin-left: auto;
+  }
+  .file-actions {
+    flex-basis: 100%;
+  }
+}

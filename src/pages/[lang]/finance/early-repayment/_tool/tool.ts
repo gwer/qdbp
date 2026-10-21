@@ -5,6 +5,9 @@ import { PrepaymentsField } from '../../_shared/PrepaymentsField';
 import { Comparison } from './Comparison';
 import { earlyRepayment } from './early';
 
+/** Одно погашение старой ссылки в записи поля. */
+export const legacyPrepay = (after: number, extra: number, mode: string) => `${after}:${extra}:${mode}:once`;
+
 const term = (m: number, { t }: FormatContext) => (m > 0 ? formatTerm(t, m) : '—');
 
 // Правдоподобные для рынка языка суммы, ставки и сроки — это пример, а не предложения банков.
@@ -33,6 +36,14 @@ export const def = defineCalculator({
     interestAfter: { type: 'money' },
   },
   Extra: Comparison,
+  // До 2026-10-21 погашение было одно: ?after=24&extra=500000&mode=term.
+  legacy: (params) => {
+    const after = Number(params.get('after'));
+    const extra = Number(params.get('extra'));
+    const mode = params.get('mode') ?? 'term';
+    const valid = params.has('after') && params.has('extra') && Number.isInteger(after) && after >= 0 && extra > 0 && (mode === 'term' || mode === 'payment');
+    return valid ? { prepay: legacyPrepay(after, extra, mode) } : {};
+  },
 });
 
 export default island(def);
