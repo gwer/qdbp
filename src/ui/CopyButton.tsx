@@ -13,7 +13,9 @@ async function copy(text: string): Promise<boolean> {
     el.style.opacity = '0';
     document.body.append(el);
     el.select();
-    const ok = document.execCommand('copy');
+    // execCommand устарел, но это единственный запасной путь, когда Clipboard API недоступен. Оставлен намеренно;
+    // вызов через узкий тип, чтобы проверка типов не помечала его как устаревший.
+    const ok = (document as { execCommand(command: 'copy'): boolean }).execCommand('copy');
     el.remove();
     return ok;
   }
