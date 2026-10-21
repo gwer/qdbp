@@ -179,7 +179,7 @@ function writeQuery(def: CalculatorDef, values: Values, initial: Values) {
 }
 
 function formatOutput(env: Env, value: unknown, spec: OutputSpec = {}): string {
-  const { lang, t } = env;
+  const { lang } = env;
   if (spec.type === 'custom') return spec.format(value, env);
   if (spec.type === 'date') return typeof value === 'string' ? formatDate(lang, value, spec.style) : '—';
   if (spec.type === 'text') return typeof value === 'string' ? value : '—';
