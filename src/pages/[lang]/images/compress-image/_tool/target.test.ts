@@ -19,12 +19,15 @@ describe('fitToSize', () => {
   const enc = async (q: number) => new Blob([new Uint8Array(Math.round(1000 + q * 100_000))]);
 
   it('самое высокое качество, при котором файл помещается в лимит', async () => {
-    const b = await fitToSize(enc, 50_000);
+    const { blob: b, fits } = await fitToSize(enc, 50_000);
+    expect(fits).toBe(true);
     expect(b.size).toBeLessThanOrEqual(50_000);
     expect(b.size).toBeGreaterThan(48_000);
   });
 
   it('не помещается даже минимальное — результат с минимальным качеством', async () => {
-    expect((await fitToSize(enc, 1000)).size).toBe(6000);
+    const r = await fitToSize(enc, 1000);
+    expect(r.blob.size).toBe(6000);
+    expect(r.fits).toBe(false);
   });
 });

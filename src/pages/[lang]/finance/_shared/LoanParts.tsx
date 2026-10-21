@@ -62,10 +62,15 @@ export function LoanChart({ schedule, base, lang, t }: { schedule: readonly Loan
   );
 }
 
-/** Помесячный график платежей; offset — сколько платежей было до первой строки. */
-export function ScheduleTable({ schedule, lang, t, offset = 0 }: { schedule: readonly LoanRow[]; lang: Lang; t: T; offset?: number }) {
+/**
+ * Помесячный график платежей; offset — сколько платежей было до первой строки.
+ * initialExtra — погашение сразу после выдачи: отдельная строка «0», чтобы суммы в таблице сходились с итогами.
+ */
+export function ScheduleTable({ schedule, lang, t, offset = 0, initialExtra = 0 }: { schedule: readonly LoanRow[]; lang: Lang; t: T; offset?: number; initialExtra?: number }) {
   const money = (n: number) => formatNumber(lang, n, 'money');
-  const hasExtra = schedule.some((r) => r.extra);
+  const hasExtra = initialExtra > 0 || schedule.some((r) => r.extra);
+  const first = schedule[0];
+  const balance0 = first ? first.balance + first.principal + (first.extra ?? 0) : 0;
   return (
     <details class="extra">
       <summary>{t('ui.schedule')}</summary>
@@ -82,6 +87,16 @@ export function ScheduleTable({ schedule, lang, t, offset = 0 }: { schedule: rea
             </tr>
           </thead>
           <tbody>
+            {initialExtra > 0 && (
+              <tr>
+                <td>{offset}</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>{money(initialExtra)}</td>
+                <td>{money(balance0)}</td>
+              </tr>
+            )}
             {schedule.map((row) => (
               <tr key={row.n}>
                 <td>{offset + row.n}</td>

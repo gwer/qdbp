@@ -46,7 +46,7 @@ export function Comparison({ values, result, lang, t }: ExtraProps<EarlyInput, R
       </div>
       <p class="muted">{t('ui.paymentNote')}</p>
       <LoanChart schedule={result.schedule} base={result.base} lang={lang} t={t} />
-      <ScheduleTable schedule={result.schedule} lang={lang} t={t} />
+      <ScheduleTable schedule={result.schedule} initialExtra={result.initialExtra} lang={lang} t={t} />
     </>
   );
 }

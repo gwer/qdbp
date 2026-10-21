@@ -7,7 +7,7 @@
     "chooseFile": "Choose a file",
     "file": "File",
     "backToText": "Back to text",
-    "tooLarge": "The file is larger than 1 GB — too big to hash in the browser.",
+    "tooLarge": "This tool supports files up to 1 GB. Choose a smaller file.",
     "readError": "Couldn’t read the file.",
     "matches": "matches",
     "expected": "Compare with expected hash",

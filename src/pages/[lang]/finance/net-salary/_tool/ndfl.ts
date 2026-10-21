@@ -65,16 +65,31 @@ export function salaryYear(gross: number, children = 0) {
   };
 }
 
-/** Оклад в целых рублях, при котором средняя зарплата на руки за год не меньше net. */
+/**
+ * Наименьший оклад в целых рублях, при котором средняя зарплата на руки за год не меньше net.
+ * С вычетом на детей сумма на руки не монотонна: на границах 450 000 / k ₽ в месяц пропадает месяц вычета,
+ * и на руки скачком становится меньше. Поэтому ищем по участкам с одинаковым числом месяцев вычета —
+ * внутри участка зависимость монотонна — и берём первое (наименьшее) решение.
+ */
 export function grossFromNet(net: number, children = 0): number {
   if (!(net > 0)) return 0;
-  let lo = 0;
-  let hi = net / 0.78 + 1;
-  // Двоичный поиск по целым рублям: на руки — монотонная функция оклада.
-  while (hi - lo > 1) {
-    const mid = Math.floor((lo + hi) / 2);
-    if (salaryYear(mid, children).yearNet < net * 12) lo = mid;
-    else hi = mid;
+  const target = net * 12;
+  const fits = (g: number) => salaryYear(g, children).yearNet >= target;
+  const top = Math.ceil(net / 0.78) + 1;
+  const edges = children > 0 ? Array.from({ length: 12 }, (_, i) => Math.floor(CHILD_LIMIT / (12 - i))).filter((b) => b < top) : [];
+  let from = 1;
+  for (const to of [...edges, top]) {
+    if (from <= to && fits(to)) {
+      let lo = from;
+      let hi = to;
+      while (lo < hi) {
+        const mid = Math.floor((lo + hi) / 2);
+        if (fits(mid)) hi = mid;
+        else lo = mid + 1;
+      }
+      return lo;
+    }
+    from = to + 1;
   }
-  return Math.ceil(hi);
+  return top;
 }

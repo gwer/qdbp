@@ -1,4 +1,4 @@
-import { useRef, useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import type { T } from '@/i18n/t';
 import { morseTimeline } from './morse';
 
@@ -15,6 +15,15 @@ export function Play({ morse, t }: { morse: string; t: T }) {
     ctx.current = null;
     setPlaying(false);
   };
+  // Кнопка исчезла (ввод очищен, режим сменился) или запись изменилась — старый звук не должен играть невидимо.
+  useEffect(() => () => {
+    ctx.current?.close();
+    ctx.current = null;
+  }, []);
+  useEffect(() => {
+    if (ctx.current) stop();
+  }, [morse]);
+
   const play = () => {
     if (playing) return stop();
     const ac = new AudioContext();

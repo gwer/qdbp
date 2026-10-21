@@ -16,7 +16,7 @@ export function Schedule({ values, result, lang, t }: ExtraProps<{ kind: LoanKin
         <PrepayEffect schedule={result.schedule} base={base.schedule} overpay={result.overpay} baseOverpay={base.overpay} lang={lang} t={t} />
       )}
       <LoanChart schedule={result.schedule} base={base?.schedule} lang={lang} t={t} />
-      <ScheduleTable schedule={result.schedule} lang={lang} t={t} />
+      <ScheduleTable schedule={result.schedule} initialExtra={result.initialExtra} lang={lang} t={t} />
     </>
   );
 }

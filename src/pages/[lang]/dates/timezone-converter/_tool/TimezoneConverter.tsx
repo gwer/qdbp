@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { LANG_META, type ClockMode, type Lang } from '@/i18n/config';
-import { formatTyped, nowClock, parseClock, parseTyped } from '@/lib/clock';
-import { daysBetween, isValidDate, todayISO } from '@/lib/date';
+import { formatTyped, parseClock, parseTyped } from '@/lib/clock';
+import { daysBetween, isValidDate } from '@/lib/date';
 import { formatDateInput, parseDateInput } from '@/lib/date-input';
 import { formatClock } from '@/lib/format';
 import { allZones, formatOffset, offsetMinutes, utcToZoned, zonedToUtc } from '@/lib/timezone';
@@ -49,10 +49,13 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
     const own = Intl.DateTimeFormat().resolvedOptions().timeZone;
     setClock(mode);
     setZones(list);
-    setDateText(formatDateInput(isValidDate(params.get('date') ?? '') ? params.get('date')! : todayISO(), lang));
+    const zone = valid(params.get('from')) ? params.get('from')! : valid(own) ? own : from;
+    // Без даты и времени в ссылке — «сейчас» в исходном поясе (он может отличаться от пояса браузера).
+    const now = utcToZoned(zone, Date.now());
+    setDateText(formatDateInput(isValidDate(params.get('date') ?? '') ? params.get('date')! : now.date, lang));
     const qt = parseClock(params.get('time') ?? '');
-    setTime(formatTyped(qt ?? parseClock(nowClock())!, mode));
-    setFrom(valid(params.get('from')) ? params.get('from')! : valid(own) ? own : from);
+    setTime(formatTyped(qt ?? now.minutes, mode));
+    setFrom(zone);
     const qto = (params.get('to') ?? '').split(',').filter(valid);
     if (qto.length) setTargets(qto);
   }, []);
@@ -139,11 +142,11 @@ export function TimezoneConverter({ lang, t }: ToolProps) {
           type="button"
           class="btn btn-secondary btn-small"
           onClick={() => {
-            const today = todayISO();
-            const now = parseClock(nowClock())!;
-            setDateText(formatDateInput(today, lang));
-            setTime(formatTyped(now, clock));
-            write({ date: today, time: formatTyped(now, '24') });
+            // Текущий момент в исходном поясе, а не в поясе браузера: поля даты и времени относятся к нему.
+            const now = utcToZoned(from, Date.now());
+            setDateText(formatDateInput(now.date, lang));
+            setTime(formatTyped(now.minutes, clock));
+            write({ date: now.date, time: formatTyped(now.minutes, '24') });
           }}
         >
           {t('ui.now')}

@@ -82,9 +82,9 @@
       "remove": "Удалить",
       "repeats": {
         "once": "Разово",
-        "monthly": "Каждый месяц",
-        "quarterly": "Раз в квартал",
-        "yearly": "Раз в год"
+        "monthly": "Ежемесячно",
+        "quarterly": "Ежеквартально",
+        "yearly": "Ежегодно"
       },
       "modes": {
         "term": "Срок",

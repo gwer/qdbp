@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks';
 import type { ToolProps } from '@/ui/define';
 import { IntField, QualityField, SelectField } from '@/ui/files/fields';
+import { formatBytes } from '@/ui/files/bytes';
 import { decode, encode, outputName, type OutputType } from '@/ui/files/image';
 import { ImageBatch, type Processed } from '@/ui/files/ImageBatch';
 import { stripJpeg } from '@/ui/files/jpeg';
@@ -19,10 +20,8 @@ export function CompressImage({ lang, t }: ToolProps) {
     try {
       const size = { width: bitmap.width, height: bitmap.height };
       const type: OutputType = compressedType(file.type, target);
-      const blob =
-        by === 'size'
-          ? await fitToSize((q) => encode(bitmap, { ...size, type, quality: q }), maxKb * 1000)
-          : await encode(bitmap, { ...size, type, quality: quality / 100 });
+      const fitted = by === 'size' ? await fitToSize((q) => encode(bitmap, { ...size, type, quality: q }), maxKb * 1000) : null;
+      const blob = fitted ? fitted.blob : await encode(bitmap, { ...size, type, quality: quality / 100 });
       // Если «сжатый» файл вышел не меньше исходника того же формата — честно оставляем исходник.
       // Из JPEG при этом без перекодирования вырезаем метаданные (EXIF, GPS, XMP, комментарии), как и при пересохранении.
       let original: Blob = file;
@@ -30,7 +29,13 @@ export function CompressImage({ lang, t }: ToolProps) {
         original = new Blob([stripJpeg(new Uint8Array(await file.arrayBuffer()), { keepIcc: true, keepOrientation: true })], { type });
       }
       const keep = type === file.type && blob.size >= original.size;
+      const out = keep ? original : blob;
       return {
+        // Лимит недостижим без уменьшения разрешения — говорим прямо, файл всё равно можно скачать.
+        warning:
+          fitted && out.size > maxKb * 1000
+            ? t('ui.limitNotReached', { limit: formatBytes(lang, maxKb * 1000), size: formatBytes(lang, out.size) })
+            : undefined,
         blob: keep ? original : blob,
         name: keep ? file.name : outputName(file.name, type, '-compressed'),
         ...size,

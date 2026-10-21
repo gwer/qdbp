@@ -91,7 +91,7 @@
   },
   "errors": {
     "afterTooLate": "El número de cuota de una amortización debe ser menor que el plazo del préstamo en meses.",
-    "noPrepayments": "Añada al menos una amortización anticipada.",
-    "prepayments": "La lista de amortizaciones del enlace está dañada: revísela."
+    "noPrepayments": "Añade al menos una amortización anticipada.",
+    "prepayments": "La lista de amortizaciones del enlace está dañada: revísala."
   }
 }

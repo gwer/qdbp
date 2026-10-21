@@ -13,7 +13,8 @@ export function TeamGenerator({ t }: ToolProps) {
   const items = listItems(text);
   // «По N человек» — команд столько, чтобы в каждой было не больше N.
   const wanted = by === 'size' ? Math.ceil(items.length / size) : teams;
-  const n = Math.min(Math.max(2, wanted), Math.max(2, items.length));
+  // По числу команд — минимум две; по размеру команды — сколько получится, в том числе одна.
+  const n = by === 'size' ? Math.min(Math.max(1, wanted), Math.max(1, items.length)) : Math.min(Math.max(2, wanted), Math.max(2, items.length));
 
   return (
     <div>

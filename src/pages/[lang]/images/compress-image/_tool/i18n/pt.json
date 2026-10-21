@@ -14,6 +14,7 @@
     "byQuality": "Por qualidade",
     "bySize": "Até um tamanho máximo",
     "maxSize": "No máximo",
-    "kb": "KB"
+    "kb": "KB",
+    "limitNotReached": "Não foi possível chegar a {limit} sem reduzir as dimensões. O menor tamanho obtido é {size}."
   }
 }

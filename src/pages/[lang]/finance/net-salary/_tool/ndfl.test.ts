@@ -64,3 +64,20 @@ describe('вычет на детей', () => {
     expect(salaryYear(g - 1, 1).yearNet).toBeLessThan(87_000 * 12);
   });
 });
+
+describe('обратный расчёт около порогов вычета', () => {
+  it('65 341 на руки с одним ребёнком — оклад 75 000, а не 75 018', () => {
+    expect(grossFromNet(65_341, 1)).toBe(75_000);
+  });
+
+  it('перебором: найденный оклад подходит, и ни один меньший — нет', () => {
+    for (const children of [1, 2, 3]) {
+      for (const net of [32_000, 35_000, 39_500, 40_000, 44_300, 56_000, 65_341, 90_000]) {
+        const g = grossFromNet(net, children);
+        expect(salaryYear(g, children).yearNet).toBeGreaterThanOrEqual(net * 12);
+        // Ищем меньший подходящий оклад полным перебором вниз до 70% от найденного.
+        for (let x = g - 1; x > g * 0.7; x--) expect(salaryYear(x, children).yearNet < net * 12, `${net} ${children} ${x}`).toBe(true);
+      }
+    }
+  });
+});

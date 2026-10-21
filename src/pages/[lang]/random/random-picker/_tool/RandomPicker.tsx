@@ -21,6 +21,13 @@ export function RandomPicker({ t }: ToolProps) {
   const timer = useRef<number>();
   useEffect(() => () => clearTimeout(timer.current), []);
 
+  // Список или количество изменились — незавершённый розыгрыш отменяется: его победитель из старого списка.
+  const reset = () => {
+    clearTimeout(timer.current);
+    setSpinning(false);
+    setWinners(null);
+  };
+
   const pick = () => {
     if (!wheel) return setWinners(shuffle(items).slice(0, n));
     const w = randomInt(items.length);
@@ -37,10 +44,10 @@ export function RandomPicker({ t }: ToolProps) {
     <div>
       <div class="field">
         <label for="rp-list">{t('ui.list')}</label>
-        <textarea id="rp-list" rows={7} placeholder={t('ui.placeholder')} value={text} onInput={(e) => (setText(e.currentTarget.value), setWinners(null), setAngle(0))} />
+        <textarea id="rp-list" rows={7} placeholder={t('ui.placeholder')} value={text} onInput={(e) => (setText(e.currentTarget.value), reset(), setAngle(0))} />
       </div>
       <div class="calc-inputs">
-        <IntField id="rp-count" label={t('ui.count')} value={count} min={1} max={10000} onChange={setCount} />
+        <IntField id="rp-count" label={t('ui.count')} value={count} min={1} max={10000} onChange={(c) => (setCount(c), reset())} />
       </div>
       {wheel && <Wheel items={wheelItems} angle={angle} spinning={spinning} preview={items.length < 2} label={t('ui.wheel')} />}
       <div class="actions">
@@ -64,7 +71,10 @@ export function RandomPicker({ t }: ToolProps) {
               class="btn btn-secondary"
               onClick={() => {
                 const left = [...items];
-                for (const w of winners) left.splice(left.indexOf(w), 1);
+                for (const w of winners) {
+                  const i = left.indexOf(w);
+                  if (i >= 0) left.splice(i, 1);
+                }
                 setText(left.join('\n'));
                 setWinners(null);
               }}

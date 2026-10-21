@@ -32,7 +32,7 @@ export function mortgage({ price, down, rate, years, kind, prepay = '' }: Mortga
     total: res.total,
     extraTotal: res.extraTotal,
     schedule: res.schedule,
-    byYear: byYear(res.schedule),
+    byYear: byYear(res.schedule, res.initialExtra),
     base,
   };
 }

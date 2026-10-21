@@ -91,6 +91,6 @@
     "withCosts": "Con impuestos y seguros ({costs} al mes): {total} al mes."
   },
   "errors": {
-    "prepayments": "La lista de amortizaciones del enlace está dañada: revísela."
+    "prepayments": "La lista de amortizaciones del enlace está dañada: revísala."
   }
 }

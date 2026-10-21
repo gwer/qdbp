@@ -43,7 +43,7 @@
     "maintain": "Manter o peso",
     "lose": "Perder {amount} por semana",
     "gain": "Ganhar {amount} por semana",
-    "tooLow": "abaixo do mínimo seguro",
+    "tooLow": "converse com um profissional de saúde sobre essa ingestão",
     "kg": "kg",
     "lb": "lb",
     "goalsNote": "O cálculo considera cerca de 7.700 kcal por quilo de gordura; na prática o ritmo diminui com o tempo. Sem acompanhamento médico, não fique abaixo de {min} kcal por dia. Um ritmo seguro é de 0,5 a 1 kg por semana."

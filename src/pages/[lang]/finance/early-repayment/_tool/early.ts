@@ -34,6 +34,7 @@ export function earlyRepayment({ amount, rate, months, kind, prepay }: EarlyInpu
     interestAfter: res.overpay,
     interestBefore: base.overpay,
     extraTotal: res.extraTotal,
+    initialExtra: res.initialExtra,
     /** Последний полный платёж (предпоследняя строка графика): у «уменьшить платёж» он меньше исходного. */
     lastRegular: lastRegular(res.schedule),
     baseLastRegular: lastRegular(base.schedule),

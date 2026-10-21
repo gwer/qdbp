@@ -9,9 +9,14 @@ export type Unit = 'days' | 'workdays' | 'weeks' | 'months' | 'years';
  * Каждые полные 5 рабочих дней — ровно неделя, остаток добирается по дню.
  */
 export function addWorkdays(date: string, n: number): string {
+  if (n === 0) return date;
   const sign = n < 0 ? -1 : 1;
   let left = Math.abs(n);
-  let d = addDays(date, sign * 7 * Math.floor(left / 5));
+  // С выходного считать так же, как с соседнего рабочего дня позади: вперёд — от пятницы, назад — от понедельника.
+  // Иначе прыжок «5 рабочих = 7 дней» от субботы попадает снова на субботу.
+  const wd = weekday(date);
+  let d = wd < 5 ? date : addDays(date, sign > 0 ? 4 - wd : 7 - wd);
+  d = addDays(d, sign * 7 * Math.floor(left / 5));
   left %= 5;
   while (left > 0) {
     d = addDays(d, sign);

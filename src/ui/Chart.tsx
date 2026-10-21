@@ -35,7 +35,7 @@ export function Chart({
   const box = useRef<HTMLDivElement>(null);
   // До измерения рисуем в 600 px и растягиваем viewBox; после — в реальных пикселях, чтобы текст не масштабировался.
   const [width, setWidth] = useState(600);
-  const [active, setActive] = useState<number | null>(null);
+  const [hover, setActive] = useState<number | null>(null);
   useEffect(() => {
     const el = box.current!;
     const ro = new ResizeObserver(() => setWidth(Math.max(240, Math.round(el.clientWidth))));
@@ -44,6 +44,8 @@ export function Chart({
   }, []);
 
   const n = x.length;
+  // Точек стало меньше (сменили срок), а указатель не уходил — старый индекс уже не существует.
+  const active = hover !== null && hover < n ? hover : null;
   const height = 220;
   const pad = { top: 10, right: 8, bottom: 22, left: 8 };
   const totals = x.map((_, i) =>

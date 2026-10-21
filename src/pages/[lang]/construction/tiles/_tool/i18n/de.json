@@ -41,7 +41,7 @@
       "label": "Raumbreite"
     },
     "wallHeight": {
-      "label": "Fliesenhöhe"
+      "label": "Höhe der gefliesten Wandfläche"
     },
     "openings": {
       "label": "Türen und Fenster"

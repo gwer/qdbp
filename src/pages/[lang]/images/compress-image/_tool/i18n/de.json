@@ -14,6 +14,7 @@
     "byQuality": "Qualität",
     "bySize": "Zieldateigröße",
     "maxSize": "Höchstens",
-    "kb": "KB"
+    "kb": "KB",
+    "limitNotReached": "Ohne kleinere Bildabmessungen lässt sich {limit} nicht erreichen. Das kleinste Ergebnis hat {size}."
   }
 }

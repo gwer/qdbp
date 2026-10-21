@@ -10,7 +10,9 @@ export function CidrCalculator({ lang, t }: ToolProps) {
   const parsed = parseCidr(input);
   const s = parsed && subnet(parsed.ip, parsed.prefix);
   const prefixes = parsed ? Array.from({ length: Math.min(32, parsed.prefix + 8) - parsed.prefix }, (_, i) => parsed.prefix + 1 + i) : [];
-  const parts = s && into > parsed!.prefix && into <= 32 ? split(s.network, parsed!.prefix, into) : null;
+  // Выбор, недоступный для нового префикса сети, не применяется: видимый список и результат совпадают.
+  const chosen = prefixes.includes(into) ? into : 0;
+  const parts = s && chosen ? split(s.network, parsed!.prefix, chosen) : null;
   const rows: [string, string][] = s
     ? [
         ['network', `${formatIp(s.network)}/${parsed!.prefix}`],
@@ -50,7 +52,7 @@ export function CidrCalculator({ lang, t }: ToolProps) {
       {s && prefixes.length > 0 && (
         <div class="field">
           <label for="cidr-split">{t('ui.split')}</label>
-          <select id="cidr-split" value={into} onChange={(e) => setInto(Number(e.currentTarget.value))}>
+          <select id="cidr-split" value={chosen} onChange={(e) => setInto(Number(e.currentTarget.value))}>
             <option value={0}>{t('ui.noSplit')}</option>
             {prefixes.map((p) => (
               <option value={p} key={p}>
@@ -74,7 +76,7 @@ export function CidrCalculator({ lang, t }: ToolProps) {
               {parts.subnets.map((p) => (
                 <tr key={p.network}>
                   <td class="mono">
-                    {formatIp(p.network)}/{into}
+                    {formatIp(p.network)}/{chosen}
                   </td>
                   <td class="mono">
                     {formatIp(p.first)} – {formatIp(p.last)}

@@ -2,7 +2,7 @@
 
 Escolha como redimensionar — pela largura, pela altura, para caber em um quadro ou por porcentagem — e adicione as fotos: arraste, escolha no seu dispositivo ou cole da área de transferência. A proporção é sempre mantida, nada fica esticado. Dá para processar vários arquivos de uma vez e baixar um por um ou em ZIP.
 
-Para um tamanho exato — um quadrado de 1080 × 1080 para redes sociais, um avatar, uma capa de 1920 × 1080 —, escolha «Largura × altura exatas»: as bordas são cortadas e o centro fica.
+Para um tamanho exato — um quadrado de 1080 × 1080 para redes sociais, um avatar, uma capa de 1920 × 1080 —, escolha «Largura × altura exatas»: as bordas são cortadas e o centro fica. Com «Não aumentar imagens menores» ativado, o resultado pode ficar menor que as dimensões pedidas.
 
 As imagens são processadas no seu navegador e não são enviadas a lugar nenhum.
 

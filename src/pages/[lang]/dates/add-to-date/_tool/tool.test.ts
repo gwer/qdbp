@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { shift } from './tool';
+import { addWorkdays, shift } from './tool';
 
 describe('shift', () => {
   it('дни и недели', () => {
@@ -27,5 +27,29 @@ describe('рабочие дни', () => {
 
   it('вычитание: пн − 1 рабочий = пт', () => {
     expect(shift('2026-10-26', -1, 'workdays').result).toBe('2026-10-23');
+  });
+});
+
+describe('рабочие дни: сверка с пошаговым счётом', () => {
+  // Независимая модель: шагаем по дню и считаем только пн–пт.
+  const stepwise = (date: string, n: number) => {
+    let d = new Date(`${date}T00:00:00Z`);
+    for (let left = Math.abs(n); left > 0; ) {
+      d = new Date(d.getTime() + Math.sign(n) * 86400000);
+      if (d.getUTCDay() % 6 !== 0) left--;
+    }
+    return d.toISOString().slice(0, 10);
+  };
+
+  it('сб 17.10.2026 ± 5: пт 23.10 и пн 12.10', () => {
+    expect(addWorkdays('2026-10-17', 5)).toBe('2026-10-23');
+    expect(addWorkdays('2026-10-17', -5)).toBe('2026-10-12');
+  });
+
+  it('старт в каждый день недели, смещения −25…25', () => {
+    for (let day = 12; day <= 18; day++) {
+      const start = `2026-10-${day}`;
+      for (let n = -25; n <= 25; n++) expect(addWorkdays(start, n), `${start} ${n}`).toBe(n === 0 ? start : stepwise(start, n));
+    }
   });
 });

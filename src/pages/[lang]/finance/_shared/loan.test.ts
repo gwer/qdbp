@@ -82,7 +82,7 @@ describe('loan: досрочные погашения', () => {
 
   it('погашение сразу после выдачи уменьшает сумму, с которой считается первый месяц', () => {
     const r = loan({ amount: 1000, rate: 12, months: 12, kind: 'annuity', prepayments: [{ after: 0, amount: 1000, mode: 'term', repeat: 'once' }] });
-    expect(r).toMatchObject({ schedule: [], total: 1000, overpay: 0, extraTotal: 1000, payment: 0 });
+    expect(r).toMatchObject({ schedule: [], total: 1000, overpay: 0, extraTotal: 1000, initialExtra: 1000, payment: 0 });
   });
 
   it('сумма платежей и досрочных погашений = основной долг + проценты', () => {
@@ -92,5 +92,15 @@ describe('loan: досрочные погашения', () => {
     expect(paid).toBeCloseTo(r.total, 2);
     expect(r.total - 1_000_000).toBeCloseTo(interest, 2);
     expect(r.schedule.at(-1)!.balance).toBe(0);
+  });
+});
+
+describe('byYear сходится с итогами', () => {
+  it('с погашением сразу после выдачи', async () => {
+    const { byYear } = await import('./loan');
+    const r = loan({ amount: 100000, rate: 10, months: 12, kind: 'annuity', prepayments: [{ after: 0, amount: 10000, mode: 'term', repeat: 'once' }] });
+    const years = byYear(r.schedule, r.initialExtra);
+    expect(years.reduce((s, y) => s + y.paid, 0)).toBeCloseTo(r.total, 2);
+    expect(years[0].extra).toBe(10000);
   });
 });

@@ -43,7 +43,7 @@
     "maintain": "Maintain weight",
     "lose": "Lose {amount} a week",
     "gain": "Gain {amount} a week",
-    "tooLow": "below the safe minimum",
+    "tooLow": "discuss this intake with a clinician",
     "kg": "kg",
     "lb": "lb",
     "goalsNote": "Based on roughly 3,500 calories per pound of fat (7,700 per kg); in practice progress slows over time. Don’t go below {min} calories a day without medical supervision. A safe pace is 1–2 lb a week."

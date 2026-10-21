@@ -2,7 +2,7 @@
 
 Add photos — drag them in, choose them or paste from the clipboard — and set the quality with the slider. Each file shows its size before and after compression. Download the results one by one or as a ZIP.
 
-If a site or form needs a file “no larger than N KB”, choose “Target file size” and enter the limit: the tool finds the highest quality that fits. The “Compare” button on each file shows the original and the result with a slider; turn on “Actual size” to inspect compression artifacts.
+If a site or form needs a file “no larger than N KB”, choose “Target file size” and enter the limit: the tool finds the highest quality that fits. The image dimensions stay the same, so a very small limit may be out of reach — you’ll then see a warning with the size achieved. The “Compare” button on each file shows the original and the result with a slider; turn on “Actual size” to inspect compression artifacts.
 
 Compression runs in your browser: files are never uploaded.
 

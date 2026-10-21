@@ -48,6 +48,8 @@ export interface LoanResult {
   overpay: number;
   /** Сумма досрочных погашений. */
   extraTotal: number;
+  /** Погашение сразу после выдачи (после «платежа № 0»): в графике нет строки для него, таблицы показывают его отдельно. */
+  initialExtra: number;
   schedule: LoanRow[];
 }
 
@@ -153,6 +155,7 @@ export function loan({ amount, rate, months, kind, prepayments = [] }: LoanInput
     total: total.toNumber(),
     overpay: total.minus(principalTotal).toNumber(),
     extraTotal: extraTotal.toNumber(),
+    initialExtra: first.toNumber(),
     schedule,
   };
 }
@@ -167,9 +170,9 @@ export interface LoanYear {
   balance: number;
 }
 
-/** Итоги графика по годам кредита (по 12 платежей). */
-export function byYear(schedule: readonly LoanRow[]): LoanYear[] {
-  const years: LoanYear[] = [];
+/** Итоги графика по годам кредита (по 12 платежей); initialExtra — погашение до первого платежа, входит в первый год. */
+export function byYear(schedule: readonly LoanRow[], initialExtra = 0): LoanYear[] {
+  const years: LoanYear[] = initialExtra > 0 ? [{ year: 1, paid: initialExtra, principal: 0, interest: 0, extra: initialExtra, balance: 0 }] : [];
   for (const row of schedule) {
     const y = Math.ceil(row.n / 12);
     let cur = years[y - 1];

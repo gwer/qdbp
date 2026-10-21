@@ -14,6 +14,8 @@ export interface Processed {
   height: number;
   srcWidth: number;
   srcHeight: number;
+  /** Предупреждение у файла (например, «не удалось уложиться в лимит»). */
+  warning?: string;
 }
 
 /** Ошибка с понятным пользователю текстом — показывается вместо общего files.error. */
@@ -154,6 +156,7 @@ export function ImageBatch({
                         {r.srcWidth}×{r.srcHeight} → {r.width}×{r.height}
                       </span>
                     )}
+                    {i.status === 'done' && r?.warning && <span class="field-error">{r.warning}</span>}
                   </div>
                   {r && i.status === 'done' && (
                     <div class="file-actions">

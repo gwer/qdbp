@@ -2,7 +2,7 @@
 
 Enter the first day of your last menstrual period and your usual cycle length. You'll see your estimated due date, how many weeks and days pregnant you are, your trimester and an estimated conception date. You can also check how far along you'll be on any other date.
 
-If you know the conception date or conceived through IVF, choose how to calculate in the first field. Birth comes on average 266 days after conception, 261 days after a day-5 embryo transfer and 263 days after a day-3 transfer. Below the result you'll see the current week and key dates: end of the first trimester, start of the third, full term (37 weeks), the due date and 42 weeks.
+If you know the conception date or conceived through IVF, choose how to calculate in the first field. Birth comes on average 266 days after conception, 261 days after a day-5 embryo transfer and 263 days after a day-3 transfer. Below the result you'll see the current week and key dates: end of the first trimester, start of the third, the start of early term (37 weeks), the due date and 42 weeks.
 
 ## How it's calculated
 
