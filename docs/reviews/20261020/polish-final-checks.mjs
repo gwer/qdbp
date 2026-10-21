@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import {launch,sleep} from './audit.mjs';
 
-const out='evidence/polish-final-20261021';
+const out=process.env.QDBP_POLISH_FINAL_OUT??'evidence/polish-final-20261021';
 fs.mkdirSync(out+'/screens',{recursive:true});
 const langs=['ru','en','es','de','pt'];
 const rows=[],errors=[],externalRequests=[];
