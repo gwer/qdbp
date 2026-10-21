@@ -74,5 +74,11 @@ describe('старые ссылки', () => {
     expect(q('after=12&extra=-5')).toEqual({});
     expect(q('after=12&extra=10000&mode=sideways')).toEqual({});
     expect(q('amount=100')).toEqual({});
+    // Повреждённые ссылки (отчёт 16, N03): пустой месяц, пробелы, бесконечная сумма.
+    expect(q('after=&extra=10000')).toEqual({});
+    expect(q('after=%20%20&extra=10000')).toEqual({});
+    expect(q('after=12&extra=Infinity')).toEqual({});
+    expect(q('after=12&extra=1e309')).toEqual({});
+    expect(q('after=0&extra=10000')).toEqual({ prepay: '0:10000:term:once' });
   });
 });

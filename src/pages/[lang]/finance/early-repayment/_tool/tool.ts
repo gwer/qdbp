@@ -38,10 +38,14 @@ export const def = defineCalculator({
   Extra: Comparison,
   // До 2026-10-21 погашение было одно: ?after=24&extra=500000&mode=term.
   legacy: (params) => {
-    const after = Number(params.get('after'));
-    const extra = Number(params.get('extra'));
+    // Пустая строка или пробелы для Number() — это 0, а «Infinity» и 1e309 — бесконечность: такое не переносим.
+    const rawAfter = params.get('after')?.trim() ?? '';
+    const rawExtra = params.get('extra')?.trim() ?? '';
+    const after = Number(rawAfter);
+    const extra = Number(rawExtra);
     const mode = params.get('mode') ?? 'term';
-    const valid = params.has('after') && params.has('extra') && Number.isInteger(after) && after >= 0 && extra > 0 && (mode === 'term' || mode === 'payment');
+    const valid =
+      rawAfter !== '' && rawExtra !== '' && Number.isInteger(after) && after >= 0 && Number.isFinite(extra) && extra > 0 && (mode === 'term' || mode === 'payment');
     return valid ? { prepay: legacyPrepay(after, extra, mode) } : {};
   },
 });
