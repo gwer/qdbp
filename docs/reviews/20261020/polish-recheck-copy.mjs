@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+const root='/home/gwer/code/qdbp/src/pages/[lang]',out='evidence/polish-recheck-20261021',langs=['ru','en','es','de','pt'];
+const json=(route,lang)=>JSON.parse(fs.readFileSync(`${root}/${route}/_tool/i18n/${lang}.json`,'utf8'));
+const content=(route,lang)=>fs.readFileSync(`${root}/${route}/_tool/content/${lang}.md`,'utf8');
+const rows=[];
+function group(id,details){rows.push({id,pass:details.every(d=>d.pass),details});}
+group('C01',[{pass:json('health/due-date','en').ui.milestones.term==='Early term begins (37 weeks)',value:json('health/due-date','en').ui.milestones.term},{pass:content('health/due-date','en').includes('the start of early term (37 weeks)')&&!content('health/due-date','en').includes('full term (37 weeks)')}]);
+const limitText={ru:'Разрешение при этом не уменьшается',en:'The image dimensions stay the same',es:'Las dimensiones no se reducen',de:'Die Bildabmessungen bleiben gleich',pt:'As dimensões não são reduzidas'};
+group('C02',langs.map(lang=>{const warning=json('images/compress-image',lang).ui.limitNotReached;return{lang,warning,pass:warning.includes('{limit}')&&warning.includes('{size}')&&content('images/compress-image',lang).includes(limitText[lang])};}));
+group('C03',[{pass:json('construction/tiles','de').inputs.wallHeight.label==='Höhe der gefliesten Wandfläche',value:json('construction/tiles','de').inputs.wallHeight.label},{pass:content('construction/tiles','de').includes('Raumumfang × Höhe der gefliesten Wandfläche')}]);
+group('C04',[{pass:json('health/ovulation','ru').ui.cycles==='Следующие шесть циклов',value:json('health/ovulation','ru').ui.cycles}]);
+const hashText={ru:'Этот инструмент поддерживает файлы до 1 ГБ. Выберите файл меньшего размера.',en:'This tool supports files up to 1 GB. Choose a smaller file.',es:'Esta herramienta admite archivos de hasta 1 GB. Elige uno más pequeño.',de:'Dieses Tool unterstützt Dateien bis 1 GB. Wählen Sie eine kleinere Datei.',pt:'Esta ferramenta aceita arquivos de até 1 GB. Escolha um arquivo menor.'};
+group('C05',langs.map(lang=>({lang,pass:json('security/hash',lang).ui.tooLarge===hashText[lang],value:json('security/hash',lang).ui.tooLarge})));
+const lowText={ru:'обсудите такой рацион с врачом',en:'discuss this intake with a clinician',es:'consulta esta ingesta con un profesional sanitario',de:'diese Kalorienzufuhr ärztlich abklären',pt:'converse com um profissional de saúde sobre essa ingestão'};
+group('C06',langs.map(lang=>({lang,pass:json('health/calorie-calculator',lang).ui.tooLow===lowText[lang],value:json('health/calorie-calculator',lang).ui.tooLow})));
+const salary=json('finance/net-salary','ru').ui.varies;
+group('C07',[{pass:salary.includes('вычет на детей')&&salary.includes('или налог')&&!salary.startsWith('Доход за год больше'),value:salary,note:'Core correction applied; a separate rounding-only example is recorded in browser.json.'}]);
+group('C08',['early-repayment','loan-calculator','mortgage'].map(route=>{const e=json('finance/'+route,'es').errors;return{route,pass:e.prepayments.endsWith('revísala.')&&(!e.noPrepayments||e.noPrepayments.startsWith('Añade'))};}));
+const fat=json('health/body-fat','pt').errors;
+group('C09',[{pass:fat.girthNeck==='A soma das circunferências da cintura e do quadril precisa ser maior que a circunferência do pescoço — confira as medidas.',value:fat.girthNeck},{pass:fat.outOfRange==='Com essas medidas, a fórmula dá um resultado impossível. Confira se todas estão na mesma unidade e foram tomadas conforme as instruções.',value:fat.outOfRange}]);
+group('C10',[{pass:content('construction/concrete','de').includes('Für Säulen oder Pfähle geben Sie Durchmesser, Höhe und Anzahl ein. Das Volumen pro Säule oder Pfahl beträgt π × d² / 4 × Höhe.')}]);
+group('C11',[{pass:content('images/qr-generator','en').includes('an email with a prefilled subject')},{pass:json('random/random-picker','en').ui.remove==='Remove selected items from the list'}]);
+group('C12',langs.map(lang=>({lang,pass:content('images/resize-image',lang).includes(json('images/resize-image',lang).ui.noUpscale),label:json('images/resize-image',lang).ui.noUpscale})));
+group('mobile-frequency-ru',['early-repayment','loan-calculator','mortgage'].map(route=>{const r=json('finance/'+route,'ru').ui.prepay.repeats;return{route,pass:r.monthly==='Ежемесячно'&&r.quarterly==='Ежеквартально'&&r.yearly==='Ежегодно',value:r};}));
+fs.mkdirSync(out,{recursive:true});fs.writeFileSync(out+'/copy.json',JSON.stringify(rows,null,2));console.log(JSON.stringify({groups:rows.length,passed:rows.filter(r=>r.pass).length,failures:rows.filter(r=>!r.pass)},null,2));if(rows.some(r=>!r.pass))process.exitCode=1;
