@@ -3,7 +3,7 @@ import ToolList from '@/components/ToolList.astro';
 import { SITE_LANGS, type Lang } from '@/i18n/config';
 import { uiT } from '@/i18n/ui';
 import Base from '@/layouts/Base.astro';
-import { categories, categoryName, categoryUrl, toolsIn } from '@/lib/catalog';
+import { categories, categoryName, categoryUrl, tools, toolsIn } from '@/lib/catalog';
 
 export function getStaticPaths() {
   return SITE_LANGS.map((lang) => ({ params: { lang } }));
@@ -12,11 +12,29 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 const t = uiT(lang);
 const cats = categories.filter((c) => c.langs.includes(lang));
+// Популярное — пока по нашей оценке спроса; заменить по данным Search Console.
+const POPULAR = [
+  'finance/mortgage',
+  'finance/loan-calculator',
+  'math/percent-of',
+  'finance/vat',
+  'dates/days-between',
+  'health/bmi',
+  'images/compress-image',
+  'kitchen/cups-to-grams',
+];
+const popular = POPULAR.map((path) => tools.find((tool) => tool.path === path)!).filter((tool) => tool.langs.includes(lang));
 const alternates = SITE_LANGS.map((l) => ({ lang: l, href: `/${l}/` }));
 ---
 
 <Base lang={lang} title={t('home.title')} description={t('site.description')} alternates={alternates}>
   <h1>{t('site.tagline')}</h1>
+  <p class="lead">{t('home.intro')}</p>
+  <section class="home-popular">
+    <h2>{t('home.popular')}</h2>
+    <ToolList tools={popular} lang={lang} />
+  </section>
+  <h2>{t('home.allCategories')}</h2>
   <nav class="home-nav" aria-label={t('home.allCategories')}>
     <ul>
       {

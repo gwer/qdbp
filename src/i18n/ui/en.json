@@ -10,7 +10,9 @@
   },
   "home": {
     "title": "qdbp — online calculators and tools",
-    "allCategories": "All categories"
+    "allCategories": "All categories",
+    "intro": "Free calculators and tools for money, dates, home projects, health, cooking and files. No sign-up: everything runs right in your browser, and your photos and files never leave your device.",
+    "popular": "Popular"
   },
   "category": {
     "toolsCount": {

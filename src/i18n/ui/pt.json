@@ -10,7 +10,9 @@
   },
   "home": {
     "title": "qdbp — calculadoras e ferramentas online",
-    "allCategories": "Todas as seções"
+    "allCategories": "Todas as seções",
+    "intro": "Calculadoras e ferramentas gratuitas para dinheiro, datas, reformas, saúde, cozinha e arquivos. Sem cadastro: tudo é calculado no seu navegador, e suas fotos e arquivos não saem do seu dispositivo.",
+    "popular": "Populares"
   },
   "category": {
     "toolsCount": {

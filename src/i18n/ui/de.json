@@ -10,7 +10,9 @@
   },
   "home": {
     "title": "qdbp — Online-Rechner und Tools",
-    "allCategories": "Alle Bereiche"
+    "allCategories": "Alle Bereiche",
+    "intro": "Kostenlose Rechner und Tools für Geld, Datum, Renovierung, Gesundheit, Küche und Dateien. Ohne Anmeldung: Alles läuft direkt in Ihrem Browser, Fotos und Dateien verlassen Ihr Gerät nicht.",
+    "popular": "Beliebt"
   },
   "category": {
     "toolsCount": {

@@ -369,6 +369,19 @@ details.extra summary {
   text-decoration: none;
 }
 
+/* Главная: популярное — карточками с описанием, дальше разделы и компактные списки */
+.home-popular .tool-list {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.home-popular .tool-list p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
 /* Главная: разделы вверху и компактные списки — описания инструментов есть на страницах разделов */
 .home-nav ul {
   list-style: none;
