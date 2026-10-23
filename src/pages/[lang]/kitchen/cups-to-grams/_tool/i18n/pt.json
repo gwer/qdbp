@@ -63,6 +63,6 @@
     "table": "A mesma quantidade em outras medidas",
     "all": "Todos os ingredientes: {amount} × «{measure}» em gramas",
     "g": "g",
-    "flourNote": "Compacta — a xícara ou a colher é mergulhada direto no pacote. Solta — a farinha é colocada com uma colher e nivelada com uma faca: dá cerca de um quarto a menos."
+    "flourNote": "Compacta — a xícara é mergulhada direto no pacote. Solta — a farinha é colocada na xícara com uma colher e nivelada com uma faca: dá cerca de um quarto a menos."
   }
 }

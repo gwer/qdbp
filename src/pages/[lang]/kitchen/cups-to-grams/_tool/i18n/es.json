@@ -63,6 +63,6 @@
     "table": "La misma cantidad en otras medidas",
     "all": "Todos los ingredientes: {amount} × «{measure}» en gramos",
     "g": "g",
-    "flourNote": "Compacta — la taza o la cuchara se hunde directamente en el paquete. Suelta — la harina se echa con una cuchara y se enrasa con un cuchillo: sale aproximadamente una cuarta parte menos."
+    "flourNote": "Compacta — la taza se hunde directamente en el paquete. Suelta — la harina se echa en la taza con una cuchara y se enrasa con un cuchillo: sale aproximadamente una cuarta parte menos."
   }
 }
