@@ -122,21 +122,16 @@ h1 .icon {
   min-height: 56px;
 }
 
+/* Знак qdbp: левая пара — цвет акцента темы, правая — оранжевая (зеркало) */
 .logo {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  font-size: 1.35rem;
-  letter-spacing: 0.04em;
-  color: var(--text);
-  text-decoration: none;
+  color: var(--accent);
 }
 
 .logo-mark svg {
   display: block;
-  width: 28px;
-  height: 28px;
+  height: 34px;
+  width: auto;
 }
 
 .lang-menu {

@@ -57,7 +57,7 @@ const others = alternates.filter((a) => a.lang !== lang);
   <body class:list={{ wide }}>
     <header class="site-header">
       <div class="wrap header-row">
-        <a class="logo" href={`/${lang}/`} aria-label={`qdbp, ${t('nav.home')}`}><span class="logo-mark" set:html={mark} />qdbp</a>
+        <a class="logo" href={`/${lang}/`} aria-label={`qdbp, ${t('nav.home')}`}><span class="logo-mark" set:html={mark} /></a>
         {
           others.length > 0 && (
             <details class="lang-menu">
