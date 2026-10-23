@@ -9,9 +9,11 @@ Escolha o ingrediente, a medida e a quantidade: você vê o peso em gramas e, lo
 - **Copo grande — 250 ml** e **copo — 200 ml**.
 - Colher de sopa — 15 ml, colher de chá — 5 ml.
 
-## Por que o peso da farinha depende de como você mede
+## Compacta ou solta
 
-A farinha compacta com facilidade. Colocada com colher e nivelada, uma xícara de 240 ml pesa cerca de **122 g**; pegando direto do pacote com a xícara, cerca de **154 g**. Por isso há duas opções de farinha: "compacta" e "solta". Receitas dos EUA costumam considerar a farinha solta.
+Farinha, amido de milho, cacau e açúcar de confeiteiro compactam com facilidade, por isso para eles a calculadora pergunta como encher a xícara. Colocada com colher e nivelada, uma xícara de 240 ml de farinha pesa cerca de **122 g**; pegando direto do pacote com a xícara, cerca de **154 g**. Receitas dos EUA costumam considerar a farinha solta.
+
+As colheres são contadas mergulhadas no pacote e niveladas. Açúcar, sal e grãos quase não compactam — para eles o método não importa. Uvas-passas e coco ralado são medidos sem apertar.
 
 ## Exemplos
 
@@ -22,7 +24,7 @@ A farinha compacta com facilidade. Colocada com colher e nivelada, uma xícara d
 
 ## De onde vêm os dados
 
-Ingredientes secos seguem a tabela de pesos da King Arthur Baking (gramas por xícara americana, com colher e nivelada); a farinha compacta, tabelas de cozinha comuns. Para líquidos usa-se a densidade. São valores médios — o mais preciso é pesar.
+A xícara solta de ingredientes secos segue a tabela de pesos da King Arthur Baking. A xícara compacta de farinha de trigo, amido de milho e cacau segue tabelas de cozinha tradicionais russas (160, 160 e 120 g por xícara de 250 ml); a de farinha integral, a tabela da Baking Sense (140 g por xícara americana). Para farinha de centeio, de amêndoas e açúcar de confeiteiro não encontramos dados de xícara compacta: é uma estimativa, aumentada na mesma proporção que a farinha de trigo. Para líquidos usa-se a densidade. São valores médios — o mais preciso é pesar.
 
 ## Perguntas frequentes
 

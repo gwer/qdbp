@@ -5,8 +5,7 @@
     "ingredient": {
       "label": "Ingredient",
       "options": {
-        "flourScooped": "Flour — scooped from the bag",
-        "flour": "Flour — spooned & leveled (US recipes)",
+        "flour": "All-purpose flour",
         "wholeWheatFlour": "Whole wheat flour",
         "ryeFlour": "Rye flour",
         "almondFlour": "Almond flour",
@@ -29,11 +28,11 @@
         "oats": "Rolled oats",
         "rice": "Rice (uncooked)",
         "buckwheat": "Buckwheat groats",
-        "raisins": "Raisins",
+        "raisins": "Raisins (loosely packed)",
         "walnuts": "Walnuts (chopped)",
         "chocolateChips": "Chocolate chips",
         "peanutButter": "Peanut butter",
-        "coconut": "Shredded coconut",
+        "coconut": "Shredded coconut (loosely packed)",
         "salt": "Salt"
       }
     },
@@ -52,6 +51,13 @@
         "ml": "Milliliters",
         "g": "Grams → cups & spoons"
       }
+    },
+    "packing": {
+      "label": "How the cup is filled",
+      "options": {
+        "scooped": "Scooped from the bag",
+        "spooned": "Spooned & leveled"
+      }
     }
   },
   "outputs": {
@@ -63,6 +69,6 @@
     "table": "The same amount in other measures",
     "all": "All ingredients: {amount} × “{measure}” in grams",
     "g": "g",
-    "flourNote": "Scooped — the cup is dipped straight into the bag. Spooned & leveled — flour is spooned into the cup and leveled off with a knife: about a quarter less."
+    "packingNote": "Scooped — the cup is dipped straight into the bag. Spooned & leveled — the ingredient is spooned into the cup and leveled off with a knife: about {less} less."
   }
 }

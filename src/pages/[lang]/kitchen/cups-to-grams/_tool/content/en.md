@@ -9,9 +9,11 @@ Pick an ingredient, a measure and an amount — you'll see the weight in grams, 
 - **Metric cup — 250 ml** — Australia, New Zealand, Canada and many European recipes.
 - Tablespoon — 15 ml, teaspoon — 5 ml (US spoons are 14.8 and 4.9 ml; the difference is under 2%).
 
-## Why flour weight depends on how you measure
+## Scooped or spooned?
 
-Flour packs down easily. Spooned into a cup and leveled, a cup of all-purpose flour weighs about **120 g**; scooped straight from the bag, closer to **150 g**. That's why there are two flour options. Most US recipes assume the spoon-and-level method; scooping is how most people measure elsewhere.
+Flour, cornstarch, cocoa and powdered sugar pack down easily, so for them the calculator asks how the cup is filled. Spooned into the cup and leveled, a cup of all-purpose flour weighs about **120 g**; scooped straight from the bag, about **150 g**. Most US recipes assume the spoon-and-level method; scooping is how most people measure elsewhere.
+
+Spoons are counted as dipped into the bag and leveled. Sugar, salt and grains barely pack down, so the method doesn't matter for them. Raisins and coconut are measured loosely, without pressing down.
 
 ## Examples
 
@@ -22,7 +24,7 @@ Flour packs down easily. Spooned into a cup and leveled, a cup of all-purpose fl
 
 ## Where the data comes from
 
-Dry ingredients follow the King Arthur Baking ingredient weight chart (grams per US cup, spooned and leveled); "scooped flour" follows common kitchen charts. Liquids use their density. These are averages — a kitchen scale is always more accurate.
+Spooned cups of dry ingredients follow the King Arthur Baking ingredient weight chart. Scooped cups of all-purpose flour, cornstarch and cocoa follow traditional Russian kitchen tables (160, 160 and 120 g per 250 ml cup; America's Test Kitchen gives a similar 142 g per US cup of scooped flour); whole wheat flour follows Baking Sense (140 g per cup). For rye and almond flour and powdered sugar we found no scooped data: these are estimates, scaled up in the same proportion as all-purpose flour. Liquids use their density. These are averages — a kitchen scale is always more accurate.
 
 ## FAQ
 

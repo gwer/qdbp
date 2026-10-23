@@ -5,8 +5,7 @@
     "ingredient": {
       "label": "Ingrediente",
       "options": {
-        "flourScooped": "Harina — compacta, sacada del paquete",
-        "flour": "Harina — suelta, como en recetas de EE. UU.",
+        "flour": "Harina de trigo",
         "wholeWheatFlour": "Harina integral",
         "ryeFlour": "Harina de centeno",
         "almondFlour": "Harina de almendra",
@@ -29,11 +28,11 @@
         "oats": "Copos de avena",
         "rice": "Arroz (crudo)",
         "buckwheat": "Trigo sarraceno",
-        "raisins": "Pasas",
+        "raisins": "Pasas (sin apretar)",
         "walnuts": "Nueces (picadas)",
         "chocolateChips": "Pepitas de chocolate",
         "peanutButter": "Crema de cacahuete",
-        "coconut": "Coco rallado",
+        "coconut": "Coco rallado (sin apretar)",
         "salt": "Sal"
       }
     },
@@ -52,6 +51,13 @@
         "ml": "Mililitros",
         "g": "Gramos → tazas y cucharas"
       }
+    },
+    "packing": {
+      "label": "Cómo se llena la taza",
+      "options": {
+        "scooped": "Compacta (del paquete)",
+        "spooned": "Suelta (recetas de EE. UU.)"
+      }
     }
   },
   "outputs": {
@@ -63,6 +69,6 @@
     "table": "La misma cantidad en otras medidas",
     "all": "Todos los ingredientes: {amount} × «{measure}» en gramos",
     "g": "g",
-    "flourNote": "Compacta — la taza se hunde directamente en el paquete. Suelta — la harina se echa en la taza con una cuchara y se enrasa con un cuchillo: sale aproximadamente una cuarta parte menos."
+    "packingNote": "Compacta — la taza se hunde directamente en el paquete. Suelta — se echa en la taza con una cuchara y se enrasa con un cuchillo: sale aproximadamente un {less} menos."
   }
 }

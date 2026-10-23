@@ -5,8 +5,7 @@
     "ingredient": {
       "label": "Ingrediente",
       "options": {
-        "flourScooped": "Farinha — compacta, tirada do pacote",
-        "flour": "Farinha — solta, como em receitas dos EUA",
+        "flour": "Farinha de trigo",
         "wholeWheatFlour": "Farinha integral",
         "ryeFlour": "Farinha de centeio",
         "almondFlour": "Farinha de amêndoas",
@@ -29,11 +28,11 @@
         "oats": "Aveia em flocos",
         "rice": "Arroz (cru)",
         "buckwheat": "Trigo-sarraceno",
-        "raisins": "Uvas-passas",
+        "raisins": "Uvas-passas (sem apertar)",
         "walnuts": "Nozes (picadas)",
         "chocolateChips": "Gotas de chocolate",
         "peanutButter": "Pasta de amendoim",
-        "coconut": "Coco ralado",
+        "coconut": "Coco ralado (sem apertar)",
         "salt": "Sal"
       }
     },
@@ -52,6 +51,13 @@
         "ml": "Mililitros",
         "g": "Gramas → xícaras e colheres"
       }
+    },
+    "packing": {
+      "label": "Como encher a xícara",
+      "options": {
+        "scooped": "Compacta (do pacote)",
+        "spooned": "Solta (receitas dos EUA)"
+      }
     }
   },
   "outputs": {
@@ -63,6 +69,6 @@
     "table": "A mesma quantidade em outras medidas",
     "all": "Todos os ingredientes: {amount} × «{measure}» em gramas",
     "g": "g",
-    "flourNote": "Compacta — a xícara é mergulhada direto no pacote. Solta — a farinha é colocada na xícara com uma colher e nivelada com uma faca: dá cerca de um quarto a menos."
+    "packingNote": "Compacta — a xícara é mergulhada direto no pacote. Solta — coloca-se na xícara com uma colher e nivela-se com uma faca: dá cerca de {less} a menos."
   }
 }

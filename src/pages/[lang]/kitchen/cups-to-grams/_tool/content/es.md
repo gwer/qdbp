@@ -9,9 +9,11 @@ Elige el ingrediente, la medida y la cantidad: verás el peso en gramos y, debaj
 - **Vaso grande — 250 ml** y **vaso — 200 ml**.
 - Cucharada — 15 ml, cucharadita — 5 ml.
 
-## Por qué el peso de la harina depende de cómo se mide
+## Compacta o suelta
 
-La harina se compacta con facilidad. Echada con cuchara y enrasada, una taza de 240 ml pesa unos **122 g**; si se saca directamente con la taza del paquete, unos **154 g**. Por eso hay dos opciones de harina: «compacta» y «suelta». Las recetas de EE. UU. suelen contar con la harina suelta.
+La harina, la maicena, el cacao y el azúcar glas se compactan con facilidad, por eso para ellos la calculadora pregunta cómo se llena la taza. Echada con cuchara y enrasada, una taza de 240 ml de harina pesa unos **122 g**; sacada directamente del paquete con la taza, unos **154 g**. Las recetas de EE. UU. suelen contar con la harina suelta.
+
+Las cucharas se cuentan hundidas en el paquete y enrasadas. El azúcar, la sal y los granos apenas se compactan, así que para ellos el método no importa. Las pasas y el coco se miden sin apretar.
 
 ## Ejemplos
 
@@ -22,7 +24,7 @@ La harina se compacta con facilidad. Echada con cuchara y enrasada, una taza de 
 
 ## De dónde salen los datos
 
-Los ingredientes secos siguen la tabla de pesos de King Arthur Baking (gramos por taza americana, con cuchara y enrasada); la harina compacta, las tablas de cocina habituales. Para los líquidos se usa su densidad. Son valores medios: lo más preciso es pesar.
+La taza suelta de ingredientes secos sigue la tabla de pesos de King Arthur Baking. La taza compacta de harina de trigo, maicena y cacao, las tablas de cocina tradicionales rusas (160, 160 y 120 g por taza de 250 ml); la de harina integral, la tabla de Baking Sense (140 g por taza americana). Para la harina de centeno, la de almendra y el azúcar glas no encontramos datos de taza compacta: es una estimación, aumentada en la misma proporción que la harina de trigo. Para los líquidos se usa su densidad. Son valores medios: lo más preciso es pesar.
 
 ## Preguntas frecuentes
 

@@ -19,7 +19,6 @@ export const MEASURE_IDS = Object.keys(MEASURES) as Measure[];
 // чашку при наборе ложкой с выравниванием), жидкости — по физической плотности.
 const PER_CUP = (g: number) => g / MEASURES.cupUs;
 export const INGREDIENTS = {
-  flourScooped: 0.64,
   flour: PER_CUP(120),
   wholeWheatFlour: PER_CUP(113),
   ryeFlour: PER_CUP(106),
@@ -53,12 +52,40 @@ export const INGREDIENTS = {
 export type Ingredient = keyof typeof INGREDIENTS;
 export const INGREDIENT_IDS = Object.keys(INGREDIENTS) as Ingredient[];
 
+// Как наполнен стакан: зачерпнули из пакета (плотно) или насыпали ложкой и срезали (рыхло, как в INGREDIENTS).
+export const PACKINGS = ['scooped', 'spooned'] as const;
+export type Packing = (typeof PACKINGS)[number];
+export const CUP_IDS = ['cupUs', 'cup240', 'cup250', 'glass200'] as const satisfies readonly Measure[];
+
+// Порошки, которые заметно уплотняются: плотность, если стакан зачерпнули прямо из пакета.
+// Пшеничная мука и кукурузный крахмал — 160 г на стакан 250 мл, какао — 120 г по таблице «Книги о вкусной
+// и здоровой пище» (у America's Test Kitchen мука — 5 унций, 142 г на чашку; у Baking Sense какао — 112 г);
+// цельнозерновая — 140 г на чашку (Baking Sense, Milk Street). Для ржаной и миндальной муки и сахарной пудры
+// источника не нашлось — прикидка по соотношению плотно/рыхло у пшеничной муки.
+const RATIO = 0.64 / INGREDIENTS.flour;
+export const SCOOPED: Partial<Record<Ingredient, number>> = {
+  flour: 0.64,
+  wholeWheatFlour: PER_CUP(140),
+  ryeFlour: INGREDIENTS.ryeFlour * RATIO,
+  almondFlour: INGREDIENTS.almondFlour * RATIO,
+  cornstarch: 0.64,
+  powderedSugar: INGREDIENTS.powderedSugar * RATIO,
+  cocoa: 0.48,
+};
+export const PACKED_IDS = Object.keys(SCOOPED) as Ingredient[];
+
+// Ложку зачерпывают из пакета: насыпать в неё другой ложкой не принято.
+function density(measure: Measure, ingredient: Ingredient, packing: Packing): number {
+  const scooped = SCOOPED[ingredient];
+  return scooped !== undefined && (packing === 'scooped' || measure === 'tbsp' || measure === 'tsp') ? scooped : INGREDIENTS[ingredient];
+}
+
 /** Количество в выбранной мере → граммы. Для меры «г» — без пересчёта. */
-export function toGrams(amount: number, measure: Measure, ingredient: Ingredient): number {
-  return measure === 'g' ? amount : amount * MEASURES[measure] * INGREDIENTS[ingredient];
+export function toGrams(amount: number, measure: Measure, ingredient: Ingredient, packing: Packing = 'spooned'): number {
+  return measure === 'g' ? amount : amount * MEASURES[measure] * density(measure, ingredient, packing);
 }
 
 /** Граммы → количество в мере. */
-export function fromGrams(grams: number, measure: Measure, ingredient: Ingredient): number {
-  return measure === 'g' ? grams : grams / (MEASURES[measure] * INGREDIENTS[ingredient]);
+export function fromGrams(grams: number, measure: Measure, ingredient: Ingredient, packing: Packing = 'spooned'): number {
+  return measure === 'g' ? grams : grams / (MEASURES[measure] * density(measure, ingredient, packing));
 }
