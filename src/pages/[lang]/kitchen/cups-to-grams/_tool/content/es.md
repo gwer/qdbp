@@ -1,6 +1,6 @@
 ## Cómo usarlo
 
-Elige el ingrediente, la medida y la cantidad: verás el peso en gramos y, debajo, la misma cantidad en otras medidas. Para pasar de gramos a tazas, elige la medida «Gramos» e introduce el peso.
+Elige el ingrediente, la medida y la cantidad: verás el peso en gramos y, debajo, la misma cantidad en otras medidas.
 
 ## ¿Qué taza?
 
@@ -11,18 +11,18 @@ Elige el ingrediente, la medida y la cantidad: verás el peso en gramos y, debaj
 
 ## Por qué el peso de la harina depende de cómo se mide
 
-La harina se compacta con facilidad. Echada con cuchara y enrasada, una taza de 240 ml pesa unos **122 g**; si se saca directamente con la taza del paquete, unos **154 g**. Por eso hay dos opciones de harina.
+La harina se compacta con facilidad. Echada con cuchara y enrasada, una taza de 240 ml pesa unos **122 g**; si se saca directamente con la taza del paquete, unos **154 g**. Por eso hay dos opciones de harina: «compacta» y «suelta». Las recetas de EE. UU. suelen contar con la harina suelta.
 
 ## Ejemplos
 
-- 1 taza (240 ml) de azúcar = **201 g**; de harina, con cuchara y enrasada = **122 g**.
+- 1 taza (240 ml) de azúcar = **201 g**; de harina suelta = **122 g**.
 - 1 taza americana de mantequilla = **227 g**.
 - 1 cucharada de miel = **21 g**; de sal = **18 g**.
-- 500 g de harina ≈ **4,1** tazas de 240 ml, enrasadas.
+- 500 g de harina ≈ **4,1** tazas de 240 ml de harina suelta.
 
 ## De dónde salen los datos
 
-Los ingredientes secos siguen la tabla de pesos de King Arthur Baking (gramos por taza americana, con cuchara y enrasada); la harina «sacada con el vaso», las tablas de cocina habituales. Para los líquidos se usa su densidad. Son valores medios: lo más preciso es pesar.
+Los ingredientes secos siguen la tabla de pesos de King Arthur Baking (gramos por taza americana, con cuchara y enrasada); la harina compacta, las tablas de cocina habituales. Para los líquidos se usa su densidad. Son valores medios: lo más preciso es pesar.
 
 ## Preguntas frecuentes
 

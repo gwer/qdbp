@@ -5,8 +5,8 @@
     "ingredient": {
       "label": "Ingredient",
       "options": {
-        "flour": "All-purpose flour (spooned and leveled)",
-        "flourScooped": "All-purpose flour (scooped)",
+        "flourScooped": "Flour — scooped from the bag",
+        "flour": "Flour — spooned & leveled (US recipes)",
         "wholeWheatFlour": "Whole wheat flour",
         "ryeFlour": "Rye flour",
         "almondFlour": "Almond flour",
@@ -47,10 +47,10 @@
         "cup240": "Cup (240 ml)",
         "cup250": "Metric cup (250 ml)",
         "glass200": "Glass (200 ml)",
-        "tbsp": "Tablespoon (15 ml)",
-        "tsp": "Teaspoon (5 ml)",
+        "tbsp": "Level tablespoon",
+        "tsp": "Level teaspoon",
         "ml": "Milliliters",
-        "g": "Grams"
+        "g": "Grams → cups & spoons"
       }
     }
   },
@@ -62,6 +62,7 @@
   "ui": {
     "table": "The same amount in other measures",
     "all": "All ingredients: {amount} × “{measure}” in grams",
-    "g": "g"
+    "g": "g",
+    "flourNote": "Scooped — the cup or spoon is dipped straight into the bag. Spooned & leveled — flour is spooned in and leveled off with a knife: about a quarter less."
   }
 }

@@ -5,8 +5,8 @@
     "ingredient": {
       "label": "Ingrediente",
       "options": {
-        "flour": "Harina de trigo (con cuchara, enrasada)",
-        "flourScooped": "Harina de trigo (sacada con el vaso)",
+        "flourScooped": "Harina — compacta, sacada del paquete",
+        "flour": "Harina — suelta, como en recetas de EE. UU.",
         "wholeWheatFlour": "Harina integral",
         "ryeFlour": "Harina de centeno",
         "almondFlour": "Harina de almendra",
@@ -47,10 +47,10 @@
         "cup240": "Taza (240 ml)",
         "cup250": "Vaso grande (250 ml)",
         "glass200": "Vaso (200 ml)",
-        "tbsp": "Cucharada (15 ml)",
-        "tsp": "Cucharadita (5 ml)",
+        "tbsp": "Cucharada rasa",
+        "tsp": "Cucharadita rasa",
         "ml": "Mililitros",
-        "g": "Gramos"
+        "g": "Gramos → tazas y cucharas"
       }
     }
   },
@@ -62,6 +62,7 @@
   "ui": {
     "table": "La misma cantidad en otras medidas",
     "all": "Todos los ingredientes: {amount} × «{measure}» en gramos",
-    "g": "g"
+    "g": "g",
+    "flourNote": "Compacta — la taza o la cuchara se hunde directamente en el paquete. Suelta — la harina se echa con una cuchara y se enrasa con un cuchillo: sale aproximadamente una cuarta parte menos."
   }
 }

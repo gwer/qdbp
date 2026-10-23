@@ -5,8 +5,8 @@
     "ingredient": {
       "label": "Ingrediente",
       "options": {
-        "flour": "Farinha de trigo (com colher, nivelada)",
-        "flourScooped": "Farinha de trigo (pegando com a xícara)",
+        "flourScooped": "Farinha — compacta, tirada do pacote",
+        "flour": "Farinha — solta, como em receitas dos EUA",
         "wholeWheatFlour": "Farinha integral",
         "ryeFlour": "Farinha de centeio",
         "almondFlour": "Farinha de amêndoas",
@@ -47,10 +47,10 @@
         "cup240": "Xícara (240 ml)",
         "cup250": "Copo grande (250 ml)",
         "glass200": "Copo (200 ml)",
-        "tbsp": "Colher de sopa (15 ml)",
-        "tsp": "Colher de chá (5 ml)",
+        "tbsp": "Colher de sopa rasa",
+        "tsp": "Colher de chá rasa",
         "ml": "Mililitros",
-        "g": "Gramas"
+        "g": "Gramas → xícaras e colheres"
       }
     }
   },
@@ -62,6 +62,7 @@
   "ui": {
     "table": "A mesma quantidade em outras medidas",
     "all": "Todos os ingredientes: {amount} × «{measure}» em gramas",
-    "g": "g"
+    "g": "g",
+    "flourNote": "Compacta — a xícara ou a colher é mergulhada direto no pacote. Solta — a farinha é colocada com uma colher e nivelada com uma faca: dá cerca de um quarto a menos."
   }
 }

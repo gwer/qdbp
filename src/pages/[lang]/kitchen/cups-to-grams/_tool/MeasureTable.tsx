@@ -5,8 +5,10 @@ import { fromGrams, INGREDIENT_IDS, MEASURE_IDS, toGrams, type Ingredient, type 
 /** Те же граммы во всех мерах — заодно обратный пересчёт «граммы → стаканы/ложки». */
 export function MeasureTable({ values, result, lang, t }: ExtraProps<{ amount: number; measure: Measure }, { grams: number; ingredient: Ingredient }>) {
   const g = (n: number) => formatNumber(lang, n, 'number', n < 10 ? 1 : 0);
+  const flour = result.ingredient === 'flour' || result.ingredient === 'flourScooped';
   return (
     <>
+    {flour && <p class="muted">{t('ui.flourNote')}</p>}
     <div class="table-wrap">
       <table class="wrap">
         <caption class="muted">{t('ui.table')}</caption>

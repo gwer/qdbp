@@ -1,6 +1,6 @@
 ## How to use
 
-Pick an ingredient, a measure and an amount — you'll see the weight in grams, plus the same amount in other measures below. To convert grams to cups, choose "Grams" as the measure and enter the weight.
+Pick an ingredient, a measure and an amount — you'll see the weight in grams, plus the same amount in other measures below.
 
 ## Which cup?
 
@@ -11,7 +11,7 @@ Pick an ingredient, a measure and an amount — you'll see the weight in grams, 
 
 ## Why flour weight depends on how you measure
 
-Flour packs down easily. Spooned into a cup and leveled, a cup of all-purpose flour weighs about **120 g**; scooped straight from the bag, closer to **150 g**. That's why there are two flour options. Most US recipes assume the spoon-and-level method.
+Flour packs down easily. Spooned into a cup and leveled, a cup of all-purpose flour weighs about **120 g**; scooped straight from the bag, closer to **150 g**. That's why there are two flour options. Most US recipes assume the spoon-and-level method; scooping is how most people measure elsewhere.
 
 ## Examples
 

@@ -1,6 +1,6 @@
 ## So funktioniert der Rechner
 
-Zutat, Maß und Menge wählen – Sie sehen das Gewicht in Gramm und darunter dieselbe Menge in anderen Maßen. Um Gramm in Cups umzurechnen, wählen Sie als Maß „Gramm“ und geben das Gewicht ein.
+Zutat, Maß und Menge wählen – Sie sehen das Gewicht in Gramm und darunter dieselbe Menge in anderen Maßen.
 
 ## Welche Tasse?
 
@@ -11,18 +11,18 @@ Zutat, Maß und Menge wählen – Sie sehen das Gewicht in Gramm und darunter di
 
 ## Warum das Mehlgewicht von der Messart abhängt
 
-Mehl verdichtet sich leicht. Mit dem Löffel eingefüllt und glatt gestrichen wiegt ein US-Cup Weizenmehl etwa **120 g**, direkt mit der Tasse aus der Tüte geschöpft eher **150 g**. Deshalb gibt es zwei Optionen für Mehl. US-Rezepte gehen meist von der Löffelmethode aus.
+Mehl verdichtet sich leicht. Mit dem Löffel eingefüllt und glatt gestrichen wiegt ein US-Cup Weizenmehl etwa **120 g**, direkt mit der Tasse aus der Tüte geschöpft eher **150 g**. Deshalb gibt es zwei Optionen für Mehl: „fest“ und „locker“. US-Rezepte gehen meist von lockerem Mehl aus.
 
 ## Beispiele
 
 - 1 US-Cup Mehl = **120 g**, Zucker = **198 g**, Butter = **227 g**.
 - 1 Tasse (250 ml) Zucker = **209 g**.
 - 1 Esslöffel Honig = **21 g**, Salz = **18 g**.
-- 500 g Mehl ≈ **4 ⅙** US-Cups (gelöffelt).
+- 500 g Mehl ≈ **4 ⅙** US-Cups (locker).
 
 ## Woher die Werte stammen
 
-Trockene Zutaten folgen der Gewichtstabelle von King Arthur Baking (Gramm pro US-Cup, gelöffelt und glatt gestrichen); „geschöpftes Mehl“ gängigen Küchentabellen. Für Flüssigkeiten wird die Dichte verwendet. Das sind Durchschnittswerte – eine Küchenwaage ist immer genauer.
+Trockene Zutaten folgen der Gewichtstabelle von King Arthur Baking (Gramm pro US-Cup, gelöffelt und glatt gestrichen); festes Mehl gängigen Küchentabellen. Für Flüssigkeiten wird die Dichte verwendet. Das sind Durchschnittswerte – eine Küchenwaage ist immer genauer.
 
 ## Häufige Fragen
 

@@ -1,6 +1,6 @@
 ## Como usar
 
-Escolha o ingrediente, a medida e a quantidade: você vê o peso em gramas e, logo abaixo, a mesma quantidade em outras medidas. Para converter gramas em xícaras, escolha a medida "Gramas" e digite o peso.
+Escolha o ingrediente, a medida e a quantidade: você vê o peso em gramas e, logo abaixo, a mesma quantidade em outras medidas.
 
 ## Qual xícara?
 
@@ -11,18 +11,18 @@ Escolha o ingrediente, a medida e a quantidade: você vê o peso em gramas e, lo
 
 ## Por que o peso da farinha depende de como você mede
 
-A farinha compacta com facilidade. Colocada com colher e nivelada, uma xícara de 240 ml pesa cerca de **122 g**; pegando direto do pacote com a xícara, cerca de **154 g**. Por isso há duas opções de farinha.
+A farinha compacta com facilidade. Colocada com colher e nivelada, uma xícara de 240 ml pesa cerca de **122 g**; pegando direto do pacote com a xícara, cerca de **154 g**. Por isso há duas opções de farinha: "compacta" e "solta". Receitas dos EUA costumam considerar a farinha solta.
 
 ## Exemplos
 
-- 1 xícara (240 ml) de açúcar refinado = **201 g**; de farinha, com colher e nivelada = **122 g**.
+- 1 xícara (240 ml) de açúcar refinado = **201 g**; de farinha solta = **122 g**.
 - 1 xícara americana de manteiga = **227 g**.
 - 1 colher de sopa de mel = **21 g**; de sal = **18 g**.
-- 500 g de farinha ≈ **4,1** xícaras de 240 ml, niveladas.
+- 500 g de farinha ≈ **4,1** xícaras de 240 ml de farinha solta.
 
 ## De onde vêm os dados
 
-Ingredientes secos seguem a tabela de pesos da King Arthur Baking (gramas por xícara americana, com colher e nivelada); a farinha "pegando com a xícara", tabelas de cozinha comuns. Para líquidos usa-se a densidade. São valores médios — o mais preciso é pesar.
+Ingredientes secos seguem a tabela de pesos da King Arthur Baking (gramas por xícara americana, com colher e nivelada); a farinha compacta, tabelas de cozinha comuns. Para líquidos usa-se a densidade. São valores médios — o mais preciso é pesar.
 
 ## Perguntas frequentes
 

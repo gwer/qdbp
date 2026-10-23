@@ -5,8 +5,8 @@
     "ingredient": {
       "label": "Zutat",
       "options": {
-        "flour": "Weizenmehl (gelöffelt, glatt gestrichen)",
-        "flourScooped": "Weizenmehl (mit der Tasse geschöpft)",
+        "flourScooped": "Mehl — fest, aus der Tüte geschöpft",
+        "flour": "Mehl — locker, wie in US-Rezepten",
         "wholeWheatFlour": "Vollkornmehl",
         "ryeFlour": "Roggenmehl",
         "almondFlour": "Mandelmehl",
@@ -47,10 +47,10 @@
         "cup240": "Tasse (240 ml)",
         "cup250": "Tasse (250 ml)",
         "glass200": "Glas (200 ml)",
-        "tbsp": "Esslöffel (15 ml)",
-        "tsp": "Teelöffel (5 ml)",
+        "tbsp": "Esslöffel, gestrichen",
+        "tsp": "Teelöffel, gestrichen",
         "ml": "Milliliter",
-        "g": "Gramm"
+        "g": "Gramm → Tassen und Löffel"
       }
     }
   },
@@ -62,6 +62,7 @@
   "ui": {
     "table": "Dieselbe Menge in anderen Maßen",
     "all": "Alle Zutaten: {amount} × „{measure}“ in Gramm",
-    "g": "g"
+    "g": "g",
+    "flourNote": "Fest — Tasse oder Löffel direkt in die Tüte getaucht. Locker — Mehl mit einem Löffel eingefüllt und mit einem Messer glatt gestrichen: etwa ein Viertel weniger."
   }
 }

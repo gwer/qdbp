@@ -19,8 +19,8 @@ export const MEASURE_IDS = Object.keys(MEASURES) as Measure[];
 // чашку при наборе ложкой с выравниванием), жидкости — по физической плотности.
 const PER_CUP = (g: number) => g / MEASURES.cupUs;
 export const INGREDIENTS = {
-  flour: PER_CUP(120),
   flourScooped: 0.64,
+  flour: PER_CUP(120),
   wholeWheatFlour: PER_CUP(113),
   ryeFlour: PER_CUP(106),
   almondFlour: PER_CUP(96),
