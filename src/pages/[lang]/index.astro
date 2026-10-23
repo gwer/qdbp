@@ -1,4 +1,5 @@
 ---
+import Icon from '@/components/Icon.astro';
 import ToolList from '@/components/ToolList.astro';
 import { SITE_LANGS, type Lang } from '@/i18n/config';
 import { uiT } from '@/i18n/ui';
@@ -27,12 +28,12 @@ const popular = POPULAR.map((path) => tools.find((tool) => tool.path === path)!)
 const alternates = SITE_LANGS.map((l) => ({ lang: l, href: `/${l}/` }));
 ---
 
-<Base lang={lang} title={t('home.title')} description={t('site.description')} alternates={alternates}>
+<Base wide lang={lang} title={t('home.title')} description={t('site.description')} alternates={alternates}>
   <h1>{t('site.tagline')}</h1>
   <p class="lead">{t('home.intro')}</p>
   <section class="home-popular">
     <h2>{t('home.popular')}</h2>
-    <ToolList tools={popular} lang={lang} />
+    <ToolList tools={popular} lang={lang} icons />
   </section>
   <h2>{t('home.allCategories')}</h2>
   <nav class="home-nav" aria-label={t('home.allCategories')}>
@@ -40,7 +41,10 @@ const alternates = SITE_LANGS.map((l) => ({ lang: l, href: `/${l}/` }));
       {
         cats.map((cat) => (
           <li>
-            <a href={`#${cat.id}`}>{categoryName(cat, lang)}</a>
+            <a href={`#${cat.id}`} class="with-icon">
+              <Icon svg={cat.icon} />
+              {categoryName(cat, lang)}
+            </a>
           </li>
         ))
       }
@@ -50,7 +54,10 @@ const alternates = SITE_LANGS.map((l) => ({ lang: l, href: `/${l}/` }));
     cats.map((cat) => (
       <section class="home-category" id={cat.id}>
         <h2>
-          <a href={categoryUrl(cat, lang)}>{categoryName(cat, lang)}</a>
+          <a href={categoryUrl(cat, lang)} class="with-icon">
+            <Icon svg={cat.icon} />
+            {categoryName(cat, lang)}
+          </a>
         </h2>
         <ToolList tools={toolsIn(cat, lang)} lang={lang} compact />
       </section>

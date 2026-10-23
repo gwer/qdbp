@@ -26,6 +26,7 @@ const categoryDefs = import.meta.glob<CategoryDef>('/src/pages/*/*/_category/cat
 });
 const categoryPages = import.meta.glob('/src/pages/*/*/index.astro');
 const categoryI18n = import.meta.glob<Dict>('/src/pages/*/*/_category/i18n/*.json', { eager: true, import: 'default' });
+const categoryIcons = import.meta.glob<string>('/src/pages/*/*/_category/icon.svg', { eager: true, query: '?raw', import: 'default' });
 
 export interface Tool {
   id: string;
@@ -43,6 +44,8 @@ export interface Category {
   def: CategoryDef;
   order: number;
   strings: Partial<Record<Lang, Dict>>;
+  /** Inline SVG из _category/icon.svg (Lucide). */
+  icon: string;
   tools: Tool[];
   /** Языки, на которых в категории есть хотя бы один инструмент. */
   langs: Lang[];
@@ -130,6 +133,8 @@ function build() {
       continue;
     }
     if (!categoryPages[`${ROOT}/${id}/index.astro`]) errors.push(`${id}: нет index.astro (скопируйте из любой категории)`);
+    const icon = categoryIcons[`${ROOT}/${id}/_category/icon.svg`];
+    if (!icon) errors.push(`${id}: нет _category/icon.svg`);
     const strings = catStrings.get(id) ?? {};
     errors.push(...validateFiles(`${id} (категория)`, { i18n: strings, content: [] }, ['name', 'description'], false));
     const catTools = tools
@@ -139,7 +144,7 @@ function build() {
     for (const lang of langs) {
       if (!strings[lang]) errors.push(`${id}: на ${lang} есть инструменты, но нет _category/i18n/${lang}.json`);
     }
-    categories.push({ id, def, order: def.order, strings, tools: catTools, langs });
+    categories.push({ id, def, order: def.order, strings, icon: icon ?? '', tools: catTools, langs });
   }
   for (const page of Object.keys(categoryPages)) {
     const id = page.slice(ROOT.length + 1, -'/index.astro'.length);

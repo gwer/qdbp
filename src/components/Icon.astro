@@ -1,0 +1,8 @@
+---
+/** Inline SVG-иконка (иконки разделов — Lucide, лицензия в public/licenses/lucide.txt). Декоративная: подпись рядом. */
+interface Props {
+  svg: string;
+}
+---
+
+<span class="icon" aria-hidden="true" set:html={Astro.props.svg} />

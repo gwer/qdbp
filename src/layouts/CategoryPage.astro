@@ -1,5 +1,6 @@
 ---
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Icon from '@/components/Icon.astro';
 import ToolList from '@/components/ToolList.astro';
 import { uiT } from '@/i18n/ui';
 import Base from '@/layouts/Base.astro';
@@ -21,9 +22,9 @@ const crumbs = [
 const alternates = cat.langs.map((l) => ({ lang: l, href: categoryUrl(cat, l) }));
 ---
 
-<Base lang={lang} title={`${name} — qdbp`} description={description} alternates={alternates} jsonLd={[breadcrumbLd(crumbs, Astro.site!)]}>
+<Base wide lang={lang} title={`${name} — qdbp`} description={description} alternates={alternates} jsonLd={[breadcrumbLd(crumbs, Astro.site!)]}>
   <Breadcrumbs items={crumbs} label={t('nav.breadcrumbs')} />
-  <h1>{name}</h1>
+  <h1 class="with-icon"><Icon svg={cat.icon} />{name}</h1>
   <p class="lead">{description}</p>
   <slot />
   <p class="muted">{t('category.toolsCount', { count: tools.length })}</p>

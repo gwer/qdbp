@@ -1,6 +1,7 @@
 :root {
   --bg: #ffffff;
   --surface: #f5f6f8;
+  --surface-hover: #eceef3;
   --text: #16181d;
   --muted: #5b6270;
   --border: #dde0e6;
@@ -17,6 +18,7 @@
   :root {
     --bg: #121418;
     --surface: #1c1f25;
+    --surface-hover: #252931;
     --text: #e8eaee;
     --muted: #9aa1ad;
     --border: #2e323a;
@@ -64,6 +66,41 @@ h2 {
   padding: 0 16px;
 }
 
+/* Каталоги (главная, разделы) шире: карточки встают в 3–4 колонки */
+.wide .wrap {
+  max-width: 1080px;
+}
+
+/* Иконки разделов (Lucide): цвет — от текста ссылки */
+.icon {
+  display: inline-flex;
+  flex: none;
+}
+
+.icon svg {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+h1 .icon {
+  color: var(--accent);
+}
+
+/* В карточке название может переноситься — иконка у первой строки */
+.tool-list .with-icon {
+  align-items: flex-start;
+}
+
+.tool-list .with-icon .icon {
+  margin-top: 0.2em;
+}
+
 .lead {
   color: var(--muted);
   margin-top: 0;
@@ -86,11 +123,20 @@ h2 {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 800;
   font-size: 1.35rem;
   letter-spacing: 0.04em;
   color: var(--text);
   text-decoration: none;
+}
+
+.logo-mark svg {
+  display: block;
+  width: 28px;
+  height: 28px;
 }
 
 .lang-menu {
@@ -168,14 +214,39 @@ h2 {
 }
 
 .tool-list li {
+  position: relative;
   padding: 12px 14px;
   background: var(--surface);
   border-radius: var(--radius);
 }
 
+.tool-list li:hover {
+  background: var(--surface-hover);
+}
+
+.tool-list li:has(a:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .tool-list a {
   font-weight: 600;
   text-decoration: none;
+}
+
+/* Вся карточка — ссылка */
+.tool-list a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.tool-list a:focus-visible {
+  outline: none;
+}
+
+.wide .tool-list:not(.tool-list-compact) {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
 .tool-list p {
@@ -370,8 +441,8 @@ details.extra summary {
 }
 
 /* Главная: популярное — карточками с описанием, дальше разделы и компактные списки */
-.home-popular .tool-list {
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+.wide .home-popular .tool-list {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 }
 
 .home-popular .tool-list p {
@@ -392,8 +463,11 @@ details.extra summary {
   gap: 8px;
 }
 
+.home-nav a:hover {
+  background: var(--surface-hover);
+}
+
 .home-nav a {
-  display: block;
   padding: 6px 12px;
   background: var(--surface);
   border-radius: 999px;

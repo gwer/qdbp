@@ -1,22 +1,29 @@
 ---
 import type { Lang } from '@/i18n/config';
-import { toolName, toolUrl, type Tool } from '@/lib/catalog';
+import Icon from '@/components/Icon.astro';
+import { categories, toolName, toolUrl, type Tool } from '@/lib/catalog';
 
 interface Props {
   tools: Tool[];
   lang: Lang;
   /** Только названия, без описаний — для главной. */
   compact?: boolean;
+  /** Иконка раздела у названия — для списков вперемешку из разных разделов. */
+  icons?: boolean;
 }
 
-const { tools, lang, compact = false } = Astro.props;
+const { tools, lang, compact = false, icons = false } = Astro.props;
+const icon = (tool: Tool) => categories.find((c) => c.id === tool.category)!.icon;
 ---
 
 <ul class:list={['tool-list', { 'tool-list-compact': compact }]}>
   {
     tools.map((tool) => (
       <li>
-        <a href={toolUrl(tool, lang)}>{toolName(tool, lang)}</a>
+        <a href={toolUrl(tool, lang)} class:list={{ 'with-icon': icons }}>
+          {icons && <Icon svg={icon(tool)} />}
+          {toolName(tool, lang)}
+        </a>
         {!compact && <p>{tool.strings[lang]!.description as string}</p>}
       </li>
     ))
