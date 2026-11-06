@@ -1,6 +1,6 @@
 {
   "title": "Generador de hash: MD5, SHA-1, SHA-256, SHA-512",
-  "description": "Calcula el hash de un texto con MD5, SHA-1, SHA-256, SHA-384 y SHA-512 a la vez. El texto no sale de tu navegador.",
+  "description": "Calcula el hash de un texto o un archivo con MD5, SHA-1, SHA-256, SHA-384 y SHA-512 a la vez y compáralo con la suma de verificación publicada. El texto y los archivos no salen de tu navegador.",
   "ui": {
     "input": "Texto",
     "upper": "En mayúsculas",

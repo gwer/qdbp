@@ -1,6 +1,6 @@
 {
   "title": "Hash generator: MD5, SHA-1, SHA-256, SHA-512",
-  "description": "Hash any text with MD5, SHA-1, SHA-256, SHA-384 and SHA-512 at once. Your text never leaves your browser.",
+  "description": "Hash text or a file with MD5, SHA-1, SHA-256, SHA-384 and SHA-512 at once, and compare the result with a published checksum. Your text and files never leave your browser.",
   "ui": {
     "input": "Text",
     "upper": "Uppercase",
