@@ -4,7 +4,7 @@ Indica el rango «desde» y «hasta» (ambos incluidos), cuántos números neces
 
 ## Un azar justo
 
-Los números se generan en tu navegador con un generador criptográfico (`crypto.getRandomValues`). Todos los números del rango tienen exactamente la misma probabilidad: la calculadora descarta los pocos valores que, de lo contrario, favorecerían ligeramente a los números más bajos.
+Los números se generan en tu navegador con un generador criptográfico (`crypto.getRandomValues`). Todos los números del rango tienen exactamente la misma probabilidad: la herramienta descarta los pocos valores que, de lo contrario, favorecerían ligeramente a los números más bajos.
 
 ## Ejemplos
 

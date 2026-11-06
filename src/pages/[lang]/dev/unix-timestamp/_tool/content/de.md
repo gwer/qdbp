@@ -2,7 +2,7 @@
 
 Die Unixzeit ist die Anzahl der Sekunden seit Mitternacht UTC am 1. Januar 1970. So speichern Datenbanken, Logs, APIs und die meisten Programmiersprachen Zeitpunkte. JavaScript und Java verwenden oft Millisekunden – die Zahl ist dann drei Stellen länger.
 
-## So funktioniert der Rechner
+## So funktioniert der Konverter
 
 Fügen Sie den Timestamp ein und wählen Sie die Einheit. Sie sehen Datum und Uhrzeit in Ihrer Zeitzone, in UTC und im Format ISO 8601. Darunter steht der aktuelle Timestamp, der sich jede Sekunde aktualisiert.
 

@@ -4,7 +4,7 @@ Defina o intervalo "de" e "até" (os dois números entram no sorteio), quantos n
 
 ## Sorteio justo
 
-Os números são gerados no seu navegador por um gerador criptográfico (`crypto.getRandomValues`). Todos os números do intervalo têm exatamente a mesma chance: a calculadora descarta os poucos valores que, de outra forma, favoreceriam levemente os números menores.
+Os números são gerados no seu navegador por um gerador criptográfico (`crypto.getRandomValues`). Todos os números do intervalo têm exatamente a mesma chance: a ferramenta descarta os poucos valores que, de outra forma, favoreceriam levemente os números menores.
 
 ## Exemplos
 

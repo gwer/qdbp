@@ -4,7 +4,7 @@ Set the range "from" and "to" (both numbers are included), how many numbers you 
 
 ## Fair randomness
 
-Numbers are generated in your browser with a cryptographic random generator (`crypto.getRandomValues`). Every number in the range has exactly the same chance: the calculator discards the few raw values that would otherwise slightly favor lower numbers.
+Numbers are generated in your browser with a cryptographic random generator (`crypto.getRandomValues`). Every number in the range has exactly the same chance: the tool discards the few raw values that would otherwise slightly favor lower numbers.
 
 ## Examples
 

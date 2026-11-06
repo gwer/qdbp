@@ -4,7 +4,7 @@ Legen Sie den Bereich „von“ und „bis“ fest (beide Zahlen sind eingeschlo
 
 ## Fairer Zufall
 
-Die Zahlen werden in Ihrem Browser mit einem kryptografischen Zufallsgenerator (`crypto.getRandomValues`) erzeugt. Jede Zahl im Bereich hat genau dieselbe Chance: Der Rechner verwirft die wenigen Rohwerte, die sonst kleinere Zahlen minimal bevorzugen würden.
+Die Zahlen werden in Ihrem Browser mit einem kryptografischen Zufallsgenerator (`crypto.getRandomValues`) erzeugt. Jede Zahl im Bereich hat genau dieselbe Chance: Das Tool verwirft die wenigen Rohwerte, die sonst kleinere Zahlen minimal bevorzugen würden.
 
 ## Beispiele
 
