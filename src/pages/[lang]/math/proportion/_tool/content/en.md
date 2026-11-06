@@ -1,16 +1,16 @@
 ## How to use
 
-Fill in the three numbers you know: if **A** corresponds to **B**, what does **C** correspond to? The calculator finds the unknown **X** and shows the formula with your numbers plugged in. This is also known as the rule of three.
+Write the proportion as two fractions: **A / B = C / D** — A is to B as C is to D. Fill in the three numbers you know and leave the one you want to find empty (or type x in it). The unknown can be in any box. The answer appears right in that box, with the formula and your numbers below. In inverse mode the fractions turn into products: **A × B = C × D**. This is also known as the rule of three.
 
 ## Direct and inverse proportions
 
 **Direct proportion** — the more of one quantity, the more of the other: more items cost more, more servings need more flour.
 
-`X = B × C / A`
+`A / B = C / X` → `X = B × C / A`
 
 **Inverse proportion** — the more of one quantity, the less of the other: more workers need fewer days, a higher speed means less travel time.
 
-`X = A × B / C`
+`A × B = C × X` → `X = A × B / C`
 
 ## Examples
 

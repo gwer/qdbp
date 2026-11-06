@@ -1,16 +1,16 @@
 ## Cómo usarla
 
-Rellena los tres datos que conoces: si **A** corresponde a **B**, ¿a cuánto corresponde **C**? La calculadora encuentra la incógnita **X** y muestra la fórmula con tus números.
+Escribe la proporción como dos fracciones: **A / B = C / D**, es decir, A es a B como C es a D. Rellena los tres datos que conoces y deja vacía la casilla que quieres calcular (o escribe x en ella). La incógnita puede estar en cualquier casilla. El resultado aparece en esa misma casilla y debajo, la fórmula con tus números. En la regla de tres inversa las fracciones se convierten en productos: **A × B = C × D**.
 
 ## Regla de tres directa e inversa
 
 **Regla de tres directa**: cuanto más de una magnitud, más de la otra. Más kilos cuestan más; más raciones necesitan más harina.
 
-`X = B × C / A`
+`A / B = C / X` → `X = B × C / A`
 
 **Regla de tres inversa**: cuanto más de una magnitud, menos de la otra. Más trabajadores tardan menos días; más velocidad, menos tiempo de viaje.
 
-`X = A × B / C`
+`A × B = C × X` → `X = A × B / C`
 
 ## Ejemplos
 

@@ -361,6 +361,48 @@ select[aria-invalid='true'] {
   font-size: 1.8rem;
 }
 
+/* Пропорция: две дроби A/B = C/D (или произведения A × B = C × D) */
+.prop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.prop-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(10rem, 40%);
+}
+
+.prop input[type='text'] {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.prop input.prop-x::placeholder {
+  color: var(--accent);
+  font-weight: 600;
+  opacity: 1;
+}
+
+.prop-bar {
+  height: 2px;
+  background: var(--text);
+}
+
+.prop-op {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.prop-eq {
+  font-size: 1.8rem;
+}
+
 /* Таблицы */
 .table-wrap {
   overflow-x: auto;

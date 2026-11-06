@@ -1,16 +1,16 @@
 ## So funktioniert der Rechner
 
-Tragen Sie die drei bekannten Werte ein: Wenn zur Menge **A** der Wert **B** gehört – welcher Wert gehört dann zur Menge **C**? Der Rechner findet das gesuchte **X** und zeigt die Rechnung mit Ihren Zahlen.
+Schreiben Sie den Dreisatz als zwei Brüche: **A / B = C / D** – A verhält sich zu B wie C zu D. Tragen Sie die drei bekannten Werte ein und lassen Sie das gesuchte Feld leer (oder schreiben Sie x hinein). Die Unbekannte darf in jedem Feld stehen. Das Ergebnis erscheint direkt in diesem Feld, darunter die Rechnung mit Ihren Zahlen. Im antiproportionalen Modus werden aus den Brüchen Produkte: **A × B = C × D**.
 
 ## Proportionaler und antiproportionaler Dreisatz
 
 **Proportional** – je mehr von der einen Größe, desto mehr von der anderen: mehr Ware kostet mehr, mehr Portionen brauchen mehr Mehl.
 
-`X = B × C / A`
+`A / B = C / X` → `X = B × C / A`
 
 **Antiproportional** – je mehr von der einen Größe, desto weniger von der anderen: mehr Arbeiter brauchen weniger Tage, höheres Tempo bedeutet kürzere Fahrzeit.
 
-`X = A × B / C`
+`A × B = C × X` → `X = A × B / C`
 
 ## Beispiele
 

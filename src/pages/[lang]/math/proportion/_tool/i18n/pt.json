@@ -1,27 +1,12 @@
 {
   "title": "Regra de três: calculadora direta e inversa",
   "description": "Resolva a regra de três: se A corresponde a B, a quanto corresponde C? Grandezas diretamente ou inversamente proporcionais.",
-  "inputs": {
-    "a": {
-      "label": "Se A"
-    },
-    "b": {
-      "label": "corresponde a B"
-    },
-    "c": {
-      "label": "então C"
-    },
-    "kind": {
-      "label": "Tipo",
-      "options": {
-        "direct": "Direta",
-        "inverse": "Inversa"
-      }
-    }
-  },
-  "outputs": {
-    "x": {
-      "label": "corresponde a X"
-    }
+  "ui": {
+    "kind": "Proporção",
+    "direct": "Direta",
+    "inverse": "Inversa",
+    "result": "Incógnita x",
+    "needOne": "Deixe vazio só um campo: o que você quer descobrir.",
+    "zero": "Não dá para dividir por zero: o divisor nesta proporção é zero."
   }
 }

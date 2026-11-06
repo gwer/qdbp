@@ -1,16 +1,16 @@
 ## Como usar
 
-Preencha os três valores conhecidos: se **A** corresponde a **B**, a quanto corresponde **C**? A calculadora encontra o **X** e mostra a conta com os seus números.
+Escreva a proporção como duas frações: **A / B = C / D**, ou seja, A está para B assim como C está para D. Preencha os três valores conhecidos e deixe vazio o campo que você quer descobrir (ou digite x nele). A incógnita pode ficar em qualquer campo. O resultado aparece nesse mesmo campo e, abaixo, a conta com os seus números. Na regra de três inversa as frações viram produtos: **A × B = C × D**.
 
 ## Regra de três direta e inversa
 
 **Diretamente proporcional**: quanto mais de uma grandeza, mais da outra. Mais quilos custam mais; mais porções pedem mais farinha.
 
-`X = B × C / A`
+`A / B = C / X` → `X = B × C / A`
 
 **Inversamente proporcional**: quanto mais de uma grandeza, menos da outra. Mais pedreiros levam menos dias; mais velocidade, menos tempo de viagem.
 
-`X = A × B / C`
+`A × B = C × X` → `X = A × B / C`
 
 ## Exemplos
 
