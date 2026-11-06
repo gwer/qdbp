@@ -32,7 +32,6 @@
     },
     "verifyNote": "Zum Prüfen der Signatur geben Sie unten das Secret ein: Die Prüfung läuft im Browser, nichts wird gesendet. Produktive Secrets sollten Sie trotzdem nirgends einfügen.",
     "secret": "Secret zur Signaturprüfung ({alg})",
-    "sampleSecret": "Secret des Beispieltokens: tooloot",
     "sigOk": "Signatur gültig: Der Token wurde mit diesem Secret signiert und nicht verändert.",
     "sigBad": "Signatur ungültig: anderes Secret oder der Token wurde verändert."
   }

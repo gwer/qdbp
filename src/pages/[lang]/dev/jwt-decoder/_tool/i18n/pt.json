@@ -32,7 +32,6 @@
     },
     "verifyNote": "Para verificar a assinatura, digite o segredo abaixo: a verificação é feita no navegador e nada é enviado. Mesmo assim, evite colar segredos de produção em sites.",
     "secret": "Segredo para verificar a assinatura ({alg})",
-    "sampleSecret": "o segredo do token de exemplo é tooloot",
     "sigOk": "Assinatura válida: o token foi assinado com este segredo e não foi alterado.",
     "sigBad": "A assinatura não confere: outro segredo ou o token foi alterado."
   }
