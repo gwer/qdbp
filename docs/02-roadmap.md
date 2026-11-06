@@ -51,7 +51,7 @@
 - [x] Фильтр по `SITE` в каталоге, свой `public/` у каждого сайта. JS чужих инструментов в сборку попадает (недостижимые файлы) — принято, см. 03, 10.1.
 - [x] Две сборки, свои `urls`, `_redirects`, `robots.txt`, проверка ссылок между сайтами; переносы `unix-timestamp` → `dev`, `random-number` → `random`.
 - [ ] Бренд tooloot: название и тексты главной — сделаны; логотип, favicon, OG-картинка — временные.
-- [x] Cloudflare: DNS tooloot.net, второй Worker из того же репозитория, Custom Domain. Выкладка 2026-11-06.
+- [x] Cloudflare: DNS tooloot.net, второй Worker из того же репозитория, Custom Domain, Always Use HTTPS, www → 301 (Redirect Rule). Выкладка 2026-11-06. Web Analytics — проверить.
 - [x] 301 с qdbp.net по категориям утилит на tooloot.net — проверены `curl` после выкладки (разделы и инструменты, в т. ч. перенесённые).
 - [ ] Search Console (доменный ресурс), Bing, Яндекс; sitemap.
 
