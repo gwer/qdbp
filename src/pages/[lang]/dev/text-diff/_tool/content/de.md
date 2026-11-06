@@ -2,28 +2,15 @@
 
 Fügen Sie den ursprünglichen Text in „Vorher“ und die neue Fassung in „Nachher“ ein. Die Unterschiede erscheinen sofort:
 
-„Leerzeichen ignorieren“ und „Groß-/Kleinschreibung ignorieren“ blenden überzählige Leerzeichen, Einrückungen und Großschreibung aus – sichtbar bleiben nur inhaltliche Änderungen.
-
 - **rot** – Zeilen, die im zweiten Text fehlen (entfernt);
 - **grün** – Zeilen, die im ersten Text nicht vorkamen (hinzugefügt);
 - eine geänderte Zeile erscheint als Paar „entfernt + hinzugefügt“, die abweichenden Wörter und Zeichen darin sind kräftiger markiert.
 
+„Leerzeichen ignorieren“ und „Groß-/Kleinschreibung ignorieren“ blenden überzählige Leerzeichen, Einrückungen und Großschreibung aus – sichtbar bleiben nur inhaltliche Änderungen.
+
 Über dem Ergebnis steht die Zahl der hinzugefügten und entfernten Zeilen. Die Ansicht **Nebeneinander** zeigt die Texte in zwei Spalten, **Untereinander** listet die Änderungen nacheinander auf wie `git diff`. Auf dem Smartphone wird das Ergebnis immer untereinander gezeigt, weil zwei Spalten nicht passen. Lange unveränderte Abschnitte werden bis auf drei Zeilen um jede Änderung eingeklappt – entfernen Sie den Haken bei „Unveränderte Zeilen ausblenden“, um alles zu sehen.
 
 Die Texte werden im Browser verglichen und nirgendwohin gesendet: Sie können also auch Verträge, Konfigurationen und Code vergleichen.
-
-## Beispiel
-
-| Vorher | Nachher |
-|---|---|
-| Einkaufsliste: | Einkaufsliste: |
-| Milch – 2 Liter | Milch – 1 Liter |
-| Brot | Brot |
-| Eier – 10 Stück | Eier – 10 Stück |
-| Käse | Kaffee |
-| Kaffee | Zucker |
-
-Ergebnis: 2 Zeilen hinzugefügt, 2 entfernt. Die Zeile mit der Milch hat sich geändert, darin sind „2“ und „1“ markiert. „Käse“ wurde entfernt, „Zucker“ hinzugefügt, die übrigen Zeilen stimmen überein. Dieses Beispiel ist im Tool vorausgefüllt.
 
 ## Wie es funktioniert
 

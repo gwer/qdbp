@@ -2,28 +2,15 @@
 
 Pega el texto original en «Original» y la versión nueva en «Modificado». Las diferencias aparecen al momento:
 
-«Ignorar espacios» e «Ignorar mayúsculas» dejan fuera los espacios de más, la sangría y las mayúsculas: solo se ven los cambios de contenido.
-
 - **en rojo**, las líneas que faltan en el segundo texto (eliminadas);
 - **en verde**, las que no estaban en el primero (añadidas);
 - una línea modificada se muestra como la pareja «eliminada + añadida», con las palabras y signos que cambian resaltados con más intensidad.
 
+«Ignorar espacios» e «Ignorar mayúsculas» dejan fuera los espacios de más, la sangría y las mayúsculas: solo se ven los cambios de contenido.
+
 Encima del resultado está el recuento de líneas añadidas y eliminadas. La vista **En paralelo** pone los textos en dos columnas; la **Unificada** muestra los cambios uno tras otro, como `git diff`. En el móvil el resultado siempre es unificado, porque dos columnas no caben. Los tramos largos sin cambios se pliegan a tres líneas alrededor de cada cambio; desmarca «Ocultar líneas sin cambios» para verlo todo.
 
 Los textos se comparan en tu navegador y no se envían a ningún sitio: puedes comparar contratos, configuraciones y código.
-
-## Ejemplo
-
-| Original | Modificado |
-|---|---|
-| Lista de la compra: | Lista de la compra: |
-| leche — 2 litros | leche — 1 litro |
-| pan | pan |
-| huevos — una docena | huevos — una docena |
-| queso | café |
-| café | azúcar |
-
-Resultado: 2 líneas añadidas y 2 eliminadas. La línea de la leche ha cambiado y dentro de ella se resaltan «2 litros» y «1 litro». El queso se ha eliminado, el azúcar se ha añadido y el resto de líneas coinciden. Este ejemplo viene cargado en la herramienta.
 
 ## Cómo funciona
 

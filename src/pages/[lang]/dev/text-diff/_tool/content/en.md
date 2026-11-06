@@ -2,28 +2,15 @@
 
 Paste the original text into "Original" and the new version into "Changed". The differences appear right away:
 
-“Ignore whitespace” and “Ignore case” leave out extra spaces, indentation and capitalization, so only real edits are shown.
-
 - **red** — lines missing from the second text (removed);
 - **green** — lines that weren't in the first text (added);
 - a changed line is shown as a removed + added pair, with the words and characters that differ highlighted more strongly.
 
+“Ignore whitespace” and “Ignore case” leave out extra spaces, indentation and capitalization, so only real edits are shown.
+
 Above the result is a count of added and removed lines. **Side by side** puts the texts in two columns; **Unified** lists the changes one after another, like `git diff`. On a phone the result is always unified, since two columns don't fit. Long unchanged stretches collapse to three lines around each change — untick "Hide unchanged lines" to see everything.
 
 The texts are compared in your browser and never sent anywhere, so it's safe to compare contracts, configs and code.
-
-## Example
-
-| Original | Changed |
-|---|---|
-| Shopping list: | Shopping list: |
-| milk — 1 gallon | milk — half a gallon |
-| bread | bread |
-| eggs — 12 | eggs — 12 |
-| cheese | coffee |
-| coffee | sugar |
-
-Result: 2 lines added, 2 removed. The milk line has changed, with "1" and "half a" highlighted inside it. "cheese" was removed, "sugar" was added, and the remaining lines match. This example is preloaded in the tool.
 
 ## How it works
 
