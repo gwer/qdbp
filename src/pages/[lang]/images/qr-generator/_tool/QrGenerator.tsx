@@ -29,7 +29,7 @@ function downloadPng(m: boolean[][], fg: string, bg: string, px: number) {
 
 export function QrGenerator({ t }: ToolProps) {
   const [kind, setKind] = useState<Kind>('text');
-  const [text, setText] = useState('https://qdbp.net/');
+  const [text, setText] = useState('https://tooloot.net/');
   const [ssid, setSsid] = useState('');
   const [password, setPassword] = useState('');
   const [security, setSecurity] = useState<Security>('WPA');

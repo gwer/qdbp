@@ -8,7 +8,7 @@ import { readPref, writePref } from '@/ui/prefs';
 import { decodeJwt, isHmac, JwtError, jwtStatus, timeClaims, verifyHmac, type DecodedJwt } from './jwt';
 
 const SAMPLE =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY3MjI1NjAwLCJuYmYiOjE3NjcyMjU2MDAsImV4cCI6MTc5ODc2MTYwMH0.RDvudNA1pyyGaAIcSdO7DgEmU2_VncMo0ojXM6gg53U';
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY3MjI1NjAwLCJuYmYiOjE3NjcyMjU2MDAsImV4cCI6MTc5ODc2MTYwMH0.Xhy5izfg7DBVqGTVTik_i-NRpYhZUG21oC6AgBeM3b0';
 
 const UNITS: [Intl.RelativeTimeFormatUnit, number][] = [
   ['year', 365 * 86400],

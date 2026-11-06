@@ -6,7 +6,7 @@ export function JsonFormatter({ t }: ToolProps) {
   return (
     <TextConverter
       t={t}
-      placeholder='{"name": "qdbp", "tools": [1, 2, 3]}'
+      placeholder='{"name": "tooloot", "tools": [1, 2, 3]}'
       modes={[
         { id: 'format2', run: (s) => formatJson(s, 2) },
         { id: 'format4', run: (s) => formatJson(s, 4) },

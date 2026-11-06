@@ -32,7 +32,7 @@
     },
     "verifyNote": "To verify the signature, enter the secret below: it’s checked in your browser and never sent anywhere. Still, avoid pasting production secrets into websites.",
     "secret": "Secret to verify the signature ({alg})",
-    "sampleSecret": "the sample token’s secret is qdbp",
+    "sampleSecret": "the sample token’s secret is tooloot",
     "sigOk": "Signature verified: the token was signed with this secret and hasn’t been changed.",
     "sigBad": "Invalid signature: a different secret, or the token was modified."
   }
