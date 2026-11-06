@@ -1,51 +1,21 @@
 {
   "title": "Bruchrechner: mit Brüchen rechnen und kürzen",
   "description": "Brüche addieren, subtrahieren, multiplizieren und dividieren – das Ergebnis wird gekürzt und als Bruch, gemischte Zahl und Dezimalzahl angezeigt.",
-  "inputs": {
-    "n1": {
-      "label": "Zähler 1"
-    },
-    "d1": {
-      "label": "Nenner 1"
-    },
-    "op": {
-      "label": "Rechenart",
-      "options": {
-        "add": "Addition (+)",
-        "subtract": "Subtraktion (−)",
-        "multiply": "Multiplikation (×)",
-        "divide": "Division (÷)"
-      }
-    },
-    "n2": {
-      "label": "Zähler 2"
-    },
-    "d2": {
-      "label": "Nenner 2"
-    },
-    "w1": {
-      "label": "Ganze Zahl 1"
-    },
-    "w2": {
-      "label": "Ganze Zahl 2"
-    }
-  },
-  "outputs": {
-    "fraction": {
-      "label": "Ergebnis"
-    },
-    "mixed": {
-      "label": "Gemischte Zahl"
-    },
-    "decimal": {
-      "label": "Dezimalzahl"
-    }
-  },
   "errors": {
     "divisionByZero": "Durch null kann man nicht teilen: Der zweite Bruch ist null.",
     "tooLarge": "Die Zahlen sind zu groß: Geben Sie höchstens 15 Ziffern ein."
   },
   "ui": {
+    "op": "Rechenart",
+    "w1": "Ganze Zahl 1",
+    "n1": "Zähler 1",
+    "d1": "Nenner 1",
+    "w2": "Ganze Zahl 2",
+    "n2": "Zähler 2",
+    "d2": "Nenner 2",
+    "fraction": "Ergebnis",
+    "mixed": "Gemischte Zahl",
+    "decimal": "Dezimalzahl",
     "solution": "Lösungsweg",
     "steps": {
       "mixed": "Gemischte Zahlen in unechte Brüche umwandeln: {list}.",

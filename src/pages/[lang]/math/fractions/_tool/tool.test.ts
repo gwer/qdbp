@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fractions, steps } from './tool';
+import { fractions, steps } from './fractions';
 
 // Эталоны — Python fractions.Fraction.
 describe('fractions', () => {

@@ -1,8 +1,8 @@
 ## So funktioniert der Rechner
 
-Geben Sie Zähler und Nenner zweier Brüche ein und wählen Sie die Rechenart. Das Ergebnis wird automatisch gekürzt und auf drei Arten angezeigt: als Bruch, als gemischte Zahl und als Dezimalzahl.
+Geben Sie zwei Brüche so ein, wie man sie auf Papier schreibt – Zähler über dem Bruchstrich, Nenner darunter – und wählen Sie dazwischen die Rechenart. Das Ergebnis wird automatisch gekürzt und auf drei Arten angezeigt: als Bruch, als gemischte Zahl und als Dezimalzahl.
 
-Für gemischte Zahlen (etwa 2 1/3) die ganze Zahl eintragen; ohne ganze Zahl bleibt 0 stehen. Unter dem Ergebnis steht der Lösungsweg: gemeinsamer Nenner, Zähler, Kürzen.
+Für gemischte Zahlen (etwa 2 1/3) die ganze Zahl in das Feld links vom Bruch eintragen; ohne ganze Zahl bleibt es leer. Unter dem Ergebnis steht der Lösungsweg: gemeinsamer Nenner, Zähler, Kürzen.
 
 Für einen negativen Bruch setzen Sie ein Minus vor den Zähler. Eine ganze Zahl ist ein Bruch mit dem Nenner 1.
 

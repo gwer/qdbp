@@ -1,8 +1,8 @@
 ## Cómo usarla
 
-Introduce los numeradores y denominadores de dos fracciones y elige la operación. El resultado se simplifica automáticamente y se muestra de tres formas: como fracción, como número mixto y como decimal.
+Escribe las dos fracciones como en papel —el numerador sobre la raya y el denominador debajo— y elige la operación entre ellas. El resultado se simplifica automáticamente y se muestra de tres formas: como fracción, como número mixto y como decimal.
 
-Para números mixtos (por ejemplo, 2 1/3) rellena la parte entera; si no hay, deja 0. Bajo el resultado verás los pasos: común denominador, numeradores y simplificación.
+Para números mixtos (por ejemplo, 2 1/3) escribe la parte entera en la casilla a la izquierda de la fracción; si no hay, déjala vacía. Bajo el resultado verás los pasos: común denominador, numeradores y simplificación.
 
 Para una fracción negativa, pon el signo menos delante del numerador. Un número entero es una fracción con denominador 1.
 

@@ -1,51 +1,21 @@
 {
   "title": "Calculadora de fracciones con resultado simplificado",
   "description": "Suma, resta, multiplica y divide fracciones con el resultado simplificado: como fracción, número mixto y decimal.",
-  "inputs": {
-    "n1": {
-      "label": "Numerador 1"
-    },
-    "d1": {
-      "label": "Denominador 1"
-    },
-    "op": {
-      "label": "Operación",
-      "options": {
-        "add": "Suma (+)",
-        "subtract": "Resta (−)",
-        "multiply": "Multiplicación (×)",
-        "divide": "División (÷)"
-      }
-    },
-    "n2": {
-      "label": "Numerador 2"
-    },
-    "d2": {
-      "label": "Denominador 2"
-    },
-    "w1": {
-      "label": "Parte entera 1"
-    },
-    "w2": {
-      "label": "Parte entera 2"
-    }
-  },
-  "outputs": {
-    "fraction": {
-      "label": "Resultado"
-    },
-    "mixed": {
-      "label": "Número mixto"
-    },
-    "decimal": {
-      "label": "Decimal"
-    }
-  },
   "errors": {
     "divisionByZero": "No se puede dividir entre cero: la segunda fracción vale cero.",
     "tooLarge": "Los números son demasiado grandes: introduce como máximo 15 cifras."
   },
   "ui": {
+    "op": "Operación",
+    "w1": "Parte entera 1",
+    "n1": "Numerador 1",
+    "d1": "Denominador 1",
+    "w2": "Parte entera 2",
+    "n2": "Numerador 2",
+    "d2": "Denominador 2",
+    "fraction": "Resultado",
+    "mixed": "Número mixto",
+    "decimal": "Decimal",
     "solution": "Solución",
     "steps": {
       "mixed": "Pasamos los números mixtos a fracciones impropias: {list}.",

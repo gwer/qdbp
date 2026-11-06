@@ -1,51 +1,21 @@
 {
   "title": "Fraction calculator: add, subtract, multiply, divide",
   "description": "Add, subtract, multiply and divide fractions with the result simplified — as a fraction, a mixed number and a decimal.",
-  "inputs": {
-    "n1": {
-      "label": "Numerator 1"
-    },
-    "d1": {
-      "label": "Denominator 1"
-    },
-    "op": {
-      "label": "Operation",
-      "options": {
-        "add": "Add (+)",
-        "subtract": "Subtract (−)",
-        "multiply": "Multiply (×)",
-        "divide": "Divide (÷)"
-      }
-    },
-    "n2": {
-      "label": "Numerator 2"
-    },
-    "d2": {
-      "label": "Denominator 2"
-    },
-    "w1": {
-      "label": "Whole number 1"
-    },
-    "w2": {
-      "label": "Whole number 2"
-    }
-  },
-  "outputs": {
-    "fraction": {
-      "label": "Result"
-    },
-    "mixed": {
-      "label": "Mixed number"
-    },
-    "decimal": {
-      "label": "Decimal"
-    }
-  },
   "errors": {
     "divisionByZero": "You can’t divide by zero: the second fraction equals zero.",
     "tooLarge": "The numbers are too large: enter at most 15 digits."
   },
   "ui": {
+    "op": "Operation",
+    "w1": "Whole number 1",
+    "n1": "Numerator 1",
+    "d1": "Denominator 1",
+    "w2": "Whole number 2",
+    "n2": "Numerator 2",
+    "d2": "Denominator 2",
+    "fraction": "Result",
+    "mixed": "Mixed number",
+    "decimal": "Decimal",
     "solution": "Solution",
     "steps": {
       "mixed": "Convert mixed numbers to improper fractions: {list}.",

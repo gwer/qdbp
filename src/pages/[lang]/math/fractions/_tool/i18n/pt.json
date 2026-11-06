@@ -1,51 +1,21 @@
 {
   "title": "Calculadora de frações com resultado simplificado",
   "description": "Some, subtraia, multiplique e divida frações com o resultado simplificado: em fração, número misto e decimal.",
-  "inputs": {
-    "n1": {
-      "label": "Numerador 1"
-    },
-    "d1": {
-      "label": "Denominador 1"
-    },
-    "op": {
-      "label": "Operação",
-      "options": {
-        "add": "Soma (+)",
-        "subtract": "Subtração (−)",
-        "multiply": "Multiplicação (×)",
-        "divide": "Divisão (÷)"
-      }
-    },
-    "n2": {
-      "label": "Numerador 2"
-    },
-    "d2": {
-      "label": "Denominador 2"
-    },
-    "w1": {
-      "label": "Parte inteira 1"
-    },
-    "w2": {
-      "label": "Parte inteira 2"
-    }
-  },
-  "outputs": {
-    "fraction": {
-      "label": "Resultado"
-    },
-    "mixed": {
-      "label": "Número misto"
-    },
-    "decimal": {
-      "label": "Decimal"
-    }
-  },
   "errors": {
     "divisionByZero": "Não dá para dividir por zero: a segunda fração é igual a zero.",
     "tooLarge": "Os números são grandes demais: digite no máximo 15 algarismos."
   },
   "ui": {
+    "op": "Operação",
+    "w1": "Parte inteira 1",
+    "n1": "Numerador 1",
+    "d1": "Denominador 1",
+    "w2": "Parte inteira 2",
+    "n2": "Numerador 2",
+    "d2": "Denominador 2",
+    "fraction": "Resultado",
+    "mixed": "Número misto",
+    "decimal": "Decimal",
     "solution": "Resolução",
     "steps": {
       "mixed": "Transformamos os números mistos em frações impróprias: {list}.",

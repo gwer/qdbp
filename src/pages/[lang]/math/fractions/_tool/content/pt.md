@@ -1,8 +1,8 @@
 ## Como usar
 
-Digite os numeradores e denominadores de duas frações e escolha a operação. O resultado é simplificado automaticamente e aparece de três formas: como fração, como número misto e como decimal.
+Digite as duas frações como no papel — numerador acima do traço, denominador abaixo — e escolha a operação entre elas. O resultado é simplificado automaticamente e aparece de três formas: como fração, como número misto e como decimal.
 
-Para números mistos (por exemplo, 2 1/3), preencha a parte inteira; se não houver, deixe 0. Abaixo do resultado aparece a resolução: denominador comum, numeradores e simplificação.
+Para números mistos (por exemplo, 2 1/3), digite a parte inteira no campo à esquerda da fração; se não houver, deixe-o vazio. Abaixo do resultado aparece a resolução: denominador comum, numeradores e simplificação.
 
 Para uma fração negativa, coloque o sinal de menos antes do numerador. Um número inteiro é uma fração com denominador 1.
 
