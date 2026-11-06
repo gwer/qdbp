@@ -6,7 +6,7 @@
     "payload": "Payload (JSON)",
     "secret": "Secret",
     "token": "Token",
-    "secretNote": "Die Signatur entsteht im Browser, das Secret wird nirgendwohin gesendet. Produktive Secrets sollten Sie trotzdem nirgends einfügen.",
+    "secretNote": "Die Signatur entsteht im Browser, das Secret wird nirgendwohin gesendet.",
     "noSecret": "Geben Sie ein Secret ein – ohne Secret lässt sich das Token nicht signieren.",
     "shortKey": "Das Secret ist für {alg} zu kurz: {bytes} von {min} Bytes. Der Standard (RFC 7518) verlangt einen Schlüssel, der mindestens so lang ist wie der Hash, und manche Bibliotheken lehnen das Token ab.",
     "errors": {

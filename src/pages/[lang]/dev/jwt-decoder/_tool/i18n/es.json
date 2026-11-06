@@ -30,7 +30,7 @@
       "nbf": "válido desde",
       "exp": "caduca"
     },
-    "verifyNote": "Para verificar la firma, escribe el secreto abajo: se comprueba en tu navegador y no se envía a ningún sitio. Aun así, mejor no pegar secretos de producción en webs.",
+    "verifyNote": "Para verificar la firma, escribe el secreto abajo: se comprueba en tu navegador y no se envía a ningún sitio.",
     "secret": "Secreto para verificar la firma ({alg})",
     "sigOk": "Firma válida: el token se firmó con este secreto y no se ha modificado.",
     "sigBad": "La firma no coincide: otro secreto o el token se ha modificado."

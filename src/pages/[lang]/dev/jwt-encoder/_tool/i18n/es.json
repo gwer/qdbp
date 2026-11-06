@@ -6,7 +6,7 @@
     "payload": "Datos (payload), JSON",
     "secret": "Secreto",
     "token": "Token",
-    "secretNote": "La firma se genera en tu navegador y el secreto no se envía a ningún sitio. Aun así, mejor no pegar secretos de producción en webs.",
+    "secretNote": "La firma se genera en tu navegador y el secreto no se envía a ningún sitio.",
     "noSecret": "Escribe un secreto: sin él no se puede firmar el token.",
     "shortKey": "El secreto es demasiado corto para {alg}: {bytes} de {min} bytes. El estándar (RFC 7518) exige una clave al menos tan larga como el hash, y algunas librerías rechazarán el token.",
     "errors": {

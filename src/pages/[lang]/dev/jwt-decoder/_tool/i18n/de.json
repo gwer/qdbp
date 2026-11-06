@@ -30,7 +30,7 @@
       "nbf": "gültig ab",
       "exp": "läuft ab"
     },
-    "verifyNote": "Zum Prüfen der Signatur geben Sie unten das Secret ein: Die Prüfung läuft im Browser, nichts wird gesendet. Produktive Secrets sollten Sie trotzdem nirgends einfügen.",
+    "verifyNote": "Zum Prüfen der Signatur geben Sie unten das Secret ein: Die Prüfung läuft im Browser, nichts wird gesendet.",
     "secret": "Secret zur Signaturprüfung ({alg})",
     "sigOk": "Signatur gültig: Der Token wurde mit diesem Secret signiert und nicht verändert.",
     "sigBad": "Signatur ungültig: anderes Secret oder der Token wurde verändert."

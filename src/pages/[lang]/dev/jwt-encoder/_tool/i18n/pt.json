@@ -6,7 +6,7 @@
     "payload": "Dados (payload), JSON",
     "secret": "Segredo",
     "token": "Token",
-    "secretNote": "A assinatura é feita no navegador e o segredo não é enviado a lugar nenhum. Mesmo assim, evite colar segredos de produção em sites.",
+    "secretNote": "A assinatura é feita no navegador e o segredo não é enviado a lugar nenhum.",
     "noSecret": "Digite um segredo: sem ele não dá para assinar o token.",
     "shortKey": "O segredo é curto demais para {alg}: {bytes} de {min} bytes. O padrão (RFC 7518) exige uma chave pelo menos do tamanho do hash, e algumas bibliotecas vão rejeitar o token.",
     "errors": {

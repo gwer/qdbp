@@ -30,7 +30,7 @@
       "nbf": "not before",
       "exp": "expires"
     },
-    "verifyNote": "To verify the signature, enter the secret below: it’s checked in your browser and never sent anywhere. Still, avoid pasting production secrets into websites.",
+    "verifyNote": "To verify the signature, enter the secret below: it’s checked in your browser and never sent anywhere.",
     "secret": "Secret to verify the signature ({alg})",
     "sigOk": "Signature verified: the token was signed with this secret and hasn’t been changed.",
     "sigBad": "Invalid signature: a different secret, or the token was modified."

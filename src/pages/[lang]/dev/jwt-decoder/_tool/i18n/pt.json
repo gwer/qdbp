@@ -30,7 +30,7 @@
       "nbf": "válido a partir de",
       "exp": "expira em"
     },
-    "verifyNote": "Para verificar a assinatura, digite o segredo abaixo: a verificação é feita no navegador e nada é enviado. Mesmo assim, evite colar segredos de produção em sites.",
+    "verifyNote": "Para verificar a assinatura, digite o segredo abaixo: a verificação é feita no navegador e nada é enviado.",
     "secret": "Segredo para verificar a assinatura ({alg})",
     "sigOk": "Assinatura válida: o token foi assinado com este segredo e não foi alterado.",
     "sigBad": "A assinatura não confere: outro segredo ou o token foi alterado."
