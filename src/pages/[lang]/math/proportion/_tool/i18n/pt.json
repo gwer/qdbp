@@ -5,7 +5,7 @@
     "kind": "Proporção",
     "direct": "Direta",
     "inverse": "Inversa",
-    "result": "Incógnita x",
+    "result": "Resultado",
     "needOne": "Deixe vazio só um campo: o que você quer descobrir.",
     "zero": "Não dá para dividir por zero: o divisor nesta proporção é zero."
   }

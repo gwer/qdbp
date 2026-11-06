@@ -7,9 +7,9 @@ import { solve, type Kind } from './proportion';
 
 const NAMES = ['A', 'B', 'C', 'D'];
 
-/** Пустое поле или «x» — неизвестное (null); undefined — не число. */
+/** Пустое поле — неизвестное (null); undefined — не число. */
 function parseCell(s: string, lang: ToolProps['lang']): number | null | undefined {
-  if (/^\s*[xхXХ?]?\s*$/.test(s)) return null;
+  if (s.trim() === '') return null;
   return parseNumber(s, lang) ?? undefined;
 }
 
@@ -31,7 +31,7 @@ export function Proportion({ lang, t }: ToolProps) {
         autoComplete="off"
         aria-label={NAMES[i]}
         class={isX ? 'prop-x' : undefined}
-        placeholder={isX ? n(sol.value) : 'x'}
+        placeholder={isX ? n(sol.value) : NAMES[i]}
         value={cells[i]}
         aria-invalid={parsed[i] === undefined ? 'true' : undefined}
         onInput={(e) => {
@@ -55,7 +55,7 @@ export function Proportion({ lang, t }: ToolProps) {
         ]}
         onChange={setKind}
       />
-      <div class="prop">
+      <div class={`prop prop-${kind}`}>
         <div class="prop-pair">
           {cell(0)}
           {op}
@@ -80,7 +80,7 @@ export function Proportion({ lang, t }: ToolProps) {
               <output class="out-value">{n(sol.value)}</output>
             </div>
             <p class="muted">
-              x = {n(sol.p)} × {n(sol.q)} / {n(sol.r)} = <strong>{n(sol.value)}</strong>
+              {NAMES[sol.index]} = {n(sol.p)} × {n(sol.q)} / {n(sol.r)} = <strong>{n(sol.value)}</strong>
             </p>
           </>
         )}

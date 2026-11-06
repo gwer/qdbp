@@ -1,6 +1,6 @@
 ## So funktioniert der Rechner
 
-Schreiben Sie den Dreisatz als zwei Brüche: **A / B = C / D** – A verhält sich zu B wie C zu D. Tragen Sie die drei bekannten Werte ein und lassen Sie das gesuchte Feld leer (oder schreiben Sie x hinein). Die Unbekannte darf in jedem Feld stehen. Das Ergebnis erscheint direkt in diesem Feld, darunter die Rechnung mit Ihren Zahlen. Im antiproportionalen Modus werden aus den Brüchen Produkte: **A × B = C × D**.
+Schreiben Sie den Dreisatz als zwei Brüche: **A / B = C / D** – A verhält sich zu B wie C zu D. Tragen Sie die drei bekannten Werte ein und lassen Sie das gesuchte Feld leer. Die Unbekannte darf in jedem Feld stehen. Das Ergebnis erscheint direkt in diesem Feld, darunter die Rechnung mit Ihren Zahlen. Im antiproportionalen Modus werden aus den Brüchen Produkte: **A × B = C × D**.
 
 ## Proportionaler und antiproportionaler Dreisatz
 

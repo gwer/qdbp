@@ -1,6 +1,6 @@
 ## How to use
 
-Write the proportion as two fractions: **A / B = C / D** — A is to B as C is to D. Fill in the three numbers you know and leave the one you want to find empty (or type x in it). The unknown can be in any box. The answer appears right in that box, with the formula and your numbers below. In inverse mode the fractions turn into products: **A × B = C × D**. This is also known as the rule of three.
+Write the proportion as two fractions: **A / B = C / D** — A is to B as C is to D. Fill in the three numbers you know and leave the one you want to find empty. The unknown can be in any box. The answer appears right in that box, with the formula and your numbers below. In inverse mode the fractions turn into products: **A × B = C × D**. This is also known as the rule of three.
 
 ## Direct and inverse proportions
 

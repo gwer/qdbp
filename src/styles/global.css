@@ -403,6 +403,33 @@ select[aria-invalid='true'] {
   font-size: 1.8rem;
 }
 
+/* Обратная: A × B = C × D в строку */
+.prop-inverse {
+  gap: 8px;
+}
+
+.prop-inverse .prop-pair {
+  flex-direction: row;
+  align-items: center;
+  width: min(15rem, 46%);
+}
+
+.prop-inverse input[type='text'] {
+  min-width: 0;
+  padding-inline: 4px;
+}
+
+/* На телефоне в строку не помещаются длинные числа: пары друг под другом */
+@media (max-width: 600px) {
+  .prop-inverse {
+    flex-direction: column;
+  }
+
+  .prop-inverse .prop-pair {
+    width: min(18rem, 100%);
+  }
+}
+
 /* Таблицы */
 .table-wrap {
   overflow-x: auto;

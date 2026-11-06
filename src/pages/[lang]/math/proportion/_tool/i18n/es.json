@@ -5,7 +5,7 @@
     "kind": "Proporción",
     "direct": "Directa",
     "inverse": "Inversa",
-    "result": "Incógnita x",
+    "result": "Resultado",
     "needOne": "Deja vacía una sola casilla: la que quieres calcular.",
     "zero": "No se puede dividir entre cero: el divisor en esta proporción es cero."
   }

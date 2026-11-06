@@ -1,6 +1,6 @@
 ## Como usar
 
-Escreva a proporção como duas frações: **A / B = C / D**, ou seja, A está para B assim como C está para D. Preencha os três valores conhecidos e deixe vazio o campo que você quer descobrir (ou digite x nele). A incógnita pode ficar em qualquer campo. O resultado aparece nesse mesmo campo e, abaixo, a conta com os seus números. Na regra de três inversa as frações viram produtos: **A × B = C × D**.
+Escreva a proporção como duas frações: **A / B = C / D**, ou seja, A está para B assim como C está para D. Preencha os três valores conhecidos e deixe vazio o campo que você quer descobrir. A incógnita pode ficar em qualquer campo. O resultado aparece nesse mesmo campo e, abaixo, a conta com os seus números. Na regra de três inversa as frações viram produtos: **A × B = C × D**.
 
 ## Regra de três direta e inversa
 

@@ -5,7 +5,7 @@
     "kind": "Dreisatz",
     "direct": "Proportional",
     "inverse": "Antiproportional",
-    "result": "Gesuchter Wert x",
+    "result": "Ergebnis",
     "needOne": "Lassen Sie genau ein Feld leer – den Wert, den Sie suchen.",
     "zero": "Division durch null: Der Teiler in diesem Ansatz ist null."
   }

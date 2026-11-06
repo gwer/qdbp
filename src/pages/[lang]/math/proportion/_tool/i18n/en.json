@@ -5,7 +5,7 @@
     "kind": "Proportion",
     "direct": "Direct",
     "inverse": "Inverse",
-    "result": "Unknown x",
+    "result": "Answer",
     "needOne": "Leave exactly one field empty — the one you want to find.",
     "zero": "Can't divide by zero: the divisor in this proportion is zero."
   }

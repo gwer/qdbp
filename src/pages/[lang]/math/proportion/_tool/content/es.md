@@ -1,6 +1,6 @@
 ## Cómo usarla
 
-Escribe la proporción como dos fracciones: **A / B = C / D**, es decir, A es a B como C es a D. Rellena los tres datos que conoces y deja vacía la casilla que quieres calcular (o escribe x en ella). La incógnita puede estar en cualquier casilla. El resultado aparece en esa misma casilla y debajo, la fórmula con tus números. En la regla de tres inversa las fracciones se convierten en productos: **A × B = C × D**.
+Escribe la proporción como dos fracciones: **A / B = C / D**, es decir, A es a B como C es a D. Rellena los tres datos que conoces y deja vacía la casilla que quieres calcular. La incógnita puede estar en cualquier casilla. El resultado aparece en esa misma casilla y debajo, la fórmula con tus números. En la regla de tres inversa las fracciones se convierten en productos: **A × B = C × D**.
 
 ## Regla de tres directa e inversa
 
