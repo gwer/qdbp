@@ -62,7 +62,11 @@
     }
   },
   "footer": {
-    "privacy": "Todos los cálculos se hacen en tu navegador. Los archivos se procesan en tu dispositivo y no se suben a ningún servidor."
+    "privacy": "Todos los cálculos se hacen en tu navegador. Los archivos se procesan en tu dispositivo y no se suben a ningún servidor.",
+    "otherSite": {
+      "calc": "Herramientas para archivos, texto y código:",
+      "tools": "Calculadoras para dinero, fechas, reformas y salud:"
+    }
   },
   "common": {
     "copy": "Copiar",

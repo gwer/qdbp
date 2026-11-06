@@ -2,7 +2,7 @@
 import '@/styles/global.css';
 import { DEFAULT_LANG, LANG_META, type Lang } from '@/i18n/config';
 import { uiT } from '@/i18n/ui';
-import { SITE, SITE_NAME } from '@/site';
+import { SITE, SITE_NAME, SITES } from '@/site';
 
 // Знак сайта: src/assets/mark-{site}.svg.
 const marks = import.meta.glob<string>('/src/assets/mark-*.svg', { eager: true, query: '?raw', import: 'default' });
@@ -30,6 +30,8 @@ const site = Astro.site!;
 const canonical = new URL(Astro.url.pathname, site).href;
 const xDefault = alternates.find((a) => a.lang === DEFAULT_LANG);
 const others = alternates.filter((a) => a.lang !== lang);
+// Второй наш сайт — ссылка в подвале на его главную на том же языке.
+const otherSite = Object.entries(SITES).find(([id]) => id !== SITE)![1];
 ---
 
 <!doctype html>
@@ -86,6 +88,7 @@ const others = alternates.filter((a) => a.lang !== lang);
     <footer class="site-footer">
       <div class="wrap">
         <p>{t('footer.privacy')}</p>
+        <p>{t(`footer.otherSite.${SITE}`)} <a href={`${otherSite.url}/${lang}/`}>{new URL(otherSite.url).host}</a></p>
       </div>
     </footer>
   </body>

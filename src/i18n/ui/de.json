@@ -61,7 +61,11 @@
     }
   },
   "footer": {
-    "privacy": "Alle Berechnungen laufen in Ihrem Browser. Dateien werden auf Ihrem Gerät verarbeitet und nicht hochgeladen."
+    "privacy": "Alle Berechnungen laufen in Ihrem Browser. Dateien werden auf Ihrem Gerät verarbeitet und nicht hochgeladen.",
+    "otherSite": {
+      "calc": "Tools für Dateien, Text und Code:",
+      "tools": "Rechner für Geld, Datum, Renovierung und Gesundheit:"
+    }
   },
   "common": {
     "copy": "Kopieren",

@@ -61,7 +61,11 @@
     }
   },
   "footer": {
-    "privacy": "All calculations run in your browser. Files are processed on your device and never uploaded."
+    "privacy": "All calculations run in your browser. Files are processed on your device and never uploaded.",
+    "otherSite": {
+      "calc": "Tools for files, text and code:",
+      "tools": "Calculators for money, dates, home projects and health:"
+    }
   },
   "common": {
     "copy": "Copy",
