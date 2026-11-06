@@ -8,9 +8,9 @@ import { readPref, writePref } from '@/ui/prefs';
 import { decodeJwt, isHmac, JwtError, jwtStatus, timeClaims, verifyHmac, type DecodedJwt } from './jwt';
 
 const SAMPLE =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY3MjI1NjAwLCJuYmYiOjE3NjcyMjU2MDAsImV4cCI6MTc5ODc2MTYwMH0.eVUrFjDKIxkk2ViMVs2zkCStLPaxpvYrWaku7dY61Bk';
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY3MjI1NjAwLCJuYmYiOjE3NjcyMjU2MDAsImV4cCI6MTc5ODc2MTYwMH0.EwbFMYJnWrz0sqD-UWvbgLuz7y7Hy20sGQizymt-nyQ';
 // Секрет токена-примера: подставлен в поле, чтобы проверка подписи была видна сразу.
-const SAMPLE_SECRET = 'not-a-real-secret';
+const SAMPLE_SECRET = 'not-a-real-secret-only-for-testing';
 
 const UNITS: [Intl.RelativeTimeFormatUnit, number][] = [
   ['year', 365 * 86400],

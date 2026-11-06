@@ -1,0 +1,17 @@
+{
+  "title": "JWT-Generator: JSON Web Token online erstellen und signieren",
+  "description": "Erstellen Sie ein JWT aus einer JSON-Payload und signieren Sie es mit einem Secret per HS256, HS384 oder HS512. Das Token entsteht im Browser, das Secret wird nirgendwohin gesendet.",
+  "ui": {
+    "alg": "Algorithmus",
+    "payload": "Payload (JSON)",
+    "secret": "Secret",
+    "token": "Token",
+    "secretNote": "Die Signatur entsteht im Browser, das Secret wird nirgendwohin gesendet. Produktive Secrets sollten Sie trotzdem nirgends einfügen.",
+    "noSecret": "Geben Sie ein Secret ein – ohne Secret lässt sich das Token nicht signieren.",
+    "shortKey": "Das Secret ist für {alg} zu kurz: {bytes} von {min} Bytes. Der Standard (RFC 7518) verlangt einen Schlüssel, der mindestens so lang ist wie der Hash, und manche Bibliotheken lehnen das Token ab.",
+    "errors": {
+      "json": "Die Payload ist kein gültiges JSON: Anführungszeichen, Kommas und Klammern prüfen",
+      "object": "Die Payload muss ein JSON-Objekt in geschweiften Klammern sein"
+    }
+  }
+}

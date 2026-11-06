@@ -1,3 +1,5 @@
+import { hmacSign, isHmac } from '../../_shared/hmac';
+
 export type JwtPart = 'header' | 'payload';
 
 export class JwtError extends Error {
@@ -83,10 +85,7 @@ export function jwtStatus(payload: Record<string, unknown>, nowMs: number): JwtS
   return t.exp !== undefined ? 'valid' : 'noExp';
 }
 
-const HMAC: Record<string, string> = { HS256: 'SHA-256', HS384: 'SHA-384', HS512: 'SHA-512' };
-
-/** Алгоритм токена подписывается общим секретом (HS256/384/512) — такую подпись можно проверить в браузере. */
-export const isHmac = (alg: unknown) => typeof alg === 'string' && alg in HMAC;
+export { isHmac };
 
 /**
  * Проверка подписи HS256/384/512 секретом (строка в UTF-8) через WebCrypto.
@@ -95,13 +94,7 @@ export const isHmac = (alg: unknown) => typeof alg === 'string' && alg in HMAC;
 export async function verifyHmac(input: string, secret: string): Promise<boolean> {
   const token = cleanToken(input);
   const [h, p, sig] = token.split('.');
-  const alg = decodePart(h, 'header').alg as string;
+  const alg = decodePart(h, 'header').alg;
   if (!isHmac(alg)) throw new Error('not an HMAC token');
-  const enc = new TextEncoder();
-  const key = await crypto.subtle.importKey('raw', enc.encode(secret), { name: 'HMAC', hash: HMAC[alg] }, false, ['sign']);
-  const mac = new Uint8Array(await crypto.subtle.sign('HMAC', key, enc.encode(`${h}.${p}`)));
-  let bin = '';
-  for (const b of mac) bin += String.fromCharCode(b);
-  const expected = btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-  return expected === sig.replace(/=+$/, '');
+  return (await hmacSign(alg, secret, `${h}.${p}`)) === sig.replace(/=+$/, '');
 }

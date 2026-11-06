@@ -3,6 +3,7 @@
 /de/dev/color-converter/
 /de/dev/json-formatter/
 /de/dev/jwt-decoder/
+/de/dev/jwt-encoder/
 /de/dev/regex-tester/
 /de/dev/subnet-calculator/
 /de/dev/text-diff/
@@ -38,6 +39,7 @@
 /en/dev/color-converter/
 /en/dev/json-formatter/
 /en/dev/jwt-decoder/
+/en/dev/jwt-encoder/
 /en/dev/regex-tester/
 /en/dev/subnet-calculator/
 /en/dev/text-diff/
@@ -73,6 +75,7 @@
 /es/dev/color-converter/
 /es/dev/json-formatter/
 /es/dev/jwt-decoder/
+/es/dev/jwt-encoder/
 /es/dev/regex-tester/
 /es/dev/subnet-calculator/
 /es/dev/text-diff/
@@ -108,6 +111,7 @@
 /pt/dev/color-converter/
 /pt/dev/json-formatter/
 /pt/dev/jwt-decoder/
+/pt/dev/jwt-encoder/
 /pt/dev/regex-tester/
 /pt/dev/subnet-calculator/
 /pt/dev/text-diff/
@@ -143,6 +147,7 @@
 /ru/dev/color-converter/
 /ru/dev/json-formatter/
 /ru/dev/jwt-decoder/
+/ru/dev/jwt-encoder/
 /ru/dev/regex-tester/
 /ru/dev/subnet-calculator/
 /ru/dev/text-diff/

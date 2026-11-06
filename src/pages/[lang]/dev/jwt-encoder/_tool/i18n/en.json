@@ -1,0 +1,17 @@
+{
+  "title": "JWT encoder: create and sign a JSON Web Token online",
+  "description": "Build a JWT from a JSON payload and sign it with a secret using HS256, HS384 or HS512. The token is created in your browser and the secret is never sent anywhere.",
+  "ui": {
+    "alg": "Algorithm",
+    "payload": "Payload (JSON)",
+    "secret": "Secret",
+    "token": "Token",
+    "secretNote": "The token is signed in your browser and the secret is never sent anywhere. Still, avoid pasting production secrets into websites.",
+    "noSecret": "Enter a secret: the token can’t be signed without one.",
+    "shortKey": "This secret is too short for {alg}: {bytes} of {min} bytes. The standard (RFC 7518) requires a key at least as long as the hash, and some libraries will reject the token.",
+    "errors": {
+      "json": "The payload isn’t valid JSON: check quotes, commas and brackets",
+      "object": "The payload must be a JSON object in curly braces"
+    }
+  }
+}
