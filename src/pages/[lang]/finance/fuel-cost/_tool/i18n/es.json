@@ -18,7 +18,10 @@
       "label": "Consumo"
     },
     "price": {
-      "label": "Precio del combustible por litro (por galón con mpg EE. UU.)"
+      "label": "Precio del combustible por litro"
+    },
+    "priceGal": {
+      "label": "Precio del combustible por galón"
     },
     "people": {
       "label": "Personas en el coche"

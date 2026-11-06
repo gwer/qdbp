@@ -18,7 +18,10 @@
       "label": "Verbrauch"
     },
     "price": {
-      "label": "Spritpreis pro Liter (bei mpg USA pro Gallone)"
+      "label": "Spritpreis pro Liter"
+    },
+    "priceGal": {
+      "label": "Spritpreis pro Gallone"
     },
     "people": {
       "label": "Personen im Auto"

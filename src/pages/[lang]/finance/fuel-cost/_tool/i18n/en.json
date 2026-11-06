@@ -18,7 +18,10 @@
       "label": "Fuel economy"
     },
     "price": {
-      "label": "Fuel price per US gallon (per liter for other units)"
+      "label": "Fuel price per liter"
+    },
+    "priceGal": {
+      "label": "Fuel price per gallon"
     },
     "people": {
       "label": "People in the car"

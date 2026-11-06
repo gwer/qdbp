@@ -39,10 +39,13 @@ export const def = defineCalculator({
     trip: { type: 'select', options: ['oneWay', 'round'], default: 'oneWay' },
     unit: { type: 'select', options: ['l100km', 'kml', 'mpgus', 'mpguk'], default: 'l100km', byLang: { en: 'mpgus', pt: 'kml' } },
     economy: { type: 'number', default: 8, min: 0, defaultBy: { unit: { l100km: 8, kml: 12, mpgus: 28, mpguk: 40 } } },
-    price: { type: 'number', default: 1.7, min: 0, byLang: { ru: 62, en: 3.5, es: 1.55, de: 1.75, pt: 6.2 } },
+    // Цена — в той единице, в которой продают топливо: для mpg США — за галлон, иначе — за литр.
+    price: { type: 'number', default: 1.7, min: 0, byLang: { ru: 62, en: 1.4, es: 1.55, de: 1.75, pt: 6.2 }, showIf: { unit: ['l100km', 'kml', 'mpguk'] } },
+    priceGal: { type: 'number', default: 3.5, min: 0, showIf: { unit: 'mpgus' } },
     people: { type: 'integer', default: 2, min: 1, max: 100 },
   },
-  compute: ({ distance, trip, unit, economy, price, people }) => fuelCost(distance, economy, unit, price, people, trip === 'round'),
+  compute: ({ distance, trip, unit, economy, price, priceGal, people }) =>
+    fuelCost(distance, economy, unit, unit === 'mpgus' ? priceGal : price, people, trip === 'round'),
   outputs: {
     cost: { type: 'money' },
     perPerson: { type: 'money' },

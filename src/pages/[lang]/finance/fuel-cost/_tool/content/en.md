@@ -2,7 +2,7 @@
 
 Enter the distance, your car's fuel economy and the price of gas. You'll see how much fuel the trip takes and what it costs — and, if you enter the number of people in the car, how much each person should chip in.
 
-Fuel economy can be in mpg (US or UK), L/100 km or km/L. With US mpg the price is per gallon; with the other units, per liter.
+Fuel economy can be in mpg (US or UK), L/100 km or km/L. With US mpg you enter the price per gallon; with the other units, per liter.
 
 ## Formula
 
