@@ -9,6 +9,7 @@ import { move } from '@/ui/pdf/Pages';
 import { loadPdfLib, pdfName, preloadPdfLib, saveBlob } from '@/ui/pdf/pdflib';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import { exifRotation, place, type Margin, type Orientation, type PageSize } from './layout';
+import { useJob } from '@/ui/pdf/useJob';
 
 interface Item {
   id: number;
@@ -52,6 +53,7 @@ async function reencode(file: Blob): Promise<Uint8Array> {
 }
 
 export function JpgToPdf({ lang, t }: ToolProps) {
+  const job = useJob();
   const [items, setItems] = useState<Item[]>([]);
   const [size, setSize] = useState<PageSize>(lang === 'en' ? 'letter' : 'a4');
   const [orientation, setOrientation] = useState<Orientation>('auto');
@@ -69,6 +71,8 @@ export function JpgToPdf({ lang, t }: ToolProps) {
   }, []);
 
   const change = (next: Item[]) => {
+    job.cancel();
+    setBusy(false);
     setItems(next);
     setResult(null);
     setError(null);
@@ -81,6 +85,7 @@ export function JpgToPdf({ lang, t }: ToolProps) {
   };
 
   const build = async () => {
+    const id = job.start();
     setBusy(true);
     setError(null);
     try {
@@ -102,11 +107,11 @@ export function JpgToPdf({ lang, t }: ToolProps) {
         page.drawImage(image, { x: pl.x, y: pl.y, width: pl.width, height: pl.height });
         if (pl.rotate) page.setRotation(degrees(pl.rotate));
       }
-      setResult({ name: pdfName(items[0].file.name), blob: await saveBlob(doc), note: t('pdf.pages', { count: items.length }) });
+      if (job.live(id)) setResult({ name: pdfName(items[0].file.name), blob: await saveBlob(doc), note: t('pdf.pages', { count: items.length }) });
     } catch {
       setError(t('pdf.error'));
     } finally {
-      setBusy(false);
+      if (job.live(id)) setBusy(false);
     }
   };
 
@@ -115,17 +120,17 @@ export function JpgToPdf({ lang, t }: ToolProps) {
   return (
     <div>
       <div class="calc-inputs">
-        <SelectField id="img-size" label={t('ui.size.label')} value={size} options={opt('size', ['a4', 'letter', 'fit'] as PageSize[])} onChange={(v) => (setSize(v), setResult(null))} />
+        <SelectField id="img-size" label={t('ui.size.label')} value={size} options={opt('size', ['a4', 'letter', 'fit'] as PageSize[])} onChange={(v) => (setSize(v), change(items))} />
         {size !== 'fit' && (
           <SelectField
             id="img-orientation"
             label={t('ui.orientation.label')}
             value={orientation}
             options={opt('orientation', ['auto', 'portrait', 'landscape'] as Orientation[])}
-            onChange={(v) => (setOrientation(v), setResult(null))}
+            onChange={(v) => (setOrientation(v), change(items))}
           />
         )}
-        <SelectField id="img-margin" label={t('ui.margin.label')} value={margin} options={opt('margin', ['none', 'small', 'large'] as Margin[])} onChange={(v) => (setMargin(v), setResult(null))} />
+        <SelectField id="img-margin" label={t('ui.margin.label')} value={margin} options={opt('margin', ['none', 'small', 'large'] as Margin[])} onChange={(v) => (setMargin(v), change(items))} />
       </div>
       <DropZone t={t} onFiles={add} />
       {items.length > 0 && (

@@ -10,6 +10,7 @@ import { Result, type OutFile } from '@/ui/pdf/Result';
 import type { PdfSource } from '@/ui/pdf/source';
 import { drawLabel, labelWidth, pageBox, shownSize } from '@/ui/pdf/stamp';
 import { tiles } from './tiles';
+import { useJob } from '@/ui/pdf/useJob';
 
 type Layout = 'center' | 'tile';
 type Angle = '45' | '0';
@@ -18,6 +19,10 @@ const hexToRgb = (hex: string): [number, number, number] => [1, 3, 5].map((i) =>
 
 export function WatermarkPdf({ lang, t }: ToolProps) {
   usePreload();
+  const job = useJob();
+  // Поля с неверным текстом: пока они есть, кнопка недоступна (иначе сработало бы прежнее значение).
+  const [invalid, setInvalid] = useState<Record<string, boolean>>({});
+  const fieldsBad = Object.values(invalid).some(Boolean);
   const [source, setSource] = useState<PdfSource | null>(null);
   const [text, setText] = useState(t('ui.default'));
   const [size, setSize] = useState(60);
@@ -45,23 +50,26 @@ export function WatermarkPdf({ lang, t }: ToolProps) {
   const key = [value, size, color, opacity, angle, layout].join('|');
 
   const reset = () => {
+    job.cancel();
+    setBusy(false);
     setResult(null);
     setFailed(false);
   };
 
   const run = async () => {
     if (!source) return;
-    setBusy(true);
     reset();
+    const id = job.start();
+    setBusy(true);
     try {
       const doc = await openPdf(source.bytes, source.password);
       const all = doc.getPages();
       for (const p of list) await stamp(doc, all[p - 1], p - 1);
-      setResult({ name: pdfName(source.file.name, '_watermark'), blob: await saveBlob(doc) });
+      if (job.live(id)) setResult({ name: pdfName(source.file.name, '_watermark'), blob: await saveBlob(doc) });
     } catch {
-      setFailed(true);
+      if (job.live(id)) setFailed(true);
     } finally {
-      setBusy(false);
+      if (job.live(id)) setBusy(false);
     }
   };
 
@@ -77,7 +85,8 @@ export function WatermarkPdf({ lang, t }: ToolProps) {
                   <label for="wm-text">{t('ui.text')}</label>
                   <input id="wm-text" type="text" autoComplete="off" value={text} maxLength={200} onInput={(e) => (setText(e.currentTarget.value), reset())} />
                 </div>
-                <IntField id="wm-size" label={t('ui.size')} value={size} min={6} max={300} suffix="pt" onChange={(v) => (setSize(v), reset())} />
+                <IntField id="wm-size"
+                onValid={(ok) => setInvalid((v) => ({ ...v, 'wm-size': !ok }))} label={t('ui.size')} value={size} min={6} max={300} suffix="pt" onChange={(v) => (setSize(v), reset())} />
                 <div class="field">
                   <label for="wm-color">{t('ui.color')}</label>
                   <input id="wm-color" type="color" value={color} onInput={(e) => (setColor(e.currentTarget.value), reset())} />
@@ -119,7 +128,7 @@ export function WatermarkPdf({ lang, t }: ToolProps) {
             <StampPreview t={t} source={source} index={(list[0] ?? 1) - 1} stamp={stamp} stampKey={key} />
           </div>
           <div class="actions">
-            <button type="button" class="btn" disabled={busy || !value || parsed?.ok === false || !list.length} onClick={() => void run()}>
+            <button type="button" class="btn" disabled={busy || fieldsBad || !value || parsed?.ok === false || !list.length} onClick={() => void run()}>
               {busy ? t('pdf.working') : t('ui.apply', { count: list.length })}
             </button>
           </div>

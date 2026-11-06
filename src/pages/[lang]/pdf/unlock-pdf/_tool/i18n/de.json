@@ -5,6 +5,7 @@
     "kind": {
       "password": "Passwort akzeptiert. Sie können eine Kopie speichern, die sich ohne Passwort öffnet.",
       "restricted": "Die Datei öffnet sich ohne Passwort, enthält aber Einschränkungen – zum Beispiel ein Druck- oder Kopierverbot. Speichern Sie eine Kopie ohne diese.",
+      "encrypted": "Die Datei ist verschlüsselt, öffnet sich aber ohne Passwort und hat keine Einschränkungen. Sie können eine normale, unverschlüsselte Kopie speichern – manche Dienste und Programme akzeptieren nur solche.",
       "none": "Diese Datei ist nicht geschützt: Sie hat weder ein Passwort noch Einschränkungen. Es gibt nichts zu entfernen."
     },
     "unlock": "Schutz entfernen"

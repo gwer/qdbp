@@ -7,6 +7,7 @@ import { PdfPicker, usePreload } from './Picker';
 import { pdfName } from './pdflib';
 import { Result, type OutFile } from './Result';
 import type { PdfSource } from './source';
+import { useJob } from './useJob';
 
 /**
  * Правка страниц одного PDF на месте: поворот, а для «Упорядочить» — ещё перестановка и удаление.
@@ -14,6 +15,7 @@ import type { PdfSource } from './source';
  */
 export function PageEditor({ lang, t, organize, suffix }: ToolProps & { organize: boolean; suffix: string }) {
   usePreload();
+  const job = useJob();
   const [source, setSource] = useState<PdfSource | null>(null);
   const [items, setItems] = useState<PageItem[]>([]);
   const [busy, setBusy] = useState(false);
@@ -21,6 +23,8 @@ export function PageEditor({ lang, t, organize, suffix }: ToolProps & { organize
   const [result, setResult] = useState<OutFile | null>(null);
 
   const change = (next: PageItem[]) => {
+    job.cancel();
+    setBusy(false);
     setItems(next);
     setResult(null);
     setFailed(false);
@@ -30,15 +34,16 @@ export function PageEditor({ lang, t, organize, suffix }: ToolProps & { organize
 
   const save = async () => {
     if (!source) return;
+    const id = job.start();
     setBusy(true);
     setFailed(false);
     try {
       const blob = await editPages(source, items);
-      setResult({ name: pdfName(source.file.name, suffix), blob, note: t('pdf.pages', { count: kept }) });
+      if (job.live(id)) setResult({ name: pdfName(source.file.name, suffix), blob, note: t('pdf.pages', { count: kept }) });
     } catch {
-      setFailed(true);
+      if (job.live(id)) setFailed(true);
     } finally {
-      setBusy(false);
+      if (job.live(id)) setBusy(false);
     }
   };
 

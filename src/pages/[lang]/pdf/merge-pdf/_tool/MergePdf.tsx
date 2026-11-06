@@ -9,6 +9,7 @@ import { openError, PasswordForm, usePreload } from '@/ui/pdf/Picker';
 import { expand, parseRanges } from '@/ui/pdf/ranges';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import { closeSource, openSource, type OpenResult, type PdfSource } from '@/ui/pdf/source';
+import { useJob } from '@/ui/pdf/useJob';
 
 type OpenError = Exclude<OpenResult, { ok: true }>['error'];
 
@@ -26,6 +27,7 @@ let nextId = 1;
 
 export function MergePdf({ lang, t }: ToolProps) {
   usePreload();
+  const job = useJob();
   const [entries, setEntries] = useState<Entry[]>([]);
   const [busy, setBusy] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -38,6 +40,8 @@ export function MergePdf({ lang, t }: ToolProps) {
   useEffect(() => () => entriesRef.current.forEach((e) => e.source && closeSource(e.source)), []);
 
   const change = (next: Entry[]) => {
+    job.cancel();
+    setBusy(false);
     setEntries(next);
     setResult(null);
     setFailed(false);
@@ -77,6 +81,7 @@ export function MergePdf({ lang, t }: ToolProps) {
   }, 0);
 
   const merge = async () => {
+    const id = job.start();
     setBusy(true);
     setFailed(false);
     try {
@@ -86,11 +91,11 @@ export function MergePdf({ lang, t }: ToolProps) {
         const pages = r?.ok ? r.ranges.flatMap(expand) : Array.from({ length: e.source!.pageCount }, (_, i) => i + 1);
         for (const p of pages) parts.push({ source: e.source!, index: p - 1 });
       }
-      setResult({ name: 'merged.pdf', blob: await assemble(parts), note: t('pdf.pages', { count: parts.length }) });
+      if (job.live(id)) setResult({ name: 'merged.pdf', blob: await assemble(parts), note: t('pdf.pages', { count: parts.length }) });
     } catch {
-      setFailed(true);
+      if (job.live(id)) setFailed(true);
     } finally {
-      setBusy(false);
+      if (job.live(id)) setBusy(false);
     }
   };
 
@@ -153,6 +158,8 @@ export function MergePdf({ lang, t }: ToolProps) {
                         aria-invalid={r?.ok === false ? 'true' : undefined}
                         onInput={(ev) => {
                           patch(e.id, { pages: ev.currentTarget.value });
+                          job.cancel();
+                          setBusy(false);
                           setResult(null);
                         }}
                       />

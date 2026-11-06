@@ -22,8 +22,8 @@ export function Result({ t, lang, files, zipName, children }: { t: T; lang: Lang
       <p class="pdf-result-title">{t('pdf.ready')}</p>
       {children}
       <ul class="file-list">
-        {files.map((f) => (
-          <li class="file-row" key={f.name}>
+        {files.map((f, i) => (
+          <li class="file-row" key={i}>
             <div class="file-info">
               <strong class="file-name">{f.name}</strong>
               <span class="muted">

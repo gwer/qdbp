@@ -2,6 +2,7 @@ import { useEffect, useState } from 'preact/hooks';
 import { Toggle } from '@/ui/Calculator';
 import { CopyButton } from '@/ui/CopyButton';
 import type { ToolProps } from '@/ui/define';
+import { formatNumber } from '@/lib/format';
 import { downloadBlob } from '@/ui/files/download';
 import { PdfPicker, usePreload } from '@/ui/pdf/Picker';
 import { pdfName } from '@/ui/pdf/pdflib';
@@ -67,7 +68,7 @@ export function PdfToText({ lang, t }: ToolProps) {
             onChange={setMarks}
           />
           <textarea class="pdf-text" readOnly value={text} rows={16} aria-label={t('ui.text')} />
-          <p class="muted">{t('ui.stats', { chars: text.length.toLocaleString(lang), pages: pages.length })}</p>
+          <p class="muted">{t('ui.stats', { chars: formatNumber(lang, text.length, 'integer'), pages: pages.length })}</p>
           <div class="actions">
             <CopyButton text={text} t={t} />
             <button type="button" class="btn btn-small btn-secondary" onClick={() => downloadBlob(pdfName(source!.file.name, '', 'txt'), new Blob([text], { type: 'text/plain;charset=utf-8' }))}>

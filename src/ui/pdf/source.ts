@@ -50,6 +50,8 @@ export function thumbnail(doc: PDFDocumentProxy, index: number): Promise<string>
   let p = map.get(index);
   if (!p) {
     p = queue.then(async () => {
+      // Документ закрыли (выбрали другой файл), пока миниатюра ждала очереди.
+      if (doc.loadingTask.destroyed) throw new Error('closed');
       const page = await doc.getPage(index + 1);
       const canvas = await renderPage(page, { maxSide: THUMB });
       page.cleanup();

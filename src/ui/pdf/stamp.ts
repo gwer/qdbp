@@ -84,9 +84,13 @@ async function rasterLabel(doc: PDFDocument, cache: StampCache, l: Label) {
   const key = `${l.text}|${l.size}|${l.color.join()}`;
   let hit = cache.images.get(key);
   if (!hit) {
-    const px = l.size * RASTER;
-    const font = `${px}px Helvetica, Arial, 'Liberation Sans', sans-serif`;
+    const face = "Helvetica, Arial, 'Liberation Sans', sans-serif";
     const probe = document.createElement('canvas').getContext('2d')!;
+    probe.font = `${l.size}px ${face}`;
+    // Canvas шире ~16 тыс. точек браузеры не создают: длинную крупную надпись рисуем с меньшим запасом.
+    const scale = Math.min(RASTER, 16000 / Math.max(1, probe.measureText(l.text).width));
+    const px = l.size * scale;
+    const font = `${px}px ${face}`;
     probe.font = font;
     const m = probe.measureText(l.text);
     const ascent = Math.ceil(m.fontBoundingBoxAscent ?? px * 0.9);
@@ -102,7 +106,7 @@ async function rasterLabel(doc: PDFDocument, cache: StampCache, l: Label) {
     const blob = await new Promise<Blob | null>((r) => canvas.toBlob(r, 'image/png'));
     if (!blob) throw new Error('label');
     const image = await doc.embedPng(new Uint8Array(await blob.arrayBuffer()));
-    hit = { image, width: canvas.width / RASTER, ascent: ascent / RASTER, descent: descent / RASTER };
+    hit = { image, width: canvas.width / scale, ascent: ascent / scale, descent: descent / scale };
     cache.images.set(key, hit);
   }
   return hit;

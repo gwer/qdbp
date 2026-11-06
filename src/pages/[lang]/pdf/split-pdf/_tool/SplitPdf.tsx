@@ -10,11 +10,16 @@ import { formatPages } from '@/ui/pdf/ranges';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import type { PdfSource } from '@/ui/pdf/source';
 import { byRanges, everyN, partName, type Group, type Mode } from './split';
+import { useJob } from '@/ui/pdf/useJob';
 
 export function SplitPdf({ lang, t }: ToolProps) {
   usePreload();
+  const job = useJob();
+  // Поля с неверным текстом: пока они есть, кнопка недоступна (иначе сработало бы прежнее значение).
+  const [invalid, setInvalid] = useState<Record<string, boolean>>({});
   const [source, setSource] = useState<PdfSource | null>(null);
   const [mode, setMode] = useState<Mode>('every');
+  const fieldsBad = mode === 'every' && !!invalid['split-n'];
   const [n, setN] = useState(1);
   const [ranges, setRanges] = useState('');
   const [selected, setSelected] = useState<Set<number>>(new Set());
@@ -51,14 +56,17 @@ export function SplitPdf({ lang, t }: ToolProps) {
     : [];
 
   const reset = () => {
+    job.cancel();
+    setBusy(false);
     setResult(null);
     setFailed(false);
   };
 
   const run = async () => {
     if (!source) return;
-    setBusy(true);
     reset();
+    const id = job.start();
+    setBusy(true);
     try {
       const open = docCache();
       const base = pdfName(source.file.name).replace(/\.pdf$/, '');
@@ -70,11 +78,11 @@ export function SplitPdf({ lang, t }: ToolProps) {
         );
         files.push({ name: partName(base, g), blob, note: `${t('ui.pagesShort')} ${formatPages(g)}` });
       }
-      setResult(files);
+      if (job.live(id)) setResult(files);
     } catch {
-      setFailed(true);
+      if (job.live(id)) setFailed(true);
     } finally {
-      setBusy(false);
+      if (job.live(id)) setBusy(false);
     }
   };
 
@@ -109,6 +117,7 @@ export function SplitPdf({ lang, t }: ToolProps) {
             {mode === 'every' && (
               <IntField
                 id="split-n"
+                onValid={(ok) => setInvalid((v) => ({ ...v, 'split-n': !ok }))}
                 label={t('ui.every')}
                 value={n}
                 min={1}
@@ -169,7 +178,7 @@ export function SplitPdf({ lang, t }: ToolProps) {
             </>
           )}
           <div class="actions">
-            <button type="button" class="btn" disabled={busy || !groups.length} onClick={() => void run()}>
+            <button type="button" class="btn" disabled={busy || fieldsBad || !groups.length} onClick={() => void run()}>
               {busy ? t('pdf.working') : t('ui.split', { count: groups.length })}
             </button>
           </div>

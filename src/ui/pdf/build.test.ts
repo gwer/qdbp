@@ -74,3 +74,38 @@ test('assemble: страницы двух файлов, повтор и пово
   ]);
   expect(await read(out)).toEqual(['P2@0', 'P3@270', 'P1@0', 'P1@0']);
 });
+
+/** Документ из n страниц, где на первой — ссылки на все остальные (как оглавление). */
+async function withToc(n: number): Promise<Uint8Array> {
+  const d = await PDFDocument.create();
+  const font = await d.embedFont(StandardFonts.Helvetica);
+  for (let i = 1; i <= n; i++) d.addPage([200, 200]).drawText(`SECRET${i}`, { x: 20, y: 100, font });
+  const [first, ...rest] = d.getPages();
+  const annots = d.context.obj(rest.map((p) => d.context.register(d.context.obj({ Type: 'Annot', Subtype: 'Link', Rect: [0, 0, 10, 10], Dest: [p.ref, 'Fit'] }))));
+  first.node.set(PDFName.of('Annots'), annots);
+  return d.save({ useObjectStreams: false });
+}
+
+/** Сколько объектов-страниц лежит в файле (в том числе невидимых). */
+async function pageObjects(blob: Blob) {
+  const doc = await PDFDocument.load(new Uint8Array(await blob.arrayBuffer()));
+  return doc.context.enumerateIndirectObjects().filter(([, o]) => o instanceof PDFDict && o.get(PDFName.of('Type')) === PDFName.of('Page')).length;
+}
+
+test('assemble: страницы по ссылкам из оглавления не попадают в файл', async () => {
+  const out = await assemble([{ source: src(await withToc(5)), index: 0 }]);
+  expect(await pageObjects(out)).toBe(1);
+  expect(await read(out)).toEqual(['SECRET1@0']);
+});
+
+test('editPages: удалённые страницы не остаются в файле', async () => {
+  const out = await editPages(src(await withToc(5)), [
+    { index: 0, rotate: 0 },
+    { index: 1, rotate: 0, removed: true },
+    { index: 2, rotate: 0 },
+    { index: 3, rotate: 0, removed: true },
+    { index: 4, rotate: 0, removed: true },
+  ]);
+  expect(await pageObjects(out)).toBe(2);
+  expect(await read(out)).toEqual(['SECRET1@0', 'SECRET3@0']);
+});

@@ -41,3 +41,13 @@ test('deflatePlain и dropUnreachable: без потерь, текст на ме
   const streams = again.context.enumerateIndirectObjects().filter(([, o]) => o instanceof PDFRawStream && (o as PDFRawStream).dict.get(PDFName.of('Filter')) === PDFName.of('FlateDecode'));
   expect(streams.length).toBeGreaterThan(0);
 });
+
+test('hideExif: метка Exif испорчена, остальное без изменений', async () => {
+  const { hideExif } = await import('./compress');
+  // SOI, APP1 «Exif\0\0» (длина 8), SOS.
+  const jpeg = new Uint8Array([0xff, 0xd8, 0xff, 0xe1, 0, 8, 0x45, 0x78, 0x69, 0x66, 0, 0, 0xff, 0xda, 0, 2]);
+  const out = hideExif(jpeg);
+  expect([...out.slice(6, 10)]).toEqual([0x58, 0x78, 0x69, 0x66]);
+  expect([...out.slice(0, 6)]).toEqual([...jpeg.slice(0, 6)]);
+  expect(jpeg[6]).toBe(0x45);
+});

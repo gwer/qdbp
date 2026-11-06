@@ -10,6 +10,7 @@ import { renderPage } from '@/ui/pdf/pdfjs';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import type { PdfSource } from '@/ui/pdf/source';
 import { deflatePlain, dropUnreachable, maxPageInches, recompressImages } from './compress';
+import { useJob } from '@/ui/pdf/useJob';
 
 type Mode = 'images' | 'scan';
 type Level = 'low' | 'medium' | 'high';
@@ -43,6 +44,7 @@ async function rasterize(source: PdfSource, level: Level, onProgress: (n: number
 
 export function CompressPdf({ lang, t }: ToolProps) {
   usePreload();
+  const job = useJob();
   const [source, setSource] = useState<PdfSource | null>(null);
   const [mode, setMode] = useState<Mode>('images');
   const [level, setLevel] = useState<Level>('medium');
@@ -51,6 +53,8 @@ export function CompressPdf({ lang, t }: ToolProps) {
   const [result, setResult] = useState<{ file: OutFile; note: string; smaller: boolean } | null>(null);
 
   const reset = () => {
+    job.cancel();
+    setProgress(null);
     setResult(null);
     setFailed(false);
   };
@@ -58,20 +62,23 @@ export function CompressPdf({ lang, t }: ToolProps) {
   const run = async () => {
     if (!source) return;
     reset();
-    setProgress(t('pdf.working'));
+    const id = job.start();
+    // Прогресс и итог отменённого запуска не показываются.
+    const show = (p: string | null) => job.live(id) && setProgress(p);
+    show(t('pdf.working'));
     try {
       let bytes: Uint8Array;
       let note = '';
       if (mode === 'scan') {
-        bytes = await rasterize(source, level, (n, total) => setProgress(t('ui.progressPage', { n, total })));
+        bytes = await rasterize(source, level, (n, total) => show(t('ui.progressPage', { n, total })));
       } else {
         const lib = await loadPdfLib();
         const doc = await openPdf(source.bytes, source.password);
         const { dpi, quality } = LEVELS[level];
         const images = await recompressImages(lib, doc, { maxSide: Math.ceil(maxPageInches(doc) * dpi), quality }, (n, total) =>
-          setProgress(t('ui.progressImage', { n: Math.min(n + 1, total), total })),
+          show(t('ui.progressImage', { n: Math.min(n + 1, total), total })),
         );
-        setProgress(t('pdf.working'));
+        show(t('pdf.working'));
         dropUnreachable(lib, doc);
         deflatePlain(lib, doc);
         bytes = await doc.save({ useObjectStreams: true });
@@ -81,15 +88,15 @@ export function CompressPdf({ lang, t }: ToolProps) {
       const smaller = bytes.length < before;
       // Не стало меньше — отдаём исходный файл, а не увеличенный.
       const blob = smaller ? new Blob([bytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' }) : source.file;
-      setResult({ file: { name: pdfName(source.file.name, '_compressed'), blob }, note, smaller });
+      if (job.live(id)) setResult({ file: { name: pdfName(source.file.name, '_compressed'), blob }, note, smaller });
     } catch {
-      setFailed(true);
+      if (job.live(id)) setFailed(true);
     } finally {
-      setProgress(null);
+      show(null);
     }
   };
 
-  const change = result ? sizeChange(source!.file.size, result.file.blob.size) : 0;
+  const change = result && source ? sizeChange(source.file.size, result.file.blob.size) : 0;
   return (
     <div>
       <PdfPicker
@@ -132,7 +139,7 @@ export function CompressPdf({ lang, t }: ToolProps) {
               {t('pdf.error')}
             </p>
           )}
-          {result && (
+          {result && source && (
             <Result t={t} lang={lang} files={[result.file]}>
               <p>
                 {formatBytes(lang, source.file.size)} → {formatBytes(lang, result.file.blob.size)}{' '}

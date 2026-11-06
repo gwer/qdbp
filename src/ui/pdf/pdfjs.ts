@@ -49,6 +49,14 @@ export function loadPdfJs(): Promise<typeof PdfJs> {
   return lib;
 }
 
+// Один воркер на страницу: без него pdf.js запускает свой воркер (и заново разбирает 1,3 МБ его кода)
+// на каждый документ — на каждый файл в объединении и каждое обновление превью.
+let worker: InstanceType<(typeof PdfJs)['PDFWorker']> | null = null;
+function sharedWorker(pdfjs: typeof PdfJs) {
+  if (!worker || worker.destroyed) worker = new pdfjs.PDFWorker();
+  return worker;
+}
+
 /** Неверный или отсутствующий пароль у защищённого файла. */
 export class PdfPasswordError extends Error {
   constructor(public wrong: boolean) {
@@ -61,6 +69,7 @@ export async function openForRender(bytes: Uint8Array, password?: string): Promi
   const pdfjs = await loadPdfJs();
   const task = pdfjs.getDocument({
     data: bytes.slice(),
+    worker: sharedWorker(pdfjs),
     verbosity: 0,
     password,
     BinaryDataFactory,

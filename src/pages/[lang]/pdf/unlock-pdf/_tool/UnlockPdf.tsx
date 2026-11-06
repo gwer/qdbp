@@ -4,12 +4,17 @@ import { PdfPicker, usePreload } from '@/ui/pdf/Picker';
 import { openPdf, pdfName, saveBlob } from '@/ui/pdf/pdflib';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import type { PdfSource } from '@/ui/pdf/source';
+import { useJob } from '@/ui/pdf/useJob';
 
-/** Что было защищено: пароль на открытие, только ограничения или ничего. */
-type Kind = 'password' | 'restricted' | 'none';
+/** Что было защищено: пароль на открытие, ограничения, шифрование без ограничений или ничего. */
+type Kind = 'password' | 'restricted' | 'encrypted' | 'none';
+
+/** Все права pdf.js (PermissionFlag): печать, правка, копирование, примечания, формы, доступность, сборка, качественная печать. */
+const ALL = [4, 8, 16, 32, 256, 512, 1024, 2048];
 
 export function UnlockPdf({ lang, t }: ToolProps) {
   usePreload(true);
+  const job = useJob();
   const [source, setSource] = useState<PdfSource | null>(null);
   const [kind, setKind] = useState<Kind | null>(null);
   const [busy, setBusy] = useState(false);
@@ -23,7 +28,7 @@ export function UnlockPdf({ lang, t }: ToolProps) {
     // У незашифрованного файла pdf.js не сообщает прав; у зашифрованного — набор разрешённых действий.
     let alive = true;
     source.doc.getPermissions().then(
-      (p) => alive && setKind(p ? 'restricted' : 'none'),
+      (p) => alive && setKind(!p ? 'none' : ALL.every((f) => p.has(f)) ? 'encrypted' : 'restricted'),
       () => alive && setKind('none'),
     );
     return () => {
@@ -33,15 +38,16 @@ export function UnlockPdf({ lang, t }: ToolProps) {
 
   const run = async () => {
     if (!source) return;
+    const id = job.start();
     setBusy(true);
     setFailed(false);
     try {
       const doc = await openPdf(source.bytes, source.password);
-      setResult({ name: pdfName(source.file.name, '_unlocked'), blob: await saveBlob(doc) });
+      if (job.live(id)) setResult({ name: pdfName(source.file.name, '_unlocked'), blob: await saveBlob(doc) });
     } catch {
-      setFailed(true);
+      if (job.live(id)) setFailed(true);
     } finally {
-      setBusy(false);
+      if (job.live(id)) setBusy(false);
     }
   };
 
@@ -53,6 +59,8 @@ export function UnlockPdf({ lang, t }: ToolProps) {
         source={source}
         onSource={(s) => {
           setSource(s);
+          job.cancel();
+          setBusy(false);
           setResult(null);
           setFailed(false);
         }}

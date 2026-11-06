@@ -5,6 +5,7 @@
     "kind": {
       "password": "Password accepted. You can save a copy of the file that opens without a password.",
       "restricted": "The file opens without a password but has restrictions, such as no printing or copying text. Save a copy without them.",
+      "encrypted": "The file is encrypted, but it opens without a password and has no restrictions. You can save a regular, unencrypted copy — some services and programs only accept those.",
       "none": "This file isn't protected: it has no password and no restrictions. There's nothing to remove."
     },
     "unlock": "Remove protection"

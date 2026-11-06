@@ -1,7 +1,9 @@
 // Сжатие PDF в браузере: пересохранение картинок (основной выигрыш), сжатие несжатых потоков, удаление мусора.
-import type { PDFDocument, PDFObject, PDFRawStream, PDFRef } from '@cantoo/pdf-lib';
+import type { PDFDocument, PDFRawStream, PDFRef } from '@cantoo/pdf-lib';
 import { unzlibSync, zlibSync } from 'fflate';
+import { segments } from '@/ui/files/jpeg';
 import { loadPdfLib } from '@/ui/pdf/pdflib';
+export { dropUnreachable } from '@/ui/pdf/prune';
 
 type Lib = Awaited<ReturnType<typeof loadPdfLib>>;
 
@@ -36,44 +38,6 @@ export function unpredictPng(data: Uint8Array, colors: number, columns: number):
     }
   }
   return out;
-}
-
-/** Объекты, достижимые от корня документа. Остальное — мусор от прошлых правок, его можно не сохранять. */
-export function reachable(lib: Lib, doc: PDFDocument): Set<PDFRef> {
-  const { PDFDict, PDFArray, PDFRef, PDFRawStream, PDFName } = lib;
-  const seen = new Set<PDFRef>();
-  const ctx = doc.context;
-  const stack: PDFObject[] = [ctx.trailerInfo.Root, ctx.trailerInfo.Info].filter(Boolean) as PDFObject[];
-  while (stack.length) {
-    const o = stack.pop()!;
-    if (o instanceof PDFRef) {
-      if (seen.has(o)) continue;
-      seen.add(o);
-      const target = ctx.lookup(o);
-      if (target) stack.push(target);
-    } else if (o instanceof PDFDict) {
-      for (const [, v] of o.entries()) stack.push(v);
-    } else if (o instanceof PDFArray) {
-      for (const v of o.asArray()) stack.push(v);
-    } else if (o instanceof PDFRawStream || (o as { dict?: unknown }).dict instanceof PDFDict) {
-      stack.push((o as PDFRawStream).dict);
-    }
-  }
-  void PDFName;
-  return seen;
-}
-
-/** Удаляет недостижимые объекты. Возвращает их число. */
-export function dropUnreachable(lib: Lib, doc: PDFDocument): number {
-  const keep = reachable(lib, doc);
-  let n = 0;
-  for (const [ref] of doc.context.enumerateIndirectObjects()) {
-    if (!keep.has(ref)) {
-      doc.context.delete(ref);
-      n++;
-    }
-  }
-  return n;
 }
 
 /** Байты потока после расшифровки, но до фильтров. */
@@ -172,9 +136,23 @@ function candidates(lib: Lib, doc: PDFDocument): Candidate[] {
   return out;
 }
 
+/**
+ * Портит метку EXIF в копии JPEG. Программы PDF ориентацию из EXIF не применяют, а браузер применил бы
+ * и повернул картинку внутри её прямоугольника (так делает и pdf.js).
+ */
+export function hideExif(jpeg: Uint8Array): Uint8Array {
+  const out = jpeg.slice();
+  try {
+    for (const s of segments(out).list) if (s.marker === 0xe1 && out[s.data] === 0x45 && out[s.data + 1] === 0x78) out[s.data] = 0x58; // Exif → Xxif
+  } catch {
+    // не разобрали заголовки — отдаём как есть, браузер решит сам
+  }
+  return out;
+}
+
 async function toBitmap(lib: Lib, c: Candidate): Promise<ImageBitmap> {
   const bytes = rawBytes(lib, c.stream);
-  if (c.kind === 'jpeg') return createImageBitmap(new Blob([bytes as Uint8Array<ArrayBuffer>], { type: 'image/jpeg' }));
+  if (c.kind === 'jpeg') return createImageBitmap(new Blob([hideExif(bytes) as Uint8Array<ArrayBuffer>], { type: 'image/jpeg' }), { imageOrientation: 'none' });
   if (!bytes.length) throw new Error('empty image');
   const colors = c.kind === 'rgb' ? 3 : 1;
   let px: Uint8Array = unzlibSync(bytes);

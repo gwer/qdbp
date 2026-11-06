@@ -8,6 +8,7 @@ import { Result, type OutFile } from '@/ui/pdf/Result';
 import type { PdfSource } from '@/ui/pdf/source';
 import { drawPicture, pageBox, shownSize } from '@/ui/pdf/stamp';
 import { SignaturePad, type Signature } from './SignaturePad';
+import { useJob } from '@/ui/pdf/useJob';
 
 /** Подпись или дата на странице: доли видимой страницы (левый верхний угол и ширина). */
 interface Placed {
@@ -40,11 +41,13 @@ async function dateImage(text: string): Promise<Signature> {
 
 /** Страница для расстановки: картинка страницы и её видимый размер в пунктах. */
 function usePage(source: PdfSource | null, index: number) {
-  const [state, setState] = useState<{ url: string; width: number; height: number } | null>(null);
+  const [state, setState] = useState<{ source: PdfSource; index: number; url: string; width: number; height: number } | null>(null);
+  const [failed, setFailed] = useState(false);
   useEffect(() => {
     if (!source) return;
     let alive = true;
     let url = '';
+    setFailed(false);
     (async () => {
       const page = await source.doc.getPage(index + 1);
       const vp = page.getViewport({ scale: 1 });
@@ -52,18 +55,20 @@ function usePage(source: PdfSource | null, index: number) {
       const blob = await new Promise<Blob | null>((r) => canvas.toBlob(r, 'image/jpeg', 0.85));
       if (!alive || !blob) return;
       url = URL.createObjectURL(blob);
-      setState({ url, width: vp.width, height: vp.height });
-    })().catch(() => {});
+      setState({ source, index, url, width: vp.width, height: vp.height });
+    })().catch(() => alive && setFailed(true));
     return () => {
       alive = false;
       if (url) URL.revokeObjectURL(url);
     };
   }, [source, index]);
-  return state;
+  // Пока рисуется новая страница, старая не считается загруженной: размеры и картинка — от неё.
+  return { page: state && state.source === source && state.index === index ? state : null, failed };
 }
 
 export function SignPdf({ lang, t }: ToolProps) {
   usePreload();
+  const job = useJob();
   const [source, setSource] = useState<PdfSource | null>(null);
   const [sig, setSig] = useState<Signature | null>(null);
   const [making, setMaking] = useState(false);
@@ -73,10 +78,12 @@ export function SignPdf({ lang, t }: ToolProps) {
   const [failed, setFailed] = useState(false);
   const [result, setResult] = useState<OutFile | null>(null);
   const view = useRef<HTMLDivElement>(null);
-  const page = usePage(source, index);
+  const { page, failed: pageFailed } = usePage(source, index);
 
   const total = source?.pageCount ?? 0;
   const change = (next: Placed[]) => {
+    job.cancel();
+    setBusy(false);
     setPlaced(next);
     setResult(null);
     setFailed(false);
@@ -117,6 +124,8 @@ export function SignPdf({ lang, t }: ToolProps) {
       target.removeEventListener('pointermove', onMove);
       target.removeEventListener('pointerup', onUp);
       target.removeEventListener('pointercancel', onUp);
+      job.cancel();
+      setBusy(false);
       setResult(null);
     };
     target.addEventListener('pointermove', onMove);
@@ -126,6 +135,7 @@ export function SignPdf({ lang, t }: ToolProps) {
 
   const save = async () => {
     if (!source) return;
+    const id = job.start();
     setBusy(true);
     setFailed(false);
     try {
@@ -141,11 +151,11 @@ export function SignPdf({ lang, t }: ToolProps) {
         const h = (w * p.image.height) / p.image.width;
         await drawPicture(pg, image, p.x * width, height - p.y * height - h, w, h);
       }
-      setResult({ name: pdfName(source.file.name, '_signed'), blob: await saveBlob(doc), note: t('ui.placed', { count: placed.length }) });
+      if (job.live(id)) setResult({ name: pdfName(source.file.name, '_signed'), blob: await saveBlob(doc), note: t('ui.placed', { count: placed.length }) });
     } catch {
-      setFailed(true);
+      if (job.live(id)) setFailed(true);
     } finally {
-      setBusy(false);
+      if (job.live(id)) setBusy(false);
     }
   };
 
@@ -217,6 +227,11 @@ export function SignPdf({ lang, t }: ToolProps) {
               </div>
             ))}
           </div>
+          {pageFailed && (
+            <p class="field-error" role="alert">
+              {t('pdf.error')}
+            </p>
+          )}
           {placed.length > 0 && <p class="muted">{t('ui.dragHint')}</p>}
           <div class="actions">
             <button type="button" class="btn" disabled={busy || !placed.length} onClick={() => void save()}>

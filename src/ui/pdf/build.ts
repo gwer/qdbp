@@ -1,5 +1,6 @@
 import type { PDFDocument } from '@cantoo/pdf-lib';
 import { loadPdfLib, openPdf, saveBlob } from './pdflib';
+import { keepOnlyPages } from './prune';
 import type { PdfSource } from './source';
 
 /** Страница результата: страница index (с 0) из source с дополнительным поворотом. */
@@ -24,7 +25,8 @@ export function docCache() {
  * Закладки, формы и ссылки между страницами при копировании не переносятся — так у всех таких инструментов.
  */
 export async function assemble(parts: PagePart[], open = docCache()): Promise<Blob> {
-  const { PDFDocument, degrees } = await loadPdfLib();
+  const lib = await loadPdfLib();
+  const { PDFDocument, degrees } = lib;
   const out = await PDFDocument.create();
   // Подряд идущие страницы одного файла копируются одним вызовом: общие шрифты и картинки — один раз.
   for (let i = 0; i < parts.length; ) {
@@ -44,6 +46,8 @@ export async function assemble(parts: PagePart[], open = docCache()): Promise<Bl
     });
     i = j;
   }
+  // Ссылки на другие страницы исходника копируются вместе с этими страницами — убираем лишнее.
+  keepOnlyPages(lib, out, new Set(out.getPages().map((p) => p.ref)));
   return saveBlob(out);
 }
 
@@ -59,10 +63,11 @@ export interface EditItem {
 
 /**
  * Переставляет, поворачивает и удаляет страницы в самом документе, а не в копии:
- * закладки, формы, метаданные и вложения остаются (закладки на удалённые страницы перестают работать).
+ * закладки, формы, метаданные и вложения остаются (закладки и ссылки на удалённые страницы перестают работать).
  */
 export async function editPages(source: PdfSource, items: EditItem[]): Promise<Blob> {
-  const { degrees, PDFArray, PDFName, PDFNumber } = await loadPdfLib();
+  const lib = await loadPdfLib();
+  const { degrees, PDFArray, PDFName, PDFNumber } = lib;
   const doc = await openPdf(source.bytes, source.password);
   const pages = doc.getPages();
   const keep = items.filter((it) => !it.removed);
@@ -84,5 +89,7 @@ export async function editPages(source: PdfSource, items: EditItem[]): Promise<B
   }
   root.set(PDFName.of('Kids'), kids);
   root.set(PDFName.of('Count'), PDFNumber.of(keep.length));
+  // Удалённые страницы и старые узлы дерева иначе остались бы в файле вместе с содержимым.
+  keepOnlyPages(lib, doc, new Set(keep.map((it) => pages[it.index].ref)));
   return saveBlob(doc);
 }

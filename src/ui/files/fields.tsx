@@ -9,6 +9,7 @@ export function IntField({
   max,
   suffix,
   onChange,
+  onValid,
 }: {
   id: string;
   label: string;
@@ -17,6 +18,8 @@ export function IntField({
   max: number;
   suffix?: string;
   onChange: (n: number) => void;
+  /** Сообщает, корректен ли текст в поле: пока нет, действие с последним верным значением лучше запретить. */
+  onValid?: (ok: boolean) => void;
 }) {
   const [text, setText] = useState(String(value));
   const parsed = /^\d+$/.test(text.trim()) ? Number(text) : NaN;
@@ -37,7 +40,9 @@ export function IntField({
             const v = e.currentTarget.value;
             setText(v);
             const n = /^\d+$/.test(v.trim()) ? Number(v) : NaN;
-            if (n >= min && n <= max) onChange(n);
+            const ok = n >= min && n <= max;
+            if (ok) onChange(n);
+            onValid?.(ok);
           }}
         />
         {suffix && <span class="suffix">{suffix}</span>}

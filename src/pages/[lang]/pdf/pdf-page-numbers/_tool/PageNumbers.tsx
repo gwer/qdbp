@@ -9,6 +9,7 @@ import { Result, type OutFile } from '@/ui/pdf/Result';
 import type { PdfSource } from '@/ui/pdf/source';
 import { drawLabel, pageBox, shownSize } from '@/ui/pdf/stamp';
 import { anchor, numberText, type NumFormat, type Position } from './numbers';
+import { useJob } from '@/ui/pdf/useJob';
 
 const POSITIONS: Position[] = ['tl', 'tc', 'tr', 'bl', 'bc', 'br'];
 const FORMATS: NumFormat[] = ['n', 'nOfTotal', 'dash', 'page', 'pageOf'];
@@ -16,6 +17,10 @@ const MM = 72 / 25.4;
 
 export function PageNumbers({ lang, t }: ToolProps) {
   usePreload();
+  const job = useJob();
+  // Поля с неверным текстом: пока они есть, кнопка недоступна (иначе сработало бы прежнее значение).
+  const [invalid, setInvalid] = useState<Record<string, boolean>>({});
+  const fieldsBad = Object.values(invalid).some(Boolean);
   const [source, setSource] = useState<PdfSource | null>(null);
   const [position, setPosition] = useState<Position>('bc');
   const [format, setFormat] = useState<NumFormat>('n');
@@ -45,23 +50,26 @@ export function PageNumbers({ lang, t }: ToolProps) {
   const key = [position, format, first, size, margin, pages].join('|');
 
   const reset = () => {
+    job.cancel();
+    setBusy(false);
     setResult(null);
     setFailed(false);
   };
 
   const run = async () => {
     if (!source) return;
-    setBusy(true);
     reset();
+    const id = job.start();
+    setBusy(true);
     try {
       const doc = await openPdf(source.bytes, source.password);
       const all = doc.getPages();
       for (const p of numbered) await stamp(doc, all[p - 1], p - 1);
-      setResult({ name: pdfName(source.file.name, '_numbered'), blob: await saveBlob(doc) });
+      if (job.live(id)) setResult({ name: pdfName(source.file.name, '_numbered'), blob: await saveBlob(doc) });
     } catch {
-      setFailed(true);
+      if (job.live(id)) setFailed(true);
     } finally {
-      setBusy(false);
+      if (job.live(id)) setBusy(false);
     }
   };
 
@@ -100,9 +108,12 @@ export function PageNumbers({ lang, t }: ToolProps) {
                   options={FORMATS.map((f) => [f, numberText(f, 3, 10, words)])}
                   onChange={(v) => (setFormat(v), reset())}
                 />
-                <IntField id="num-first" label={t('ui.first')} value={first} min={0} max={99999} onChange={(v) => (setFirst(v), reset())} />
-                <IntField id="num-size" label={t('ui.size')} value={size} min={4} max={96} suffix="pt" onChange={(v) => (setSize(v), reset())} />
-                <IntField id="num-margin" label={t('ui.margin')} value={margin} min={0} max={100} suffix={t('ui.mm')} onChange={(v) => (setMargin(v), reset())} />
+                <IntField id="num-first"
+                onValid={(ok) => setInvalid((v) => ({ ...v, 'num-first': !ok }))} label={t('ui.first')} value={first} min={0} max={99999} onChange={(v) => (setFirst(v), reset())} />
+                <IntField id="num-size"
+                onValid={(ok) => setInvalid((v) => ({ ...v, 'num-size': !ok }))} label={t('ui.size')} value={size} min={4} max={96} suffix="pt" onChange={(v) => (setSize(v), reset())} />
+                <IntField id="num-margin"
+                onValid={(ok) => setInvalid((v) => ({ ...v, 'num-margin': !ok }))} label={t('ui.margin')} value={margin} min={0} max={100} suffix={t('ui.mm')} onChange={(v) => (setMargin(v), reset())} />
                 <div class="field">
                   <label for="num-pages">{t('ui.pages')}</label>
                   <input
@@ -121,7 +132,7 @@ export function PageNumbers({ lang, t }: ToolProps) {
             <StampPreview t={t} source={source} index={previewIndex} stamp={stamp} stampKey={key} />
           </div>
           <div class="actions">
-            <button type="button" class="btn" disabled={busy || parsed?.ok === false || !numbered.length} onClick={() => void run()}>
+            <button type="button" class="btn" disabled={busy || fieldsBad || parsed?.ok === false || !numbered.length} onClick={() => void run()}>
               {busy ? t('pdf.working') : t('ui.apply', { count: numbered.length })}
             </button>
           </div>

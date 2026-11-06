@@ -5,9 +5,11 @@ import { pdfName } from '@/ui/pdf/pdflib';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import type { PdfSource } from '@/ui/pdf/source';
 import { protect, type Restrictions } from './protect';
+import { useJob } from '@/ui/pdf/useJob';
 
 export function ProtectPdf({ lang, t }: ToolProps) {
   usePreload(false);
+  const job = useJob();
   const [source, setSource] = useState<PdfSource | null>(null);
   const [password, setPassword] = useState('');
   const [owner, setOwner] = useState('');
@@ -21,21 +23,24 @@ export function ProtectPdf({ lang, t }: ToolProps) {
   const ownerError = restricted && owner && owner === password;
   const ready = !!password && (!restricted || (!!owner && !ownerError));
   const reset = () => {
+    job.cancel();
+    setBusy(false);
     setResult(null);
     setFailed(false);
   };
 
   const run = async () => {
     if (!source) return;
-    setBusy(true);
     reset();
+    const id = job.start();
+    setBusy(true);
     try {
       const bytes = await protect(source.bytes, source.password, password, owner, r);
-      setResult({ name: pdfName(source.file.name, '_protected'), blob: new Blob([bytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' }) });
+      if (job.live(id)) setResult({ name: pdfName(source.file.name, '_protected'), blob: new Blob([bytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' }) });
     } catch {
-      setFailed(true);
+      if (job.live(id)) setFailed(true);
     } finally {
-      setBusy(false);
+      if (job.live(id)) setBusy(false);
     }
   };
 

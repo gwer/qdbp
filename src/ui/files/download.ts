@@ -35,12 +35,23 @@ export function preloadZip() {
   idle(() => void loadZip());
 }
 
-/** Все файлы одним архивом. Картинки уже сжаты, поэтому без повторного сжатия (level 0) — быстро. */
+/**
+ * Все файлы одним архивом. Картинки и PDF уже сжаты, поэтому без повторного сжатия — быстро.
+ * Архив собирается по частям, без одного большого буфера: сотни страниц PNG не удваивают расход памяти.
+ */
 export async function downloadZip(name: string, files: { name: string; blob: Blob }[]) {
-  const { zipSync } = await loadZip();
+  const { Zip, ZipPassThrough } = await loadZip();
   const names = uniqueNames(files.map((f) => f.name));
-  const entries: Record<string, [Uint8Array, { level: 0 }]> = {};
-  for (let i = 0; i < files.length; i++) entries[names[i]] = [new Uint8Array(await files[i].blob.arrayBuffer()), { level: 0 }];
-  const zipped = zipSync(entries);
-  downloadBlob(name, new Blob([new Uint8Array(zipped)], { type: 'application/zip' }));
+  const parts: Uint8Array<ArrayBuffer>[] = [];
+  const zip = new Zip((err, chunk) => {
+    if (err) throw err;
+    parts.push(chunk as Uint8Array<ArrayBuffer>);
+  });
+  for (let i = 0; i < files.length; i++) {
+    const entry = new ZipPassThrough(names[i]);
+    zip.add(entry);
+    entry.push(new Uint8Array(await files[i].blob.arrayBuffer()), true);
+  }
+  zip.end();
+  downloadBlob(name, new Blob(parts, { type: 'application/zip' }));
 }

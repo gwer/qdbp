@@ -54,12 +54,17 @@ export function DropZone({
     if (ok.length) onFiles(ok);
   };
 
+  // Обработчик вставки вешается один раз, а take меняется с каждым рендером (в нём актуальный onFiles):
+  // без ref вставка видела бы список файлов первого рендера и затирала добавленные позже.
+  const takeRef = useRef(take);
+  takeRef.current = take;
   useEffect(() => {
+    if (!k.paste) return;
     const onPaste = (e: ClipboardEvent) => {
       const files = [...(e.clipboardData?.files ?? [])];
       if (files.length) {
         e.preventDefault();
-        take(files);
+        takeRef.current(files);
       }
     };
     document.addEventListener('paste', onPaste);
