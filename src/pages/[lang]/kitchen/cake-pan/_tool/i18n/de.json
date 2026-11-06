@@ -10,10 +10,16 @@
         "rect": "Rechteckig"
       }
     },
-    "fromA": {
-      "label": "Durchmesser oder Seitenlänge"
+    "fromD": {
+      "label": "Durchmesser"
     },
-    "fromB": {
+    "fromS": {
+      "label": "Seitenlänge"
+    },
+    "fromL": {
+      "label": "Länge"
+    },
+    "fromW": {
       "label": "Breite"
     },
     "toShape": {
@@ -24,10 +30,16 @@
         "rect": "Rechteckig"
       }
     },
-    "toA": {
-      "label": "Durchmesser oder Seitenlänge"
+    "toD": {
+      "label": "Durchmesser"
     },
-    "toB": {
+    "toS": {
+      "label": "Seitenlänge"
+    },
+    "toL": {
+      "label": "Länge"
+    },
+    "toW": {
       "label": "Breite"
     }
   },

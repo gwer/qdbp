@@ -1,9 +1,14 @@
 import { formatNumber } from '@/lib/format';
 import { defineCalculator, type FormatContext } from '@/ui/define';
 import { island } from '@/ui/ToolRoot';
-import { panArea, panFactor } from './pan';
+import { panArea, panFactor, type Shape } from './pan';
 
 const SHAPES = ['round', 'square', 'rect'] as const;
+const size = { type: 'quantity', unit: 'cm', imperial: 'in', min: 1, max: 200 } as const;
+
+/** Размеры выбранной формы: диаметр, сторона или длина × ширина. */
+const pan = (shape: Shape, d: number, s: number, l: number, w: number) =>
+  shape === 'round' ? { shape, a: d, b: 0 } : shape === 'square' ? { shape, a: s, b: 0 } : { shape, a: l, b: w };
 
 /** Площадь дна формы: см² или квадратные дюймы — по выбранной системе. */
 const area = (cm2: number, { lang, units, t }: FormatContext) =>
@@ -16,15 +21,21 @@ export const def = defineCalculator({
   related: ['oven-temperature', 'recipe-scaler'],
   inputs: {
     fromShape: { type: 'select', options: SHAPES, default: 'round' },
-    fromA: { type: 'quantity', unit: 'cm', imperial: 'in', default: 24, defaultImperial: 9, min: 1, max: 200 },
-    fromB: { type: 'quantity', unit: 'cm', imperial: 'in', default: 18, defaultImperial: 9, min: 0, max: 200, showIf: { fromShape: 'rect' } },
+    fromD: { ...size, default: 24, defaultImperial: 9, showIf: { fromShape: 'round' } },
+    fromS: { ...size, default: 20, defaultImperial: 8, showIf: { fromShape: 'square' } },
+    fromL: { ...size, default: 30, defaultImperial: 11, showIf: { fromShape: 'rect' } },
+    fromW: { ...size, default: 20, defaultImperial: 7, showIf: { fromShape: 'rect' } },
     toShape: { type: 'select', options: SHAPES, default: 'round' },
-    toA: { type: 'quantity', unit: 'cm', imperial: 'in', default: 26, defaultImperial: 10, min: 1, max: 200 },
-    toB: { type: 'quantity', unit: 'cm', imperial: 'in', default: 18, defaultImperial: 9, min: 0, max: 200, showIf: { toShape: 'rect' } },
+    toD: { ...size, default: 26, defaultImperial: 10, showIf: { toShape: 'round' } },
+    toS: { ...size, default: 22, defaultImperial: 9, showIf: { toShape: 'square' } },
+    toL: { ...size, default: 33, defaultImperial: 13, showIf: { toShape: 'rect' } },
+    toW: { ...size, default: 23, defaultImperial: 9, showIf: { toShape: 'rect' } },
   },
   compute: (v) => {
-    const factor = panFactor({ shape: v.fromShape, a: v.fromA, b: v.fromB }, { shape: v.toShape, a: v.toA, b: v.toB });
-    return { factor, change: factor, fromArea: panArea(v.fromShape, v.fromA, v.fromB), toArea: panArea(v.toShape, v.toA, v.toB) };
+    const from = pan(v.fromShape, v.fromD, v.fromS, v.fromL, v.fromW);
+    const to = pan(v.toShape, v.toD, v.toS, v.toL, v.toW);
+    const factor = panFactor(from, to);
+    return { factor, change: factor, fromArea: panArea(from.shape, from.a, from.b), toArea: panArea(to.shape, to.a, to.b) };
   },
   outputs: {
     factor: { type: 'custom', format: (f: number, { lang }) => `×${formatNumber(lang, f, 'number', 2)}` },

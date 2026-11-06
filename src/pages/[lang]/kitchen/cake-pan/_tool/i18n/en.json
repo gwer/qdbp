@@ -10,10 +10,16 @@
         "rect": "Rectangular"
       }
     },
-    "fromA": {
-      "label": "Diameter or side length"
+    "fromD": {
+      "label": "Diameter"
     },
-    "fromB": {
+    "fromS": {
+      "label": "Side"
+    },
+    "fromL": {
+      "label": "Length"
+    },
+    "fromW": {
       "label": "Width"
     },
     "toShape": {
@@ -24,10 +30,16 @@
         "rect": "Rectangular"
       }
     },
-    "toA": {
-      "label": "Diameter or side length"
+    "toD": {
+      "label": "Diameter"
     },
-    "toB": {
+    "toS": {
+      "label": "Side"
+    },
+    "toL": {
+      "label": "Length"
+    },
+    "toW": {
       "label": "Width"
     }
   },

@@ -10,10 +10,16 @@
         "rect": "Rectangular"
       }
     },
-    "fromA": {
-      "label": "Diámetro o lado"
+    "fromD": {
+      "label": "Diámetro"
     },
-    "fromB": {
+    "fromS": {
+      "label": "Lado"
+    },
+    "fromL": {
+      "label": "Largo"
+    },
+    "fromW": {
       "label": "Ancho"
     },
     "toShape": {
@@ -24,10 +30,16 @@
         "rect": "Rectangular"
       }
     },
-    "toA": {
-      "label": "Diámetro o lado"
+    "toD": {
+      "label": "Diámetro"
     },
-    "toB": {
+    "toS": {
+      "label": "Lado"
+    },
+    "toL": {
+      "label": "Largo"
+    },
+    "toW": {
       "label": "Ancho"
     }
   },
