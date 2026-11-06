@@ -1,12 +1,11 @@
 ## So funktioniert's
 
-JSON einfügen – es wird sofort mit Einrückung formatiert. Enthält es einen Fehler, sehen Sie die genaue Zeile und Spalte. Modi:
+JSON einfügen – es wird sofort mit Einrückung formatiert. Enthält es einen Fehler, sehen Sie die genaue Zeile und Spalte. Ausgabeformat:
 
 - **2 oder 4 Leerzeichen, Tabulatoren** – zum Lesen und Einfügen in Code;
-- **Schlüssel sortieren** – Objektschlüssel auf allen Ebenen alphabetisch, praktisch zum Vergleichen zweier JSON-Dokumente;
 - **Minifizieren** – alles in einer Zeile ohne überflüssige Leerzeichen, für APIs und Konfigurationsdateien.
 
-„Reparieren“ korrigiert „fast JSON“ – Konfigurationen, JavaScript-Objekte, Python-Ausgaben: entfernt Kommentare und hängende Kommas, ersetzt einfache durch doppelte Anführungszeichen, setzt Schlüssel in Anführungszeichen und macht aus True/False/None true/false/null. Heraus kommt striktes, formatiertes JSON.
+Zwei Häkchen lassen sich mit jedem Format kombinieren. **Schlüssel sortieren** ordnet Objektschlüssel auf allen Ebenen alphabetisch, praktisch zum Vergleichen zweier JSON-Dokumente. **Fehler reparieren** korrigiert „fast JSON“ – Konfigurationen, JavaScript-Objekte, Python-Ausgaben: entfernt Kommentare und hängende Kommas, ersetzt einfache durch doppelte Anführungszeichen, setzt Schlüssel in Anführungszeichen und macht aus True/False/None true/false/null. Heraus kommt striktes JSON.
 
 Die Daten werden im Browser verarbeitet und nirgendwohin gesendet – Sie können also auch JSON mit Tokens oder persönlichen Daten prüfen.
 

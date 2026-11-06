@@ -1,12 +1,11 @@
 ## How to use
 
-Paste JSON and it's formatted with indentation right away. If there's an error, you'll see the exact line and column. Modes:
+Paste JSON and it's formatted with indentation right away. If there's an error, you'll see the exact line and column. Output style:
 
 - **2- or 4-space indent, tabs** — for reading and pasting into code;
-- **Sort keys** — object keys in alphabetical order at every level, handy for comparing two JSON documents;
 - **Minify** — everything on one line without extra whitespace, for APIs and config files.
 
-“Repair” fixes “almost JSON” — config files, JavaScript objects, Python output: it removes comments and trailing commas, turns single quotes into double quotes, quotes bare keys and converts True/False/None to true/false/null. You get strict, formatted JSON.
+Two checkboxes work with any style. **Sort keys** puts object keys in alphabetical order at every level, handy for comparing two JSON documents. **Repair errors** fixes “almost JSON” — config files, JavaScript objects, Python output: it removes comments and trailing commas, turns single quotes into double quotes, quotes bare keys and converts True/False/None to true/false/null. You get strict JSON.
 
 Your data is processed in the browser and never sent anywhere, so it's safe to check JSON with tokens or personal data.
 

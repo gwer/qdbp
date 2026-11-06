@@ -11,9 +11,9 @@
       "format2": "2-space indent",
       "format4": "4-space indent",
       "tab": "Tabs",
-      "sorted": "Sort keys",
-      "minify": "Minify",
-      "repair": "Repair"
-    }
+      "minify": "Minify"
+    },
+    "sort": "Sort keys",
+    "repair": "Repair errors"
   }
 }

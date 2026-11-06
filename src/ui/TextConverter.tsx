@@ -22,6 +22,7 @@ export function TextConverter({
   describeError,
   note,
   actions,
+  options,
 }: {
   t: T;
   modes: Mode[];
@@ -32,6 +33,8 @@ export function TextConverter({
   note?: (input: string, output: string) => string | null;
   /** Дополнительные кнопки рядом с «Копировать» (например, «Прослушать» у азбуки Морзе). */
   actions?: (input: string, output: string) => ComponentChildren;
+  /** Настройки под переключателем режимов, независимые от режима (галочки). */
+  options?: ComponentChildren;
 }) {
   const [mode, setMode] = useState(modes[0].id);
   const [input, setInput] = useState('');
@@ -58,6 +61,7 @@ export function TextConverter({
           ))}
         </div>
       )}
+      {options}
       <div class="field">
         <label for="tc-in">{t('ui.input')}</label>
         <textarea

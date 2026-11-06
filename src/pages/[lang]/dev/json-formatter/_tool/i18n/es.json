@@ -11,9 +11,9 @@
       "format2": "Sangría de 2 espacios",
       "format4": "Sangría de 4 espacios",
       "tab": "Tabulaciones",
-      "sorted": "Ordenar claves",
-      "minify": "Minificar",
-      "repair": "Reparar"
-    }
+      "minify": "Minificar"
+    },
+    "sort": "Ordenar claves",
+    "repair": "Reparar errores"
   }
 }

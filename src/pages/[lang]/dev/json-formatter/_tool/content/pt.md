@@ -1,12 +1,11 @@
 ## Como usar
 
-Cole o JSON e ele é formatado com indentação na hora. Se houver erro, você vê a linha e a coluna exatas. Modos:
+Cole o JSON e ele é formatado com indentação na hora. Se houver erro, você vê a linha e a coluna exatas. Formato do resultado:
 
 - **Indentação de 2 ou 4 espaços, tabulações** — para ler e colar no código;
-- **Ordenar chaves** — chaves dos objetos em ordem alfabética em todos os níveis, útil para comparar dois JSON;
 - **Minificar** — tudo em uma linha, sem espaços extras, para APIs e arquivos de configuração.
 
-«Consertar» arruma o «quase JSON» — configurações, objetos de JavaScript, saída de Python: remove comentários e vírgulas sobrando, troca aspas simples por duplas, põe aspas nas chaves e converte True/False/None em true/false/null. O resultado é JSON estrito e formatado.
+Duas caixas de seleção funcionam com qualquer formato. **Ordenar chaves** põe as chaves dos objetos em ordem alfabética em todos os níveis, útil para comparar dois JSON. **Consertar erros** arruma o «quase JSON» — configurações, objetos de JavaScript, saída de Python: remove comentários e vírgulas sobrando, troca aspas simples por duplas, põe aspas nas chaves e converte True/False/None em true/false/null. O resultado é JSON estrito.
 
 Os dados são processados no navegador e não são enviados a lugar nenhum, então dá para conferir JSON com tokens ou dados pessoais.
 

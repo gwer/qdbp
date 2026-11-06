@@ -1,11 +1,12 @@
-export type Indent = 2 | 4 | '\t';
+/** 0 — без отступов, в одну строку (минификация). */
+export type Indent = 0 | 2 | 4 | '\t';
 
 export function formatJson(input: string, indent: Indent, sortKeys = false): string {
   const value = JSON.parse(input);
   return JSON.stringify(sortKeys ? sortDeep(value) : value, null, indent);
 }
 
-export const minifyJson = (input: string) => JSON.stringify(JSON.parse(input));
+export const minifyJson = (input: string) => formatJson(input, 0);
 
 function sortDeep(v: unknown): unknown {
   if (Array.isArray(v)) return v.map(sortDeep);
