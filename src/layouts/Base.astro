@@ -88,7 +88,7 @@ const otherSite = Object.entries(SITES).find(([id]) => id !== SITE)![1];
     <footer class="site-footer">
       <div class="wrap">
         <p>{t('footer.privacy')}</p>
-        <p>{t(`footer.otherSite.${SITE}`)} <a href={`${otherSite.url}/${lang}/`}>{new URL(otherSite.url).host}</a></p>
+        <p><a href={`${otherSite.url}/${lang}/`}>{t(`footer.otherSite.${SITE}`)}</a> — {otherSite.name}</p>
       </div>
     </footer>
   </body>

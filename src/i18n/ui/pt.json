@@ -64,8 +64,8 @@
   "footer": {
     "privacy": "Todos os cálculos são feitos no seu navegador. Os arquivos são processados no seu dispositivo e não são enviados a nenhum servidor.",
     "otherSite": {
-      "calc": "Ferramentas para arquivos, texto e código:",
-      "tools": "Calculadoras para dinheiro, datas, reformas e saúde:"
+      "calc": "Ferramentas para arquivos, texto e código",
+      "tools": "Calculadoras para dinheiro, datas, reformas e saúde"
     }
   },
   "common": {
