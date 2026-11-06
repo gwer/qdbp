@@ -91,5 +91,30 @@
     "after": "After",
     "actualSize": "Actual size",
     "closeCompare": "Close comparison"
+  },
+  "pdf": {
+    "drop": "Drop PDF files here or",
+    "notPdf": "not a PDF",
+    "page": "Page {n}",
+    "pages": {
+      "one": "{count} page",
+      "other": "{count} pages"
+    },
+    "rotateLeft": "Rotate left",
+    "rotateRight": "Rotate right",
+    "remove": "Remove",
+    "restore": "Restore",
+    "moveLeft": "Move back",
+    "moveRight": "Move forward",
+    "needPassword": "This file is password-protected. Enter the password to open it:",
+    "wrongPassword": "Wrong password. Try again:",
+    "open": "Open",
+    "broken": "couldn't read the PDF — the file is damaged or not a PDF",
+    "loadFailed": "couldn't load the PDF module — check your connection and try again",
+    "opening": "Opening the file…",
+    "other": "Another file",
+    "ready": "Done",
+    "working": "Processing…",
+    "error": "Couldn't process the file."
   }
 }

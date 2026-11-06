@@ -92,5 +92,30 @@
     "after": "Depois",
     "actualSize": "Tamanho real",
     "closeCompare": "Fechar comparação"
+  },
+  "pdf": {
+    "drop": "Arraste arquivos PDF para cá ou",
+    "notPdf": "não é um PDF",
+    "page": "Pág. {n}",
+    "pages": {
+      "one": "{count} página",
+      "other": "{count} páginas"
+    },
+    "rotateLeft": "Girar para a esquerda",
+    "rotateRight": "Girar para a direita",
+    "remove": "Remover",
+    "restore": "Restaurar",
+    "moveLeft": "Mover para trás",
+    "moveRight": "Mover para frente",
+    "needPassword": "O arquivo é protegido por senha. Digite a senha para abri-lo:",
+    "wrongPassword": "Senha incorreta. Tente de novo:",
+    "open": "Abrir",
+    "broken": "não foi possível ler o PDF — o arquivo está danificado ou não é um PDF",
+    "loadFailed": "não foi possível carregar o módulo de PDF — verifique a conexão e tente de novo",
+    "opening": "Abrindo o arquivo…",
+    "other": "Outro arquivo",
+    "ready": "Pronto",
+    "working": "Processando…",
+    "error": "Não foi possível processar o arquivo."
   }
 }

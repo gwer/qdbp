@@ -18,4 +18,21 @@ export default defineConfig({
   // страницу с meta refresh, которую Cloudflare не отдаёт, потому что _redirects срабатывает раньше.
   redirects: { '/': { status: 302, destination: '/en/' } },
   integrations: [preact(), sitemap()],
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          // pdf-lib (~250 КБ gzip) — отдельным файлом с постоянным именем: он грузится только на страницах PDF,
+          // в фоне, и исключён из бюджета размера по имени (scripts/check-dist.mjs).
+          // fflate (zip) нужен и pdf-lib, и картинкам — своим файлом, иначе архив у картинок тянул бы весь pdf-lib.
+          manualChunks: (id) =>
+            /node_modules[\\/]\.pnpm[\\/]fflate@/.test(id)
+              ? 'fflate'
+              : /node_modules[\\/]\.pnpm[\\/](@cantoo\+pdf-lib|culori|node-html-better-parser|html-entities)@/.test(id)
+                ? 'pdf-lib'
+                : undefined,
+        },
+      },
+    },
+  },
 });

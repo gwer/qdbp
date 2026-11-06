@@ -191,6 +191,11 @@ export interface ToolPageProps {
   island: IslandProps;
 }
 
+/** Разделы общих строк, нужные только одной категории (ключ = id категории): в острова других не передаются. */
+const SCOPED_UI = ['pdf'];
+const islandUi = (tool: Tool, lang: Lang): Dict =>
+  Object.fromEntries(Object.entries(UI[lang]).filter(([key]) => !SCOPED_UI.includes(key) || key === tool.category));
+
 /** getStaticPaths для index.astro инструмента: по странице на каждый язык, где есть перевод. */
 export function toolPaths(def: ToolDef) {
   if (!all.tools.some((t) => t.def === def)) throw new Error('toolPaths: инструмент не найден в каталоге');
@@ -198,7 +203,7 @@ export function toolPaths(def: ToolDef) {
   if (!tool) return []; // инструмент другого сайта
   return tool.langs.map((lang) => ({
     params: { lang },
-    props: { tool, lang, island: { lang, strings: { tool: tool.strings[lang]!, ui: UI[lang] } } } satisfies ToolPageProps,
+    props: { tool, lang, island: { lang, strings: { tool: tool.strings[lang]!, ui: islandUi(tool, lang) } } } satisfies ToolPageProps,
   }));
 }
 

@@ -1906,3 +1906,258 @@ table.wrap td {
     flex-basis: 100%;
   }
 }
+
+/* ---- PDF (src/ui/pdf) ---- */
+.pdf-filebar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.pdf-password {
+  margin-top: 10px;
+}
+
+.pdf-password label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pdf-password-row {
+  display: flex;
+  gap: 8px;
+  max-width: 420px;
+}
+
+.pdf-password-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.pdf-grid {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+  gap: 12px;
+}
+
+.pdf-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 6px 6px;
+  background: var(--surface);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+}
+
+.pdf-card[draggable='true'] {
+  cursor: grab;
+}
+
+.pdf-dragging {
+  opacity: 0.4;
+}
+
+.pdf-drop-before {
+  box-shadow: -8px 0 0 -5px var(--accent);
+}
+
+.pdf-drop-after {
+  box-shadow: 8px 0 0 -5px var(--accent);
+}
+
+.pdf-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+/* Квадрат: страница любой ориентации и после поворота на 90° остаётся внутри. */
+.pdf-thumb img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.25);
+  background: #fff;
+  transition: transform 0.15s;
+}
+
+.pdf-thumb-failed {
+  background: repeating-linear-gradient(45deg, var(--border) 0 6px, transparent 6px 12px);
+}
+
+.pdf-removed .pdf-thumb {
+  opacity: 0.25;
+}
+
+.pdf-removed .pdf-label {
+  text-decoration: line-through;
+}
+
+.pdf-pick {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.pdf-selected {
+  border-color: var(--accent);
+}
+
+.pdf-grid-select .pdf-card:not(.pdf-selected) .pdf-thumb {
+  opacity: 0.55;
+}
+
+.pdf-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.pdf-badge {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  min-width: 22px;
+  padding: 1px 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent-text);
+  background: var(--accent);
+  border-radius: 6px;
+}
+
+.pdf-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pdf-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 28px;
+  padding: 0;
+  color: var(--text);
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pdf-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pdf-icon:hover:not(:disabled) {
+  background: var(--surface-hover);
+}
+
+.pdf-icon:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.pdf-result {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.pdf-result-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.merge-row {
+  cursor: grab;
+}
+
+.merge-num {
+  flex: none;
+  width: 1.4em;
+  text-align: right;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.merge-thumb {
+  flex: none;
+  width: 56px;
+}
+
+.merge-pages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.merge-pages input {
+  width: 9em;
+  padding: 4px 8px;
+}
+
+.merge-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-btn {
+  font: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pdf-label-name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pdf-fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.pdf-fieldset legend {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+textarea.pdf-text {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

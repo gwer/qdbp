@@ -92,5 +92,30 @@
     "after": "Después",
     "actualSize": "Tamaño real",
     "closeCompare": "Cerrar comparación"
+  },
+  "pdf": {
+    "drop": "Arrastra archivos PDF aquí o",
+    "notPdf": "no es un PDF",
+    "page": "Pág. {n}",
+    "pages": {
+      "one": "{count} página",
+      "other": "{count} páginas"
+    },
+    "rotateLeft": "Girar a la izquierda",
+    "rotateRight": "Girar a la derecha",
+    "remove": "Eliminar",
+    "restore": "Restaurar",
+    "moveLeft": "Mover atrás",
+    "moveRight": "Mover adelante",
+    "needPassword": "El archivo está protegido con contraseña. Escríbela para abrirlo:",
+    "wrongPassword": "Contraseña incorrecta. Inténtalo de nuevo:",
+    "open": "Abrir",
+    "broken": "no se pudo leer el PDF: el archivo está dañado o no es un PDF",
+    "loadFailed": "no se pudo cargar el módulo PDF: revisa la conexión e inténtalo de nuevo",
+    "opening": "Abriendo el archivo…",
+    "other": "Otro archivo",
+    "ready": "Listo",
+    "working": "Procesando…",
+    "error": "No se pudo procesar el archivo."
   }
 }

@@ -121,9 +121,10 @@ for (const file of files.filter((f) => f.endsWith('.html'))) {
 }
 
 // 3. бюджеты
-// Исключение: обвязка декодера HEIC (libheif-js, LGPL) — сторонний файл как есть, грузится только
-// на странице heic-to-jpg и только после выбора первого файла, в первую загрузку страницы не входит.
-const UNBUDGETED = /^\/_astro\/libheif[.-][\w-]+\.js$/;
+// Исключения — сторонние библиотеки, которые не входят в первую загрузку страницы:
+// обвязка декодера HEIC (libheif-js, LGPL, файл как есть) — после выбора первого файла на heic-to-jpg;
+// pdf-lib (отдельный чанк, см. astro.config.mjs) — в фоне на страницах PDF. pdf.js — файлы .mjs как есть, бюджет их не считает.
+const UNBUDGETED = /^\/_astro\/(libheif|pdf-lib)[.-][\w-]+\.js$/;
 const sizes = [];
 for (const file of files) {
   const ext = file.split('.').pop();

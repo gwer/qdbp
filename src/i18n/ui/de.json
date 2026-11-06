@@ -91,5 +91,30 @@
     "after": "Nachher",
     "actualSize": "Originalgröße",
     "closeCompare": "Vergleich schließen"
+  },
+  "pdf": {
+    "drop": "PDF-Dateien hierher ziehen oder",
+    "notPdf": "keine PDF-Datei",
+    "page": "Seite {n}",
+    "pages": {
+      "one": "{count} Seite",
+      "other": "{count} Seiten"
+    },
+    "rotateLeft": "Nach links drehen",
+    "rotateRight": "Nach rechts drehen",
+    "remove": "Entfernen",
+    "restore": "Wiederherstellen",
+    "moveLeft": "Nach vorne verschieben",
+    "moveRight": "Nach hinten verschieben",
+    "needPassword": "Die Datei ist passwortgeschützt. Geben Sie das Passwort ein, um sie zu öffnen:",
+    "wrongPassword": "Falsches Passwort. Bitte erneut versuchen:",
+    "open": "Öffnen",
+    "broken": "PDF konnte nicht gelesen werden – die Datei ist beschädigt oder keine PDF",
+    "loadFailed": "PDF-Modul konnte nicht geladen werden – Verbindung prüfen und erneut versuchen",
+    "opening": "Datei wird geöffnet…",
+    "other": "Andere Datei",
+    "ready": "Fertig",
+    "working": "Wird verarbeitet…",
+    "error": "Die Datei konnte nicht verarbeitet werden."
   }
 }
