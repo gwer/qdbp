@@ -5,7 +5,7 @@
    - **dibújala** con el dedo en el móvil o con el ratón en el ordenador;
    - **escribe** tu nombre y elige un estilo, desde manuscrito hasta una cursiva normal;
    - **sube una foto** de tu firma en una hoja blanca: el fondo se volverá transparente y los bordes sobrantes se recortarán.
-3. Pulsa «Colocar firma» y aparecerá en la página abierta. Arrástrala a su sitio y ajusta el tamaño con el punto azul de la esquina. El botón «Colocar fecha» añade la fecha de hoy de la misma manera, como un bloque aparte.
+3. Pulsa «Colocar firma» y aparecerá en la página abierta. Arrástrala a su sitio y ajusta el tamaño con el punto azul de la esquina. El botón «Colocar fecha» añade la fecha de hoy de la misma manera, como un bloque aparte. Igual se coloca cualquier texto, por ejemplo el nombre o las iniciales que muchos formularios piden junto a la firma: escríbelo en el campo «Texto» y pulsa «Añadir texto».
 4. Pasa las páginas con las flechas y firma donde haga falta: la misma firma se puede colocar tantas veces como quieras.
 5. Pulsa «Guardar PDF» y descarga el archivo firmado.
 

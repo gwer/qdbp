@@ -5,7 +5,7 @@
    - **desenhar** com o dedo no celular ou com o mouse no computador;
    - **digitar** o nome e escolher um estilo — de manuscrito a itálico comum;
    - **enviar uma foto** da assinatura numa folha branca: o fundo fica transparente e as sobras são cortadas.
-3. Clique em "Colocar assinatura" — ela aparece na página aberta. Arraste-a para o lugar e ajuste o tamanho pelo ponto azul no canto. O botão "Colocar a data" adiciona a data de hoje do mesmo jeito, num bloco separado.
+3. Clique em "Colocar assinatura" — ela aparece na página aberta. Arraste-a para o lugar e ajuste o tamanho pelo ponto azul no canto. O botão "Colocar a data" adiciona a data de hoje do mesmo jeito, num bloco separado. Da mesma forma você coloca qualquer texto, por exemplo o nome ou as iniciais que muitos formulários pedem ao lado da assinatura: digite no campo "Texto" e clique em "Inserir texto".
 4. Passe as páginas com as setas e assine onde for preciso — a mesma assinatura pode ser colocada quantas vezes quiser.
 5. Clique em "Salvar PDF" e baixe o arquivo assinado.
 

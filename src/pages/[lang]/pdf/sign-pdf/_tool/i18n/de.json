@@ -36,6 +36,9 @@
     "placed": {
       "one": "{count} Unterschrift oder Datum",
       "other": "{count} Unterschriften oder Datumsangaben"
-    }
+    },
+    "textLabel": "Text, z. B. Name in Druckbuchstaben oder Initialen",
+    "textPlaceholder": "M. Mustermann",
+    "addText": "Text einfügen"
   }
 }

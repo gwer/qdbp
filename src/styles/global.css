@@ -2423,3 +2423,14 @@ textarea.pdf-text {
   cursor: nwse-resize;
   touch-action: none;
 }
+
+.sig-text {
+  flex-basis: 100%;
+}
+
+.sig-text label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}

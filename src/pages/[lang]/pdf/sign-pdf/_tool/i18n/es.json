@@ -36,6 +36,9 @@
     "placed": {
       "one": "{count} firma o fecha",
       "other": "{count} firmas o fechas"
-    }
+    },
+    "textLabel": "Texto, por ejemplo tu nombre o tus iniciales",
+    "textPlaceholder": "M. García",
+    "addText": "Añadir texto"
   }
 }

@@ -36,6 +36,9 @@
     "placed": {
       "one": "{count} assinatura ou data",
       "other": "{count} assinaturas ou datas"
-    }
+    },
+    "textLabel": "Texto, por exemplo seu nome ou suas iniciais",
+    "textPlaceholder": "J. Silva",
+    "addText": "Inserir texto"
   }
 }

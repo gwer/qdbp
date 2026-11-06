@@ -36,6 +36,9 @@
     "placed": {
       "one": "{count} signature or date",
       "other": "{count} signatures or dates"
-    }
+    },
+    "textLabel": "Text such as your printed name or initials",
+    "textPlaceholder": "J. Smith",
+    "addText": "Add text"
   }
 }

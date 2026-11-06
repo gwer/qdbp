@@ -5,7 +5,7 @@
    - **draw** it with your finger on a phone or with a mouse on a computer;
    - **type** your name and pick a style, from handwritten to plain italic;
    - **upload a photo** of your signature on white paper: the background becomes transparent and the extra margins are cropped.
-3. Click “Add signature” and it appears on the open page. Drag it into place and adjust the size with the blue dot in the corner. The “Add date” button adds today's date the same way, as a separate block.
+3. Click “Add signature” and it appears on the open page. Drag it into place and adjust the size with the blue dot in the corner. The “Add date” button adds today's date the same way, as a separate block. Any other text works too — for example, the printed name or initials many forms ask for next to the signature: type it in the “Text” field and click “Add text”.
 4. Flip through the pages with the arrows and sign wherever needed — you can place the same signature as many times as you like.
 5. Click “Save PDF” and download the signed file.
 

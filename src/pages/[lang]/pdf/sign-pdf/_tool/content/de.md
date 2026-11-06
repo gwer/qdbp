@@ -5,7 +5,7 @@
    - **zeichnen** – mit dem Finger auf dem Handy oder mit der Maus am Computer;
    - **tippen** – Namen eingeben und einen Stil wählen, von handschriftlich bis zu normaler Kursivschrift;
    - **Foto hochladen** – eine Unterschrift auf weißem Papier: Der Hintergrund wird transparent, überflüssige Ränder werden abgeschnitten.
-3. Klicken Sie auf „Unterschrift einfügen“ – sie erscheint auf der geöffneten Seite. Ziehen Sie sie an ihren Platz und passen Sie mit dem blauen Punkt in der Ecke die Größe an. Die Schaltfläche „Datum einfügen“ setzt das heutige Datum auf dieselbe Weise als eigenen Block.
+3. Klicken Sie auf „Unterschrift einfügen“ – sie erscheint auf der geöffneten Seite. Ziehen Sie sie an ihren Platz und passen Sie mit dem blauen Punkt in der Ecke die Größe an. Die Schaltfläche „Datum einfügen“ setzt das heutige Datum auf dieselbe Weise als eigenen Block. Genauso lässt sich beliebiger Text einfügen – etwa der Name in Druckbuchstaben oder Initialen, die viele Formulare neben der Unterschrift verlangen: im Feld „Text“ eingeben und auf „Text einfügen“ klicken.
 4. Blättern Sie mit den Pfeilen durch die Seiten und unterschreiben Sie überall, wo es nötig ist – dieselbe Unterschrift lässt sich beliebig oft einfügen.
 5. Klicken Sie auf „PDF speichern“ und laden Sie die unterschriebene Datei herunter.
 

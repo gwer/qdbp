@@ -22,8 +22,8 @@ interface Placed {
 
 let nextId = 1;
 
-/** Дата как картинка: так она выглядит одинаково на любом языке и в любом шрифте. */
-async function dateImage(text: string): Promise<Signature> {
+/** Дата или текст (ФИО, инициалы) как картинка: так они выглядят одинаково на любом языке и в любом шрифте. */
+async function textImage(text: string): Promise<Signature> {
   const c = document.createElement('canvas');
   const ctx = c.getContext('2d')!;
   const font = '96px Helvetica, Arial, sans-serif';
@@ -74,6 +74,7 @@ export function SignPdf({ lang, t }: ToolProps) {
   const [making, setMaking] = useState(false);
   const [index, setIndex] = useState(0);
   const [placed, setPlaced] = useState<Placed[]>([]);
+  const [text, setText] = useState('');
   const [busy, setBusy] = useState(false);
   const [failed, setFailed] = useState(false);
   const [result, setResult] = useState<OutFile | null>(null);
@@ -191,13 +192,28 @@ export function SignPdf({ lang, t }: ToolProps) {
                 <button type="button" class="btn" disabled={!page} onClick={() => add(sig)}>
                   {t('ui.place')}
                 </button>
-                <button type="button" class="btn btn-secondary" disabled={!page} onClick={() => void dateImage(today).then(add)}>
+                <button type="button" class="btn btn-secondary" disabled={!page} onClick={() => void textImage(today).then(add)}>
                   {t('ui.addDate', { date: today })}
                 </button>
                 <button type="button" class="btn btn-secondary" onClick={() => setMaking(true)}>
                   {t('ui.newSig')}
                 </button>
               </div>
+              <form
+                class="sig-text"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (page && text.trim()) void textImage(text.trim()).then(add);
+                }}
+              >
+                <label for="sig-text">{t('ui.textLabel')}</label>
+                <div class="pdf-password-row">
+                  <input id="sig-text" type="text" autoComplete="off" maxLength={120} value={text} placeholder={t('ui.textPlaceholder')} onInput={(e) => setText(e.currentTarget.value)} />
+                  <button type="submit" class="btn btn-secondary" disabled={!page || !text.trim()}>
+                    {t('ui.addText')}
+                  </button>
+                </div>
+              </form>
             </div>
           )}
           <div class="sig-nav">
