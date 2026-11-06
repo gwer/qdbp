@@ -1,5 +1,5 @@
 {
-  "title": "Compound interest calculator: savings and investment growth",
+  "title": "Investment and compound interest calculator: growth with monthly contributions",
   "description": "Investment and savings calculator: see how money grows with compound interest and monthly contributions — final balance, what it's worth in today's money after inflation, contributions and interest year by year.",
   "inputs": {
     "initial": {

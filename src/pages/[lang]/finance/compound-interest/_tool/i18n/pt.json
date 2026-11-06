@@ -1,5 +1,5 @@
 {
-  "title": "Calculadora de juros compostos: poupança e investimentos",
+  "title": "Calculadora de juros compostos e investimentos: simulador com aportes mensais",
   "description": "Simulador de investimentos: quanto seu dinheiro rende com juros compostos e aportes mensais — valor final, quanto ele vale em dinheiro de hoje descontada a inflação, total investido e juros ano a ano.",
   "inputs": {
     "initial": {
