@@ -1,0 +1,23 @@
+{
+  "title": "Convertidor de PDF a JPG: páginas como imágenes",
+  "description": "Guarda las páginas de un PDF como imágenes JPG o PNG, todas o solo las que elijas, con resolución para pantalla o para imprimir. En el navegador, sin subir el archivo a un servidor.",
+  "ui": {
+    "format": "Formato",
+    "dpi": {
+      "label": "Resolución",
+      "d72": "72 dpi: para pantalla",
+      "d150": "150 dpi: estándar",
+      "d300": "300 dpi: para imprimir"
+    },
+    "quality": "Calidad JPG",
+    "pages": "Páginas",
+    "all": "todas",
+    "badPages": "Indica páginas del 1 al {max}, por ejemplo 1-3, 5",
+    "convert": {
+      "one": "Guardar {count} página",
+      "other": "Guardar {count} páginas"
+    },
+    "progress": "Página {n} de {total}…",
+    "reduced": "reducida a {dpi} dpi"
+  }
+}

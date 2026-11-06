@@ -1,0 +1,29 @@
+{
+  "title": "JPG to PDF converter: photos and scans in one file",
+  "description": "Combine photos, scans and screenshots into a PDF: JPG, PNG, WebP. Reorder and rotate, Letter, A4 or fit to image — no uploads and no quality loss.",
+  "ui": {
+    "size": {
+      "label": "Page size",
+      "a4": "A4",
+      "letter": "Letter (US)",
+      "fit": "Fit to image"
+    },
+    "orientation": {
+      "label": "Orientation",
+      "auto": "Same as image",
+      "portrait": "Portrait",
+      "landscape": "Landscape"
+    },
+    "margin": {
+      "label": "Margins",
+      "none": "No margins",
+      "small": "10 mm",
+      "large": "20 mm"
+    },
+    "create": {
+      "one": "Create PDF ({count} page)",
+      "other": "Create PDF ({count} pages)"
+    },
+    "badImage": "Couldn't read “{name}”. If it's a HEIC photo from an iPhone, convert it to JPG first."
+  }
+}

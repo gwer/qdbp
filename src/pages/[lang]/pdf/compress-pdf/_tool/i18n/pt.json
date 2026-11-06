@@ -1,0 +1,26 @@
+{
+  "title": "Compressor de PDF: diminuir o tamanho do PDF",
+  "description": "Diminua o tamanho do PDF para e-mail, gov.br e formulários com limite: imagens e digitalizações são salvas de novo com resolução menor, o texto continua texto. Sem upload para servidor.",
+  "ui": {
+    "mode": "Modo",
+    "modes": {
+      "images": "Comprimir imagens",
+      "scan": "Como digitalização"
+    },
+    "imagesHint": "Fotos e digitalizações dentro do PDF são reduzidas e salvas de novo em JPG. Texto, links e marcadores ficam como estavam.",
+    "scanHint": "Cada página vira uma imagem. É o que mais comprime, mas o texto deixa de poder ser selecionado e pesquisado — serve para documentos escaneados.",
+    "level": {
+      "label": "Nível de compressão",
+      "low": "Baixo — {dpi} dpi, quase sem perda de qualidade",
+      "medium": "Médio — {dpi} dpi, recomendado",
+      "high": "Alto — {dpi} dpi, o menor arquivo"
+    },
+    "compress": "Comprimir PDF",
+    "progressImage": "Imagem {n} de {total}…",
+    "progressPage": "Página {n} de {total}…",
+    "images": "Imagens salvas de novo: {changed} de {total}.",
+    "noImages": "O arquivo não tem imagens que possam ser salvas de novo: ele foi comprimido só nos dados internos.",
+    "notSmaller": "Não foi possível diminuir o arquivo: ele já está bem comprimido. Será baixado o arquivo original, sem alterações. Tente o modo \"Como digitalização\" ou o nível alto.",
+    "notSmallerScan": "Como imagens, as páginas ficariam mais pesadas do que estão agora. Será baixado o arquivo original, sem alterações."
+  }
+}

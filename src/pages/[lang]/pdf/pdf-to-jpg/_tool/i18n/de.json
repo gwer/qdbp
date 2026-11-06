@@ -1,0 +1,23 @@
+{
+  "title": "PDF-in-JPG-Konverter: Seiten als Bilder speichern",
+  "description": "PDF-Seiten als JPG- oder PNG-Bilder speichern – alle oder ausgewählte, in Bildschirm- oder Druckauflösung. Im Browser, ohne die Datei hochzuladen.",
+  "ui": {
+    "format": "Format",
+    "dpi": {
+      "label": "Auflösung",
+      "d72": "72 dpi – für den Bildschirm",
+      "d150": "150 dpi – Standard",
+      "d300": "300 dpi – für den Druck"
+    },
+    "quality": "JPG-Qualität",
+    "pages": "Seiten",
+    "all": "alle",
+    "badPages": "Seiten von 1 bis {max} angeben, z. B. 1-3, 5",
+    "convert": {
+      "one": "{count} Seite speichern",
+      "other": "{count} Seiten speichern"
+    },
+    "progress": "Seite {n} von {total}…",
+    "reduced": "auf {dpi} dpi verringert"
+  }
+}

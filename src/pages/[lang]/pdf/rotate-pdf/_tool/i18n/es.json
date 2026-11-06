@@ -1,0 +1,15 @@
+{
+  "title": "Rotación de páginas PDF: girar todo el archivo o páginas sueltas",
+  "description": "Gira 90° o 180° las páginas de un PDF que están del revés o de lado, todo el documento a la vez o página a página, y guárdalo. Sin subir nada a un servidor.",
+  "ui": {
+    "hint": "Gira las páginas con los botones bajo las miniaturas o el documento entero de una vez.",
+    "save": {
+      "one": "Guardar PDF ({count} página)",
+      "other": "Guardar PDF ({count} páginas)"
+    },
+    "allLeft": "Todas a la izquierda",
+    "allRight": "Todas a la derecha",
+    "reset": "Deshacer cambios",
+    "noPages": "Has eliminado todas las páginas: deja al menos una."
+  }
+}

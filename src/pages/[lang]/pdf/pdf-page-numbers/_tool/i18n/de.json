@@ -1,0 +1,31 @@
+{
+  "title": "PDF-Seitennummerierung: Seitenzahlen einfügen",
+  "description": "Seitenzahlen in ein PDF einfügen: oben oder unten, mittig oder am Rand, als „3“, „3 / 10“ oder „Seite 3 von 10“, ab beliebiger Zahl und ohne Titelblatt. Im Browser, ohne Upload.",
+  "ui": {
+    "position": "Position der Seitenzahl",
+    "positions": {
+      "tl": "Oben links",
+      "tc": "Oben mittig",
+      "tr": "Oben rechts",
+      "bl": "Unten links",
+      "bc": "Unten mittig",
+      "br": "Unten rechts"
+    },
+    "format": "Format",
+    "words": {
+      "page": "Seite {n}",
+      "pageOf": "Seite {n} von {total}"
+    },
+    "first": "Erste Seitenzahl",
+    "size": "Schriftgröße",
+    "margin": "Abstand vom Rand",
+    "mm": "mm",
+    "pages": "Zu nummerierende Seiten",
+    "all": "alle",
+    "badPages": "Seiten von 1 bis {max} angeben, z. B. 2-",
+    "apply": {
+      "one": "{count} Seite nummerieren",
+      "other": "{count} Seiten nummerieren"
+    }
+  }
+}

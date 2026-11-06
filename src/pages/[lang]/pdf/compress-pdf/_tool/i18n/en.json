@@ -1,0 +1,26 @@
+{
+  "title": "PDF compressor: reduce PDF file size",
+  "description": "Make a PDF small enough for email, online forms and upload limits: photos and scans inside are re-saved at a lower resolution, text stays text. Nothing is uploaded.",
+  "ui": {
+    "mode": "Method",
+    "modes": {
+      "images": "Compress images",
+      "scan": "As a scan"
+    },
+    "imagesHint": "Photos and scans inside the PDF are downsized and re-saved as JPG. Text, links and bookmarks stay as they are.",
+    "scanHint": "Every page becomes an image. This compresses the most, but text can no longer be selected or searched — best for scans.",
+    "level": {
+      "label": "Compression level",
+      "low": "Low — {dpi} dpi, almost no quality loss",
+      "medium": "Medium — {dpi} dpi, recommended",
+      "high": "High — {dpi} dpi, smallest file"
+    },
+    "compress": "Compress PDF",
+    "progressImage": "Image {n} of {total}…",
+    "progressPage": "Page {n} of {total}…",
+    "images": "Images re-saved: {changed} of {total}.",
+    "noImages": "The file has no images that can be re-saved: it was compressed only by cleaning up internal data.",
+    "notSmaller": "Couldn't make the file smaller: it's already well compressed. You'll get the original file unchanged. Try the “As a scan” method or the high level.",
+    "notSmallerScan": "As images, the pages would weigh more than they do now. You'll get the original file unchanged."
+  }
+}

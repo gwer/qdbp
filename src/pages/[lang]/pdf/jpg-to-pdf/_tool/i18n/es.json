@@ -1,0 +1,29 @@
+{
+  "title": "Convertidor de JPG a PDF: fotos y escaneos en un solo archivo",
+  "description": "Junta fotos, escaneos y capturas de pantalla en un PDF: JPG, PNG, WebP. Orden, giro, tamaño A4, carta o el de la foto, sin subir nada a un servidor y sin perder calidad.",
+  "ui": {
+    "size": {
+      "label": "Tamaño de página",
+      "a4": "A4",
+      "letter": "Carta (Letter)",
+      "fit": "Tamaño de la imagen"
+    },
+    "orientation": {
+      "label": "Orientación",
+      "auto": "Según la imagen",
+      "portrait": "Vertical",
+      "landscape": "Horizontal"
+    },
+    "margin": {
+      "label": "Márgenes",
+      "none": "Sin márgenes",
+      "small": "10 mm",
+      "large": "20 mm"
+    },
+    "create": {
+      "one": "Crear PDF ({count} página)",
+      "other": "Crear PDF ({count} páginas)"
+    },
+    "badImage": "No se pudo leer «{name}». Si es una foto HEIC del iPhone, conviértela antes a JPG."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Conversor de JPG para PDF: fotos e digitalizações em um arquivo",
+  "description": "Junte fotos, digitalizações e capturas de tela em um PDF: JPG, PNG, WebP. Ordem, rotação, página A4 ou do tamanho da foto — sem upload para servidor e sem perder qualidade.",
+  "ui": {
+    "size": {
+      "label": "Tamanho da página",
+      "a4": "A4",
+      "letter": "Carta (EUA)",
+      "fit": "Do tamanho da imagem"
+    },
+    "orientation": {
+      "label": "Orientação",
+      "auto": "Igual à imagem",
+      "portrait": "Retrato",
+      "landscape": "Paisagem"
+    },
+    "margin": {
+      "label": "Margens",
+      "none": "Sem margens",
+      "small": "10 mm",
+      "large": "20 mm"
+    },
+    "create": {
+      "one": "Criar PDF ({count} página)",
+      "other": "Criar PDF ({count} páginas)"
+    },
+    "badImage": "Não foi possível ler \"{name}\". Se for uma foto HEIC do iPhone, converta-a para JPG primeiro."
+  }
+}

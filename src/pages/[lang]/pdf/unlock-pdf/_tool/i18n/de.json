@@ -1,0 +1,12 @@
+{
+  "title": "PDF-Entsperrung: Passwort aus PDF entfernen",
+  "description": "Ein bekanntes Passwort aus einem PDF entfernen und Sperren für Drucken, Kopieren und Ändern aufheben. Die gespeicherte Datei öffnet sich ohne Passwort. Verarbeitung im Browser, ohne Upload.",
+  "ui": {
+    "kind": {
+      "password": "Passwort akzeptiert. Sie können eine Kopie speichern, die sich ohne Passwort öffnet.",
+      "restricted": "Die Datei öffnet sich ohne Passwort, enthält aber Einschränkungen – zum Beispiel ein Druck- oder Kopierverbot. Speichern Sie eine Kopie ohne diese.",
+      "none": "Diese Datei ist nicht geschützt: Sie hat weder ein Passwort noch Einschränkungen. Es gibt nichts zu entfernen."
+    },
+    "unlock": "Schutz entfernen"
+  }
+}

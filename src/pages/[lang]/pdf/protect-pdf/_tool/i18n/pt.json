@@ -1,0 +1,17 @@
+{
+  "title": "Proteção de PDF com senha: criptografar o arquivo",
+  "description": "Coloque senha em um PDF: sem ela, o arquivo não abre. Criptografia AES-256 e, se quiser, bloqueio de impressão, cópia e alterações. O arquivo não sai do seu dispositivo.",
+  "ui": {
+    "password": "Senha para abrir",
+    "show": "Mostrar senha",
+    "restrict": "Restrições para quem abrir o arquivo (opcional)",
+    "print": "Bloquear impressão",
+    "copy": "Bloquear cópia de texto",
+    "edit": "Bloquear alterações",
+    "owner": "Senha do proprietário — remove as restrições",
+    "ownerHint": "Precisa ser diferente da senha para abrir; senão, as restrições não funcionam.",
+    "ownerSame": "A senha do proprietário é igual à senha para abrir — as restrições não vão funcionar. Escolha outra.",
+    "remember": "Anote a senha: nem nós nem ninguém consegue recuperá-la.",
+    "protect": "Proteger PDF"
+  }
+}

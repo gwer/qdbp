@@ -1,0 +1,17 @@
+{
+  "title": "Protección de PDF con contraseña: cifrar un archivo",
+  "description": "Pon contraseña a un PDF: sin ella no se abre. Cifrado AES-256 y, si quieres, bloqueo de impresión, copia y cambios. El archivo no sale de tu dispositivo.",
+  "ui": {
+    "password": "Contraseña de apertura",
+    "show": "Mostrar contraseña",
+    "restrict": "Restricciones para quien abra el archivo (opcional)",
+    "print": "Impedir la impresión",
+    "copy": "Impedir copiar texto",
+    "edit": "Impedir cambios",
+    "owner": "Contraseña de propietario: quita las restricciones",
+    "ownerHint": "Tiene que ser distinta de la contraseña de apertura; si no, las restricciones no funcionarán.",
+    "ownerSame": "La contraseña de propietario coincide con la de apertura, así que las restricciones no funcionarán. Elige otra.",
+    "remember": "Apunta la contraseña: no se puede recuperar, ni nosotros ni nadie.",
+    "protect": "Proteger PDF"
+  }
+}

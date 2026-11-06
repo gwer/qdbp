@@ -1,0 +1,24 @@
+{
+  "title": "Marca d'água em PDF: texto sobre as páginas",
+  "description": "Coloque uma marca d'água no PDF — \"Cópia\", \"Modelo\", \"Confidencial\" ou o seu nome: na diagonal ou reta, uma vez ou na página toda, com a transparência que quiser. Sem upload para servidor.",
+  "ui": {
+    "default": "CÓPIA",
+    "text": "Texto da marca d'água",
+    "size": "Tamanho da fonte",
+    "color": "Cor",
+    "opacity": "Opacidade",
+    "pages": "Páginas",
+    "all": "todas",
+    "badPages": "Indique páginas de 1 a {max}, por exemplo 1-3, 5",
+    "angle": "Inclinação",
+    "diagonal": "Na diagonal",
+    "horizontal": "Reta",
+    "layout": "Disposição",
+    "center": "Uma no centro",
+    "tile": "Na página toda",
+    "apply": {
+      "one": "Adicionar em {count} página",
+      "other": "Adicionar em {count} páginas"
+    }
+  }
+}

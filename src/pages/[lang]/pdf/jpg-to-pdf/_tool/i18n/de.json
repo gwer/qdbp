@@ -1,0 +1,29 @@
+{
+  "title": "JPG-in-PDF-Konverter: Fotos und Scans in einer Datei",
+  "description": "Fotos, Scans und Screenshots zu einem PDF zusammenstellen: JPG, PNG, WebP. Reihenfolge, Drehung, Format A4 oder in Bildgröße – ohne Upload und ohne Qualitätsverlust.",
+  "ui": {
+    "size": {
+      "label": "Seitengröße",
+      "a4": "A4",
+      "letter": "Letter (USA)",
+      "fit": "Wie das Bild"
+    },
+    "orientation": {
+      "label": "Ausrichtung",
+      "auto": "Wie das Bild",
+      "portrait": "Hochformat",
+      "landscape": "Querformat"
+    },
+    "margin": {
+      "label": "Ränder",
+      "none": "Ohne Rand",
+      "small": "10 mm",
+      "large": "20 mm"
+    },
+    "create": {
+      "one": "PDF erstellen ({count} Seite)",
+      "other": "PDF erstellen ({count} Seiten)"
+    },
+    "badImage": "„{name}“ konnte nicht gelesen werden. Falls es ein HEIC-Foto vom iPhone ist, wandeln Sie es zuerst in JPG um."
+  }
+}

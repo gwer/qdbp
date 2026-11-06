@@ -1,0 +1,17 @@
+{
+  "title": "PDF-Passwortschutz: PDF verschlüsseln",
+  "description": "PDF mit einem Passwort schützen: Ohne Passwort lässt sich die Datei nicht öffnen. AES-256-Verschlüsselung, auf Wunsch Sperre für Drucken, Kopieren und Ändern. Die Datei verlässt Ihr Gerät nicht.",
+  "ui": {
+    "password": "Passwort zum Öffnen",
+    "show": "Passwort anzeigen",
+    "restrict": "Einschränkungen für alle, die die Datei öffnen (optional)",
+    "print": "Drucken verbieten",
+    "copy": "Kopieren von Text verbieten",
+    "edit": "Änderungen verbieten",
+    "owner": "Besitzerpasswort – hebt die Einschränkungen auf",
+    "ownerHint": "Muss sich vom Passwort zum Öffnen unterscheiden, sonst greifen die Einschränkungen nicht.",
+    "ownerSame": "Das Besitzerpasswort ist gleich dem Passwort zum Öffnen – die Einschränkungen würden nicht greifen. Wählen Sie ein anderes.",
+    "remember": "Notieren Sie das Passwort: Wiederherstellen kann es niemand, auch wir nicht.",
+    "protect": "PDF schützen"
+  }
+}

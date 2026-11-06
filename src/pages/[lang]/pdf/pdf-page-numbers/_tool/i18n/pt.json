@@ -1,0 +1,31 @@
+{
+  "title": "Numeração de páginas PDF: adicionar números às páginas",
+  "description": "Numere as páginas de um PDF: embaixo ou em cima, no centro ou no canto, \"3\", \"3 / 10\" ou \"Página 3 de 10\", a partir de qualquer número e sem a capa. No navegador, sem upload.",
+  "ui": {
+    "position": "Posição do número",
+    "positions": {
+      "tl": "Em cima à esquerda",
+      "tc": "Em cima no centro",
+      "tr": "Em cima à direita",
+      "bl": "Embaixo à esquerda",
+      "bc": "Embaixo no centro",
+      "br": "Embaixo à direita"
+    },
+    "format": "Formato do número",
+    "words": {
+      "page": "Página {n}",
+      "pageOf": "Página {n} de {total}"
+    },
+    "first": "Primeiro número",
+    "size": "Tamanho da fonte",
+    "margin": "Distância da borda",
+    "mm": "mm",
+    "pages": "Páginas a numerar",
+    "all": "todas",
+    "badPages": "Indique páginas de 1 a {max}, por exemplo 2-",
+    "apply": {
+      "one": "Numerar {count} página",
+      "other": "Numerar {count} páginas"
+    }
+  }
+}

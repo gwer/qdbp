@@ -1,0 +1,15 @@
+{
+  "title": "Organizador de páginas PDF: excluir, reordenar e girar",
+  "description": "Exclua páginas de um PDF, mude a ordem arrastando e gire as que estão de cabeça para baixo. Miniaturas de todas as páginas, no navegador, sem enviar o arquivo.",
+  "ui": {
+    "hint": "Arraste as páginas para mudar a ordem. Os botões abaixo da miniatura giram e excluem a página; a exclusão pode ser desfeita.",
+    "save": {
+      "one": "Salvar PDF ({count} página)",
+      "other": "Salvar PDF ({count} páginas)"
+    },
+    "allLeft": "Todas para a esquerda",
+    "allRight": "Todas para a direita",
+    "reset": "Desfazer alterações",
+    "noPages": "Todas as páginas foram removidas — deixe pelo menos uma."
+  }
+}

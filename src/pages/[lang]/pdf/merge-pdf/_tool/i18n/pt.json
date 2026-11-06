@@ -1,0 +1,14 @@
+{
+  "title": "Junção de PDF: juntar vários arquivos em um",
+  "description": "Junte vários PDFs em um só arquivo, na ordem que quiser, e use só parte das páginas, se precisar. Funciona no navegador: os arquivos não são enviados a nenhum servidor.",
+  "ui": {
+    "pages": "Páginas",
+    "all": "todas",
+    "badPages": "Indique páginas de 1 a {max}, por exemplo 1-3, 5",
+    "merge": {
+      "one": "Juntar ({count} página)",
+      "other": "Juntar ({count} páginas)"
+    },
+    "addMore": "Adicione pelo menos mais um PDF."
+  }
+}

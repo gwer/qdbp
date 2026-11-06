@@ -1,0 +1,15 @@
+{
+  "title": "Rotação de páginas PDF: girar o arquivo todo ou páginas avulsas",
+  "description": "Gire em 90° ou 180° as páginas de um PDF que estão de cabeça para baixo ou deitadas — o documento todo de uma vez ou página por página — e salve. Sem upload para servidor.",
+  "ui": {
+    "hint": "Gire as páginas com os botões abaixo das miniaturas ou o documento todo de uma vez.",
+    "save": {
+      "one": "Salvar PDF ({count} página)",
+      "other": "Salvar PDF ({count} páginas)"
+    },
+    "allLeft": "Todas para a esquerda",
+    "allRight": "Todas para a direita",
+    "reset": "Desfazer alterações",
+    "noPages": "Todas as páginas foram removidas — deixe pelo menos uma."
+  }
+}

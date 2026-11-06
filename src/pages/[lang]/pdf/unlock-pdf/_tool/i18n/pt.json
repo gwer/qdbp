@@ -1,0 +1,12 @@
+{
+  "title": "Desbloqueio de PDF: remover a senha",
+  "description": "Tire a senha de um PDF que você conhece e remova o bloqueio de impressão, cópia e alterações. O arquivo salvo abre sem senha. Tudo no navegador, sem upload.",
+  "ui": {
+    "kind": {
+      "password": "Senha aceita. Você pode salvar uma cópia do arquivo que abre sem senha.",
+      "restricted": "O arquivo abre sem senha, mas tem restrições — por exemplo, bloqueio de impressão ou de cópia de texto. Salve uma cópia sem elas.",
+      "none": "Este arquivo não está protegido: não tem senha nem restrições. Não há nada para remover."
+    },
+    "unlock": "Remover proteção"
+  }
+}

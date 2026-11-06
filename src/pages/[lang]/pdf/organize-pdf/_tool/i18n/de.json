@@ -1,0 +1,15 @@
+{
+  "title": "PDF-Seitenverwaltung: Seiten löschen, sortieren und drehen",
+  "description": "Überflüssige Seiten aus einem PDF löschen, die Reihenfolge per Ziehen ändern und verdrehte Seiten richtig drehen. Vorschaubilder aller Seiten, läuft im Browser ohne Upload.",
+  "ui": {
+    "hint": "Ziehen Sie die Seiten, um die Reihenfolge zu ändern. Die Schaltflächen unter dem Vorschaubild drehen und löschen eine Seite; das Löschen lässt sich rückgängig machen.",
+    "save": {
+      "one": "PDF speichern ({count} Seite)",
+      "other": "PDF speichern ({count} Seiten)"
+    },
+    "allLeft": "Alle nach links",
+    "allRight": "Alle nach rechts",
+    "reset": "Änderungen verwerfen",
+    "noPages": "Alle Seiten sind gelöscht – behalten Sie mindestens eine."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "title": "PDF page numbering: add page numbers to a PDF",
+  "description": "Number the pages of a PDF: at the bottom or top, centered or in a corner, as “3”, “3 / 10” or “Page 3 of 10”, starting from any number and skipping the cover page. In your browser, no uploads.",
+  "ui": {
+    "position": "Position",
+    "positions": {
+      "tl": "Top left",
+      "tc": "Top center",
+      "tr": "Top right",
+      "bl": "Bottom left",
+      "bc": "Bottom center",
+      "br": "Bottom right"
+    },
+    "format": "Format",
+    "words": {
+      "page": "Page {n}",
+      "pageOf": "Page {n} of {total}"
+    },
+    "first": "Start at",
+    "size": "Font size",
+    "margin": "Distance from edge",
+    "mm": "mm",
+    "pages": "Pages to number",
+    "all": "all",
+    "badPages": "Enter pages from 1 to {max}, e.g. 2-",
+    "apply": {
+      "one": "Number {count} page",
+      "other": "Number {count} pages"
+    }
+  }
+}

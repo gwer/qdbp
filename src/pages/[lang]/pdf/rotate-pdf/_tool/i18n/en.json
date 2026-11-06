@@ -1,0 +1,15 @@
+{
+  "title": "PDF page rotator: rotate the whole file or single pages",
+  "description": "Rotate upside-down or sideways PDF pages by 90° or 180° — the whole document at once or page by page — and save. Nothing is uploaded.",
+  "ui": {
+    "hint": "Rotate pages with the buttons under the thumbnails, or the whole document at once.",
+    "save": {
+      "one": "Save PDF ({count} page)",
+      "other": "Save PDF ({count} pages)"
+    },
+    "allLeft": "All left",
+    "allRight": "All right",
+    "reset": "Undo changes",
+    "noPages": "All pages are deleted — keep at least one."
+  }
+}

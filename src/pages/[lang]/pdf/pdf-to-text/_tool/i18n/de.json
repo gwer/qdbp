@@ -1,0 +1,14 @@
+{
+  "title": "PDF-Textextraktion: Text kopieren oder als TXT speichern",
+  "description": "Den gesamten Text aus einem PDF herausholen: kopieren oder als TXT-Datei speichern. Für Dokumente mit Textebene, im Browser und ohne Upload.",
+  "ui": {
+    "progress": "Seite {n} von {total} wird gelesen…",
+    "marks": "Seitenzahlen",
+    "no": "Nein",
+    "yes": "Ja",
+    "text": "Text aus dem PDF",
+    "stats": "Zeichen: {chars}, Seiten: {pages}.",
+    "download": "TXT herunterladen",
+    "empty": "Dieses PDF hat keine Textebene – wahrscheinlich ist es ein Scan oder es besteht aus Fotos der Seiten. Um daraus Text zu gewinnen, braucht man Texterkennung (OCR), die dieses Tool nicht bietet."
+  }
+}

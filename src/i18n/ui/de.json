@@ -9,8 +9,8 @@
     "tools": {
       "title": "tooloot — Online-Tools im Browser",
       "tagline": "Tools für Dateien, Text und Code direkt im Browser",
-      "description": "Kostenlose Online-Tools: Bilder komprimieren und umwandeln, Wörter zählen, Passwörter generieren, JSON formatieren, Kodierer und mehr. Ihre Dateien verlassen Ihr Gerät nicht.",
-      "intro": "Kostenlose Tools für Bilder, Text, Passwörter, Kodierung und Code. Ohne Anmeldung und ohne Upload: Alles läuft direkt in Ihrem Browser, Fotos und Dateien verlassen Ihr Gerät nicht."
+      "description": "Kostenlose Online-Tools: PDFs zusammenfügen, komprimieren und umwandeln, Bilder komprimieren und umwandeln, Wörter zählen, Passwörter generieren, JSON formatieren und mehr. Ihre Dateien verlassen Ihr Gerät nicht.",
+      "intro": "Kostenlose Tools für PDFs, Bilder, Text, Passwörter, Kodierung und Code. Ohne Anmeldung und ohne Upload: Alles läuft direkt in Ihrem Browser, Dokumente und Fotos verlassen Ihr Gerät nicht."
     }
   },
   "nav": {

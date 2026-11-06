@@ -1,0 +1,26 @@
+{
+  "title": "PDF splitter: by pages, ranges or selected pages",
+  "description": "Split a PDF into parts: every page as a separate file, by ranges like 1-3, 4-10, or just the pages you select. In your browser, nothing is uploaded.",
+  "ui": {
+    "mode": "How to split",
+    "modes": {
+      "every": "Every N pages",
+      "ranges": "By ranges",
+      "select": "Select pages"
+    },
+    "every": "Pages per file",
+    "ranges": "Ranges — each becomes a separate file",
+    "badRanges": "Enter pages from 1 to {max} separated by commas, e.g. 1-3, 4-6",
+    "output": "Output",
+    "oneFile": "One file",
+    "eachFile": "Each page separately",
+    "selectHint": "Click pages to select them.",
+    "selectAll": "Select all",
+    "selectNone": "Clear selection",
+    "pagesShort": "pages",
+    "split": {
+      "one": "Split ({count} file)",
+      "other": "Split ({count} files)"
+    }
+  }
+}

@@ -9,8 +9,8 @@
     "tools": {
       "title": "tooloot — online tools in your browser",
       "tagline": "Tools for files, text and code right in your browser",
-      "description": "Free online tools: compress and convert images, word counter, password generator, JSON formatter, encoders and more. Your files never leave your device.",
-      "intro": "Free tools for images, text, passwords, encoding and code. No sign-up and no uploads: everything runs right in your browser, and your photos and files never leave your device."
+      "description": "Free online tools: merge, compress and convert PDFs, compress and convert images, word counter, password generator, JSON formatter and more. Your files never leave your device.",
+      "intro": "Free tools for PDFs, images, text, passwords, encoding and code. No sign-up and no uploads: everything runs right in your browser, and your documents and photos never leave your device."
     }
   },
   "nav": {

@@ -1,0 +1,14 @@
+{
+  "title": "PDF text extractor: copy text or save as TXT",
+  "description": "Get all the text out of a PDF: copy it or save it as a TXT file. Works for documents with a text layer, in your browser, without uploading.",
+  "ui": {
+    "progress": "Reading page {n} of {total}…",
+    "marks": "Page numbers",
+    "no": "No",
+    "yes": "Yes",
+    "text": "Text from PDF",
+    "stats": "Characters: {chars}, pages: {pages}.",
+    "download": "Download TXT",
+    "empty": "This PDF has no text layer — most likely it's a scan or photos of pages. Getting text out of it takes text recognition (OCR), which this tool doesn't do."
+  }
+}

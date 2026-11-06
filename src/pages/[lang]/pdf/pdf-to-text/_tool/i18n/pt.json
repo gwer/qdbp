@@ -1,0 +1,14 @@
+{
+  "title": "Extrator de texto de PDF: copiar ou salvar em TXT",
+  "description": "Tire todo o texto de um PDF: copie ou salve como arquivo TXT. Funciona com documentos que têm camada de texto, no navegador e sem upload para servidor.",
+  "ui": {
+    "progress": "Lendo a página {n} de {total}…",
+    "marks": "Números de página",
+    "no": "Não",
+    "yes": "Sim",
+    "text": "Texto do PDF",
+    "stats": "Caracteres: {chars}, páginas: {pages}.",
+    "download": "Baixar TXT",
+    "empty": "Este PDF não tem camada de texto — provavelmente é um documento escaneado ou fotos das páginas. Para tirar texto dele é preciso reconhecimento de texto (OCR), e esta ferramenta não faz isso."
+  }
+}

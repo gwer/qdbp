@@ -1,0 +1,12 @@
+{
+  "title": "PDF password remover: unlock a PDF",
+  "description": "Remove a password you know from a PDF and lift restrictions on printing, copying and editing. The saved file opens without a password. Runs in your browser, nothing is uploaded.",
+  "ui": {
+    "kind": {
+      "password": "Password accepted. You can save a copy of the file that opens without a password.",
+      "restricted": "The file opens without a password but has restrictions, such as no printing or copying text. Save a copy without them.",
+      "none": "This file isn't protected: it has no password and no restrictions. There's nothing to remove."
+    },
+    "unlock": "Remove protection"
+  }
+}

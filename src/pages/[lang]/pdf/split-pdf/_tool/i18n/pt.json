@@ -1,0 +1,26 @@
+{
+  "title": "Divisor de PDF: separar por páginas e intervalos",
+  "description": "Divida um PDF em partes: cada página em um arquivo, por intervalos como 1-3, 4-10 ou só as páginas marcadas. No navegador, sem upload para servidor.",
+  "ui": {
+    "mode": "Como dividir",
+    "modes": {
+      "every": "A cada N páginas",
+      "ranges": "Por intervalos",
+      "select": "Escolher páginas"
+    },
+    "every": "Páginas em cada arquivo",
+    "ranges": "Intervalos — cada um vira um arquivo",
+    "badRanges": "Indique páginas de 1 a {max} separadas por vírgula, por exemplo 1-3, 4-6",
+    "output": "Resultado",
+    "oneFile": "Em um só arquivo",
+    "eachFile": "Cada página separada",
+    "selectHint": "Clique nas páginas para marcá-las.",
+    "selectAll": "Selecionar todas",
+    "selectNone": "Limpar seleção",
+    "pagesShort": "pág.",
+    "split": {
+      "one": "Dividir ({count} arquivo)",
+      "other": "Dividir ({count} arquivos)"
+    }
+  }
+}

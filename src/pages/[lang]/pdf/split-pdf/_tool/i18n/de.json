@@ -1,0 +1,26 @@
+{
+  "title": "PDF-Aufteilung: nach Seiten, Bereichen oder Auswahl",
+  "description": "PDF in Teile zerlegen: jede Seite als eigene Datei, nach Bereichen wie 1-3, 4-10 oder nur markierte Seiten. Im Browser, ohne Upload auf einen Server.",
+  "ui": {
+    "mode": "Aufteilen",
+    "modes": {
+      "every": "Je N Seiten",
+      "ranges": "Nach Bereichen",
+      "select": "Seiten auswählen"
+    },
+    "every": "Seiten pro Datei",
+    "ranges": "Bereiche – jeder wird zu einer eigenen Datei",
+    "badRanges": "Seiten von 1 bis {max} durch Komma getrennt angeben, z. B. 1-3, 4-6",
+    "output": "Ergebnis",
+    "oneFile": "Eine Datei",
+    "eachFile": "Jede Seite einzeln",
+    "selectHint": "Markieren Sie Seiten per Klick.",
+    "selectAll": "Alle auswählen",
+    "selectNone": "Auswahl aufheben",
+    "pagesShort": "S.",
+    "split": {
+      "one": "Aufteilen ({count} Datei)",
+      "other": "Aufteilen ({count} Dateien)"
+    }
+  }
+}

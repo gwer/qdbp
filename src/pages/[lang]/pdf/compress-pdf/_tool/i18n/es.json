@@ -1,0 +1,26 @@
+{
+  "title": "Compresor de PDF: reducir el tamaño de un PDF",
+  "description": "Reduce el peso de un PDF para enviarlo por correo o subirlo a un trámite online con límite de tamaño: las imágenes y los escaneos se guardan con menos resolución y el texto sigue siendo texto. Sin subir nada a un servidor.",
+  "ui": {
+    "mode": "Método",
+    "modes": {
+      "images": "Comprimir imágenes",
+      "scan": "Como escaneo"
+    },
+    "imagesHint": "Las fotos y los escaneos del PDF se reducen y se guardan de nuevo en JPG. El texto, los enlaces y los marcadores no cambian.",
+    "scanHint": "Cada página se convierte en una imagen. Es lo que más reduce el tamaño, pero el texto ya no se podrá seleccionar ni buscar: indicado para escaneos.",
+    "level": {
+      "label": "Nivel de compresión",
+      "low": "Bajo: {dpi} dpi, casi sin pérdida de calidad",
+      "medium": "Medio: {dpi} dpi, recomendado",
+      "high": "Alto: {dpi} dpi, el archivo más pequeño"
+    },
+    "compress": "Comprimir PDF",
+    "progressImage": "Imagen {n} de {total}…",
+    "progressPage": "Página {n} de {total}…",
+    "images": "Imágenes recomprimidas: {changed} de {total}.",
+    "noImages": "El archivo no tiene imágenes que se puedan recomprimir: solo se ha reducido limpiando datos internos.",
+    "notSmaller": "No se pudo reducir el archivo: ya está bien comprimido. Se descargará el original sin cambios. Prueba el método «Como escaneo» o el nivel alto.",
+    "notSmallerScan": "Como imágenes, las páginas pesan más que ahora. Se descargará el original sin cambios."
+  }
+}

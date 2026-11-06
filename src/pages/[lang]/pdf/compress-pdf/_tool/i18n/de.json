@@ -1,0 +1,26 @@
+{
+  "title": "PDF-Komprimierung: PDF verkleinern",
+  "description": "PDF verkleinern für E-Mail, Behördenportale und Formulare mit Größenlimit: Bilder und Scans werden mit geringerer Auflösung neu gespeichert, Text bleibt Text. Ohne Upload auf einen Server.",
+  "ui": {
+    "mode": "Methode",
+    "modes": {
+      "images": "Bilder komprimieren",
+      "scan": "Als Scan"
+    },
+    "imagesHint": "Fotos und Scans im PDF werden verkleinert und als JPG neu gespeichert. Text, Links und Lesezeichen bleiben unverändert.",
+    "scanHint": "Jede Seite wird zu einem Bild. Das verkleinert am stärksten, aber der Text lässt sich danach nicht mehr markieren oder durchsuchen – geeignet für Scans.",
+    "level": {
+      "label": "Komprimierungsstufe",
+      "low": "Schwach – {dpi} dpi, fast ohne Qualitätsverlust",
+      "medium": "Mittel – {dpi} dpi, empfohlen",
+      "high": "Stark – {dpi} dpi, kleinste Datei"
+    },
+    "compress": "PDF komprimieren",
+    "progressImage": "Bild {n} von {total}…",
+    "progressPage": "Seite {n} von {total}…",
+    "images": "Neu gespeicherte Bilder: {changed} von {total}.",
+    "noImages": "Die Datei enthält keine Bilder, die sich neu speichern lassen: Sie wurde nur durch Aufräumen interner Daten verkleinert.",
+    "notSmaller": "Die Datei ließ sich nicht verkleinern: Sie ist bereits gut komprimiert. Heruntergeladen wird die unveränderte Originaldatei. Versuchen Sie die Methode „Als Scan“ oder die starke Stufe.",
+    "notSmallerScan": "Als Bilder wären die Seiten größer als jetzt. Heruntergeladen wird die unveränderte Originaldatei."
+  }
+}

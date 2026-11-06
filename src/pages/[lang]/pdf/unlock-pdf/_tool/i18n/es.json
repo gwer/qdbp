@@ -1,0 +1,12 @@
+{
+  "title": "Desbloqueo de PDF: quitar la contraseña",
+  "description": "Quita la contraseña de un PDF que conoces y elimina el bloqueo de impresión, copia y cambios. El archivo guardado se abrirá sin contraseña. Todo en el navegador, sin subir nada.",
+  "ui": {
+    "kind": {
+      "password": "Contraseña correcta. Puedes guardar una copia del archivo que se abrirá sin contraseña.",
+      "restricted": "El archivo se abre sin contraseña, pero tiene restricciones: por ejemplo, no permite imprimir ni copiar texto. Guarda una copia sin ellas.",
+      "none": "Este archivo no está protegido: no tiene contraseña ni restricciones. No hay nada que quitar."
+    },
+    "unlock": "Quitar protección"
+  }
+}

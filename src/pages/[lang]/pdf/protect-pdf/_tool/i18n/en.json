@@ -1,0 +1,17 @@
+{
+  "title": "PDF password protector: encrypt a PDF",
+  "description": "Add a password to a PDF so it won't open without it. AES-256 encryption, plus optional restrictions on printing, copying and editing. The file never leaves your device.",
+  "ui": {
+    "password": "Password to open",
+    "show": "Show password",
+    "restrict": "Restrictions for people who open the file (optional)",
+    "print": "Prevent printing",
+    "copy": "Prevent copying text",
+    "edit": "Prevent editing",
+    "owner": "Owner password — removes the restrictions",
+    "ownerHint": "Must differ from the password to open, otherwise the restrictions won't work.",
+    "ownerSame": "The owner password is the same as the password to open, so the restrictions won't work. Choose a different one.",
+    "remember": "Write the password down: neither we nor anyone else can recover it.",
+    "protect": "Protect PDF"
+  }
+}

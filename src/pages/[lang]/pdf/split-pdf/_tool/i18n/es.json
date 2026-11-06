@@ -1,0 +1,26 @@
+{
+  "title": "Divisor de PDF: por páginas, por rangos o solo las elegidas",
+  "description": "Divide un PDF en partes: cada página en un archivo, por rangos como 1-3, 4-10 o solo las páginas que marques. En el navegador, sin subir nada a un servidor.",
+  "ui": {
+    "mode": "Cómo dividir",
+    "modes": {
+      "every": "Cada N páginas",
+      "ranges": "Por rangos",
+      "select": "Elegir páginas"
+    },
+    "every": "Páginas por archivo",
+    "ranges": "Rangos: cada uno será un archivo",
+    "badRanges": "Indica páginas del 1 al {max} separadas por comas, por ejemplo 1-3, 4-6",
+    "output": "Resultado",
+    "oneFile": "En un solo archivo",
+    "eachFile": "Cada página por separado",
+    "selectHint": "Marca las páginas con un clic.",
+    "selectAll": "Seleccionar todas",
+    "selectNone": "Quitar selección",
+    "pagesShort": "pág.",
+    "split": {
+      "one": "Dividir ({count} archivo)",
+      "other": "Dividir ({count} archivos)"
+    }
+  }
+}

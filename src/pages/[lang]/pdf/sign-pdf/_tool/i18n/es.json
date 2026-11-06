@@ -1,0 +1,41 @@
+{
+  "title": "Firma de PDF: firmar un PDF online",
+  "description": "Firma un PDF sin impresora ni escáner: dibuja la firma con el dedo o el ratón, escribe tu nombre o sube una foto de tu firma, y colócala junto con la fecha donde haga falta. Sin subir nada a un servidor.",
+  "ui": {
+    "how": "Firma",
+    "modes": {
+      "draw": "Dibujar",
+      "type": "Escribir",
+      "upload": "Subir foto"
+    },
+    "color": "Color",
+    "black": "Negro",
+    "blue": "Azul",
+    "drawHere": "Firma aquí con el dedo o el ratón",
+    "clear": "Borrar",
+    "name": "Nombre y apellidos",
+    "style": "Estilo",
+    "sample": "María García",
+    "clean": "Quitar el fondo blanco",
+    "uploadHint": "Firma en una hoja blanca y hazle una foto con buena luz. El fondo se volverá transparente y los bordes sobrantes se recortarán.",
+    "emptySig": "La firma está vacía: dibuja o escribe algo.",
+    "badImage": "No se pudo leer la imagen. Prueba con JPG o PNG.",
+    "useSig": "Listo",
+    "yourSig": "Tu firma",
+    "place": "Colocar firma",
+    "addDate": "Colocar fecha {date}",
+    "newSig": "Otra firma",
+    "prev": "Página anterior",
+    "next": "Página siguiente",
+    "pageOf": "Página {n} de {total}",
+    "dragHint": "Arrastra la firma a su sitio; el punto azul de la esquina cambia el tamaño y la cruz la elimina.",
+    "save": {
+      "one": "Guardar PDF ({count} firma)",
+      "other": "Guardar PDF ({count} firmas)"
+    },
+    "placed": {
+      "one": "{count} firma o fecha",
+      "other": "{count} firmas o fechas"
+    }
+  }
+}

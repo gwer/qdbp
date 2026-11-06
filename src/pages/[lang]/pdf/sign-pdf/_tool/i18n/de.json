@@ -1,0 +1,41 @@
+{
+  "title": "PDF-Unterschrift: PDF ohne Drucker und Scanner unterschreiben",
+  "description": "Unterschrift mit dem Finger oder der Maus zeichnen, den Namen tippen oder ein Foto der Unterschrift hochladen und sie samt Datum an die richtige Stelle im PDF setzen. Ohne Upload auf einen Server.",
+  "ui": {
+    "how": "Unterschrift",
+    "modes": {
+      "draw": "Zeichnen",
+      "type": "Tippen",
+      "upload": "Foto hochladen"
+    },
+    "color": "Farbe",
+    "black": "Schwarz",
+    "blue": "Blau",
+    "drawHere": "Hier mit Finger oder Maus unterschreiben",
+    "clear": "Löschen",
+    "name": "Vor- und Nachname",
+    "style": "Stil",
+    "sample": "Max Mustermann",
+    "clean": "Weißen Hintergrund entfernen",
+    "uploadHint": "Unterschreiben Sie auf einem weißen Blatt und fotografieren Sie es bei gutem Licht. Der Hintergrund wird transparent, überflüssige Ränder werden abgeschnitten.",
+    "emptySig": "Die Unterschrift ist leer – zeichnen oder schreiben Sie etwas.",
+    "badImage": "Das Bild konnte nicht gelesen werden. Versuchen Sie JPG oder PNG.",
+    "useSig": "Fertig",
+    "yourSig": "Ihre Unterschrift",
+    "place": "Unterschrift einfügen",
+    "addDate": "Datum {date} einfügen",
+    "newSig": "Andere Unterschrift",
+    "prev": "Vorherige Seite",
+    "next": "Nächste Seite",
+    "pageOf": "Seite {n} von {total}",
+    "dragHint": "Ziehen Sie die Unterschrift an die gewünschte Stelle; der blaue Punkt in der Ecke ändert die Größe, das Kreuz entfernt sie.",
+    "save": {
+      "one": "PDF speichern ({count} Unterschrift)",
+      "other": "PDF speichern ({count} Unterschriften)"
+    },
+    "placed": {
+      "one": "{count} Unterschrift oder Datum",
+      "other": "{count} Unterschriften oder Datumsangaben"
+    }
+  }
+}

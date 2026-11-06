@@ -1,0 +1,15 @@
+{
+  "title": "PDF-Seitendrehung: ganze Datei oder einzelne Seiten drehen",
+  "description": "Auf dem Kopf stehende oder seitlich liegende PDF-Seiten um 90° oder 180° drehen – das ganze Dokument auf einmal oder Seite für Seite – und speichern. Ohne Upload.",
+  "ui": {
+    "hint": "Drehen Sie Seiten mit den Schaltflächen unter den Vorschaubildern oder das ganze Dokument auf einmal.",
+    "save": {
+      "one": "PDF speichern ({count} Seite)",
+      "other": "PDF speichern ({count} Seiten)"
+    },
+    "allLeft": "Alle nach links",
+    "allRight": "Alle nach rechts",
+    "reset": "Änderungen verwerfen",
+    "noPages": "Alle Seiten sind gelöscht – behalten Sie mindestens eine."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "PDF signer: sign a PDF online",
+  "description": "Sign a PDF without a printer or scanner: draw your signature with a finger or mouse, type your name or upload a photo of your signature, then place it and the date where needed. Nothing is uploaded.",
+  "ui": {
+    "how": "Signature",
+    "modes": {
+      "draw": "Draw",
+      "type": "Type",
+      "upload": "Upload photo"
+    },
+    "color": "Color",
+    "black": "Black",
+    "blue": "Blue",
+    "drawHere": "Sign here with your finger or mouse",
+    "clear": "Clear",
+    "name": "Full name",
+    "style": "Style",
+    "sample": "John Smith",
+    "clean": "Remove white background",
+    "uploadHint": "Sign on a sheet of white paper and take a photo in good light. The background becomes transparent and the extra margins are cropped.",
+    "emptySig": "The signature is empty — draw or type something.",
+    "badImage": "Couldn't read the image. Try JPG or PNG.",
+    "useSig": "Done",
+    "yourSig": "Your signature",
+    "place": "Add signature",
+    "addDate": "Add date {date}",
+    "newSig": "New signature",
+    "prev": "Previous page",
+    "next": "Next page",
+    "pageOf": "Page {n} of {total}",
+    "dragHint": "Drag the signature into place. The blue dot in the corner resizes it, the cross removes it.",
+    "save": {
+      "one": "Save PDF ({count} signature)",
+      "other": "Save PDF ({count} signatures)"
+    },
+    "placed": {
+      "one": "{count} signature or date",
+      "other": "{count} signatures or dates"
+    }
+  }
+}

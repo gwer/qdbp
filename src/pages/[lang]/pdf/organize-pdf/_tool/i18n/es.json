@@ -1,0 +1,15 @@
+{
+  "title": "Organizador de páginas PDF: eliminar, reordenar y girar",
+  "description": "Elimina las páginas que sobran de un PDF, cambia su orden arrastrando y gira las que están del revés. Miniaturas de todas las páginas, en el navegador y sin subir el archivo.",
+  "ui": {
+    "hint": "Arrastra las páginas para cambiar el orden. Los botones bajo cada miniatura giran y eliminan la página; la eliminación se puede deshacer.",
+    "save": {
+      "one": "Guardar PDF ({count} página)",
+      "other": "Guardar PDF ({count} páginas)"
+    },
+    "allLeft": "Todas a la izquierda",
+    "allRight": "Todas a la derecha",
+    "reset": "Deshacer cambios",
+    "noPages": "Has eliminado todas las páginas: deja al menos una."
+  }
+}

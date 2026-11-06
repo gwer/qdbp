@@ -9,8 +9,8 @@
     "tools": {
       "title": "tooloot — herramientas online en tu navegador",
       "tagline": "Herramientas para archivos, texto y código en tu navegador",
-      "description": "Herramientas online gratuitas: comprimir y convertir imágenes, contador de palabras, generador de contraseñas, formateador JSON, codificadores y más. Tus archivos no salen de tu dispositivo.",
-      "intro": "Herramientas gratuitas para imágenes, texto, contraseñas, codificación y código. Sin registro ni subidas: todo funciona en tu navegador y tus fotos y archivos no salen de tu dispositivo."
+      "description": "Herramientas online gratuitas: unir, comprimir y convertir PDF, comprimir y convertir imágenes, contador de palabras, generador de contraseñas, formateador JSON y más. Tus archivos no salen de tu dispositivo.",
+      "intro": "Herramientas gratuitas para PDF, imágenes, texto, contraseñas, codificación y código. Sin registro ni subidas: todo funciona en tu navegador y tus documentos y fotos no salen de tu dispositivo."
     }
   },
   "nav": {

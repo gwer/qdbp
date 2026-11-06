@@ -1,0 +1,24 @@
+{
+  "title": "PDF watermark tool: add text over pages",
+  "description": "Add a watermark to a PDF — “Copy”, “Sample”, “Confidential” or your name: diagonal or straight, once or across the whole page, with the opacity you need. Nothing is uploaded.",
+  "ui": {
+    "default": "COPY",
+    "text": "Watermark text",
+    "size": "Font size",
+    "color": "Color",
+    "opacity": "Opacity",
+    "pages": "Pages",
+    "all": "all",
+    "badPages": "Enter pages from 1 to {max}, e.g. 1-3, 5",
+    "angle": "Angle",
+    "diagonal": "Diagonal",
+    "horizontal": "Straight",
+    "layout": "Layout",
+    "center": "Once, centered",
+    "tile": "Across the page",
+    "apply": {
+      "one": "Add to {count} page",
+      "other": "Add to {count} pages"
+    }
+  }
+}

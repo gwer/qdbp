@@ -1,0 +1,15 @@
+{
+  "title": "PDF page organizer: delete, reorder and rotate pages",
+  "description": "Delete unwanted pages from a PDF, drag pages into a new order and rotate upside-down ones. Thumbnails of every page, works in your browser without uploading.",
+  "ui": {
+    "hint": "Drag pages to change the order. The buttons under each thumbnail rotate and delete the page; a deleted page can be restored.",
+    "save": {
+      "one": "Save PDF ({count} page)",
+      "other": "Save PDF ({count} pages)"
+    },
+    "allLeft": "All left",
+    "allRight": "All right",
+    "reset": "Undo changes",
+    "noPages": "All pages are deleted — keep at least one."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Assinatura de PDF: assinar documento online",
+  "description": "Assine um PDF sem impressora nem scanner: desenhe a assinatura com o dedo ou o mouse, digite o nome ou envie uma foto da assinatura e coloque-a com a data no lugar certo. Sem upload para servidor.",
+  "ui": {
+    "how": "Assinatura",
+    "modes": {
+      "draw": "Desenhar",
+      "type": "Digitar",
+      "upload": "Enviar foto"
+    },
+    "color": "Cor",
+    "black": "Preta",
+    "blue": "Azul",
+    "drawHere": "Assine aqui com o dedo ou o mouse",
+    "clear": "Apagar",
+    "name": "Nome e sobrenome",
+    "style": "Estilo",
+    "sample": "João Silva",
+    "clean": "Remover o fundo branco",
+    "uploadHint": "Assine numa folha branca e fotografe com boa luz. O fundo fica transparente e as sobras são cortadas.",
+    "emptySig": "A assinatura está vazia — desenhe ou escreva alguma coisa.",
+    "badImage": "Não foi possível ler a imagem. Tente JPG ou PNG.",
+    "useSig": "Pronto",
+    "yourSig": "Sua assinatura",
+    "place": "Colocar assinatura",
+    "addDate": "Colocar a data {date}",
+    "newSig": "Outra assinatura",
+    "prev": "Página anterior",
+    "next": "Próxima página",
+    "pageOf": "Página {n} de {total}",
+    "dragHint": "Arraste a assinatura para o lugar certo; o ponto azul no canto muda o tamanho e o X a remove.",
+    "save": {
+      "one": "Salvar PDF ({count} assinatura)",
+      "other": "Salvar PDF ({count} assinaturas)"
+    },
+    "placed": {
+      "one": "{count} assinatura ou data",
+      "other": "{count} assinaturas ou datas"
+    }
+  }
+}
