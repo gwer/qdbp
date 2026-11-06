@@ -47,10 +47,9 @@
     "saved": "Ersparnis",
     "noPrepayment": "Ohne Sondertilgungen",
     "term": "Laufzeit",
-    "asEntered": "Wie eingegeben",
     "allTo": {
-      "term": "Alle zur Laufzeitverkürzung",
-      "payment": "Alle zur Ratensenkung"
+      "term": "Laufzeit verkürzen",
+      "payment": "Rate senken"
     },
     "paymentNote": "Rate ist die letzte volle Monatsrate im Plan: bei Ratensenkung liegt sie unter der ursprünglichen.",
     "year": "Jahr",

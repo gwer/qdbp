@@ -2,7 +2,7 @@
 
 Informe o valor financiado, a taxa de juros, o prazo total em meses e o sistema de amortização. Depois adicione as amortizações extraordinárias: após qual parcela, o valor, com que frequência (uma vez, todo mês, todo trimestre ou todo ano, até o fim) e se reduzem o prazo ou a parcela. Pode adicionar quantas quiser: por exemplo, R$ 40.000 uma vez após a parcela 24 e R$ 500 todo mês a partir da parcela 36.
 
-Você vê a economia de juros e quanto antes o financiamento termina, a comparação do seu plano com «tudo para reduzir o prazo» e «tudo para reduzir a parcela», um gráfico do saldo devedor com e sem amortizações e a tabela completa. Funciona para a tabela Price e para o SAC. Os valores são arredondados aos centavos a cada mês, como na planilha do banco.
+Você vê a economia de juros e quanto antes o financiamento termina, a comparação entre usar todas as amortizações para reduzir o prazo ou a parcela, um gráfico do saldo devedor com e sem amortizações e a tabela completa. Funciona para a tabela Price e para o SAC. Os valores são arredondados aos centavos a cada mês, como na planilha do banco.
 
 ## O que compensa mais: reduzir prazo ou parcela?
 

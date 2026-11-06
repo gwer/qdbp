@@ -2,7 +2,7 @@
 
 Geben Sie Darlehensbetrag, Sollzins, die gesamte Laufzeit in Monaten und die Tilgungsart ein. Darunter fügen Sie Sondertilgungen hinzu: nach welcher Rate, Betrag, wie oft (einmalig, monatlich, vierteljährlich oder jährlich – bis zum Ende) und ob sie die Laufzeit verkürzen oder die Rate senken. Beliebig viele sind möglich, zum Beispiel einmalig 10.000 € nach Rate 36 und jährlich 5.000 € ab Rate 48 (viele Verträge erlauben 5 % pro Jahr).
 
-Sie sehen die Zinsersparnis und um wie viel früher das Darlehen abbezahlt ist, den Vergleich Ihres Plans mit „alles zur Laufzeitverkürzung“ und „alles zur Ratensenkung“, ein Diagramm der Restschuld mit und ohne Sondertilgungen und den vollständigen Tilgungsplan. Gerechnet wird für Annuitätendarlehen und Darlehen mit fallender Rate. Beträge werden jeden Monat auf den Cent gerundet, wie im Tilgungsplan der Bank.
+Sie sehen die Zinsersparnis und um wie viel früher das Darlehen abbezahlt ist, den Vergleich, ob alle Sondertilgungen die Laufzeit verkürzen oder die Rate senken, ein Diagramm der Restschuld mit und ohne Sondertilgungen und den vollständigen Tilgungsplan. Gerechnet wird für Annuitätendarlehen und Darlehen mit fallender Rate. Beträge werden jeden Monat auf den Cent gerundet, wie im Tilgungsplan der Bank.
 
 ## Was lohnt sich mehr: kürzere Laufzeit oder niedrigere Rate?
 

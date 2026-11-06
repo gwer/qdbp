@@ -47,10 +47,9 @@
     "saved": "Interest saved",
     "noPrepayment": "No extra payments",
     "term": "Term",
-    "asEntered": "As entered",
     "allTo": {
-      "term": "All to a shorter term",
-      "payment": "All to a lower payment"
+      "term": "Shorter term",
+      "payment": "Lower payment"
     },
     "paymentNote": "Payment is the last full monthly payment on the schedule: with a lower payment it is below the original.",
     "year": "Year",

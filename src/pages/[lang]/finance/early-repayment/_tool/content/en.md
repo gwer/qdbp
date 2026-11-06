@@ -2,7 +2,7 @@
 
 Enter the loan amount, interest rate, full term in months and the repayment type. Then add your extra payments: after which payment, the amount, how often (one time, monthly, quarterly or yearly — until the loan ends) and whether it should shorten the term or lower the payment. Add as many as you like: for example, a one-time $20,000 after payment 60 plus $200 every month after payment 72.
 
-You'll see the interest saved and how much sooner the loan is paid off, a comparison of your plan with "everything to a shorter term" and "everything to a lower payment", a chart of the balance with and without extra payments, and the full schedule. Works for fixed payments and equal-principal loans. Amounts are rounded to the cent each month, as on a lender's amortization schedule.
+You'll see the interest saved and how much sooner the loan is paid off, a comparison of putting every extra payment toward a shorter term or a lower payment, a chart of the balance with and without extra payments, and the full schedule. Works for fixed payments and equal-principal loans. Amounts are rounded to the cent each month, as on a lender's amortization schedule.
 
 ## Shorter term or lower payment?
 

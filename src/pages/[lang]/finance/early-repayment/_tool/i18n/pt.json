@@ -47,10 +47,9 @@
     "saved": "Economia",
     "noPrepayment": "Sem amortizações extras",
     "term": "Prazo",
-    "asEntered": "Como informado",
     "allTo": {
-      "term": "Tudo para reduzir o prazo",
-      "payment": "Tudo para reduzir a parcela"
+      "term": "Reduzir o prazo",
+      "payment": "Reduzir a parcela"
     },
     "paymentNote": "Parcela é a última parcela cheia da tabela: ao reduzir a parcela, ela fica abaixo da original.",
     "year": "Ano",

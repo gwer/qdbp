@@ -47,10 +47,9 @@
     "saved": "Ahorro",
     "noPrepayment": "Sin amortizaciones anticipadas",
     "term": "Plazo",
-    "asEntered": "Tal como se indicó",
     "allTo": {
-      "term": "Todo a reducir plazo",
-      "payment": "Todo a reducir cuota"
+      "term": "Reducir plazo",
+      "payment": "Reducir cuota"
     },
     "paymentNote": "La cuota es la última cuota completa del cuadro: si se reduce la cuota, es menor que la inicial.",
     "year": "Año",
