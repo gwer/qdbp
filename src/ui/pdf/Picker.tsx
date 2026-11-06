@@ -3,7 +3,7 @@ import type { Lang } from '@/i18n/config';
 import type { T } from '@/i18n/t';
 import { formatBytes } from '@/ui/files/bytes';
 import { DropZone } from '@/ui/files/DropZone';
-import { preloadPdfLib } from './pdflib';
+import { preloadPdfLib, whenIdle } from './pdflib';
 import { loadPdfJs } from './pdfjs';
 import { closeSource, openSource, type OpenResult, type PdfSource } from './source';
 
@@ -50,10 +50,10 @@ export function FileBar({ t, lang, source, onClose }: { t: T; lang: Lang; source
   );
 }
 
-/** Подготовка библиотек заранее: pdf.js нужен сразу для миниатюр, pdf-lib — при сохранении. */
+/** Подготовка библиотек в фоне: pdf.js нужен для миниатюр сразу после выбора файла, pdf-lib — при сохранении. */
 export function usePreload(pdfjs = true) {
   useEffect(() => {
-    if (pdfjs) void loadPdfJs().catch(() => {});
+    if (pdfjs) whenIdle(loadPdfJs);
     preloadPdfLib();
   }, []);
 }

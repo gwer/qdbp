@@ -15,13 +15,16 @@ export function loadPdfLib(): Promise<typeof PdfLib> {
   return lib;
 }
 
-/** Начать загрузку заранее, когда браузер свободен (если не включена экономия трафика). */
-export function preloadPdfLib() {
+/** Выполнить, когда браузер свободен, — если не включена экономия трафика (тогда загрузка будет при первом файле). */
+export function whenIdle(load: () => Promise<unknown>) {
   const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
   if (conn?.saveData) return;
   const w = window as Window & { requestIdleCallback?: (cb: () => void) => number };
-  (w.requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 1500)))(() => void loadPdfLib().catch(() => {}));
+  (w.requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 1500)))(() => void load().catch(() => {}));
 }
+
+/** Начать загрузку pdf-lib заранее. */
+export const preloadPdfLib = () => whenIdle(loadPdfLib);
 
 /** Файл открывается только с паролем (password: null — пароль не передавали). */
 export class NeedsPasswordError extends Error {
