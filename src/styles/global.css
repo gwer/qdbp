@@ -264,6 +264,22 @@ h1 .icon {
   gap: 14px;
 }
 
+/*
+ * Поля в ряду выровнены по стыку подписи и поля: каждое поле занимает три строки сетки
+ * (подпись, поле, ошибка) через subgrid, подпись прижата к низу своей строки — если она
+ * переносится на две строки, соседние подписи опускаются, а не поле сдвигается.
+ */
+.calc-inputs > .field:not(.field-wide) {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+}
+
+.calc-inputs > .field:not(.field-wide) > label {
+  align-self: end;
+}
+
 /* Подписи вариантов длинные — список всегда на всю ширину. */
 .calc-inputs > .field:has(> select) {
   grid-column: 1 / -1;
