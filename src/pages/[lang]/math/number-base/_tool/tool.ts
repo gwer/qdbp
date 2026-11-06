@@ -4,7 +4,7 @@ import { NumberBase } from './NumberBase';
 
 export const def = defineTool({
   order: 80,
-  related: ['roman-numerals', 'random-number'],
+  related: ['roman-numerals'],
   component: NumberBase,
 });
 

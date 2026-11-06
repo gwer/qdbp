@@ -17,4 +17,4 @@ Elige la versión y la cantidad: los UUID aparecen al instante. Puedes pasarlos 
 
 **¿En qué se diferencian UUID y GUID?** En nada: GUID es el nombre que usa Microsoft para el mismo formato.
 
-**¿Se puede saber cuándo se creó un UUID v7?** Sí: las primeras 12 cifras hexadecimales son la hora en milisegundos desde el 1 de enero de 1970. Puedes convertirla con el [conversor de Unix timestamp](/es/dates/unix-timestamp/) en modo milisegundos.
+**¿Se puede saber cuándo se creó un UUID v7?** Sí: las primeras 12 cifras hexadecimales son la hora en milisegundos desde el 1 de enero de 1970. Puedes convertirla con el [conversor de Unix timestamp](/es/dev/unix-timestamp/) en modo milisegundos.

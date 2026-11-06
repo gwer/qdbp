@@ -1,7 +1,17 @@
 {
   "site": {
-    "tagline": "Rechner und Tools direkt im Browser",
-    "description": "Kostenlose Online-Rechner und Tools: Finanzen, Datum, Prozente, Renovierung und Text. Alle Berechnungen laufen in Ihrem Browser."
+    "calc": {
+      "title": "qdbp — Online-Rechner",
+      "tagline": "Rechner direkt im Browser",
+      "description": "Kostenlose Online-Rechner: Finanzen, Datum, Prozente, Renovierung, Gesundheit und Küche. Alle Berechnungen laufen in Ihrem Browser.",
+      "intro": "Kostenlose Rechner für Kredite und Baufinanzierung, Datum, Prozente, Renovierung, Gesundheit und Küche. Ohne Anmeldung: Alles wird direkt in Ihrem Browser berechnet."
+    },
+    "tools": {
+      "title": "tooloot — Online-Tools im Browser",
+      "tagline": "Tools für Dateien, Text und Code direkt im Browser",
+      "description": "Kostenlose Online-Tools: Bilder komprimieren und umwandeln, Wörter zählen, Passwörter generieren, JSON formatieren, Kodierer und mehr. Ihre Dateien verlassen Ihr Gerät nicht.",
+      "intro": "Kostenlose Tools für Bilder, Text, Passwörter, Kodierung und Code. Ohne Anmeldung und ohne Upload: Alles läuft direkt in Ihrem Browser, Fotos und Dateien verlassen Ihr Gerät nicht."
+    }
   },
   "nav": {
     "breadcrumbs": "Navigationspfad",
@@ -9,9 +19,7 @@
     "language": "Sprache"
   },
   "home": {
-    "title": "qdbp — Online-Rechner und Tools",
     "allCategories": "Alle Bereiche",
-    "intro": "Kostenlose Rechner und Tools für Geld, Datum, Renovierung, Gesundheit, Küche und Dateien. Ohne Anmeldung: Alles läuft direkt in Ihrem Browser, Fotos und Dateien verlassen Ihr Gerät nicht.",
     "popular": "Beliebt"
   },
   "category": {

@@ -25,7 +25,7 @@ export function toTimestamp(date: string, time: number, zone: 'local' | 'utc') {
 
 export const def = defineCalculator({
   order: 70,
-  related: ['days-between', 'add-to-date'],
+  related: ['jwt-decoder', 'uuid'],
   inputs: {
     direction: { type: 'select', options: ['toDate', 'toTs'], default: 'toDate' },
     ts: { type: 'integer', default: 1767225600, defaultBy: { unit: { s: 1767225600, ms: 1767225600000 } }, showIf: { direction: 'toDate' } },

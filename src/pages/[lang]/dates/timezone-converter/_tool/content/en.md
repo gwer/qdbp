@@ -22,4 +22,4 @@ On the day clocks change, some times don't exist (in spring the clock jumps forw
 
 **Is GMT the same as UTC?** For everyday purposes, yes. London uses GMT (UTC+0) in winter and BST (UTC+1) in summer.
 
-**How do I convert a Unix timestamp?** Use the [Unix timestamp converter](/en/dates/unix-timestamp/). To add hours to a time, use the [time calculator](/en/dates/time-calculator/).
+**How do I convert a Unix timestamp?** Use the [Unix timestamp converter](https://tooloot.net/en/dev/unix-timestamp/). To add hours to a time, use the [time calculator](/en/dates/time-calculator/).

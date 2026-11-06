@@ -1,0 +1,11 @@
+# Корень: 302, пока не решено, что будет в корне (см. docs/03-tech.md, 3.1)
+/ /en/ 302
+
+# Утилиты переехали на tooloot.net (docs/04-catalog.md, «Два сайта»). Конкретные правила — выше общих.
+/:lang/dates/unix-timestamp/ https://tooloot.net/:lang/dev/unix-timestamp/ 301
+/:lang/math/random-number/ https://tooloot.net/:lang/random/random-number/ 301
+/:lang/images/* https://tooloot.net/:lang/images/:splat 301
+/:lang/dev/* https://tooloot.net/:lang/dev/:splat 301
+/:lang/security/* https://tooloot.net/:lang/security/:splat 301
+/:lang/text/* https://tooloot.net/:lang/text/:splat 301
+/:lang/random/* https://tooloot.net/:lang/random/:splat 301

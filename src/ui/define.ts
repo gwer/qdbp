@@ -3,6 +3,7 @@ import type { ClockMode, Lang, UnitSystem } from '@/i18n/config';
 import type { T } from '@/i18n/t';
 import type { NumberKind } from '@/lib/format';
 import type { UnitId } from '@/lib/units';
+import type { SiteId } from '@/site';
 
 /** Значения по умолчанию для отдельных языков (ставка НДС страны, привычный формат, правдоподобная сумма). */
 type ByLang<V> = { byLang?: Partial<Record<Lang, V>> };
@@ -155,6 +156,8 @@ export const defineCalculator = <const I extends Record<string, InputSpec>, R ex
 export const defineTool = (def: Omit<CustomDef, 'kind'>): CustomDef => ({ kind: 'custom', ...def });
 
 export interface CategoryDef {
+  /** На каком сайте раздел: calc — qdbp.net, tools — tooloot.net (src/sites.json). */
+  site: SiteId;
   /** Порядок в навигации, меньше — выше. */
   order: number;
 }

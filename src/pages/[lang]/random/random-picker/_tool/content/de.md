@@ -14,4 +14,4 @@ Gelost wird mit dem kryptografisch sicheren Zufallsgenerator Ihres Browsers (`cr
 
 **Was, wenn ein Name doppelt vorkommt?** Jede Zeile zählt als eigenes Los, ein doppelter Name hat also bessere Chancen. Duplikate entfernen Sie vorher mit dem [Zeilen-Werkzeug](/de/text/line-tools/).
 
-Zum Einteilen in Gruppen gibt es den [Teamgenerator](/de/random/team-generator/), für eine Zufallszahl den [Zufallszahlengenerator](/de/math/random-number/).
+Zum Einteilen in Gruppen gibt es den [Teamgenerator](/de/random/team-generator/), für eine Zufallszahl den [Zufallszahlengenerator](/de/random/random-number/).

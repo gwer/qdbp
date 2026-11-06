@@ -4,7 +4,7 @@ import { Random } from './Random';
 
 export const def = defineTool({
   order: 70,
-  related: ['average', 'number-base'],
+  related: ['dice-roller', 'random-picker'],
   component: Random,
 });
 

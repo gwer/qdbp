@@ -1,7 +1,17 @@
 {
   "site": {
-    "tagline": "Calculators and tools right in your browser",
-    "description": "Free online calculators and tools for finance, dates, percentages, home improvement and text. Everything runs in your browser."
+    "calc": {
+      "title": "qdbp — online calculators",
+      "tagline": "Calculators right in your browser",
+      "description": "Free online calculators for money, dates, percentages, home improvement, health and cooking. Everything is calculated in your browser.",
+      "intro": "Free calculators for loans and mortgages, dates, percentages, home projects, health and cooking. No sign-up: everything is calculated right in your browser."
+    },
+    "tools": {
+      "title": "tooloot — online tools in your browser",
+      "tagline": "Tools for files, text and code right in your browser",
+      "description": "Free online tools: compress and convert images, word counter, password generator, JSON formatter, encoders and more. Your files never leave your device.",
+      "intro": "Free tools for images, text, passwords, encoding and code. No sign-up and no uploads: everything runs right in your browser, and your photos and files never leave your device."
+    }
   },
   "nav": {
     "breadcrumbs": "Breadcrumb",
@@ -9,9 +19,7 @@
     "language": "Language"
   },
   "home": {
-    "title": "qdbp — online calculators and tools",
     "allCategories": "All categories",
-    "intro": "Free calculators and tools for money, dates, home projects, health, cooking and files. No sign-up: everything runs right in your browser, and your photos and files never leave your device.",
     "popular": "Popular"
   },
   "category": {

@@ -14,4 +14,4 @@ O resultado vem do gerador de números aleatórios criptograficamente seguro do 
 
 **Uma jogada influencia a próxima?** Não, cada jogada é independente. Depois de cinco caras seguidas, a chance de coroa continua sendo 50%.
 
-Para qualquer faixa de números, use o [gerador de números aleatórios](/pt/math/random-number/).
+Para qualquer faixa de números, use o [gerador de números aleatórios](/pt/random/random-number/).

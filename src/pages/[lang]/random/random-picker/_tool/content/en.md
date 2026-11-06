@@ -14,4 +14,4 @@ The pick uses your browser's cryptographically secure random number generator (`
 
 **What if a name appears twice?** Each line counts as a separate entry, so a repeated name has better odds. Remove duplicates first with the [line tools](/en/text/line-tools/).
 
-To split people into groups, use the [team generator](/en/random/team-generator/); for a random number, the [random number generator](/en/math/random-number/).
+To split people into groups, use the [team generator](/en/random/team-generator/); for a random number, the [random number generator](/en/random/random-number/).

@@ -1,7 +1,17 @@
 {
   "site": {
-    "tagline": "Calculadoras y herramientas en tu navegador",
-    "description": "Calculadoras y herramientas online gratuitas: finanzas, fechas, porcentajes, reformas y texto. Todo se calcula en tu navegador."
+    "calc": {
+      "title": "qdbp — calculadoras online",
+      "tagline": "Calculadoras en tu navegador",
+      "description": "Calculadoras online gratuitas: finanzas, fechas, porcentajes, reformas, salud y cocina. Todo se calcula en tu navegador.",
+      "intro": "Calculadoras gratuitas para préstamos e hipotecas, fechas, porcentajes, reformas, salud y cocina. Sin registro: todo se calcula en tu navegador."
+    },
+    "tools": {
+      "title": "tooloot — herramientas online en tu navegador",
+      "tagline": "Herramientas para archivos, texto y código en tu navegador",
+      "description": "Herramientas online gratuitas: comprimir y convertir imágenes, contador de palabras, generador de contraseñas, formateador JSON, codificadores y más. Tus archivos no salen de tu dispositivo.",
+      "intro": "Herramientas gratuitas para imágenes, texto, contraseñas, codificación y código. Sin registro ni subidas: todo funciona en tu navegador y tus fotos y archivos no salen de tu dispositivo."
+    }
   },
   "nav": {
     "breadcrumbs": "Ruta de navegación",
@@ -9,9 +19,7 @@
     "language": "Idioma"
   },
   "home": {
-    "title": "qdbp — calculadoras y herramientas online",
     "allCategories": "Todas las secciones",
-    "intro": "Calculadoras y herramientas gratuitas para dinero, fechas, reformas, salud, cocina y archivos. Sin registro: todo se calcula en tu navegador y tus fotos y archivos no salen de tu dispositivo.",
     "popular": "Populares"
   },
   "category": {

@@ -14,4 +14,4 @@ O sorteio usa o gerador de números aleatórios criptograficamente seguro do nav
 
 **E se um nome aparecer duas vezes?** Cada linha conta como uma participação, então o nome repetido tem mais chance. Tire as duplicadas antes com as [ferramentas de linhas](/pt/text/line-tools/).
 
-Para dividir pessoas em grupos, use o [gerador de times](/pt/random/team-generator/); para um número aleatório, o [gerador de números aleatórios](/pt/math/random-number/).
+Para dividir pessoas em grupos, use o [gerador de times](/pt/random/team-generator/); para um número aleatório, o [gerador de números aleatórios](/pt/random/random-number/).

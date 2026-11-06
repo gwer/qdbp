@@ -38,7 +38,7 @@
 | `iat` | когда выпущен |
 | `jti` | уникальный ID токена — чтобы его можно было отозвать |
 
-Время в `exp`, `nbf` и `iat` — Unix timestamp в секундах. Перевести любое такое число в дату можно [конвертером Unix timestamp](/ru/dates/unix-timestamp/).
+Время в `exp`, `nbf` и `iat` — Unix timestamp в секундах. Перевести любое такое число в дату можно [конвертером Unix timestamp](/ru/dev/unix-timestamp/).
 
 ## Частые ошибки
 

@@ -14,4 +14,4 @@ Results come from your browser's cryptographically secure random number generato
 
 **Does the last roll affect the next one?** No — every roll is independent. After five heads in a row, the chance of tails is still 50%.
 
-For any range of numbers, use the [random number generator](/en/math/random-number/).
+For any range of numbers, use the [random number generator](/en/random/random-number/).

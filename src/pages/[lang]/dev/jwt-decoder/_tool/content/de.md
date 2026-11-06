@@ -38,7 +38,7 @@ Der Header lautet `{"typ":"JWT","alg":"HS256"}`, die Payload `{"iss":"joe","exp"
 | `iat` | Ausstellungszeitpunkt |
 | `jti` | eindeutige Token-ID, damit es sich widerrufen lässt |
 
-`exp`, `nbf` und `iat` sind Unix-Timestamps in Sekunden. Jede solche Zahl wandelt der [Unix-Timestamp-Konverter](/de/dates/unix-timestamp/) in ein Datum um.
+`exp`, `nbf` und `iat` sind Unix-Timestamps in Sekunden. Jede solche Zahl wandelt der [Unix-Timestamp-Konverter](/de/dev/unix-timestamp/) in ein Datum um.
 
 ## Häufige Fehler
 

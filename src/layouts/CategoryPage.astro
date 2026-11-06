@@ -6,6 +6,7 @@ import { uiT } from '@/i18n/ui';
 import Base from '@/layouts/Base.astro';
 import { categoryName, categoryUrl, toolsIn, type CategoryPageProps } from '@/lib/catalog';
 import { breadcrumbLd } from '@/lib/seo';
+import { SITE_NAME } from '@/site';
 
 // Общая обвязка страницы категории. Своё содержимое категории можно передать в слот из её index.astro.
 type Props = CategoryPageProps;
@@ -22,7 +23,7 @@ const crumbs = [
 const alternates = cat.langs.map((l) => ({ lang: l, href: categoryUrl(cat, l) }));
 ---
 
-<Base wide lang={lang} title={`${name} — qdbp`} description={description} alternates={alternates} jsonLd={[breadcrumbLd(crumbs, Astro.site!)]}>
+<Base wide lang={lang} title={`${name} — ${SITE_NAME}`} description={description} alternates={alternates} jsonLd={[breadcrumbLd(crumbs, Astro.site!)]}>
   <Breadcrumbs items={crumbs} label={t('nav.breadcrumbs')} />
   <h1 class="with-icon"><Icon svg={cat.icon} />{name}</h1>
   <p class="lead">{description}</p>

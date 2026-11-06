@@ -7,6 +7,7 @@
 // Первый сегмент пути в glob — `*`, а не `[lang]`: квадратные скобки в glob — класс символов.
 import type { MarkdownInstance } from 'astro';
 import { SITE_LANGS, type Lang } from '@/i18n/config';
+import { SITE } from '@/site';
 import type { Dict } from '@/i18n/t';
 import { UI } from '@/i18n/ui';
 import type { CategoryDef, InputSpec, ToolDef } from '@/ui/define';
@@ -152,11 +153,25 @@ function build() {
   }
   categories.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
 
+  // Похожие инструменты — только со своего сайта: ссылка на другой сайт была бы внутренней ссылкой в никуда.
+  const siteOf = new Map(categories.map((c) => [c.id, c.def.site]));
+  for (const tool of tools) {
+    for (const rel of tool.def.related ?? []) {
+      const other = tools.find((t) => t.id === rel);
+      if (other && siteOf.get(other.category) !== siteOf.get(tool.category)) {
+        errors.push(`${tool.path}: related "${rel}" — инструмент другого сайта (${other.path})`);
+      }
+    }
+  }
+
   if (errors.length) throw new Error(`Ошибки в ${ROOT.slice(1)}:\n  - ${errors.join('\n  - ')}`);
   return { tools, categories };
 }
 
-export const { tools, categories } = build();
+// Проверяется весь каталог (оба сайта), наружу — только разделы собираемого сайта.
+const all = build();
+export const categories = all.categories.filter((c) => c.def.site === SITE);
+export const tools = all.tools.filter((t) => categories.some((c) => c.id === t.category));
 
 export const toolById = (id: string) => tools.find((t) => t.id === id);
 
@@ -178,8 +193,9 @@ export interface ToolPageProps {
 
 /** getStaticPaths для index.astro инструмента: по странице на каждый язык, где есть перевод. */
 export function toolPaths(def: ToolDef) {
+  if (!all.tools.some((t) => t.def === def)) throw new Error('toolPaths: инструмент не найден в каталоге');
   const tool = tools.find((t) => t.def === def);
-  if (!tool) throw new Error('toolPaths: инструмент не найден в каталоге');
+  if (!tool) return []; // инструмент другого сайта
   return tool.langs.map((lang) => ({
     params: { lang },
     props: { tool, lang, island: { lang, strings: { tool: tool.strings[lang]!, ui: UI[lang] } } } satisfies ToolPageProps,
@@ -193,7 +209,8 @@ export interface CategoryPageProps {
 
 /** getStaticPaths для index.astro категории: по странице на каждый язык, где в категории есть инструменты. */
 export function categoryPaths(def: CategoryDef) {
+  if (!all.categories.some((c) => c.def === def)) throw new Error('categoryPaths: категория не найдена в каталоге');
   const cat = categories.find((c) => c.def === def);
-  if (!cat) throw new Error('categoryPaths: категория не найдена в каталоге');
+  if (!cat) return []; // раздел другого сайта
   return cat.langs.map((lang) => ({ params: { lang }, props: { cat, lang } satisfies CategoryPageProps }));
 }

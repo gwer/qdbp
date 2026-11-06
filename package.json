@@ -8,13 +8,15 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "dev:tools": "SITE=tools astro dev",
     "build": "TZ=UTC astro build",
     "preview": "astro preview",
     "test": "vitest run",
     "typecheck": "astro check",
-    "postbuild:check": "node scripts/check-dist.mjs",
-    "check": "pnpm typecheck && pnpm test && pnpm build && pnpm postbuild:check",
-    "urls:update": "node scripts/check-dist.mjs --update-urls"
+    "check:calc": "SITE=calc pnpm build && node scripts/check-dist.mjs calc",
+    "check:tools": "SITE=tools pnpm build && node scripts/check-dist.mjs tools",
+    "check": "pnpm typecheck && pnpm test && pnpm check:calc && pnpm check:tools",
+    "urls:update": "node scripts/check-dist.mjs calc --update-urls && node scripts/check-dist.mjs tools --update-urls"
   },
   "dependencies": {
     "@astrojs/preact": "6.0.5",

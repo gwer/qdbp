@@ -4,7 +4,7 @@ import { Average } from './Average';
 
 export const def = defineTool({
   order: 60,
-  related: ['proportion', 'what-percent', 'random-number'],
+  related: ['proportion', 'what-percent'],
   component: Average,
 });
 

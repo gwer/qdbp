@@ -20,4 +20,4 @@ Am Tag der Umstellung gibt es Uhrzeiten, die nicht existieren (im Frühjahr wird
 
 **Was ist UTC?** Die koordinierte Weltzeit, Bezugspunkt aller Zeitzonen. Deutschland ist im Winter UTC+1 (MEZ) und im Sommer UTC+2 (MESZ).
 
-**Wie rechne ich einen Unix-Timestamp um?** Mit dem [Unix-Timestamp-Konverter](/de/dates/unix-timestamp/). Um Stunden zu einer Uhrzeit zu addieren, nutzen Sie den [Uhrzeitrechner](/de/dates/time-calculator/).
+**Wie rechne ich einen Unix-Timestamp um?** Mit dem [Unix-Timestamp-Konverter](https://tooloot.net/de/dev/unix-timestamp/). Um Stunden zu einer Uhrzeit zu addieren, nutzen Sie den [Uhrzeitrechner](/de/dates/time-calculator/).

@@ -22,4 +22,4 @@ El día del cambio hay horas que no existen (en primavera se adelanta el reloj) 
 
 **¿Por qué cambia la diferencia con Latinoamérica según la época del año?** Porque España cambia la hora y la mayoría de países latinoamericanos no.
 
-**¿Cómo convierto un Unix timestamp?** Con el [conversor de Unix timestamp](/es/dates/unix-timestamp/). Para sumar horas a una hora, usa la [calculadora de horas](/es/dates/time-calculator/).
+**¿Cómo convierto un Unix timestamp?** Con el [conversor de Unix timestamp](https://tooloot.net/es/dev/unix-timestamp/). Para sumar horas a una hora, usa la [calculadora de horas](/es/dates/time-calculator/).

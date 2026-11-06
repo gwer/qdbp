@@ -14,4 +14,4 @@ El resultado sale del generador de números aleatorios criptográficamente segur
 
 **¿Influye una tirada en la siguiente?** No, cada tirada es independiente. Tras cinco caras seguidas, la probabilidad de cruz sigue siendo del 50 %.
 
-Para cualquier rango de números, usa el [generador de números aleatorios](/es/math/random-number/).
+Para cualquier rango de números, usa el [generador de números aleatorios](/es/random/random-number/).

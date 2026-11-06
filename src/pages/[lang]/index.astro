@@ -5,6 +5,7 @@ import { SITE_LANGS, type Lang } from '@/i18n/config';
 import { uiT } from '@/i18n/ui';
 import Base from '@/layouts/Base.astro';
 import { categories, categoryName, categoryUrl, tools, toolsIn } from '@/lib/catalog';
+import { SITE } from '@/site';
 
 export function getStaticPaths() {
   return SITE_LANGS.map((lang) => ({ params: { lang } }));
@@ -14,23 +15,39 @@ const lang = Astro.params.lang as Lang;
 const t = uiT(lang);
 const cats = categories.filter((c) => c.langs.includes(lang));
 // Популярное — пока по нашей оценке спроса; заменить по данным Search Console.
-const POPULAR = [
-  'finance/mortgage',
-  'finance/loan-calculator',
-  'math/percent-of',
-  'finance/vat',
-  'dates/days-between',
-  'health/bmi',
-  'images/compress-image',
-  'kitchen/cups-to-grams',
-];
-const popular = POPULAR.map((path) => tools.find((tool) => tool.path === path)!).filter((tool) => tool.langs.includes(lang));
+const POPULAR = {
+  calc: [
+    'finance/mortgage',
+    'finance/loan-calculator',
+    'math/percent-of',
+    'finance/vat',
+    'dates/days-between',
+    'health/bmi',
+    'construction/tiles',
+    'kitchen/cups-to-grams',
+  ],
+  tools: [
+    'images/compress-image',
+    'images/heic-to-jpg',
+    'images/resize-image',
+    'images/qr-generator',
+    'security/password-generator',
+    'text/word-counter',
+    'dev/json-formatter',
+    'random/random-picker',
+  ],
+}[SITE];
+const popular = POPULAR.map((path) => {
+  const tool = tools.find((t) => t.path === path);
+  if (!tool) throw new Error(`Популярное: нет инструмента ${path}`);
+  return tool;
+}).filter((tool) => tool.langs.includes(lang));
 const alternates = SITE_LANGS.map((l) => ({ lang: l, href: `/${l}/` }));
 ---
 
-<Base wide lang={lang} title={t('home.title')} description={t('site.description')} alternates={alternates}>
-  <h1>{t('site.tagline')}</h1>
-  <p class="lead">{t('home.intro')}</p>
+<Base wide lang={lang} title={t(`site.${SITE}.title`)} description={t(`site.${SITE}.description`)} alternates={alternates}>
+  <h1>{t(`site.${SITE}.tagline`)}</h1>
+  <p class="lead">{t(`site.${SITE}.intro`)}</p>
   <section class="home-popular">
     <h2>{t('home.popular')}</h2>
     <ToolList tools={popular} lang={lang} icons />

@@ -6,6 +6,7 @@ import { uiT } from '@/i18n/ui';
 import Base from '@/layouts/Base.astro';
 import { categories, categoryName, categoryUrl, toolById, toolName, toolUrl, type Tool, type ToolPageProps } from '@/lib/catalog';
 import { breadcrumbLd, webAppLd } from '@/lib/seo';
+import { SITE_NAME } from '@/site';
 
 // Общая обвязка страницы инструмента. Сам инструмент (остров) передаётся в слот из index.astro.
 type Props = Omit<ToolPageProps, 'island'>;
@@ -34,7 +35,7 @@ const url = new URL(toolUrl(tool, lang), Astro.site).href;
 
 <Base
   lang={lang}
-  title={`${title} — qdbp`}
+  title={`${title} — ${SITE_NAME}`}
   description={description}
   alternates={alternates}
   jsonLd={[webAppLd({ name, description, url, lang: LANG_META[lang].hreflang }), breadcrumbLd(crumbs, Astro.site!)]}

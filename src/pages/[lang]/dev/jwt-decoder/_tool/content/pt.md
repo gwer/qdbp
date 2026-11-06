@@ -38,7 +38,7 @@ O cabeçalho é `{"typ":"JWT","alg":"HS256"}` e o payload, `{"iss":"joe","exp":1
 | `iat` | quando foi emitido |
 | `jti` | ID único do token, para permitir revogá-lo |
 
-`exp`, `nbf` e `iat` são Unix timestamps em segundos. Para converter qualquer um desses números em data, use o [conversor de Unix timestamp](/pt/dates/unix-timestamp/).
+`exp`, `nbf` e `iat` são Unix timestamps em segundos. Para converter qualquer um desses números em data, use o [conversor de Unix timestamp](/pt/dev/unix-timestamp/).
 
 ## Erros comuns
 

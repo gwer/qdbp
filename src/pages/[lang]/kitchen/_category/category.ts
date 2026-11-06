@@ -1,3 +1,3 @@
 import { defineCategory } from '@/ui/define';
 
-export default defineCategory({ order: 50 });
+export default defineCategory({ site: 'calc', order: 50 });

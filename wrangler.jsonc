@@ -1,8 +1,9 @@
 {
+  // qdbp.net — калькуляторы (SITE=calc). Второй сайт — wrangler.tools.jsonc.
   "name": "qdbp",
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "./dist",
+    "directory": "./dist/calc",
     "not_found_handling": "404-page"
   }
 }

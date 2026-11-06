@@ -14,4 +14,4 @@ El sorteo usa el generador de números aleatorios criptográficamente seguro de 
 
 **¿Y si un nombre aparece dos veces?** Cada línea cuenta como una participación, así que un nombre repetido tiene más probabilidades. Quita los duplicados antes con las [herramientas de líneas](/es/text/line-tools/).
 
-Para hacer grupos, usa el [generador de equipos](/es/random/team-generator/); para un número al azar, el [generador de números aleatorios](/es/math/random-number/).
+Para hacer grupos, usa el [generador de equipos](/es/random/team-generator/); para un número al azar, el [generador de números aleatorios](/es/random/random-number/).

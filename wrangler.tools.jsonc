@@ -1,0 +1,9 @@
+{
+  // tooloot.net — утилиты (SITE=tools). Деплой: wrangler deploy -c wrangler.tools.jsonc
+  "name": "tooloot",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist/tools",
+    "not_found_handling": "404-page"
+  }
+}

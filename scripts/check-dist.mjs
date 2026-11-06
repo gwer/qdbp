@@ -1,15 +1,23 @@
 // Пост-проверки собранного сайта (см. docs/03-tech.md, раздел 10):
-//   1. сверка списка URL с urls.txt — нельзя молча потерять опубликованную страницу;
+//   1. сверка списка URL с urls.{site}.txt — нельзя молча потерять опубликованную страницу;
+//      редирект на другой наш сайт должен вести на страницу из его urls.{site}.txt;
 //   2. внутренние ссылки ведут на существующие файлы;
 //   3. бюджеты размера (gzip);
 //   4. отчёт покрытия переводов (информационно).
-// Запуск: node scripts/check-dist.mjs [--update-urls]
+// Запуск: node scripts/check-dist.mjs {calc|tools} [--update-urls]
 import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { gzipSync } from 'node:zlib';
+import SITES from '../src/sites.json' with { type: 'json' };
 
-const DIST = 'dist';
-const URLS_FILE = 'urls.txt';
+const SITE = process.argv[2];
+if (!(SITE in SITES)) {
+  console.error(`Укажите сайт: node scripts/check-dist.mjs {${Object.keys(SITES).join('|')}} [--update-urls]`);
+  process.exit(1);
+}
+const DIST = `dist/${SITE}`;
+const urlsFile = (site) => `urls.${site}.txt`;
+const URLS_FILE = urlsFile(SITE);
 const BUDGET = { html: 50 * 1024, js: 25 * 1024, css: 15 * 1024 };
 
 const errors = [];
@@ -24,47 +32,91 @@ function walk(dir) {
 
 const files = walk(DIST).map((f) => '/' + relative(DIST, f).split('\\').join('/'));
 const fileSet = new Set(files);
-const redirects = new Set(
-  readFileSync(join(DIST, '_redirects'), 'utf8')
-    .split('\n')
-    .map((l) => l.trim())
-    .filter((l) => l && !l.startsWith('#'))
-    .map((l) => l.split(/\s+/)[0]),
-);
+// Правила _redirects: `from to [status]`, в from — :placeholder (один сегмент) и * (остаток, в to — :splat).
+const redirects = readFileSync(join(DIST, '_redirects'), 'utf8')
+  .split('\n')
+  .map((l) => l.trim())
+  .filter((l) => l && !l.startsWith('#'))
+  .map((l) => {
+    const [from, to] = l.split(/\s+/);
+    const names = [];
+    const re = from.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/:(\w+)|\*/g, (m, name) => {
+      names.push(name ?? 'splat');
+      return name ? '([^/]+)' : '(.*)';
+    });
+    return { from, to, re: new RegExp(`^${re}$`), names };
+  });
+/** Куда ведёт редирект с этого пути (первое подходящее правило, как у Cloudflare), или null. */
+const redirectTarget = (path) => {
+  for (const r of redirects) {
+    const m = path.match(r.re);
+    if (m) return r.names.reduce((to, name, i) => to.replaceAll(`:${name}`, m[i + 1]), r.to);
+  }
+  return null;
+};
 
 // Страницы-заглушки редиректов (Astro `redirects` для dev/preview) — не настоящие страницы.
 const htmlFiles = files.filter((f) => f.endsWith('.html') && f !== '/404.html');
 const pageUrls = htmlFiles
   .map((f) => f.replace(/index\.html$/, ''))
-  .filter((u) => !redirects.has(u))
+  .filter((u) => redirectTarget(u) === null)
   .sort();
 
 // 1. urls.txt
 if (update) {
   writeFileSync(URLS_FILE, pageUrls.join('\n') + '\n');
-  console.log(`urls.txt обновлён: ${pageUrls.length} URL`);
+  console.log(`${URLS_FILE} обновлён: ${pageUrls.length} URL`);
 } else if (!existsSync(URLS_FILE)) {
   errors.push(`нет ${URLS_FILE} — выполните pnpm urls:update`);
 } else {
   const known = readFileSync(URLS_FILE, 'utf8').split('\n').filter(Boolean);
   const current = new Set(pageUrls);
-  const lost = known.filter((u) => !current.has(u) && !redirects.has(u));
+  const lost = known.filter((u) => !current.has(u) && redirectTarget(u) === null);
   const added = pageUrls.filter((u) => !known.includes(u));
-  for (const u of lost) errors.push(`URL пропал и на него нет редиректа в public/_redirects: ${u}`);
+  for (const u of lost) errors.push(`URL пропал и на него нет редиректа в public/${SITE}/_redirects: ${u}`);
   if (added.length) {
     errors.push(`новые URL (${added.length}), подтвердите через pnpm urls:update:\n      ${added.join('\n      ')}`);
   }
 }
 
+// Редиректы на другой наш сайт: цель должна быть его опубликованной страницей.
+for (const r of redirects) {
+  const other = Object.entries(SITES).find(([id, s]) => id !== SITE && r.to.startsWith(s.url + '/'));
+  if (!other) continue;
+  const [id, s] = other;
+  const known = existsSync(urlsFile(id)) ? new Set(readFileSync(urlsFile(id), 'utf8').split('\n').filter(Boolean)) : new Set();
+  const sources = existsSync(URLS_FILE) ? readFileSync(URLS_FILE, 'utf8').split('\n').filter(Boolean) : [];
+  let matched = 0;
+  for (const u of sources) {
+    if (!r.re.test(u)) continue;
+    matched++;
+    const target = redirectTarget(u);
+    if (target?.startsWith(s.url) && !known.has(target.slice(s.url.length))) {
+      errors.push(`редирект ${u} → ${target}: такой страницы нет в ${urlsFile(id)}`);
+    }
+  }
+  if (!matched) errors.push(`правило _redirects "${r.from} ${r.to}" не покрывает ни одного URL из ${URLS_FILE}`);
+}
+
 // 2. внутренние ссылки
 const resolves = (href) => {
   const path = decodeURI(href.split(/[?#]/)[0]);
-  return fileSet.has(path) || fileSet.has(path.replace(/\/?$/, '/') + 'index.html') || redirects.has(path);
+  // Редирект засчитывается только внутренний: относительная ссылка, уводящая 301 на другой сайт, — ошибка.
+  return fileSet.has(path) || fileSet.has(path.replace(/\/?$/, '/') + 'index.html') || !!redirectTarget(path)?.startsWith('/');
 };
+// Ссылки на другой наш сайт — абсолютные; сверяются с его urls.{site}.txt.
+const otherSites = Object.entries(SITES)
+  .filter(([id]) => id !== SITE)
+  .map(([id, s]) => ({ url: s.url, file: urlsFile(id), known: new Set(existsSync(urlsFile(id)) ? readFileSync(urlsFile(id), 'utf8').split('\n').filter(Boolean) : []) }));
 for (const file of files.filter((f) => f.endsWith('.html'))) {
   const html = readFileSync(join(DIST, file), 'utf8');
   for (const [, href] of html.matchAll(/(?:href|src)="(\/(?!\/)[^"]*)"/g)) {
     if (!resolves(href)) errors.push(`битая ссылка в ${file}: ${href}`);
+  }
+  for (const [, href] of html.matchAll(/href="(https:\/\/[^"]*)"/g)) {
+    const other = otherSites.find((o) => href.startsWith(o.url + '/'));
+    const path = other && href.slice(other.url.length).split(/[?#]/)[0];
+    if (other && !other.known.has(path)) errors.push(`ссылка в ${file} на страницу, которой нет в ${other.file}: ${href}`);
   }
 }
 

@@ -17,4 +17,4 @@ Pick a version and how many you need — the UUIDs appear right away. You can sw
 
 **What's the difference between a UUID and a GUID?** None — GUID is Microsoft's name for the same format.
 
-**Can I get the creation time from a v7 UUID?** Yes: the first 12 hex digits are the time in milliseconds since January 1, 1970. Convert it with the [Unix timestamp converter](/en/dates/unix-timestamp/) in milliseconds mode.
+**Can I get the creation time from a v7 UUID?** Yes: the first 12 hex digits are the time in milliseconds since January 1, 1970. Convert it with the [Unix timestamp converter](/en/dev/unix-timestamp/) in milliseconds mode.

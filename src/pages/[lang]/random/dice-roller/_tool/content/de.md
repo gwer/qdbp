@@ -14,4 +14,4 @@ Das Ergebnis stammt aus dem kryptografisch sicheren Zufallsgenerator des Browser
 
 **Beeinflusst ein Wurf den nächsten?** Nein, jeder Wurf ist unabhängig. Nach fünfmal Kopf hintereinander ist die Chance auf Zahl weiterhin 50 %.
 
-Für beliebige Zahlenbereiche gibt es den [Zufallszahlengenerator](/de/math/random-number/).
+Für beliebige Zahlenbereiche gibt es den [Zufallszahlengenerator](/de/random/random-number/).

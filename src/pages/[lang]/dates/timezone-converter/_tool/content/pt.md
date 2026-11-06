@@ -20,4 +20,4 @@ No dia da mudança de horário existem horas que não acontecem (na primavera o 
 
 **O que é UTC?** O tempo universal coordenado, referência de todos os fusos. Brasília é UTC−3; Manaus, UTC−4; Fernando de Noronha, UTC−2.
 
-**Como converter um Unix timestamp?** Use o [conversor de Unix timestamp](/pt/dates/unix-timestamp/). Para somar horas a um horário, use a [calculadora de horas](/pt/dates/time-calculator/).
+**Como converter um Unix timestamp?** Use o [conversor de Unix timestamp](https://tooloot.net/pt/dev/unix-timestamp/). Para somar horas a um horário, use a [calculadora de horas](/pt/dates/time-calculator/).

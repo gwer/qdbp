@@ -17,4 +17,4 @@ Version und Anzahl wählen – die UUIDs erscheinen sofort. Auf Wunsch in Großb
 
 **Was ist der Unterschied zwischen UUID und GUID?** Keiner – GUID ist der Microsoft-Name für dasselbe Format.
 
-**Kann ich den Erstellungszeitpunkt einer v7-UUID auslesen?** Ja: Die ersten 12 Hexadezimalziffern sind die Zeit in Millisekunden seit dem 1. Januar 1970. Umrechnen lässt sie sich mit dem [Unix-Timestamp-Konverter](/de/dates/unix-timestamp/) im Millisekunden-Modus.
+**Kann ich den Erstellungszeitpunkt einer v7-UUID auslesen?** Ja: Die ersten 12 Hexadezimalziffern sind die Zeit in Millisekunden seit dem 1. Januar 1970. Umrechnen lässt sie sich mit dem [Unix-Timestamp-Konverter](/de/dev/unix-timestamp/) im Millisekunden-Modus.
