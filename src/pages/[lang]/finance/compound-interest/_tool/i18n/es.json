@@ -1,6 +1,6 @@
 {
-  "title": "Calculadora de interés compuesto: ahorro e intereses",
-  "description": "Calcula cuánto crecen tus ahorros con interés compuesto y aportaciones mensuales: saldo final, total aportado e intereses generados año a año.",
+  "title": "Calculadora de interés compuesto: ahorro e inversión",
+  "description": "Calculadora de inversión y ahorro: cuánto crece tu dinero con interés compuesto y aportaciones mensuales — saldo final, su valor en dinero de hoy tras la inflación, total aportado e intereses año a año.",
   "inputs": {
     "initial": {
       "label": "Capital inicial"
@@ -24,11 +24,17 @@
     },
     "increase": {
       "label": "Aumentar la aportación cada año un"
+    },
+    "inflation": {
+      "label": "Inflación anual"
     }
   },
   "outputs": {
     "total": {
       "label": "Saldo final"
+    },
+    "real": {
+      "label": "En dinero de hoy"
     },
     "contributed": {
       "label": "Total aportado"

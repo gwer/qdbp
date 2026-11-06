@@ -55,3 +55,19 @@ describe('ежегодное увеличение пополнений', () => {
     expect(deposit({ initial: 0, monthly: 200, rate: 5, years: 10, cap: 'monthly', increase: 0 }).total).toBe(31056.46);
   });
 });
+
+describe('инфляция', () => {
+  it('инфляция равна ставке при ежегодной капитализации — покупательная способность не меняется', () => {
+    expect(deposit({ initial: 10000, monthly: 0, rate: 5, years: 10, cap: 'yearly', inflation: 5 }).real).toBe(10000);
+  });
+
+  it('итог / (1 + инфляция)^лет (эталон посчитан в Python)', () => {
+    expect(deposit({ initial: 100000, monthly: 10000, rate: 12, years: 3, cap: 'monthly', inflation: 8 }).real).toBe(455537.19);
+    expect(deposit({ initial: 10000, monthly: 200, rate: 5, years: 10, cap: 'monthly', inflation: 3 }).real).toBe(35364.22);
+  });
+
+  it('без инфляции — равно итогу', () => {
+    const r = deposit({ initial: 10000, monthly: 200, rate: 5, years: 10, cap: 'monthly' });
+    expect(r.real).toBe(r.total);
+  });
+});

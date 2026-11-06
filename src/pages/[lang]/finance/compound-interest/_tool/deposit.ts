@@ -15,6 +15,8 @@ export interface DepositInput {
   cap: Capitalization;
   /** Ежегодное увеличение пополнения, % (с ростом дохода): со второго года пополнение больше на эту долю. */
   increase?: number;
+  /** Инфляция, % в год: итог пересчитывается в сегодняшние деньги. */
+  inflation?: number;
 }
 
 export interface DepositYear {
@@ -29,7 +31,7 @@ export interface DepositYear {
  * в конце периода капитализации; пополнение — в конце месяца, после начисления.
  * При ежеквартальной и ежегодной капитализации это даёт ровно (1 + r/4)^(4t) и (1 + r)^t.
  */
-export function deposit({ initial, monthly, rate, years, cap, increase = 0 }: DepositInput) {
+export function deposit({ initial, monthly, rate, years, cap, increase = 0, inflation = 0 }: DepositInput) {
   if (!(initial >= 0) || !(monthly >= 0) || !(rate >= 0) || !Number.isInteger(years) || years < 1) {
     throw new RangeError('invalid deposit input');
   }
@@ -59,5 +61,7 @@ export function deposit({ initial, monthly, rate, years, cap, increase = 0 }: De
     }
   }
   const last = byYear[byYear.length - 1];
-  return { total: last.balance, contributed: last.contributed, interest: last.interest, byYear };
+  // Покупательная способность итога в сегодняшних деньгах: итог / (1 + инфляция)^лет.
+  const real = new Decimal(last.balance).div(new Decimal(1).plus(new Decimal(inflation).div(100)).pow(years)).toDecimalPlaces(2).toNumber();
+  return { total: last.balance, real, contributed: last.contributed, interest: last.interest, byYear };
 }

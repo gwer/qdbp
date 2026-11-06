@@ -4,6 +4,8 @@ Enter the starting amount, your monthly contribution, the annual interest rate, 
 
 If you plan to raise your contributions as your income grows, enter the yearly increase: from the second year each monthly contribution goes up by that percentage, and again every year after. The chart shows how much of the final balance is your money and how much is interest.
 
+Inflation shows what the final balance will be worth in today's money: the balance is divided by (1 + inflation)^years. If the interest rate is below inflation, your savings lose purchasing power in real terms. Set it to 0 to ignore inflation.
+
 ## How compound interest works
 
 With compounding, earned interest is added to the balance, so the next interest is calculated on a bigger amount. Without contributions the formula is:
@@ -15,6 +17,7 @@ The calculator accrues interest monthly and adds it to the balance at the end of
 ## Examples
 
 - $10,000 plus $200 a month at 5% for 10 years, compounded monthly: **$47,526.55**, of which $34,000 are your contributions and **$13,526.55** is interest.
+- With 3% inflation a year, that $47,526.55 is worth about **$35,364** in today's money.
 - $10,000 at 5% for 10 years with no contributions: $16,470.09 compounded monthly, $16,436.19 quarterly, $16,288.95 annually.
 
 ## FAQ
@@ -25,4 +28,4 @@ The calculator accrues interest monthly and adds it to the balance at the end of
 
 **Are taxes included?** No. Interest is usually taxable income; account for it separately.
 
-**Can I use it for investments?** Only as an estimate with a constant return. Real investment returns vary and aren't guaranteed.
+**Can I use it as an investment calculator?** Yes, as an estimate: enter the average annual return you expect instead of an interest rate, and you'll see how a portfolio with regular contributions grows and what it's worth after inflation. Real returns vary from year to year and aren't guaranteed; taxes and fees aren't included.

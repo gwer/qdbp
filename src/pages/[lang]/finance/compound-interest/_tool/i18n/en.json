@@ -1,6 +1,6 @@
 {
-  "title": "Compound interest calculator with monthly contributions",
-  "description": "See how savings grow with compound interest and regular monthly deposits: final balance, total contributions and interest earned, year by year.",
+  "title": "Compound interest calculator: savings and investment growth",
+  "description": "Investment and savings calculator: see how money grows with compound interest and monthly contributions — final balance, what it's worth in today's money after inflation, contributions and interest year by year.",
   "inputs": {
     "initial": {
       "label": "Initial deposit"
@@ -24,11 +24,17 @@
     },
     "increase": {
       "label": "Increase contributions each year by"
+    },
+    "inflation": {
+      "label": "Annual inflation"
     }
   },
   "outputs": {
     "total": {
       "label": "Final balance"
+    },
+    "real": {
+      "label": "In today's money"
     },
     "contributed": {
       "label": "Total contributions"

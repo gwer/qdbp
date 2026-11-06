@@ -1,6 +1,6 @@
 {
-  "title": "Zinseszinsrechner: Sparplan mit monatlicher Einzahlung",
-  "description": "Wie viel wird aus Ihrem Ersparten mit Zinseszins und monatlicher Sparrate? Endkapital, Einzahlungen und Zinserträge pro Jahr.",
+  "title": "Zinseszinsrechner: Sparplan und Geldanlage mit monatlicher Sparrate",
+  "description": "Sparplan- und Anlagerechner: Wie viel wird aus Ihrem Geld mit Zinseszins und monatlicher Sparrate? Endkapital, seine Kaufkraft nach Inflation, Einzahlungen und Erträge pro Jahr.",
   "inputs": {
     "initial": {
       "label": "Anfangskapital"
@@ -24,11 +24,17 @@
     },
     "increase": {
       "label": "Sparrate jährlich erhöhen um"
+    },
+    "inflation": {
+      "label": "Inflation pro Jahr"
     }
   },
   "outputs": {
     "total": {
       "label": "Endkapital"
+    },
+    "real": {
+      "label": "Kaufkraft in heutigem Geld"
     },
     "contributed": {
       "label": "Einzahlungen"

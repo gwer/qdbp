@@ -14,10 +14,13 @@ export const def = defineCalculator({
     years: { type: 'integer', default: 10, min: 1, max: 100, byLang: { ru: 3, en: 10, es: 10, de: 10, pt: 10 } },
     cap: { type: 'select', options: ['monthly', 'quarterly', 'yearly'], default: 'monthly' },
     increase: { type: 'percent', default: 0, min: 0, max: 100 },
+    // Как в калькуляторе инфляции: пример для страны языка, не текущая статистика.
+    inflation: { type: 'percent', default: 3, min: 0, max: 100, byLang: { ru: 8, de: 2.5, pt: 4.5 } },
   },
   compute: (v) => deposit(v),
   outputs: {
     total: { type: 'money' },
+    real: { type: 'money' },
     contributed: { type: 'money' },
     interest: { type: 'money' },
   },
