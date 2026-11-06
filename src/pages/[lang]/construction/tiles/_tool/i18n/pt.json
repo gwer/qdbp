@@ -5,7 +5,7 @@
     "surface": {
       "label": "O que revestir",
       "options": {
-        "area": "Sei a área",
+        "area": "Piso ou paredes pela área",
         "floor": "Piso pelas medidas do cômodo",
         "walls": "Paredes pelas medidas do cômodo"
       }

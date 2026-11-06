@@ -5,7 +5,7 @@
     "surface": {
       "label": "Was wird gefliest",
       "options": {
-        "area": "Fläche bekannt",
+        "area": "Boden oder Wände nach Fläche",
         "floor": "Boden nach Raummaßen",
         "walls": "Wände nach Raummaßen"
       }

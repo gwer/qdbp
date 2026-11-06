@@ -5,7 +5,7 @@
     "surface": {
       "label": "Qué alicatar",
       "options": {
-        "area": "Conozco la superficie",
+        "area": "Suelo o paredes por superficie",
         "floor": "Suelo según la habitación",
         "walls": "Paredes según la habitación"
       }
