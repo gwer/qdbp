@@ -2161,3 +2161,265 @@ textarea.pdf-text {
   margin-top: 10px;
   font-size: 0.9rem;
 }
+
+.pdf-preview {
+  margin: 14px 0 0;
+  text-align: center;
+}
+
+.pdf-preview img,
+.pdf-preview-empty {
+  display: block;
+  max-width: 100%;
+  max-height: 520px;
+  margin: 0 auto 6px;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 0.25);
+}
+
+.pdf-preview-empty {
+  width: 300px;
+  aspect-ratio: 0.707;
+  background: var(--surface);
+}
+
+/* Настройки слева, превью справа; на узком экране — друг под другом. */
+.pdf-split {
+  display: grid;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+@media (min-width: 700px) {
+  .pdf-split {
+    grid-template-columns: 1fr 260px;
+    align-items: start;
+  }
+
+  .pdf-split .pdf-preview {
+    margin: 0;
+  }
+}
+
+.pos-picker {
+  margin-bottom: 14px;
+}
+
+.pos-page {
+  position: relative;
+  width: 96px;
+  height: 128px;
+  margin-top: 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+}
+
+.pos-page button {
+  position: absolute;
+  width: 26px;
+  height: 22px;
+  padding: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pos-page button[aria-checked='true'] {
+  color: var(--accent-text);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.pos-tl,
+.pos-tc,
+.pos-tr {
+  top: 6px;
+}
+
+.pos-bl,
+.pos-bc,
+.pos-br {
+  bottom: 6px;
+}
+
+.pos-tl,
+.pos-bl {
+  left: 6px;
+}
+
+.pos-tc,
+.pos-bc {
+  left: 34px;
+}
+
+.pos-tr,
+.pos-br {
+  right: 6px;
+}
+
+/* ---- Подпись PDF ---- */
+.sig-maker {
+  margin-top: 14px;
+}
+
+.sig-pad {
+  position: relative;
+  margin-top: 10px;
+}
+
+.sig-pad canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3;
+  background: #fff;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.sig-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a8478;
+  pointer-events: none;
+}
+
+.sig-clear {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.sig-swatch {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  vertical-align: -1px;
+}
+
+.sig-fonts {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.sig-fonts button {
+  padding: 6px 12px;
+  font-size: 2rem;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.sig-fonts button[aria-checked='true'] {
+  border-color: var(--accent);
+}
+
+.sig-upload {
+  margin-top: 10px;
+}
+
+.sig-current {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.sig-current img {
+  max-width: 200px;
+  max-height: 70px;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.sig-current .actions {
+  margin: 0;
+}
+
+.sig-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.sig-view {
+  position: relative;
+  width: min(100%, 600px);
+  margin: 6px auto 0;
+  background: #fff;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 0.25);
+  user-select: none;
+}
+
+.sig-page {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sig-item {
+  position: absolute;
+  outline: 1px dashed var(--accent);
+  cursor: move;
+  touch-action: none;
+}
+
+.sig-item img {
+  display: block;
+  width: 100%;
+  pointer-events: none;
+}
+
+.sig-remove {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  color: #fff;
+  background: var(--error);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.sig-remove svg {
+  width: 14px;
+  height: 14px;
+}
+
+.sig-resize {
+  position: absolute;
+  right: -8px;
+  bottom: -8px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: nwse-resize;
+  touch-action: none;
+}

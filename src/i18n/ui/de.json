@@ -115,6 +115,8 @@
     "other": "Andere Datei",
     "ready": "Fertig",
     "working": "Wird verarbeitet…",
-    "error": "Die Datei konnte nicht verarbeitet werden."
+    "error": "Die Datei konnte nicht verarbeitet werden.",
+    "preview": "Seitenvorschau",
+    "previewOf": "Vorschau von Seite {n}"
   }
 }

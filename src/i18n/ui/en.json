@@ -115,6 +115,8 @@
     "other": "Another file",
     "ready": "Done",
     "working": "Processing…",
-    "error": "Couldn't process the file."
+    "error": "Couldn't process the file.",
+    "preview": "Page preview",
+    "previewOf": "Preview of page {n}"
   }
 }

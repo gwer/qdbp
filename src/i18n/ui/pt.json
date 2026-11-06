@@ -116,6 +116,8 @@
     "other": "Outro arquivo",
     "ready": "Pronto",
     "working": "Processando…",
-    "error": "Não foi possível processar o arquivo."
+    "error": "Não foi possível processar o arquivo.",
+    "preview": "Pré-visualização da página",
+    "previewOf": "Assim ficará a página {n}"
   }
 }

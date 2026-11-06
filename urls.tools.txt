@@ -165,12 +165,15 @@
 /ru/pdf/jpg-to-pdf/
 /ru/pdf/merge-pdf/
 /ru/pdf/organize-pdf/
+/ru/pdf/pdf-page-numbers/
 /ru/pdf/pdf-to-jpg/
 /ru/pdf/pdf-to-text/
 /ru/pdf/protect-pdf/
 /ru/pdf/rotate-pdf/
+/ru/pdf/sign-pdf/
 /ru/pdf/split-pdf/
 /ru/pdf/unlock-pdf/
+/ru/pdf/watermark-pdf/
 /ru/random/
 /ru/random/dice-roller/
 /ru/random/random-number/
