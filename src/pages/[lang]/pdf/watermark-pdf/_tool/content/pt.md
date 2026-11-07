@@ -21,6 +21,6 @@ O arquivo é processado no navegador e não é enviado a nenhum servidor.
 
 ## Perguntas frequentes
 
-**Dá para remover a marca d'água depois?** Num editor de PDF, sim: a marca é um objeto separado por cima da página. Para dificultar a remoção simples, use a disposição "Na página toda".
+**Dá para remover a marca d'água depois?** Num editor de PDF, sim: a marca é um objeto separado por cima da página. Para dificultar a remoção simples, use a disposição "Na página toda". Ainda mais seguro é, depois disso, [comprimir o PDF](/pt/pdf/compress-pdf/) no modo "Como digitalização": as páginas viram imagens, e a marca passa a fazer parte delas. O arquivo costuma ficar maior.
 
 **Como bloquear também a cópia ou a impressão?** Coloque senha e restrições na [proteção de PDF com senha](/pt/pdf/protect-pdf/).

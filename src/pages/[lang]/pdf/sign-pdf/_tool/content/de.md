@@ -25,4 +25,4 @@ Die rechtlich der Unterschrift auf Papier gleichgestellte qualifizierte elektron
 
 **Kann ich mehrere Dateien auf einmal unterschreiben?** Unterschreiben Sie sie nacheinander oder [fügen Sie sie zuerst](/de/pdf/merge-pdf/) zu einem Dokument zusammen.
 
-**Lässt sich die Unterschrift vor dem Entfernen schützen?** Nein: Die Unterschrift ist ein Bild über der Seite, und ein PDF-Editor kann sie entfernen. Die Echtheit eines Dokuments belegt nur eine elektronische Signatur, wie oben beschrieben.
+**Wie verhindere ich, dass die Unterschrift entfernt wird?** [Komprimieren Sie das PDF](/de/pdf/compress-pdf/) nach dem Unterschreiben mit der Methode „Als Scan“: Die Seiten werden samt Unterschrift zu Bildern. Der Text lässt sich danach nicht mehr markieren, und die Datei wird meist größer.

@@ -1,10 +1,10 @@
 ## Cómo usarlo
 
-Elige un PDF, el método y el nivel de compresión, y pulsa «Comprimir PDF». Junto al resultado verás cuánto pesaba el archivo y cuánto pesa ahora. Si no se ha podido reducir, se descarga el original: la herramienta nunca te da un archivo más grande.
+Elige un PDF, el método y el nivel de compresión, y pulsa «Comprimir PDF». Junto al resultado verás cuánto pesaba el archivo y cuánto pesa ahora. Con «Comprimir imágenes», si no se ha podido reducir, se descarga el original: ese método nunca te da un archivo más grande. Con «Como escaneo» puedes descargar el resultado aunque pese más, con un aviso.
 
 **Comprimir imágenes** es el método principal. Casi todo el peso de un PDF suelen ser fotos y escaneos. Se reducen a la resolución elegida y se guardan de nuevo en JPG. El texto, las fuentes, los enlaces, los marcadores y los campos de formulario no cambian.
 
-**Como escaneo** convierte cada página en una sola imagen JPG. Es el método de reserva para cuando comprimir las imágenes apenas sirvió. Ayuda si el peso viene de imágenes en formatos que el método principal no toca (JPEG 2000, CMYK, con paleta), de planos, diagramas y mapas complejos o de fuentes incrustadas grandes. Un escaneo normal hecho con fotos de las páginas también lo reduce el método principal, y conserva el texto reconocido del escaneo. «Como escaneo» elimina el texto: no se puede seleccionar, copiar ni buscar. Un documento que es sobre todo texto pesa más como imágenes que ahora; en ese caso se descargará el archivo original.
+**Como escaneo** convierte cada página en una sola imagen JPG. Es el método de reserva para cuando comprimir las imágenes apenas sirvió. Ayuda si el peso viene de imágenes en formatos que el método principal no toca (JPEG 2000, CMYK, con paleta), de planos, diagramas y mapas complejos o de fuentes incrustadas grandes. Un escaneo normal hecho con fotos de las páginas también lo reduce el método principal, y conserva el texto reconocido del escaneo. «Como escaneo» elimina el texto: no se puede seleccionar, copiar ni buscar. Un documento que es sobre todo texto pesa más como imágenes que ahora. Aun así puedes descargar ese resultado si necesitas que el texto, una firma o una marca de agua no se puedan separar de la página.
 
 El nivel de compresión fija la resolución de las imágenes:
 

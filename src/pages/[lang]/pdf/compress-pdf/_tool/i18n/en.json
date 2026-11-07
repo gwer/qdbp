@@ -21,6 +21,6 @@
     "images": "Images re-saved: {changed} of {total}.",
     "noImages": "The file has no images that can be re-saved: it was compressed only by cleaning up internal data.",
     "notSmaller": "Couldn't make the file smaller: it's already well compressed. You'll get the original file unchanged. Try the “As a scan” method or the high level.",
-    "notSmallerScan": "As images, the pages would weigh more than they do now. You'll get the original file unchanged."
+    "notSmallerScan": "As images, the file got bigger than it was. You can still download it — for example, so that text, a signature or a watermark can't be separated from the page. To make the file smaller, choose “Compress images”."
   }
 }

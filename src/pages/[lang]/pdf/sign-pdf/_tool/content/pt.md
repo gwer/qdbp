@@ -25,4 +25,4 @@ A assinatura digital com certificado ICP-Brasil (por exemplo, o e-CPF) e a assin
 
 **Dá para assinar vários arquivos de uma vez?** Assine um de cada vez ou primeiro [junte-os](/pt/pdf/merge-pdf/) em um só documento.
 
-**Dá para proteger a assinatura contra remoção?** Não: a assinatura é uma imagem por cima da página, e um editor de PDF consegue removê-la. Só uma assinatura digital, como a descrita acima, comprova que um documento é autêntico.
+**Como fazer para que a assinatura não possa ser removida?** Depois de assinar, [comprima o PDF](/pt/pdf/compress-pdf/) no modo "Como digitalização": as páginas viram imagens junto com a assinatura. O texto deixa de poder ser selecionado, e o arquivo costuma ficar maior.

@@ -1,10 +1,10 @@
 ## How to use
 
-Choose a PDF, pick a method and compression level, and click “Compress PDF”. Next to the result you'll see the file size before and after. If the file couldn't be made smaller, you get the original back: the tool never gives you a larger file.
+Choose a PDF, pick a method and compression level, and click “Compress PDF”. Next to the result you'll see the file size before and after. With “Compress images”, if the file couldn't be made smaller, you get the original back: that method never gives you a larger file. With “As a scan”, you can download the result even if it's larger, and you'll see a warning.
 
 **Compress images** is the main method. Most of a PDF's size usually comes from photos and scans. They're downsized to the chosen resolution and re-saved as JPG. Text, fonts, links, bookmarks and form fields don't change.
 
-**As a scan** turns every page into a single JPG image. It's a fallback for when compressing images barely helped. It works when the size comes from images in formats the main method doesn't touch (JPEG 2000, CMYK, palette), from complex drawings, diagrams and maps, or from large embedded fonts. A regular scan made of page photos is shrunk by the main method too, and any recognized text in it is kept. “As a scan” removes text: you can't select it, copy it or search for it. A document that's mostly text weighs more as images than it does now — in that case you'll get the original file.
+**As a scan** turns every page into a single JPG image. It's a fallback for when compressing images barely helped. It works when the size comes from images in formats the main method doesn't touch (JPEG 2000, CMYK, palette), from complex drawings, diagrams and maps, or from large embedded fonts. A regular scan made of page photos is shrunk by the main method too, and any recognized text in it is kept. “As a scan” removes text: you can't select it, copy it or search for it. A document that's mostly text weighs more as images than it does now. You can still download that result if you need text, a signature or a watermark to be inseparable from the page.
 
 The compression level sets the image resolution:
 

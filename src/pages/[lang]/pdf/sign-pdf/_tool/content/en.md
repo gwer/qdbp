@@ -25,4 +25,4 @@ A certificate-based digital signature is something else: a cryptographic signatu
 
 **Can I sign several files at once?** Sign each one in turn, or first [merge them](/en/pdf/merge-pdf/) into one document.
 
-**Can the signature be protected from removal?** No: the signature is an image on top of the page, and a PDF editor can remove it. Only a digital signature, described above, proves a document is authentic.
+**How do I make the signature impossible to remove?** After signing, [compress the PDF](/en/pdf/compress-pdf/) with the “As a scan” method: the pages become images together with the signature. Text can no longer be selected after that, and the file usually gets larger.

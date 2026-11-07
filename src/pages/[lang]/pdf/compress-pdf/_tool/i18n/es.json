@@ -21,6 +21,6 @@
     "images": "Imágenes recomprimidas: {changed} de {total}.",
     "noImages": "El archivo no tiene imágenes que se puedan recomprimir: solo se ha reducido limpiando datos internos.",
     "notSmaller": "No se pudo reducir el archivo: ya está bien comprimido. Se descargará el original sin cambios. Prueba el método «Como escaneo» o el nivel alto.",
-    "notSmallerScan": "Como imágenes, las páginas pesan más que ahora. Se descargará el original sin cambios."
+    "notSmallerScan": "Como imágenes, el archivo pesa más que antes. Aun así puedes descargarlo; por ejemplo, para que el texto, una firma o una marca de agua no se puedan separar de la página. Para reducir el archivo, elige «Comprimir imágenes»."
   }
 }

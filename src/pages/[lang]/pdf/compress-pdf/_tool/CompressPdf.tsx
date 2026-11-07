@@ -86,8 +86,9 @@ export function CompressPdf({ lang, t }: ToolProps) {
       }
       const before = source.file.size;
       const smaller = bytes.length < before;
-      // Не стало меньше — отдаём исходный файл, а не увеличенный.
-      const blob = smaller ? new Blob([bytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' }) : source.file;
+      // Сжатие изображений: не стало меньше — отдаём исходный файл, а не увеличенный. «Как скан» отдаётся всегда:
+      // страницы картинками нужны и ради того, чтобы текст, подпись или водяной знак нельзя было отделить от страницы.
+      const blob = smaller || mode === 'scan' ? new Blob([bytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' }) : source.file;
       if (job.live(id)) setResult({ file: { name: pdfName(source.file.name, '_compressed'), blob }, note, smaller });
     } catch {
       if (job.live(id)) setFailed(true);

@@ -21,6 +21,6 @@ The file is processed in your browser and never uploaded.
 
 ## FAQ
 
-**Can the watermark be removed later?** In a PDF editor, yes: the watermark is a separate object on top of the page. To guard against simple removal, use the “Across the page” layout.
+**Can the watermark be removed later?** In a PDF editor, yes: the watermark is a separate object on top of the page. To guard against simple removal, use the “Across the page” layout. It's even more reliable to then [compress the PDF](/en/pdf/compress-pdf/) with the “As a scan” method: the pages become images, and the watermark becomes part of the image. The file usually gets larger.
 
 **How do I also prevent copying or printing?** Set a password and restrictions with the [PDF password protector](/en/pdf/protect-pdf/).

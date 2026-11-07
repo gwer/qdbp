@@ -25,4 +25,4 @@ Una firma electrónica con certificado (avanzada o cualificada, como la que se h
 
 **¿Puedo firmar varios archivos a la vez?** Fírmalos uno a uno o primero [únelos](/es/pdf/merge-pdf/) en un solo documento.
 
-**¿Se puede proteger la firma para que no se quite?** No: la firma es una imagen encima de la página y un editor de PDF puede quitarla. Solo una firma electrónica con certificado, como la descrita arriba, demuestra que un documento es auténtico.
+**¿Cómo consigo que la firma no se pueda quitar?** Después de firmar, [comprime el PDF](/es/pdf/compress-pdf/) con el método «Como escaneo»: las páginas se convertirán en imágenes junto con la firma. Después el texto ya no se podrá seleccionar y el archivo suele pesar más.
