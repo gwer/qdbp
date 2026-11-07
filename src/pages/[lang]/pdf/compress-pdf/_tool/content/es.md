@@ -4,7 +4,7 @@ Elige un PDF, el método y el nivel de compresión, y pulsa «Comprimir PDF». J
 
 **Comprimir imágenes** es el método principal. Casi todo el peso de un PDF suelen ser fotos y escaneos. Se reducen a la resolución elegida y se guardan de nuevo en JPG. El texto, las fuentes, los enlaces, los marcadores y los campos de formulario no cambian.
 
-**Como escaneo** convierte cada página en una sola imagen JPG. Es lo que más reduce los escaneos y los PDF con gráficos complejos, pero el texto deja de ser texto: no se puede seleccionar, copiar ni buscar. Sirve para escaneos que tienen que caber en un límite al enviarlos.
+**Como escaneo** convierte cada página en una sola imagen JPG. Es el método de reserva para cuando comprimir las imágenes apenas sirvió. Ayuda si el peso viene de imágenes en formatos que el método principal no toca (JPEG 2000, CMYK, con paleta), de planos, diagramas y mapas complejos o de fuentes incrustadas grandes. Un escaneo normal hecho con fotos de las páginas también lo reduce el método principal, y conserva el texto reconocido del escaneo. «Como escaneo» elimina el texto: no se puede seleccionar, copiar ni buscar. Un documento que es sobre todo texto pesa más como imágenes que ahora; en ese caso se descargará el archivo original.
 
 El nivel de compresión fija la resolución de las imágenes:
 
@@ -26,6 +26,6 @@ Todo ocurre en tu navegador: el archivo no se sube a ningún servidor. Un PDF pr
 
 **¿Por qué el archivo apenas ha bajado?** Probablemente tiene pocas imágenes: el texto y los gráficos vectoriales pesan poco y ya están comprimidos. A veces el peso viene de las fuentes incrustadas, que no se pueden reducir sin pérdidas.
 
-**¿Cómo lo dejo por debajo de un límite, por ejemplo 2 MB?** Empieza por el nivel medio. Si el archivo sigue superando el límite, elige el alto. Con escaneos, después cambia el método a «Como escaneo». Otra opción es [dividir el PDF](/es/pdf/split-pdf/) en varias partes.
+**¿Cómo lo dejo por debajo de un límite, por ejemplo 2 MB?** Empieza por el nivel medio. Si el archivo sigue superando el límite, elige el alto. Si tampoco basta, prueba el método «Como escaneo»: vuelve a dibujar las páginas como imágenes. Otra opción es [dividir el PDF](/es/pdf/split-pdf/) en varias partes.
 
 **¿Qué es mejor: comprimir el PDF o las fotos antes de crearlo?** Si el PDF se hace con fotos, es más cómodo [comprimirlas](/es/images/compress-image/) antes. El [convertidor de JPG a PDF](/es/pdf/jpg-to-pdf/) las incrusta sin volver a comprimirlas.

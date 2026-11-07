@@ -21,6 +21,6 @@ El archivo se procesa en tu navegador y no se sube a ningún servidor.
 
 ## Preguntas frecuentes
 
-**¿Se puede quitar luego la marca de agua?** Con un editor de PDF, sí: la marca es un objeto aparte encima de la página. Para que no se quite con facilidad, usa la disposición «Por toda la página». Aún más seguro es, después, [comprimir el PDF](/es/pdf/compress-pdf/) con el método «Como escaneo»: las páginas se convertirán en imágenes y la marca pasará a formar parte de ellas.
+**¿Se puede quitar luego la marca de agua?** Con un editor de PDF, sí: la marca es un objeto aparte encima de la página. Para que no se quite con facilidad, usa la disposición «Por toda la página».
 
 **¿Cómo impido también copiar o imprimir?** Pon contraseña y restricciones con la [protección de PDF con contraseña](/es/pdf/protect-pdf/).

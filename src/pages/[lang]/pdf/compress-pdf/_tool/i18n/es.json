@@ -8,7 +8,7 @@
       "scan": "Como escaneo"
     },
     "imagesHint": "Las fotos y los escaneos del PDF se reducen y se guardan de nuevo en JPG. El texto, los enlaces y los marcadores no cambian.",
-    "scanHint": "Cada página se convierte en una imagen. Es lo que más reduce el tamaño, pero el texto ya no se podrá seleccionar ni buscar: indicado para escaneos.",
+    "scanHint": "Cada página se convierte en una sola imagen. Sirve cuando comprimir las imágenes apenas redujo el tamaño: imágenes en formatos poco comunes, planos y diagramas pesados. El texto ya no se podrá seleccionar ni buscar, y un documento de texto normal así suele pesar más.",
     "level": {
       "label": "Nivel de compresión",
       "low": "Bajo: {dpi} dpi, casi sin pérdida de calidad",

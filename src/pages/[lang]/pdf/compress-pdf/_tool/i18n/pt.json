@@ -8,7 +8,7 @@
       "scan": "Como digitalização"
     },
     "imagesHint": "Fotos e digitalizações dentro do PDF são reduzidas e salvas de novo em JPG. Texto, links e marcadores ficam como estavam.",
-    "scanHint": "Cada página vira uma imagem. É o que mais comprime, mas o texto deixa de poder ser selecionado e pesquisado — serve para documentos escaneados.",
+    "scanHint": "Cada página vira uma única imagem. Ajuda quando comprimir as imagens quase não mudou o tamanho: imagens em formatos pouco comuns, plantas e diagramas pesados. O texto deixa de poder ser selecionado e pesquisado, e um documento de texto comum assim costuma ficar maior.",
     "level": {
       "label": "Nível de compressão",
       "low": "Baixo — {dpi} dpi, quase sem perda de qualidade",

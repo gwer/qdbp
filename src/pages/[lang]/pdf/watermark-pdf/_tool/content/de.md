@@ -21,6 +21,6 @@ Die Datei wird im Browser verarbeitet und nicht hochgeladen.
 
 ## Häufige Fragen
 
-**Lässt sich das Wasserzeichen später entfernen?** Mit einem PDF-Editor ja: Das Wasserzeichen ist ein eigenes Objekt über der Seite. Gegen einfaches Entfernen hilft die Anordnung „Über die ganze Seite“. Noch sicherer ist es, das PDF danach [zu komprimieren](/de/pdf/compress-pdf/) – mit der Methode „Als Scan“: Die Seiten werden zu Bildern, und das Wasserzeichen wird Teil des Bildes.
+**Lässt sich das Wasserzeichen später entfernen?** Mit einem PDF-Editor ja: Das Wasserzeichen ist ein eigenes Objekt über der Seite. Gegen einfaches Entfernen hilft die Anordnung „Über die ganze Seite“.
 
 **Wie verbiete ich zusätzlich Kopieren oder Drucken?** Setzen Sie Passwort und Einschränkungen mit dem [PDF-Passwortschutz](/de/pdf/protect-pdf/).

@@ -4,7 +4,7 @@ Escolha o PDF, o modo e o nível de compressão e clique em "Comprimir PDF". Ao 
 
 **Comprimir imagens** é o modo principal. Quase todo o peso de um PDF costuma vir de fotos e digitalizações. Elas são reduzidas até a resolução escolhida e salvas de novo em JPG. Texto, fontes, links, marcadores e campos de formulário não mudam.
 
-**Como digitalização** transforma cada página em uma única imagem JPG. É o que mais reduz documentos escaneados e PDFs com gráficos complexos, mas o texto deixa de ser texto: não dá mais para selecioná-lo, copiá-lo nem encontrá-lo pela busca. Serve para documentos escaneados que precisam caber no limite de envio.
+**Como digitalização** transforma cada página em uma única imagem JPG. É o modo reserva para quando comprimir as imagens quase não adiantou. Ele ajuda se o peso vem de imagens em formatos que o modo principal não mexe (JPEG 2000, CMYK, com paleta), de plantas, diagramas e mapas complexos ou de fontes incorporadas grandes. Um documento escaneado comum, feito de fotos das páginas, também é reduzido pelo modo principal, e o texto reconhecido na digitalização continua lá. "Como digitalização" remove o texto: não dá mais para selecioná-lo, copiá-lo nem encontrá-lo pela busca. Um documento que é quase só texto fica mais pesado como imagens do que está agora — nesse caso, será baixado o arquivo original.
 
 O nível de compressão define a resolução das imagens:
 
@@ -26,6 +26,6 @@ Tudo acontece no navegador, o arquivo não é enviado a nenhum servidor. Um PDF 
 
 **Por que o arquivo quase não diminuiu?** Provavelmente ele tem poucas imagens: texto e gráficos vetoriais pesam pouco e já vêm comprimidos. Às vezes o peso vem das fontes incorporadas, que não dá para reduzir sem perdas.
 
-**Como caber num limite, por exemplo de 2 MB?** Comece pelo nível médio. Se o arquivo ainda passar do limite, escolha o alto. Para documentos escaneados, o próximo passo é mudar o modo para "Como digitalização". Outra opção é [dividir o PDF](/pt/pdf/split-pdf/) em várias partes.
+**Como caber num limite, por exemplo de 2 MB?** Comece pelo nível médio. Se o arquivo ainda passar do limite, escolha o alto. Se ainda não bastar, experimente o modo "Como digitalização": ele redesenha as páginas como imagens. Outra opção é [dividir o PDF](/pt/pdf/split-pdf/) em várias partes.
 
 **O que é melhor: comprimir o PDF ou as fotos antes de criar o PDF?** Se o PDF vai ser montado a partir de fotos, é mais prático [comprimir as fotos](/pt/images/compress-image/) antes. E o [conversor de JPG para PDF](/pt/pdf/jpg-to-pdf/) as incorpora sem comprimir de novo.

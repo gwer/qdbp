@@ -8,7 +8,7 @@
       "scan": "As a scan"
     },
     "imagesHint": "Photos and scans inside the PDF are downsized and re-saved as JPG. Text, links and bookmarks stay as they are.",
-    "scanHint": "Every page becomes an image. This compresses the most, but text can no longer be selected or searched — best for scans.",
+    "scanHint": "Every page becomes a single image. It helps when compressing images barely changed the size: images in uncommon formats, heavy drawings and diagrams. Text can no longer be selected or searched, and a regular text document usually only gets bigger this way.",
     "level": {
       "label": "Compression level",
       "low": "Low — {dpi} dpi, almost no quality loss",

@@ -8,7 +8,7 @@
       "scan": "Als Scan"
     },
     "imagesHint": "Fotos und Scans im PDF werden verkleinert und als JPG neu gespeichert. Text, Links und Lesezeichen bleiben unverändert.",
-    "scanHint": "Jede Seite wird zu einem Bild. Das verkleinert am stärksten, aber der Text lässt sich danach nicht mehr markieren oder durchsuchen – geeignet für Scans.",
+    "scanHint": "Jede Seite wird zu einem einzigen Bild. Das hilft, wenn das Komprimieren der Bilder kaum etwas gebracht hat: Bilder in seltenen Formaten, aufwendige Zeichnungen und Diagramme. Der Text lässt sich danach nicht mehr markieren oder durchsuchen, und ein normales Textdokument wird so meist nur größer.",
     "level": {
       "label": "Komprimierungsstufe",
       "low": "Schwach – {dpi} dpi, fast ohne Qualitätsverlust",
