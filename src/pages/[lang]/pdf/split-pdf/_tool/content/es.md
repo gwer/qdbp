@@ -4,7 +4,7 @@ Elige un PDF y aparecerán las miniaturas de todas las páginas. Después elige 
 
 - **Cada N páginas**: el archivo se corta en partes iguales. Con N = 1, cada página será un PDF aparte; con N = 2, de dos en dos, y así sucesivamente. La última parte puede ser más corta.
 - **Por rangos**: escribe las partes separadas por comas: `1-3, 4-10, 11-` da tres archivos. Los rangos pueden solaparse, y `5-1` junta las páginas en orden inverso.
-- **Elegir páginas**: marca con un clic las páginas que necesitas y obtenlas en un solo archivo o cada una por separado. Así es fácil sacar unas pocas páginas de un documento, por ejemplo el escaneo del DNI o del pasaporte de un paquete de documentos.
+- **Elegir páginas**: elige las páginas que necesitas y obtenlas en un solo archivo o cada una por separado. Así es fácil sacar unas pocas páginas de un documento, por ejemplo el escaneo del DNI o del pasaporte de un paquete de documentos.
 
 En las miniaturas, el número de la esquina indica a qué archivo irá la página; las atenuadas no irán a ninguno. Pulsa «Dividir» y descarga las partes una a una o todas juntas en un ZIP.
 

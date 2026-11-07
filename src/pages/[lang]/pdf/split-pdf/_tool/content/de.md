@@ -4,7 +4,7 @@ Wählen Sie ein PDF – es erscheinen Vorschaubilder aller Seiten. Dann wählen 
 
 - **Je N Seiten** – die Datei wird in gleich große Teile zerlegt. Bei N = 1 wird jede Seite ein eigenes PDF, bei N = 2 sind es je zwei Seiten und so weiter. Der letzte Teil kann kürzer sein.
 - **Nach Bereichen** – Teile durch Komma getrennt aufzählen: `1-3, 4-10, 11-` ergibt drei Dateien. Bereiche dürfen sich überschneiden, und `5-1` setzt die Seiten in umgekehrter Reihenfolge zusammen.
-- **Seiten auswählen** – gewünschte Seiten per Klick markieren und als eine Datei oder jede einzeln speichern. So holen Sie bequem einige Seiten aus einem Dokument, etwa den Scan des Personalausweises aus einer Bewerbungsmappe.
+- **Seiten auswählen** – gewünschte Seiten auswählen und als eine Datei oder jede einzeln speichern. So holen Sie bequem einige Seiten aus einem Dokument, etwa den Scan des Personalausweises aus einer Bewerbungsmappe.
 
 In den Vorschaubildern zeigt die Zahl in der Ecke, in welche Datei die Seite kommt; blasse Seiten kommen in keine. Klicken Sie auf „Aufteilen“ und laden Sie die Teile einzeln oder alle zusammen als ZIP-Archiv herunter.
 

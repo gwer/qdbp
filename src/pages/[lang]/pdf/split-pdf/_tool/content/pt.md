@@ -4,7 +4,7 @@ Escolha um PDF — aparecem as miniaturas de todas as páginas. Depois escolha o
 
 - **A cada N páginas** — o arquivo é dividido em partes iguais. Com N = 1, cada página vira um PDF separado; com N = 2, duas páginas por arquivo, e assim por diante. A última parte pode ser menor.
 - **Por intervalos** — liste as partes separadas por vírgula: `1-3, 4-10, 11-` gera três arquivos. Os intervalos podem se sobrepor, e `5-1` junta as páginas em ordem inversa.
-- **Escolher páginas** — marque as páginas com um clique e receba-as em um só arquivo ou cada uma separada. É prático para tirar algumas páginas de um documento, como a cópia do RG de um pacote de documentos.
+- **Escolher páginas** — escolha as páginas que você precisa e receba-as em um só arquivo ou cada uma separada. É prático para tirar algumas páginas de um documento, como a cópia do RG de um pacote de documentos.
 
 Nas miniaturas, o número no canto mostra em qual arquivo a página vai entrar; as páginas apagadas não entram em nenhum. Clique em "Dividir" e baixe as partes uma por uma ou todas juntas num ZIP.
 

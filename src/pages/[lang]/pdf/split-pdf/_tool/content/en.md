@@ -4,7 +4,7 @@ Choose a PDF and thumbnails of all its pages appear. Then pick a method:
 
 - **Every N pages** — the file is cut into equal parts. With N = 1 every page becomes a separate PDF, with N = 2 you get two pages per file, and so on. The last part may be shorter.
 - **By ranges** — list the parts separated by commas: `1-3, 4-10, 11-` gives three files. Ranges can overlap, and `5-1` puts the pages in reverse order.
-- **Select pages** — click the pages you need and get them as one file or each one separately. This is handy for pulling a few pages out of a document, such as a scan of your ID from a set of paperwork.
+- **Select pages** — select the pages you need and get them as one file or each one separately. This is handy for pulling a few pages out of a document, such as a scan of your ID from a set of paperwork.
 
 The number in the corner of each thumbnail shows which file the page goes to; faded pages don't go anywhere. Click “Split” and download the parts one by one or all at once as a ZIP.
 
