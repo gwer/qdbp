@@ -18,4 +18,5 @@ test('partName', () => {
   expect(partName('report', [5])).toBe('report_5.pdf');
   expect(partName('report', [1, 2, 7])).toBe('report_1-2_7.pdf');
   expect(partName('report', [3, 2, 1])).toBe('report_3-1.pdf');
+  expect(partName('report', [5], '_t')).toBe('report_5_t.pdf');
 });

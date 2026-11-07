@@ -3,7 +3,7 @@ import type { ToolProps } from '@/ui/define';
 import { QualityField, SelectField } from '@/ui/files/fields';
 import { PageGrid, pagesOf } from '@/ui/pdf/Pages';
 import { PdfPicker, usePreload } from '@/ui/pdf/Picker';
-import { pdfName } from '@/ui/pdf/pdflib';
+import { baseName, stamp } from '@/ui/pdf/pdflib';
 import { renderPage } from '@/ui/pdf/pdfjs';
 import { expand, parseRanges } from '@/ui/pdf/ranges';
 import { Result, type OutFile } from '@/ui/pdf/Result';
@@ -23,7 +23,7 @@ export function PdfToJpg({ lang, t }: ToolProps) {
   const [pages, setPages] = useState('');
   const [progress, setProgress] = useState<[number, number] | null>(null);
   const [failed, setFailed] = useState(false);
-  const [result, setResult] = useState<OutFile[] | null>(null);
+  const [result, setResult] = useState<{ files: OutFile[]; zip: string } | null>(null);
   // Номер запуска: смена файла или настроек отменяет текущую конвертацию.
   const run = useRef(0);
 
@@ -43,7 +43,8 @@ export function PdfToJpg({ lang, t }: ToolProps) {
     const id = ++run.current;
     setResult(null);
     setFailed(false);
-    const base = pdfName(source.file.name).replace(/\.pdf$/, '');
+    const base = baseName(source.file.name);
+    const tail = stamp();
     const digits = String(total).length;
     const files: OutFile[] = [];
     try {
@@ -60,9 +61,9 @@ export function PdfToJpg({ lang, t }: ToolProps) {
         if (run.current !== id) return;
         if (!blob) throw new Error('encode');
         const note = `${t('pdf.page', { n })} · ${Math.round(base1.width * scale)}×${Math.round(base1.height * scale)}${reduced ? ` · ${t('ui.reduced', { dpi: Math.floor(scale * 72) })}` : ''}`;
-        files.push({ name: `${base}-${String(n).padStart(digits, '0')}.${format}`, blob, note });
+        files.push({ name: `${base}-${String(n).padStart(digits, '0')}${tail}.${format}`, blob, note });
       }
-      setResult(files);
+      setResult({ files, zip: `${base}-${format}${tail}.zip` });
     } catch {
       if (run.current === id) setFailed(true);
     } finally {
@@ -116,7 +117,7 @@ export function PdfToJpg({ lang, t }: ToolProps) {
               {t('pdf.error')}
             </p>
           )}
-          {result && <Result t={t} lang={lang} files={result} zipName={`${pdfName(source.file.name).replace(/\.pdf$/, '')}-${format}.zip`} />}
+          {result && <Result t={t} lang={lang} files={result.files} zipName={result.zip} />}
           <PageGrid t={t} items={pagesOf(source.doc, total).map((it) => ({ ...it, removed: !list.includes(it.index + 1) }))} onChange={() => {}} />
         </>
       )}

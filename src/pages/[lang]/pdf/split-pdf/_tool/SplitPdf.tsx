@@ -5,7 +5,7 @@ import { IntField } from '@/ui/files/fields';
 import { assemble, docCache } from '@/ui/pdf/build';
 import { PageGrid, pagesOf, type PageItem } from '@/ui/pdf/Pages';
 import { PdfPicker, usePreload } from '@/ui/pdf/Picker';
-import { pdfName } from '@/ui/pdf/pdflib';
+import { baseName, stamp } from '@/ui/pdf/pdflib';
 import { formatPages } from '@/ui/pdf/ranges';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import type { PdfSource } from '@/ui/pdf/source';
@@ -26,7 +26,7 @@ export function SplitPdf({ lang, t }: ToolProps) {
   const [separate, setSeparate] = useState<'one' | 'each'>('one');
   const [busy, setBusy] = useState(false);
   const [failed, setFailed] = useState(false);
-  const [result, setResult] = useState<OutFile[] | null>(null);
+  const [result, setResult] = useState<{ files: OutFile[]; zip: string } | null>(null);
 
   const total = source?.pageCount ?? 0;
   const plan = useMemo((): { groups: Group[] } | { error: string } => {
@@ -69,16 +69,17 @@ export function SplitPdf({ lang, t }: ToolProps) {
     setBusy(true);
     try {
       const open = docCache();
-      const base = pdfName(source.file.name).replace(/\.pdf$/, '');
+      const base = baseName(source.file.name);
+      const tail = stamp();
       const files: OutFile[] = [];
       for (const g of groups) {
         const blob = await assemble(
           g.map((p) => ({ source, index: p - 1 })),
           open,
         );
-        files.push({ name: partName(base, g), blob, note: `${t('ui.pagesShort')} ${formatPages(g)}` });
+        files.push({ name: partName(base, g, tail), blob, note: `${t('ui.pagesShort')} ${formatPages(g)}` });
       }
-      if (job.live(id)) setResult(files);
+      if (job.live(id)) setResult({ files, zip: `${base}${tail}.zip` });
     } catch {
       if (job.live(id)) setFailed(true);
     } finally {
@@ -187,7 +188,7 @@ export function SplitPdf({ lang, t }: ToolProps) {
               {t('pdf.error')}
             </p>
           )}
-          {result && <Result t={t} lang={lang} files={result} zipName={`${pdfName(source.file.name).replace(/\.pdf$/, '')}.zip`} />}
+          {result && <Result t={t} lang={lang} files={result.files} zipName={result.zip} />}
           <PageGrid
             t={t}
             items={items}

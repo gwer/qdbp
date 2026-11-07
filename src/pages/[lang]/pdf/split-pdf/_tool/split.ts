@@ -21,8 +21,8 @@ export function byRanges(text: string, total: number): { ok: true; groups: Group
 }
 
 /** Имя файла части: «report_1-3.pdf», «report_5.pdf», «report_1-3, 7.pdf» → «report_1-3_7.pdf». */
-export function partName(base: string, pages: Group): string {
+export function partName(base: string, pages: Group, tail = ''): string {
   const sorted = pages.every((p, i) => i === 0 || p > pages[i - 1]);
   const label = sorted ? formatPages(pages).replace(/, /g, '_') : `${pages[0]}-${pages[pages.length - 1]}`;
-  return `${base}_${label}.pdf`;
+  return `${base}_${label}${tail}.pdf`;
 }

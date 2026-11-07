@@ -65,20 +65,20 @@ export async function saveBlob(doc: PDFDocument): Promise<Blob> {
 
 export const isPdf = (file: File) => file.type === 'application/pdf' || /\.pdf$/i.test(file.name);
 
-/** Имя результата: «report.pdf» → «report-merged.pdf». */
-export function pdfName(name: string, suffix = '', ext = 'pdf'): string {
-  const base = name.replace(/\.[^.]+$/, '') || 'document';
-  return `${base}${suffix}.${ext}`;
-}
-
 const pad = (n: number) => String(n).padStart(2, '0');
 
+/** Имя файла без расширения: «report.pdf» → «report». */
+export const baseName = (name: string) => name.replace(/\.[^.]+$/, '') || 'document';
+
 /**
- * Имя документа, собранного из нескольких файлов: «merged_2026-11-07_14-32-05_tooloot.net.pdf».
- * Время местное и до секунды — повторные результаты не перезаписывают друг друга в «Загрузках».
+ * Хвост имени результата: «_2026-11-07_14-32-05_tooloot.net». Время местное и до секунды — повторные
+ * результаты не перезаписывают друг друга в «Загрузках»; у файлов одного запуска хвост общий.
  */
-export function stampedName(base: string, now = new Date(), ext = 'pdf'): string {
+export function stamp(now = new Date()): string {
   const date = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
   const time = `${pad(now.getHours())}-${pad(now.getMinutes())}-${pad(now.getSeconds())}`;
-  return `${base}_${date}_${time}_${new URL(SITES.tools.url).host}.${ext}`;
+  return `_${date}_${time}_${new URL(SITES.tools.url).host}`;
 }
+
+/** Имя результата: «report.pdf», «_compressed» → «report_compressed_2026-11-07_14-32-05_tooloot.net.pdf». */
+export const pdfName = (name: string, suffix = '', ext = 'pdf', now = new Date()) => `${baseName(name)}${suffix}${stamp(now)}.${ext}`;
