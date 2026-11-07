@@ -21,6 +21,6 @@
     "images": "Imagens salvas de novo: {changed} de {total}.",
     "noImages": "O arquivo não tem imagens que possam ser salvas de novo: ele foi comprimido só nos dados internos.",
     "notSmaller": "Não foi possível diminuir o arquivo: ele já está bem comprimido. Será baixado o arquivo original, sem alterações. Tente o modo \"Como digitalização\" ou o nível alto.",
-    "notSmallerScan": "Como imagens, o arquivo ficou maior do que era. Mesmo assim dá para baixá-lo — por exemplo, para que o texto, uma assinatura ou uma marca d'água não possam ser separados da página. Se precisar de um arquivo menor, tente um nível de compressão mais alto ou o modo \"Comprimir imagens\" — mas isso nem sempre resolve."
+    "notSmallerScan": "Como imagens, o arquivo ficou maior do que era. Mesmo assim dá para baixá-lo — por exemplo, para que o texto, uma assinatura ou uma marca d'água não possam ser separados da página. Se precisar de um arquivo menor, tente um nível de compressão mais alto ou o modo \"Comprimir imagens\"."
   }
 }

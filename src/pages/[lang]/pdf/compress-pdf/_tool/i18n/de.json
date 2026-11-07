@@ -21,6 +21,6 @@
     "images": "Neu gespeicherte Bilder: {changed} von {total}.",
     "noImages": "Die Datei enthält keine Bilder, die sich neu speichern lassen: Sie wurde nur durch Aufräumen interner Daten verkleinert.",
     "notSmaller": "Die Datei ließ sich nicht verkleinern: Sie ist bereits gut komprimiert. Heruntergeladen wird die unveränderte Originaldatei. Versuchen Sie die Methode „Als Scan“ oder die starke Stufe.",
-    "notSmallerScan": "Als Bilder ist die Datei größer geworden als vorher. Sie können sie trotzdem herunterladen – zum Beispiel, damit sich Text, Unterschrift oder Wasserzeichen nicht mehr von der Seite trennen lassen. Brauchen Sie eine kleinere Datei, versuchen Sie eine stärkere Stufe oder die Methode „Bilder komprimieren“ – das hilft aber nicht immer."
+    "notSmallerScan": "Als Bilder ist die Datei größer geworden als vorher. Sie können sie trotzdem herunterladen – zum Beispiel, damit sich Text, Unterschrift oder Wasserzeichen nicht mehr von der Seite trennen lassen. Brauchen Sie eine kleinere Datei, versuchen Sie eine stärkere Stufe oder die Methode „Bilder komprimieren“."
   }
 }
