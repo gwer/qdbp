@@ -70,15 +70,18 @@ const pad = (n: number) => String(n).padStart(2, '0');
 /** Имя файла без расширения: «report.pdf» → «report». */
 export const baseName = (name: string) => name.replace(/\.[^.]+$/, '') || 'document';
 
+/** Хвост имени результата — сайт: «_tooloot.net». */
+export const SITE_TAIL = `_${new URL(SITES.tools.url).host}`;
+
+/** Имя результата из имени исходного файла: «report.pdf», «_compressed» → «report_compressed_tooloot.net.pdf». */
+export const pdfName = (name: string, suffix = '', ext = 'pdf') => `${baseName(name)}${suffix}${SITE_TAIL}.${ext}`;
+
 /**
- * Хвост имени результата: «_2026-11-07_14-32-05_tooloot.net». Время местное и до секунды — повторные
- * результаты не перезаписывают друг друга в «Загрузках»; у файлов одного запуска хвост общий.
+ * Имя результата, у которого нет одного исходного файла (объединение, несколько картинок): вместо имени — местные
+ * дата и время до секунды, «merged_2026-11-07_14-32-05_tooloot.net.pdf».
  */
-export function stamp(now = new Date()): string {
+export function datedName(base: string, now = new Date(), ext = 'pdf'): string {
   const date = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
   const time = `${pad(now.getHours())}-${pad(now.getMinutes())}-${pad(now.getSeconds())}`;
-  return `_${date}_${time}_${new URL(SITES.tools.url).host}`;
+  return `${base}_${date}_${time}${SITE_TAIL}.${ext}`;
 }
-
-/** Имя результата: «report.pdf», «_compressed» → «report_compressed_2026-11-07_14-32-05_tooloot.net.pdf». */
-export const pdfName = (name: string, suffix = '', ext = 'pdf', now = new Date()) => `${baseName(name)}${suffix}${stamp(now)}.${ext}`;

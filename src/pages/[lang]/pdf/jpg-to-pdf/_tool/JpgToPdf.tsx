@@ -6,7 +6,7 @@ import { decode } from '@/ui/files/image';
 import { isJpeg, readMeta } from '@/ui/files/jpeg';
 import { ChevronLeft, ChevronRight, RotateCcw, RotateCw, X } from '@/ui/pdf/icons';
 import { move, useReorder } from '@/ui/pdf/Pages';
-import { loadPdfLib, pdfName, preloadPdfLib, saveBlob } from '@/ui/pdf/pdflib';
+import { datedName, loadPdfLib, pdfName, preloadPdfLib, saveBlob } from '@/ui/pdf/pdflib';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import { exifRotation, place, type Margin, type Orientation, type PageSize } from './layout';
 import { useJob } from '@/ui/pdf/useJob';
@@ -107,7 +107,7 @@ export function JpgToPdf({ lang, t }: ToolProps) {
         page.drawImage(image, { x: pl.x, y: pl.y, width: pl.width, height: pl.height });
         if (pl.rotate) page.setRotation(degrees(pl.rotate));
       }
-      if (job.live(id)) setResult({ name: pdfName(items[0].file.name), blob: await saveBlob(doc), note: t('pdf.pages', { count: items.length }) });
+      if (job.live(id)) setResult({ name: items.length === 1 ? pdfName(items[0].file.name) : datedName('images'), blob: await saveBlob(doc), note: t('pdf.pages', { count: items.length }) });
     } catch {
       setError(t('pdf.error'));
     } finally {

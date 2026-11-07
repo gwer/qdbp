@@ -6,7 +6,7 @@ import { assemble, type PagePart } from '@/ui/pdf/build';
 import { ChevronDown, ChevronUp, X } from '@/ui/pdf/icons';
 import { move, Thumb, useReorder } from '@/ui/pdf/Pages';
 import { openError, PasswordForm, usePreload } from '@/ui/pdf/Picker';
-import { pdfName } from '@/ui/pdf/pdflib';
+import { datedName } from '@/ui/pdf/pdflib';
 import { expand, parseRanges } from '@/ui/pdf/ranges';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import { closeSource, openSource, type OpenResult, type PdfSource } from '@/ui/pdf/source';
@@ -93,7 +93,7 @@ export function MergePdf({ lang, t }: ToolProps) {
         const pages = r?.ok ? r.ranges.flatMap(expand) : Array.from({ length: e.source!.pageCount }, (_, i) => i + 1);
         for (const p of pages) parts.push({ source: e.source!, index: p - 1 });
       }
-      if (job.live(id)) setResult({ name: pdfName('merged'), blob: await assemble(parts), note: t('pdf.pages', { count: parts.length }) });
+      if (job.live(id)) setResult({ name: datedName('merged'), blob: await assemble(parts), note: t('pdf.pages', { count: parts.length }) });
     } catch {
       if (job.live(id)) setFailed(true);
     } finally {

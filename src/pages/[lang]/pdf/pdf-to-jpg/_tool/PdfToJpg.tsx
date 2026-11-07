@@ -3,7 +3,7 @@ import type { ToolProps } from '@/ui/define';
 import { QualityField, SelectField } from '@/ui/files/fields';
 import { PageGrid, pagesOf } from '@/ui/pdf/Pages';
 import { PdfPicker, usePreload } from '@/ui/pdf/Picker';
-import { baseName, stamp } from '@/ui/pdf/pdflib';
+import { baseName, SITE_TAIL } from '@/ui/pdf/pdflib';
 import { renderPage } from '@/ui/pdf/pdfjs';
 import { expand, parseRanges } from '@/ui/pdf/ranges';
 import { Result, type OutFile } from '@/ui/pdf/Result';
@@ -44,7 +44,6 @@ export function PdfToJpg({ lang, t }: ToolProps) {
     setResult(null);
     setFailed(false);
     const base = baseName(source.file.name);
-    const tail = stamp();
     const digits = String(total).length;
     const files: OutFile[] = [];
     try {
@@ -61,9 +60,9 @@ export function PdfToJpg({ lang, t }: ToolProps) {
         if (run.current !== id) return;
         if (!blob) throw new Error('encode');
         const note = `${t('pdf.page', { n })} · ${Math.round(base1.width * scale)}×${Math.round(base1.height * scale)}${reduced ? ` · ${t('ui.reduced', { dpi: Math.floor(scale * 72) })}` : ''}`;
-        files.push({ name: `${base}-${String(n).padStart(digits, '0')}${tail}.${format}`, blob, note });
+        files.push({ name: `${base}-${String(n).padStart(digits, '0')}${SITE_TAIL}.${format}`, blob, note });
       }
-      setResult({ files, zip: `${base}-${format}${tail}.zip` });
+      setResult({ files, zip: `${base}-${format}${SITE_TAIL}.zip` });
     } catch {
       if (run.current === id) setFailed(true);
     } finally {

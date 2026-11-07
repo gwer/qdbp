@@ -5,7 +5,7 @@ import { IntField } from '@/ui/files/fields';
 import { assemble, docCache } from '@/ui/pdf/build';
 import { PageGrid, pagesOf, type PageItem } from '@/ui/pdf/Pages';
 import { PdfPicker, usePreload } from '@/ui/pdf/Picker';
-import { baseName, stamp } from '@/ui/pdf/pdflib';
+import { baseName, SITE_TAIL } from '@/ui/pdf/pdflib';
 import { formatPages } from '@/ui/pdf/ranges';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import type { PdfSource } from '@/ui/pdf/source';
@@ -70,16 +70,15 @@ export function SplitPdf({ lang, t }: ToolProps) {
     try {
       const open = docCache();
       const base = baseName(source.file.name);
-      const tail = stamp();
       const files: OutFile[] = [];
       for (const g of groups) {
         const blob = await assemble(
           g.map((p) => ({ source, index: p - 1 })),
           open,
         );
-        files.push({ name: partName(base, g, tail), blob, note: `${t('ui.pagesShort')} ${formatPages(g)}` });
+        files.push({ name: partName(base, g, SITE_TAIL), blob, note: `${t('ui.pagesShort')} ${formatPages(g)}` });
       }
-      if (job.live(id)) setResult({ files, zip: `${base}${tail}.zip` });
+      if (job.live(id)) setResult({ files, zip: `${base}${SITE_TAIL}.zip` });
     } catch {
       if (job.live(id)) setFailed(true);
     } finally {
