@@ -61,6 +61,58 @@ export function move<V>(list: V[], from: number, to: number): V[] {
 }
 
 /**
+ * Перестановка перетаскиванием. Место вставки считается по всему списку (обработчики list — на контейнер),
+ * поэтому срабатывают и промежутки, и место после последнего элемента; mark(i) — классы элемента:
+ * перетаскиваемый и линия, куда он встанет. Линия не показывается там, где перенос ничего не изменит.
+ * axis: 'x' — сетка (порядок по строкам слева направо), 'y' — столбец.
+ */
+export function useReorder(count: number, onMove: (from: number, to: number) => void, axis: 'x' | 'y') {
+  const [dragging, setDragging] = useState<number | null>(null);
+  // Место вставки и сторона элемента, у которой рисуется линия.
+  const [drop, setDrop] = useState<{ to: number; at: number; after: boolean } | null>(null);
+  const end = () => {
+    setDragging(null);
+    setDrop(null);
+  };
+  const list = {
+    onDragOver: (e: DragEvent) => {
+      if (dragging === null) return;
+      e.preventDefault();
+      const rects = Array.from((e.currentTarget as HTMLElement).children, (el) => el.getBoundingClientRect());
+      const { clientX: x, clientY: y } = e;
+      const before = (r: DOMRect) => (axis === 'y' ? y < r.top + r.height / 2 : y < r.top || (y <= r.bottom && x < r.left + r.width / 2));
+      let to = rects.findIndex(before);
+      if (to < 0) to = rects.length;
+      // В сетке у правого края строки линия — справа от последнего элемента этой строки, а не у начала следующей.
+      const prev = rects[to - 1];
+      const after = to === rects.length || (axis === 'x' && !!prev && y >= prev.top && y <= prev.bottom);
+      setDrop({ to, at: after ? to - 1 : to, after });
+    },
+    // Ушли за пределы списка — линии нет, отпускание там ничего не меняет.
+    onDragLeave: (e: DragEvent) => {
+      if (!(e.currentTarget as Node).contains(e.relatedTarget as Node | null)) setDrop(null);
+    },
+    onDrop: (e: DragEvent) => {
+      e.preventDefault();
+      if (dragging !== null && drop) onMove(dragging, drop.to);
+      end();
+    },
+  };
+  const item = (i: number) => ({
+    draggable: true,
+    onDragStart: (e: DragEvent) => {
+      setDragging(i);
+      e.dataTransfer!.effectAllowed = 'move';
+      e.dataTransfer!.setData('text/plain', String(i));
+    },
+    onDragEnd: end,
+  });
+  const noop = dragging === null || !drop || drop.to === dragging || drop.to === dragging + 1 || count < 2;
+  const mark = (i: number) => [dragging === i && 'pdf-dragging', !noop && drop!.at === i && (drop!.after ? 'pdf-drop-after' : 'pdf-drop-before')].filter(Boolean).join(' ');
+  return { list, item, mark };
+}
+
+/**
  * Сетка миниатюр страниц. Перестановка — перетаскиванием или стрелками, поворот, удаление (с отменой),
  * выбор щелчком. Какие действия доступны — решает инструмент.
  * Строки: pdf.page, pdf.rotateLeft, pdf.rotateRight, pdf.remove, pdf.restore, pdf.moveLeft, pdf.moveRight.
@@ -89,44 +141,20 @@ export function PageGrid({
   /** Метка поверх миниатюры (например, номер файла при разделении). */
   badge?: (item: PageItem, position: number) => ComponentChildren;
 }) {
-  const [dragging, setDragging] = useState<number | null>(null);
-  const [target, setTarget] = useState<number | null>(null);
+  const drag = useReorder(items.length, (from, to) => onChange(move(items, from, to)), 'x');
   const update = (i: number, patch: Partial<PageItem>) => onChange(items.map((it, j) => (j === i ? { ...it, ...patch } : it)));
   const turn = (i: number, by: number) => update(i, { rotate: (items[i].rotate + by + 360) % 360 });
 
   return (
-    <ol class={select ? 'pdf-grid pdf-grid-select' : 'pdf-grid'}>
+    <ol class={select ? 'pdf-grid pdf-grid-select' : 'pdf-grid'} {...(reorder ? drag.list : {})}>
       {items.map((it, i) => {
         const page = t('pdf.page', { n: it.index + 1 });
-        const cls = ['pdf-card', it.removed && 'pdf-removed', it.selected && 'pdf-selected', dragging === i && 'pdf-dragging', target === i && 'pdf-drop-before', target === items.length && i === items.length - 1 && 'pdf-drop-after']
-          .filter(Boolean)
-          .join(' ');
+        const cls = ['pdf-card', it.removed && 'pdf-removed', it.selected && 'pdf-selected', drag.mark(i)].filter(Boolean).join(' ');
         return (
           <li
             key={it.key}
             class={cls}
-            draggable={reorder}
-            onDragStart={(e) => {
-              setDragging(i);
-              e.dataTransfer!.effectAllowed = 'move';
-              e.dataTransfer!.setData('text/plain', String(i));
-            }}
-            onDragEnd={() => {
-              setDragging(null);
-              setTarget(null);
-            }}
-            onDragOver={(e) => {
-              if (dragging === null) return;
-              e.preventDefault();
-              const r = e.currentTarget.getBoundingClientRect();
-              setTarget(e.clientX > r.left + r.width / 2 ? i + 1 : i);
-            }}
-            onDrop={(e) => {
-              e.preventDefault();
-              if (dragging !== null && target !== null) onChange(move(items, dragging, target));
-              setDragging(null);
-              setTarget(null);
-            }}
+            {...(reorder ? drag.item(i) : {})}
           >
             {select ? (
               <button type="button" class="pdf-pick" aria-pressed={!!it.selected} onClick={() => update(i, { selected: !it.selected })}>

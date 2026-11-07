@@ -2,6 +2,7 @@
 // ~250 КБ gzip: загружается в фоне, когда браузер свободен, или при первом файле.
 import type * as PdfLib from '@cantoo/pdf-lib';
 import type { PDFDocument } from '@cantoo/pdf-lib';
+import SITES from '@/sites.json';
 
 export type { PDFDocument };
 
@@ -68,4 +69,16 @@ export const isPdf = (file: File) => file.type === 'application/pdf' || /\.pdf$/
 export function pdfName(name: string, suffix = '', ext = 'pdf'): string {
   const base = name.replace(/\.[^.]+$/, '') || 'document';
   return `${base}${suffix}.${ext}`;
+}
+
+const pad = (n: number) => String(n).padStart(2, '0');
+
+/**
+ * Имя документа, собранного из нескольких файлов: «merged_2026-11-07_14-32-05_tooloot.net.pdf».
+ * Время местное и до секунды — повторные результаты не перезаписывают друг друга в «Загрузках».
+ */
+export function stampedName(base: string, now = new Date(), ext = 'pdf'): string {
+  const date = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+  const time = `${pad(now.getHours())}-${pad(now.getMinutes())}-${pad(now.getSeconds())}`;
+  return `${base}_${date}_${time}_${new URL(SITES.tools.url).host}.${ext}`;
 }

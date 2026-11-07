@@ -5,7 +5,7 @@ import { SelectField } from '@/ui/files/fields';
 import { decode } from '@/ui/files/image';
 import { isJpeg, readMeta } from '@/ui/files/jpeg';
 import { ChevronLeft, ChevronRight, RotateCcw, RotateCw, X } from '@/ui/pdf/icons';
-import { move } from '@/ui/pdf/Pages';
+import { move, useReorder } from '@/ui/pdf/Pages';
 import { loadPdfLib, pdfName, preloadPdfLib, saveBlob } from '@/ui/pdf/pdflib';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import { exifRotation, place, type Margin, type Orientation, type PageSize } from './layout';
@@ -61,7 +61,6 @@ export function JpgToPdf({ lang, t }: ToolProps) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<OutFile | null>(null);
-  const [dragging, setDragging] = useState<number | null>(null);
   const itemsRef = useRef(items);
   itemsRef.current = items;
 
@@ -78,6 +77,7 @@ export function JpgToPdf({ lang, t }: ToolProps) {
     setError(null);
   };
   const add = (files: File[]) => change([...items, ...files.map((file) => ({ id: nextId++, file, url: URL.createObjectURL(file), rotate: 0 }))]);
+  const drag = useReorder(items.length, (from, to) => change(move(items, from, to)), 'x');
   const turn = (i: number, by: number) => change(items.map((it, j) => (j === i ? { ...it, rotate: (it.rotate + by + 360) % 360 } : it)));
   const remove = (i: number) => {
     URL.revokeObjectURL(items[i].url);
@@ -135,26 +135,12 @@ export function JpgToPdf({ lang, t }: ToolProps) {
       <DropZone t={t} onFiles={add} />
       {items.length > 0 && (
         <>
-          <ol class="pdf-grid">
+          <ol class="pdf-grid" {...drag.list}>
             {items.map((it, i) => (
               <li
                 key={it.id}
-                class={dragging === i ? 'pdf-card pdf-dragging' : 'pdf-card'}
-                draggable
-                onDragStart={(e) => {
-                  setDragging(i);
-                  e.dataTransfer!.effectAllowed = 'move';
-                  e.dataTransfer!.setData('text/plain', String(i));
-                }}
-                onDragEnd={() => setDragging(null)}
-                onDragOver={(e) => dragging !== null && e.preventDefault()}
-                onDrop={(e) => {
-                  e.preventDefault();
-                  if (dragging === null) return;
-                  const r = e.currentTarget.getBoundingClientRect();
-                  change(move(items, dragging, e.clientX > r.left + r.width / 2 ? i + 1 : i));
-                  setDragging(null);
-                }}
+                class={`pdf-card ${drag.mark(i)}`}
+                {...drag.item(i)}
               >
                 <div class="pdf-thumb">
                   <img src={it.url} alt="" draggable={false} style={it.rotate ? { transform: `rotate(${it.rotate}deg)` } : undefined} />

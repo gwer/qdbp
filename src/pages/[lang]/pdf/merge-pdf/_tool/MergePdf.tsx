@@ -4,8 +4,9 @@ import { formatBytes } from '@/ui/files/bytes';
 import { DropZone } from '@/ui/files/DropZone';
 import { assemble, type PagePart } from '@/ui/pdf/build';
 import { ChevronDown, ChevronUp, X } from '@/ui/pdf/icons';
-import { move, Thumb } from '@/ui/pdf/Pages';
+import { move, Thumb, useReorder } from '@/ui/pdf/Pages';
 import { openError, PasswordForm, usePreload } from '@/ui/pdf/Picker';
+import { stampedName } from '@/ui/pdf/pdflib';
 import { expand, parseRanges } from '@/ui/pdf/ranges';
 import { Result, type OutFile } from '@/ui/pdf/Result';
 import { closeSource, openSource, type OpenResult, type PdfSource } from '@/ui/pdf/source';
@@ -32,7 +33,6 @@ export function MergePdf({ lang, t }: ToolProps) {
   const [busy, setBusy] = useState(false);
   const [failed, setFailed] = useState(false);
   const [result, setResult] = useState<OutFile | null>(null);
-  const [dragging, setDragging] = useState<number | null>(null);
   const entriesRef = useRef(entries);
   entriesRef.current = entries;
 
@@ -70,6 +70,8 @@ export function MergePdf({ lang, t }: ToolProps) {
     change(entries.filter((x) => x.id !== id));
   };
 
+  const drag = useReorder(entries.length, (from, to) => change(move(entries, from, to)), 'y');
+
   const ranges = (e: Entry) => (e.source && e.pages.trim() ? parseRanges(e.pages, e.source.pageCount) : null);
   const ready = entries.filter((e) => e.source);
   const invalid = entries.some((e) => ranges(e)?.ok === false);
@@ -91,7 +93,7 @@ export function MergePdf({ lang, t }: ToolProps) {
         const pages = r?.ok ? r.ranges.flatMap(expand) : Array.from({ length: e.source!.pageCount }, (_, i) => i + 1);
         for (const p of pages) parts.push({ source: e.source!, index: p - 1 });
       }
-      if (job.live(id)) setResult({ name: 'merged.pdf', blob: await assemble(parts), note: t('pdf.pages', { count: parts.length }) });
+      if (job.live(id)) setResult({ name: stampedName('merged'), blob: await assemble(parts), note: t('pdf.pages', { count: parts.length }) });
     } catch {
       if (job.live(id)) setFailed(true);
     } finally {
@@ -103,28 +105,14 @@ export function MergePdf({ lang, t }: ToolProps) {
     <div>
       <DropZone t={t} kind="pdf" onFiles={add} />
       {entries.length > 0 && (
-        <ol class="file-list merge-list">
+        <ol class="file-list merge-list" {...drag.list}>
           {entries.map((e, i) => {
             const r = ranges(e);
             return (
               <li
                 key={e.id}
-                class={dragging === i ? 'file-row merge-row pdf-dragging' : 'file-row merge-row'}
-                draggable
-                onDragStart={(ev) => {
-                  setDragging(i);
-                  ev.dataTransfer!.effectAllowed = 'move';
-                  ev.dataTransfer!.setData('text/plain', String(i));
-                }}
-                onDragEnd={() => setDragging(null)}
-                onDragOver={(ev) => dragging !== null && ev.preventDefault()}
-                onDrop={(ev) => {
-                  ev.preventDefault();
-                  if (dragging === null) return;
-                  const box = ev.currentTarget.getBoundingClientRect();
-                  change(move(entries, dragging, ev.clientY > box.top + box.height / 2 ? i + 1 : i));
-                  setDragging(null);
-                }}
+                class={`file-row merge-row ${drag.mark(i)}`}
+                {...drag.item(i)}
               >
                 <span class="merge-num">{i + 1}</span>
                 {e.source ? (

@@ -1967,12 +1967,43 @@ table.wrap td {
   opacity: 0.4;
 }
 
-.pdf-drop-before {
-  box-shadow: -8px 0 0 -5px var(--accent);
+/* Линия, куда встанет перетаскиваемый элемент: посередине промежутка (12px в сетке с рамкой 2px, 8px в списке). */
+.pdf-drop-before::before,
+.pdf-drop-after::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+  pointer-events: none;
 }
 
-.pdf-drop-after {
-  box-shadow: 8px 0 0 -5px var(--accent);
+.pdf-drop-before::before {
+  left: -10px;
+}
+
+.pdf-drop-after::after {
+  right: -10px;
+}
+
+.merge-list .pdf-drop-before::before,
+.merge-list .pdf-drop-after::after {
+  top: auto;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 4px;
+}
+
+.merge-list .pdf-drop-before::before {
+  top: -6px;
+}
+
+.merge-list .pdf-drop-after::after {
+  bottom: -6px;
 }
 
 .pdf-thumb {
@@ -2088,6 +2119,7 @@ table.wrap td {
 }
 
 .merge-row {
+  position: relative;
   cursor: grab;
 }
 
